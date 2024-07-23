@@ -1,13 +1,10 @@
 class Sensor { 
-    //Auto-generated fields of the Sensor class:
     Main m;
     int dist;
 	boolean obs_detected;
 
     boolean init;
     
-    //Auto-generated constructor:
-    //Auto-generated specifications of the constructor Sensor:
     ensures Perm(m, write) 
             ** Perm(dist, write) 
             ** Perm(obs_detected, write) 
@@ -23,11 +20,9 @@ class Sensor {
         init = false;
     }
     
-    
     ensures \result >= 0 && \result < 256;
     int getDistance ();
     
-    //Auto-generated specifications of the function run:
     context Perm(m, 1\2)
             ** (m != null)
             ** Perm(m.sensor, read) 
@@ -78,14 +73,11 @@ class Sensor {
 }
 
 class Controller { 
-    //Auto-generated fields of the Controller class:
     Main m;
     boolean alarm_flag;
     
     boolean init;
 
-    //Auto-generated constructor:
-    //Auto-generated specifications of the constructor Controller:
     ensures Perm(m, write)
             ** Perm(alarm_flag, write) 
             ** (m == m_param) ;
@@ -95,13 +87,9 @@ class Controller {
         m = m_param;
 
         alarm_flag = false;
-
         init = false;
     }
     
-    
-    //Auto-generated functions:
-    //Auto-generated specifications of the function run:
     context Perm(m, 1\2)
             ** (m != null) 
             ** Perm(m.controller, read) 
@@ -141,8 +129,6 @@ class Controller {
                 alarm_flag = false;
             }
 
-            //NEW:
-            //assert m.sensor.dist < m.MIN_DIST;
             assert m.sensor.obs_detected == alarm_flag;
         }
         unlock m;
@@ -153,14 +139,11 @@ class Controller {
 
 
 class Main { 
-    //Auto-generated fields of the Main class:
     seq<int> process_state;
     seq<int> event_state;
-    //Robot robot;
     Sensor sensor;
     Controller controller;
     
-    //Auto-generated global invariant: 
     inline resource scheduler_permission_invariant() = true ** 
             Perm(process_state, write) **
             |process_state| == 2 **
@@ -187,8 +170,6 @@ class Main {
 
     resource lock_invariant() = global_permission_invariant();
     
-    //Auto-generated constructor:
-    //Auto-generated specifications of the constructor Main:
     ensures Perm(sensor, read)
             ** sensor != null
             ** Perm(sensor.m, 1\2)
@@ -209,20 +190,17 @@ class Main {
         process_state = [-1,-1];
         event_state = [-3,-3,-3];
 
-        //robot = new Robot(this);
         sensor = new Sensor(this);
         controller = new Controller(this);
     }
     
     
-    //Auto-generated functions:
-    //Auto-generated specifications of the function main:
     context Perm(sensor, read)
         ** sensor != null
         ** Perm(sensor.m, 1\2)
         ** sensor.m == this
         ** Perm(sensor.init, 1\2)
-        ** !sensor.init
+        ** !sensor.init 
         ;
     context Perm(controller, read)
         ** controller != null
@@ -258,7 +236,6 @@ class Main {
         join controller;
     }
     
-    //Auto-generated specifications of the function immediate_wakeup:
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((event_state == \old(event_state))) );
@@ -266,7 +243,6 @@ class Main {
     ensures (((!(((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == \old(process_state[0]))) ))) && ((!(((\old(process_state[1]) >= 0)) && ((\old(event_state[\old(process_state[1])]) == 0)) ) ==> (((process_state[1] == \old(process_state[1]))) ))) );
     void immediate_wakeup();
     
-    //Auto-generated specifications of the function reset_events_no_delta:
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((process_state == \old(process_state))) );
@@ -274,13 +250,11 @@ class Main {
     ensures (((!(((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!(((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == \old(event_state[1]))) ))) && ((!(((\old(event_state[2]) == 0)) ) ==> (((event_state[2] == \old(event_state[2]))) ))) );
     void reset_events_no_delta();
     
-    //Auto-generated specifications of the function find_minimum_advance:
     requires (|vals| == 3);
     ensures ((((vals[0] < -1) || (\result <= vals[0]))) && (((vals[1] < -1) || (\result <= vals[1]))) && (((vals[2] < -1) || (\result <= vals[2]))) );
     ensures (((((vals[0] < -1)) && ((vals[1] < -1)) && ((vals[2] < -1)) ) ==> (\result == 0)) && ((((vals[0] >= -1)) || ((vals[1] >= -1)) || ((vals[2] >= -1)) ) ==> ((((vals[0] >= -1) && (\result == vals[0]))) || (((vals[1] >= -1) && (\result == vals[1]))) || (((vals[2] >= -1) && (\result == vals[2]))) )));
     pure int find_minimum_advance(seq<int> vals);
     
-    //Auto-generated specifications of the function wakeup_after_wait:
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((event_state == \old(event_state))) );
@@ -288,7 +262,6 @@ class Main {
     ensures (((!(((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == \old(process_state[0]))) ))) && ((!(((\old(process_state[1]) >= 0)) && (((\old(event_state[\old(process_state[1])]) == 0) || (\old(event_state[\old(process_state[1])]) == -1))) ) ==> (((process_state[1] == \old(process_state[1]))) ))) );
     void wakeup_after_wait();
     
-    //Auto-generated specifications of the function reset_all_events:
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((process_state == \old(process_state))) );
