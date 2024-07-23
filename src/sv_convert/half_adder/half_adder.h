@@ -1,9 +1,6 @@
-// File: half_adder.h           
-
 #include <systemc.h>          
 
-struct half_adder : sc_module{    
-  
+struct half_adder : sc_module {    
     sc_in < bool >   clk  {"clk"};
     sc_in < bool >   rstn {"rstn"};   
      
@@ -13,13 +10,10 @@ struct half_adder : sc_module{
     sc_out < bool >   sum {"sum"};
     sc_out < bool > carry {"carry"};  
 
-    //bool a, b, sum, carry; 
-
 
     SC_CTOR (half_adder) {       
       SC_CTHREAD (prc_half_adder, clk.pos());   
       async_reset_signal_is(rstn, false);
-      //sensitive << a << b;        
     }   
 
     void prc_half_adder(){

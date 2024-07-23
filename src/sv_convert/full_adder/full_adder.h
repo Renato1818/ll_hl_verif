@@ -1,9 +1,4 @@
-// File: full_adder.h
-
-//#include "half_adder.h"
 #include <systemc.h> 
-
-//SC_MODULE (full_adder) {
 
 struct full_adder : sc_module {   
   sc_in <bool>       clk{"clk"};
@@ -30,8 +25,6 @@ struct full_adder : sc_module {
     async_reset_signal_is(rstn, false);
     SC_CTHREAD (prc_half_adder_2, clk.pos()); 
     async_reset_signal_is(rstn, false);
-
-    //SC_METHOD(sum_);
   }
 
   void prc_or () {
@@ -69,7 +62,5 @@ struct full_adder : sc_module {
     s_or = a | b ;
 
     return (s_nand & s_or);	
-
   }
-
 };

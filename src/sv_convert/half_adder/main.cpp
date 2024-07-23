@@ -1,7 +1,5 @@
 #include <systemc.h>
 #include "half_adder.h"
-//#include "driver.h"
-//#include "monitor.h"
 
 struct Tb : sc_module {    
     sc_in_clk         clk{"clk"};

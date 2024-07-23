@@ -105,6 +105,8 @@ function void controller_func;
             if (obs_detected)
             begin
                 alarm_flag_next = 1;
+            end else begin
+                alarm_flag_next = 0;
             end
             sensor_WAIT_N_COUNTER_next = 1;
             controller_PROC_STATE_next = 1; return;    // Robot.h:59:6;

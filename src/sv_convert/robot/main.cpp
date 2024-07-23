@@ -3,10 +3,7 @@
 
 #define  MIN_DIST 50
 
-struct Tb : sc_module 
-{
-    //typedef Robot::data_t data_t;
-
+struct Tb : sc_module {
     sc_in_clk           clk{"clk"};
     sc_signal<bool>     rstn{"rstn"};
 

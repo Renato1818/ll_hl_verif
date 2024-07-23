@@ -1,8 +1,7 @@
 #include <systemc.h>
 
 
-struct alu : sc_module
-{
+struct alu : sc_module {
     sc_in < bool >        clk{"clk"};
     sc_in < bool >        rstn{"rstn"};
 
