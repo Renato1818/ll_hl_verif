@@ -1,5 +1,4 @@
 #include <systemc.h>
-//#include "half_adder.h"
 #include "full_adder.h"
 
 

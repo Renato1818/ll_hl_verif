@@ -1,15 +1,11 @@
-// File: half_adder.h           
-
 #include <systemc.h>          
 
 SC_MODULE (half_adder) {        
-  /*sc_in  <bool> a;         
+  sc_in  <bool> a;         
   sc_in  <bool> b;               
 
   sc_out <bool> sum;   
-  sc_out <bool> carry;  */
-
-  bool a, b, sum, carry; 
+  sc_out <bool> carry;  
 
   bool s_nand, s_or;
 
@@ -25,9 +21,7 @@ SC_MODULE (half_adder) {
 	}
 
   SC_CTOR (half_adder) {        
-    //SC_THREAD (main_method); 
     SC_THREAD (prc_half_adder);   
-    //sensitive << a << b;        
   }   
 };    
   

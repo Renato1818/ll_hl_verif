@@ -1,5 +1,3 @@
-// File: half_adder.h           
-
 #include <systemc.h>          
 
 SC_MODULE (half_adder) {        
@@ -9,19 +7,7 @@ SC_MODULE (half_adder) {
   sc_out <bool> sum;   
   sc_out <bool> carry;  
 
-  //bool a, b, sum, carry; 
-
   bool s_nand, s_or;
-  //sc_event obs_detected;
-
-  //void prc_half_adder ();       
-
-  /*void prc_half_adder () {	
-    //sum = a ^ b;						
-    //carry = a & b;						  	
-    sum.write(a ^ b);						
-    carry.write(a & b);					
-  }*/
 
   void prc_half_adder(){
     wait(2, SC_MS);
@@ -35,9 +21,7 @@ SC_MODULE (half_adder) {
 	}
 
   SC_CTOR (half_adder) {        
-    //SC_THREAD (main_method); 
     SC_THREAD (prc_half_adder);   
-    //sensitive << a << b;        
   }   
 };    
   

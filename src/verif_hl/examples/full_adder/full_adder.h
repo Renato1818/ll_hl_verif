@@ -21,7 +21,6 @@ SC_MODULE (full_adder) {
 		}
   }
 
-
   void prc_half_adder_1(){
     wait(2, SC_MS);
 		while (true) {			
@@ -49,32 +48,11 @@ SC_MODULE (full_adder) {
     return (s_nand & s_or);	
 
   }
-  /*
-  half_adder ha1_ptr;
-  ha1_ptr.a = a;
-  ha1_ptr.b = b;
-  ha1_ptr.sum = s1;
-  ha1_ptr.carry = c1; */
 
   SC_CTOR (full_adder) {
-    /*half_adder ha1_ptr();
-    ha1_ptr.a (a);
-    ha1_ptr.b (b);
-    ha1_ptr.sum (s1);
-    ha1_ptr.carry (c1);
-
-    half_adder ha2_ptr();
-    ha2_ptr.a (s1);
-    ha2_ptr.b (carry_in);
-    ha2_ptr.sum (sum);
-    ha2_ptr.carry (c2);*/
-
-
     SC_THREAD (prc_or);
-    //sensitive << c1 << c2;
-
     SC_THREAD (prc_half_adder_1);
     SC_THREAD (prc_half_adder_2);
-    SC_METHOD(sum_);
+    SC_METHOD (sum_);
   }
 };
