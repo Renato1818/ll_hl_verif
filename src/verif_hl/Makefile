@@ -9,21 +9,21 @@ robot:
 	$(JAVA) -jar sc2pvl.jar -i ./examples/robot/main_ast.ast.xml -o ./results/robot/ 
 
 half_adder: 	
-	$(JAVA) -jar sc2ast.jar -f  ./examples/half_adder/main_tb.cpp -o ./examples/half_adder/main_ast
+	$(JAVA) -jar sc2ast.jar -f  ./examples/half_adder/main.cpp -o ./examples/half_adder/main_ast
 	if ! test -d ./results/half_adder/; \
 	then mkdir -p ./results/half_adder/; \
 	fi
 	$(JAVA) -jar sc2pvl.jar -i ./examples/half_adder/main_ast.ast.xml -o ./results/half_adder/ 
 
 full_adder: 	
-	$(JAVA) -jar sc2ast.jar -f  ./examples/full_adder/main_tb.cpp -o ./examples/full_adder/main_ast
+	$(JAVA) -jar sc2ast.jar -f  ./examples/full_adder/main.cpp -o ./examples/full_adder/main_ast
 	if ! test -d ./results/full_adder/; \
 	then mkdir -p ./results/full_adder/; \
 	fi
 	$(JAVA) -jar sc2pvl.jar -i ./examples/full_adder/main_ast.ast.xml -o ./results/full_adder/ 
 
 alu: 	
-	$(JAVA) -jar sc2ast.jar -f  ./examples/alu/main_tb.cpp -o ./examples/alu/main_ast
+	$(JAVA) -jar sc2ast.jar -f  ./examples/alu/main.cpp -o ./examples/alu/main_ast
 	if ! test -d ./results/alu/; \
 	then mkdir -p ./results/alu/; \
 	fi
@@ -33,7 +33,7 @@ alu:
 all: robot half_adder full_adder alu
 
 
-clean-robot:
+clean_robot:
 	rm -f ./examples/robot/*.xml
 	rm -f ./examples/robot/main_ast
 	rm -rf ./results/robot
