@@ -1,0 +1,17 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:11 (11)
+Elapsed process time [H:MM:SS (secs)]: 0:00:23 (23)
+engine_0 (smtbmc z3) returned pass
+cover trace: engine_0/trace0.vcd
+  reached cover statement fifo.w_nzero_read at fifo.sv:131.13-131.48 in step 1
+  reached cover statement fifo.w_nzero_write at fifo.sv:130.13-130.48 in step 1
+cover trace: engine_0/trace1.vcd
+  reached cover statement fifo.w_reset at fifo.sv:135.13-135.34 in step 1
+cover trace: engine_0/trace2.vcd
+  reached cover statement fifo.w_empty at fifo.sv:127.13-127.56 in step 2
+  reached cover statement fifo.w_nreset at fifo.sv:99.13-99.45 in step 2
+cover trace: engine_0/trace3.vcd
+  reached cover statement fifo.w_underfill at fifo.sv:176.13-176.62 in step 2
+cover trace: engine_0/trace4.vcd
+  reached cover statement fifo.w_full at fifo.sv:125.13-125.65 in step 16
+cover trace: engine_0/trace5.vcd
+  reached cover statement fifo.w_overfill at fifo.sv:189.13-189.61 in step 18

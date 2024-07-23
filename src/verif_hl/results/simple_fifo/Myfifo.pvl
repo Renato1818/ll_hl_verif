@@ -1,0 +1,92 @@
+class Myfifo { 
+    //Auto-generated fields of the Myfifo class:
+    Main m;
+    int[] buffer;
+    int n;
+    int r_pos;
+    int w_pos;
+    int c;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Myfifo:
+    ensures Perm(m, write) **
+            Perm(buffer, write) **
+            Perm(n, write) **
+            Perm(r_pos, write) **
+            Perm(w_pos, write) **
+            Perm(c, write) **
+            (m == m_param) **
+            (n == 0) **
+            (r_pos == 0) **
+            (w_pos == 0) **
+            \array(buffer,4) **
+            Perm(buffer[*], write) ;
+    Myfifo(Main m_param){
+        m = m_param;
+        n = 0;
+        r_pos = 0;
+        w_pos = 0;
+        buffer = new int[4];
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function write_producer:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.fifo_inst == this) ;
+    requires ((0 <= process_id) && (process_id < |m.process_state|));
+    void write_producer(int c, int process_id){
+        if (n == 4) {
+            m.process_state = m.process_state[process_id -> 0];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.fifo_inst == this) ;
+            while (m.process_state[process_id] != -1 || m.event_state[0] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        if (c == 8) {
+        }
+        buffer[w_pos] = c;
+        n = n + 1;
+        w_pos = (w_pos + 1) % 4;
+        m.event_state = m.event_state[1 -> -1];
+    }
+    
+    //Auto-generated specifications of the function read_consumer:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.fifo_inst == this) ;
+    requires ((0 <= process_id) && (process_id < |m.process_state|));
+    int read_consumer(int process_id){
+        if (n == 0) {
+            m.process_state = m.process_state[process_id -> 1];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.fifo_inst == this) ;
+            while (m.process_state[process_id] != -1 || m.event_state[1] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        c = buffer[r_pos];
+        n = n - 1;
+        r_pos = (r_pos + 1) % 4;
+        m.event_state = m.event_state[0 -> -1];
+        return c;
+    }
+    
+}
+

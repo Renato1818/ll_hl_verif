@@ -1,0 +1,507 @@
+class Rng { 
+    //Auto-generated fields of the Rng class:
+    Main m;
+    boolean clk;
+    boolean reset;
+    boolean loadseed_i;
+    int seed_i;
+    int number_o;
+    int LFSR_reg;
+    int CASR_reg;
+    int result;
+    int i;
+    int aux;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Rng:
+    ensures Perm(m, write) **
+            Perm(clk, write) **
+            Perm(reset, write) **
+            Perm(loadseed_i, write) **
+            Perm(seed_i, write) **
+            Perm(number_o, write) **
+            Perm(LFSR_reg, write) **
+            Perm(CASR_reg, write) **
+            Perm(result, write) **
+            Perm(i, write) **
+            Perm(aux, write) **
+            (m == m_param) ;
+    Rng(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function exp2_:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.rn == this) ;
+    int exp2_(int exponent){
+        result = 1;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn == this) ;
+        for (i = 0; i < exponent; i = 1 + i) {
+            result = result * 2;
+        }
+        return result;
+    }
+    
+    //Auto-generated specifications of the function bit_:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.rn == this) ;
+    int bit_(int var, int pos){
+        if (var == 0) {
+            return 0;
+        }
+        else {            
+            aux = var % exp2_(pos+1);
+        }  
+        
+        if (aux == 0) {
+            return 0;
+        }
+        return (aux / exp2_(pos));
+    }
+    
+    //Auto-generated specifications of the function xor_:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.rn == this) ;
+    int xor_(int var, int pos, int A, int B){
+        if (A == 1) {
+            if (B == 1) {
+                var = var - exp2_(pos);
+            } else {
+                var = var + exp2_(pos);
+            }
+        } else {
+            var = B * exp2_(pos);
+        }
+        return var;
+    }
+    
+}
+
+class CASR { 
+    //Auto-generated fields of the CASR class:
+    Main m;
+    int CASR_var;
+    int CASR_out;
+    int CASR_plus;
+    int CASR_minus;
+    int bit_plus;
+    int bit_minus;
+    int i;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor CASR:
+    ensures Perm(m, write) **
+            Perm(CASR_var, write) **
+            Perm(CASR_out, write) **
+            Perm(CASR_plus, write) **
+            Perm(CASR_minus, write) **
+            Perm(bit_plus, write) **
+            Perm(bit_minus, write) **
+            Perm(i, write) **
+            (m == m_param) ;
+    CASR(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.rn_casr, read) **
+            (m.rn_casr == this) ;
+    void run(){
+        lock m;
+        m.process_state = m.process_state[0 -> 0];
+        m.event_state = m.event_state[0 -> 2];
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_casr == this) ;
+        while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_casr == this) ;
+        while (true) {
+            if (!m.rn.reset) {
+                CASR_var = 1;
+            } else {
+                if (m.rn.loadseed_i) {
+                    if (m.rn.seed_i == 0) {
+                        m.rn.CASR_reg = 0;
+                    } else {
+                        m.rn.CASR_reg = m.rn.seed_i % m.rn.exp2_(32);
+                    }
+                } else {
+                    if (m.rn.CASR_reg == 0) {
+                        CASR_var = 0;
+                        bit_plus = 0;
+                        CASR_plus = 0;
+                        bit_minus = 0;
+                        CASR_minus = 0;
+                    } else {
+                        CASR_var = m.rn.CASR_reg % m.rn.exp2_(37);
+                        bit_plus = CASR_var / m.rn.exp2_(36);
+                        CASR_plus = (CASR_var % m.rn.exp2_(36)) * 2 + bit_plus;
+                        bit_minus = CASR_var % 1;
+                        CASR_minus = (CASR_var % m.rn.exp2_(37)) / 2 + bit_minus * m.rn.exp2_(36);
+                    }
+                    loop_invariant true ** 
+                            Perm(m, read) ** 
+                            (m != null) ** 
+                            held(m)  ** 
+                            m.global_permission_invariant() ** 
+                            (m.rn_casr == this) ** 
+                            ((true) && (!!m.rn.reset) && (!m.rn.loadseed_i) ) ;
+                    for (i = 0; i < 37; i = 1 + i) {
+                        CASR_out = m.rn.xor_(CASR_out, i, m.rn.bit_(CASR_plus, i), m.rn.bit_(CASR_minus, i));
+                    }
+                    if (CASR_out == 0) {
+                        m.rn.CASR_reg = 0;
+                    } else {
+                        m.rn.CASR_reg = CASR_out % m.rn.exp2_(37);
+                    }
+                }
+            }
+            m.process_state = m.process_state[0 -> 1];
+            m.event_state = m.event_state[1 -> 5];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.rn_casr == this) ;
+            while (m.process_state[0] != -1 || m.event_state[1] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+
+class LFSR { 
+    //Auto-generated fields of the LFSR class:
+    Main m;
+    int LFSR_var;
+    int outbit;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor LFSR:
+    ensures Perm(m, write) **
+            Perm(LFSR_var, write) **
+            Perm(outbit, write) **
+            (m == m_param) ;
+    LFSR(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.rn_lfsr, read) **
+            (m.rn_lfsr == this) ;
+    void run(){
+        lock m;
+        m.process_state = m.process_state[1 -> 2];
+        m.event_state = m.event_state[2 -> 2];
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_lfsr == this) ;
+        while (m.process_state[1] != -1 || m.event_state[2] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_lfsr == this) ;
+        while (true) {
+            if (!m.rn.reset) {
+                m.rn.LFSR_reg = 1;
+            } else {
+                if (m.rn.loadseed_i) {
+                    if (m.rn.seed_i == 0) {
+                        m.rn.LFSR_reg = 0;
+                    } else {
+                        m.rn.LFSR_reg = m.rn.seed_i % m.rn.exp2_(32);
+                    }
+                } else {
+                    if (m.rn.LFSR_reg == 0) {
+                        LFSR_var = 0;
+                        outbit = 0;
+                    } else {
+                        LFSR_var = m.rn.LFSR_reg % m.rn.exp2_(43);
+                        outbit = LFSR_var / m.rn.exp2_(42);
+                        LFSR_var = (LFSR_var % m.rn.exp2_(42)) * 2 + outbit;
+                    }
+                    LFSR_var = m.rn.xor_(LFSR_var, 41, outbit, m.rn.bit_(LFSR_var, 41));
+                    LFSR_var = m.rn.xor_(LFSR_var, 20, outbit, m.rn.bit_(LFSR_var, 20));
+                    LFSR_var = m.rn.xor_(LFSR_var, 1, outbit, m.rn.bit_(LFSR_var, 1));
+                    if (LFSR_var == 0) {
+                        m.rn.LFSR_reg = 0;
+                    } else {
+                        m.rn.LFSR_reg = LFSR_var % m.rn.exp2_(43);
+                    }
+                }
+            }
+            m.process_state = m.process_state[1 -> 3];
+            m.event_state = m.event_state[3 -> 5];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.rn_lfsr == this) ;
+            while (m.process_state[1] != -1 || m.event_state[3] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+
+class Combinate { 
+    //Auto-generated fields of the Combinate class:
+    Main m;
+    int i;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Combinate:
+    ensures Perm(m, write) **
+            Perm(i, write) **
+            (m == m_param) ;
+    Combinate(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.rn_combinate, read) **
+            (m.rn_combinate == this) ;
+    void run(){
+        lock m;
+        m.process_state = m.process_state[2 -> 4];
+        m.event_state = m.event_state[4 -> 2];
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_combinate == this) ;
+        while (m.process_state[2] != -1 || m.event_state[4] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_combinate == this) ;
+        while (true) {
+            if (!m.rn.reset) {
+                m.rn.number_o = 0;
+            } else {
+                loop_invariant true ** 
+                        Perm(m, read) ** 
+                        (m != null) ** 
+                        held(m)  ** 
+                        m.global_permission_invariant() ** 
+                        (m.rn_combinate == this) ** 
+                        ((true) && (!!m.rn.reset) ) ;
+                for (i = 0; i < 32; i = 1 + i) {
+                    m.rn.number_o = m.rn.xor_(m.rn.number_o, i, m.rn.bit_(m.rn.LFSR_reg, i), m.rn.bit_(m.rn.CASR_reg, i));
+                }
+            }
+            m.process_state = m.process_state[2 -> 5];
+            m.event_state = m.event_state[5 -> 5];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.rn_combinate == this) ;
+            while (m.process_state[2] != -1 || m.event_state[5] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+
+
+
+class Main { 
+    //Auto-generated fields of the Main class:
+    seq<int> process_state;
+    seq<int> event_state;
+    Rng rn;
+    CASR rn_casr;
+    LFSR rn_lfsr;
+    Combinate rn_combinate;
+    
+    //Auto-generated global invariant: 
+    inline resource scheduler_permission_invariant() = true ** 
+            Perm(process_state, write) **
+            |process_state| == 3 **
+            Perm(event_state, write) **
+            |event_state| == 6 **
+            (\forall int i = 0 .. |process_state|; ((({: process_state[i] :} == -1)) || (((process_state[i] >= 0) && (process_state[i] < |event_state|))) ))
+            ;
+    inline resource global_permission_invariant() = true ** 
+            scheduler_permission_invariant() **
+            Perm(rn, read) **
+            (rn != null) **
+            Perm(rn.clk, write) **
+            Perm(rn.reset, write) **
+            Perm(rn.loadseed_i, write) **
+            Perm(rn.seed_i, write) **
+            Perm(rn.number_o, write) **
+            Perm(rn.LFSR_reg, write) **
+            Perm(rn.CASR_reg, write) **
+            Perm(rn.result, write) **
+            Perm(rn.i, write) **
+            Perm(rn.aux, write) **
+            Perm(rn_casr, read) **
+            (rn_casr != null) **
+            Perm(rn_casr.CASR_var, write) **
+            Perm(rn_casr.CASR_out, write) **
+            Perm(rn_casr.CASR_plus, write) **
+            Perm(rn_casr.CASR_minus, write) **
+            Perm(rn_casr.bit_plus, write) **
+            Perm(rn_casr.bit_minus, write) **
+            Perm(rn_casr.i, write) **
+            Perm(rn_lfsr, read) **
+            (rn_lfsr != null) **
+            Perm(rn_lfsr.LFSR_var, write) **
+            Perm(rn_lfsr.outbit, write) **
+            Perm(rn_combinate, read) **
+            (rn_combinate != null) **
+            Perm(rn_combinate.i, write) **
+            Perm(rn.m, read) **
+            (rn.m == this)
+            ;
+    resource lock_invariant() = global_permission_invariant();
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Main:
+    Main(){
+        process_state = [-1,-1,-1];
+        //
+        event_state = [-3,-3,-3,-3,-3,-3];
+        rn = new Rng(this);
+        rn_casr = new CASR(this);
+        rn_lfsr = new LFSR(this);
+        rn_combinate = new Combinate(this);
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function main:
+    void main(){
+        lock this;
+        fork rn_casr;
+        fork rn_lfsr;
+        fork rn_combinate;
+        unlock this;
+        loop_invariant true ;
+        while (true) {
+            lock this;
+            immediate_wakeup();
+            reset_events_no_delta();
+            if (process_state[0] != -1 && process_state[1] != -1 && process_state[2] != -1 ) {
+                int min_advance = find_minimum_advance(event_state);
+                if (min_advance == -1) {
+                    min_advance = 0;
+                }
+                event_state = [event_state[0] < -1 ? -3 : event_state[0] - min_advance,event_state[1] < -1 ? -3 : event_state[1] - min_advance,event_state[2] < -1 ? -3 : event_state[2] - min_advance,event_state[3] < -1 ? -3 : event_state[3] - min_advance,event_state[4] < -1 ? -3 : event_state[4] - min_advance,event_state[5] < -1 ? -3 : event_state[5] - min_advance];
+                wakeup_after_wait();
+                reset_all_events();
+            }
+            unlock this;
+        }
+        join rn_casr;
+        join rn_lfsr;
+        join rn_combinate;
+    }
+    
+    //Auto-generated specifications of the function immediate_wakeup:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == -1)) ))) && (((((\old(process_state[1]) >= 0)) && ((\old(event_state[\old(process_state[1])]) == 0)) ) ==> (((process_state[1] == -1)) ))) && (((((\old(process_state[2]) >= 0)) && ((\old(event_state[\old(process_state[2])]) == 0)) ) ==> (((process_state[2] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == \old(process_state[0]))) ))) && ((!(((\old(process_state[1]) >= 0)) && ((\old(event_state[\old(process_state[1])]) == 0)) ) ==> (((process_state[1] == \old(process_state[1]))) ))) && ((!(((\old(process_state[2]) >= 0)) && ((\old(event_state[\old(process_state[2])]) == 0)) ) ==> (((process_state[2] == \old(process_state[2]))) ))) );
+    void immediate_wakeup();
+    
+    //Auto-generated specifications of the function reset_events_no_delta:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures ((((((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == -2)) ))) && (((((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == -2)) ))) && (((((\old(event_state[2]) == 0)) ) ==> (((event_state[2] == -2)) ))) && (((((\old(event_state[3]) == 0)) ) ==> (((event_state[3] == -2)) ))) && (((((\old(event_state[4]) == 0)) ) ==> (((event_state[4] == -2)) ))) && (((((\old(event_state[5]) == 0)) ) ==> (((event_state[5] == -2)) ))) );
+    ensures (((!(((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!(((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == \old(event_state[1]))) ))) && ((!(((\old(event_state[2]) == 0)) ) ==> (((event_state[2] == \old(event_state[2]))) ))) && ((!(((\old(event_state[3]) == 0)) ) ==> (((event_state[3] == \old(event_state[3]))) ))) && ((!(((\old(event_state[4]) == 0)) ) ==> (((event_state[4] == \old(event_state[4]))) ))) && ((!(((\old(event_state[5]) == 0)) ) ==> (((event_state[5] == \old(event_state[5]))) ))) );
+    void reset_events_no_delta();
+    
+    //Auto-generated specifications of the function find_minimum_advance:
+    requires (|vals| == 6);
+    ensures ((((vals[0] < -1) || (\result <= vals[0]))) && (((vals[1] < -1) || (\result <= vals[1]))) && (((vals[2] < -1) || (\result <= vals[2]))) && (((vals[3] < -1) || (\result <= vals[3]))) && (((vals[4] < -1) || (\result <= vals[4]))) && (((vals[5] < -1) || (\result <= vals[5]))) );
+    ensures (((((vals[0] < -1)) && ((vals[1] < -1)) && ((vals[2] < -1)) && ((vals[3] < -1)) && ((vals[4] < -1)) && ((vals[5] < -1)) ) ==> (\result == 0)) && ((((vals[0] >= -1)) || ((vals[1] >= -1)) || ((vals[2] >= -1)) || ((vals[3] >= -1)) || ((vals[4] >= -1)) || ((vals[5] >= -1)) ) ==> ((((vals[0] >= -1) && (\result == vals[0]))) || (((vals[1] >= -1) && (\result == vals[1]))) || (((vals[2] >= -1) && (\result == vals[2]))) || (((vals[3] >= -1) && (\result == vals[3]))) || (((vals[4] >= -1) && (\result == vals[4]))) || (((vals[5] >= -1) && (\result == vals[5]))) )));
+    pure int find_minimum_advance(seq<int> vals);
+    
+    //Auto-generated specifications of the function wakeup_after_wait:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == -1)) ))) && (((((\old(process_state[1]) >= 0)) && (((\old(event_state[\old(process_state[1])]) == 0) || (\old(event_state[\old(process_state[1])]) == -1))) ) ==> (((process_state[1] == -1)) ))) && (((((\old(process_state[2]) >= 0)) && (((\old(event_state[\old(process_state[2])]) == 0) || (\old(event_state[\old(process_state[2])]) == -1))) ) ==> (((process_state[2] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == \old(process_state[0]))) ))) && ((!(((\old(process_state[1]) >= 0)) && (((\old(event_state[\old(process_state[1])]) == 0) || (\old(event_state[\old(process_state[1])]) == -1))) ) ==> (((process_state[1] == \old(process_state[1]))) ))) && ((!(((\old(process_state[2]) >= 0)) && (((\old(event_state[\old(process_state[2])]) == 0) || (\old(event_state[\old(process_state[2])]) == -1))) ) ==> (((process_state[2] == \old(process_state[2]))) ))) );
+    void wakeup_after_wait();
+    
+    //Auto-generated specifications of the function reset_all_events:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures (((((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == -2)) ))) && ((((\old(event_state[1]) == 0) || (\old(event_state[1]) == -1)) ==> (((event_state[1] == -2)) ))) && ((((\old(event_state[2]) == 0) || (\old(event_state[2]) == -1)) ==> (((event_state[2] == -2)) ))) && ((((\old(event_state[3]) == 0) || (\old(event_state[3]) == -1)) ==> (((event_state[3] == -2)) ))) && ((((\old(event_state[4]) == 0) || (\old(event_state[4]) == -1)) ==> (((event_state[4] == -2)) ))) && ((((\old(event_state[5]) == 0) || (\old(event_state[5]) == -1)) ==> (((event_state[5] == -2)) ))) );
+    ensures (((!((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!((\old(event_state[1]) == 0) || (\old(event_state[1]) == -1)) ==> (((event_state[1] == \old(event_state[1]))) ))) && ((!((\old(event_state[2]) == 0) || (\old(event_state[2]) == -1)) ==> (((event_state[2] == \old(event_state[2]))) ))) && ((!((\old(event_state[3]) == 0) || (\old(event_state[3]) == -1)) ==> (((event_state[3] == \old(event_state[3]))) ))) && ((!((\old(event_state[4]) == 0) || (\old(event_state[4]) == -1)) ==> (((event_state[4] == \old(event_state[4]))) ))) && ((!((\old(event_state[5]) == 0) || (\old(event_state[5]) == -1)) ==> (((event_state[5] == \old(event_state[5]))) ))) );
+    void reset_all_events();
+    
+}
+

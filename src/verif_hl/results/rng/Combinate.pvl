@@ -1,0 +1,74 @@
+class Combinate { 
+    //Auto-generated fields of the Combinate class:
+    Main m;
+    int i;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Combinate:
+    ensures Perm(m, write) **
+            Perm(i, write) **
+            (m == m_param) ;
+    Combinate(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.rn_combinate, read) **
+            (m.rn_combinate == this) ;
+    void run(){
+        lock m;
+        m.process_state = m.process_state[2 -> 4];
+        m.event_state = m.event_state[4 -> 2];
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_combinate == this) ;
+        while (m.process_state[2] != -1 || m.event_state[4] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_combinate == this) ;
+        while (true) {
+            if (!m.rn.reset) {
+                m.rn.number_o = 0;
+            } else {
+                loop_invariant true ** 
+                        Perm(m, read) ** 
+                        (m != null) ** 
+                        held(m)  ** 
+                        m.global_permission_invariant() ** 
+                        (m.rn_combinate == this) ** 
+                        ((true) && (!!m.rn.reset) ) ;
+                for (i = 0; i < 32; i = 1 + i) {
+                    m.rn.number_o = m.rn.xor_(m.rn.number_o, i, m.rn.bit_(m.rn.LFSR_reg, i), m.rn.bit_(m.rn.CASR_reg, i));
+                }
+            }
+            m.process_state = m.process_state[2 -> 5];
+            m.event_state = m.event_state[5 -> 5];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.rn_combinate == this) ;
+            while (m.process_state[2] != -1 || m.event_state[5] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+

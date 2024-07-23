@@ -1,0 +1,134 @@
+class Read_speed { 
+    //Auto-generated fields of the Read_speed class:
+    Main m;
+    int tmp_0;
+    int tmp_1;
+    int tmp_2;
+    int tmp_3;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Read_speed:
+    ensures Perm(m, write) **
+            Perm(tmp_0, write) **
+            Perm(tmp_1, write) **
+            Perm(tmp_2, write) **
+            Perm(tmp_3, write) **
+            (m == m_param) ;
+    Read_speed(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.ecu_absasr_read_speed, read) **
+            (m.ecu_absasr_read_speed == this) ;
+    void run(){
+        lock m;
+        tmp_0 = 0;
+        tmp_1 = 0;
+        tmp_2 = 0;
+        tmp_3 = 0;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.ecu_absasr_read_speed == this) ;
+        while (true) {
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.ecu_absasr_read_speed == this) ;
+            while (|m.speed_vr.buffer| == 0) {
+                m.process_state = m.process_state[5 -> 3];
+                loop_invariant true ** 
+                        Perm(m, read) ** 
+                        (m != null) ** 
+                        held(m)  ** 
+                        m.global_permission_invariant() ** 
+                        (m.ecu_absasr_read_speed == this) ;
+                while (m.process_state[5] != -1 || m.event_state[3] != -2) {
+                    unlock m;
+                    lock m;
+                }
+            }
+            m.ecu_absasr.v[0] = m.speed_vr.fifo_read();
+            m.ecu_absasr.a[0] = (m.ecu_absasr.v[0] - tmp_0);
+            tmp_0 = m.ecu_absasr.v[0];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.ecu_absasr_read_speed == this) ;
+            while (|m.speed_vl.buffer| == 0) {
+                m.process_state = m.process_state[5 -> 1];
+                loop_invariant true ** 
+                        Perm(m, read) ** 
+                        (m != null) ** 
+                        held(m)  ** 
+                        m.global_permission_invariant() ** 
+                        (m.ecu_absasr_read_speed == this) ;
+                while (m.process_state[5] != -1 || m.event_state[1] != -2) {
+                    unlock m;
+                    lock m;
+                }
+            }
+            m.ecu_absasr.v[1] = m.speed_vl.fifo_read();
+            m.ecu_absasr.a[1] = (m.ecu_absasr.v[1] - tmp_1);
+            tmp_1 = m.ecu_absasr.v[1];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.ecu_absasr_read_speed == this) ;
+            while (|m.speed_hr.buffer| == 0) {
+                m.process_state = m.process_state[5 -> 7];
+                loop_invariant true ** 
+                        Perm(m, read) ** 
+                        (m != null) ** 
+                        held(m)  ** 
+                        m.global_permission_invariant() ** 
+                        (m.ecu_absasr_read_speed == this) ;
+                while (m.process_state[5] != -1 || m.event_state[7] != -2) {
+                    unlock m;
+                    lock m;
+                }
+            }
+            m.ecu_absasr.v[2] = m.speed_hr.fifo_read();
+            m.ecu_absasr.a[2] = (m.ecu_absasr.v[2] - tmp_2);
+            tmp_2 = m.ecu_absasr.v[2];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.ecu_absasr_read_speed == this) ;
+            while (|m.speed_hl.buffer| == 0) {
+                m.process_state = m.process_state[5 -> 5];
+                loop_invariant true ** 
+                        Perm(m, read) ** 
+                        (m != null) ** 
+                        held(m)  ** 
+                        m.global_permission_invariant() ** 
+                        (m.ecu_absasr_read_speed == this) ;
+                while (m.process_state[5] != -1 || m.event_state[5] != -2) {
+                    unlock m;
+                    lock m;
+                }
+            }
+            m.ecu_absasr.v[3] = m.speed_hl.fifo_read();
+            m.ecu_absasr.a[3] = (m.ecu_absasr.v[3] - tmp_3);
+            tmp_3 = m.ecu_absasr.v[3];
+        }
+        unlock m;
+    }
+    
+}
+

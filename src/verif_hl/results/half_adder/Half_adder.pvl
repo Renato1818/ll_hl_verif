@@ -1,0 +1,66 @@
+class Half_adder { 
+    //Auto-generated fields of the Half_adder class:
+    Main m;
+    boolean s_nand;
+    boolean s_or;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Half_adder:
+    ensures Perm(m, write) **
+            Perm(s_nand, write) **
+            Perm(s_or, write) **
+            (m == m_param) ;
+    Half_adder(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.half, read) **
+            (m.half == this) ;
+    void run(){
+        lock m;
+        m.process_state = m.process_state[0 -> 0];
+        m.event_state = m.event_state[0 -> 2000000];
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.half == this) ;
+        while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.half == this) ;
+        while (true) {
+            s_nand = !(a & b);
+            s_or = m.null | m.null;
+            m.null.write(s_nand & s_or);
+            m.null.write(a & b);
+            m.process_state = m.process_state[0 -> 1];
+            m.event_state = m.event_state[1 -> 5000000];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.half == this) ;
+            while (m.process_state[0] != -1 || m.event_state[1] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+

@@ -1,0 +1,371 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2020  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
+
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing STA pass (static timing analysis).
+
+2. Executing Verilog-2005 frontend: robot_new.sv
+Parsing formal SystemVerilog input from `robot_new.sv' to AST representation.
+Storing AST representation for module `$abstract\robot'.
+Successfully finished Verilog frontend.
+
+3. Executing HIERARCHY pass (managing design hierarchy).
+
+4. Executing AST frontend in derive mode using pre-parsed AST for module `\robot'.
+Generating RTLIL representation for module `\robot'.
+Warning: reg '\buff_dist_v' is assigned in a continuous assignment at robot_new.sv:20.9-20.29.
+Warning: reg '\obs_detected_next' is assigned in a continuous assignment at robot_new.sv:24.9-24.67.
+Warning: reg '\alarm_flag_next' is assigned in a continuous assignment at robot_new.sv:35.9-35.53.
+
+4.1. Analyzing design hierarchy..
+Top module:  \robot
+
+4.2. Analyzing design hierarchy..
+Top module:  \robot
+Removing unused module `$abstract\robot'.
+Removed 1 unused modules.
+Module robot directly or indirectly contains formal properties -> setting "keep" attribute.
+
+5. Executing PREP pass.
+
+5.1. Executing HIERARCHY pass (managing design hierarchy).
+
+5.1.1. Analyzing design hierarchy..
+Top module:  \robot
+
+5.1.2. Analyzing design hierarchy..
+Top module:  \robot
+Removed 0 unused modules.
+Module robot directly or indirectly contains formal properties -> setting "keep" attribute.
+
+5.2. Executing PROC pass (convert processes to netlists).
+
+5.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+5.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$robot_new.sv:86$24 in module robot.
+Marked 1 switch rules as full_case in process $proc$robot_new.sv:70$22 in module robot.
+Marked 1 switch rules as full_case in process $proc$robot_new.sv:37$16 in module robot.
+Marked 1 switch rules as full_case in process $proc$robot_new.sv:26$13 in module robot.
+Removed a total of 0 dead cases.
+
+5.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 5 redundant assignments.
+Promoted 24 assignments to connections.
+
+5.2.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\robot.$proc$robot_new.sv:0$74'.
+  Set init value: $formal$robot_new.sv:109$10_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:0$72'.
+  Set init value: $formal$robot_new.sv:108$9_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:0$70'.
+  Set init value: $formal$robot_new.sv:106$8_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:0$68'.
+  Set init value: $formal$robot_new.sv:105$7_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:0$66'.
+  Set init value: $formal$robot_new.sv:103$6_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:0$64'.
+  Set init value: $formal$robot_new.sv:102$5_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:0$62'.
+  Set init value: $formal$robot_new.sv:98$4_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:0$60'.
+  Set init value: $formal$robot_new.sv:95$3_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:0$58'.
+  Set init value: $formal$robot_new.sv:90$2_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:0$56'.
+  Set init value: $formal$robot_new.sv:89$1_EN = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:58$55'.
+  Set init value: \f_past_past_valid = 1'0
+Found init rule in `\robot.$proc$robot_new.sv:57$54'.
+  Set init value: \f_past_valid = 1'0
+
+5.2.5. Executing PROC_ARST pass (detect async resets in processes).
+Found async reset \rstn in `\robot.$proc$robot_new.sv:70$22'.
+Found async reset \rstn in `\robot.$proc$robot_new.sv:37$16'.
+Found async reset \rstn in `\robot.$proc$robot_new.sv:26$13'.
+
+5.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+<suppressed ~4 debug messages>
+
+5.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\robot.$proc$robot_new.sv:0$74'.
+Creating decoders for process `\robot.$proc$robot_new.sv:0$72'.
+Creating decoders for process `\robot.$proc$robot_new.sv:0$70'.
+Creating decoders for process `\robot.$proc$robot_new.sv:0$68'.
+Creating decoders for process `\robot.$proc$robot_new.sv:0$66'.
+Creating decoders for process `\robot.$proc$robot_new.sv:0$64'.
+Creating decoders for process `\robot.$proc$robot_new.sv:0$62'.
+Creating decoders for process `\robot.$proc$robot_new.sv:0$60'.
+Creating decoders for process `\robot.$proc$robot_new.sv:0$58'.
+Creating decoders for process `\robot.$proc$robot_new.sv:0$56'.
+Creating decoders for process `\robot.$proc$robot_new.sv:58$55'.
+Creating decoders for process `\robot.$proc$robot_new.sv:57$54'.
+Creating decoders for process `\robot.$proc$robot_new.sv:86$24'.
+     1/8: $0$formal$robot_new.sv:89$1_EN[0:0]$26
+     2/8: $0$formal$robot_new.sv:89$1_CHECK[0:0]$25
+     3/8: $0$formal$robot_new.sv:90$2_EN[0:0]$28
+     4/8: $0$formal$robot_new.sv:90$2_CHECK[0:0]$27
+     5/8: $0$formal$robot_new.sv:95$3_EN[0:0]$30
+     6/8: $0$formal$robot_new.sv:95$3_CHECK[0:0]$29
+     7/8: $0$formal$robot_new.sv:98$4_EN[0:0]$32
+     8/8: $0$formal$robot_new.sv:98$4_CHECK[0:0]$31
+Creating decoders for process `\robot.$proc$robot_new.sv:70$22'.
+     1/4: $0\f_past_valid[0:0]
+     2/4: $0\f_obs_past_past[0:0]
+     3/4: $0\f_obs_past[0:0]
+     4/4: $0\f_past_past_valid[0:0]
+Creating decoders for process `\robot.$proc$robot_new.sv:37$16'.
+     1/1: $0\out_alarm_flag[0:0]
+Creating decoders for process `\robot.$proc$robot_new.sv:26$13'.
+     1/1: $0\obs_detected[0:0]
+
+5.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+5.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\robot.$formal$robot_new.sv:89$1_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$110' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:89$1_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$111' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:90$2_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$112' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:90$2_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$113' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:95$3_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$114' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:95$3_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$115' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:98$4_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$116' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:98$4_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$117' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:102$5_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$118' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:102$5_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$119' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:103$6_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$120' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:103$6_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$121' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:105$7_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$122' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:105$7_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$123' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:106$8_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$124' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:106$8_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$125' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:108$9_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$126' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:108$9_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$127' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:109$10_CHECK' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$128' with positive edge clock.
+Creating register for signal `\robot.$formal$robot_new.sv:109$10_EN' using process `\robot.$proc$robot_new.sv:86$24'.
+  created $dff cell `$procdff$129' with positive edge clock.
+Creating register for signal `\robot.\f_obs_past' using process `\robot.$proc$robot_new.sv:70$22'.
+  created $adff cell `$procdff$130' with positive edge clock and negative level reset.
+Creating register for signal `\robot.\f_obs_past_past' using process `\robot.$proc$robot_new.sv:70$22'.
+  created $adff cell `$procdff$131' with positive edge clock and negative level reset.
+Creating register for signal `\robot.\f_past_valid' using process `\robot.$proc$robot_new.sv:70$22'.
+  created $adff cell `$procdff$132' with positive edge clock and negative level reset.
+Creating register for signal `\robot.\f_past_past_valid' using process `\robot.$proc$robot_new.sv:70$22'.
+  created $dff cell `$procdff$135' with positive edge clock.
+Creating register for signal `\robot.\out_alarm_flag' using process `\robot.$proc$robot_new.sv:37$16'.
+  created $adff cell `$procdff$136' with positive edge clock and negative level reset.
+Creating register for signal `\robot.\obs_detected' using process `\robot.$proc$robot_new.sv:26$13'.
+  created $adff cell `$procdff$137' with positive edge clock and negative level reset.
+
+5.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+5.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `robot.$proc$robot_new.sv:0$74'.
+Removing empty process `robot.$proc$robot_new.sv:0$72'.
+Removing empty process `robot.$proc$robot_new.sv:0$70'.
+Removing empty process `robot.$proc$robot_new.sv:0$68'.
+Removing empty process `robot.$proc$robot_new.sv:0$66'.
+Removing empty process `robot.$proc$robot_new.sv:0$64'.
+Removing empty process `robot.$proc$robot_new.sv:0$62'.
+Removing empty process `robot.$proc$robot_new.sv:0$60'.
+Removing empty process `robot.$proc$robot_new.sv:0$58'.
+Removing empty process `robot.$proc$robot_new.sv:0$56'.
+Removing empty process `robot.$proc$robot_new.sv:58$55'.
+Removing empty process `robot.$proc$robot_new.sv:57$54'.
+Found and cleaned up 3 empty switches in `\robot.$proc$robot_new.sv:86$24'.
+Removing empty process `robot.$proc$robot_new.sv:86$24'.
+Found and cleaned up 1 empty switch in `\robot.$proc$robot_new.sv:70$22'.
+Removing empty process `robot.$proc$robot_new.sv:70$22'.
+Removing empty process `robot.$proc$robot_new.sv:37$16'.
+Removing empty process `robot.$proc$robot_new.sv:26$13'.
+Cleaned up 4 empty switches.
+
+5.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module robot.
+<suppressed ~9 debug messages>
+
+5.3. Executing FUTURE pass.
+
+5.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module robot.
+
+5.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \robot..
+Removed 4 unused cells and 60 unused wires.
+<suppressed ~5 debug messages>
+
+5.6. Executing CHECK pass (checking for obvious problems).
+Checking module robot...
+Found and reported 0 problems.
+
+5.7. Executing OPT pass (performing simple optimizations).
+
+5.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module robot.
+
+5.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\robot'.
+<suppressed ~24 debug messages>
+Removed a total of 8 cells.
+
+5.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \robot..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~12 debug messages>
+
+5.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \robot.
+Performed a total of 0 changes.
+
+5.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\robot'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+5.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \robot..
+Removed 0 unused cells and 10 unused wires.
+<suppressed ~1 debug messages>
+
+5.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module robot.
+
+5.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+5.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \robot..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+5.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \robot.
+Performed a total of 0 changes.
+
+5.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\robot'.
+Removed a total of 0 cells.
+
+5.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \robot..
+
+5.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module robot.
+
+5.7.14. Finished OPT passes. (There is nothing left to do.)
+
+5.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 10 bits (of 16) from port B of cell robot.$lt$robot_new.sv:24$11 ($lt).
+Removed top 1 bits (of 16) from port B of cell robot.$eq$robot_new.sv:103$51 ($eq).
+
+5.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \robot..
+
+5.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+5.11. Executing OPT pass (performing simple optimizations).
+
+5.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module robot.
+
+5.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\robot'.
+Removed a total of 0 cells.
+
+5.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \robot..
+
+5.11.4. Finished fast OPT passes.
+
+5.12. Printing statistics.
+
+=== robot ===
+
+   Number of wires:                 51
+   Number of wire bits:             81
+   Number of public wires:          17
+   Number of public wire bits:      47
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                 54
+     $adff                           5
+     $assert                         4
+     $cover                          6
+     $dff                           15
+     $eq                             1
+     $logic_not                      5
+     $lt                             1
+     $mux                           15
+     $xor                            2
+
+5.13. Executing CHECK pass (checking for obvious problems).
+Checking module robot...
+Found and reported 0 problems.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+
+6.1. Analyzing design hierarchy..
+Top module:  \robot
+
+6.2. Analyzing design hierarchy..
+Top module:  \robot
+Removed 0 unused modules.
+Module robot directly or indirectly contains formal properties -> setting "keep" attribute.
+
+7. Executing jny backend.
+
+8. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+Warnings: 3 unique messages, 3 total
+End of script. Logfile hash: 6dab46171d, CPU: user 0.06s system 0.02s, MEM: 14.81 MB peak
+Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
+Time spent: 21% 5x opt_clean (0 sec), 21% 6x opt_expr (0 sec), ...

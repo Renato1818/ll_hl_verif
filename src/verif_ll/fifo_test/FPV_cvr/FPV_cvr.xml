@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2024-06-25T15:34:25" hostname="SNPS-A1iGRuJX2K" package="FPV" id="0" name="cvr" tests="18" errors="0" failures="0" time="23" skipped="10">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="cvr" name="build execution" time="0">
+</testcase>
+<testcase classname="cvr" name="Property COVER in fifo at fifo.sv:127.13-127.56" time="0" type="COVER" location="fifo.sv:127.13-127.56" id="w_empty" tracefile="engine_0/trace2.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in fifo at fifo.sv:125.13-125.65" time="0" type="COVER" location="fifo.sv:125.13-125.65" id="w_full" tracefile="engine_0/trace4.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in fifo at fifo.sv:99.13-99.45" time="0" type="COVER" location="fifo.sv:99.13-99.45" id="w_nreset" tracefile="engine_0/trace2.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in fifo at fifo.sv:131.13-131.48" time="0" type="COVER" location="fifo.sv:131.13-131.48" id="w_nzero_read" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in fifo at fifo.sv:130.13-130.48" time="0" type="COVER" location="fifo.sv:130.13-130.48" id="w_nzero_write" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in fifo at fifo.sv:189.13-189.61" time="0" type="COVER" location="fifo.sv:189.13-189.61" id="w_overfill" tracefile="engine_0/trace5.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in fifo at fifo.sv:135.13-135.34" time="0" type="COVER" location="fifo.sv:135.13-135.34" id="w_reset" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in fifo at fifo.sv:176.13-176.62" time="0" type="COVER" location="fifo.sv:176.13-176.62" id="w_underfill" tracefile="engine_0/trace3.vcd">
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:106.13-107.71" time="0" type="ASSERT" location="fifo.sv:106.13-107.71" id="a_count_diff">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:110.13-113.57" time="0" type="ASSERT" location="fifo.sv:110.13-113.57" id="a_counts">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:126.13-126.51" time="0" type="ASSERT" location="fifo.sv:126.13-126.51" id="a_empty">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:124.13-124.57" time="0" type="ASSERT" location="fifo.sv:124.13-124.57" id="a_full">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:102.13-102.49" time="0" type="ASSERT" location="fifo.sv:102.13-102.49" id="a_oflow">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:103.13-103.48" time="0" type="ASSERT" location="fifo.sv:103.13-103.48" id="a_oflow2">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:116.13-118.56" time="0" type="ASSERT" location="fifo.sv:116.13-118.56" id="a_raddr">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:134.13-134.47" time="0" type="ASSERT" location="fifo.sv:134.13-134.47" id="a_reset">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:119.13-121.56" time="0" type="ASSERT" location="fifo.sv:119.13-121.56" id="a_waddr">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in fifo at fifo.sv:138.13-138.59" time="0" type="ASSERT" location="fifo.sv:138.13-138.59" id="a_zero_out">
+<skipped />
+</testcase>
+<system-out>SBY 15:34:13 [fifo_test/FPV_cvr] Removing directory '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/fifo_test/FPV_cvr'.
+SBY 15:34:13 [fifo_test/FPV_cvr] Copy '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/fifo_test/fifo.sv' to '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/fifo_test/FPV_cvr/src/fifo.sv'.
+SBY 15:34:13 [fifo_test/FPV_cvr] engine_0: smtbmc z3
+SBY 15:34:14 [fifo_test/FPV_cvr] base: starting process &quot;cd fifo_test/FPV_cvr/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 15:34:14 [fifo_test/FPV_cvr] base: finished (returncode=0)
+SBY 15:34:14 [fifo_test/FPV_cvr] prep: starting process &quot;cd fifo_test/FPV_cvr/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 15:34:14 [fifo_test/FPV_cvr] prep: finished (returncode=0)
+SBY 15:34:14 [fifo_test/FPV_cvr] smt2: starting process &quot;cd fifo_test/FPV_cvr/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 15:34:14 [fifo_test/FPV_cvr] smt2: finished (returncode=0)
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: starting process &quot;cd fifo_test/FPV_cvr; yosys-smtbmc -s z3 --presat -c --noprogress -t 20  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Solver: z3
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at w_nzero_write in step 1.
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at w_nzero_read in step 1.
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at w_reset in step 1.
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at w_nreset in step 2.
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at w_empty in step 2.
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at w_underfill in step 2.
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 15:34:14 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY 15:34:15 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY 15:34:15 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 4..
+SBY 15:34:15 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 5..
+SBY 15:34:15 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 6..
+SBY 15:34:15 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 7..
+SBY 15:34:15 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 8..
+SBY 15:34:15 [fifo_test/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 9..
+SBY 15:34:15 [fifo_test/FPV_cvr] engine_0: ##   0:00:01  Checking cover reachability in step 10..
+SBY 15:34:15 [fifo_test/FPV_cvr] engine_0: ##   0:00:01  Checking cover reachability in step 11..
+SBY 15:34:16 [fifo_test/FPV_cvr] engine_0: ##   0:00:01  Checking cover reachability in step 12..
+SBY 15:34:17 [fifo_test/FPV_cvr] engine_0: ##   0:00:02  Checking cover reachability in step 13..
+SBY 15:34:18 [fifo_test/FPV_cvr] engine_0: ##   0:00:03  Checking cover reachability in step 14..
+SBY 15:34:18 [fifo_test/FPV_cvr] engine_0: ##   0:00:04  Checking cover reachability in step 15..
+SBY 15:34:19 [fifo_test/FPV_cvr] engine_0: ##   0:00:05  Checking cover reachability in step 16..
+SBY 15:34:20 [fifo_test/FPV_cvr] engine_0: ##   0:00:06  Reached cover statement at w_full in step 16.
+SBY 15:34:20 [fifo_test/FPV_cvr] engine_0: ##   0:00:06  Writing trace to VCD file: engine_0/trace4.vcd
+SBY 15:34:20 [fifo_test/FPV_cvr] engine_0: ##   0:00:06  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY 15:34:20 [fifo_test/FPV_cvr] engine_0: ##   0:00:06  Writing trace to constraints file: engine_0/trace4.smtc
+SBY 15:34:20 [fifo_test/FPV_cvr] engine_0: ##   0:00:06  Writing trace to Yosys witness file: engine_0/trace4.yw
+SBY 15:34:20 [fifo_test/FPV_cvr] engine_0: ##   0:00:06  Checking cover reachability in step 16..
+SBY 15:34:21 [fifo_test/FPV_cvr] engine_0: ##   0:00:06  Checking cover reachability in step 17..
+SBY 15:34:21 [fifo_test/FPV_cvr] engine_0: ##   0:00:07  Checking cover reachability in step 18..
+SBY 15:34:24 [fifo_test/FPV_cvr] engine_0: ##   0:00:10  Reached cover statement at w_overfill in step 18.
+SBY 15:34:24 [fifo_test/FPV_cvr] engine_0: ##   0:00:10  Writing trace to VCD file: engine_0/trace5.vcd
+SBY 15:34:24 [fifo_test/FPV_cvr] engine_0: ##   0:00:10  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+SBY 15:34:24 [fifo_test/FPV_cvr] engine_0: ##   0:00:10  Writing trace to constraints file: engine_0/trace5.smtc
+SBY 15:34:24 [fifo_test/FPV_cvr] engine_0: ##   0:00:10  Writing trace to Yosys witness file: engine_0/trace5.yw
+SBY 15:34:24 [fifo_test/FPV_cvr] engine_0: ##   0:00:10  Status: passed
+SBY 15:34:24 [fifo_test/FPV_cvr] engine_0: finished (returncode=0)
+SBY 15:34:24 [fifo_test/FPV_cvr] engine_0: Status returned by engine: pass
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:11 (11)
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:23 (23)
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: engine_0 (smtbmc z3) returned pass
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: cover trace: fifo_test/FPV_cvr/engine_0/trace0.vcd
+SBY 15:34:24 [fifo_test/FPV_cvr] summary:   reached cover statement fifo.w_nzero_read at fifo.sv:131.13-131.48 in step 1
+SBY 15:34:24 [fifo_test/FPV_cvr] summary:   reached cover statement fifo.w_nzero_write at fifo.sv:130.13-130.48 in step 1
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: cover trace: fifo_test/FPV_cvr/engine_0/trace1.vcd
+SBY 15:34:24 [fifo_test/FPV_cvr] summary:   reached cover statement fifo.w_reset at fifo.sv:135.13-135.34 in step 1
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: cover trace: fifo_test/FPV_cvr/engine_0/trace2.vcd
+SBY 15:34:24 [fifo_test/FPV_cvr] summary:   reached cover statement fifo.w_empty at fifo.sv:127.13-127.56 in step 2
+SBY 15:34:24 [fifo_test/FPV_cvr] summary:   reached cover statement fifo.w_nreset at fifo.sv:99.13-99.45 in step 2
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: cover trace: fifo_test/FPV_cvr/engine_0/trace3.vcd
+SBY 15:34:24 [fifo_test/FPV_cvr] summary:   reached cover statement fifo.w_underfill at fifo.sv:176.13-176.62 in step 2
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: cover trace: fifo_test/FPV_cvr/engine_0/trace4.vcd
+SBY 15:34:24 [fifo_test/FPV_cvr] summary:   reached cover statement fifo.w_full at fifo.sv:125.13-125.65 in step 16
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: and 1 further trace
+SBY 15:34:24 [fifo_test/FPV_cvr] summary: see fifo_test/FPV_cvr/PASS for a complete summary
+SBY 15:34:24 [fifo_test/FPV_cvr] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

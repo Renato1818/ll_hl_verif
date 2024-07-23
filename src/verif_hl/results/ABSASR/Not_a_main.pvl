@@ -1,0 +1,84 @@
+class Not_a_main { 
+    //Auto-generated fields of the Not_a_main class:
+    Main m;
+    int i;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Not_a_main:
+    ensures Perm(m, write) **
+            Perm(i, write) **
+            (m == m_param) ;
+    Not_a_main(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.ecu_absasr_not_a_main, read) **
+            (m.ecu_absasr_not_a_main == this) ;
+    void run(){
+        lock m;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.ecu_absasr_not_a_main == this) ;
+        for (i = 0; i < 4; i = i + 1) {
+            m.ecu_absasr.s[i] = 1;
+            m.ecu_absasr.v[i] = 0;
+            m.ecu_absasr.a[i] = 0;
+        }
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.ecu_absasr_not_a_main == this) ;
+        while (true) {
+            m.process_state = m.process_state[4 -> 12];
+            m.event_state = m.event_state[12 -> 1];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.ecu_absasr_not_a_main == this) ;
+            while (m.process_state[4] != -1 || m.event_state[12] != -2) {
+                unlock m;
+                lock m;
+            }
+            i = 0;
+            if (m.ecu_absasr.abs(m.ecu_absasr.a[1]) < m.ecu_absasr.abs(m.ecu_absasr.a[i])) {
+                i = 1;
+            }
+            if (m.ecu_absasr.abs(m.ecu_absasr.a[2]) < m.ecu_absasr.abs(m.ecu_absasr.a[i])) {
+                i = 2;
+            }
+            if (m.ecu_absasr.abs(m.ecu_absasr.a[3]) < m.ecu_absasr.abs(m.ecu_absasr.a[i])) {
+                i = 3;
+            }
+            m.ecu_absasr.temp_fv = m.ecu_absasr.v[i];
+            m.ecu_absasr.fa = m.ecu_absasr.temp_fv - m.ecu_absasr.fv;
+            if (m.ecu_absasr.fa < 0) {
+                if (m.ecu_absasr.fa < -14) {
+                    m.ecu_absasr.fv = m.ecu_absasr.fv + -2;
+                } else {
+                    m.ecu_absasr.fv = m.ecu_absasr.temp_fv;
+                }
+                m.ecu_absasr._ABS();
+            } else {
+                if (m.ecu_absasr.fa > 0) {
+                    m.ecu_absasr.fv = m.ecu_absasr.temp_fv;
+                    m.ecu_absasr._ASR();
+                }
+            }
+        }
+        unlock m;
+    }
+    
+}
+

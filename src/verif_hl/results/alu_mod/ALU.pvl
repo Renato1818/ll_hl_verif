@@ -1,0 +1,192 @@
+class ALU { 
+    Main m;
+	int OPCODE;
+	int OP1;
+	int OP2;
+	boolean CARRY;
+	boolean ZERO;
+	int RESULT;
+
+    int data1;
+    int data2;
+    int result;
+    int i;
+    int bit;
+    int divisor;
+    int current_bit;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor ALU:
+    ensures Perm(m, write) **
+            Perm(OPCODE, write) **
+            Perm(OP1, write) **
+            Perm(OP2, write) **
+            Perm(CARRY, write) **
+            Perm(ZERO, write) **
+            Perm(RESULT, write) **
+            Perm(data1, write) **
+            Perm(data2, write) **
+            Perm(result, write) **
+            Perm(i, write) **
+            Perm(bit, write) **
+            Perm(divisor, write) **
+            Perm(current_bit, write) **
+            (m == m_param) ;
+    ALU(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function get_bit:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.alu == this) ;
+    int get_bit(int value, int pos){
+        divisor = 1;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.alu == this) ;
+        for (i = 0; i < pos; i++) {
+            divisor = divisor * 2;
+        }
+        if (divisor != 0) {
+            return (value / divisor) % 2;
+        } else {
+            return 0;
+        }
+    }
+
+    //Auto-generated specifications of the function set_bit:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.alu == this) ;
+    int set_bit(int value, int pos, int bit){
+        current_bit = get_bit(value, pos);
+        divisor = 1;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.alu == this) ;
+        for (i = 0; i < pos; i++) {
+            divisor = divisor * 2;
+        }
+        if (current_bit == bit) {
+            return value;
+        } else {
+            if (bit == 1) {
+                return value + divisor;
+            } else {
+                return value - divisor;
+            }
+        }
+    }
+
+    //Auto-generated specifications of the function operate:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.alu == this) ;
+    void operate(){
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.alu == this) ;
+        while (true) {
+            ZERO = false;
+            data1 = OP1 % 16;
+            data2 = OP2 % 16;
+            if ( (OPCODE % 8) == 0) {
+                result = data1 + data2;
+            } else {
+                if ((OPCODE % 8)  == 1) {
+                    result = data1 - data2;
+                } else {
+                    if ((OPCODE % 8)  == 2) {
+                        result = data1 + 1;
+                    } else {
+                        if ((OPCODE % 8)  == 3) {
+                            result = data1 - 1;
+                        } else {
+                            if ((OPCODE % 8)  == 4) {
+                                loop_invariant true ** 
+                                        Perm(m, read) ** 
+                                        (m != null) ** 
+                                        held(m)  ** 
+                                        m.global_permission_invariant() ** 
+                                        (m.alu == this) ** 
+                                        ((true) ) ;
+                                for (i = 0; i < 4; i++) {
+                                    bit = get_bit(data1, i) * get_bit(data2, i);
+                                    result = set_bit(result, i, bit);
+                                }
+                            } else {
+                                if ((OPCODE % 8)  == 5) {
+                                    loop_invariant true ** 
+                                            Perm(m, read) ** 
+                                            (m != null) ** 
+                                            held(m)  ** 
+                                            m.global_permission_invariant() ** 
+                                            (m.alu == this) ** 
+                                            ((true) ) ;
+                                    for (i = 0; i < 4; i++) {
+                                        bit = get_bit(data1, i) + get_bit(data2, i);
+                                        result = set_bit(result, i, (bit > 0) ? 1 : 0 );
+                                    }
+                                } else {
+                                    if ((OPCODE % 8)  == 6) {
+                                        loop_invariant true ** 
+                                                Perm(m, read) ** 
+                                                (m != null) ** 
+                                                held(m)  ** 
+                                                m.global_permission_invariant() ** 
+                                                (m.alu == this) ** 
+                                                ((true) ) ;
+                                        for (i = 0; i < 4; i++) {
+                                            bit = get_bit(data1, i) * get_bit(data2, i);
+                                            result = set_bit(result, i, (bit == 1) ? 0 : 1);
+                                        }
+                                    } else {
+                                        if ((OPCODE % 8)  == 7) {
+                                            loop_invariant true ** 
+                                                    Perm(m, read) ** 
+                                                    (m != null) ** 
+                                                    held(m)  ** 
+                                                    m.global_permission_invariant() ** 
+                                                    (m.alu == this) ** 
+                                                    ((true) ) ;
+                                            for (i = 0; i < 4; i++) {
+                                                bit = get_bit(data1, i) + get_bit(data2, i);
+                                                result = set_bit(result, i, (bit == 1) ? 1 : 0 );
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            RESULT == result % 16;
+            CARRY = ((result / 16) % 2) == 1 ? true : false;
+            
+            if ( (result % 16) == 0) {
+                ZERO = true;
+            }
+        }
+    }
+}
+

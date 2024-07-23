@@ -1,0 +1,31 @@
+initial
+assume (= [$auto$async2sync.cc:171:execute$142] false)
+assume (= [$formal$robot_new.sv:102$5_EN] false)
+assume (= [$formal$robot_new.sv:89$1_EN] false)
+assume (= [$formal$robot_new.sv:95$3_EN] false)
+assume (= [$formal$robot_new.sv:98$4_EN] false)
+assume (= [_witness_.anyinit_procdff_110] true)
+assume (= [_witness_.anyinit_procdff_112] false)
+assume (= [_witness_.anyinit_procdff_114] false)
+assume (= [_witness_.anyinit_procdff_116] false)
+assume (= [_witness_.anyinit_procdff_118] true)
+assume (= [_witness_.anyinit_procdff_120] false)
+assume (= [_witness_.anyinit_procdff_122] false)
+assume (= [_witness_.anyinit_procdff_124] true)
+assume (= [_witness_.anyinit_procdff_126] false)
+assume (= [_witness_.anyinit_procdff_128] true)
+assume (= [_witness_.anyinit_procdff_130] false)
+assume (= [_witness_.anyinit_procdff_131] false)
+assume (= [_witness_.anyinit_procdff_136] false)
+assume (= [_witness_.anyinit_procdff_137] false)
+assume (= [f_past_past_valid] false)
+
+state 0
+assume (= [clk] false)
+assume (= [dist_v] #x0000)
+assume (= [rstn] true)
+
+state 1
+assume (= [clk] false)
+assume (= [dist_v] #x0000)
+assume (= [rstn] true)

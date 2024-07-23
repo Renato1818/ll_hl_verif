@@ -1,0 +1,10 @@
+# running in half_adder/FPV_prv/src/
+design -reset
+read -formal half_adder.sv
+hierarchy -check -top half_adder
+prep -top half_adder
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

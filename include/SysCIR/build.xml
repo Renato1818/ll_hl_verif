@@ -1,0 +1,108 @@
+<project name="SysCIR" default="dist" basedir=".">
+	<description>
+		SysCIR ant build file
+
+		To build SysCIR, run
+
+		$> ant [dist]
+
+		in the this directory. This will create ./${dist}/${jarfile} (see
+		below).
+
+		--
+
+		To run SysCIR directly, execute
+
+		$> ./syscir.sh -i input.ast.xml
+
+		This actually executes 'ant runjar'. To execute the binary classes
+		without creating a jar first, run
+
+		$> ./syscir.sh -i input.ast.xml -b
+
+		This executes 'ant run'. See syscir.sh for more details.
+
+		--
+
+		ATTENTION: If you have external depencies (ex: junit), you will need to
+		put the jar files into the lib directory to be able to build und run
+		correclty.
+	</description>
+	<!-- set global properties for this build -->
+	<property name="src" location="./src"/>
+	<property name="rsrc" location="./rsrc"/>
+	<property name="build" location="./bin"/>
+	<property name="dist" location="./dist"/>
+	<property name="lib" location="./lib"/>
+	<property name="config" value="config"/>
+	<property name="jarfile" value="${dist}/syscir.jar"/>
+	<property name="mainclass" value="de.tub.pes.syscir.engine.Engine"/>
+
+	<target name="init">
+		<!-- Create the build directory structure used by compile -->
+		<mkdir dir="${build}"/>
+	</target>
+
+	<target name="compile" depends="init" description="compile the source ">
+		<!-- Compile the java code from ${src} into ${build} -->
+		<javac srcdir="${src}" destdir="${build}" includeantruntime="false" debug="true">
+			<classpath>
+				<fileset dir="${lib}">
+					<include name="**/*.jar"/>
+				</fileset>
+			</classpath>
+		</javac>
+	</target>
+
+	<target name="dist" depends="compile" description="generate the distribution">
+		<!-- Create the distribution directory -->
+		<mkdir dir="${dist}"/>
+
+		<!-- Put everything in ${build} into the jar file -->
+		<jar jarfile="${jarfile}">
+			<fileset dir="${build}"/>
+			<!-- put source code into the jar -->
+			<fileset dir="${src}" />
+			<!-- don't put resources: no log4j config means ERROR only -->
+			<!-- fileset dir="${rsrc}" /-->
+			<!-- unzip all jar files in the lib dir and include results into out jar -->
+			<zipgroupfileset dir="${lib}" includes="**/*.jar" />
+			<!-- workaround to put config dir in a dir called 'config' //-->
+			<manifest>
+				<attribute name="Manifest-Version" value="1.0"/>
+				<attribute name="Sealed" value="true"/>
+				<attribute name="Main-Class" value="${mainclass}"/>
+			</manifest>
+		</jar>
+		<copy todir="${dist}/${config}"><fileset dir="${config}"/></copy>
+	</target>
+
+	<!--
+	  Use these targets to run SysCIR directly after compiling. You need to
+	  pass parameters to SysCIR by using the -Dargs argument on the command
+	  line.
+	  Example:
+	  $> ant run[jar] -Dargs="-i myinput.ast.xml"
+	//-->
+	<target name="run" depends="compile" description="compile and run main with given ast.xml">
+		<exec executable="time">
+			<arg line="java" />
+			<arg line="-classpath ${build}:${lib}/*" />
+			<arg line="${mainclass}"/>
+			<arg line="${args}"/>
+		</exec>
+	</target>
+
+	<target name="runjar" depends="dist" description="build and run jar with given ast.xml">
+		<exec executable="time">
+			<arg line="java" />
+			<arg line="-jar ${jarfile}"/>
+			<arg line="${args}"/>
+		</exec>
+	</target>
+
+	<target name="clean" description="clean up">
+		<delete dir="${build}"/>
+		<delete dir="${dist}"/>
+	</target>
+</project>

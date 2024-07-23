@@ -1,0 +1,23 @@
+[tasks]
+cvr
+prv
+bmcc
+
+[options]
+cvr: mode cover
+prv: mode prove
+bmcc: mode bmc
+
+[engines]
+cvr: smtbmc z3
+prv: smtbmc z3
+bmcc: btor btormc
+
+[script]
+design -reset
+read -formal half_adder.sv
+hierarchy -check -top half_adder
+prep -top half_adder
+
+[files]
+half_adder/half_adder.sv

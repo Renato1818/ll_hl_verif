@@ -1,0 +1,54 @@
+class Controller { 
+    //Auto-generated fields of the Controller class:
+    Main m;
+    boolean alarm_flag;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Controller:
+    ensures Perm(m, write) **
+            Perm(alarm_flag, write) **
+            (m == m_param) ;
+    Controller(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.robot_controller, read) **
+            (m.robot_controller == this) ;
+    void run(){
+        lock m;
+        alarm_flag = false;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.robot_controller == this) ;
+        while (true) {
+            m.process_state = m.process_state[1 -> 2];
+            m.event_state = m.event_state[2 -> 2];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.robot_controller == this) ;
+            while (m.process_state[1] != -1 || m.event_state[2] != -2) {
+                unlock m;
+                lock m;
+            }
+            if (obs_detected) {
+                alarm_flag = true;
+            } else {
+                alarm_flag = false;
+            }
+        }
+        unlock m;
+    }
+    
+}
+

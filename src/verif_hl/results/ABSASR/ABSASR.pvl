@@ -1,0 +1,167 @@
+class ABSASR { 
+    //Auto-generated fields of the ABSASR class:
+    Main m;
+    int[] v;
+    int[] a;
+    int temp_fv;
+    int fv;
+    int fa;
+    int[] lambda;
+    int[] s;
+    int[] p;
+    int i;
+    int j;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor ABSASR:
+    ensures Perm(m, write) **
+            Perm(v, write) **
+            Perm(a, write) **
+            Perm(temp_fv, write) **
+            Perm(fv, write) **
+            Perm(fa, write) **
+            Perm(lambda, write) **
+            Perm(s, write) **
+            Perm(p, write) **
+            Perm(i, write) **
+            Perm(j, write) **
+            (m == m_param) **
+            \array(v,4) **
+            Perm(v[*], write) **
+            \array(a,4) **
+            Perm(a[*], write) **
+            \array(lambda,4) **
+            Perm(lambda[*], write) **
+            \array(s,4) **
+            Perm(s[*], write) **
+            \array(p,4) **
+            Perm(p[*], write) ;
+    ABSASR(Main m_param){
+        m = m_param;
+        v = new int[4];
+        a = new int[4];
+        lambda = new int[4];
+        s = new int[4];
+        p = new int[4];
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function _ABS:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.ecu_absasr == this) ;
+    void _ABS(){
+        if (fv > 22) {
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.ecu_absasr == this) ** 
+                    ((fv > 22) ) ;
+            for (i = 0; i < 4; i = i + 1) {
+                lambda[i] = ((fv - v[i]) * 100) / fv;
+                if (s[i] == 1) {
+                    if (a[i] < -14) {
+                        p[i] = 0;
+                        s[i] = 2;
+                    }
+                } else {
+                    if (s[i] == 2) {
+                        if (lambda[i] > 13) {
+                            p[i] = -1;
+                            s[i] = 3;
+                        }
+                    } else {
+                        if (s[i] == 3) {
+                            if (a[i] > -14) {
+                                p[i] = 0;
+                                s[i] = 4;
+                            }
+                        } else {
+                            if (s[i] == 4) {
+                                if (a[i] > 98) {
+                                    p[i] = 2;
+                                    s[i] = 5;
+                                }
+                            } else {
+                                if (s[i] == 5) {
+                                    if (a[i] < 98) {
+                                        p[i] = 0;
+                                        s[i] = 6;
+                                    }
+                                } else {
+                                    if (s[i] == 6) {
+                                        if (a[i] < 2) {
+                                            p[i] = 1;
+                                            s[i] = 7;
+                                        }
+                                    } else {
+                                        if (s[i] == 7) {
+                                            if (a[i] < -14) {
+                                                p[i] = -1;
+                                                s[i] = 8;
+                                            }
+                                        } else {
+                                            if (s[i] == 8) {
+                                                if (a[i] > -14) {
+                                                    p[i] = 0;
+                                                    s[i] = 4;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    //Auto-generated specifications of the function _ASR:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.ecu_absasr == this) ;
+    void _ASR(){
+        j = 3;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.ecu_absasr == this) ;
+        for (i = 0; i < 2; i = i + 1) {
+            if (v[i] > 0) {
+                lambda[i] = ((v[i] - v[j]) * 100) / v[i];
+                if (lambda[i] > 13) {
+                    if (a[i] > 0) {
+                        p[i] = 2;
+                    } else {
+                        p[i] = 0;
+                    }
+                } else {
+                    p[i] = -1;
+                }
+            }
+            j = 2;
+        }
+    }
+    
+    //Auto-generated specifications of the function abs:
+    pure int abs(int val){
+        if (val >= 0) {
+            return val;
+        } else {
+            return -val;
+        }
+    }
+    
+}
+

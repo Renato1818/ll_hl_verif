@@ -1,0 +1,60 @@
+class Prc_half_adder_1 { 
+    //Auto-generated fields of the Prc_half_adder_1 class:
+    Main m;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Prc_half_adder_1:
+    ensures Perm(m, write) **
+            (m == m_param) ;
+    Prc_half_adder_1(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.adder_prc_half_adder_1, read) **
+            (m.adder_prc_half_adder_1 == this) ;
+    void run(){
+        lock m;
+        m.process_state = m.process_state[1 -> 2];
+        m.event_state = m.event_state[2 -> 2];
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.adder_prc_half_adder_1 == this) ;
+        while (m.process_state[1] != -1 || m.event_state[2] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.adder_prc_half_adder_1 == this) ;
+        while (true) {
+            m.adder.s1 = m.adder.sum_(m.adder.a, m.adder.b);
+            m.adder.c1 = (m.adder.a && m.adder.b);
+            m.process_state = m.process_state[1 -> 3];
+            m.event_state = m.event_state[3 -> 5];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.adder_prc_half_adder_1 == this) ;
+            while (m.process_state[1] != -1 || m.event_state[3] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+

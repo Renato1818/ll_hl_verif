@@ -1,0 +1,14 @@
+[options]
+mode cover
+
+[engines]
+smtbmc z3
+
+[script]
+design -reset
+read -formal alu.sv
+hierarchy -check -top alu
+prep -top alu
+
+[files]
+alu/alu.sv

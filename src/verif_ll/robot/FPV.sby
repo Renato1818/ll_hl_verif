@@ -1,0 +1,24 @@
+[tasks]
+cvr
+prv
+bmcc
+
+[options]
+cvr: mode cover
+prv: mode prove
+bmcc: mode bmc
+
+[engines]
+cvr: smtbmc z3
+prv: smtbmc z3
+bmcc: btor btormc
+
+[script]
+sta
+design -reset
+read -formal robot_new.sv
+hierarchy -check -top robot
+prep -top robot
+
+[files]
+robot/robot_new.sv

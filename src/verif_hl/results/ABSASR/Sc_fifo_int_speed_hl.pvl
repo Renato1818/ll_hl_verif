@@ -1,0 +1,47 @@
+class Sc_fifo_int_speed_hl { 
+    //Auto-generated fields of the Sc_fifo_int_speed_hl class:
+    Main m;
+    seq<int> buffer;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Sc_fifo_int_speed_hl:
+    ensures Perm(m, read) **
+            (m == m_param) ;
+    ensures Perm(buffer, write) **
+            (buffer == [t: int]) ;
+    Sc_fifo_int_speed_hl(Main m_param){
+        m = m_param;
+        buffer = seq<int> {};
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function fifo_write:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.scheduler_permission_invariant() **
+            m.speed_hl_permission_invariant() **
+            (m.speed_hl == this) ;
+    requires |buffer| < 16;
+    ensures (m.process_state == \old(m.process_state)) ;
+    ensures (buffer == \old(buffer ++ newVal));
+    ensures (m.event_state == \old(m.event_state[5 -> -1])) ;
+    void fifo_write(int newVal);
+    
+    //Auto-generated specifications of the function fifo_read:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.scheduler_permission_invariant() **
+            m.speed_hl_permission_invariant() **
+            (m.speed_hl == this) ;
+    requires |buffer| > 0;
+    ensures (m.process_state == \old(m.process_state)) ;
+    ensures (buffer == \old(buffer[1 .. |buffer|]));
+    ensures (\result == \old(buffer[0]));
+    ensures (m.event_state == \old(m.event_state[4 -> -1])) ;
+    int fifo_read();
+    
+}
+

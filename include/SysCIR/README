@@ -1,0 +1,16 @@
+BUILD AND RUN
+=============
+
+a) Use console
+See build.xml for information on how to build with ant and run on the command
+line.
+
+b) Use Eclipe
+Import this folder as a project and run from within.
+
+ADD DEPENDENCIES
+================
+
+If you add dependcies to the classpath via Eclipse (ex: junit), please remember
+to put the jar file into the lib directory. This enables ant to build correctly
+from the command line, too. See build.xml for more details.

@@ -1,0 +1,15 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:03 (3)
+Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+engine_0 (smtbmc z3) returned pass
+cover trace: engine_0/trace0.vcd
+  reached cover statement half_adder.cov_carry_true at half_adder.sv:89.13-89.43 in step 1
+  reached cover statement half_adder.cov_sum_true at half_adder.sv:86.13-86.39 in step 1
+  reached cover statement half_adder.cover_ab4 at half_adder.sv:95.13-95.42 in step 1
+cover trace: engine_0/trace1.vcd
+  reached cover statement half_adder.cov_carry_false at half_adder.sv:90.13-90.44 in step 1
+  reached cover statement half_adder.cov_sum_false at half_adder.sv:87.13-87.40 in step 1
+  reached cover statement half_adder.cover_ab3 at half_adder.sv:94.13-94.42 in step 1
+cover trace: engine_0/trace2.vcd
+  reached cover statement half_adder.cover_ab2 at half_adder.sv:93.13-93.42 in step 1
+cover trace: engine_0/trace3.vcd
+  reached cover statement half_adder.cover_ab1 at half_adder.sv:92.13-92.42 in step 1

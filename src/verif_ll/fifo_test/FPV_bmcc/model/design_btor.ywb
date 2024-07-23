@@ -1,0 +1,51 @@
+{
+  "version": "Yosys Witness BTOR map",
+  "generator": "Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)",
+  "clocks": [
+    {"path": ["\\clk"], "offset": 0, "edge": "posedge"}
+  ],
+  "inputs": [
+    [{"path": ["\\clk"], "width": 1, "offset": 0}],
+    [{"path": ["\\ren"], "width": 1, "offset": 0}],
+    [{"path": ["\\rst"], "width": 1, "offset": 0}],
+    [{"path": ["\\wdata"], "width": 8, "offset": 0}],
+    [{"path": ["\\wen"], "width": 1, "offset": 0}]
+  ],
+  "states": [
+    [{"path": ["\\_witness_", "\\anyinit_procdff_373"], "width": 1, "offset": 0}],
+    [{"path": ["$formal$fifo.sv:189$28_EN"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_375"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_385"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_381"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_369"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_371"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_377"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_393"], "width": 1, "offset": 0}],
+    [{"path": ["$formal$fifo.sv:134$24_EN"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_379"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_397"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_360"], "width": 5, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_361"], "width": 5, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_362"], "width": 5, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_363"], "width": 4, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_364"], "width": 32, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_365"], "width": 4, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyinit_procdff_366"], "width": 32, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_458"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_460"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_462"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_464"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_466"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_468"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_470"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_472"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_474"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_476"], "width": 1, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_478"], "width": 8, "offset": 0}],
+    [{"path": ["\\_witness_", "\\anyseq_auto_setundef_cc_533_execute_480"], "width": 4, "offset": 0}],
+    [{"path": ["$flatten\\fifo_writer.$auto$async2sync.cc:171:execute$412"], "width": 4, "offset": 0}],
+    [{"path": ["$flatten\\fifo_reader.$auto$async2sync.cc:171:execute$412"], "width": 4, "offset": 0}],
+    [{"path": ["$auto$async2sync.cc:171:execute$410"], "width": 5, "offset": 0}],
+    {"path": ["\\data"], "width": 8, "size": 16}
+  ]
+}

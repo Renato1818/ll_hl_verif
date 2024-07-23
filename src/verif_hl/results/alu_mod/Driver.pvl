@@ -1,0 +1,74 @@
+class Driver { 
+    //Auto-generated fields of the Driver class:
+    Main m;
+    int z;
+    int x;
+    int y;
+    int a;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Driver:
+    ensures Perm(m, write) **
+            Perm(z, write) **
+            Perm(x, write) **
+            Perm(y, write) **
+            Perm(a, write) **
+            (m == m_param) ;
+    Driver(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission_invariant() 
+            //** Perm(m.dr, read)
+            ** (m.dr == this) ;
+    void run(){
+        lock m;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.dr == this) ;
+        while (true) {
+            z = 0;
+            x = 0;
+            y = 0;
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.dr == this) ** 
+                    ((true) ) ;
+            for (a = 0; a < 8; a++) {
+                y++;
+                x = 8 - y;
+                m.alu.OPCODE = z;
+                m.alu.OP1 = x;
+                m.alu.OP2 = y;
+                z++;
+                m.process_state = m.process_state[0 -> 0];
+                m.event_state = m.event_state[0 -> 5];
+                loop_invariant true ** 
+                        Perm(m, read) ** 
+                        (m != null) ** 
+                        held(m)  ** 
+                        m.global_permission_invariant() ** 
+                        (m.dr == this) ;
+                while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+                    unlock m;
+                    lock m;
+                }
+            }
+        }
+        unlock m;
+    }
+    
+}
+

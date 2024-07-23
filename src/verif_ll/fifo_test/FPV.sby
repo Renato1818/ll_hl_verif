@@ -1,0 +1,24 @@
+[tasks]
+cvr
+prv
+bmcc
+
+[options]
+cvr: mode cover
+prv: mode prove
+bmcc: mode bmc
+
+[engines]
+cvr: smtbmc z3
+prv: smtbmc --progress z3
+bmcc: btor btormc
+
+[script]
+design -reset
+plugin -i systemverilog
+read -formal fifo.sv
+hierarchy -check -top fifo
+prep -top fifo
+
+[files]
+fifo_test/fifo.sv

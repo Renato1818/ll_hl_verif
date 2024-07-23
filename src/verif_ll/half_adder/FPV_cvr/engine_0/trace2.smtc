@@ -1,0 +1,33 @@
+initial
+assume (= [$auto$async2sync.cc:171:execute$157] false)
+assume (= [$formal$half_adder.sv:76$1_EN] false)
+assume (= [$formal$half_adder.sv:80$3_EN] false)
+assume (= [$formal$half_adder.sv:86$5_EN] false)
+assume (= [_witness_.anyinit_procdff_124] true)
+assume (= [_witness_.anyinit_procdff_126] true)
+assume (= [_witness_.anyinit_procdff_128] false)
+assume (= [_witness_.anyinit_procdff_130] false)
+assume (= [_witness_.anyinit_procdff_132] false)
+assume (= [_witness_.anyinit_procdff_134] true)
+assume (= [_witness_.anyinit_procdff_136] false)
+assume (= [_witness_.anyinit_procdff_138] true)
+assume (= [_witness_.anyinit_procdff_140] false)
+assume (= [_witness_.anyinit_procdff_142] true)
+assume (= [_witness_.anyinit_procdff_144] false)
+assume (= [_witness_.anyinit_procdff_146] false)
+assume (= [_witness_.anyinit_procdff_148] false)
+assume (= [_witness_.anyinit_procdff_149] false)
+assume (= [_witness_.anyinit_procdff_151] false)
+assume (= [_witness_.anyinit_procdff_152] true)
+
+state 0
+assume (= [a] false)
+assume (= [b] true)
+assume (= [clk] false)
+assume (= [rstn] false)
+
+state 1
+assume (= [a] false)
+assume (= [b] true)
+assume (= [clk] false)
+assume (= [rstn] false)

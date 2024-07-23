@@ -1,0 +1,112 @@
+class CASR { 
+    //Auto-generated fields of the CASR class:
+    Main m;
+    int CASR_var;
+    int CASR_out;
+    int CASR_plus;
+    int CASR_minus;
+    int bit_plus;
+    int bit_minus;
+    int i;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor CASR:
+    ensures Perm(m, write) **
+            Perm(CASR_var, write) **
+            Perm(CASR_out, write) **
+            Perm(CASR_plus, write) **
+            Perm(CASR_minus, write) **
+            Perm(bit_plus, write) **
+            Perm(bit_minus, write) **
+            Perm(i, write) **
+            (m == m_param) ;
+    CASR(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.rn_casr, read) **
+            (m.rn_casr == this) ;
+    void run(){
+        lock m;
+        m.process_state = m.process_state[0 -> 0];
+        m.event_state = m.event_state[0 -> 2];
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_casr == this) ;
+        while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.rn_casr == this) ;
+        while (true) {
+            if (!m.rn.reset) {
+                CASR_var = 1;
+            } else {
+                if (m.rn.loadseed_i) {
+                    if (m.rn.seed_i == 0) {
+                        m.rn.CASR_reg = 0;
+                    } else {
+                        m.rn.CASR_reg = m.rn.seed_i % m.rn.exp2_(32);
+                    }
+                } else {
+                    if (m.rn.CASR_reg == 0) {
+                        CASR_var = 0;
+                        bit_plus = 0;
+                        CASR_plus = 0;
+                        bit_minus = 0;
+                        CASR_minus = 0;
+                    } else {
+                        CASR_var = m.rn.CASR_reg % m.rn.exp2_(37);
+                        bit_plus = CASR_var / m.rn.exp2_(36);
+                        CASR_plus = (CASR_var % m.rn.exp2_(36)) * 2 + bit_plus;
+                        bit_minus = CASR_var % 1;
+                        CASR_minus = (CASR_var % m.rn.exp2_(37)) / 2 + bit_minus * m.rn.exp2_(36);
+                    }
+                    loop_invariant true ** 
+                            Perm(m, read) ** 
+                            (m != null) ** 
+                            held(m)  ** 
+                            m.global_permission_invariant() ** 
+                            (m.rn_casr == this) ** 
+                            ((true) && (!!m.rn.reset) && (!m.rn.loadseed_i) ) ;
+                    for (i = 0; i < 37; i = 1 + i) {
+                        CASR_out = m.rn.xor_(CASR_out, i, m.rn.bit_(CASR_plus, i), m.rn.bit_(CASR_minus, i));
+                    }
+                    if (CASR_out == 0) {
+                        m.rn.CASR_reg = 0;
+                    } else {
+                        m.rn.CASR_reg = CASR_out % m.rn.exp2_(37);
+                    }
+                }
+            }
+            m.process_state = m.process_state[0 -> 1];
+            m.event_state = m.event_state[1 -> 5];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.rn_casr == this) ;
+            while (m.process_state[0] != -1 || m.event_state[1] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+

@@ -1,0 +1,74 @@
+class TickCounter_vl { 
+    //Auto-generated fields of the TickCounter_vl class:
+    Main m;
+    int ticks;
+    int speed;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor TickCounter_vl:
+    ensures Perm(m, write) **
+            Perm(ticks, write) **
+            Perm(speed, write) **
+            (m == m_param) ;
+    TickCounter_vl(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function rand__randomize_0:
+    pure int rand__randomize_0();
+    
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.vl, read) **
+            (m.vl == this) ;
+    void run(){
+        lock m;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.vl == this) ;
+        while (true) {
+            m.process_state = m.process_state[0 -> 8];
+            m.event_state = m.event_state[8 -> 1];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.vl == this) ;
+            while (m.process_state[0] != -1 || m.event_state[8] != -2) {
+                unlock m;
+                lock m;
+            }
+            speed = rand__randomize_0();
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.vl == this) ;
+            while (|m.speed_vl.buffer| >= 16) {
+                m.process_state = m.process_state[0 -> 0];
+                loop_invariant true ** 
+                        Perm(m, read) ** 
+                        (m != null) ** 
+                        held(m)  ** 
+                        m.global_permission_invariant() ** 
+                        (m.vl == this) ;
+                while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+                    unlock m;
+                    lock m;
+                }
+            }
+            m.speed_vl.fifo_write(speed);
+        }
+        unlock m;
+    }
+    
+}
+

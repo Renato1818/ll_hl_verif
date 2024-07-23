@@ -1,0 +1,58 @@
+class Sensor { 
+    //Auto-generated fields of the Sensor class:
+    Main m;
+    int dist;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Sensor:
+    ensures Perm(m, write) **
+            Perm(dist, write) **
+            (m == m_param) ;
+    Sensor(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function rand__randomize_0:
+    pure int rand__randomize_0();
+    
+    //Auto-generated specifications of the function run:
+    context Perm(m, read) **
+            (m != null) **
+            Perm(m.robot_sensor, read) **
+            (m.robot_sensor == this) ;
+    void run(){
+        lock m;
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.robot_sensor == this) ;
+        while (true) {
+            m.process_state = m.process_state[0 -> 0];
+            m.event_state = m.event_state[0 -> 2];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.robot_sensor == this) ;
+            while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+                unlock m;
+                lock m;
+            }
+            dist = rand__randomize_0() % 256;
+            if (dist < 50) {
+                m.event_state = m.event_state[1 -> -1];
+                obs_detected = true;
+            } else {
+                obs_detected = true;
+            }
+        }
+        unlock m;
+    }
+    
+}
+

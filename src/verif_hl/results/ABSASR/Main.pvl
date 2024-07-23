@@ -1,0 +1,209 @@
+class Main { 
+    //Auto-generated fields of the Main class:
+    seq<int> process_state;
+    seq<int> event_state;
+    Sc_fifo_int_speed_vl speed_vl;
+    Sc_fifo_int_speed_vr speed_vr;
+    Sc_fifo_int_speed_hl speed_hl;
+    Sc_fifo_int_speed_hr speed_hr;
+    TickCounter_vl vl;
+    TickCounter_vr vr;
+    TickCounter_hl hl;
+    TickCounter_hr hr;
+    ABSASR ecu_absasr;
+    Not_a_main ecu_absasr_not_a_main;
+    Read_speed ecu_absasr_read_speed;
+    
+    //Auto-generated global invariant: 
+    inline resource scheduler_permission_invariant() = true ** 
+            Perm(process_state, write) **
+            |process_state| == 6 **
+            Perm(event_state, write) **
+            |event_state| == 13 **
+            (\forall int i = 0 .. |process_state|; ((({: process_state[i] :} == -1)) || (((process_state[i] >= 0) && (process_state[i] < |event_state|))) ))
+            ;
+    inline resource speed_vl_permission_invariant() = true ** 
+            Perm(speed_vl, read) **
+            (speed_vl != null) **
+            Perm(speed_vl.m, read) **
+            (speed_vl.m == this) **
+            Perm(speed_vl.buffer, write) **
+            |speed_vl.buffer| < 16
+            ;
+    inline resource speed_vr_permission_invariant() = true ** 
+            Perm(speed_vr, read) **
+            (speed_vr != null) **
+            Perm(speed_vr.m, read) **
+            (speed_vr.m == this) **
+            Perm(speed_vr.buffer, write) **
+            |speed_vr.buffer| < 16
+            ;
+    inline resource speed_hl_permission_invariant() = true ** 
+            Perm(speed_hl, read) **
+            (speed_hl != null) **
+            Perm(speed_hl.m, read) **
+            (speed_hl.m == this) **
+            Perm(speed_hl.buffer, write) **
+            |speed_hl.buffer| < 16
+            ;
+    inline resource speed_hr_permission_invariant() = true ** 
+            Perm(speed_hr, read) **
+            (speed_hr != null) **
+            Perm(speed_hr.m, read) **
+            (speed_hr.m == this) **
+            Perm(speed_hr.buffer, write) **
+            |speed_hr.buffer| < 16
+            ;
+    inline resource global_permission_invariant() = true ** 
+            scheduler_permission_invariant() **
+            speed_vl_permission_invariant() **
+            speed_vr_permission_invariant() **
+            speed_hl_permission_invariant() **
+            speed_hr_permission_invariant() **
+            Perm(vl, read) **
+            (vl != null) **
+            Perm(vl.ticks, write) **
+            Perm(vl.speed, write) **
+            Perm(vr, read) **
+            (vr != null) **
+            Perm(vr.ticks, write) **
+            Perm(vr.speed, write) **
+            Perm(hl, read) **
+            (hl != null) **
+            Perm(hl.ticks, write) **
+            Perm(hl.speed, write) **
+            Perm(hr, read) **
+            (hr != null) **
+            Perm(hr.ticks, write) **
+            Perm(hr.speed, write) **
+            Perm(ecu_absasr, read) **
+            (ecu_absasr != null) **
+            Perm(ecu_absasr.v, write) **
+            \array(ecu_absasr.v, 4) **
+            Perm(ecu_absasr.v[*], write) **
+            Perm(ecu_absasr.a, write) **
+            \array(ecu_absasr.a, 4) **
+            Perm(ecu_absasr.a[*], write) **
+            Perm(ecu_absasr.temp_fv, write) **
+            Perm(ecu_absasr.fv, write) **
+            Perm(ecu_absasr.fa, write) **
+            Perm(ecu_absasr.lambda, write) **
+            \array(ecu_absasr.lambda, 4) **
+            Perm(ecu_absasr.lambda[*], write) **
+            Perm(ecu_absasr.s, write) **
+            \array(ecu_absasr.s, 4) **
+            Perm(ecu_absasr.s[*], write) **
+            Perm(ecu_absasr.p, write) **
+            \array(ecu_absasr.p, 4) **
+            Perm(ecu_absasr.p[*], write) **
+            Perm(ecu_absasr.i, write) **
+            Perm(ecu_absasr.j, write) **
+            Perm(ecu_absasr_not_a_main, read) **
+            (ecu_absasr_not_a_main != null) **
+            Perm(ecu_absasr_not_a_main.i, write) **
+            Perm(ecu_absasr_read_speed, read) **
+            (ecu_absasr_read_speed != null) **
+            Perm(ecu_absasr_read_speed.tmp_0, write) **
+            Perm(ecu_absasr_read_speed.tmp_1, write) **
+            Perm(ecu_absasr_read_speed.tmp_2, write) **
+            Perm(ecu_absasr_read_speed.tmp_3, write) **
+            Perm(ecu_absasr.m, read) **
+            (ecu_absasr.m == this)
+            ;
+    resource lock_invariant() = global_permission_invariant();
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Main:
+    Main(){
+        process_state = [-1,-1,-1,-1,-1,-1];
+        //
+        event_state = [-3,-3,-3,-3,-3,-3,-3,-3,-3,-3,-3,-3,-3];
+        speed_vl = new Sc_fifo_int_speed_vl(this);
+        speed_vr = new Sc_fifo_int_speed_vr(this);
+        speed_hl = new Sc_fifo_int_speed_hl(this);
+        speed_hr = new Sc_fifo_int_speed_hr(this);
+        vl = new TickCounter_vl(this);
+        vr = new TickCounter_vr(this);
+        hl = new TickCounter_hl(this);
+        hr = new TickCounter_hr(this);
+        ecu_absasr = new ABSASR(this);
+        ecu_absasr_not_a_main = new Not_a_main(this);
+        ecu_absasr_read_speed = new Read_speed(this);
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function main:
+    void main(){
+        lock this;
+        fork vl;
+        fork vr;
+        fork hl;
+        fork hr;
+        fork ecu_absasr_not_a_main;
+        fork ecu_absasr_read_speed;
+        unlock this;
+        loop_invariant true ;
+        while (true) {
+            lock this;
+            immediate_wakeup();
+            reset_events_no_delta();
+            if (process_state[0] != -1 && process_state[1] != -1 && process_state[2] != -1 && process_state[3] != -1 && process_state[4] != -1 && process_state[5] != -1 ) {
+                int min_advance = find_minimum_advance(event_state);
+                if (min_advance == -1) {
+                    min_advance = 0;
+                }
+                event_state = [event_state[0] < -1 ? -3 : event_state[0] - min_advance,event_state[1] < -1 ? -3 : event_state[1] - min_advance,event_state[2] < -1 ? -3 : event_state[2] - min_advance,event_state[3] < -1 ? -3 : event_state[3] - min_advance,event_state[4] < -1 ? -3 : event_state[4] - min_advance,event_state[5] < -1 ? -3 : event_state[5] - min_advance,event_state[6] < -1 ? -3 : event_state[6] - min_advance,event_state[7] < -1 ? -3 : event_state[7] - min_advance,event_state[8] < -1 ? -3 : event_state[8] - min_advance,event_state[9] < -1 ? -3 : event_state[9] - min_advance,event_state[10] < -1 ? -3 : event_state[10] - min_advance,event_state[11] < -1 ? -3 : event_state[11] - min_advance,event_state[12] < -1 ? -3 : event_state[12] - min_advance];
+                wakeup_after_wait();
+                reset_all_events();
+            }
+            unlock this;
+        }
+        join vl;
+        join vr;
+        join hl;
+        join hr;
+        join ecu_absasr_not_a_main;
+        join ecu_absasr_read_speed;
+    }
+    
+    //Auto-generated specifications of the function immediate_wakeup:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == -1)) ))) && (((((\old(process_state[1]) >= 0)) && ((\old(event_state[\old(process_state[1])]) == 0)) ) ==> (((process_state[1] == -1)) ))) && (((((\old(process_state[2]) >= 0)) && ((\old(event_state[\old(process_state[2])]) == 0)) ) ==> (((process_state[2] == -1)) ))) && (((((\old(process_state[3]) >= 0)) && ((\old(event_state[\old(process_state[3])]) == 0)) ) ==> (((process_state[3] == -1)) ))) && (((((\old(process_state[4]) >= 0)) && ((\old(event_state[\old(process_state[4])]) == 0)) ) ==> (((process_state[4] == -1)) ))) && (((((\old(process_state[5]) >= 0)) && ((\old(event_state[\old(process_state[5])]) == 0)) ) ==> (((process_state[5] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == \old(process_state[0]))) ))) && ((!(((\old(process_state[1]) >= 0)) && ((\old(event_state[\old(process_state[1])]) == 0)) ) ==> (((process_state[1] == \old(process_state[1]))) ))) && ((!(((\old(process_state[2]) >= 0)) && ((\old(event_state[\old(process_state[2])]) == 0)) ) ==> (((process_state[2] == \old(process_state[2]))) ))) && ((!(((\old(process_state[3]) >= 0)) && ((\old(event_state[\old(process_state[3])]) == 0)) ) ==> (((process_state[3] == \old(process_state[3]))) ))) && ((!(((\old(process_state[4]) >= 0)) && ((\old(event_state[\old(process_state[4])]) == 0)) ) ==> (((process_state[4] == \old(process_state[4]))) ))) && ((!(((\old(process_state[5]) >= 0)) && ((\old(event_state[\old(process_state[5])]) == 0)) ) ==> (((process_state[5] == \old(process_state[5]))) ))) );
+    void immediate_wakeup();
+    
+    //Auto-generated specifications of the function reset_events_no_delta:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures ((((((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == -2)) ))) && (((((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == -2)) ))) && (((((\old(event_state[2]) == 0)) ) ==> (((event_state[2] == -2)) ))) && (((((\old(event_state[3]) == 0)) ) ==> (((event_state[3] == -2)) ))) && (((((\old(event_state[4]) == 0)) ) ==> (((event_state[4] == -2)) ))) && (((((\old(event_state[5]) == 0)) ) ==> (((event_state[5] == -2)) ))) && (((((\old(event_state[6]) == 0)) ) ==> (((event_state[6] == -2)) ))) && (((((\old(event_state[7]) == 0)) ) ==> (((event_state[7] == -2)) ))) && (((((\old(event_state[8]) == 0)) ) ==> (((event_state[8] == -2)) ))) && (((((\old(event_state[9]) == 0)) ) ==> (((event_state[9] == -2)) ))) && (((((\old(event_state[10]) == 0)) ) ==> (((event_state[10] == -2)) ))) && (((((\old(event_state[11]) == 0)) ) ==> (((event_state[11] == -2)) ))) && (((((\old(event_state[12]) == 0)) ) ==> (((event_state[12] == -2)) ))) );
+    ensures (((!(((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!(((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == \old(event_state[1]))) ))) && ((!(((\old(event_state[2]) == 0)) ) ==> (((event_state[2] == \old(event_state[2]))) ))) && ((!(((\old(event_state[3]) == 0)) ) ==> (((event_state[3] == \old(event_state[3]))) ))) && ((!(((\old(event_state[4]) == 0)) ) ==> (((event_state[4] == \old(event_state[4]))) ))) && ((!(((\old(event_state[5]) == 0)) ) ==> (((event_state[5] == \old(event_state[5]))) ))) && ((!(((\old(event_state[6]) == 0)) ) ==> (((event_state[6] == \old(event_state[6]))) ))) && ((!(((\old(event_state[7]) == 0)) ) ==> (((event_state[7] == \old(event_state[7]))) ))) && ((!(((\old(event_state[8]) == 0)) ) ==> (((event_state[8] == \old(event_state[8]))) ))) && ((!(((\old(event_state[9]) == 0)) ) ==> (((event_state[9] == \old(event_state[9]))) ))) && ((!(((\old(event_state[10]) == 0)) ) ==> (((event_state[10] == \old(event_state[10]))) ))) && ((!(((\old(event_state[11]) == 0)) ) ==> (((event_state[11] == \old(event_state[11]))) ))) && ((!(((\old(event_state[12]) == 0)) ) ==> (((event_state[12] == \old(event_state[12]))) ))) );
+    void reset_events_no_delta();
+    
+    //Auto-generated specifications of the function find_minimum_advance:
+    requires (|vals| == 13);
+    ensures ((((vals[0] < -1) || (\result <= vals[0]))) && (((vals[1] < -1) || (\result <= vals[1]))) && (((vals[2] < -1) || (\result <= vals[2]))) && (((vals[3] < -1) || (\result <= vals[3]))) && (((vals[4] < -1) || (\result <= vals[4]))) && (((vals[5] < -1) || (\result <= vals[5]))) && (((vals[6] < -1) || (\result <= vals[6]))) && (((vals[7] < -1) || (\result <= vals[7]))) && (((vals[8] < -1) || (\result <= vals[8]))) && (((vals[9] < -1) || (\result <= vals[9]))) && (((vals[10] < -1) || (\result <= vals[10]))) && (((vals[11] < -1) || (\result <= vals[11]))) && (((vals[12] < -1) || (\result <= vals[12]))) );
+    ensures (((((vals[0] < -1)) && ((vals[1] < -1)) && ((vals[2] < -1)) && ((vals[3] < -1)) && ((vals[4] < -1)) && ((vals[5] < -1)) && ((vals[6] < -1)) && ((vals[7] < -1)) && ((vals[8] < -1)) && ((vals[9] < -1)) && ((vals[10] < -1)) && ((vals[11] < -1)) && ((vals[12] < -1)) ) ==> (\result == 0)) && ((((vals[0] >= -1)) || ((vals[1] >= -1)) || ((vals[2] >= -1)) || ((vals[3] >= -1)) || ((vals[4] >= -1)) || ((vals[5] >= -1)) || ((vals[6] >= -1)) || ((vals[7] >= -1)) || ((vals[8] >= -1)) || ((vals[9] >= -1)) || ((vals[10] >= -1)) || ((vals[11] >= -1)) || ((vals[12] >= -1)) ) ==> ((((vals[0] >= -1) && (\result == vals[0]))) || (((vals[1] >= -1) && (\result == vals[1]))) || (((vals[2] >= -1) && (\result == vals[2]))) || (((vals[3] >= -1) && (\result == vals[3]))) || (((vals[4] >= -1) && (\result == vals[4]))) || (((vals[5] >= -1) && (\result == vals[5]))) || (((vals[6] >= -1) && (\result == vals[6]))) || (((vals[7] >= -1) && (\result == vals[7]))) || (((vals[8] >= -1) && (\result == vals[8]))) || (((vals[9] >= -1) && (\result == vals[9]))) || (((vals[10] >= -1) && (\result == vals[10]))) || (((vals[11] >= -1) && (\result == vals[11]))) || (((vals[12] >= -1) && (\result == vals[12]))) )));
+    pure int find_minimum_advance(seq<int> vals);
+    
+    //Auto-generated specifications of the function wakeup_after_wait:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == -1)) ))) && (((((\old(process_state[1]) >= 0)) && (((\old(event_state[\old(process_state[1])]) == 0) || (\old(event_state[\old(process_state[1])]) == -1))) ) ==> (((process_state[1] == -1)) ))) && (((((\old(process_state[2]) >= 0)) && (((\old(event_state[\old(process_state[2])]) == 0) || (\old(event_state[\old(process_state[2])]) == -1))) ) ==> (((process_state[2] == -1)) ))) && (((((\old(process_state[3]) >= 0)) && (((\old(event_state[\old(process_state[3])]) == 0) || (\old(event_state[\old(process_state[3])]) == -1))) ) ==> (((process_state[3] == -1)) ))) && (((((\old(process_state[4]) >= 0)) && (((\old(event_state[\old(process_state[4])]) == 0) || (\old(event_state[\old(process_state[4])]) == -1))) ) ==> (((process_state[4] == -1)) ))) && (((((\old(process_state[5]) >= 0)) && (((\old(event_state[\old(process_state[5])]) == 0) || (\old(event_state[\old(process_state[5])]) == -1))) ) ==> (((process_state[5] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == \old(process_state[0]))) ))) && ((!(((\old(process_state[1]) >= 0)) && (((\old(event_state[\old(process_state[1])]) == 0) || (\old(event_state[\old(process_state[1])]) == -1))) ) ==> (((process_state[1] == \old(process_state[1]))) ))) && ((!(((\old(process_state[2]) >= 0)) && (((\old(event_state[\old(process_state[2])]) == 0) || (\old(event_state[\old(process_state[2])]) == -1))) ) ==> (((process_state[2] == \old(process_state[2]))) ))) && ((!(((\old(process_state[3]) >= 0)) && (((\old(event_state[\old(process_state[3])]) == 0) || (\old(event_state[\old(process_state[3])]) == -1))) ) ==> (((process_state[3] == \old(process_state[3]))) ))) && ((!(((\old(process_state[4]) >= 0)) && (((\old(event_state[\old(process_state[4])]) == 0) || (\old(event_state[\old(process_state[4])]) == -1))) ) ==> (((process_state[4] == \old(process_state[4]))) ))) && ((!(((\old(process_state[5]) >= 0)) && (((\old(event_state[\old(process_state[5])]) == 0) || (\old(event_state[\old(process_state[5])]) == -1))) ) ==> (((process_state[5] == \old(process_state[5]))) ))) );
+    void wakeup_after_wait();
+    
+    //Auto-generated specifications of the function reset_all_events:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures (((((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == -2)) ))) && ((((\old(event_state[1]) == 0) || (\old(event_state[1]) == -1)) ==> (((event_state[1] == -2)) ))) && ((((\old(event_state[2]) == 0) || (\old(event_state[2]) == -1)) ==> (((event_state[2] == -2)) ))) && ((((\old(event_state[3]) == 0) || (\old(event_state[3]) == -1)) ==> (((event_state[3] == -2)) ))) && ((((\old(event_state[4]) == 0) || (\old(event_state[4]) == -1)) ==> (((event_state[4] == -2)) ))) && ((((\old(event_state[5]) == 0) || (\old(event_state[5]) == -1)) ==> (((event_state[5] == -2)) ))) && ((((\old(event_state[6]) == 0) || (\old(event_state[6]) == -1)) ==> (((event_state[6] == -2)) ))) && ((((\old(event_state[7]) == 0) || (\old(event_state[7]) == -1)) ==> (((event_state[7] == -2)) ))) && ((((\old(event_state[8]) == 0) || (\old(event_state[8]) == -1)) ==> (((event_state[8] == -2)) ))) && ((((\old(event_state[9]) == 0) || (\old(event_state[9]) == -1)) ==> (((event_state[9] == -2)) ))) && ((((\old(event_state[10]) == 0) || (\old(event_state[10]) == -1)) ==> (((event_state[10] == -2)) ))) && ((((\old(event_state[11]) == 0) || (\old(event_state[11]) == -1)) ==> (((event_state[11] == -2)) ))) && ((((\old(event_state[12]) == 0) || (\old(event_state[12]) == -1)) ==> (((event_state[12] == -2)) ))) );
+    ensures (((!((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!((\old(event_state[1]) == 0) || (\old(event_state[1]) == -1)) ==> (((event_state[1] == \old(event_state[1]))) ))) && ((!((\old(event_state[2]) == 0) || (\old(event_state[2]) == -1)) ==> (((event_state[2] == \old(event_state[2]))) ))) && ((!((\old(event_state[3]) == 0) || (\old(event_state[3]) == -1)) ==> (((event_state[3] == \old(event_state[3]))) ))) && ((!((\old(event_state[4]) == 0) || (\old(event_state[4]) == -1)) ==> (((event_state[4] == \old(event_state[4]))) ))) && ((!((\old(event_state[5]) == 0) || (\old(event_state[5]) == -1)) ==> (((event_state[5] == \old(event_state[5]))) ))) && ((!((\old(event_state[6]) == 0) || (\old(event_state[6]) == -1)) ==> (((event_state[6] == \old(event_state[6]))) ))) && ((!((\old(event_state[7]) == 0) || (\old(event_state[7]) == -1)) ==> (((event_state[7] == \old(event_state[7]))) ))) && ((!((\old(event_state[8]) == 0) || (\old(event_state[8]) == -1)) ==> (((event_state[8] == \old(event_state[8]))) ))) && ((!((\old(event_state[9]) == 0) || (\old(event_state[9]) == -1)) ==> (((event_state[9] == \old(event_state[9]))) ))) && ((!((\old(event_state[10]) == 0) || (\old(event_state[10]) == -1)) ==> (((event_state[10] == \old(event_state[10]))) ))) && ((!((\old(event_state[11]) == 0) || (\old(event_state[11]) == -1)) ==> (((event_state[11] == \old(event_state[11]))) ))) && ((!((\old(event_state[12]) == 0) || (\old(event_state[12]) == -1)) ==> (((event_state[12] == \old(event_state[12]))) ))) );
+    void reset_all_events();
+    
+}
+

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2024-07-20T15:09:59" hostname="SNPS-A1iGRuJX2K" package="FPV" id="0" name="cvr" tests="16" errors="0" failures="0" time="2" skipped="4">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="cvr" name="build execution" time="0">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:181.13-181.48" time="0" type="COVER" location="full_adder.sv:181.13-181.48" id="cov_carry_false" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:180.13-180.47" time="0" type="COVER" location="full_adder.sv:180.13-180.47" id="cov_carry_true" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:178.13-178.40" time="0" type="COVER" location="full_adder.sv:178.13-178.40" id="cov_sum_false" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:177.13-177.39" time="0" type="COVER" location="full_adder.sv:177.13-177.39" id="cov_sum_true" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:183.13-183.58" time="0" type="COVER" location="full_adder.sv:183.13-183.58" id="cover_input0" tracefile="engine_0/trace4.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:184.13-184.58" time="0" type="COVER" location="full_adder.sv:184.13-184.58" id="cover_input1" tracefile="engine_0/trace6.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:185.13-185.58" time="0" type="COVER" location="full_adder.sv:185.13-185.58" id="cover_input2" tracefile="engine_0/trace5.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:186.13-186.58" time="0" type="COVER" location="full_adder.sv:186.13-186.58" id="cover_input3" tracefile="engine_0/trace7.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:187.13-187.58" time="0" type="COVER" location="full_adder.sv:187.13-187.58" id="cover_input4" tracefile="engine_0/trace3.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:188.13-188.58" time="0" type="COVER" location="full_adder.sv:188.13-188.58" id="cover_input5" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:189.13-189.58" time="0" type="COVER" location="full_adder.sv:189.13-189.58" id="cover_input6" tracefile="engine_0/trace2.vcd">
+</testcase>
+<testcase classname="cvr" name="Property COVER in full_adder at full_adder.sv:190.13-190.58" time="0" type="COVER" location="full_adder.sv:190.13-190.58" id="cover_input7" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in full_adder at full_adder.sv:172.21-172.53" time="0" type="ASSERT" location="full_adder.sv:172.21-172.53" id="assert_carry">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in full_adder at full_adder.sv:168.17-168.56" time="0" type="ASSERT" location="full_adder.sv:168.17-168.56" id="assert_carry_reset">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in full_adder at full_adder.sv:171.21-171.51" time="0" type="ASSERT" location="full_adder.sv:171.21-171.51" id="assert_sum_">
+<skipped />
+</testcase>
+<testcase classname="cvr" name="Property ASSERT in full_adder at full_adder.sv:167.17-167.48" time="0" type="ASSERT" location="full_adder.sv:167.17-167.48" id="assert_sum_reset">
+<skipped />
+</testcase>
+<system-out>SBY 15:09:55 [full_adder/FPV_cvr] Removing directory '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/full_adder/FPV_cvr'.
+SBY 15:09:55 [full_adder/FPV_cvr] Copy '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/full_adder/full_adder.sv' to '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/full_adder/FPV_cvr/src/full_adder.sv'.
+SBY 15:09:55 [full_adder/FPV_cvr] engine_0: smtbmc z3
+SBY 15:09:56 [full_adder/FPV_cvr] base: starting process &quot;cd full_adder/FPV_cvr/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 15:09:56 [full_adder/FPV_cvr] base: Warning: wire '\prc_half_adder_1_comb.s_nand' is assigned in a block at full_adder.sv:37.3-37.21.
+SBY 15:09:56 [full_adder/FPV_cvr] base: Warning: wire '\prc_half_adder_1_comb.s_or' is assigned in a block at full_adder.sv:38.3-38.16.
+SBY 15:09:56 [full_adder/FPV_cvr] base: Warning: wire '\prc_half_adder_2_comb.s_nand' is assigned in a block at full_adder.sv:64.3-64.25.
+SBY 15:09:56 [full_adder/FPV_cvr] base: Warning: wire '\prc_half_adder_2_comb.s_or' is assigned in a block at full_adder.sv:65.3-65.20.
+SBY 15:09:56 [full_adder/FPV_cvr] base: Warning: reg '\f_s1' is assigned in a continuous assignment at full_adder.sv:125.10-125.41.
+SBY 15:09:56 [full_adder/FPV_cvr] base: Warning: reg '\f_sum' is assigned in a continuous assignment at full_adder.sv:126.10-126.30.
+SBY 15:09:56 [full_adder/FPV_cvr] base: Warning: reg '\f_c1' is assigned in a continuous assignment at full_adder.sv:128.10-128.60.
+SBY 15:09:56 [full_adder/FPV_cvr] base: Warning: wire '\f_c3' is assigned in a block at full_adder.sv:140.5-140.17.
+SBY 15:09:56 [full_adder/FPV_cvr] base: Warning: wire '\f_c3' is assigned in a block at full_adder.sv:153.5-153.17.
+SBY 15:09:56 [full_adder/FPV_cvr] base: full_adder.sv:129: Warning: Identifier `\f_carry' is implicitly declared.
+SBY 15:09:56 [full_adder/FPV_cvr] base: full_adder.sv:129: Warning: Identifier `\f_c3' is implicitly declared.
+SBY 15:09:56 [full_adder/FPV_cvr] base: finished (returncode=0)
+SBY 15:09:56 [full_adder/FPV_cvr] prep: starting process &quot;cd full_adder/FPV_cvr/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 15:09:57 [full_adder/FPV_cvr] prep: finished (returncode=0)
+SBY 15:09:57 [full_adder/FPV_cvr] smt2: starting process &quot;cd full_adder/FPV_cvr/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 15:09:57 [full_adder/FPV_cvr] smt2: finished (returncode=0)
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: starting process &quot;cd full_adder/FPV_cvr; yosys-smtbmc -s z3 --presat -c --noprogress -t 20  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Solver: z3
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_input5 in step 1.
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_sum_false in step 1.
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_carry_false in step 1.
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 15:09:57 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_input7 in step 1.
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_sum_true in step 1.
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_carry_true in step 1.
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_input6 in step 1.
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 15:09:58 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_input4 in step 1.
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_input0 in step 1.
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Checking cover reachability in step 1..
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Reached cover statement at cover_input2 in step 1.
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to VCD file: engine_0/trace5.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace5.smtc
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace5.yw
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Checking cover reachability in step 1..
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Reached cover statement at cover_input1 in step 1.
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to VCD file: engine_0/trace6.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace6.smtc
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace6.yw
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Checking cover reachability in step 1..
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Reached cover statement at cover_input3 in step 1.
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to VCD file: engine_0/trace7.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace7.smtc
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace7.yw
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: ##   0:00:01  Status: passed
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: finished (returncode=0)
+SBY 15:09:59 [full_adder/FPV_cvr] engine_0: Status returned by engine: pass
+SBY 15:09:59 [full_adder/FPV_cvr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:04 (4)
+SBY 15:09:59 [full_adder/FPV_cvr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY 15:09:59 [full_adder/FPV_cvr] summary: engine_0 (smtbmc z3) returned pass
+SBY 15:09:59 [full_adder/FPV_cvr] summary: cover trace: full_adder/FPV_cvr/engine_0/trace0.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] summary:   reached cover statement full_adder.cov_carry_false at full_adder.sv:181.13-181.48 in step 1
+SBY 15:09:59 [full_adder/FPV_cvr] summary:   reached cover statement full_adder.cov_sum_false at full_adder.sv:178.13-178.40 in step 1
+SBY 15:09:59 [full_adder/FPV_cvr] summary:   reached cover statement full_adder.cover_input5 at full_adder.sv:188.13-188.58 in step 1
+SBY 15:09:59 [full_adder/FPV_cvr] summary: cover trace: full_adder/FPV_cvr/engine_0/trace1.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] summary:   reached cover statement full_adder.cov_carry_true at full_adder.sv:180.13-180.47 in step 1
+SBY 15:09:59 [full_adder/FPV_cvr] summary:   reached cover statement full_adder.cov_sum_true at full_adder.sv:177.13-177.39 in step 1
+SBY 15:09:59 [full_adder/FPV_cvr] summary:   reached cover statement full_adder.cover_input7 at full_adder.sv:190.13-190.58 in step 1
+SBY 15:09:59 [full_adder/FPV_cvr] summary: cover trace: full_adder/FPV_cvr/engine_0/trace2.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] summary:   reached cover statement full_adder.cover_input6 at full_adder.sv:189.13-189.58 in step 1
+SBY 15:09:59 [full_adder/FPV_cvr] summary: cover trace: full_adder/FPV_cvr/engine_0/trace3.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] summary:   reached cover statement full_adder.cover_input4 at full_adder.sv:187.13-187.58 in step 1
+SBY 15:09:59 [full_adder/FPV_cvr] summary: cover trace: full_adder/FPV_cvr/engine_0/trace4.vcd
+SBY 15:09:59 [full_adder/FPV_cvr] summary:   reached cover statement full_adder.cover_input0 at full_adder.sv:183.13-183.58 in step 1
+SBY 15:09:59 [full_adder/FPV_cvr] summary: and 3 further traces
+SBY 15:09:59 [full_adder/FPV_cvr] summary: see full_adder/FPV_cvr/PASS for a complete summary
+SBY 15:09:59 [full_adder/FPV_cvr] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

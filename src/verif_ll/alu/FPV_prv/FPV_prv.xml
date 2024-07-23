@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2024-07-22T20:58:39" hostname="SNPS-A1iGRuJX2K" package="FPV" id="0" name="prv" tests="36" errors="0" failures="0" time="34" skipped="23">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="prv" name="build execution" time="0">
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:370.4-370.35" time="0" type="COVER" location="alu.sv:370.4-370.35" id="cov_carry_false">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:369.4-369.34" time="0" type="COVER" location="alu.sv:369.4-369.34" id="cov_carry_true">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:356.4-356.38" time="0" type="COVER" location="alu.sv:356.4-356.38" id="cov_op1_one">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:355.4-355.38" time="0" type="COVER" location="alu.sv:355.4-355.38" id="cov_op1_zero">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:358.4-358.38" time="0" type="COVER" location="alu.sv:358.4-358.38" id="cov_op2_one">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:357.4-357.38" time="0" type="COVER" location="alu.sv:357.4-357.38" id="cov_op2_zero">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:353.4-353.43" time="0" type="COVER" location="alu.sv:353.4-353.43" id="cov_opcode_one">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:352.4-352.43" time="0" type="COVER" location="alu.sv:352.4-352.43" id="cov_opcode_zero">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:361.4-361.74" time="0" type="COVER" location="alu.sv:361.4-361.74" id="cov_optest1">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:363.4-363.56" time="0" type="COVER" location="alu.sv:363.4-363.56" id="cov_optest2">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:365.4-365.74" time="0" type="COVER" location="alu.sv:365.4-365.74" id="cov_optest4">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:378.4-378.44" time="0" type="COVER" location="alu.sv:378.4-378.44" id="cov_result_one">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:377.4-377.44" time="0" type="COVER" location="alu.sv:377.4-377.44" id="cov_result_zero">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:374.4-374.33" time="0" type="COVER" location="alu.sv:374.4-374.33" id="cov_zero_false">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:373.4-373.32" time="0" type="COVER" location="alu.sv:373.4-373.32" id="cov_zero_true">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:382.6-382.49" time="0" type="COVER" location="alu.sv:382.6-382.49" id="cover_res0">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:385.6-385.50" time="0" type="COVER" location="alu.sv:385.6-385.50" id="cover_res1">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:388.6-388.51" time="0" type="COVER" location="alu.sv:388.6-388.51" id="cover_res2">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:391.6-391.48" time="0" type="COVER" location="alu.sv:391.6-391.48" id="cover_res3">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:394.6-394.49" time="0" type="COVER" location="alu.sv:394.6-394.49" id="cover_res4">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:397.6-397.49" time="0" type="COVER" location="alu.sv:397.6-397.49" id="cover_res5">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:400.6-400.50" time="0" type="COVER" location="alu.sv:400.6-400.50" id="cover_res6">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property COVER in alu at alu.sv:403.6-403.50" time="0" type="COVER" location="alu.sv:403.6-403.50" id="cover_res7">
+<skipped />
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:318.6-318.39" time="0" type="ASSERT" location="alu.sv:318.6-318.39" id="assert_carry">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:311.5-311.40" time="0" type="ASSERT" location="alu.sv:311.5-311.40" id="assert_carry_reset">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:323.8-323.55" time="0" type="ASSERT" location="alu.sv:323.8-323.55" id="assert_res0">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:326.8-326.55" time="0" type="ASSERT" location="alu.sv:326.8-326.55" id="assert_res1">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:329.8-329.56" time="0" type="ASSERT" location="alu.sv:329.8-329.56" id="assert_res2">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:332.8-332.56" time="0" type="ASSERT" location="alu.sv:332.8-332.56" id="assert_res3">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:335.8-335.48" time="0" type="ASSERT" location="alu.sv:335.8-335.48" id="assert_res4">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:338.8-338.47" time="0" type="ASSERT" location="alu.sv:338.8-338.47" id="assert_res5">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:341.8-341.49" time="0" type="ASSERT" location="alu.sv:341.8-341.49" id="assert_res6">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:344.8-344.47" time="0" type="ASSERT" location="alu.sv:344.8-344.47" id="assert_res7">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:317.6-317.37" time="0" type="ASSERT" location="alu.sv:317.6-317.37" id="assert_zero">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:312.5-312.38" time="0" type="ASSERT" location="alu.sv:312.5-312.38" id="assert_zero_reset">
+</testcase>
+<testcase classname="prv" name="Property ASSERT in alu at alu.sv:313.5-313.50" time="0" type="ASSERT" location="alu.sv:313.5-313.50" id="assert_zero_result">
+</testcase>
+<system-out>SBY 20:58:15 [alu/FPV_cvr] Removing directory '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/FPV_cvr'.
+SBY 20:58:16 [alu/FPV_prv] Removing directory '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/FPV_prv'.
+SBY 20:58:16 [alu/FPV_prv] Copy '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/alu.sv' to '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/FPV_prv/src/alu.sv'.
+SBY 20:58:17 [alu/FPV_prv] engine_0: smtbmc z3
+SBY 20:58:19 [alu/FPV_prv] base: starting process &quot;cd alu/FPV_prv/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:58:19 [alu/FPV_prv] base: Warning: reg '\op_add' is assigned in a continuous assignment at alu.sv:270.10-270.36.
+SBY 20:58:19 [alu/FPV_prv] base: Warning: reg '\op_sub' is assigned in a continuous assignment at alu.sv:271.10-271.36.
+SBY 20:58:19 [alu/FPV_prv] base: Warning: reg '\op_incr' is assigned in a continuous assignment at alu.sv:272.10-272.31.
+SBY 20:58:19 [alu/FPV_prv] base: Warning: reg '\op_decr' is assigned in a continuous assignment at alu.sv:273.10-273.31.
+SBY 20:58:19 [alu/FPV_prv] base: Warning: reg '\op_and' is assigned in a continuous assignment at alu.sv:274.10-274.35.
+SBY 20:58:19 [alu/FPV_prv] base: Warning: reg '\op_or' is assigned in a continuous assignment at alu.sv:275.10-275.35.
+SBY 20:58:19 [alu/FPV_prv] base: Warning: reg '\op_nand' is assigned in a continuous assignment at alu.sv:276.10-276.36.
+SBY 20:58:19 [alu/FPV_prv] base: Warning: reg '\op_xor' is assigned in a continuous assignment at alu.sv:277.10-277.35.
+SBY 20:58:19 [alu/FPV_prv] base: alu.sv:279: Warning: Identifier `\f_carry' is implicitly declared.
+SBY 20:58:19 [alu/FPV_prv] base: alu.sv:284: Warning: Identifier `\f_zero' is implicitly declared.
+SBY 20:58:24 [alu/FPV_prv] base: finished (returncode=0)
+SBY 20:58:24 [alu/FPV_prv] prep: starting process &quot;cd alu/FPV_prv/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 20:58:25 [alu/FPV_prv] prep: finished (returncode=0)
+SBY 20:58:25 [alu/FPV_prv] smt2: starting process &quot;cd alu/FPV_prv/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 20:58:25 [alu/FPV_prv] smt2: finished (returncode=0)
+SBY 20:58:25 [alu/FPV_prv] engine_0.basecase: starting process &quot;cd alu/FPV_prv; yosys-smtbmc -s z3 --presat --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2&quot;
+SBY 20:58:25 [alu/FPV_prv] engine_0.induction: starting process &quot;cd alu/FPV_prv; yosys-smtbmc -s z3 --presat -i --noprogress -t 20  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2&quot;
+SBY 20:58:25 [alu/FPV_prv] engine_0.basecase: ##   0:00:00  Solver: z3
+SBY 20:58:27 [alu/FPV_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 20:58:27 [alu/FPV_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 20:58:27 [alu/FPV_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 20:58:27 [alu/FPV_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 20:58:27 [alu/FPV_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 20:58:27 [alu/FPV_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 20:58:27 [alu/FPV_prv] engine_0.basecase: ##   0:00:01  Checking assumptions in step 3..
+SBY 20:58:27 [alu/FPV_prv] engine_0.basecase: ##   0:00:01  Checking assertions in step 3..
+SBY 20:58:27 [alu/FPV_prv] engine_0.induction: ##   0:00:00  Solver: z3
+SBY 20:58:27 [alu/FPV_prv] engine_0.induction: ##   0:00:00  Trying induction in step 20..
+SBY 20:58:27 [alu/FPV_prv] engine_0.induction: ##   0:00:00  Trying induction in step 19..
+SBY 20:58:27 [alu/FPV_prv] engine_0.induction: ##   0:00:00  Trying induction in step 18..
+SBY 20:58:27 [alu/FPV_prv] engine_0.induction: ##   0:00:01  Temporal induction successful.
+SBY 20:58:27 [alu/FPV_prv] engine_0.induction: ##   0:00:01  Status: passed
+SBY 20:58:27 [alu/FPV_prv] engine_0.induction: finished (returncode=0)
+SBY 20:58:27 [alu/FPV_prv] engine_0.induction: Status returned by engine for induction: pass
+SBY 20:58:29 [alu/FPV_prv] engine_0.basecase: ##   0:00:02  Checking assumptions in step 4..
+SBY 20:58:29 [alu/FPV_prv] engine_0.basecase: ##   0:00:02  Checking assertions in step 4..
+SBY 20:58:29 [alu/FPV_prv] engine_0.basecase: ##   0:00:04  Checking assumptions in step 5..
+SBY 20:58:30 [alu/FPV_prv] engine_0.basecase: ##   0:00:04  Checking assertions in step 5..
+SBY 20:58:30 [alu/FPV_prv] engine_0.basecase: ##   0:00:04  Checking assumptions in step 6..
+SBY 20:58:30 [alu/FPV_prv] engine_0.basecase: ##   0:00:04  Checking assertions in step 6..
+SBY 20:58:31 [alu/FPV_prv] engine_0.basecase: ##   0:00:05  Checking assumptions in step 7..
+SBY 20:58:31 [alu/FPV_prv] engine_0.basecase: ##   0:00:05  Checking assertions in step 7..
+SBY 20:58:32 [alu/FPV_prv] engine_0.basecase: ##   0:00:06  Checking assumptions in step 8..
+SBY 20:58:32 [alu/FPV_prv] engine_0.basecase: ##   0:00:06  Checking assertions in step 8..
+SBY 20:58:33 [alu/FPV_prv] engine_0.basecase: ##   0:00:07  Checking assumptions in step 9..
+SBY 20:58:33 [alu/FPV_prv] engine_0.basecase: ##   0:00:07  Checking assertions in step 9..
+SBY 20:58:33 [alu/FPV_prv] engine_0.basecase: ##   0:00:08  Checking assumptions in step 10..
+SBY 20:58:33 [alu/FPV_prv] engine_0.basecase: ##   0:00:08  Checking assertions in step 10..
+SBY 20:58:34 [alu/FPV_prv] engine_0.basecase: ##   0:00:08  Checking assumptions in step 11..
+SBY 20:58:34 [alu/FPV_prv] engine_0.basecase: ##   0:00:08  Checking assertions in step 11..
+SBY 20:58:34 [alu/FPV_prv] engine_0.basecase: ##   0:00:09  Checking assumptions in step 12..
+SBY 20:58:34 [alu/FPV_prv] engine_0.basecase: ##   0:00:09  Checking assertions in step 12..
+SBY 20:58:35 [alu/FPV_prv] engine_0.basecase: ##   0:00:09  Checking assumptions in step 13..
+SBY 20:58:35 [alu/FPV_prv] engine_0.basecase: ##   0:00:09  Checking assertions in step 13..
+SBY 20:58:35 [alu/FPV_prv] engine_0.basecase: ##   0:00:10  Checking assumptions in step 14..
+SBY 20:58:36 [alu/FPV_prv] engine_0.basecase: ##   0:00:10  Checking assertions in step 14..
+SBY 20:58:36 [alu/FPV_prv] engine_0.basecase: ##   0:00:10  Checking assumptions in step 15..
+SBY 20:58:36 [alu/FPV_prv] engine_0.basecase: ##   0:00:10  Checking assertions in step 15..
+SBY 20:58:37 [alu/FPV_prv] engine_0.basecase: ##   0:00:11  Checking assumptions in step 16..
+SBY 20:58:37 [alu/FPV_prv] engine_0.basecase: ##   0:00:11  Checking assertions in step 16..
+SBY 20:58:37 [alu/FPV_prv] engine_0.basecase: ##   0:00:12  Checking assumptions in step 17..
+SBY 20:58:37 [alu/FPV_prv] engine_0.basecase: ##   0:00:12  Checking assertions in step 17..
+SBY 20:58:38 [alu/FPV_prv] engine_0.basecase: ##   0:00:12  Checking assumptions in step 18..
+SBY 20:58:38 [alu/FPV_prv] engine_0.basecase: ##   0:00:12  Checking assertions in step 18..
+SBY 20:58:38 [alu/FPV_prv] engine_0.basecase: ##   0:00:13  Checking assumptions in step 19..
+SBY 20:58:38 [alu/FPV_prv] engine_0.basecase: ##   0:00:13  Checking assertions in step 19..
+SBY 20:58:39 [alu/FPV_prv] engine_0.basecase: ##   0:00:13  Status: passed
+SBY 20:58:39 [alu/FPV_prv] engine_0.basecase: finished (returncode=0)
+SBY 20:58:39 [alu/FPV_prv] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 20:58:39 [alu/FPV_prv] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:22 (22)
+SBY 20:58:39 [alu/FPV_prv] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:34 (34)
+SBY 20:58:39 [alu/FPV_prv] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY 20:58:39 [alu/FPV_prv] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY 20:58:39 [alu/FPV_prv] summary: engine_0 did not produce any traces
+SBY 20:58:39 [alu/FPV_prv] summary: successful proof by k-induction.
+SBY 20:58:39 [alu/FPV_prv] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

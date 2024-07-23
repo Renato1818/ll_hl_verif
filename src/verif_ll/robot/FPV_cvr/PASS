@@ -1,0 +1,13 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+engine_0 (smtbmc z3) returned pass
+cover trace: engine_0/trace0.vcd
+  reached cover statement robot.cov_alarm_one at robot_new.sv:109.4-109.39 in step 1
+  reached cover statement robot.cov_dist_zero at robot_new.sv:102.4-102.46 in step 1
+  reached cover statement robot.cov_obs_detected_out_zero at robot_new.sv:105.4-105.55 in step 1
+cover trace: engine_0/trace1.vcd
+  reached cover statement robot.cov_obs_detected_out_one at robot_new.sv:106.4-106.56 in step 1
+cover trace: engine_0/trace2.vcd
+  reached cover statement robot.cov_alarm_zero at robot_new.sv:108.4-108.38 in step 1
+cover trace: engine_0/trace3.vcd
+  reached cover statement robot.cov_dist_one at robot_new.sv:103.4-103.46 in step 1

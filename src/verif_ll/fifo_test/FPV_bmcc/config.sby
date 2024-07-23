@@ -1,0 +1,15 @@
+[options]
+mode bmc
+
+[engines]
+btor btormc
+
+[script]
+design -reset
+plugin -i systemverilog
+read -formal fifo.sv
+hierarchy -check -top fifo
+prep -top fifo
+
+[files]
+fifo_test/fifo.sv

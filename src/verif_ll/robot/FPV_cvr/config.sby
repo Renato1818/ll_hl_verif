@@ -1,0 +1,15 @@
+[options]
+mode cover
+
+[engines]
+smtbmc z3
+
+[script]
+sta
+design -reset
+read -formal robot_new.sv
+hierarchy -check -top robot
+prep -top robot
+
+[files]
+robot/robot_new.sv

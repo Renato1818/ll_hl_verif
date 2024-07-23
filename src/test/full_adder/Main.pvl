@@ -1,0 +1,466 @@
+class Full_adder { 
+    Main m;
+
+    boolean a;
+    boolean b;
+    boolean carry_in;
+    boolean sum;
+    boolean carry_out;
+    boolean c1;
+    boolean s1;
+    boolean c2;
+    boolean sum_next;
+    
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Full_adder:
+    ensures Perm(m, write) 
+            ** Perm(a, write) 
+            ** Perm(b, write) 
+            ** Perm(carry_in, write) 
+            ** Perm(sum, write) 
+            ** Perm(sum_next, write)
+            ** Perm(carry_out, write) 
+            ** Perm(c1, write) 
+            ** Perm(s1, write) 
+            ** Perm(c2, write)
+            //** Perm(s_nand, write) 
+            //** Perm(s_or, write) 
+            ** (m == m_param) ;
+    Full_adder(Main m_param){
+        m = m_param;
+        
+        a = false;
+        b = false;
+        carry_in = false;
+        sum = false;
+        carry_out = false;
+        c1 = false;
+        s1 = false;
+        c2 = false;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function sum_:
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission_invariant()
+            ** Perm(m.adder, read)
+            ** (m.adder == this) ;
+    boolean sum_(boolean a, boolean b){
+        boolean s_nand;
+        boolean s_or;
+
+        s_nand = !(a && b);
+        s_or = a || b;
+        return (s_nand && s_or);
+    }
+    
+}
+
+class Prc_half_adder_1 { 
+    //Auto-generated fields of the Prc_half_adder_1 class:
+    Main m;
+    boolean init;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Prc_half_adder_1:
+    ensures Perm(m, write) **
+            Perm(init, write) ** !init **
+            (m == m_param) ;
+    Prc_half_adder_1(Main m_param){
+        m = m_param;
+        init = false;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, 1\2) 
+            ** (m != null) 
+            ** Perm(m.adder_half_adder1, read) 
+            ** (m.adder_half_adder1 == this)
+            ** Perm(init, 1\2)
+            ** !init ;
+    void run(){
+        lock m;
+        init = true;
+
+        m.process_state = m.process_state[1 -> 2];
+        m.event_state = m.event_state[2 -> 2];
+
+        loop_invariant true ** 
+                Perm(m, 1\2) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.adder_half_adder1 == this)            
+                ** Perm(init, 1\2)
+                ** init;
+        while (m.process_state[1] != -1 || m.event_state[2] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true ** 
+                Perm(m, 1\2) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.adder_half_adder1 == this)            
+                ** Perm(init, 1\2)
+                ** init;
+        while (true) {
+            m.adder.s1 = m.adder.sum_(m.adder.a, m.adder.b);
+            m.adder.c1 = (m.adder.a && m.adder.b);
+            m.process_state = m.process_state[1 -> 3];
+            m.event_state = m.event_state[3 -> 5];
+            loop_invariant true  
+                        ** Perm(m, 1\2) 
+                        ** (m != null) 
+                        ** held(m)  
+                        ** m.global_permission_invariant() 
+                        ** (m.adder_half_adder1 == this)            
+                        ** Perm(init, 1\2)
+                        ** init;
+            while (m.process_state[1] != -1 || m.event_state[3] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+
+class Prc_half_adder_2 { 
+    //Auto-generated fields of the Prc_half_adder_2 class:
+    Main m;
+    boolean init;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Prc_half_adder_2:
+    ensures Perm(m, write) **
+            Perm(init, write) ** !init **
+            (m == m_param) ;
+    Prc_half_adder_2(Main m_param){
+        m = m_param;
+        init = false;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, 1\2) 
+            ** (m != null)
+            ** Perm(m.adder_half_adder2, read) 
+            ** (m.adder_half_adder2 == this) 
+            ** Perm(init, 1\2)
+            ** !init ;
+    void run(){
+        lock m;
+        init = true;
+
+        m.process_state = m.process_state[2 -> 4];
+        m.event_state = m.event_state[4 -> 2];
+
+        loop_invariant true 
+                ** Perm(m, 1\2) 
+                ** (m != null)  
+                ** held(m)  
+                ** m.global_permission_invariant() 
+                ** (m.adder_half_adder2 == this)             
+                ** Perm(init, 1\2)
+                ** init;
+        while (m.process_state[2] != -1 || m.event_state[4] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true 
+                ** Perm(m, 1\2)  
+                ** (m != null)  
+                ** held(m)  
+                ** m.global_permission_invariant() 
+                ** (m.adder_half_adder2 == this)            
+                ** Perm(init, 1\2)
+                ** init;
+        while (true) {
+            m.adder.sum_next = m.adder.sum_(m.adder.s1, m.adder.carry_in);
+            m.adder.c2 = (m.adder.s1 && m.adder.carry_in);
+            m.process_state = m.process_state[2 -> 5];
+            m.event_state = m.event_state[5 -> 5];
+            loop_invariant true 
+                        ** Perm(m, 1\2)  
+                        ** (m != null)  
+                        ** held(m)  
+                        ** m.global_permission_invariant() 
+                        ** (m.adder_half_adder2 == this)            
+                        ** Perm(init, 1\2)
+                        ** init;
+            while (m.process_state[2] != -1 || m.event_state[5] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+
+
+class Prc_or { 
+    //Auto-generated fields of the Prc_or class:
+    Main m;
+    boolean init;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Prc_or:
+    ensures Perm(m, write) **
+            Perm(init, write) ** !init **
+            (m == m_param) ;
+    Prc_or(Main m_param){
+        m = m_param;
+        init = false;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function run:
+    context Perm(m, 1\2) 
+            ** (m != null) 
+            ** Perm(m.adder_prc, read) 
+            ** (m.adder_prc == this) 
+            ** Perm(init, 1\2)
+            ** !init ;
+    void run(){
+        lock m;
+        init = true;
+
+        m.process_state = m.process_state[0 -> 0];
+        m.event_state = m.event_state[0 -> 2];
+
+        loop_invariant true 
+                ** Perm(m, 1\2) 
+                ** (m != null)  
+                ** held(m)  
+                ** m.global_permission_invariant() 
+                ** (m.adder_prc == this)             
+                ** Perm(init, 1\2)
+                ** init;
+        while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+            unlock m;
+            lock m;
+        }
+        loop_invariant true 
+                ** Perm(m, 1\2) 
+                ** (m != null)  
+                ** held(m)  
+                ** m.global_permission_invariant() 
+                ** (m.adder_prc == this)             
+                ** Perm(init, 1\2)
+                ** init;
+        while (true) {
+            m.adder.carry_out = (m.adder.c1 || m.adder.c2);
+            m.adder.sum = m.adder.sum_next;
+            m.process_state = m.process_state[0 -> 1];
+            m.event_state = m.event_state[1 -> 5];
+            loop_invariant true 
+                        ** Perm(m, 1\2) 
+                        ** (m != null)  
+                        ** held(m)  
+                        ** m.global_permission_invariant() 
+                        ** (m.adder_prc == this)             
+                        ** Perm(init, 1\2)
+                        ** init;
+            while (m.process_state[0] != -1 || m.event_state[1] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+        unlock m;
+    }
+    
+}
+
+
+class Main { 
+    //Auto-generated fields of the Main class:
+    seq<int> process_state;
+    seq<int> event_state;
+    Full_adder adder;
+    Prc_or adder_prc;
+    Prc_half_adder_1 adder_half_adder1;
+    Prc_half_adder_2 adder_half_adder2;
+    
+    //Auto-generated global invariant: 
+    inline resource scheduler_permission_invariant() = true ** 
+            Perm(process_state, write) **
+            |process_state| == 3 **
+            Perm(event_state, write) **
+            |event_state| == 6 **
+            (\forall int i = 0 .. |process_state|; ((({: process_state[i] :} == -1)) || (((process_state[i] >= 0) && (process_state[i] < |event_state|))) ))
+            ;
+    inline resource global_permission_invariant() = true 
+            ** scheduler_permission_invariant() 
+
+            //full_adder
+            ** Perm(adder, read) 
+            ** (adder != null) 
+            ** Perm(adder.a, write) 
+            ** Perm(adder.b, write) 
+            ** Perm(adder.carry_in, write) 
+            ** Perm(adder.sum, write)             
+            ** Perm(adder.sum_next, write)
+            ** Perm(adder.carry_out, write) 
+            ** Perm(adder.c1, write) 
+            ** Perm(adder.s1, write) 
+            ** Perm(adder.c2, write) 
+            //** Perm(adder.s_nand, write) **
+            //** Perm(adder.s_or, write) **
+            ** Perm(adder.m, read) 
+            ** (adder.m == this)
+
+            //prc_or
+            ** Perm(adder_prc, read) 
+            ** (adder_prc != null)            
+            ** Perm(adder_prc.init, 1\2)
+
+            //half_adder_1
+            ** Perm(adder_half_adder1, read) 
+            ** (adder_half_adder1 != null)            
+            ** Perm(adder_half_adder1.init, 1\2)
+
+            //half_adder_2
+            ** Perm(adder_half_adder2, read) 
+            ** (adder_half_adder2 != null)            
+            ** Perm(adder_half_adder2.init, 1\2)
+            ;
+
+    resource lock_invariant() = global_permission_invariant();
+    
+    ensures Perm(adder_prc, read)
+            ** adder_prc != null
+            ** Perm(adder_prc.m, 1\2)
+            ** adder_prc.m == this
+            ** Perm(adder_prc.init, 1\2)
+            ** !adder_prc.init
+            ;
+    ensures Perm(adder_half_adder1, read)
+            ** adder_half_adder1 != null
+            ** Perm(adder_half_adder1.m, 1\2)
+            ** adder_half_adder1.m == this
+            ** Perm(adder_half_adder1.init, 1\2)
+            ** !adder_half_adder1.init
+            ;    
+    ensures Perm(adder_half_adder2, read)
+            ** adder_half_adder2 != null
+            ** Perm(adder_half_adder2.m, 1\2)
+            ** adder_half_adder2.m == this
+            ** Perm(adder_half_adder2.init, 1\2)
+            ** !adder_half_adder2.init
+            ;
+    ensures idle(adder_prc);
+    ensures idle(adder_half_adder1);
+    ensures idle(adder_half_adder2);
+    Main(){
+        process_state = [-1,-1,-1];
+        event_state = [-3,-3,-3,-3,-3,-3];
+
+        adder = new Full_adder(this);
+        adder_prc = new Prc_or(this);
+        adder_half_adder1 = new Prc_half_adder_1(this);
+        adder_half_adder2 = new Prc_half_adder_2(this);
+    }
+    
+    context Perm(adder_prc, read)
+            ** adder_prc != null
+            ** Perm(adder_prc.m, 1\2)
+            ** adder_prc.m == this
+            ** Perm(adder_prc.init, 1\2)
+            ** !adder_prc.init
+            ;
+    context Perm(adder_half_adder1, read)
+            ** adder_half_adder1 != null
+            ** Perm(adder_half_adder1.m, 1\2)
+            ** adder_half_adder1.m == this
+            ** Perm(adder_half_adder1.init, 1\2)
+            ** !adder_half_adder1.init
+            ;    
+    context Perm(adder_half_adder2, read)
+            ** adder_half_adder2 != null
+            ** Perm(adder_half_adder2.m, 1\2)
+            ** adder_half_adder2.m == this
+            ** Perm(adder_half_adder2.init, 1\2)
+            ** !adder_half_adder2.init
+            ;
+    context idle(adder_prc);
+    context idle(adder_half_adder1);
+    context idle(adder_half_adder2);
+    void main(){
+        lock this;
+        fork adder_prc;
+        fork adder_half_adder1;
+        fork adder_half_adder2;
+        unlock this;
+        loop_invariant true ;
+        while (true) {
+            lock this;
+            immediate_wakeup();
+            reset_events_no_delta();
+            if (process_state[0] != -1 && process_state[1] != -1 && process_state[2] != -1 ) {
+                int min_advance = find_minimum_advance(event_state);
+                if (min_advance == -1) {
+                    min_advance = 0;
+                }
+                event_state = [event_state[0] < -1 ? -3 : event_state[0] - min_advance,event_state[1] < -1 ? -3 : event_state[1] - min_advance,event_state[2] < -1 ? -3 : event_state[2] - min_advance,event_state[3] < -1 ? -3 : event_state[3] - min_advance,event_state[4] < -1 ? -3 : event_state[4] - min_advance,event_state[5] < -1 ? -3 : event_state[5] - min_advance];
+                wakeup_after_wait();
+                reset_all_events();
+            }
+            unlock this;
+        }
+        join adder_prc;
+        join adder_half_adder1;
+        join adder_half_adder2;
+    }
+    
+    //Auto-generated specifications of the function immediate_wakeup:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == -1)) ))) && (((((\old(process_state[1]) >= 0)) && ((\old(event_state[\old(process_state[1])]) == 0)) ) ==> (((process_state[1] == -1)) ))) && (((((\old(process_state[2]) >= 0)) && ((\old(event_state[\old(process_state[2])]) == 0)) ) ==> (((process_state[2] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == \old(process_state[0]))) ))) && ((!(((\old(process_state[1]) >= 0)) && ((\old(event_state[\old(process_state[1])]) == 0)) ) ==> (((process_state[1] == \old(process_state[1]))) ))) && ((!(((\old(process_state[2]) >= 0)) && ((\old(event_state[\old(process_state[2])]) == 0)) ) ==> (((process_state[2] == \old(process_state[2]))) ))) );
+    void immediate_wakeup();
+    
+    //Auto-generated specifications of the function reset_events_no_delta:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures ((((((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == -2)) ))) && (((((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == -2)) ))) && (((((\old(event_state[2]) == 0)) ) ==> (((event_state[2] == -2)) ))) && (((((\old(event_state[3]) == 0)) ) ==> (((event_state[3] == -2)) ))) && (((((\old(event_state[4]) == 0)) ) ==> (((event_state[4] == -2)) ))) && (((((\old(event_state[5]) == 0)) ) ==> (((event_state[5] == -2)) ))) );
+    ensures (((!(((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!(((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == \old(event_state[1]))) ))) && ((!(((\old(event_state[2]) == 0)) ) ==> (((event_state[2] == \old(event_state[2]))) ))) && ((!(((\old(event_state[3]) == 0)) ) ==> (((event_state[3] == \old(event_state[3]))) ))) && ((!(((\old(event_state[4]) == 0)) ) ==> (((event_state[4] == \old(event_state[4]))) ))) && ((!(((\old(event_state[5]) == 0)) ) ==> (((event_state[5] == \old(event_state[5]))) ))) );
+    void reset_events_no_delta();
+    
+    //Auto-generated specifications of the function find_minimum_advance:
+    requires (|vals| == 6);
+    ensures ((((vals[0] < -1) || (\result <= vals[0]))) && (((vals[1] < -1) || (\result <= vals[1]))) && (((vals[2] < -1) || (\result <= vals[2]))) && (((vals[3] < -1) || (\result <= vals[3]))) && (((vals[4] < -1) || (\result <= vals[4]))) && (((vals[5] < -1) || (\result <= vals[5]))) );
+    ensures (((((vals[0] < -1)) && ((vals[1] < -1)) && ((vals[2] < -1)) && ((vals[3] < -1)) && ((vals[4] < -1)) && ((vals[5] < -1)) ) ==> (\result == 0)) && ((((vals[0] >= -1)) || ((vals[1] >= -1)) || ((vals[2] >= -1)) || ((vals[3] >= -1)) || ((vals[4] >= -1)) || ((vals[5] >= -1)) ) ==> ((((vals[0] >= -1) && (\result == vals[0]))) || (((vals[1] >= -1) && (\result == vals[1]))) || (((vals[2] >= -1) && (\result == vals[2]))) || (((vals[3] >= -1) && (\result == vals[3]))) || (((vals[4] >= -1) && (\result == vals[4]))) || (((vals[5] >= -1) && (\result == vals[5]))) )));
+    pure int find_minimum_advance(seq<int> vals);
+    
+    //Auto-generated specifications of the function wakeup_after_wait:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == -1)) ))) && (((((\old(process_state[1]) >= 0)) && (((\old(event_state[\old(process_state[1])]) == 0) || (\old(event_state[\old(process_state[1])]) == -1))) ) ==> (((process_state[1] == -1)) ))) && (((((\old(process_state[2]) >= 0)) && (((\old(event_state[\old(process_state[2])]) == 0) || (\old(event_state[\old(process_state[2])]) == -1))) ) ==> (((process_state[2] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == \old(process_state[0]))) ))) && ((!(((\old(process_state[1]) >= 0)) && (((\old(event_state[\old(process_state[1])]) == 0) || (\old(event_state[\old(process_state[1])]) == -1))) ) ==> (((process_state[1] == \old(process_state[1]))) ))) && ((!(((\old(process_state[2]) >= 0)) && (((\old(event_state[\old(process_state[2])]) == 0) || (\old(event_state[\old(process_state[2])]) == -1))) ) ==> (((process_state[2] == \old(process_state[2]))) ))) );
+    void wakeup_after_wait();
+    
+    //Auto-generated specifications of the function reset_all_events:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures (((((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == -2)) ))) && ((((\old(event_state[1]) == 0) || (\old(event_state[1]) == -1)) ==> (((event_state[1] == -2)) ))) && ((((\old(event_state[2]) == 0) || (\old(event_state[2]) == -1)) ==> (((event_state[2] == -2)) ))) && ((((\old(event_state[3]) == 0) || (\old(event_state[3]) == -1)) ==> (((event_state[3] == -2)) ))) && ((((\old(event_state[4]) == 0) || (\old(event_state[4]) == -1)) ==> (((event_state[4] == -2)) ))) && ((((\old(event_state[5]) == 0) || (\old(event_state[5]) == -1)) ==> (((event_state[5] == -2)) ))) );
+    ensures (((!((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!((\old(event_state[1]) == 0) || (\old(event_state[1]) == -1)) ==> (((event_state[1] == \old(event_state[1]))) ))) && ((!((\old(event_state[2]) == 0) || (\old(event_state[2]) == -1)) ==> (((event_state[2] == \old(event_state[2]))) ))) && ((!((\old(event_state[3]) == 0) || (\old(event_state[3]) == -1)) ==> (((event_state[3] == \old(event_state[3]))) ))) && ((!((\old(event_state[4]) == 0) || (\old(event_state[4]) == -1)) ==> (((event_state[4] == \old(event_state[4]))) ))) && ((!((\old(event_state[5]) == 0) || (\old(event_state[5]) == -1)) ==> (((event_state[5] == \old(event_state[5]))) ))) );
+    void reset_all_events();
+    
+}
+

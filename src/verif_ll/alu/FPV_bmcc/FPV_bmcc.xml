@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2024-07-22T20:58:29" hostname="SNPS-A1iGRuJX2K" package="FPV" id="0" name="bmcc" tests="1" errors="0" failures="0" time="18" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="bmcc" name="bmcc" time="18">
+</testcase>
+<system-out>SBY 20:58:15 [alu/FPV_cvr] Removing directory '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/FPV_cvr'.
+SBY 20:58:16 [alu/FPV_prv] Removing directory '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/FPV_prv'.
+SBY 20:58:18 [alu/FPV_bmcc] Removing directory '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/FPV_bmcc'.
+SBY 20:58:18 [alu/FPV_bmcc] Copy '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/alu.sv' to '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/FPV_bmcc/src/alu.sv'.
+SBY 20:58:18 [alu/FPV_bmcc] engine_0: btor btormc
+SBY 20:58:19 [alu/FPV_bmcc] base: starting process &quot;cd alu/FPV_bmcc/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 20:58:19 [alu/FPV_bmcc] base: Warning: reg '\op_add' is assigned in a continuous assignment at alu.sv:270.10-270.36.
+SBY 20:58:19 [alu/FPV_bmcc] base: Warning: reg '\op_sub' is assigned in a continuous assignment at alu.sv:271.10-271.36.
+SBY 20:58:19 [alu/FPV_bmcc] base: Warning: reg '\op_incr' is assigned in a continuous assignment at alu.sv:272.10-272.31.
+SBY 20:58:19 [alu/FPV_bmcc] base: Warning: reg '\op_decr' is assigned in a continuous assignment at alu.sv:273.10-273.31.
+SBY 20:58:19 [alu/FPV_bmcc] base: Warning: reg '\op_and' is assigned in a continuous assignment at alu.sv:274.10-274.35.
+SBY 20:58:19 [alu/FPV_bmcc] base: Warning: reg '\op_or' is assigned in a continuous assignment at alu.sv:275.10-275.35.
+SBY 20:58:19 [alu/FPV_bmcc] base: Warning: reg '\op_nand' is assigned in a continuous assignment at alu.sv:276.10-276.36.
+SBY 20:58:19 [alu/FPV_bmcc] base: Warning: reg '\op_xor' is assigned in a continuous assignment at alu.sv:277.10-277.35.
+SBY 20:58:19 [alu/FPV_bmcc] base: alu.sv:279: Warning: Identifier `\f_carry' is implicitly declared.
+SBY 20:58:19 [alu/FPV_bmcc] base: alu.sv:284: Warning: Identifier `\f_zero' is implicitly declared.
+SBY 20:58:23 [alu/FPV_bmcc] base: finished (returncode=0)
+SBY 20:58:23 [alu/FPV_bmcc] prep: starting process &quot;cd alu/FPV_bmcc/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 20:58:24 [alu/FPV_bmcc] prep: finished (returncode=0)
+SBY 20:58:24 [alu/FPV_bmcc] btor: starting process &quot;cd alu/FPV_bmcc/model; yosys -ql design_btor.log design_btor.ys&quot;
+SBY 20:58:25 [alu/FPV_bmcc] btor: finished (returncode=0)
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: starting process &quot;cd alu/FPV_bmcc; btormc --stop-first 1 -v 1 -kmax 19 model/design_btor.btor&quot;
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] calling BMC on 13 properties from bound 0 up-to maximum bound k = 19
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 0 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 0
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 1 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 1
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 2 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 2
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 3 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 3
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 4 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 4
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 5 UNSATISFIABLE
+SBY 20:58:25 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 5
+SBY 20:58:27 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 6 UNSATISFIABLE
+SBY 20:58:27 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 6 UNSATISFIABLE
+SBY 20:58:27 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 6 UNSATISFIABLE
+SBY 20:58:27 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 6 UNSATISFIABLE
+SBY 20:58:27 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 6 UNSATISFIABLE
+SBY 20:58:27 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 6 UNSATISFIABLE
+SBY 20:58:27 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 6 UNSATISFIABLE
+SBY 20:58:27 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 6 UNSATISFIABLE
+SBY 20:58:27 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 6 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 6 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 6 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 6 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 6 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 6
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 7 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 7
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 8 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 8
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 9 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 9
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 10 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 10
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 11 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 11
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 12 UNSATISFIABLE
+SBY 20:58:28 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 12 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 12 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 12
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 13 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 13
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 14 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 14
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 15 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 15
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 16 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 16
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 17 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 17
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 18 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 18
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 0 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 1 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 2 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 3 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 4 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 5 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 6 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 7 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 8 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 9 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 10 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 11 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] bad state property 12 at bound k = 19 UNSATISFIABLE
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] found 0 reachable and 0 unreachable bad state properties at bound k = 19
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: [btor&gt;mc] deleting model checker: 5 inputs, 62 states, 13 bad, 1 constraints
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: finished (returncode=0)
+SBY 20:58:29 [alu/FPV_bmcc] engine_0: Status returned by engine: pass
+SBY 20:58:29 [alu/FPV_bmcc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:11 (11)
+SBY 20:58:29 [alu/FPV_bmcc] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:18 (18)
+SBY 20:58:29 [alu/FPV_bmcc] summary: engine_0 (btor btormc) returned pass
+SBY 20:58:29 [alu/FPV_bmcc] summary: engine_0 did not produce any traces
+SBY 20:58:29 [alu/FPV_bmcc] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

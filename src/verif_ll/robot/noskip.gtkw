@@ -1,0 +1,26 @@
+[timestart] 0
+[size] 1000 320
+[pos] -1 -1
+*-3.253757 18 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 246
+[signals_width] 200
+[sst_expanded] 1
+[sst_vpaned_height] 58
+@28
+robot.clk
+robot.rstn
+@22
+robot.dist_v[DATA_IN_WIDTH-1:0]
+@28
+robot.alarm_glag
+robot.obs_detected_aux
+@22
+robot.sensor_WAIT_N_COUNTER[1:0]
+robot.obs_detected_next
+robot.obs_detected
+@28
+robot.sensor_PROC_STATE
+robot.controller_PROC_STATE
+robot.aux_dist_v
+[pattern_trace] 1
+[pattern_trace] 0

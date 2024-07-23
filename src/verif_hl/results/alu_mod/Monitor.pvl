@@ -1,0 +1,45 @@
+class Monitor { 
+    //Auto-generated fields of the Monitor class:
+    Main m;
+    
+    //Auto-generated constructor:
+    //Auto-generated specifications of the constructor Monitor:
+    ensures Perm(m, write) **
+            (m == m_param) ;
+    Monitor(Main m_param){
+        m = m_param;
+    }
+    
+    
+    //Auto-generated functions:
+    //Auto-generated specifications of the function main_method:
+    context Perm(m, read) **
+            (m != null) **
+            held(m) **
+            m.global_permission_invariant() **
+            (m.mon == this) ;
+    requires ((0 <= process_id) && (process_id < |m.process_state|));
+    void main_method(int process_id){
+        loop_invariant true ** 
+                Perm(m, read) ** 
+                (m != null) ** 
+                held(m)  ** 
+                m.global_permission_invariant() ** 
+                (m.mon == this) ;
+        while (true) {
+            m.process_state = m.process_state[process_id -> 1];
+            loop_invariant true ** 
+                    Perm(m, read) ** 
+                    (m != null) ** 
+                    held(m)  ** 
+                    m.global_permission_invariant() ** 
+                    (m.mon == this) ;
+            while (m.process_state[process_id] != -1 || m.event_state[1] != -2) {
+                unlock m;
+                lock m;
+            }
+        }
+    }
+    
+}
+

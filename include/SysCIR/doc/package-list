@@ -1,0 +1,7 @@
+de.tub.pes.syscir.engine
+de.tub.pes.syscir.engine.transformers
+de.tub.pes.syscir.engine.util
+de.tub.pes.syscir.sc_model
+de.tub.pes.syscir.sc_model.expressions
+de.tub.pes.syscir.sc_model.variables
+de.tub.pes.syscir.tests
