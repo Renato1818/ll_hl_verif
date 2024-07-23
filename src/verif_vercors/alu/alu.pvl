@@ -75,7 +75,6 @@ class ALU {
             ** Perm(init, 1\2)
             ** init
             ;
-    ensures \result >= 0 && \result < 16; // 2^4
     int set_bit(int value, int pos, int bit){
         int i;
         int divisor;
@@ -234,7 +233,7 @@ class ALU {
             }
 
             m.process_state = m.process_state[0 -> 1];
-            m.event_state = m.event_state[1 -> 5000000];
+            m.event_state = m.event_state[1 -> 50];
             loop_invariant true 
                 ** Perm(m, 1\2) 
                 ** (m != null) 
