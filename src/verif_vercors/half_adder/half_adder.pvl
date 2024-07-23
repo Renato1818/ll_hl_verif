@@ -8,13 +8,12 @@ class Half_adder {
 
     boolean init;
 
-    //Specifications of the constructor Half_adder:
-    ensures Perm(m, write) ** 
-            Perm(a, write) ** !a **
-            Perm(b, write) ** !b **
-            Perm(sum, write) ** !sum **
-            Perm(carry, write) ** !carry **
-            (m == m_param) ;
+    ensures Perm(m, write)
+            ** Perm(a, write) ** !a 
+            ** Perm(b, write) ** !b 
+            ** Perm(sum, write) ** !sum 
+            ** Perm(carry, write) ** !carry 
+            ** (m == m_param) ;
     ensures Perm(init, write)
             ** !init;
     Half_adder(Main m_param){
@@ -31,8 +30,6 @@ class Half_adder {
     
     context Perm(m, 1\2)
             ** (m != null)
-            //** held(m)  
-            //** m.global_permission() 
             ** Perm(m.half, read)
             ** (m.half == this) 
             ** Perm(init, 1\2)
@@ -58,12 +55,12 @@ class Half_adder {
             unlock m;
             lock m;
         }
-        loop_invariant true ** 
-                Perm(m, read) ** 
-                (m != null) ** 
-                held(m)  ** 
-                m.global_permission() ** 
-                (m.half == this) 
+        loop_invariant true 
+                ** Perm(m, 1\2)  
+                ** (m != null)  
+                ** held(m)  
+                ** m.global_permission() 
+                ** (m.half == this) 
                 ** Perm(init, 1\2)
                 ** init;
         while (true) {
@@ -73,14 +70,14 @@ class Half_adder {
             carry = a && b;
             m.process_state = m.process_state[0 -> 1];
             m.event_state = m.event_state[1 -> 50];
-            loop_invariant true ** 
-                    Perm(m, read) ** 
-                    (m != null) ** 
-                    held(m)  ** 
-                    m.global_permission() ** 
-                    (m.half == this) 
-                    ** Perm(init, 1\2)
-                    ** init;
+            loop_invariant true 
+                        ** Perm(m, 1\2)  
+                        ** (m != null)  
+                        ** held(m)  
+                        ** m.global_permission() 
+                        ** (m.half == this) 
+                        ** Perm(init, 1\2)
+                        ** init;
             while (m.process_state[0] != -1 || m.event_state[1] != -2) {
                 unlock m;
                 lock m;
@@ -94,12 +91,10 @@ class Half_adder {
 
 
 class Main { 
-    //Auto-generated fields of the Main class:
     seq<int> process_state;
     seq<int> event_state;
     Half_adder half;
     
-    //Auto-generated global invariant: 
     inline resource scheduler_permission_invariant() = true ** 
             Perm(process_state, write) **
             |process_state| == 1 **
@@ -122,8 +117,6 @@ class Main {
 
     resource lock_invariant() = global_permission();
     
-    //Auto-generated constructor:
-    //Auto-generated specifications of the constructor Main:
     ensures Perm(half, read)
             ** half != null
             ** Perm(half.m, 1\2)
@@ -140,8 +133,6 @@ class Main {
     }
     
     
-    //Auto-generated functions:
-    //Auto-generated specifications of the function main:
     context Perm(half, read)
             ** half != null
             ** Perm(half.m, 1\2)
@@ -174,7 +165,6 @@ class Main {
         join half;
     }
     
-    //Auto-generated specifications of the function immediate_wakeup:
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((event_state == \old(event_state))) );
@@ -182,7 +172,6 @@ class Main {
     ensures (((!(((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == \old(process_state[0]))) ))) );
     void immediate_wakeup();
     
-    //Auto-generated specifications of the function reset_events_no_delta:
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((process_state == \old(process_state))) );
@@ -190,13 +179,11 @@ class Main {
     ensures (((!(((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!(((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == \old(event_state[1]))) ))) );
     void reset_events_no_delta();
     
-    //Auto-generated specifications of the function find_minimum_advance:
     requires (|vals| == 2);
     ensures ((((vals[0] < -1) || (\result <= vals[0]))) && (((vals[1] < -1) || (\result <= vals[1]))) );
     ensures (((((vals[0] < -1)) && ((vals[1] < -1)) ) ==> (\result == 0)) && ((((vals[0] >= -1)) || ((vals[1] >= -1)) ) ==> ((((vals[0] >= -1) && (\result == vals[0]))) || (((vals[1] >= -1) && (\result == vals[1]))) )));
     pure int find_minimum_advance(seq<int> vals);
     
-    //Auto-generated specifications of the function wakeup_after_wait:
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((event_state == \old(event_state))) );
@@ -204,7 +191,6 @@ class Main {
     ensures (((!(((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == \old(process_state[0]))) ))) );
     void wakeup_after_wait();
     
-    //Auto-generated specifications of the function reset_all_events:
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((process_state == \old(process_state))) );
