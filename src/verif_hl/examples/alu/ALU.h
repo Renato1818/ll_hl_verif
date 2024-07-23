@@ -22,10 +22,6 @@ SC_MODULE(ALU) {
 
 	SC_CTOR(ALU){
 		SC_THREAD(operate);
-		//sensitive << OP1 << OP2 << OPCODE;
-		//OP1 = 0;
-		//OP2 = 0;
-		//OPCODE = 0;
 		SC_METHOD(get_bit);
 		SC_METHOD(set_bit);
 	}
@@ -118,32 +114,10 @@ SC_MODULE(ALU) {
 			CARRY.write((result / 16) % 2); 
 			if((result % 16) == 0)
 				ZERO.write(true);
-			/*
-			RESULT.write(result.range(3, 0));			
-			CARRY.write((bool) result[4]);			
-			if(result == 0)
-				ZERO.write(true);*/
-			
+					
 			
       		wait(5, SC_MS);
 		}
 	}
     
 };
-/*
-				case 4: //and
-					result = data1 & data2;
-					break;
-					
-				case 5:
-					result = data1 | data2;
-					break;
-					
-				case 6:
-					result.range(3, 0) = ~(data1 & data2);
-					break;
-					
-				case 7:
-					result = data1 ^ data2;
-					break;
-					*/
