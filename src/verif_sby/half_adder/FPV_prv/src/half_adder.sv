@@ -49,12 +49,6 @@ module half_adder (
         
         //Declare when verifications is valid
         reg f_past_valid = 1'b0;
-        //always @($global_clock) f_past_valid <= 1'b1; //to use $past property
-		//always @(negedge rstn) begin
-		//	if ( !rstn ) begin
-		//		f_past_valid <= 1'd0;
-		//	end 
-		//end
 
 		assign f_sum = ((f_a) ^ (f_b)) ^ sum;
 		assign f_carry = ((f_a) & (f_b)) ^ carry;

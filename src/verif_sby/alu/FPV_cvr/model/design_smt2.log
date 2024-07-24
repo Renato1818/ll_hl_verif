@@ -81,6 +81,6 @@ Module alu directly or indirectly contains formal properties -> setting "keep" a
 6.2. Executing DEMUXMAP pass.
 Creating SMT-LIBv2 representation of module alu.
 
-End of script. Logfile hash: 0c26d47a40, CPU: user 0.07s system 0.03s, MEM: 16.16 MB peak
+End of script. Logfile hash: 0c26d47a40, CPU: user 0.04s system 0.00s, MEM: 16.12 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 55% 2x write_smt2 (0 sec), 38% 2x read_ilang (0 sec), ...
+Time spent: 57% 2x write_smt2 (0 sec), 32% 2x read_ilang (0 sec), ...

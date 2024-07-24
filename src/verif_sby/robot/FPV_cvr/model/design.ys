@@ -1,7 +1,7 @@
 # running in robot/FPV_cvr/src/
 sta
 design -reset
-read -formal robot_new.sv
+read -formal robot.sv
 hierarchy -check -top robot
 prep -top robot
 

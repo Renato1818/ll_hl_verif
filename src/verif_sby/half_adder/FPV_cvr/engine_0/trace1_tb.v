@@ -8,15 +8,15 @@ module testbench(input clock, output reg genclock);
 `endif
   reg genclock = 1;
   reg [31:0] cycle = 0;
+  wire [0:0] PI_clk = clock;
+  reg [0:0] PI_a;
   reg [0:0] PI_rstn;
   reg [0:0] PI_b;
-  reg [0:0] PI_a;
-  wire [0:0] PI_clk = clock;
   half_adder UUT (
-    .rstn(PI_rstn),
-    .b(PI_b),
+    .clk(PI_clk),
     .a(PI_a),
-    .clk(PI_clk)
+    .rstn(PI_rstn),
+    .b(PI_b)
   );
 `ifndef VERILATOR
   initial begin
@@ -36,9 +36,9 @@ module testbench(input clock, output reg genclock);
     #1;
 `endif
     // UUT.$auto$async2sync.\cc:171:execute$157  = 1'b0;
-    // UUT.$formal$half_adder.\sv:76$1_EN  = 1'b0;
-    // UUT.$formal$half_adder.\sv:80$3_EN  = 1'b0;
-    // UUT.$formal$half_adder.\sv:86$5_EN  = 1'b0;
+    // UUT.$formal$half_adder.\sv:70$1_EN  = 1'b0;
+    // UUT.$formal$half_adder.\sv:74$3_EN  = 1'b0;
+    // UUT.$formal$half_adder.\sv:80$5_EN  = 1'b0;
     UUT._witness_.anyinit_procdff_124 = 1'b1;
     UUT._witness_.anyinit_procdff_126 = 1'b1;
     UUT._witness_.anyinit_procdff_128 = 1'b0;
@@ -57,16 +57,16 @@ module testbench(input clock, output reg genclock);
     UUT._witness_.anyinit_procdff_152 = 1'b1;
 
     // state 0
+    PI_a = 1'b1;
     PI_rstn = 1'b0;
     PI_b = 1'b0;
-    PI_a = 1'b1;
   end
   always @(posedge clock) begin
     // state 1
     if (cycle == 0) begin
+      PI_a <= 1'b1;
       PI_rstn <= 1'b0;
       PI_b <= 1'b0;
-      PI_a <= 1'b1;
     end
 
     genclock <= cycle < 1;

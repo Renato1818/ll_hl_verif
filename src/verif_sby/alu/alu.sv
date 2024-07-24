@@ -1,21 +1,17 @@
 module alu #(
-	parameter OPCODE_WIDTH       = 2,
-	parameter DATA_WIDTH         = 3
-)(
-	input wire clk,
-	input wire rstn,
-	input wire [OPCODE_WIDTH:0] OPCODE,
-	input wire [DATA_WIDTH:0] OP1,
-	input wire [DATA_WIDTH:0] OP2,
-	output wire CARRY,
-	output wire ZERO,
-	output wire [DATA_WIDTH:0] RESULT
-);
+		parameter OPCODE_WIDTH       = 2,
+		parameter DATA_WIDTH         = 3
+	)(
+		input wire clk,
+		input wire rstn,
+		input wire [OPCODE_WIDTH:0] OPCODE,
+		input wire [DATA_WIDTH:0] OP1,
+		input wire [DATA_WIDTH:0] OP2,
+		output wire CARRY,
+		output wire ZERO,
+		output wire [DATA_WIDTH:0] RESULT
+	);
 
-//------------------------------------------------------------------------------
-// Clocked THREAD: operate
-	
-	// Thread-local variables
 	reg [DATA_WIDTH+1:0] result_next;
 	reg [DATA_WIDTH:0] RESULT_next;
 	reg [DATA_WIDTH:0] result;
@@ -259,12 +255,6 @@ module alu #(
 		
 		//Declare when verifications is valid
         reg f_past_valid = 1'b0;
-        //always @($global_clock) f_past_valid <= 1'b1; //to use $past property
-		//always @(negedge rstn) begin
-		//	if ( !rstn ) begin
-		//		f_past_valid <= 1'd0;
-		//	end 
-		//end
 
 
 		assign op_add  =  (f_op1 + f_op2);
@@ -348,7 +338,6 @@ module alu #(
 			end
 
 			// cover
-			//opcode op1 op2 cover
 			cov_opcode_zero: cover (OPCODE == 3'd0);
 			cov_opcode_one:  cover (OPCODE == 3'd7);
 		

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-<testsuite timestamp="2024-07-19T09:53:37" hostname="SNPS-A1iGRuJX2K" package="FPV" id="0" name="cvr" tests="10" errors="0" failures="0" time="1" skipped="4">
+<testsuite timestamp="2024-07-23T15:43:18" hostname="SNPS-A1iGRuJX2K" package="FPV" id="0" name="cvr" tests="10" errors="0" failures="0" time="1" skipped="4">
 <properties>
 <property name="os" value="Linux"/>
 <property name="expect" value="PASS"/>
@@ -8,88 +8,88 @@
 </properties>
 <testcase classname="cvr" name="build execution" time="0">
 </testcase>
-<testcase classname="cvr" name="Property COVER in robot at robot_new.sv:109.4-109.39" time="0" type="COVER" location="robot_new.sv:109.4-109.39" id="cov_alarm_one" tracefile="engine_0/trace0.vcd">
+<testcase classname="cvr" name="Property COVER in robot at robot.sv:106.4-106.39" time="0" type="COVER" location="robot.sv:106.4-106.39" id="cov_alarm_one" tracefile="engine_0/trace0.vcd">
 </testcase>
-<testcase classname="cvr" name="Property COVER in robot at robot_new.sv:108.4-108.38" time="0" type="COVER" location="robot_new.sv:108.4-108.38" id="cov_alarm_zero" tracefile="engine_0/trace2.vcd">
+<testcase classname="cvr" name="Property COVER in robot at robot.sv:105.4-105.38" time="0" type="COVER" location="robot.sv:105.4-105.38" id="cov_alarm_zero" tracefile="engine_0/trace2.vcd">
 </testcase>
-<testcase classname="cvr" name="Property COVER in robot at robot_new.sv:103.4-103.46" time="0" type="COVER" location="robot_new.sv:103.4-103.46" id="cov_dist_one" tracefile="engine_0/trace3.vcd">
+<testcase classname="cvr" name="Property COVER in robot at robot.sv:100.4-100.46" time="0" type="COVER" location="robot.sv:100.4-100.46" id="cov_dist_one" tracefile="engine_0/trace3.vcd">
 </testcase>
-<testcase classname="cvr" name="Property COVER in robot at robot_new.sv:102.4-102.46" time="0" type="COVER" location="robot_new.sv:102.4-102.46" id="cov_dist_zero" tracefile="engine_0/trace0.vcd">
+<testcase classname="cvr" name="Property COVER in robot at robot.sv:99.4-99.46" time="0" type="COVER" location="robot.sv:99.4-99.46" id="cov_dist_zero" tracefile="engine_0/trace0.vcd">
 </testcase>
-<testcase classname="cvr" name="Property COVER in robot at robot_new.sv:106.4-106.56" time="0" type="COVER" location="robot_new.sv:106.4-106.56" id="cov_obs_detected_out_one" tracefile="engine_0/trace1.vcd">
+<testcase classname="cvr" name="Property COVER in robot at robot.sv:103.4-103.56" time="0" type="COVER" location="robot.sv:103.4-103.56" id="cov_obs_detected_out_one" tracefile="engine_0/trace1.vcd">
 </testcase>
-<testcase classname="cvr" name="Property COVER in robot at robot_new.sv:105.4-105.55" time="0" type="COVER" location="robot_new.sv:105.4-105.55" id="cov_obs_detected_out_zero" tracefile="engine_0/trace0.vcd">
+<testcase classname="cvr" name="Property COVER in robot at robot.sv:102.4-102.55" time="0" type="COVER" location="robot.sv:102.4-102.55" id="cov_obs_detected_out_zero" tracefile="engine_0/trace0.vcd">
 </testcase>
-<testcase classname="cvr" name="Property ASSERT in robot at robot_new.sv:98.6-98.43" time="0" type="ASSERT" location="robot_new.sv:98.6-98.43" id="assert_alarm">
+<testcase classname="cvr" name="Property ASSERT in robot at robot.sv:95.6-95.43" time="0" type="ASSERT" location="robot.sv:95.6-95.43" id="assert_alarm">
 <skipped />
 </testcase>
-<testcase classname="cvr" name="Property ASSERT in robot at robot_new.sv:90.17-90.63" time="0" type="ASSERT" location="robot_new.sv:90.17-90.63" id="assert_alarm_false_reset">
+<testcase classname="cvr" name="Property ASSERT in robot at robot.sv:89.17-89.63" time="0" type="ASSERT" location="robot.sv:89.17-89.63" id="assert_alarm_false_reset">
 <skipped />
 </testcase>
-<testcase classname="cvr" name="Property ASSERT in robot at robot_new.sv:95.6-95.48" time="0" type="ASSERT" location="robot_new.sv:95.6-95.48" id="assert_obs_detected">
+<testcase classname="cvr" name="Property ASSERT in robot at robot.sv:92.6-92.48" time="0" type="ASSERT" location="robot.sv:92.6-92.48" id="assert_obs_detected">
 <skipped />
 </testcase>
-<testcase classname="cvr" name="Property ASSERT in robot at robot_new.sv:89.17-89.70" time="0" type="ASSERT" location="robot_new.sv:89.17-89.70" id="assert_obs_detected_reset">
+<testcase classname="cvr" name="Property ASSERT in robot at robot.sv:88.17-88.70" time="0" type="ASSERT" location="robot.sv:88.17-88.70" id="assert_obs_detected_reset">
 <skipped />
 </testcase>
-<system-out>SBY  9:53:34 [robot/FPV_cvr] Removing directory '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/robot/FPV_cvr'.
-SBY  9:53:35 [robot/FPV_cvr] Copy '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/robot/robot_new.sv' to '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/robot/FPV_cvr/src/robot_new.sv'.
-SBY  9:53:35 [robot/FPV_cvr] engine_0: smtbmc z3
-SBY  9:53:35 [robot/FPV_cvr] base: starting process &quot;cd robot/FPV_cvr/src; yosys -ql ../model/design.log ../model/design.ys&quot;
-SBY  9:53:35 [robot/FPV_cvr] base: Warning: reg '\buff_dist_v' is assigned in a continuous assignment at robot_new.sv:20.9-20.29.
-SBY  9:53:35 [robot/FPV_cvr] base: Warning: reg '\obs_detected_next' is assigned in a continuous assignment at robot_new.sv:24.9-24.67.
-SBY  9:53:35 [robot/FPV_cvr] base: Warning: reg '\alarm_flag_next' is assigned in a continuous assignment at robot_new.sv:35.9-35.53.
-SBY  9:53:36 [robot/FPV_cvr] base: finished (returncode=0)
-SBY  9:53:36 [robot/FPV_cvr] prep: starting process &quot;cd robot/FPV_cvr/model; yosys -ql design_prep.log design_prep.ys&quot;
-SBY  9:53:36 [robot/FPV_cvr] prep: finished (returncode=0)
-SBY  9:53:36 [robot/FPV_cvr] smt2: starting process &quot;cd robot/FPV_cvr/model; yosys -ql design_smt2.log design_smt2.ys&quot;
-SBY  9:53:36 [robot/FPV_cvr] smt2: finished (returncode=0)
-SBY  9:53:36 [robot/FPV_cvr] engine_0: starting process &quot;cd robot/FPV_cvr; yosys-smtbmc -s z3 --presat -c --noprogress -t 20  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Solver: z3
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 0..
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_obs_detected_out_zero in step 1.
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_dist_zero in step 1.
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_alarm_one in step 1.
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_obs_detected_out_one in step 1.
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
-SBY  9:53:36 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_alarm_zero in step 1.
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_dist_one in step 1.
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
-SBY  9:53:37 [robot/FPV_cvr] engine_0: ##   0:00:00  Status: passed
-SBY  9:53:37 [robot/FPV_cvr] engine_0: finished (returncode=0)
-SBY  9:53:37 [robot/FPV_cvr] engine_0: Status returned by engine: pass
-SBY  9:53:37 [robot/FPV_cvr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
-SBY  9:53:37 [robot/FPV_cvr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
-SBY  9:53:37 [robot/FPV_cvr] summary: engine_0 (smtbmc z3) returned pass
-SBY  9:53:37 [robot/FPV_cvr] summary: cover trace: robot/FPV_cvr/engine_0/trace0.vcd
-SBY  9:53:37 [robot/FPV_cvr] summary:   reached cover statement robot.cov_alarm_one at robot_new.sv:109.4-109.39 in step 1
-SBY  9:53:37 [robot/FPV_cvr] summary:   reached cover statement robot.cov_dist_zero at robot_new.sv:102.4-102.46 in step 1
-SBY  9:53:37 [robot/FPV_cvr] summary:   reached cover statement robot.cov_obs_detected_out_zero at robot_new.sv:105.4-105.55 in step 1
-SBY  9:53:37 [robot/FPV_cvr] summary: cover trace: robot/FPV_cvr/engine_0/trace1.vcd
-SBY  9:53:37 [robot/FPV_cvr] summary:   reached cover statement robot.cov_obs_detected_out_one at robot_new.sv:106.4-106.56 in step 1
-SBY  9:53:37 [robot/FPV_cvr] summary: cover trace: robot/FPV_cvr/engine_0/trace2.vcd
-SBY  9:53:37 [robot/FPV_cvr] summary:   reached cover statement robot.cov_alarm_zero at robot_new.sv:108.4-108.38 in step 1
-SBY  9:53:37 [robot/FPV_cvr] summary: cover trace: robot/FPV_cvr/engine_0/trace3.vcd
-SBY  9:53:37 [robot/FPV_cvr] summary:   reached cover statement robot.cov_dist_one at robot_new.sv:103.4-103.46 in step 1
-SBY  9:53:37 [robot/FPV_cvr] DONE (PASS, rc=0)
+<system-out>SBY 15:43:16 [robot/FPV_cvr] Removing directory '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/FPV_cvr'.
+SBY 15:43:16 [robot/FPV_cvr] Copy '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/robot.sv' to '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/FPV_cvr/src/robot.sv'.
+SBY 15:43:16 [robot/FPV_cvr] engine_0: smtbmc z3
+SBY 15:43:16 [robot/FPV_cvr] base: starting process &quot;cd robot/FPV_cvr/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY 15:43:16 [robot/FPV_cvr] base: Warning: reg '\buff_dist_v' is assigned in a continuous assignment at robot.sv:20.9-20.29.
+SBY 15:43:16 [robot/FPV_cvr] base: Warning: reg '\obs_detected_next' is assigned in a continuous assignment at robot.sv:24.9-24.67.
+SBY 15:43:16 [robot/FPV_cvr] base: Warning: reg '\alarm_flag_next' is assigned in a continuous assignment at robot.sv:35.9-35.53.
+SBY 15:43:16 [robot/FPV_cvr] base: finished (returncode=0)
+SBY 15:43:16 [robot/FPV_cvr] prep: starting process &quot;cd robot/FPV_cvr/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY 15:43:16 [robot/FPV_cvr] prep: finished (returncode=0)
+SBY 15:43:16 [robot/FPV_cvr] smt2: starting process &quot;cd robot/FPV_cvr/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY 15:43:16 [robot/FPV_cvr] smt2: finished (returncode=0)
+SBY 15:43:16 [robot/FPV_cvr] engine_0: starting process &quot;cd robot/FPV_cvr; yosys-smtbmc -s z3 --presat -c --noprogress -t 20  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY 15:43:17 [robot/FPV_cvr] engine_0: ##   0:00:00  Solver: z3
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_obs_detected_out_zero in step 1.
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_dist_zero in step 1.
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_alarm_one in step 1.
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_obs_detected_out_one in step 1.
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_alarm_zero in step 1.
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_dist_one in step 1.
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 15:43:18 [robot/FPV_cvr] engine_0: ##   0:00:00  Status: passed
+SBY 15:43:18 [robot/FPV_cvr] engine_0: finished (returncode=0)
+SBY 15:43:18 [robot/FPV_cvr] engine_0: Status returned by engine: pass
+SBY 15:43:18 [robot/FPV_cvr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+SBY 15:43:18 [robot/FPV_cvr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY 15:43:18 [robot/FPV_cvr] summary: engine_0 (smtbmc z3) returned pass
+SBY 15:43:18 [robot/FPV_cvr] summary: cover trace: robot/FPV_cvr/engine_0/trace0.vcd
+SBY 15:43:18 [robot/FPV_cvr] summary:   reached cover statement robot.cov_alarm_one at robot.sv:106.4-106.39 in step 1
+SBY 15:43:18 [robot/FPV_cvr] summary:   reached cover statement robot.cov_dist_zero at robot.sv:99.4-99.46 in step 1
+SBY 15:43:18 [robot/FPV_cvr] summary:   reached cover statement robot.cov_obs_detected_out_zero at robot.sv:102.4-102.55 in step 1
+SBY 15:43:18 [robot/FPV_cvr] summary: cover trace: robot/FPV_cvr/engine_0/trace1.vcd
+SBY 15:43:18 [robot/FPV_cvr] summary:   reached cover statement robot.cov_obs_detected_out_one at robot.sv:103.4-103.56 in step 1
+SBY 15:43:18 [robot/FPV_cvr] summary: cover trace: robot/FPV_cvr/engine_0/trace2.vcd
+SBY 15:43:18 [robot/FPV_cvr] summary:   reached cover statement robot.cov_alarm_zero at robot.sv:105.4-105.38 in step 1
+SBY 15:43:18 [robot/FPV_cvr] summary: cover trace: robot/FPV_cvr/engine_0/trace3.vcd
+SBY 15:43:18 [robot/FPV_cvr] summary:   reached cover statement robot.cov_dist_one at robot.sv:100.4-100.46 in step 1
+SBY 15:43:18 [robot/FPV_cvr] DONE (PASS, rc=0)
 </system-out>
 <system-err>
 </system-err>

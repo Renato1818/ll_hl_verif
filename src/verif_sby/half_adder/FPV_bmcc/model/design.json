@@ -26,7 +26,7 @@
                 {
                   "name": "cov_carry_false",
                   "attributes": {
-                    "src": "half_adder.sv:90.13-90.44"
+                    "src": "half_adder.sv:84.13-84.44"
                   },
                   "parameters": {
 
@@ -35,7 +35,7 @@
                 {
                   "name": "cov_carry_true",
                   "attributes": {
-                    "src": "half_adder.sv:89.13-89.43"
+                    "src": "half_adder.sv:83.13-83.43"
                   },
                   "parameters": {
 
@@ -44,7 +44,7 @@
                 {
                   "name": "cov_sum_false",
                   "attributes": {
-                    "src": "half_adder.sv:87.13-87.40"
+                    "src": "half_adder.sv:81.13-81.40"
                   },
                   "parameters": {
 
@@ -53,7 +53,7 @@
                 {
                   "name": "cov_sum_true",
                   "attributes": {
-                    "src": "half_adder.sv:86.13-86.39"
+                    "src": "half_adder.sv:80.13-80.39"
                   },
                   "parameters": {
 
@@ -62,7 +62,7 @@
                 {
                   "name": "cover_ab1",
                   "attributes": {
-                    "src": "half_adder.sv:92.13-92.42"
+                    "src": "half_adder.sv:86.13-86.42"
                   },
                   "parameters": {
 
@@ -71,7 +71,7 @@
                 {
                   "name": "cover_ab2",
                   "attributes": {
-                    "src": "half_adder.sv:93.13-93.42"
+                    "src": "half_adder.sv:87.13-87.42"
                   },
                   "parameters": {
 
@@ -80,7 +80,7 @@
                 {
                   "name": "cover_ab3",
                   "attributes": {
-                    "src": "half_adder.sv:94.13-94.42"
+                    "src": "half_adder.sv:88.13-88.42"
                   },
                   "parameters": {
 
@@ -89,7 +89,7 @@
                 {
                   "name": "cover_ab4",
                   "attributes": {
-                    "src": "half_adder.sv:95.13-95.42"
+                    "src": "half_adder.sv:89.13-89.42"
                   },
                   "parameters": {
 
@@ -115,7 +115,7 @@
                 {
                   "name": "assert_carry",
                   "attributes": {
-                    "src": "half_adder.sv:81.21-81.53"
+                    "src": "half_adder.sv:75.21-75.53"
                   },
                   "parameters": {
 
@@ -124,7 +124,7 @@
                 {
                   "name": "assert_carry_reset",
                   "attributes": {
-                    "src": "half_adder.sv:77.17-77.52"
+                    "src": "half_adder.sv:71.17-71.52"
                   },
                   "parameters": {
 
@@ -133,7 +133,7 @@
                 {
                   "name": "assert_sum_",
                   "attributes": {
-                    "src": "half_adder.sv:80.21-80.51"
+                    "src": "half_adder.sv:74.21-74.51"
                   },
                   "parameters": {
 
@@ -142,7 +142,7 @@
                 {
                   "name": "assert_sum_reset",
                   "attributes": {
-                    "src": "half_adder.sv:76.17-76.48"
+                    "src": "half_adder.sv:70.17-70.48"
                   },
                   "parameters": {
 
@@ -179,7 +179,7 @@
                   "name": "$procmux$102",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+                    "src": "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -188,7 +188,7 @@
                 {
                   "name": "$procmux$104",
                   "attributes": {
-                    "src": "half_adder.sv:79.9-79.21|half_adder.sv:79.5-82.8"
+                    "src": "half_adder.sv:73.9-73.21|half_adder.sv:73.5-76.8"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -198,7 +198,7 @@
                   "name": "$procmux$107",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+                    "src": "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -207,7 +207,7 @@
                 {
                   "name": "$procmux$109",
                   "attributes": {
-                    "src": "half_adder.sv:79.9-79.21|half_adder.sv:79.5-82.8"
+                    "src": "half_adder.sv:73.9-73.21|half_adder.sv:73.5-76.8"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -217,7 +217,7 @@
                   "name": "$procmux$112",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+                    "src": "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -226,7 +226,7 @@
                 {
                   "name": "$procmux$119",
                   "attributes": {
-                    "src": "half_adder.sv:79.9-79.21|half_adder.sv:79.5-82.8"
+                    "src": "half_adder.sv:73.9-73.21|half_adder.sv:73.5-76.8"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -236,7 +236,7 @@
                   "name": "$procmux$122",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+                    "src": "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -246,7 +246,7 @@
                   "name": "$procmux$93",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+                    "src": "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -256,7 +256,7 @@
                   "name": "$procmux$96",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+                    "src": "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -287,7 +287,7 @@
                 {
                   "name": "$procdff$124",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -297,7 +297,7 @@
                 {
                   "name": "$procdff$125",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -307,7 +307,7 @@
                 {
                   "name": "$procdff$126",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -317,7 +317,7 @@
                 {
                   "name": "$procdff$128",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -327,7 +327,7 @@
                 {
                   "name": "$procdff$129",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -337,7 +337,7 @@
                 {
                   "name": "$procdff$130",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -347,7 +347,7 @@
                 {
                   "name": "$procdff$132",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -357,7 +357,7 @@
                 {
                   "name": "$procdff$133",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -367,7 +367,7 @@
                 {
                   "name": "$procdff$134",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -377,7 +377,7 @@
                 {
                   "name": "$procdff$136",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -387,7 +387,7 @@
                 {
                   "name": "$procdff$138",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -397,7 +397,7 @@
                 {
                   "name": "$procdff$140",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -407,7 +407,7 @@
                 {
                   "name": "$procdff$142",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -417,7 +417,7 @@
                 {
                   "name": "$procdff$144",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -427,7 +427,7 @@
                 {
                   "name": "$procdff$146",
                   "attributes": {
-                    "src": "half_adder.sv:74.9-96.12"
+                    "src": "half_adder.sv:68.9-90.12"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -457,9 +457,9 @@
             ],
             "cells": [
                 {
-                  "name": "$xor$half_adder.sv:59$21",
+                  "name": "$xor$half_adder.sv:53$21",
                   "attributes": {
-                    "src": "half_adder.sv:59.19-59.32"
+                    "src": "half_adder.sv:53.19-53.32"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -470,9 +470,9 @@
                   }
                 },
                 {
-                  "name": "$xor$half_adder.sv:59$22",
+                  "name": "$xor$half_adder.sv:53$22",
                   "attributes": {
-                    "src": "half_adder.sv:59.18-59.39"
+                    "src": "half_adder.sv:53.18-53.39"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -483,9 +483,9 @@
                   }
                 },
                 {
-                  "name": "$xor$half_adder.sv:60$24",
+                  "name": "$xor$half_adder.sv:54$24",
                   "attributes": {
-                    "src": "half_adder.sv:60.20-60.43"
+                    "src": "half_adder.sv:54.20-54.43"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -559,9 +559,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$half_adder.sv:76$53",
+                  "name": "$logic_not$half_adder.sv:70$53",
                   "attributes": {
-                    "src": "half_adder.sv:76.43-76.47"
+                    "src": "half_adder.sv:70.43-70.47"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -570,9 +570,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$half_adder.sv:77$54",
+                  "name": "$logic_not$half_adder.sv:71$54",
                   "attributes": {
-                    "src": "half_adder.sv:77.45-77.51"
+                    "src": "half_adder.sv:71.45-71.51"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -581,9 +581,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$half_adder.sv:80$55",
+                  "name": "$logic_not$half_adder.sv:74$55",
                   "attributes": {
-                    "src": "half_adder.sv:80.43-80.49"
+                    "src": "half_adder.sv:74.43-74.49"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -592,9 +592,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$half_adder.sv:81$56",
+                  "name": "$logic_not$half_adder.sv:75$56",
                   "attributes": {
-                    "src": "half_adder.sv:81.44-81.52"
+                    "src": "half_adder.sv:75.44-75.52"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -603,9 +603,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$half_adder.sv:92$59",
+                  "name": "$logic_not$half_adder.sv:86$59",
                   "attributes": {
-                    "src": "half_adder.sv:92.32-92.34"
+                    "src": "half_adder.sv:86.32-86.34"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -614,9 +614,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$half_adder.sv:92$60",
+                  "name": "$logic_not$half_adder.sv:86$60",
                   "attributes": {
-                    "src": "half_adder.sv:92.38-92.40"
+                    "src": "half_adder.sv:86.38-86.40"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -673,9 +673,9 @@
                   }
                 },
                 {
-                  "name": "$logic_and$half_adder.sv:92$61",
+                  "name": "$logic_and$half_adder.sv:86$61",
                   "attributes": {
-                    "src": "half_adder.sv:92.32-92.40"
+                    "src": "half_adder.sv:86.32-86.40"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -686,9 +686,9 @@
                   }
                 },
                 {
-                  "name": "$logic_and$half_adder.sv:93$63",
+                  "name": "$logic_and$half_adder.sv:87$63",
                   "attributes": {
-                    "src": "half_adder.sv:93.32-93.40"
+                    "src": "half_adder.sv:87.32-87.40"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -699,9 +699,9 @@
                   }
                 },
                 {
-                  "name": "$logic_and$half_adder.sv:94$65",
+                  "name": "$logic_and$half_adder.sv:88$65",
                   "attributes": {
-                    "src": "half_adder.sv:94.33-94.40"
+                    "src": "half_adder.sv:88.33-88.40"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -741,7 +741,7 @@
                 {
                   "name": "$procdff$148",
                   "attributes": {
-                    "src": "half_adder.sv:62.3-72.6"
+                    "src": "half_adder.sv:56.3-66.6"
                   },
                   "parameters": {
                     "ARST_POLARITY": "0",
@@ -753,7 +753,7 @@
                 {
                   "name": "$procdff$149",
                   "attributes": {
-                    "src": "half_adder.sv:62.3-72.6"
+                    "src": "half_adder.sv:56.3-66.6"
                   },
                   "parameters": {
                     "ARST_POLARITY": "0",
@@ -765,7 +765,7 @@
                 {
                   "name": "$procdff$150",
                   "attributes": {
-                    "src": "half_adder.sv:62.3-72.6"
+                    "src": "half_adder.sv:56.3-66.6"
                   },
                   "parameters": {
                     "ARST_POLARITY": "0",
@@ -823,9 +823,9 @@
             ],
             "cells": [
                 {
-                  "name": "$and$half_adder.sv:60$23",
+                  "name": "$and$half_adder.sv:54$23",
                   "attributes": {
-                    "src": "half_adder.sv:60.21-60.34"
+                    "src": "half_adder.sv:54.21-54.34"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -842,7 +842,7 @@
             "keep": "00000000000000000000000000000001",
             "hdlname": "\\half_adder",
             "top": "00000000000000000000000000000001",
-            "src": "half_adder.sv:1.1-99.10"
+            "src": "half_adder.sv:1.1-93.10"
         }
       }
   ]

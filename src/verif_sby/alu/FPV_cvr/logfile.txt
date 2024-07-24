@@ -1,136 +1,136 @@
-SBY 20:58:15 [alu/FPV_cvr] Removing directory '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/FPV_cvr'.
-SBY 20:58:15 [alu/FPV_cvr] Copy '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/alu.sv' to '/mnt/c/Users/renatoj/git_clones/hls_vercors/test_ll/alu/FPV_cvr/src/alu.sv'.
-SBY 20:58:16 [alu/FPV_cvr] engine_0: smtbmc z3
-SBY 20:58:18 [alu/FPV_cvr] base: starting process "cd alu/FPV_cvr/src; yosys -ql ../model/design.log ../model/design.ys"
-SBY 20:58:19 [alu/FPV_cvr] base: Warning: reg '\op_add' is assigned in a continuous assignment at alu.sv:270.10-270.36.
-SBY 20:58:19 [alu/FPV_cvr] base: Warning: reg '\op_sub' is assigned in a continuous assignment at alu.sv:271.10-271.36.
-SBY 20:58:19 [alu/FPV_cvr] base: Warning: reg '\op_incr' is assigned in a continuous assignment at alu.sv:272.10-272.31.
-SBY 20:58:19 [alu/FPV_cvr] base: Warning: reg '\op_decr' is assigned in a continuous assignment at alu.sv:273.10-273.31.
-SBY 20:58:19 [alu/FPV_cvr] base: Warning: reg '\op_and' is assigned in a continuous assignment at alu.sv:274.10-274.35.
-SBY 20:58:19 [alu/FPV_cvr] base: Warning: reg '\op_or' is assigned in a continuous assignment at alu.sv:275.10-275.35.
-SBY 20:58:19 [alu/FPV_cvr] base: Warning: reg '\op_nand' is assigned in a continuous assignment at alu.sv:276.10-276.36.
-SBY 20:58:19 [alu/FPV_cvr] base: Warning: reg '\op_xor' is assigned in a continuous assignment at alu.sv:277.10-277.35.
-SBY 20:58:19 [alu/FPV_cvr] base: alu.sv:279: Warning: Identifier `\f_carry' is implicitly declared.
-SBY 20:58:19 [alu/FPV_cvr] base: alu.sv:284: Warning: Identifier `\f_zero' is implicitly declared.
-SBY 20:58:24 [alu/FPV_cvr] base: finished (returncode=0)
-SBY 20:58:24 [alu/FPV_cvr] prep: starting process "cd alu/FPV_cvr/model; yosys -ql design_prep.log design_prep.ys"
-SBY 20:58:24 [alu/FPV_cvr] prep: finished (returncode=0)
-SBY 20:58:24 [alu/FPV_cvr] smt2: starting process "cd alu/FPV_cvr/model; yosys -ql design_smt2.log design_smt2.ys"
-SBY 20:58:25 [alu/FPV_cvr] smt2: finished (returncode=0)
-SBY 20:58:25 [alu/FPV_cvr] engine_0: starting process "cd alu/FPV_cvr; yosys-smtbmc -s z3 --presat -c --noprogress -t 20  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
-SBY 20:58:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Solver: z3
-SBY 20:58:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 0..
-SBY 20:58:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_res7 in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_zero_false in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_result_zero in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_opcode_one in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_op2_one in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_op1_zero in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_carry_true in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_zero_true in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_op1_one in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_carry_false in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_op2_zero in step 1.
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
-SBY 20:58:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
-SBY 20:58:27 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_result_one in step 1.
-SBY 20:58:27 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
-SBY 20:58:27 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace3_tb.v
-SBY 20:58:27 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace3.smtc
-SBY 20:58:27 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace3.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:01  Checking cover reachability in step 1..
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:01  Reached cover statement at cover_res4 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to VCD file: engine_0/trace4.vcd
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace4_tb.v
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace4.smtc
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace4.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Checking cover reachability in step 1..
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Reached cover statement at cover_res0 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Reached cover statement at cov_optest4 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Reached cover statement at cov_opcode_zero in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Writing trace to VCD file: engine_0/trace5.vcd
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Writing trace to Verilog testbench: engine_0/trace5_tb.v
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Writing trace to constraints file: engine_0/trace5.smtc
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Writing trace to Yosys witness file: engine_0/trace5.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Checking cover reachability in step 1..
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Reached cover statement at cov_optest1 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Writing trace to VCD file: engine_0/trace6.vcd
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Writing trace to Verilog testbench: engine_0/trace6_tb.v
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Writing trace to constraints file: engine_0/trace6.smtc
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Writing trace to Yosys witness file: engine_0/trace6.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Checking cover reachability in step 1..
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Reached cover statement at cover_res3 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:02  Writing trace to VCD file: engine_0/trace7.vcd
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Verilog testbench: engine_0/trace7_tb.v
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to constraints file: engine_0/trace7.smtc
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Yosys witness file: engine_0/trace7.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Checking cover reachability in step 1..
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Reached cover statement at cover_res1 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to VCD file: engine_0/trace8.vcd
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Verilog testbench: engine_0/trace8_tb.v
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to constraints file: engine_0/trace8.smtc
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Yosys witness file: engine_0/trace8.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Checking cover reachability in step 1..
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Reached cover statement at cover_res5 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to VCD file: engine_0/trace9.vcd
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Verilog testbench: engine_0/trace9_tb.v
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to constraints file: engine_0/trace9.smtc
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Yosys witness file: engine_0/trace9.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Checking cover reachability in step 1..
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Reached cover statement at cover_res6 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to VCD file: engine_0/trace10.vcd
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Verilog testbench: engine_0/trace10_tb.v
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to constraints file: engine_0/trace10.smtc
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Yosys witness file: engine_0/trace10.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Checking cover reachability in step 1..
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Reached cover statement at cover_res2 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to VCD file: engine_0/trace11.vcd
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Verilog testbench: engine_0/trace11_tb.v
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to constraints file: engine_0/trace11.smtc
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Yosys witness file: engine_0/trace11.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Checking cover reachability in step 1..
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Reached cover statement at cov_optest2 in step 1.
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to VCD file: engine_0/trace12.vcd
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Verilog testbench: engine_0/trace12_tb.v
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to constraints file: engine_0/trace12.smtc
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:03  Writing trace to Yosys witness file: engine_0/trace12.yw
-SBY 20:58:29 [alu/FPV_cvr] engine_0: ##   0:00:04  Status: passed
-SBY 20:58:29 [alu/FPV_cvr] engine_0: finished (returncode=0)
-SBY 20:58:29 [alu/FPV_cvr] engine_0: Status returned by engine: pass
-SBY 20:58:29 [alu/FPV_cvr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:14 (14)
-SBY 20:58:29 [alu/FPV_cvr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:20 (20)
-SBY 20:58:29 [alu/FPV_cvr] summary: engine_0 (smtbmc z3) returned pass
-SBY 20:58:29 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace0.vcd
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cov_carry_true at alu.sv:369.4-369.34 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cov_op1_zero at alu.sv:355.4-355.38 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cov_op2_one at alu.sv:358.4-358.38 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cov_opcode_one at alu.sv:353.4-353.43 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cov_result_zero at alu.sv:377.4-377.44 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary:   and 2 further cover statements
-SBY 20:58:29 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace1.vcd
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cov_carry_false at alu.sv:370.4-370.35 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cov_op1_one at alu.sv:356.4-356.38 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cov_zero_true at alu.sv:373.4-373.32 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace10.vcd
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cover_res6 at alu.sv:400.6-400.50 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace11.vcd
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cover_res2 at alu.sv:388.6-388.51 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace12.vcd
-SBY 20:58:29 [alu/FPV_cvr] summary:   reached cover statement alu.cov_optest2 at alu.sv:363.4-363.56 in step 1
-SBY 20:58:29 [alu/FPV_cvr] summary: and 8 further traces
-SBY 20:58:29 [alu/FPV_cvr] summary: see alu/FPV_cvr/PASS for a complete summary
-SBY 20:58:29 [alu/FPV_cvr] DONE (PASS, rc=0)
+SBY 19:49:23 [alu/FPV_cvr] Removing directory '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/alu/FPV_cvr'.
+SBY 19:49:23 [alu/FPV_cvr] Copy '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/alu/alu.sv' to '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/alu/FPV_cvr/src/alu.sv'.
+SBY 19:49:23 [alu/FPV_cvr] engine_0: smtbmc z3
+SBY 19:49:23 [alu/FPV_cvr] base: starting process "cd alu/FPV_cvr/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 19:49:23 [alu/FPV_cvr] base: Warning: reg '\op_add' is assigned in a continuous assignment at alu.sv:260.10-260.36.
+SBY 19:49:23 [alu/FPV_cvr] base: Warning: reg '\op_sub' is assigned in a continuous assignment at alu.sv:261.10-261.36.
+SBY 19:49:23 [alu/FPV_cvr] base: Warning: reg '\op_incr' is assigned in a continuous assignment at alu.sv:262.10-262.31.
+SBY 19:49:23 [alu/FPV_cvr] base: Warning: reg '\op_decr' is assigned in a continuous assignment at alu.sv:263.10-263.31.
+SBY 19:49:23 [alu/FPV_cvr] base: Warning: reg '\op_and' is assigned in a continuous assignment at alu.sv:264.10-264.35.
+SBY 19:49:23 [alu/FPV_cvr] base: Warning: reg '\op_or' is assigned in a continuous assignment at alu.sv:265.10-265.35.
+SBY 19:49:23 [alu/FPV_cvr] base: Warning: reg '\op_nand' is assigned in a continuous assignment at alu.sv:266.10-266.36.
+SBY 19:49:23 [alu/FPV_cvr] base: Warning: reg '\op_xor' is assigned in a continuous assignment at alu.sv:267.10-267.35.
+SBY 19:49:23 [alu/FPV_cvr] base: alu.sv:269: Warning: Identifier `\f_carry' is implicitly declared.
+SBY 19:49:23 [alu/FPV_cvr] base: alu.sv:274: Warning: Identifier `\f_zero' is implicitly declared.
+SBY 19:49:25 [alu/FPV_cvr] base: finished (returncode=0)
+SBY 19:49:25 [alu/FPV_cvr] prep: starting process "cd alu/FPV_cvr/model; yosys -ql design_prep.log design_prep.ys"
+SBY 19:49:25 [alu/FPV_cvr] prep: finished (returncode=0)
+SBY 19:49:25 [alu/FPV_cvr] smt2: starting process "cd alu/FPV_cvr/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 19:49:25 [alu/FPV_cvr] smt2: finished (returncode=0)
+SBY 19:49:25 [alu/FPV_cvr] engine_0: starting process "cd alu/FPV_cvr; yosys-smtbmc -s z3 --presat -c --noprogress -t 20  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Solver: z3
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_res7 in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_zero_false in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_result_zero in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_opcode_one in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_op2_one in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_op1_zero in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_carry_true in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_zero_true in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_op1_one in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_carry_false in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_op2_zero in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace2.vcd
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace2_tb.v
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace2.smtc
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace2.yw
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_result_one in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace3.vcd
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace3_tb.v
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace3.smtc
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace3.yw
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_res4 in step 1.
+SBY 19:49:25 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace4.vcd
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_res0 in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_optest4 in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_opcode_zero in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace5.yw
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cov_optest1 in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace6.vcd
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace6.smtc
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace6.yw
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_res3 in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace7.vcd
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace7.smtc
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace7.yw
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_res1 in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace8.vcd
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace8_tb.v
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace8.smtc
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace8.yw
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_res5 in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace9.vcd
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace9_tb.v
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace9.smtc
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace9.yw
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_res6 in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace10.vcd
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace10_tb.v
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace10.smtc
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace10.yw
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Reached cover statement at cover_res2 in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace11.vcd
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace11_tb.v
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace11.smtc
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace11.yw
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Checking cover reachability in step 1..
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Reached cover statement at cov_optest2 in step 1.
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to VCD file: engine_0/trace12.vcd
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Verilog testbench: engine_0/trace12_tb.v
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to constraints file: engine_0/trace12.smtc
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Writing trace to Yosys witness file: engine_0/trace12.yw
+SBY 19:49:26 [alu/FPV_cvr] engine_0: ##   0:00:01  Status: passed
+SBY 19:49:26 [alu/FPV_cvr] engine_0: finished (returncode=0)
+SBY 19:49:26 [alu/FPV_cvr] engine_0: Status returned by engine: pass
+SBY 19:49:26 [alu/FPV_cvr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:03 (3)
+SBY 19:49:26 [alu/FPV_cvr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:05 (5)
+SBY 19:49:26 [alu/FPV_cvr] summary: engine_0 (smtbmc z3) returned pass
+SBY 19:49:26 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace0.vcd
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cov_carry_true at alu.sv:358.4-358.34 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cov_op1_zero at alu.sv:344.4-344.38 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cov_op2_one at alu.sv:347.4-347.38 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cov_opcode_one at alu.sv:342.4-342.43 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cov_result_zero at alu.sv:366.4-366.44 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary:   and 2 further cover statements
+SBY 19:49:26 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace1.vcd
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cov_carry_false at alu.sv:359.4-359.35 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cov_op1_one at alu.sv:345.4-345.38 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cov_zero_true at alu.sv:362.4-362.32 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace10.vcd
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cover_res6 at alu.sv:389.6-389.50 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace11.vcd
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cover_res2 at alu.sv:377.6-377.51 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary: cover trace: alu/FPV_cvr/engine_0/trace12.vcd
+SBY 19:49:26 [alu/FPV_cvr] summary:   reached cover statement alu.cov_optest2 at alu.sv:352.4-352.56 in step 1
+SBY 19:49:26 [alu/FPV_cvr] summary: and 8 further traces
+SBY 19:49:26 [alu/FPV_cvr] summary: see alu/FPV_cvr/PASS for a complete summary
+SBY 19:49:26 [alu/FPV_cvr] DONE (PASS, rc=0)

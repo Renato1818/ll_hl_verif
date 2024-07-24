@@ -102,6 +102,6 @@ Finding unused cells or wires in module \half_adder..
 
 10.3. Executing BWMUXMAP pass.
 
-End of script. Logfile hash: 16fcc3b221, CPU: user 0.03s system 0.01s, MEM: 14.96 MB peak
+End of script. Logfile hash: 16fcc3b221, CPU: user 0.01s system 0.02s, MEM: 15.11 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 34% 4x write_btor (0 sec), 15% 1x opt_expr (0 sec), ...
+Time spent: 22% 4x write_btor (0 sec), 17% 1x opt_expr (0 sec), ...

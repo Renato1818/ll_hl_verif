@@ -3,78 +3,78 @@ autoidx 153
 attribute \keep 1
 attribute \hdlname "\\half_adder"
 attribute \top 1
-attribute \src "half_adder.sv:1.1-99.10"
+attribute \src "half_adder.sv:1.1-93.10"
 module \half_adder
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:76$1_CHECK[0:0]$28
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:76$1_EN[0:0]$29
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:77$2_CHECK[0:0]$30
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:80$3_CHECK[0:0]$32
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:80$3_EN[0:0]$33
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:81$4_CHECK[0:0]$34
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:87$6_CHECK[0:0]$38
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:90$8_CHECK[0:0]$42
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:92$9_CHECK[0:0]$44
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:93$10_CHECK[0:0]$46
-  attribute \src "half_adder.sv:74.9-96.12"
-  wire $0$formal$half_adder.sv:94$11_CHECK[0:0]$48
-  attribute \src "half_adder.sv:60.21-60.34"
-  wire $and$half_adder.sv:60$23_Y
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:70$1_CHECK[0:0]$28
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:70$1_EN[0:0]$29
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:71$2_CHECK[0:0]$30
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:74$3_CHECK[0:0]$32
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:74$3_EN[0:0]$33
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:75$4_CHECK[0:0]$34
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:81$6_CHECK[0:0]$38
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:84$8_CHECK[0:0]$42
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:86$9_CHECK[0:0]$44
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:87$10_CHECK[0:0]$46
+  attribute \src "half_adder.sv:68.9-90.12"
+  wire $0$formal$half_adder.sv:88$11_CHECK[0:0]$48
+  attribute \src "half_adder.sv:54.21-54.34"
+  wire $and$half_adder.sv:54$23_Y
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:76$1_CHECK
+  wire $formal$half_adder.sv:70$1_CHECK
   attribute \init 1'0
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:76$1_EN
+  wire $formal$half_adder.sv:70$1_EN
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:77$2_CHECK
+  wire $formal$half_adder.sv:71$2_CHECK
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:80$3_CHECK
+  wire $formal$half_adder.sv:74$3_CHECK
   attribute \init 1'0
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:80$3_EN
+  wire $formal$half_adder.sv:74$3_EN
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:81$4_CHECK
+  wire $formal$half_adder.sv:75$4_CHECK
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:86$5_CHECK
+  wire $formal$half_adder.sv:80$5_CHECK
   attribute \init 1'0
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:86$5_EN
+  wire $formal$half_adder.sv:80$5_EN
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:87$6_CHECK
+  wire $formal$half_adder.sv:81$6_CHECK
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:89$7_CHECK
+  wire $formal$half_adder.sv:83$7_CHECK
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:90$8_CHECK
+  wire $formal$half_adder.sv:84$8_CHECK
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:92$9_CHECK
+  wire $formal$half_adder.sv:86$9_CHECK
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:93$10_CHECK
+  wire $formal$half_adder.sv:87$10_CHECK
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:94$11_CHECK
+  wire $formal$half_adder.sv:88$11_CHECK
   attribute \src "half_adder.sv:0.0-0.0"
-  wire $formal$half_adder.sv:95$12_CHECK
-  attribute \src "half_adder.sv:80.43-80.49"
-  wire $logic_not$half_adder.sv:80$55_Y
-  attribute \src "half_adder.sv:81.44-81.52"
-  wire $logic_not$half_adder.sv:81$56_Y
-  attribute \src "half_adder.sv:92.32-92.34"
-  wire $logic_not$half_adder.sv:92$59_Y
-  attribute \src "half_adder.sv:92.38-92.40"
-  wire $logic_not$half_adder.sv:92$60_Y
+  wire $formal$half_adder.sv:89$12_CHECK
+  attribute \src "half_adder.sv:74.43-74.49"
+  wire $logic_not$half_adder.sv:74$55_Y
+  attribute \src "half_adder.sv:75.44-75.52"
+  wire $logic_not$half_adder.sv:75$56_Y
+  attribute \src "half_adder.sv:86.32-86.34"
+  wire $logic_not$half_adder.sv:86$59_Y
+  attribute \src "half_adder.sv:86.38-86.40"
+  wire $logic_not$half_adder.sv:86$60_Y
   wire $procmux$104_Y
   wire $procmux$109_Y
   wire $procmux$119_Y
-  attribute \src "half_adder.sv:59.19-59.32"
-  wire $xor$half_adder.sv:59$21_Y
+  attribute \src "half_adder.sv:53.19-53.32"
+  wire $xor$half_adder.sv:53$21_Y
   attribute \src "half_adder.sv:4.17-4.18"
   wire input 3 \a
   attribute \src "half_adder.sv:5.17-5.18"
@@ -110,8 +110,8 @@ module \half_adder
   wire \sum_next
   attribute \src "half_adder.sv:12.6-12.13"
   wire \sum_out
-  attribute \src "half_adder.sv:60.21-60.34"
-  cell $and $and$half_adder.sv:60$23
+  attribute \src "half_adder.sv:54.21-54.34"
+  cell $and $and$half_adder.sv:54$23
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -119,7 +119,7 @@ module \half_adder
     parameter \Y_WIDTH 1
     connect \A \f_a
     connect \B \f_b
-    connect \Y $and$half_adder.sv:60$23_Y
+    connect \Y $and$half_adder.sv:54$23_Y
   end
   attribute \src "half_adder.sv:22.14-22.20"
   cell $logic_and $logic_and$half_adder.sv:22$14
@@ -143,38 +143,38 @@ module \half_adder
     connect \B \prc_half_adder_comb.s_or
     connect \Y \sum_next
   end
-  attribute \src "half_adder.sv:92.32-92.40"
-  cell $logic_and $logic_and$half_adder.sv:92$61
+  attribute \src "half_adder.sv:86.32-86.40"
+  cell $logic_and $logic_and$half_adder.sv:86$61
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_not$half_adder.sv:92$59_Y
-    connect \B $logic_not$half_adder.sv:92$60_Y
-    connect \Y $0$formal$half_adder.sv:92$9_CHECK[0:0]$44
+    connect \A $logic_not$half_adder.sv:86$59_Y
+    connect \B $logic_not$half_adder.sv:86$60_Y
+    connect \Y $0$formal$half_adder.sv:86$9_CHECK[0:0]$44
   end
-  attribute \src "half_adder.sv:93.32-93.40"
-  cell $logic_and $logic_and$half_adder.sv:93$63
+  attribute \src "half_adder.sv:87.32-87.40"
+  cell $logic_and $logic_and$half_adder.sv:87$63
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_not$half_adder.sv:92$59_Y
+    connect \A $logic_not$half_adder.sv:86$59_Y
     connect \B \b
-    connect \Y $0$formal$half_adder.sv:93$10_CHECK[0:0]$46
+    connect \Y $0$formal$half_adder.sv:87$10_CHECK[0:0]$46
   end
-  attribute \src "half_adder.sv:94.33-94.40"
-  cell $logic_and $logic_and$half_adder.sv:94$65
+  attribute \src "half_adder.sv:88.33-88.40"
+  cell $logic_and $logic_and$half_adder.sv:88$65
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \a
-    connect \B $logic_not$half_adder.sv:92$60_Y
-    connect \Y $0$formal$half_adder.sv:94$11_CHECK[0:0]$48
+    connect \B $logic_not$half_adder.sv:86$60_Y
+    connect \Y $0$formal$half_adder.sv:88$11_CHECK[0:0]$48
   end
   attribute \src "half_adder.sv:22.12-22.21"
   cell $logic_not $logic_not$half_adder.sv:22$15
@@ -184,53 +184,53 @@ module \half_adder
     connect \A \carry_next
     connect \Y \prc_half_adder_comb.s_nand
   end
-  attribute \src "half_adder.sv:76.43-76.47"
-  cell $logic_not $logic_not$half_adder.sv:76$53
+  attribute \src "half_adder.sv:70.43-70.47"
+  cell $logic_not $logic_not$half_adder.sv:70$53
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \sum_out
-    connect \Y $0$formal$half_adder.sv:87$6_CHECK[0:0]$38
+    connect \Y $0$formal$half_adder.sv:81$6_CHECK[0:0]$38
   end
-  attribute \src "half_adder.sv:77.45-77.51"
-  cell $logic_not $logic_not$half_adder.sv:77$54
+  attribute \src "half_adder.sv:71.45-71.51"
+  cell $logic_not $logic_not$half_adder.sv:71$54
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \carry_out
-    connect \Y $0$formal$half_adder.sv:90$8_CHECK[0:0]$42
+    connect \Y $0$formal$half_adder.sv:84$8_CHECK[0:0]$42
   end
-  attribute \src "half_adder.sv:80.43-80.49"
-  cell $logic_not $logic_not$half_adder.sv:80$55
+  attribute \src "half_adder.sv:74.43-74.49"
+  cell $logic_not $logic_not$half_adder.sv:74$55
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \f_sum
-    connect \Y $logic_not$half_adder.sv:80$55_Y
+    connect \Y $logic_not$half_adder.sv:74$55_Y
   end
-  attribute \src "half_adder.sv:81.44-81.52"
-  cell $logic_not $logic_not$half_adder.sv:81$56
+  attribute \src "half_adder.sv:75.44-75.52"
+  cell $logic_not $logic_not$half_adder.sv:75$56
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \f_carry
-    connect \Y $logic_not$half_adder.sv:81$56_Y
+    connect \Y $logic_not$half_adder.sv:75$56_Y
   end
-  attribute \src "half_adder.sv:92.32-92.34"
-  cell $logic_not $logic_not$half_adder.sv:92$59
+  attribute \src "half_adder.sv:86.32-86.34"
+  cell $logic_not $logic_not$half_adder.sv:86$59
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \a
-    connect \Y $logic_not$half_adder.sv:92$59_Y
+    connect \Y $logic_not$half_adder.sv:86$59_Y
   end
-  attribute \src "half_adder.sv:92.38-92.40"
-  cell $logic_not $logic_not$half_adder.sv:92$60
+  attribute \src "half_adder.sv:86.38-86.40"
+  cell $logic_not $logic_not$half_adder.sv:86$60
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \b
-    connect \Y $logic_not$half_adder.sv:92$60_Y
+    connect \Y $logic_not$half_adder.sv:86$60_Y
   end
   attribute \src "half_adder.sv:23.10-23.16"
   cell $logic_or $logic_or$half_adder.sv:23$16
@@ -243,127 +243,127 @@ module \half_adder
     connect \B \b
     connect \Y \prc_half_adder_comb.s_or
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$124
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:76$1_CHECK[0:0]$28
-    connect \Q $formal$half_adder.sv:76$1_CHECK
+    connect \D $0$formal$half_adder.sv:70$1_CHECK[0:0]$28
+    connect \Q $formal$half_adder.sv:70$1_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$125
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:76$1_EN[0:0]$29
-    connect \Q $formal$half_adder.sv:76$1_EN
+    connect \D $0$formal$half_adder.sv:70$1_EN[0:0]$29
+    connect \Q $formal$half_adder.sv:70$1_EN
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$126
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:77$2_CHECK[0:0]$30
-    connect \Q $formal$half_adder.sv:77$2_CHECK
+    connect \D $0$formal$half_adder.sv:71$2_CHECK[0:0]$30
+    connect \Q $formal$half_adder.sv:71$2_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$128
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:80$3_CHECK[0:0]$32
-    connect \Q $formal$half_adder.sv:80$3_CHECK
+    connect \D $0$formal$half_adder.sv:74$3_CHECK[0:0]$32
+    connect \Q $formal$half_adder.sv:74$3_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$129
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:80$3_EN[0:0]$33
-    connect \Q $formal$half_adder.sv:80$3_EN
+    connect \D $0$formal$half_adder.sv:74$3_EN[0:0]$33
+    connect \Q $formal$half_adder.sv:74$3_EN
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$130
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:81$4_CHECK[0:0]$34
-    connect \Q $formal$half_adder.sv:81$4_CHECK
+    connect \D $0$formal$half_adder.sv:75$4_CHECK[0:0]$34
+    connect \Q $formal$half_adder.sv:75$4_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$132
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D \sum_out
-    connect \Q $formal$half_adder.sv:86$5_CHECK
+    connect \Q $formal$half_adder.sv:80$5_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$133
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D 1'1
-    connect \Q $formal$half_adder.sv:86$5_EN
+    connect \Q $formal$half_adder.sv:80$5_EN
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$134
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:87$6_CHECK[0:0]$38
-    connect \Q $formal$half_adder.sv:87$6_CHECK
+    connect \D $0$formal$half_adder.sv:81$6_CHECK[0:0]$38
+    connect \Q $formal$half_adder.sv:81$6_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$136
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D \carry_out
-    connect \Q $formal$half_adder.sv:89$7_CHECK
+    connect \Q $formal$half_adder.sv:83$7_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$138
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:90$8_CHECK[0:0]$42
-    connect \Q $formal$half_adder.sv:90$8_CHECK
+    connect \D $0$formal$half_adder.sv:84$8_CHECK[0:0]$42
+    connect \Q $formal$half_adder.sv:84$8_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$140
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:92$9_CHECK[0:0]$44
-    connect \Q $formal$half_adder.sv:92$9_CHECK
+    connect \D $0$formal$half_adder.sv:86$9_CHECK[0:0]$44
+    connect \Q $formal$half_adder.sv:86$9_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$142
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:93$10_CHECK[0:0]$46
-    connect \Q $formal$half_adder.sv:93$10_CHECK
+    connect \D $0$formal$half_adder.sv:87$10_CHECK[0:0]$46
+    connect \Q $formal$half_adder.sv:87$10_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$144
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$half_adder.sv:94$11_CHECK[0:0]$48
-    connect \Q $formal$half_adder.sv:94$11_CHECK
+    connect \D $0$formal$half_adder.sv:88$11_CHECK[0:0]$48
+    connect \Q $formal$half_adder.sv:88$11_CHECK
   end
-  attribute \src "half_adder.sv:74.9-96.12"
+  attribute \src "half_adder.sv:68.9-90.12"
   cell $dff $procdff$146
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D \carry_next
-    connect \Q $formal$half_adder.sv:95$12_CHECK
+    connect \Q $formal$half_adder.sv:89$12_CHECK
   end
-  attribute \src "half_adder.sv:62.3-72.6"
+  attribute \src "half_adder.sv:56.3-66.6"
   cell $adff $procdff$148
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 1'0
@@ -374,7 +374,7 @@ module \half_adder
     connect \D \a
     connect \Q \f_a
   end
-  attribute \src "half_adder.sv:62.3-72.6"
+  attribute \src "half_adder.sv:56.3-66.6"
   cell $adff $procdff$149
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 1'0
@@ -385,7 +385,7 @@ module \half_adder
     connect \D \b
     connect \Q \f_b
   end
-  attribute \src "half_adder.sv:62.3-72.6"
+  attribute \src "half_adder.sv:56.3-66.6"
   cell $adff $procdff$150
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 1'0
@@ -421,15 +421,15 @@ module \half_adder
     connect \Q \carry_out
   end
   attribute \full_case 1
-  attribute \src "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+  attribute \src "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
   cell $mux $procmux$102
     parameter \WIDTH 1
-    connect \A $0$formal$half_adder.sv:90$8_CHECK[0:0]$42
+    connect \A $0$formal$half_adder.sv:84$8_CHECK[0:0]$42
     connect \B 1'x
     connect \S \rstn
-    connect \Y $0$formal$half_adder.sv:77$2_CHECK[0:0]$30
+    connect \Y $0$formal$half_adder.sv:71$2_CHECK[0:0]$30
   end
-  attribute \src "half_adder.sv:79.9-79.21|half_adder.sv:79.5-82.8"
+  attribute \src "half_adder.sv:73.9-73.21|half_adder.sv:73.5-76.8"
   cell $mux $procmux$104
     parameter \WIDTH 1
     connect \A 1'0
@@ -438,68 +438,68 @@ module \half_adder
     connect \Y $procmux$104_Y
   end
   attribute \full_case 1
-  attribute \src "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+  attribute \src "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
   cell $mux $procmux$107
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$104_Y
     connect \S \rstn
-    connect \Y $0$formal$half_adder.sv:80$3_EN[0:0]$33
+    connect \Y $0$formal$half_adder.sv:74$3_EN[0:0]$33
   end
-  attribute \src "half_adder.sv:79.9-79.21|half_adder.sv:79.5-82.8"
+  attribute \src "half_adder.sv:73.9-73.21|half_adder.sv:73.5-76.8"
   cell $mux $procmux$109
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $logic_not$half_adder.sv:80$55_Y
+    connect \B $logic_not$half_adder.sv:74$55_Y
     connect \S \f_past_valid
     connect \Y $procmux$109_Y
   end
   attribute \full_case 1
-  attribute \src "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+  attribute \src "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
   cell $mux $procmux$112
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$109_Y
     connect \S \rstn
-    connect \Y $0$formal$half_adder.sv:80$3_CHECK[0:0]$32
+    connect \Y $0$formal$half_adder.sv:74$3_CHECK[0:0]$32
   end
-  attribute \src "half_adder.sv:79.9-79.21|half_adder.sv:79.5-82.8"
+  attribute \src "half_adder.sv:73.9-73.21|half_adder.sv:73.5-76.8"
   cell $mux $procmux$119
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $logic_not$half_adder.sv:81$56_Y
+    connect \B $logic_not$half_adder.sv:75$56_Y
     connect \S \f_past_valid
     connect \Y $procmux$119_Y
   end
   attribute \full_case 1
-  attribute \src "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+  attribute \src "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
   cell $mux $procmux$122
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$119_Y
     connect \S \rstn
-    connect \Y $0$formal$half_adder.sv:81$4_CHECK[0:0]$34
+    connect \Y $0$formal$half_adder.sv:75$4_CHECK[0:0]$34
   end
   attribute \full_case 1
-  attribute \src "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+  attribute \src "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
   cell $mux $procmux$93
     parameter \WIDTH 1
     connect \A 1'1
     connect \B 1'0
     connect \S \rstn
-    connect \Y $0$formal$half_adder.sv:76$1_EN[0:0]$29
+    connect \Y $0$formal$half_adder.sv:70$1_EN[0:0]$29
   end
   attribute \full_case 1
-  attribute \src "half_adder.sv:75.17-75.22|half_adder.sv:75.13-83.16"
+  attribute \src "half_adder.sv:69.17-69.22|half_adder.sv:69.13-77.16"
   cell $mux $procmux$96
     parameter \WIDTH 1
-    connect \A $0$formal$half_adder.sv:87$6_CHECK[0:0]$38
+    connect \A $0$formal$half_adder.sv:81$6_CHECK[0:0]$38
     connect \B 1'x
     connect \S \rstn
-    connect \Y $0$formal$half_adder.sv:76$1_CHECK[0:0]$28
+    connect \Y $0$formal$half_adder.sv:70$1_CHECK[0:0]$28
   end
-  attribute \src "half_adder.sv:59.19-59.32"
-  cell $xor $xor$half_adder.sv:59$21
+  attribute \src "half_adder.sv:53.19-53.32"
+  cell $xor $xor$half_adder.sv:53$21
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -507,89 +507,89 @@ module \half_adder
     parameter \Y_WIDTH 1
     connect \A \f_a
     connect \B \f_b
-    connect \Y $xor$half_adder.sv:59$21_Y
+    connect \Y $xor$half_adder.sv:53$21_Y
   end
-  attribute \src "half_adder.sv:59.18-59.39"
-  cell $xor $xor$half_adder.sv:59$22
+  attribute \src "half_adder.sv:53.18-53.39"
+  cell $xor $xor$half_adder.sv:53$22
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $xor$half_adder.sv:59$21_Y
+    connect \A $xor$half_adder.sv:53$21_Y
     connect \B \sum_out
     connect \Y \f_sum
   end
-  attribute \src "half_adder.sv:60.20-60.43"
-  cell $xor $xor$half_adder.sv:60$24
+  attribute \src "half_adder.sv:54.20-54.43"
+  cell $xor $xor$half_adder.sv:54$24
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $and$half_adder.sv:60$23_Y
+    connect \A $and$half_adder.sv:54$23_Y
     connect \B \carry_out
     connect \Y \f_carry
   end
-  attribute \src "half_adder.sv:81.21-81.53"
+  attribute \src "half_adder.sv:75.21-75.53"
   cell $assert \assert_carry
-    connect \A $formal$half_adder.sv:81$4_CHECK
-    connect \EN $formal$half_adder.sv:80$3_EN
+    connect \A $formal$half_adder.sv:75$4_CHECK
+    connect \EN $formal$half_adder.sv:74$3_EN
   end
-  attribute \src "half_adder.sv:77.17-77.52"
+  attribute \src "half_adder.sv:71.17-71.52"
   cell $assert \assert_carry_reset
-    connect \A $formal$half_adder.sv:77$2_CHECK
-    connect \EN $formal$half_adder.sv:76$1_EN
+    connect \A $formal$half_adder.sv:71$2_CHECK
+    connect \EN $formal$half_adder.sv:70$1_EN
   end
-  attribute \src "half_adder.sv:80.21-80.51"
+  attribute \src "half_adder.sv:74.21-74.51"
   cell $assert \assert_sum_
-    connect \A $formal$half_adder.sv:80$3_CHECK
-    connect \EN $formal$half_adder.sv:80$3_EN
+    connect \A $formal$half_adder.sv:74$3_CHECK
+    connect \EN $formal$half_adder.sv:74$3_EN
   end
-  attribute \src "half_adder.sv:76.17-76.48"
+  attribute \src "half_adder.sv:70.17-70.48"
   cell $assert \assert_sum_reset
-    connect \A $formal$half_adder.sv:76$1_CHECK
-    connect \EN $formal$half_adder.sv:76$1_EN
+    connect \A $formal$half_adder.sv:70$1_CHECK
+    connect \EN $formal$half_adder.sv:70$1_EN
   end
-  attribute \src "half_adder.sv:90.13-90.44"
+  attribute \src "half_adder.sv:84.13-84.44"
   cell $cover \cov_carry_false
-    connect \A $formal$half_adder.sv:90$8_CHECK
-    connect \EN $formal$half_adder.sv:86$5_EN
+    connect \A $formal$half_adder.sv:84$8_CHECK
+    connect \EN $formal$half_adder.sv:80$5_EN
   end
-  attribute \src "half_adder.sv:89.13-89.43"
+  attribute \src "half_adder.sv:83.13-83.43"
   cell $cover \cov_carry_true
-    connect \A $formal$half_adder.sv:89$7_CHECK
-    connect \EN $formal$half_adder.sv:86$5_EN
+    connect \A $formal$half_adder.sv:83$7_CHECK
+    connect \EN $formal$half_adder.sv:80$5_EN
   end
-  attribute \src "half_adder.sv:87.13-87.40"
+  attribute \src "half_adder.sv:81.13-81.40"
   cell $cover \cov_sum_false
-    connect \A $formal$half_adder.sv:87$6_CHECK
-    connect \EN $formal$half_adder.sv:86$5_EN
+    connect \A $formal$half_adder.sv:81$6_CHECK
+    connect \EN $formal$half_adder.sv:80$5_EN
   end
-  attribute \src "half_adder.sv:86.13-86.39"
+  attribute \src "half_adder.sv:80.13-80.39"
   cell $cover \cov_sum_true
-    connect \A $formal$half_adder.sv:86$5_CHECK
-    connect \EN $formal$half_adder.sv:86$5_EN
+    connect \A $formal$half_adder.sv:80$5_CHECK
+    connect \EN $formal$half_adder.sv:80$5_EN
   end
-  attribute \src "half_adder.sv:92.13-92.42"
+  attribute \src "half_adder.sv:86.13-86.42"
   cell $cover \cover_ab1
-    connect \A $formal$half_adder.sv:92$9_CHECK
-    connect \EN $formal$half_adder.sv:86$5_EN
+    connect \A $formal$half_adder.sv:86$9_CHECK
+    connect \EN $formal$half_adder.sv:80$5_EN
   end
-  attribute \src "half_adder.sv:93.13-93.42"
+  attribute \src "half_adder.sv:87.13-87.42"
   cell $cover \cover_ab2
-    connect \A $formal$half_adder.sv:93$10_CHECK
-    connect \EN $formal$half_adder.sv:86$5_EN
+    connect \A $formal$half_adder.sv:87$10_CHECK
+    connect \EN $formal$half_adder.sv:80$5_EN
   end
-  attribute \src "half_adder.sv:94.13-94.42"
+  attribute \src "half_adder.sv:88.13-88.42"
   cell $cover \cover_ab3
-    connect \A $formal$half_adder.sv:94$11_CHECK
-    connect \EN $formal$half_adder.sv:86$5_EN
+    connect \A $formal$half_adder.sv:88$11_CHECK
+    connect \EN $formal$half_adder.sv:80$5_EN
   end
-  attribute \src "half_adder.sv:95.13-95.42"
+  attribute \src "half_adder.sv:89.13-89.42"
   cell $cover \cover_ab4
-    connect \A $formal$half_adder.sv:95$12_CHECK
-    connect \EN $formal$half_adder.sv:86$5_EN
+    connect \A $formal$half_adder.sv:89$12_CHECK
+    connect \EN $formal$half_adder.sv:80$5_EN
   end
   connect \carry \carry_out
   connect \sum \sum_out

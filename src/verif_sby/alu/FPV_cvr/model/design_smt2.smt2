@@ -2,7 +2,7 @@
 ; yosys-smt2-module alu
 (declare-sort |alu_s| 0)
 (declare-fun |alu_is| (|alu_s|) Bool)
-; yosys-smt2-anyinit alu#0 1 alu.sv:233.2-243.5
+; yosys-smt2-anyinit alu#0 1 alu.sv:229.2-239.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4518"], "smtname": 0, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#0| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4518
 (declare-fun |alu#1| (|alu_s|) (_ BitVec 1)) ; \rstn
@@ -18,101 +18,101 @@
 (declare-fun |alu#3| (|alu_s|) (_ BitVec 5)) ; \_witness_.anyseq_auto_setundef_cc_533_execute_4633
 (declare-fun |alu#4| (|alu_s|) (_ BitVec 1)) ; \OP1 [0]
 (declare-fun |alu#5| (|alu_s|) (_ BitVec 1)) ; \OP2 [0]
-(define-fun |alu#6| ((state |alu_s|)) (_ BitVec 2) (bvadd (concat #b0 (|alu#4| state)) (concat #b0 (|alu#5| state)))) ; $add$alu.sv:112$712_Y
-(define-fun |alu#7| ((state |alu_s|)) Bool (= (|alu#6| state) #b01)) ; $eq$alu.sv:165$889_Y
-(define-fun |alu#8| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#7| state) #b1 #b0)) ; $eq$alu.sv:65$895_Y
+(define-fun |alu#6| ((state |alu_s|)) (_ BitVec 2) (bvadd (concat #b0 (|alu#4| state)) (concat #b0 (|alu#5| state)))) ; $add$alu.sv:108$712_Y
+(define-fun |alu#7| ((state |alu_s|)) Bool (= (|alu#6| state) #b01)) ; $eq$alu.sv:161$889_Y
+(define-fun |alu#8| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#7| state) #b1 #b0)) ; $eq$alu.sv:61$895_Y
 (define-fun |alu#9| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#8| state)) #b1) #b1 #b0)) ; $65\res[4:0]
 (define-fun |alu#10| ((state |alu_s|)) (_ BitVec 5) (bvadd (concat #b0000 (|alu#9| state)) #b00010)) ; $71\res[4:0]
 (declare-fun |alu#11| (|alu_s|) (_ BitVec 1)) ; \OP1 [1]
 (declare-fun |alu#12| (|alu_s|) (_ BitVec 1)) ; \OP2 [1]
-(define-fun |alu#13| ((state |alu_s|)) (_ BitVec 2) (bvadd (concat #b0 (|alu#11| state)) (concat #b0 (|alu#12| state)))) ; $add$alu.sv:112$730_Y
-(define-fun |alu#14| ((state |alu_s|)) Bool (= (|alu#13| state) #b01)) ; $eq$alu.sv:165$907_Y
-(define-fun |alu#15| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#14| state) #b1 #b0)) ; $eq$alu.sv:65$915_Y
+(define-fun |alu#13| ((state |alu_s|)) (_ BitVec 2) (bvadd (concat #b0 (|alu#11| state)) (concat #b0 (|alu#12| state)))) ; $add$alu.sv:108$730_Y
+(define-fun |alu#14| ((state |alu_s|)) Bool (= (|alu#13| state) #b01)) ; $eq$alu.sv:161$907_Y
+(define-fun |alu#15| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#14| state) #b1 #b0)) ; $eq$alu.sv:61$915_Y
 (define-fun |alu#16| ((state |alu_s|)) (_ BitVec 5) (ite (= ((_ extract 0 0) (|alu#15| state)) #b1) (|alu#10| state) (concat #b0000 (|alu#9| state)))) ; $70\res[4:0]
 (define-fun |alu#17| ((state |alu_s|)) (_ BitVec 5) (bvadd (|alu#16| state) #b00100)) ; $76\res[4:0]
 (declare-fun |alu#18| (|alu_s|) (_ BitVec 1)) ; \OP1 [2]
 (declare-fun |alu#19| (|alu_s|) (_ BitVec 1)) ; \OP2 [2]
-(define-fun |alu#20| ((state |alu_s|)) (_ BitVec 2) (bvadd (concat #b0 (|alu#18| state)) (concat #b0 (|alu#19| state)))) ; $add$alu.sv:112$752_Y
-(define-fun |alu#21| ((state |alu_s|)) Bool (= (|alu#20| state) #b01)) ; $eq$alu.sv:165$929_Y
-(define-fun |alu#22| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#21| state) #b1 #b0)) ; $eq$alu.sv:65$939_Y
-(define-fun |alu#23| ((state |alu_s|)) Bool (= ((_ extract 2 2) (|alu#16| state)) (|alu#22| state))) ; $eq$alu.sv:61$938_Y
+(define-fun |alu#20| ((state |alu_s|)) (_ BitVec 2) (bvadd (concat #b0 (|alu#18| state)) (concat #b0 (|alu#19| state)))) ; $add$alu.sv:108$752_Y
+(define-fun |alu#21| ((state |alu_s|)) Bool (= (|alu#20| state) #b01)) ; $eq$alu.sv:161$929_Y
+(define-fun |alu#22| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#21| state) #b1 #b0)) ; $eq$alu.sv:61$939_Y
+(define-fun |alu#23| ((state |alu_s|)) Bool (= ((_ extract 2 2) (|alu#16| state)) (|alu#22| state))) ; $eq$alu.sv:57$938_Y
 (define-fun |alu#24| ((state |alu_s|)) (_ BitVec 5) (ite (|alu#23| state) (|alu#16| state) (|alu#17| state))) ; $75\res[4:0]
 (define-fun |alu#25| ((state |alu_s|)) (_ BitVec 5) (bvadd (|alu#24| state) #b01000)) ; $81\res[4:0]
 (declare-fun |alu#26| (|alu_s|) (_ BitVec 1)) ; \OP1 [3]
 (declare-fun |alu#27| (|alu_s|) (_ BitVec 1)) ; \OP2 [3]
-(define-fun |alu#28| ((state |alu_s|)) (_ BitVec 2) (bvadd (concat #b0 (|alu#26| state)) (concat #b0 (|alu#27| state)))) ; $add$alu.sv:112$778_Y
-(define-fun |alu#29| ((state |alu_s|)) Bool (= (|alu#28| state) #b01)) ; $eq$alu.sv:165$955_Y
-(define-fun |alu#30| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#29| state) #b1 #b0)) ; $eq$alu.sv:65$967_Y
-(define-fun |alu#31| ((state |alu_s|)) Bool (= ((_ extract 3 3) (|alu#24| state)) (|alu#30| state))) ; $eq$alu.sv:61$966_Y
+(define-fun |alu#28| ((state |alu_s|)) (_ BitVec 2) (bvadd (concat #b0 (|alu#26| state)) (concat #b0 (|alu#27| state)))) ; $add$alu.sv:108$778_Y
+(define-fun |alu#29| ((state |alu_s|)) Bool (= (|alu#28| state) #b01)) ; $eq$alu.sv:161$955_Y
+(define-fun |alu#30| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#29| state) #b1 #b0)) ; $eq$alu.sv:61$967_Y
+(define-fun |alu#31| ((state |alu_s|)) Bool (= ((_ extract 3 3) (|alu#24| state)) (|alu#30| state))) ; $eq$alu.sv:57$966_Y
 (define-fun |alu#32| ((state |alu_s|)) (_ BitVec 5) (ite (|alu#31| state) (|alu#24| state) (|alu#25| state))) ; $80\res[4:0]
-(define-fun |alu#33| ((state |alu_s|)) (_ BitVec 1) (bvmul (|alu#4| state) (|alu#5| state))) ; $eq$alu.sv:140$801_Y
+(define-fun |alu#33| ((state |alu_s|)) (_ BitVec 1) (bvmul (|alu#4| state) (|alu#5| state))) ; $eq$alu.sv:136$801_Y
 (define-fun |alu#34| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#33| state)) #b1) #b0 #b1)) ; $45\res[4:0]
 (define-fun |alu#35| ((state |alu_s|)) (_ BitVec 5) (bvadd (concat #b0000 (|alu#34| state)) #b00010)) ; $51\res[4:0]
-(define-fun |alu#36| ((state |alu_s|)) (_ BitVec 1) (bvmul (|alu#11| state) (|alu#12| state))) ; $eq$alu.sv:140$819_Y
+(define-fun |alu#36| ((state |alu_s|)) (_ BitVec 1) (bvmul (|alu#11| state) (|alu#12| state))) ; $eq$alu.sv:136$819_Y
 (define-fun |alu#37| ((state |alu_s|)) (_ BitVec 5) (ite (= ((_ extract 0 0) (|alu#36| state)) #b1) (concat #b0000 (|alu#34| state)) (|alu#35| state))) ; $50\res[4:0]
 (define-fun |alu#38| ((state |alu_s|)) (_ BitVec 5) (bvadd (|alu#37| state) #b00100)) ; $56\res[4:0]
-(define-fun |alu#39| ((state |alu_s|)) (_ BitVec 1) (bvmul (|alu#18| state) (|alu#19| state))) ; $eq$alu.sv:140$841_Y
-(define-fun |alu#40| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#39| state)) #b1) #b0 #b1)) ; $eq$alu.sv:65$851_Y
-(define-fun |alu#41| ((state |alu_s|)) Bool (= ((_ extract 2 2) (|alu#37| state)) (|alu#40| state))) ; $eq$alu.sv:61$850_Y
+(define-fun |alu#39| ((state |alu_s|)) (_ BitVec 1) (bvmul (|alu#18| state) (|alu#19| state))) ; $eq$alu.sv:136$841_Y
+(define-fun |alu#40| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#39| state)) #b1) #b0 #b1)) ; $eq$alu.sv:61$851_Y
+(define-fun |alu#41| ((state |alu_s|)) Bool (= ((_ extract 2 2) (|alu#37| state)) (|alu#40| state))) ; $eq$alu.sv:57$850_Y
 (define-fun |alu#42| ((state |alu_s|)) (_ BitVec 5) (ite (|alu#41| state) (|alu#37| state) (|alu#38| state))) ; $55\res[4:0]
 (define-fun |alu#43| ((state |alu_s|)) (_ BitVec 5) (bvadd (|alu#42| state) #b01000)) ; $61\res[4:0]
-(define-fun |alu#44| ((state |alu_s|)) (_ BitVec 1) (bvmul (|alu#26| state) (|alu#27| state))) ; $eq$alu.sv:140$867_Y
-(define-fun |alu#45| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#44| state)) #b1) #b0 #b1)) ; $eq$alu.sv:65$879_Y
-(define-fun |alu#46| ((state |alu_s|)) Bool (= ((_ extract 3 3) (|alu#42| state)) (|alu#45| state))) ; $eq$alu.sv:61$878_Y
+(define-fun |alu#44| ((state |alu_s|)) (_ BitVec 1) (bvmul (|alu#26| state) (|alu#27| state))) ; $eq$alu.sv:136$867_Y
+(define-fun |alu#45| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#44| state)) #b1) #b0 #b1)) ; $eq$alu.sv:61$879_Y
+(define-fun |alu#46| ((state |alu_s|)) Bool (= ((_ extract 3 3) (|alu#42| state)) (|alu#45| state))) ; $eq$alu.sv:57$878_Y
 (define-fun |alu#47| ((state |alu_s|)) (_ BitVec 5) (ite (|alu#46| state) (|alu#42| state) (|alu#43| state))) ; $60\res[4:0]
-(define-fun |alu#48| ((state |alu_s|)) Bool (bvugt (|alu#6| state) #b00)) ; $gt$alu.sv:114$713_Y
-(define-fun |alu#49| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#48| state) #b1 #b0)) ; $eq$alu.sv:65$719_Y
+(define-fun |alu#48| ((state |alu_s|)) Bool (bvugt (|alu#6| state) #b00)) ; $gt$alu.sv:110$713_Y
+(define-fun |alu#49| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#48| state) #b1 #b0)) ; $eq$alu.sv:61$719_Y
 (define-fun |alu#50| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#49| state)) #b1) #b1 #b0)) ; $25\res[4:0]
 (define-fun |alu#51| ((state |alu_s|)) (_ BitVec 5) (bvadd (concat #b0000 (|alu#50| state)) #b00010)) ; $31\res[4:0]
-(define-fun |alu#52| ((state |alu_s|)) Bool (bvugt (|alu#13| state) #b00)) ; $gt$alu.sv:114$731_Y
-(define-fun |alu#53| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#52| state) #b1 #b0)) ; $eq$alu.sv:65$739_Y
+(define-fun |alu#52| ((state |alu_s|)) Bool (bvugt (|alu#13| state) #b00)) ; $gt$alu.sv:110$731_Y
+(define-fun |alu#53| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#52| state) #b1 #b0)) ; $eq$alu.sv:61$739_Y
 (define-fun |alu#54| ((state |alu_s|)) (_ BitVec 5) (ite (= ((_ extract 0 0) (|alu#53| state)) #b1) (|alu#51| state) (concat #b0000 (|alu#50| state)))) ; $30\res[4:0]
 (define-fun |alu#55| ((state |alu_s|)) (_ BitVec 5) (bvadd (|alu#54| state) #b00100)) ; $36\res[4:0]
-(define-fun |alu#56| ((state |alu_s|)) Bool (bvugt (|alu#20| state) #b00)) ; $gt$alu.sv:114$753_Y
-(define-fun |alu#57| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#56| state) #b1 #b0)) ; $eq$alu.sv:65$763_Y
-(define-fun |alu#58| ((state |alu_s|)) Bool (= ((_ extract 2 2) (|alu#54| state)) (|alu#57| state))) ; $eq$alu.sv:61$762_Y
+(define-fun |alu#56| ((state |alu_s|)) Bool (bvugt (|alu#20| state) #b00)) ; $gt$alu.sv:110$753_Y
+(define-fun |alu#57| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#56| state) #b1 #b0)) ; $eq$alu.sv:61$763_Y
+(define-fun |alu#58| ((state |alu_s|)) Bool (= ((_ extract 2 2) (|alu#54| state)) (|alu#57| state))) ; $eq$alu.sv:57$762_Y
 (define-fun |alu#59| ((state |alu_s|)) (_ BitVec 5) (ite (|alu#58| state) (|alu#54| state) (|alu#55| state))) ; $35\res[4:0]
 (define-fun |alu#60| ((state |alu_s|)) (_ BitVec 5) (bvadd (|alu#59| state) #b01000)) ; $41\res[4:0]
-(define-fun |alu#61| ((state |alu_s|)) Bool (bvugt (|alu#28| state) #b00)) ; $gt$alu.sv:114$779_Y
-(define-fun |alu#62| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#61| state) #b1 #b0)) ; $eq$alu.sv:65$791_Y
-(define-fun |alu#63| ((state |alu_s|)) Bool (= ((_ extract 3 3) (|alu#59| state)) (|alu#62| state))) ; $eq$alu.sv:61$790_Y
+(define-fun |alu#61| ((state |alu_s|)) Bool (bvugt (|alu#28| state) #b00)) ; $gt$alu.sv:110$779_Y
+(define-fun |alu#62| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#61| state) #b1 #b0)) ; $eq$alu.sv:61$791_Y
+(define-fun |alu#63| ((state |alu_s|)) Bool (= ((_ extract 3 3) (|alu#59| state)) (|alu#62| state))) ; $eq$alu.sv:57$790_Y
 (define-fun |alu#64| ((state |alu_s|)) (_ BitVec 5) (ite (|alu#63| state) (|alu#59| state) (|alu#60| state))) ; $40\res[4:0]
 (define-fun |alu#65| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#33| state)) #b1) #b1 #b0)) ; $5\res[4:0]
 (define-fun |alu#66| ((state |alu_s|)) (_ BitVec 5) (bvadd (concat #b0000 (|alu#65| state)) #b00010)) ; $11\res[4:0]
 (define-fun |alu#67| ((state |alu_s|)) (_ BitVec 5) (ite (= ((_ extract 0 0) (|alu#36| state)) #b1) (|alu#66| state) (concat #b0000 (|alu#65| state)))) ; $10\res[4:0]
 (define-fun |alu#68| ((state |alu_s|)) (_ BitVec 5) (bvadd (|alu#67| state) #b00100)) ; $16\res[4:0]
-(define-fun |alu#69| ((state |alu_s|)) Bool (= ((_ extract 2 2) (|alu#67| state)) (|alu#39| state))) ; $eq$alu.sv:61$676_Y
+(define-fun |alu#69| ((state |alu_s|)) Bool (= ((_ extract 2 2) (|alu#67| state)) (|alu#39| state))) ; $eq$alu.sv:57$676_Y
 (define-fun |alu#70| ((state |alu_s|)) (_ BitVec 5) (ite (|alu#69| state) (|alu#67| state) (|alu#68| state))) ; $15\res[4:0]
 (define-fun |alu#71| ((state |alu_s|)) (_ BitVec 5) (bvadd (|alu#70| state) #b01000)) ; $21\res[4:0]
-(define-fun |alu#72| ((state |alu_s|)) Bool (= ((_ extract 3 3) (|alu#70| state)) (|alu#44| state))) ; $eq$alu.sv:61$702_Y
+(define-fun |alu#72| ((state |alu_s|)) Bool (= ((_ extract 3 3) (|alu#70| state)) (|alu#44| state))) ; $eq$alu.sv:57$702_Y
 (define-fun |alu#73| ((state |alu_s|)) (_ BitVec 5) (ite (|alu#72| state) (|alu#70| state) (|alu#71| state))) ; $20\res[4:0]
-(define-fun |alu#74| ((state |alu_s|)) (_ BitVec 5) (bvsub (concat #b0 (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state))))) #b00001)) ; { $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [3:0] }
-(define-fun |alu#75| ((state |alu_s|)) (_ BitVec 5) (bvadd (concat #b0 (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state))))) #b00001)) ; $add$alu.sv:187$624_Y
-(define-fun |alu#76| ((state |alu_s|)) (_ BitVec 5) (bvsub (concat #b0 (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state))))) (concat #b0 (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state))))))) ; $sub$alu.sv:184$623_Y
-(define-fun |alu#77| ((state |alu_s|)) (_ BitVec 5) (bvadd (concat #b0 (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state))))) (concat #b0 (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state))))))) ; $add$alu.sv:181$622_Y
+(define-fun |alu#74| ((state |alu_s|)) (_ BitVec 5) (bvsub (concat #b0 (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state))))) #b00001)) ; { $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [3:0] }
+(define-fun |alu#75| ((state |alu_s|)) (_ BitVec 5) (bvadd (concat #b0 (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state))))) #b00001)) ; $add$alu.sv:183$624_Y
+(define-fun |alu#76| ((state |alu_s|)) (_ BitVec 5) (bvsub (concat #b0 (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state))))) (concat #b0 (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state))))))) ; $sub$alu.sv:180$623_Y
+(define-fun |alu#77| ((state |alu_s|)) (_ BitVec 5) (bvadd (concat #b0 (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state))))) (concat #b0 (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state))))))) ; $add$alu.sv:177$622_Y
 (declare-fun |alu#78| (|alu_s|) (_ BitVec 3)) ; \OPCODE
-(define-fun |alu#79| ((state |alu_s|)) Bool (= (|alu#78| state) #b111)) ; $0$formal$alu.sv:353$89_CHECK[0:0]$1053
+(define-fun |alu#79| ((state |alu_s|)) Bool (= (|alu#78| state) #b111)) ; $0$formal$alu.sv:342$89_CHECK[0:0]$1053
 (define-fun |alu#80| ((state |alu_s|)) Bool (= (|alu#78| state) #b110)) ; $procmux$1510_CMP
 (define-fun |alu#81| ((state |alu_s|)) Bool (= (|alu#78| state) #b101)) ; $procmux$1503_CMP
 (define-fun |alu#82| ((state |alu_s|)) Bool (= (|alu#78| state) #b100)) ; $procmux$1494_CMP
 (define-fun |alu#83| ((state |alu_s|)) Bool (= (|alu#78| state) #b011)) ; $procmux$1483_CMP
-(define-fun |alu#84| ((state |alu_s|)) Bool (= (|alu#78| state) #b010)) ; $eq$alu.sv:363$1122_Y
+(define-fun |alu#84| ((state |alu_s|)) Bool (= (|alu#78| state) #b010)) ; $eq$alu.sv:352$1122_Y
 (define-fun |alu#85| ((state |alu_s|)) Bool (= (|alu#78| state) #b001)) ; $procmux$1455_CMP
-(define-fun |alu#86| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#78| state)) #b1) (= ((_ extract 1 1) (|alu#78| state)) #b1) (= ((_ extract 2 2) (|alu#78| state)) #b1)))) ; $0$formal$alu.sv:352$88_CHECK[0:0]$1051
+(define-fun |alu#86| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#78| state)) #b1) (= ((_ extract 1 1) (|alu#78| state)) #b1) (= ((_ extract 2 2) (|alu#78| state)) #b1)))) ; $0$formal$alu.sv:341$88_CHECK[0:0]$1051
 (define-fun |alu#87| ((state |alu_s|)) (_ BitVec 5) (ite (|alu#86| state) (|alu#77| state) (ite (|alu#85| state) (|alu#76| state) (ite (|alu#84| state) (|alu#75| state) (ite (|alu#83| state) (|alu#74| state) (ite (|alu#82| state) (|alu#73| state) (ite (|alu#81| state) (|alu#64| state) (ite (|alu#80| state) (|alu#47| state) (ite (|alu#79| state) (|alu#32| state) (|alu#3| state)))))))))) ; \result_next
 ; yosys-smt2-wire result_next 5
 (define-fun |alu_n result_next| ((state |alu_s|)) (_ BitVec 5) (|alu#87| state))
-; yosys-smt2-anyinit alu#88 4 alu.sv:233.2-243.5
+; yosys-smt2-anyinit alu#88 4 alu.sv:229.2-239.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4517"], "smtname": 88, "smtoffset": 0, "type": "init", "width": 4}
 (declare-fun |alu#88| (|alu_s|) (_ BitVec 4)) ; \_witness_.anyinit_procdff_4517
 (define-fun |alu#89| ((state |alu_s|)) (_ BitVec 4) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#88| state) #b0000)) ; \result
 ; yosys-smt2-wire result 4
 (define-fun |alu_n result| ((state |alu_s|)) (_ BitVec 4) (|alu#89| state))
-; yosys-smt2-anyinit alu#90 4 alu.sv:293.3-305.6
+; yosys-smt2-anyinit alu#90 4 alu.sv:283.3-295.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4513"], "smtname": 90, "smtoffset": 0, "type": "init", "width": 4}
 (declare-fun |alu#90| (|alu_s|) (_ BitVec 4)) ; \_witness_.anyinit_procdff_4513
 (define-fun |alu#91| ((state |alu_s|)) (_ BitVec 4) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#90| state) #b0000)) ; \f_op1
-; yosys-smt2-anyinit alu#92 4 alu.sv:293.3-305.6
+; yosys-smt2-anyinit alu#92 4 alu.sv:283.3-295.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4514"], "smtname": 92, "smtoffset": 0, "type": "init", "width": 4}
 (declare-fun |alu#92| (|alu_s|) (_ BitVec 4)) ; \_witness_.anyinit_procdff_4514
 (define-fun |alu#93| ((state |alu_s|)) (_ BitVec 4) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#92| state) #b0000)) ; \f_op2
@@ -140,37 +140,37 @@
 (define-fun |alu#101| ((state |alu_s|)) (_ BitVec 5) (bvadd (concat #b0 (|alu#91| state)) (concat #b0 (|alu#93| state)))) ; \op_add
 ; yosys-smt2-wire op_add 5
 (define-fun |alu_n op_add| ((state |alu_s|)) (_ BitVec 5) (|alu#101| state))
-; yosys-smt2-anyinit alu#102 3 alu.sv:293.3-305.6
+; yosys-smt2-anyinit alu#102 3 alu.sv:283.3-295.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4515"], "smtname": 102, "smtoffset": 0, "type": "init", "width": 3}
 (declare-fun |alu#102| (|alu_s|) (_ BitVec 3)) ; \_witness_.anyinit_procdff_4515
 (define-fun |alu#103| ((state |alu_s|)) (_ BitVec 3) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#102| state) #b000)) ; \f_opcode
-(define-fun |alu#104| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#103| state)) #b1) (= ((_ extract 1 1) (|alu#103| state)) #b1) (= ((_ extract 2 2) (|alu#103| state)) #b1)))) ; $eq$alu.sv:279$982_Y
-(define-fun |alu#105| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#101| state)) #b1) (= ((_ extract 1 1) (|alu#101| state)) #b1) (= ((_ extract 2 2) (|alu#101| state)) #b1) (= ((_ extract 3 3) (|alu#101| state)) #b1) (= ((_ extract 4 4) (|alu#101| state)) #b1)))) ; $eq$alu.sv:284$995_Y
-(define-fun |alu#106| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#104| state) #b1 #b0) (ite (|alu#105| state) #b1 #b0))) ; $and$alu.sv:284$996_Y
-(define-fun |alu#107| ((state |alu_s|)) Bool (= (|alu#103| state) #b001)) ; $eq$alu.sv:280$984_Y
-(define-fun |alu#108| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#95| state)) #b1) (= ((_ extract 1 1) (|alu#95| state)) #b1) (= ((_ extract 2 2) (|alu#95| state)) #b1) (= ((_ extract 3 3) (|alu#95| state)) #b1) (= ((_ extract 4 4) (|alu#95| state)) #b1)))) ; $eq$alu.sv:285$998_Y
-(define-fun |alu#109| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#107| state) #b1 #b0) (ite (|alu#108| state) #b1 #b0))) ; $and$alu.sv:285$999_Y
-(define-fun |alu#110| ((state |alu_s|)) Bool (or  (= ((_ extract 0 0) (|alu#106| state)) #b1) false  (= ((_ extract 0 0) (|alu#109| state)) #b1) false)) ; $logic_or$alu.sv:284$1000_Y
-(define-fun |alu#111| ((state |alu_s|)) Bool (= (|alu#103| state) #b011)) ; $eq$alu.sv:282$990_Y
-(define-fun |alu#112| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#100| state)) #b1) (= ((_ extract 1 1) (|alu#100| state)) #b1) (= ((_ extract 2 2) (|alu#100| state)) #b1) (= ((_ extract 3 3) (|alu#100| state)) #b1) (= ((_ extract 4 4) (|alu#100| state)) #b1)))) ; $eq$alu.sv:286$1002_Y
-(define-fun |alu#113| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#111| state) #b1 #b0) (ite (|alu#112| state) #b1 #b0))) ; $and$alu.sv:286$1003_Y
-(define-fun |alu#114| ((state |alu_s|)) Bool (or  (|alu#110| state) false  (= ((_ extract 0 0) (|alu#113| state)) #b1) false)) ; $logic_or$alu.sv:284$1004_Y
-(define-fun |alu#115| ((state |alu_s|)) Bool (= (|alu#103| state) #b100)) ; $eq$alu.sv:287$1005_Y
-(define-fun |alu#116| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#97| state)) #b1) (= ((_ extract 1 1) (|alu#97| state)) #b1) (= ((_ extract 2 2) (|alu#97| state)) #b1) (= ((_ extract 3 3) (|alu#97| state)) #b1)))) ; $eq$alu.sv:287$1006_Y
-(define-fun |alu#117| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#115| state) #b1 #b0) (ite (|alu#116| state) #b1 #b0))) ; $and$alu.sv:287$1007_Y
-(define-fun |alu#118| ((state |alu_s|)) Bool (or  (|alu#114| state) false  (= ((_ extract 0 0) (|alu#117| state)) #b1) false)) ; $logic_or$alu.sv:284$1008_Y
-(define-fun |alu#119| ((state |alu_s|)) Bool (= (|alu#103| state) #b101)) ; $eq$alu.sv:288$1009_Y
-(define-fun |alu#120| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#96| state)) #b1) (= ((_ extract 1 1) (|alu#96| state)) #b1) (= ((_ extract 2 2) (|alu#96| state)) #b1) (= ((_ extract 3 3) (|alu#96| state)) #b1)))) ; $eq$alu.sv:288$1010_Y
-(define-fun |alu#121| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#119| state) #b1 #b0) (ite (|alu#120| state) #b1 #b0))) ; $and$alu.sv:288$1011_Y
-(define-fun |alu#122| ((state |alu_s|)) Bool (or  (|alu#118| state) false  (= ((_ extract 0 0) (|alu#121| state)) #b1) false)) ; $logic_or$alu.sv:284$1012_Y
-(define-fun |alu#123| ((state |alu_s|)) Bool (= (|alu#103| state) #b110)) ; $eq$alu.sv:289$1013_Y
-(define-fun |alu#124| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#98| state)) #b1) (= ((_ extract 1 1) (|alu#98| state)) #b1) (= ((_ extract 2 2) (|alu#98| state)) #b1) (= ((_ extract 3 3) (|alu#98| state)) #b1)))) ; $eq$alu.sv:289$1014_Y
-(define-fun |alu#125| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#123| state) #b1 #b0) (ite (|alu#124| state) #b1 #b0))) ; $and$alu.sv:289$1015_Y
-(define-fun |alu#126| ((state |alu_s|)) Bool (or  (|alu#122| state) false  (= ((_ extract 0 0) (|alu#125| state)) #b1) false)) ; $logic_or$alu.sv:284$1016_Y
-(define-fun |alu#127| ((state |alu_s|)) Bool (= (|alu#103| state) #b111)) ; $eq$alu.sv:290$1017_Y
-(define-fun |alu#128| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#94| state)) #b1) (= ((_ extract 1 1) (|alu#94| state)) #b1) (= ((_ extract 2 2) (|alu#94| state)) #b1) (= ((_ extract 3 3) (|alu#94| state)) #b1)))) ; $eq$alu.sv:290$1018_Y
-(define-fun |alu#129| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#127| state) #b1 #b0) (ite (|alu#128| state) #b1 #b0))) ; $and$alu.sv:290$1019_Y
-(define-fun |alu#130| ((state |alu_s|)) Bool (or  (|alu#126| state) false  (= ((_ extract 0 0) (|alu#129| state)) #b1) false)) ; $logic_or$alu.sv:284$1020_Y
+(define-fun |alu#104| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#103| state)) #b1) (= ((_ extract 1 1) (|alu#103| state)) #b1) (= ((_ extract 2 2) (|alu#103| state)) #b1)))) ; $eq$alu.sv:269$982_Y
+(define-fun |alu#105| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#101| state)) #b1) (= ((_ extract 1 1) (|alu#101| state)) #b1) (= ((_ extract 2 2) (|alu#101| state)) #b1) (= ((_ extract 3 3) (|alu#101| state)) #b1) (= ((_ extract 4 4) (|alu#101| state)) #b1)))) ; $eq$alu.sv:274$995_Y
+(define-fun |alu#106| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#104| state) #b1 #b0) (ite (|alu#105| state) #b1 #b0))) ; $and$alu.sv:274$996_Y
+(define-fun |alu#107| ((state |alu_s|)) Bool (= (|alu#103| state) #b001)) ; $eq$alu.sv:270$984_Y
+(define-fun |alu#108| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#95| state)) #b1) (= ((_ extract 1 1) (|alu#95| state)) #b1) (= ((_ extract 2 2) (|alu#95| state)) #b1) (= ((_ extract 3 3) (|alu#95| state)) #b1) (= ((_ extract 4 4) (|alu#95| state)) #b1)))) ; $eq$alu.sv:275$998_Y
+(define-fun |alu#109| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#107| state) #b1 #b0) (ite (|alu#108| state) #b1 #b0))) ; $and$alu.sv:275$999_Y
+(define-fun |alu#110| ((state |alu_s|)) Bool (or  (= ((_ extract 0 0) (|alu#106| state)) #b1) false  (= ((_ extract 0 0) (|alu#109| state)) #b1) false)) ; $logic_or$alu.sv:274$1000_Y
+(define-fun |alu#111| ((state |alu_s|)) Bool (= (|alu#103| state) #b011)) ; $eq$alu.sv:272$990_Y
+(define-fun |alu#112| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#100| state)) #b1) (= ((_ extract 1 1) (|alu#100| state)) #b1) (= ((_ extract 2 2) (|alu#100| state)) #b1) (= ((_ extract 3 3) (|alu#100| state)) #b1) (= ((_ extract 4 4) (|alu#100| state)) #b1)))) ; $eq$alu.sv:276$1002_Y
+(define-fun |alu#113| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#111| state) #b1 #b0) (ite (|alu#112| state) #b1 #b0))) ; $and$alu.sv:276$1003_Y
+(define-fun |alu#114| ((state |alu_s|)) Bool (or  (|alu#110| state) false  (= ((_ extract 0 0) (|alu#113| state)) #b1) false)) ; $logic_or$alu.sv:274$1004_Y
+(define-fun |alu#115| ((state |alu_s|)) Bool (= (|alu#103| state) #b100)) ; $eq$alu.sv:277$1005_Y
+(define-fun |alu#116| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#97| state)) #b1) (= ((_ extract 1 1) (|alu#97| state)) #b1) (= ((_ extract 2 2) (|alu#97| state)) #b1) (= ((_ extract 3 3) (|alu#97| state)) #b1)))) ; $eq$alu.sv:277$1006_Y
+(define-fun |alu#117| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#115| state) #b1 #b0) (ite (|alu#116| state) #b1 #b0))) ; $and$alu.sv:277$1007_Y
+(define-fun |alu#118| ((state |alu_s|)) Bool (or  (|alu#114| state) false  (= ((_ extract 0 0) (|alu#117| state)) #b1) false)) ; $logic_or$alu.sv:274$1008_Y
+(define-fun |alu#119| ((state |alu_s|)) Bool (= (|alu#103| state) #b101)) ; $eq$alu.sv:278$1009_Y
+(define-fun |alu#120| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#96| state)) #b1) (= ((_ extract 1 1) (|alu#96| state)) #b1) (= ((_ extract 2 2) (|alu#96| state)) #b1) (= ((_ extract 3 3) (|alu#96| state)) #b1)))) ; $eq$alu.sv:278$1010_Y
+(define-fun |alu#121| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#119| state) #b1 #b0) (ite (|alu#120| state) #b1 #b0))) ; $and$alu.sv:278$1011_Y
+(define-fun |alu#122| ((state |alu_s|)) Bool (or  (|alu#118| state) false  (= ((_ extract 0 0) (|alu#121| state)) #b1) false)) ; $logic_or$alu.sv:274$1012_Y
+(define-fun |alu#123| ((state |alu_s|)) Bool (= (|alu#103| state) #b110)) ; $eq$alu.sv:279$1013_Y
+(define-fun |alu#124| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#98| state)) #b1) (= ((_ extract 1 1) (|alu#98| state)) #b1) (= ((_ extract 2 2) (|alu#98| state)) #b1) (= ((_ extract 3 3) (|alu#98| state)) #b1)))) ; $eq$alu.sv:279$1014_Y
+(define-fun |alu#125| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#123| state) #b1 #b0) (ite (|alu#124| state) #b1 #b0))) ; $and$alu.sv:279$1015_Y
+(define-fun |alu#126| ((state |alu_s|)) Bool (or  (|alu#122| state) false  (= ((_ extract 0 0) (|alu#125| state)) #b1) false)) ; $logic_or$alu.sv:274$1016_Y
+(define-fun |alu#127| ((state |alu_s|)) Bool (= (|alu#103| state) #b111)) ; $eq$alu.sv:280$1017_Y
+(define-fun |alu#128| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#94| state)) #b1) (= ((_ extract 1 1) (|alu#94| state)) #b1) (= ((_ extract 2 2) (|alu#94| state)) #b1) (= ((_ extract 3 3) (|alu#94| state)) #b1)))) ; $eq$alu.sv:280$1018_Y
+(define-fun |alu#129| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#127| state) #b1 #b0) (ite (|alu#128| state) #b1 #b0))) ; $and$alu.sv:280$1019_Y
+(define-fun |alu#130| ((state |alu_s|)) Bool (or  (|alu#126| state) false  (= ((_ extract 0 0) (|alu#129| state)) #b1) false)) ; $logic_or$alu.sv:274$1020_Y
 (define-fun |alu#131| ((state |alu_s|)) (_ BitVec 1) (bvxor (ite (|alu#130| state) #b1 #b0) (|alu#2| state))) ; \f_zero
 ; yosys-smt2-wire f_zero 1
 (define-fun |alu_n f_zero| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#131| state)) #b1))
@@ -185,15 +185,15 @@
 (define-fun |alu_n f_op2| ((state |alu_s|)) (_ BitVec 4) (|alu#93| state))
 ; yosys-smt2-wire f_op1 4
 (define-fun |alu_n f_op1| ((state |alu_s|)) (_ BitVec 4) (|alu#91| state))
-(define-fun |alu#134| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#104| state) #b1 #b0) ((_ extract 4 4) (|alu#101| state)))) ; $and$alu.sv:279$983_Y
-(define-fun |alu#135| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#107| state) #b1 #b0) ((_ extract 4 4) (|alu#95| state)))) ; $and$alu.sv:280$985_Y
-(define-fun |alu#136| ((state |alu_s|)) Bool (or  (= ((_ extract 0 0) (|alu#134| state)) #b1) false  (= ((_ extract 0 0) (|alu#135| state)) #b1) false)) ; $logic_or$alu.sv:279$986_Y
-(define-fun |alu#137| ((state |alu_s|)) Bool (= (|alu#103| state) #b010)) ; $eq$alu.sv:281$987_Y
-(define-fun |alu#138| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#137| state) #b1 #b0) ((_ extract 4 4) (|alu#99| state)))) ; $and$alu.sv:281$988_Y
-(define-fun |alu#139| ((state |alu_s|)) Bool (or  (|alu#136| state) false  (= ((_ extract 0 0) (|alu#138| state)) #b1) false)) ; $logic_or$alu.sv:279$989_Y
-(define-fun |alu#140| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#111| state) #b1 #b0) ((_ extract 4 4) (|alu#100| state)))) ; $and$alu.sv:282$991_Y
-(define-fun |alu#141| ((state |alu_s|)) Bool (or  (|alu#139| state) false  (= ((_ extract 0 0) (|alu#140| state)) #b1) false)) ; $logic_or$alu.sv:279$992_Y
-; yosys-smt2-anyinit alu#142 1 alu.sv:233.2-243.5
+(define-fun |alu#134| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#104| state) #b1 #b0) ((_ extract 4 4) (|alu#101| state)))) ; $and$alu.sv:269$983_Y
+(define-fun |alu#135| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#107| state) #b1 #b0) ((_ extract 4 4) (|alu#95| state)))) ; $and$alu.sv:270$985_Y
+(define-fun |alu#136| ((state |alu_s|)) Bool (or  (= ((_ extract 0 0) (|alu#134| state)) #b1) false  (= ((_ extract 0 0) (|alu#135| state)) #b1) false)) ; $logic_or$alu.sv:269$986_Y
+(define-fun |alu#137| ((state |alu_s|)) Bool (= (|alu#103| state) #b010)) ; $eq$alu.sv:271$987_Y
+(define-fun |alu#138| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#137| state) #b1 #b0) ((_ extract 4 4) (|alu#99| state)))) ; $and$alu.sv:271$988_Y
+(define-fun |alu#139| ((state |alu_s|)) Bool (or  (|alu#136| state) false  (= ((_ extract 0 0) (|alu#138| state)) #b1) false)) ; $logic_or$alu.sv:269$989_Y
+(define-fun |alu#140| ((state |alu_s|)) (_ BitVec 1) (bvand (ite (|alu#111| state) #b1 #b0) ((_ extract 4 4) (|alu#100| state)))) ; $and$alu.sv:272$991_Y
+(define-fun |alu#141| ((state |alu_s|)) Bool (or  (|alu#139| state) false  (= ((_ extract 0 0) (|alu#140| state)) #b1) false)) ; $logic_or$alu.sv:269$992_Y
+; yosys-smt2-anyinit alu#142 1 alu.sv:229.2-239.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4519"], "smtname": 142, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#142| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4519
 (define-fun |alu#143| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#142| state) #b0)) ; \carry
@@ -428,223 +428,223 @@
 ; yosys-smt2-register _witness_.anyinit_procdff_4513 4
 ; yosys-smt2-wire _witness_.anyinit_procdff_4513 4
 (define-fun |alu_n _witness_.anyinit_procdff_4513| ((state |alu_s|)) (_ BitVec 4) (|alu#90| state))
-; yosys-smt2-anyinit alu#185 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#185 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4511"], "smtname": 185, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#185| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4511
 ; yosys-smt2-register _witness_.anyinit_procdff_4511 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4511 1
 (define-fun |alu_n _witness_.anyinit_procdff_4511| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#185| state)) #b1))
-; yosys-smt2-anyinit alu#186 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#186 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4509"], "smtname": 186, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#186| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4509
 ; yosys-smt2-register _witness_.anyinit_procdff_4509 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4509 1
 (define-fun |alu_n _witness_.anyinit_procdff_4509| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#186| state)) #b1))
-; yosys-smt2-anyinit alu#187 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#187 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4507"], "smtname": 187, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#187| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4507
 ; yosys-smt2-register _witness_.anyinit_procdff_4507 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4507 1
 (define-fun |alu_n _witness_.anyinit_procdff_4507| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#187| state)) #b1))
-; yosys-smt2-anyinit alu#188 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#188 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4505"], "smtname": 188, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#188| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4505
 ; yosys-smt2-register _witness_.anyinit_procdff_4505 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4505 1
 (define-fun |alu_n _witness_.anyinit_procdff_4505| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#188| state)) #b1))
-; yosys-smt2-anyinit alu#189 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#189 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4503"], "smtname": 189, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#189| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4503
 ; yosys-smt2-register _witness_.anyinit_procdff_4503 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4503 1
 (define-fun |alu_n _witness_.anyinit_procdff_4503| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#189| state)) #b1))
-; yosys-smt2-anyinit alu#190 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#190 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4501"], "smtname": 190, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#190| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4501
 ; yosys-smt2-register _witness_.anyinit_procdff_4501 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4501 1
 (define-fun |alu_n _witness_.anyinit_procdff_4501| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#190| state)) #b1))
-; yosys-smt2-anyinit alu#191 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#191 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4499"], "smtname": 191, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#191| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4499
 ; yosys-smt2-register _witness_.anyinit_procdff_4499 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4499 1
 (define-fun |alu_n _witness_.anyinit_procdff_4499| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#191| state)) #b1))
-; yosys-smt2-anyinit alu#192 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#192 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4497"], "smtname": 192, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#192| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4497
 ; yosys-smt2-register _witness_.anyinit_procdff_4497 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4497 1
 (define-fun |alu_n _witness_.anyinit_procdff_4497| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#192| state)) #b1))
-; yosys-smt2-anyinit alu#193 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#193 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4495"], "smtname": 193, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#193| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4495
 ; yosys-smt2-register _witness_.anyinit_procdff_4495 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4495 1
 (define-fun |alu_n _witness_.anyinit_procdff_4495| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#193| state)) #b1))
-; yosys-smt2-anyinit alu#194 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#194 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4493"], "smtname": 194, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#194| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4493
 ; yosys-smt2-register _witness_.anyinit_procdff_4493 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4493 1
 (define-fun |alu_n _witness_.anyinit_procdff_4493| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#194| state)) #b1))
-; yosys-smt2-anyinit alu#195 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#195 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4491"], "smtname": 195, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#195| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4491
 ; yosys-smt2-register _witness_.anyinit_procdff_4491 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4491 1
 (define-fun |alu_n _witness_.anyinit_procdff_4491| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#195| state)) #b1))
-; yosys-smt2-anyinit alu#196 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#196 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4489"], "smtname": 196, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#196| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4489
 ; yosys-smt2-register _witness_.anyinit_procdff_4489 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4489 1
 (define-fun |alu_n _witness_.anyinit_procdff_4489| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#196| state)) #b1))
-; yosys-smt2-anyinit alu#197 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#197 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4487"], "smtname": 197, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#197| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4487
 ; yosys-smt2-register _witness_.anyinit_procdff_4487 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4487 1
 (define-fun |alu_n _witness_.anyinit_procdff_4487| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#197| state)) #b1))
-; yosys-smt2-anyinit alu#198 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#198 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4485"], "smtname": 198, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#198| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4485
 ; yosys-smt2-register _witness_.anyinit_procdff_4485 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4485 1
 (define-fun |alu_n _witness_.anyinit_procdff_4485| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#198| state)) #b1))
-; yosys-smt2-anyinit alu#199 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#199 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4483"], "smtname": 199, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#199| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4483
 ; yosys-smt2-register _witness_.anyinit_procdff_4483 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4483 1
 (define-fun |alu_n _witness_.anyinit_procdff_4483| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#199| state)) #b1))
-; yosys-smt2-anyinit alu#200 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#200 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4481"], "smtname": 200, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#200| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4481
 ; yosys-smt2-register _witness_.anyinit_procdff_4481 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4481 1
 (define-fun |alu_n _witness_.anyinit_procdff_4481| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#200| state)) #b1))
-; yosys-smt2-anyinit alu#201 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#201 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4479"], "smtname": 201, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#201| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4479
 ; yosys-smt2-register _witness_.anyinit_procdff_4479 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4479 1
 (define-fun |alu_n _witness_.anyinit_procdff_4479| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#201| state)) #b1))
-; yosys-smt2-anyinit alu#202 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#202 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4477"], "smtname": 202, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#202| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4477
 ; yosys-smt2-register _witness_.anyinit_procdff_4477 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4477 1
 (define-fun |alu_n _witness_.anyinit_procdff_4477| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#202| state)) #b1))
-; yosys-smt2-anyinit alu#203 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#203 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4475"], "smtname": 203, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#203| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4475
 ; yosys-smt2-register _witness_.anyinit_procdff_4475 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4475 1
 (define-fun |alu_n _witness_.anyinit_procdff_4475| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#203| state)) #b1))
-; yosys-smt2-anyinit alu#204 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#204 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4473"], "smtname": 204, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#204| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4473
 ; yosys-smt2-register _witness_.anyinit_procdff_4473 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4473 1
 (define-fun |alu_n _witness_.anyinit_procdff_4473| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#204| state)) #b1))
-; yosys-smt2-anyinit alu#205 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#205 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4471"], "smtname": 205, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#205| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4471
 ; yosys-smt2-register _witness_.anyinit_procdff_4471 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4471 1
 (define-fun |alu_n _witness_.anyinit_procdff_4471| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#205| state)) #b1))
-; yosys-smt2-anyinit alu#206 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#206 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4469"], "smtname": 206, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#206| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4469
 ; yosys-smt2-register _witness_.anyinit_procdff_4469 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4469 1
 (define-fun |alu_n _witness_.anyinit_procdff_4469| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#206| state)) #b1))
-; yosys-smt2-anyinit alu#207 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#207 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4467"], "smtname": 207, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#207| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4467
 ; yosys-smt2-register _witness_.anyinit_procdff_4467 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4467 1
 (define-fun |alu_n _witness_.anyinit_procdff_4467| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#207| state)) #b1))
-; yosys-smt2-anyinit alu#208 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#208 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4465"], "smtname": 208, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#208| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4465
 ; yosys-smt2-register _witness_.anyinit_procdff_4465 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4465 1
 (define-fun |alu_n _witness_.anyinit_procdff_4465| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#208| state)) #b1))
-; yosys-smt2-anyinit alu#209 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#209 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4463"], "smtname": 209, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#209| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4463
 ; yosys-smt2-register _witness_.anyinit_procdff_4463 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4463 1
 (define-fun |alu_n _witness_.anyinit_procdff_4463| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#209| state)) #b1))
-; yosys-smt2-anyinit alu#210 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#210 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4461"], "smtname": 210, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#210| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4461
 ; yosys-smt2-register _witness_.anyinit_procdff_4461 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4461 1
 (define-fun |alu_n _witness_.anyinit_procdff_4461| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#210| state)) #b1))
-; yosys-smt2-anyinit alu#211 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#211 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4459"], "smtname": 211, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#211| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4459
 ; yosys-smt2-register _witness_.anyinit_procdff_4459 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4459 1
 (define-fun |alu_n _witness_.anyinit_procdff_4459| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#211| state)) #b1))
-; yosys-smt2-anyinit alu#212 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#212 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4457"], "smtname": 212, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#212| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4457
 ; yosys-smt2-register _witness_.anyinit_procdff_4457 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4457 1
 (define-fun |alu_n _witness_.anyinit_procdff_4457| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#212| state)) #b1))
-; yosys-smt2-anyinit alu#213 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#213 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4455"], "smtname": 213, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#213| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4455
 ; yosys-smt2-register _witness_.anyinit_procdff_4455 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4455 1
 (define-fun |alu_n _witness_.anyinit_procdff_4455| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#213| state)) #b1))
-; yosys-smt2-anyinit alu#214 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#214 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4453"], "smtname": 214, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#214| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4453
 ; yosys-smt2-register _witness_.anyinit_procdff_4453 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4453 1
 (define-fun |alu_n _witness_.anyinit_procdff_4453| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#214| state)) #b1))
-; yosys-smt2-anyinit alu#215 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#215 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4451"], "smtname": 215, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#215| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4451
 ; yosys-smt2-register _witness_.anyinit_procdff_4451 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4451 1
 (define-fun |alu_n _witness_.anyinit_procdff_4451| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#215| state)) #b1))
-; yosys-smt2-anyinit alu#216 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#216 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4449"], "smtname": 216, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#216| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4449
 ; yosys-smt2-register _witness_.anyinit_procdff_4449 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4449 1
 (define-fun |alu_n _witness_.anyinit_procdff_4449| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#216| state)) #b1))
-; yosys-smt2-anyinit alu#217 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#217 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4447"], "smtname": 217, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#217| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4447
 ; yosys-smt2-register _witness_.anyinit_procdff_4447 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4447 1
 (define-fun |alu_n _witness_.anyinit_procdff_4447| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#217| state)) #b1))
-; yosys-smt2-anyinit alu#218 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#218 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4445"], "smtname": 218, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#218| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4445
 ; yosys-smt2-register _witness_.anyinit_procdff_4445 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4445 1
 (define-fun |alu_n _witness_.anyinit_procdff_4445| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#218| state)) #b1))
-; yosys-smt2-anyinit alu#219 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#219 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4443"], "smtname": 219, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#219| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4443
 ; yosys-smt2-register _witness_.anyinit_procdff_4443 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4443 1
 (define-fun |alu_n _witness_.anyinit_procdff_4443| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#219| state)) #b1))
-; yosys-smt2-anyinit alu#220 1 alu.sv:308.3-406.6
+; yosys-smt2-anyinit alu#220 1 alu.sv:298.3-395.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_4441"], "smtname": 220, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |alu#220| (|alu_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_4441
 ; yosys-smt2-register _witness_.anyinit_procdff_4441 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_4441 1
 (define-fun |alu_n _witness_.anyinit_procdff_4441| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#220| state)) #b1))
-(define-fun |alu#221| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#87| state)) #b1) (= ((_ extract 1 1) (|alu#87| state)) #b1) (= ((_ extract 2 2) (|alu#87| state)) #b1) (= ((_ extract 3 3) (|alu#87| state)) #b1) (= ((_ extract 4 4) (|alu#87| state)) #b1)))) ; $eq$alu.sv:221$970_Y
+(define-fun |alu#221| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#87| state)) #b1) (= ((_ extract 1 1) (|alu#87| state)) #b1) (= ((_ extract 2 2) (|alu#87| state)) #b1) (= ((_ extract 3 3) (|alu#87| state)) #b1) (= ((_ extract 4 4) (|alu#87| state)) #b1)))) ; $eq$alu.sv:217$970_Y
 (define-fun |alu#222| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#221| state) #b1 #b0)) ; \ZERO_next
 ; yosys-smt2-wire ZERO_next 1
 (define-fun |alu_n ZERO_next| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#222| state)) #b1))
@@ -673,82 +673,82 @@
 ; yosys-smt2-output CARRY 1
 ; yosys-smt2-wire CARRY 1
 (define-fun |alu_n CARRY| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#143| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:403$110_EN"], "smtname": 223, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#223| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:403$110_EN
-; yosys-smt2-register $formal$alu.sv:403$110_EN 1
-(define-fun |alu_n $formal$alu.sv:403$110_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#223| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:400$109_EN"], "smtname": 224, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#224| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:400$109_EN
-; yosys-smt2-register $formal$alu.sv:400$109_EN 1
-(define-fun |alu_n $formal$alu.sv:400$109_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#224| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:397$108_EN"], "smtname": 225, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#225| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:397$108_EN
-; yosys-smt2-register $formal$alu.sv:397$108_EN 1
-(define-fun |alu_n $formal$alu.sv:397$108_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#225| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:394$107_EN"], "smtname": 226, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#226| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:394$107_EN
-; yosys-smt2-register $formal$alu.sv:394$107_EN 1
-(define-fun |alu_n $formal$alu.sv:394$107_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#226| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:391$106_EN"], "smtname": 227, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#227| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:391$106_EN
-; yosys-smt2-register $formal$alu.sv:391$106_EN 1
-(define-fun |alu_n $formal$alu.sv:391$106_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#227| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:388$105_EN"], "smtname": 228, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#228| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:388$105_EN
-; yosys-smt2-register $formal$alu.sv:388$105_EN 1
-(define-fun |alu_n $formal$alu.sv:388$105_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#228| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:385$104_EN"], "smtname": 229, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#229| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:385$104_EN
-; yosys-smt2-register $formal$alu.sv:385$104_EN 1
-(define-fun |alu_n $formal$alu.sv:385$104_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#229| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:382$103_EN"], "smtname": 230, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#230| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:382$103_EN
-; yosys-smt2-register $formal$alu.sv:382$103_EN 1
-(define-fun |alu_n $formal$alu.sv:382$103_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#230| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:352$88_EN"], "smtname": 231, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#231| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:352$88_EN
-; yosys-smt2-register $formal$alu.sv:352$88_EN 1
-(define-fun |alu_n $formal$alu.sv:352$88_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#231| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:344$87_EN"], "smtname": 232, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#232| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:344$87_EN
-; yosys-smt2-register $formal$alu.sv:344$87_EN 1
-(define-fun |alu_n $formal$alu.sv:344$87_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#232| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:341$86_EN"], "smtname": 233, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#233| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:341$86_EN
-; yosys-smt2-register $formal$alu.sv:341$86_EN 1
-(define-fun |alu_n $formal$alu.sv:341$86_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#233| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:338$85_EN"], "smtname": 234, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#234| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:338$85_EN
-; yosys-smt2-register $formal$alu.sv:338$85_EN 1
-(define-fun |alu_n $formal$alu.sv:338$85_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#234| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:335$84_EN"], "smtname": 235, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#235| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:335$84_EN
-; yosys-smt2-register $formal$alu.sv:335$84_EN 1
-(define-fun |alu_n $formal$alu.sv:335$84_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#235| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:332$83_EN"], "smtname": 236, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#236| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:332$83_EN
-; yosys-smt2-register $formal$alu.sv:332$83_EN 1
-(define-fun |alu_n $formal$alu.sv:332$83_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#236| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:329$82_EN"], "smtname": 237, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#237| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:329$82_EN
-; yosys-smt2-register $formal$alu.sv:329$82_EN 1
-(define-fun |alu_n $formal$alu.sv:329$82_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#237| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:326$81_EN"], "smtname": 238, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#238| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:326$81_EN
-; yosys-smt2-register $formal$alu.sv:326$81_EN 1
-(define-fun |alu_n $formal$alu.sv:326$81_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#238| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:323$80_EN"], "smtname": 239, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#239| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:323$80_EN
-; yosys-smt2-register $formal$alu.sv:323$80_EN 1
-(define-fun |alu_n $formal$alu.sv:323$80_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#239| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:317$78_EN"], "smtname": 240, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#240| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:317$78_EN
-; yosys-smt2-register $formal$alu.sv:317$78_EN 1
-(define-fun |alu_n $formal$alu.sv:317$78_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#240| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:311$75_EN"], "smtname": 241, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |alu#241| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:311$75_EN
-; yosys-smt2-register $formal$alu.sv:311$75_EN 1
-(define-fun |alu_n $formal$alu.sv:311$75_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#241| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:392$110_EN"], "smtname": 223, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#223| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:392$110_EN
+; yosys-smt2-register $formal$alu.sv:392$110_EN 1
+(define-fun |alu_n $formal$alu.sv:392$110_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#223| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:389$109_EN"], "smtname": 224, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#224| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:389$109_EN
+; yosys-smt2-register $formal$alu.sv:389$109_EN 1
+(define-fun |alu_n $formal$alu.sv:389$109_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#224| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:386$108_EN"], "smtname": 225, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#225| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:386$108_EN
+; yosys-smt2-register $formal$alu.sv:386$108_EN 1
+(define-fun |alu_n $formal$alu.sv:386$108_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#225| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:383$107_EN"], "smtname": 226, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#226| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:383$107_EN
+; yosys-smt2-register $formal$alu.sv:383$107_EN 1
+(define-fun |alu_n $formal$alu.sv:383$107_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#226| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:380$106_EN"], "smtname": 227, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#227| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:380$106_EN
+; yosys-smt2-register $formal$alu.sv:380$106_EN 1
+(define-fun |alu_n $formal$alu.sv:380$106_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#227| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:377$105_EN"], "smtname": 228, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#228| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:377$105_EN
+; yosys-smt2-register $formal$alu.sv:377$105_EN 1
+(define-fun |alu_n $formal$alu.sv:377$105_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#228| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:374$104_EN"], "smtname": 229, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#229| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:374$104_EN
+; yosys-smt2-register $formal$alu.sv:374$104_EN 1
+(define-fun |alu_n $formal$alu.sv:374$104_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#229| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:371$103_EN"], "smtname": 230, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#230| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:371$103_EN
+; yosys-smt2-register $formal$alu.sv:371$103_EN 1
+(define-fun |alu_n $formal$alu.sv:371$103_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#230| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:341$88_EN"], "smtname": 231, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#231| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:341$88_EN
+; yosys-smt2-register $formal$alu.sv:341$88_EN 1
+(define-fun |alu_n $formal$alu.sv:341$88_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#231| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:334$87_EN"], "smtname": 232, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#232| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:334$87_EN
+; yosys-smt2-register $formal$alu.sv:334$87_EN 1
+(define-fun |alu_n $formal$alu.sv:334$87_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#232| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:331$86_EN"], "smtname": 233, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#233| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:331$86_EN
+; yosys-smt2-register $formal$alu.sv:331$86_EN 1
+(define-fun |alu_n $formal$alu.sv:331$86_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#233| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:328$85_EN"], "smtname": 234, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#234| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:328$85_EN
+; yosys-smt2-register $formal$alu.sv:328$85_EN 1
+(define-fun |alu_n $formal$alu.sv:328$85_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#234| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:325$84_EN"], "smtname": 235, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#235| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:325$84_EN
+; yosys-smt2-register $formal$alu.sv:325$84_EN 1
+(define-fun |alu_n $formal$alu.sv:325$84_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#235| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:322$83_EN"], "smtname": 236, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#236| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:322$83_EN
+; yosys-smt2-register $formal$alu.sv:322$83_EN 1
+(define-fun |alu_n $formal$alu.sv:322$83_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#236| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:319$82_EN"], "smtname": 237, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#237| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:319$82_EN
+; yosys-smt2-register $formal$alu.sv:319$82_EN 1
+(define-fun |alu_n $formal$alu.sv:319$82_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#237| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:316$81_EN"], "smtname": 238, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#238| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:316$81_EN
+; yosys-smt2-register $formal$alu.sv:316$81_EN 1
+(define-fun |alu_n $formal$alu.sv:316$81_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#238| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:313$80_EN"], "smtname": 239, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#239| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:313$80_EN
+; yosys-smt2-register $formal$alu.sv:313$80_EN 1
+(define-fun |alu_n $formal$alu.sv:313$80_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#239| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:307$78_EN"], "smtname": 240, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#240| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:307$78_EN
+; yosys-smt2-register $formal$alu.sv:307$78_EN 1
+(define-fun |alu_n $formal$alu.sv:307$78_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#240| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$alu.sv:301$75_EN"], "smtname": 241, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |alu#241| (|alu_s|) (_ BitVec 1)) ; $formal$alu.sv:301$75_EN
+; yosys-smt2-register $formal$alu.sv:301$75_EN 1
+(define-fun |alu_n $formal$alu.sv:301$75_EN| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#241| state)) #b1))
 ; yosys-smt2-register $auto$async2sync.cc:171:execute$4531 1
 (define-fun |alu_n $auto$async2sync.cc:171:execute$4531| ((state |alu_s|)) Bool (= ((_ extract 0 0) (|alu#132| state)) #b1))
 (define-fun |alu#242| ((state |alu_s|)) (_ BitVec 1) (bvnot (ite (|alu#145| state) #b1 #b0))) ; $auto$rtlil.cc:2461:Not$5146
@@ -826,119 +826,119 @@
 (define-fun |alu_a 11| ((state |alu_s|)) Bool (or (= ((_ extract 0 0) (|alu#220| state)) #b1) (not (= ((_ extract 0 0) (|alu#241| state)) #b1)))) ; assert_carry_reset
 ; yosys-smt2-assert 12 assert_carry
 (define-fun |alu_a 12| ((state |alu_s|)) Bool (or (= ((_ extract 0 0) (|alu#216| state)) #b1) (not (= ((_ extract 0 0) (|alu#240| state)) #b1)))) ; assert_carry
-(define-fun |alu#243| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) #b0 #b1)) ; $0$formal$alu.sv:311$75_EN[0:0]$1026
+(define-fun |alu#243| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) #b0 #b1)) ; $0$formal$alu.sv:301$75_EN[0:0]$1026
 (define-fun |alu#244| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) #b1 #b0)) ; $procmux$1242_Y
-(define-fun |alu#245| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#244| state) #b0)) ; $0$formal$alu.sv:317$78_EN[0:0]$1032
+(define-fun |alu#245| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#244| state) #b0)) ; $0$formal$alu.sv:307$78_EN[0:0]$1032
 (define-fun |alu#246| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#104| state) #b1 #b0)) ; $procmux$1269_Y
 (define-fun |alu#247| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#246| state) #b0)) ; $procmux$1271_Y
-(define-fun |alu#248| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#247| state) #b0)) ; $0$formal$alu.sv:323$80_EN[0:0]$1036
+(define-fun |alu#248| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#247| state) #b0)) ; $0$formal$alu.sv:313$80_EN[0:0]$1036
 (define-fun |alu#249| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#107| state) #b1 #b0)) ; $procmux$1296_Y
 (define-fun |alu#250| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#249| state) #b0)) ; $procmux$1298_Y
-(define-fun |alu#251| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#250| state) #b0)) ; $0$formal$alu.sv:326$81_EN[0:0]$1038
+(define-fun |alu#251| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#250| state) #b0)) ; $0$formal$alu.sv:316$81_EN[0:0]$1038
 (define-fun |alu#252| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#137| state) #b1 #b0)) ; $procmux$1321_Y
 (define-fun |alu#253| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#252| state) #b0)) ; $procmux$1323_Y
-(define-fun |alu#254| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#253| state) #b0)) ; $0$formal$alu.sv:329$82_EN[0:0]$1040
+(define-fun |alu#254| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#253| state) #b0)) ; $0$formal$alu.sv:319$82_EN[0:0]$1040
 (define-fun |alu#255| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#111| state) #b1 #b0)) ; $procmux$1344_Y
 (define-fun |alu#256| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#255| state) #b0)) ; $procmux$1346_Y
-(define-fun |alu#257| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#256| state) #b0)) ; $0$formal$alu.sv:332$83_EN[0:0]$1042
+(define-fun |alu#257| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#256| state) #b0)) ; $0$formal$alu.sv:322$83_EN[0:0]$1042
 (define-fun |alu#258| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#115| state) #b1 #b0)) ; $procmux$1365_Y
 (define-fun |alu#259| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#258| state) #b0)) ; $procmux$1367_Y
-(define-fun |alu#260| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#259| state) #b0)) ; $0$formal$alu.sv:335$84_EN[0:0]$1044
+(define-fun |alu#260| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#259| state) #b0)) ; $0$formal$alu.sv:325$84_EN[0:0]$1044
 (define-fun |alu#261| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#119| state) #b1 #b0)) ; $procmux$1384_Y
 (define-fun |alu#262| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#261| state) #b0)) ; $procmux$1386_Y
-(define-fun |alu#263| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#262| state) #b0)) ; $0$formal$alu.sv:338$85_EN[0:0]$1046
+(define-fun |alu#263| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#262| state) #b0)) ; $0$formal$alu.sv:328$85_EN[0:0]$1046
 (define-fun |alu#264| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#123| state) #b1 #b0)) ; $procmux$1401_Y
 (define-fun |alu#265| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#264| state) #b0)) ; $procmux$1403_Y
-(define-fun |alu#266| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#265| state) #b0)) ; $0$formal$alu.sv:341$86_EN[0:0]$1048
+(define-fun |alu#266| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#265| state) #b0)) ; $0$formal$alu.sv:331$86_EN[0:0]$1048
 (define-fun |alu#267| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#127| state) #b1 #b0)) ; $procmux$1416_Y
 (define-fun |alu#268| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#267| state) #b0)) ; $procmux$1418_Y
-(define-fun |alu#269| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#268| state) #b0)) ; $0$formal$alu.sv:344$87_EN[0:0]$1050
-(define-fun |alu#270| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#86| state) #b1 #b0)) ; $0$formal$alu.sv:382$103_EN[0:0]$1082
-(define-fun |alu#271| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#85| state) #b1 #b0)) ; $0$formal$alu.sv:385$104_EN[0:0]$1084
-(define-fun |alu#272| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#84| state) #b1 #b0)) ; $0$formal$alu.sv:388$105_EN[0:0]$1086
-(define-fun |alu#273| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#83| state) #b1 #b0)) ; $0$formal$alu.sv:391$106_EN[0:0]$1088
-(define-fun |alu#274| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#82| state) #b1 #b0)) ; $0$formal$alu.sv:394$107_EN[0:0]$1090
-(define-fun |alu#275| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#81| state) #b1 #b0)) ; $0$formal$alu.sv:397$108_EN[0:0]$1092
-(define-fun |alu#276| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#80| state) #b1 #b0)) ; $0$formal$alu.sv:400$109_EN[0:0]$1094
-(define-fun |alu#277| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#79| state) #b1 #b0)) ; $0$formal$alu.sv:403$110_EN[0:0]$1096
-(define-fun |alu#278| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#143| state)) #b1) false))) ; $0$formal$alu.sv:370$98_CHECK[0:0]$1071
-(define-fun |alu#279| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#184| state) (ite (|alu#278| state) #b1 #b0))) ; $0$formal$alu.sv:311$75_CHECK[0:0]$1025
-(define-fun |alu#280| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#2| state)) #b1) false))) ; $0$formal$alu.sv:374$100_CHECK[0:0]$1075
-(define-fun |alu#281| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#183| state) (ite (|alu#280| state) #b1 #b0))) ; $0$formal$alu.sv:312$76_CHECK[0:0]$1027
-(define-fun |alu#282| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#89| state)) #b1) (= ((_ extract 1 1) (|alu#89| state)) #b1) (= ((_ extract 2 2) (|alu#89| state)) #b1) (= ((_ extract 3 3) (|alu#89| state)) #b1)))) ; $0$formal$alu.sv:377$101_CHECK[0:0]$1077
-(define-fun |alu#283| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#182| state) (ite (|alu#282| state) #b1 #b0))) ; $0$formal$alu.sv:313$77_CHECK[0:0]$1029
-(define-fun |alu#284| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#131| state)) #b1) false))) ; $logic_not$alu.sv:317$1101_Y
+(define-fun |alu#269| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#268| state) #b0)) ; $0$formal$alu.sv:334$87_EN[0:0]$1050
+(define-fun |alu#270| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#86| state) #b1 #b0)) ; $0$formal$alu.sv:371$103_EN[0:0]$1082
+(define-fun |alu#271| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#85| state) #b1 #b0)) ; $0$formal$alu.sv:374$104_EN[0:0]$1084
+(define-fun |alu#272| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#84| state) #b1 #b0)) ; $0$formal$alu.sv:377$105_EN[0:0]$1086
+(define-fun |alu#273| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#83| state) #b1 #b0)) ; $0$formal$alu.sv:380$106_EN[0:0]$1088
+(define-fun |alu#274| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#82| state) #b1 #b0)) ; $0$formal$alu.sv:383$107_EN[0:0]$1090
+(define-fun |alu#275| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#81| state) #b1 #b0)) ; $0$formal$alu.sv:386$108_EN[0:0]$1092
+(define-fun |alu#276| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#80| state) #b1 #b0)) ; $0$formal$alu.sv:389$109_EN[0:0]$1094
+(define-fun |alu#277| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#79| state) #b1 #b0)) ; $0$formal$alu.sv:392$110_EN[0:0]$1096
+(define-fun |alu#278| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#143| state)) #b1) false))) ; $0$formal$alu.sv:359$98_CHECK[0:0]$1071
+(define-fun |alu#279| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#184| state) (ite (|alu#278| state) #b1 #b0))) ; $0$formal$alu.sv:301$75_CHECK[0:0]$1025
+(define-fun |alu#280| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#2| state)) #b1) false))) ; $0$formal$alu.sv:363$100_CHECK[0:0]$1075
+(define-fun |alu#281| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#183| state) (ite (|alu#280| state) #b1 #b0))) ; $0$formal$alu.sv:302$76_CHECK[0:0]$1027
+(define-fun |alu#282| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#89| state)) #b1) (= ((_ extract 1 1) (|alu#89| state)) #b1) (= ((_ extract 2 2) (|alu#89| state)) #b1) (= ((_ extract 3 3) (|alu#89| state)) #b1)))) ; $0$formal$alu.sv:366$101_CHECK[0:0]$1077
+(define-fun |alu#283| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#182| state) (ite (|alu#282| state) #b1 #b0))) ; $0$formal$alu.sv:303$77_CHECK[0:0]$1029
+(define-fun |alu#284| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#131| state)) #b1) false))) ; $logic_not$alu.sv:307$1101_Y
 (define-fun |alu#285| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (ite (|alu#284| state) #b1 #b0) (|alu#181| state))) ; $procmux$1247_Y
-(define-fun |alu#286| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#285| state) (|alu#180| state))) ; $0$formal$alu.sv:317$78_CHECK[0:0]$1031
-(define-fun |alu#287| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#144| state)) #b1) false))) ; $logic_not$alu.sv:318$1102_Y
+(define-fun |alu#286| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#285| state) (|alu#180| state))) ; $0$formal$alu.sv:307$78_CHECK[0:0]$1031
+(define-fun |alu#287| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#144| state)) #b1) false))) ; $logic_not$alu.sv:308$1102_Y
 (define-fun |alu#288| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (ite (|alu#287| state) #b1 #b0) (|alu#179| state))) ; $procmux$1257_Y
-(define-fun |alu#289| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#288| state) (|alu#178| state))) ; $0$formal$alu.sv:318$79_CHECK[0:0]$1033
-(define-fun |alu#290| ((state |alu_s|)) Bool (= (|alu#89| state) ((_ extract 3 0) (|alu#101| state)))) ; $eq$alu.sv:323$1103_Y
+(define-fun |alu#289| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#288| state) (|alu#178| state))) ; $0$formal$alu.sv:308$79_CHECK[0:0]$1033
+(define-fun |alu#290| ((state |alu_s|)) Bool (= (|alu#89| state) ((_ extract 3 0) (|alu#101| state)))) ; $eq$alu.sv:313$1103_Y
 (define-fun |alu#291| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#104| state) (ite (|alu#290| state) #b1 #b0) (|alu#177| state))) ; $procmux$1283_Y
 (define-fun |alu#292| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#291| state) (|alu#176| state))) ; $procmux$1285_Y
-(define-fun |alu#293| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#292| state) (|alu#175| state))) ; $0$formal$alu.sv:323$80_CHECK[0:0]$1035
-(define-fun |alu#294| ((state |alu_s|)) Bool (= (|alu#89| state) ((_ extract 3 0) (|alu#95| state)))) ; $eq$alu.sv:326$1104_Y
+(define-fun |alu#293| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#292| state) (|alu#175| state))) ; $0$formal$alu.sv:313$80_CHECK[0:0]$1035
+(define-fun |alu#294| ((state |alu_s|)) Bool (= (|alu#89| state) ((_ extract 3 0) (|alu#95| state)))) ; $eq$alu.sv:316$1104_Y
 (define-fun |alu#295| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#107| state) (ite (|alu#294| state) #b1 #b0) (|alu#174| state))) ; $procmux$1309_Y
 (define-fun |alu#296| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#295| state) (|alu#173| state))) ; $procmux$1311_Y
-(define-fun |alu#297| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#296| state) (|alu#172| state))) ; $0$formal$alu.sv:326$81_CHECK[0:0]$1037
-(define-fun |alu#298| ((state |alu_s|)) Bool (= (|alu#89| state) ((_ extract 3 0) (|alu#99| state)))) ; $eq$alu.sv:329$1105_Y
+(define-fun |alu#297| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#296| state) (|alu#172| state))) ; $0$formal$alu.sv:316$81_CHECK[0:0]$1037
+(define-fun |alu#298| ((state |alu_s|)) Bool (= (|alu#89| state) ((_ extract 3 0) (|alu#99| state)))) ; $eq$alu.sv:319$1105_Y
 (define-fun |alu#299| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#137| state) (ite (|alu#298| state) #b1 #b0) (|alu#171| state))) ; $procmux$1333_Y
 (define-fun |alu#300| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#299| state) (|alu#170| state))) ; $procmux$1335_Y
-(define-fun |alu#301| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#300| state) (|alu#169| state))) ; $0$formal$alu.sv:329$82_CHECK[0:0]$1039
-(define-fun |alu#302| ((state |alu_s|)) Bool (= (|alu#89| state) ((_ extract 3 0) (|alu#100| state)))) ; $eq$alu.sv:332$1106_Y
+(define-fun |alu#301| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#300| state) (|alu#169| state))) ; $0$formal$alu.sv:319$82_CHECK[0:0]$1039
+(define-fun |alu#302| ((state |alu_s|)) Bool (= (|alu#89| state) ((_ extract 3 0) (|alu#100| state)))) ; $eq$alu.sv:322$1106_Y
 (define-fun |alu#303| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#111| state) (ite (|alu#302| state) #b1 #b0) (|alu#168| state))) ; $procmux$1355_Y
 (define-fun |alu#304| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#303| state) (|alu#167| state))) ; $procmux$1357_Y
-(define-fun |alu#305| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#304| state) (|alu#166| state))) ; $0$formal$alu.sv:332$83_CHECK[0:0]$1041
-(define-fun |alu#306| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#97| state))) ; $eq$alu.sv:335$1107_Y
+(define-fun |alu#305| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#304| state) (|alu#166| state))) ; $0$formal$alu.sv:322$83_CHECK[0:0]$1041
+(define-fun |alu#306| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#97| state))) ; $eq$alu.sv:325$1107_Y
 (define-fun |alu#307| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#115| state) (ite (|alu#306| state) #b1 #b0) (|alu#165| state))) ; $procmux$1375_Y
 (define-fun |alu#308| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#307| state) (|alu#164| state))) ; $procmux$1377_Y
-(define-fun |alu#309| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#308| state) (|alu#163| state))) ; $0$formal$alu.sv:335$84_CHECK[0:0]$1043
-(define-fun |alu#310| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#96| state))) ; $eq$alu.sv:338$1108_Y
+(define-fun |alu#309| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#308| state) (|alu#163| state))) ; $0$formal$alu.sv:325$84_CHECK[0:0]$1043
+(define-fun |alu#310| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#96| state))) ; $eq$alu.sv:328$1108_Y
 (define-fun |alu#311| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#119| state) (ite (|alu#310| state) #b1 #b0) (|alu#162| state))) ; $procmux$1393_Y
 (define-fun |alu#312| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#311| state) (|alu#161| state))) ; $procmux$1395_Y
-(define-fun |alu#313| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#312| state) (|alu#160| state))) ; $0$formal$alu.sv:338$85_CHECK[0:0]$1045
-(define-fun |alu#314| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#98| state))) ; $eq$alu.sv:341$1109_Y
+(define-fun |alu#313| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#312| state) (|alu#160| state))) ; $0$formal$alu.sv:328$85_CHECK[0:0]$1045
+(define-fun |alu#314| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#98| state))) ; $eq$alu.sv:331$1109_Y
 (define-fun |alu#315| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#123| state) (ite (|alu#314| state) #b1 #b0) (|alu#159| state))) ; $procmux$1409_Y
 (define-fun |alu#316| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#315| state) (|alu#158| state))) ; $procmux$1411_Y
-(define-fun |alu#317| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#316| state) (|alu#157| state))) ; $0$formal$alu.sv:341$86_CHECK[0:0]$1047
-(define-fun |alu#318| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#94| state))) ; $eq$alu.sv:344$1110_Y
+(define-fun |alu#317| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#316| state) (|alu#157| state))) ; $0$formal$alu.sv:331$86_CHECK[0:0]$1047
+(define-fun |alu#318| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#94| state))) ; $eq$alu.sv:334$1110_Y
 (define-fun |alu#319| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#127| state) (ite (|alu#318| state) #b1 #b0) (|alu#156| state))) ; $procmux$1423_Y
 (define-fun |alu#320| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#133| state)) #b1) (|alu#319| state) (|alu#155| state))) ; $procmux$1425_Y
-(define-fun |alu#321| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#320| state) (|alu#154| state))) ; $0$formal$alu.sv:344$87_CHECK[0:0]$1049
-(define-fun |alu#322| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#4| state)) #b1) (= ((_ extract 0 0) (|alu#11| state)) #b1) (= ((_ extract 0 0) (|alu#18| state)) #b1) (= ((_ extract 0 0) (|alu#26| state)) #b1)))) ; $0$formal$alu.sv:355$90_CHECK[0:0]$1055
-(define-fun |alu#323| ((state |alu_s|)) Bool (= (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) #b1111)) ; $0$formal$alu.sv:356$91_CHECK[0:0]$1057
-(define-fun |alu#324| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#5| state)) #b1) (= ((_ extract 0 0) (|alu#12| state)) #b1) (= ((_ extract 0 0) (|alu#19| state)) #b1) (= ((_ extract 0 0) (|alu#27| state)) #b1)))) ; $0$formal$alu.sv:357$92_CHECK[0:0]$1059
-(define-fun |alu#325| ((state |alu_s|)) Bool (= (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))) #b1111)) ; $0$formal$alu.sv:358$93_CHECK[0:0]$1061
-(define-fun |alu#326| ((state |alu_s|)) Bool (= (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) #b1010)) ; $eq$alu.sv:361$1118_Y
-(define-fun |alu#327| ((state |alu_s|)) Bool (and (or  (|alu#86| state) false) (or  (|alu#326| state) false))) ; $logic_and$alu.sv:361$1119_Y
-(define-fun |alu#328| ((state |alu_s|)) Bool (= (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))) #b1010)) ; $eq$alu.sv:361$1120_Y
-(define-fun |alu#329| ((state |alu_s|)) Bool (and (or  (|alu#327| state) false) (or  (|alu#328| state) false))) ; $0$formal$alu.sv:361$94_CHECK[0:0]$1063
-(define-fun |alu#330| ((state |alu_s|)) Bool (= (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) #b1000)) ; $eq$alu.sv:363$1123_Y
-(define-fun |alu#331| ((state |alu_s|)) Bool (and (or  (|alu#84| state) false) (or  (|alu#330| state) false))) ; $0$formal$alu.sv:363$95_CHECK[0:0]$1065
-(define-fun |alu#332| ((state |alu_s|)) Bool (and (or  (|alu#86| state) false) (or  (|alu#322| state) false))) ; $logic_and$alu.sv:365$1127_Y
-(define-fun |alu#333| ((state |alu_s|)) Bool (and (or  (|alu#332| state) false) (or  (|alu#324| state) false))) ; $0$formal$alu.sv:365$96_CHECK[0:0]$1067
-(define-fun |alu#334| ((state |alu_s|)) Bool (= (|alu#89| state) #b1111)) ; $0$formal$alu.sv:378$102_CHECK[0:0]$1079
-(define-fun |alu#335| ((state |alu_s|)) (_ BitVec 4) (bvadd (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))))) ; $add$alu.sv:382$1134_Y
-(define-fun |alu#336| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#335| state))) ; $eq$alu.sv:382$1135_Y
-(define-fun |alu#337| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#86| state) (ite (|alu#336| state) #b1 #b0) (|alu#153| state))) ; $0$formal$alu.sv:382$103_CHECK[0:0]$1081
-(define-fun |alu#338| ((state |alu_s|)) (_ BitVec 4) (bvsub (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))))) ; $sub$alu.sv:385$1136_Y
-(define-fun |alu#339| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#338| state))) ; $eq$alu.sv:385$1137_Y
-(define-fun |alu#340| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#85| state) (ite (|alu#339| state) #b1 #b0) (|alu#152| state))) ; $0$formal$alu.sv:385$104_CHECK[0:0]$1083
-(define-fun |alu#341| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#84| state) (ite (|alu#298| state) #b1 #b0) (|alu#151| state))) ; $0$formal$alu.sv:388$105_CHECK[0:0]$1085
-(define-fun |alu#342| ((state |alu_s|)) Bool (= (concat #b0000000000000000000000000000 (|alu#89| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (|alu#74| state)))))))))))))))))))))))))))))) ; $eq$alu.sv:391$1140_Y
-(define-fun |alu#343| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#83| state) (ite (|alu#342| state) #b1 #b0) (|alu#150| state))) ; $0$formal$alu.sv:391$106_CHECK[0:0]$1087
-(define-fun |alu#344| ((state |alu_s|)) (_ BitVec 4) (bvand (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))))) ; $and$alu.sv:394$1141_Y
-(define-fun |alu#345| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#344| state))) ; $eq$alu.sv:394$1142_Y
-(define-fun |alu#346| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#82| state) (ite (|alu#345| state) #b1 #b0) (|alu#149| state))) ; $0$formal$alu.sv:394$107_CHECK[0:0]$1089
-(define-fun |alu#347| ((state |alu_s|)) (_ BitVec 4) (bvor (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))))) ; $or$alu.sv:397$1143_Y
-(define-fun |alu#348| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#347| state))) ; $eq$alu.sv:397$1144_Y
-(define-fun |alu#349| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#81| state) (ite (|alu#348| state) #b1 #b0) (|alu#148| state))) ; $0$formal$alu.sv:397$108_CHECK[0:0]$1091
-(define-fun |alu#350| ((state |alu_s|)) (_ BitVec 4) (bvnot (|alu#344| state))) ; $not$alu.sv:400$1146_Y
-(define-fun |alu#351| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#350| state))) ; $eq$alu.sv:400$1147_Y
-(define-fun |alu#352| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#80| state) (ite (|alu#351| state) #b1 #b0) (|alu#147| state))) ; $0$formal$alu.sv:400$109_CHECK[0:0]$1093
-(define-fun |alu#353| ((state |alu_s|)) (_ BitVec 4) (bvnot (|alu#347| state))) ; $not$alu.sv:403$1149_Y
-(define-fun |alu#354| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#353| state))) ; $eq$alu.sv:403$1150_Y
-(define-fun |alu#355| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#79| state) (ite (|alu#354| state) #b1 #b0) (|alu#146| state))) ; $0$formal$alu.sv:403$110_CHECK[0:0]$1095
+(define-fun |alu#321| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#320| state) (|alu#154| state))) ; $0$formal$alu.sv:334$87_CHECK[0:0]$1049
+(define-fun |alu#322| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#4| state)) #b1) (= ((_ extract 0 0) (|alu#11| state)) #b1) (= ((_ extract 0 0) (|alu#18| state)) #b1) (= ((_ extract 0 0) (|alu#26| state)) #b1)))) ; $0$formal$alu.sv:344$90_CHECK[0:0]$1055
+(define-fun |alu#323| ((state |alu_s|)) Bool (= (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) #b1111)) ; $0$formal$alu.sv:345$91_CHECK[0:0]$1057
+(define-fun |alu#324| ((state |alu_s|)) Bool (not (or  (= ((_ extract 0 0) (|alu#5| state)) #b1) (= ((_ extract 0 0) (|alu#12| state)) #b1) (= ((_ extract 0 0) (|alu#19| state)) #b1) (= ((_ extract 0 0) (|alu#27| state)) #b1)))) ; $0$formal$alu.sv:346$92_CHECK[0:0]$1059
+(define-fun |alu#325| ((state |alu_s|)) Bool (= (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))) #b1111)) ; $0$formal$alu.sv:347$93_CHECK[0:0]$1061
+(define-fun |alu#326| ((state |alu_s|)) Bool (= (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) #b1010)) ; $eq$alu.sv:350$1118_Y
+(define-fun |alu#327| ((state |alu_s|)) Bool (and (or  (|alu#86| state) false) (or  (|alu#326| state) false))) ; $logic_and$alu.sv:350$1119_Y
+(define-fun |alu#328| ((state |alu_s|)) Bool (= (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))) #b1010)) ; $eq$alu.sv:350$1120_Y
+(define-fun |alu#329| ((state |alu_s|)) Bool (and (or  (|alu#327| state) false) (or  (|alu#328| state) false))) ; $0$formal$alu.sv:350$94_CHECK[0:0]$1063
+(define-fun |alu#330| ((state |alu_s|)) Bool (= (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) #b1000)) ; $eq$alu.sv:352$1123_Y
+(define-fun |alu#331| ((state |alu_s|)) Bool (and (or  (|alu#84| state) false) (or  (|alu#330| state) false))) ; $0$formal$alu.sv:352$95_CHECK[0:0]$1065
+(define-fun |alu#332| ((state |alu_s|)) Bool (and (or  (|alu#86| state) false) (or  (|alu#322| state) false))) ; $logic_and$alu.sv:354$1127_Y
+(define-fun |alu#333| ((state |alu_s|)) Bool (and (or  (|alu#332| state) false) (or  (|alu#324| state) false))) ; $0$formal$alu.sv:354$96_CHECK[0:0]$1067
+(define-fun |alu#334| ((state |alu_s|)) Bool (= (|alu#89| state) #b1111)) ; $0$formal$alu.sv:367$102_CHECK[0:0]$1079
+(define-fun |alu#335| ((state |alu_s|)) (_ BitVec 4) (bvadd (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))))) ; $add$alu.sv:371$1134_Y
+(define-fun |alu#336| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#335| state))) ; $eq$alu.sv:371$1135_Y
+(define-fun |alu#337| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#86| state) (ite (|alu#336| state) #b1 #b0) (|alu#153| state))) ; $0$formal$alu.sv:371$103_CHECK[0:0]$1081
+(define-fun |alu#338| ((state |alu_s|)) (_ BitVec 4) (bvsub (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))))) ; $sub$alu.sv:374$1136_Y
+(define-fun |alu#339| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#338| state))) ; $eq$alu.sv:374$1137_Y
+(define-fun |alu#340| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#85| state) (ite (|alu#339| state) #b1 #b0) (|alu#152| state))) ; $0$formal$alu.sv:374$104_CHECK[0:0]$1083
+(define-fun |alu#341| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#84| state) (ite (|alu#298| state) #b1 #b0) (|alu#151| state))) ; $0$formal$alu.sv:377$105_CHECK[0:0]$1085
+(define-fun |alu#342| ((state |alu_s|)) Bool (= (concat #b0000000000000000000000000000 (|alu#89| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (concat ((_ extract 4 4) (|alu#74| state)) (|alu#74| state)))))))))))))))))))))))))))))) ; $eq$alu.sv:380$1140_Y
+(define-fun |alu#343| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#83| state) (ite (|alu#342| state) #b1 #b0) (|alu#150| state))) ; $0$formal$alu.sv:380$106_CHECK[0:0]$1087
+(define-fun |alu#344| ((state |alu_s|)) (_ BitVec 4) (bvand (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))))) ; $and$alu.sv:383$1141_Y
+(define-fun |alu#345| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#344| state))) ; $eq$alu.sv:383$1142_Y
+(define-fun |alu#346| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#82| state) (ite (|alu#345| state) #b1 #b0) (|alu#149| state))) ; $0$formal$alu.sv:383$107_CHECK[0:0]$1089
+(define-fun |alu#347| ((state |alu_s|)) (_ BitVec 4) (bvor (concat (|alu#26| state) (concat (|alu#18| state) (concat (|alu#11| state) (|alu#4| state)))) (concat (|alu#27| state) (concat (|alu#19| state) (concat (|alu#12| state) (|alu#5| state)))))) ; $or$alu.sv:386$1143_Y
+(define-fun |alu#348| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#347| state))) ; $eq$alu.sv:386$1144_Y
+(define-fun |alu#349| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#81| state) (ite (|alu#348| state) #b1 #b0) (|alu#148| state))) ; $0$formal$alu.sv:386$108_CHECK[0:0]$1091
+(define-fun |alu#350| ((state |alu_s|)) (_ BitVec 4) (bvnot (|alu#344| state))) ; $not$alu.sv:389$1146_Y
+(define-fun |alu#351| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#350| state))) ; $eq$alu.sv:389$1147_Y
+(define-fun |alu#352| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#80| state) (ite (|alu#351| state) #b1 #b0) (|alu#147| state))) ; $0$formal$alu.sv:389$109_CHECK[0:0]$1093
+(define-fun |alu#353| ((state |alu_s|)) (_ BitVec 4) (bvnot (|alu#347| state))) ; $not$alu.sv:392$1149_Y
+(define-fun |alu#354| ((state |alu_s|)) Bool (= (|alu#89| state) (|alu#353| state))) ; $eq$alu.sv:392$1150_Y
+(define-fun |alu#355| ((state |alu_s|)) (_ BitVec 1) (ite (|alu#79| state) (ite (|alu#354| state) #b1 #b0) (|alu#146| state))) ; $0$formal$alu.sv:392$110_CHECK[0:0]$1095
 (define-fun |alu#356| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) ((_ extract 4 4) (|alu#87| state)) #b0)) ; $auto$rtlil.cc:2558:Mux$4552
 (define-fun |alu#357| ((state |alu_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) #b1 #b0)) ; $auto$rtlil.cc:2558:Mux$4546
 (define-fun |alu#358| ((state |alu_s|)) (_ BitVec 3) (ite (= ((_ extract 0 0) (|alu#1| state)) #b1) (|alu#78| state) #b000)) ; $auto$rtlil.cc:2558:Mux$4544
@@ -965,48 +965,48 @@
   (|alu_u 0| state)
 )
 (define-fun |alu_i| ((state |alu_s|)) Bool (and
-  (= (= ((_ extract 0 0) (|alu#223| state)) #b1) false) ; $formal$alu.sv:403$110_EN
-  (= (= ((_ extract 0 0) (|alu#224| state)) #b1) false) ; $formal$alu.sv:400$109_EN
-  (= (= ((_ extract 0 0) (|alu#225| state)) #b1) false) ; $formal$alu.sv:397$108_EN
-  (= (= ((_ extract 0 0) (|alu#226| state)) #b1) false) ; $formal$alu.sv:394$107_EN
-  (= (= ((_ extract 0 0) (|alu#227| state)) #b1) false) ; $formal$alu.sv:391$106_EN
-  (= (= ((_ extract 0 0) (|alu#228| state)) #b1) false) ; $formal$alu.sv:388$105_EN
-  (= (= ((_ extract 0 0) (|alu#229| state)) #b1) false) ; $formal$alu.sv:385$104_EN
-  (= (= ((_ extract 0 0) (|alu#230| state)) #b1) false) ; $formal$alu.sv:382$103_EN
-  (= (= ((_ extract 0 0) (|alu#231| state)) #b1) false) ; $formal$alu.sv:352$88_EN
-  (= (= ((_ extract 0 0) (|alu#232| state)) #b1) false) ; $formal$alu.sv:344$87_EN
-  (= (= ((_ extract 0 0) (|alu#233| state)) #b1) false) ; $formal$alu.sv:341$86_EN
-  (= (= ((_ extract 0 0) (|alu#234| state)) #b1) false) ; $formal$alu.sv:338$85_EN
-  (= (= ((_ extract 0 0) (|alu#235| state)) #b1) false) ; $formal$alu.sv:335$84_EN
-  (= (= ((_ extract 0 0) (|alu#236| state)) #b1) false) ; $formal$alu.sv:332$83_EN
-  (= (= ((_ extract 0 0) (|alu#237| state)) #b1) false) ; $formal$alu.sv:329$82_EN
-  (= (= ((_ extract 0 0) (|alu#238| state)) #b1) false) ; $formal$alu.sv:326$81_EN
-  (= (= ((_ extract 0 0) (|alu#239| state)) #b1) false) ; $formal$alu.sv:323$80_EN
-  (= (= ((_ extract 0 0) (|alu#240| state)) #b1) false) ; $formal$alu.sv:317$78_EN
-  (= (= ((_ extract 0 0) (|alu#241| state)) #b1) false) ; $formal$alu.sv:311$75_EN
+  (= (= ((_ extract 0 0) (|alu#223| state)) #b1) false) ; $formal$alu.sv:392$110_EN
+  (= (= ((_ extract 0 0) (|alu#224| state)) #b1) false) ; $formal$alu.sv:389$109_EN
+  (= (= ((_ extract 0 0) (|alu#225| state)) #b1) false) ; $formal$alu.sv:386$108_EN
+  (= (= ((_ extract 0 0) (|alu#226| state)) #b1) false) ; $formal$alu.sv:383$107_EN
+  (= (= ((_ extract 0 0) (|alu#227| state)) #b1) false) ; $formal$alu.sv:380$106_EN
+  (= (= ((_ extract 0 0) (|alu#228| state)) #b1) false) ; $formal$alu.sv:377$105_EN
+  (= (= ((_ extract 0 0) (|alu#229| state)) #b1) false) ; $formal$alu.sv:374$104_EN
+  (= (= ((_ extract 0 0) (|alu#230| state)) #b1) false) ; $formal$alu.sv:371$103_EN
+  (= (= ((_ extract 0 0) (|alu#231| state)) #b1) false) ; $formal$alu.sv:341$88_EN
+  (= (= ((_ extract 0 0) (|alu#232| state)) #b1) false) ; $formal$alu.sv:334$87_EN
+  (= (= ((_ extract 0 0) (|alu#233| state)) #b1) false) ; $formal$alu.sv:331$86_EN
+  (= (= ((_ extract 0 0) (|alu#234| state)) #b1) false) ; $formal$alu.sv:328$85_EN
+  (= (= ((_ extract 0 0) (|alu#235| state)) #b1) false) ; $formal$alu.sv:325$84_EN
+  (= (= ((_ extract 0 0) (|alu#236| state)) #b1) false) ; $formal$alu.sv:322$83_EN
+  (= (= ((_ extract 0 0) (|alu#237| state)) #b1) false) ; $formal$alu.sv:319$82_EN
+  (= (= ((_ extract 0 0) (|alu#238| state)) #b1) false) ; $formal$alu.sv:316$81_EN
+  (= (= ((_ extract 0 0) (|alu#239| state)) #b1) false) ; $formal$alu.sv:313$80_EN
+  (= (= ((_ extract 0 0) (|alu#240| state)) #b1) false) ; $formal$alu.sv:307$78_EN
+  (= (= ((_ extract 0 0) (|alu#241| state)) #b1) false) ; $formal$alu.sv:301$75_EN
   (= (= ((_ extract 0 0) (|alu#132| state)) #b1) false) ; $auto$async2sync.cc:171:execute$4531
 ))
 (define-fun |alu_h| ((state |alu_s|)) Bool true)
 (define-fun |alu_t| ((state |alu_s|) (next_state |alu_s|)) Bool (and
-  (= (|alu#243| state) (|alu#241| next_state)) ; $procdff$4442 $formal$alu.sv:311$75_EN
-  (= (|alu#245| state) (|alu#240| next_state)) ; $procdff$4448 $formal$alu.sv:317$78_EN
-  (= (|alu#248| state) (|alu#239| next_state)) ; $procdff$4452 $formal$alu.sv:323$80_EN
-  (= (|alu#251| state) (|alu#238| next_state)) ; $procdff$4454 $formal$alu.sv:326$81_EN
-  (= (|alu#254| state) (|alu#237| next_state)) ; $procdff$4456 $formal$alu.sv:329$82_EN
-  (= (|alu#257| state) (|alu#236| next_state)) ; $procdff$4458 $formal$alu.sv:332$83_EN
-  (= (|alu#260| state) (|alu#235| next_state)) ; $procdff$4460 $formal$alu.sv:335$84_EN
-  (= (|alu#263| state) (|alu#234| next_state)) ; $procdff$4462 $formal$alu.sv:338$85_EN
-  (= (|alu#266| state) (|alu#233| next_state)) ; $procdff$4464 $formal$alu.sv:341$86_EN
-  (= (|alu#269| state) (|alu#232| next_state)) ; $procdff$4466 $formal$alu.sv:344$87_EN
-  (= #b1 (|alu#231| next_state)) ; $procdff$4468 $formal$alu.sv:352$88_EN
-  (= (|alu#270| state) (|alu#230| next_state)) ; $procdff$4498 $formal$alu.sv:382$103_EN
-  (= (|alu#271| state) (|alu#229| next_state)) ; $procdff$4500 $formal$alu.sv:385$104_EN
-  (= (|alu#272| state) (|alu#228| next_state)) ; $procdff$4502 $formal$alu.sv:388$105_EN
-  (= (|alu#273| state) (|alu#227| next_state)) ; $procdff$4504 $formal$alu.sv:391$106_EN
-  (= (|alu#274| state) (|alu#226| next_state)) ; $procdff$4506 $formal$alu.sv:394$107_EN
-  (= (|alu#275| state) (|alu#225| next_state)) ; $procdff$4508 $formal$alu.sv:397$108_EN
-  (= (|alu#276| state) (|alu#224| next_state)) ; $procdff$4510 $formal$alu.sv:400$109_EN
-  (= (|alu#277| state) (|alu#223| next_state)) ; $procdff$4512 $formal$alu.sv:403$110_EN
+  (= (|alu#243| state) (|alu#241| next_state)) ; $procdff$4442 $formal$alu.sv:301$75_EN
+  (= (|alu#245| state) (|alu#240| next_state)) ; $procdff$4448 $formal$alu.sv:307$78_EN
+  (= (|alu#248| state) (|alu#239| next_state)) ; $procdff$4452 $formal$alu.sv:313$80_EN
+  (= (|alu#251| state) (|alu#238| next_state)) ; $procdff$4454 $formal$alu.sv:316$81_EN
+  (= (|alu#254| state) (|alu#237| next_state)) ; $procdff$4456 $formal$alu.sv:319$82_EN
+  (= (|alu#257| state) (|alu#236| next_state)) ; $procdff$4458 $formal$alu.sv:322$83_EN
+  (= (|alu#260| state) (|alu#235| next_state)) ; $procdff$4460 $formal$alu.sv:325$84_EN
+  (= (|alu#263| state) (|alu#234| next_state)) ; $procdff$4462 $formal$alu.sv:328$85_EN
+  (= (|alu#266| state) (|alu#233| next_state)) ; $procdff$4464 $formal$alu.sv:331$86_EN
+  (= (|alu#269| state) (|alu#232| next_state)) ; $procdff$4466 $formal$alu.sv:334$87_EN
+  (= #b1 (|alu#231| next_state)) ; $procdff$4468 $formal$alu.sv:341$88_EN
+  (= (|alu#270| state) (|alu#230| next_state)) ; $procdff$4498 $formal$alu.sv:371$103_EN
+  (= (|alu#271| state) (|alu#229| next_state)) ; $procdff$4500 $formal$alu.sv:374$104_EN
+  (= (|alu#272| state) (|alu#228| next_state)) ; $procdff$4502 $formal$alu.sv:377$105_EN
+  (= (|alu#273| state) (|alu#227| next_state)) ; $procdff$4504 $formal$alu.sv:380$106_EN
+  (= (|alu#274| state) (|alu#226| next_state)) ; $procdff$4506 $formal$alu.sv:383$107_EN
+  (= (|alu#275| state) (|alu#225| next_state)) ; $procdff$4508 $formal$alu.sv:386$108_EN
+  (= (|alu#276| state) (|alu#224| next_state)) ; $procdff$4510 $formal$alu.sv:389$109_EN
+  (= (|alu#277| state) (|alu#223| next_state)) ; $procdff$4512 $formal$alu.sv:392$110_EN
   (= (|alu#279| state) (|alu#220| next_state)) ; $procdff$4441 \_witness_.anyinit_procdff_4441
   (= (|alu#281| state) (|alu#219| next_state)) ; $procdff$4443 \_witness_.anyinit_procdff_4443
   (= (|alu#283| state) (|alu#218| next_state)) ; $procdff$4445 \_witness_.anyinit_procdff_4445

@@ -1,17 +1,11 @@
 
 #export ROOT=$PWD/quickstart
 
-new_all: fifo robot
+new_all: robot alu half_adder full_adder
 
-fifo: 	
-	sudo sby -f fifo_test/FPV.sby 
 
 robot: 	
-	sudo sby -f robot/FPV.sby 
-
-wave_robot:
-	gtkwave robot/FPV_prv/engine_0/trace.vcd noskip.gtkw
-
+	sby -f robot/FPV.sby 
 
 alu: 	
 	sby -f alu/FPV.sby 
@@ -19,15 +13,15 @@ alu:
 half_adder:
 	sby -f half_adder/FPV.sby
 
+full_adder:
+	sby -f full_adder/FPV.sby
+
+#Example for debbug
+#Need gtwave install
 wave_alu:
 	gtkwave alu/FPV_prv/engine_0/trace.vcd
 
-#new_all_clean: clean_todo 
 
-#clean_todo:
-#	rm -f ./examples/ABSASR/*.xml
-#	rm -f ./examples/ABSASR/main_ast
-#	rm -rf ./results/ABSASR
 
 	
 	

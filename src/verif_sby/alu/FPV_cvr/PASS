@@ -1,39 +1,39 @@
-Elapsed clock time [H:MM:SS (secs)]: 0:00:14 (14)
-Elapsed process time [H:MM:SS (secs)]: 0:00:20 (20)
+Elapsed clock time [H:MM:SS (secs)]: 0:00:03 (3)
+Elapsed process time [H:MM:SS (secs)]: 0:00:05 (5)
 engine_0 (smtbmc z3) returned pass
 cover trace: engine_0/trace0.vcd
-  reached cover statement alu.cov_carry_true at alu.sv:369.4-369.34 in step 1
-  reached cover statement alu.cov_op1_zero at alu.sv:355.4-355.38 in step 1
-  reached cover statement alu.cov_op2_one at alu.sv:358.4-358.38 in step 1
-  reached cover statement alu.cov_opcode_one at alu.sv:353.4-353.43 in step 1
-  reached cover statement alu.cov_result_zero at alu.sv:377.4-377.44 in step 1
-  reached cover statement alu.cov_zero_false at alu.sv:374.4-374.33 in step 1
-  reached cover statement alu.cover_res7 at alu.sv:403.6-403.50 in step 1
+  reached cover statement alu.cov_carry_true at alu.sv:358.4-358.34 in step 1
+  reached cover statement alu.cov_op1_zero at alu.sv:344.4-344.38 in step 1
+  reached cover statement alu.cov_op2_one at alu.sv:347.4-347.38 in step 1
+  reached cover statement alu.cov_opcode_one at alu.sv:342.4-342.43 in step 1
+  reached cover statement alu.cov_result_zero at alu.sv:366.4-366.44 in step 1
+  reached cover statement alu.cov_zero_false at alu.sv:363.4-363.33 in step 1
+  reached cover statement alu.cover_res7 at alu.sv:392.6-392.50 in step 1
 cover trace: engine_0/trace1.vcd
-  reached cover statement alu.cov_carry_false at alu.sv:370.4-370.35 in step 1
-  reached cover statement alu.cov_op1_one at alu.sv:356.4-356.38 in step 1
-  reached cover statement alu.cov_zero_true at alu.sv:373.4-373.32 in step 1
+  reached cover statement alu.cov_carry_false at alu.sv:359.4-359.35 in step 1
+  reached cover statement alu.cov_op1_one at alu.sv:345.4-345.38 in step 1
+  reached cover statement alu.cov_zero_true at alu.sv:362.4-362.32 in step 1
 cover trace: engine_0/trace10.vcd
-  reached cover statement alu.cover_res6 at alu.sv:400.6-400.50 in step 1
+  reached cover statement alu.cover_res6 at alu.sv:389.6-389.50 in step 1
 cover trace: engine_0/trace11.vcd
-  reached cover statement alu.cover_res2 at alu.sv:388.6-388.51 in step 1
+  reached cover statement alu.cover_res2 at alu.sv:377.6-377.51 in step 1
 cover trace: engine_0/trace12.vcd
-  reached cover statement alu.cov_optest2 at alu.sv:363.4-363.56 in step 1
+  reached cover statement alu.cov_optest2 at alu.sv:352.4-352.56 in step 1
 cover trace: engine_0/trace2.vcd
-  reached cover statement alu.cov_op2_zero at alu.sv:357.4-357.38 in step 1
+  reached cover statement alu.cov_op2_zero at alu.sv:346.4-346.38 in step 1
 cover trace: engine_0/trace3.vcd
-  reached cover statement alu.cov_result_one at alu.sv:378.4-378.44 in step 1
+  reached cover statement alu.cov_result_one at alu.sv:367.4-367.44 in step 1
 cover trace: engine_0/trace4.vcd
-  reached cover statement alu.cover_res4 at alu.sv:394.6-394.49 in step 1
+  reached cover statement alu.cover_res4 at alu.sv:383.6-383.49 in step 1
 cover trace: engine_0/trace5.vcd
-  reached cover statement alu.cov_opcode_zero at alu.sv:352.4-352.43 in step 1
-  reached cover statement alu.cov_optest4 at alu.sv:365.4-365.74 in step 1
-  reached cover statement alu.cover_res0 at alu.sv:382.6-382.49 in step 1
+  reached cover statement alu.cov_opcode_zero at alu.sv:341.4-341.43 in step 1
+  reached cover statement alu.cov_optest4 at alu.sv:354.4-354.74 in step 1
+  reached cover statement alu.cover_res0 at alu.sv:371.6-371.49 in step 1
 cover trace: engine_0/trace6.vcd
-  reached cover statement alu.cov_optest1 at alu.sv:361.4-361.74 in step 1
+  reached cover statement alu.cov_optest1 at alu.sv:350.4-350.74 in step 1
 cover trace: engine_0/trace7.vcd
-  reached cover statement alu.cover_res3 at alu.sv:391.6-391.48 in step 1
+  reached cover statement alu.cover_res3 at alu.sv:380.6-380.48 in step 1
 cover trace: engine_0/trace8.vcd
-  reached cover statement alu.cover_res1 at alu.sv:385.6-385.50 in step 1
+  reached cover statement alu.cover_res1 at alu.sv:374.6-374.50 in step 1
 cover trace: engine_0/trace9.vcd
-  reached cover statement alu.cover_res5 at alu.sv:397.6-397.49 in step 1
+  reached cover statement alu.cover_res5 at alu.sv:386.6-386.49 in step 1

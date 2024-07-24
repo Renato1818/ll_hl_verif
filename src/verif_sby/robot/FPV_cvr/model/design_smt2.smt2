@@ -7,13 +7,13 @@
 ; yosys-smt2-wire rstn 1
 ; yosys-smt2-witness {"offset": 0, "path": ["\\rstn"], "smtname": "rstn", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |robot_n rstn| ((state |robot_s|)) Bool (|robot#0| state))
-; yosys-smt2-anyinit robot#1 1 robot_new.sv:37.2-43.5
+; yosys-smt2-anyinit robot#1 1 robot.sv:37.2-43.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_136"], "smtname": 1, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#1| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_136
 (define-fun |robot#2| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#1| state) #b0)) ; \out_alarm_flag
 ; yosys-smt2-wire out_alarm_flag 1
 (define-fun |robot_n out_alarm_flag| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#2| state)) #b1))
-; yosys-smt2-anyinit robot#3 1 robot_new.sv:26.2-32.5
+; yosys-smt2-anyinit robot#3 1 robot.sv:26.2-32.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_137"], "smtname": 3, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#3| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_137
 (define-fun |robot#4| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#3| state) #b0)) ; \obs_detected
@@ -21,7 +21,7 @@
 ; yosys-smt2-wire obs_detected_out 1
 (define-fun |robot_n obs_detected_out| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#4| state)) #b1))
 (declare-fun |robot#5| (|robot_s|) (_ BitVec 16)) ; \dist_v
-(define-fun |robot#6| ((state |robot_s|)) Bool (bvult (|robot#5| state) #b0000000000110010)) ; $lt$robot_new.sv:24$11_Y
+(define-fun |robot#6| ((state |robot_s|)) Bool (bvult (|robot#5| state) #b0000000000110010)) ; $lt$robot.sv:24$11_Y
 (define-fun |robot#7| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#6| state) #b1 #b0)) ; \f_obs
 ; yosys-smt2-wire obs_detected_next 1
 (define-fun |robot_n obs_detected_next| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#7| state)) #b1))
@@ -37,14 +37,14 @@
 ; yosys-smt2-register f_past_past_valid 1
 ; yosys-smt2-wire f_past_past_valid 1
 (define-fun |robot_n f_past_past_valid| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#10| state)) #b1))
-; yosys-smt2-anyinit robot#11 1 robot_new.sv:70.3-83.6
+; yosys-smt2-anyinit robot#11 1 robot.sv:70.3-83.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_130"], "smtname": 11, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#11| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_130
 (define-fun |robot#12| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#11| state) #b0)) ; \f_obs_past
 (define-fun |robot#13| ((state |robot_s|)) (_ BitVec 1) (bvxor (|robot#12| state) (|robot#4| state))) ; \f_obs_res
 ; yosys-smt2-wire f_obs_res 1
 (define-fun |robot_n f_obs_res| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#13| state)) #b1))
-; yosys-smt2-anyinit robot#14 1 robot_new.sv:70.3-83.6
+; yosys-smt2-anyinit robot#14 1 robot.sv:70.3-83.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_131"], "smtname": 14, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#14| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_131
 (define-fun |robot#15| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#14| state) #b0)) ; \f_obs_past_past
@@ -118,124 +118,124 @@
 ; yosys-smt2-register _witness_.anyinit_procdff_130 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_130 1
 (define-fun |robot_n _witness_.anyinit_procdff_130| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#11| state)) #b1))
-; yosys-smt2-anyinit robot#25 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#25 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_128"], "smtname": 25, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#25| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_128
 ; yosys-smt2-register _witness_.anyinit_procdff_128 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_128 1
 (define-fun |robot_n _witness_.anyinit_procdff_128| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#25| state)) #b1))
-; yosys-smt2-anyinit robot#26 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#26 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_126"], "smtname": 26, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#26| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_126
 ; yosys-smt2-register _witness_.anyinit_procdff_126 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_126 1
 (define-fun |robot_n _witness_.anyinit_procdff_126| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#26| state)) #b1))
-; yosys-smt2-anyinit robot#27 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#27 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_124"], "smtname": 27, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#27| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_124
 ; yosys-smt2-register _witness_.anyinit_procdff_124 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_124 1
 (define-fun |robot_n _witness_.anyinit_procdff_124| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#27| state)) #b1))
-; yosys-smt2-anyinit robot#28 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#28 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_122"], "smtname": 28, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#28| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_122
 ; yosys-smt2-register _witness_.anyinit_procdff_122 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_122 1
 (define-fun |robot_n _witness_.anyinit_procdff_122| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#28| state)) #b1))
-; yosys-smt2-anyinit robot#29 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#29 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_120"], "smtname": 29, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#29| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_120
 ; yosys-smt2-register _witness_.anyinit_procdff_120 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_120 1
 (define-fun |robot_n _witness_.anyinit_procdff_120| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#29| state)) #b1))
-; yosys-smt2-anyinit robot#30 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#30 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_118"], "smtname": 30, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#30| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_118
 ; yosys-smt2-register _witness_.anyinit_procdff_118 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_118 1
 (define-fun |robot_n _witness_.anyinit_procdff_118| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#30| state)) #b1))
-; yosys-smt2-anyinit robot#31 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#31 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_116"], "smtname": 31, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#31| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_116
 ; yosys-smt2-register _witness_.anyinit_procdff_116 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_116 1
 (define-fun |robot_n _witness_.anyinit_procdff_116| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#31| state)) #b1))
-; yosys-smt2-anyinit robot#32 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#32 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_114"], "smtname": 32, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#32| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_114
 ; yosys-smt2-register _witness_.anyinit_procdff_114 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_114 1
 (define-fun |robot_n _witness_.anyinit_procdff_114| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#32| state)) #b1))
-; yosys-smt2-anyinit robot#33 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#33 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_112"], "smtname": 33, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#33| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_112
 ; yosys-smt2-register _witness_.anyinit_procdff_112 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_112 1
 (define-fun |robot_n _witness_.anyinit_procdff_112| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#33| state)) #b1))
-; yosys-smt2-anyinit robot#34 1 robot_new.sv:86.9-111.12
+; yosys-smt2-anyinit robot#34 1 robot.sv:86.9-108.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_110"], "smtname": 34, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |robot#34| (|robot_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_110
 ; yosys-smt2-register _witness_.anyinit_procdff_110 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_110 1
 (define-fun |robot_n _witness_.anyinit_procdff_110| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#34| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$robot_new.sv:98$4_EN"], "smtname": 35, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |robot#35| (|robot_s|) (_ BitVec 1)) ; $formal$robot_new.sv:98$4_EN
-; yosys-smt2-register $formal$robot_new.sv:98$4_EN 1
-(define-fun |robot_n $formal$robot_new.sv:98$4_EN| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#35| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$robot_new.sv:95$3_EN"], "smtname": 36, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |robot#36| (|robot_s|) (_ BitVec 1)) ; $formal$robot_new.sv:95$3_EN
-; yosys-smt2-register $formal$robot_new.sv:95$3_EN 1
-(define-fun |robot_n $formal$robot_new.sv:95$3_EN| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#36| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$robot_new.sv:89$1_EN"], "smtname": 37, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |robot#37| (|robot_s|) (_ BitVec 1)) ; $formal$robot_new.sv:89$1_EN
-; yosys-smt2-register $formal$robot_new.sv:89$1_EN 1
-(define-fun |robot_n $formal$robot_new.sv:89$1_EN| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#37| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$robot_new.sv:102$5_EN"], "smtname": 38, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |robot#38| (|robot_s|) (_ BitVec 1)) ; $formal$robot_new.sv:102$5_EN
-; yosys-smt2-register $formal$robot_new.sv:102$5_EN 1
-(define-fun |robot_n $formal$robot_new.sv:102$5_EN| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#38| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$robot.sv:99$5_EN"], "smtname": 35, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |robot#35| (|robot_s|) (_ BitVec 1)) ; $formal$robot.sv:99$5_EN
+; yosys-smt2-register $formal$robot.sv:99$5_EN 1
+(define-fun |robot_n $formal$robot.sv:99$5_EN| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#35| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$robot.sv:95$4_EN"], "smtname": 36, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |robot#36| (|robot_s|) (_ BitVec 1)) ; $formal$robot.sv:95$4_EN
+; yosys-smt2-register $formal$robot.sv:95$4_EN 1
+(define-fun |robot_n $formal$robot.sv:95$4_EN| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#36| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$robot.sv:92$3_EN"], "smtname": 37, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |robot#37| (|robot_s|) (_ BitVec 1)) ; $formal$robot.sv:92$3_EN
+; yosys-smt2-register $formal$robot.sv:92$3_EN 1
+(define-fun |robot_n $formal$robot.sv:92$3_EN| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#37| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$robot.sv:88$1_EN"], "smtname": 38, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |robot#38| (|robot_s|) (_ BitVec 1)) ; $formal$robot.sv:88$1_EN
+; yosys-smt2-register $formal$robot.sv:88$1_EN 1
+(define-fun |robot_n $formal$robot.sv:88$1_EN| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#38| state)) #b1))
 ; yosys-smt2-register $auto$async2sync.cc:171:execute$142 1
 (define-fun |robot_n $auto$async2sync.cc:171:execute$142| ((state |robot_s|)) Bool (= ((_ extract 0 0) (|robot#8| state)) #b1))
 (define-fun |robot#39| ((state |robot_s|)) (_ BitVec 1) (bvnot (ite (|robot#17| state) #b1 #b0))) ; $auto$rtlil.cc:2461:Not$173
 ; yosys-smt2-assume 0 $auto$formalff.cc:758:execute$174
 (define-fun |robot_u 0| ((state |robot_s|)) Bool (or (= ((_ extract 0 0) (|robot#39| state)) #b1) (not true))) ; $auto$formalff.cc:758:execute$174
 ; yosys-smt2-cover 0 cov_obs_detected_out_zero
-(define-fun |robot_c 0| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#28| state)) #b1) (= ((_ extract 0 0) (|robot#38| state)) #b1))) ; cov_obs_detected_out_zero
+(define-fun |robot_c 0| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#28| state)) #b1) (= ((_ extract 0 0) (|robot#35| state)) #b1))) ; cov_obs_detected_out_zero
 ; yosys-smt2-cover 1 cov_obs_detected_out_one
-(define-fun |robot_c 1| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#27| state)) #b1) (= ((_ extract 0 0) (|robot#38| state)) #b1))) ; cov_obs_detected_out_one
+(define-fun |robot_c 1| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#27| state)) #b1) (= ((_ extract 0 0) (|robot#35| state)) #b1))) ; cov_obs_detected_out_one
 ; yosys-smt2-cover 2 cov_dist_zero
-(define-fun |robot_c 2| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#30| state)) #b1) (= ((_ extract 0 0) (|robot#38| state)) #b1))) ; cov_dist_zero
+(define-fun |robot_c 2| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#30| state)) #b1) (= ((_ extract 0 0) (|robot#35| state)) #b1))) ; cov_dist_zero
 ; yosys-smt2-cover 3 cov_dist_one
-(define-fun |robot_c 3| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#29| state)) #b1) (= ((_ extract 0 0) (|robot#38| state)) #b1))) ; cov_dist_one
+(define-fun |robot_c 3| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#29| state)) #b1) (= ((_ extract 0 0) (|robot#35| state)) #b1))) ; cov_dist_one
 ; yosys-smt2-cover 4 cov_alarm_zero
-(define-fun |robot_c 4| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#26| state)) #b1) (= ((_ extract 0 0) (|robot#38| state)) #b1))) ; cov_alarm_zero
+(define-fun |robot_c 4| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#26| state)) #b1) (= ((_ extract 0 0) (|robot#35| state)) #b1))) ; cov_alarm_zero
 ; yosys-smt2-cover 5 cov_alarm_one
-(define-fun |robot_c 5| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#25| state)) #b1) (= ((_ extract 0 0) (|robot#38| state)) #b1))) ; cov_alarm_one
+(define-fun |robot_c 5| ((state |robot_s|)) Bool (and (= ((_ extract 0 0) (|robot#25| state)) #b1) (= ((_ extract 0 0) (|robot#35| state)) #b1))) ; cov_alarm_one
 ; yosys-smt2-assert 0 assert_obs_detected_reset
-(define-fun |robot_a 0| ((state |robot_s|)) Bool (or (= ((_ extract 0 0) (|robot#34| state)) #b1) (not (= ((_ extract 0 0) (|robot#37| state)) #b1)))) ; assert_obs_detected_reset
+(define-fun |robot_a 0| ((state |robot_s|)) Bool (or (= ((_ extract 0 0) (|robot#34| state)) #b1) (not (= ((_ extract 0 0) (|robot#38| state)) #b1)))) ; assert_obs_detected_reset
 ; yosys-smt2-assert 1 assert_obs_detected
-(define-fun |robot_a 1| ((state |robot_s|)) Bool (or (= ((_ extract 0 0) (|robot#32| state)) #b1) (not (= ((_ extract 0 0) (|robot#36| state)) #b1)))) ; assert_obs_detected
+(define-fun |robot_a 1| ((state |robot_s|)) Bool (or (= ((_ extract 0 0) (|robot#32| state)) #b1) (not (= ((_ extract 0 0) (|robot#37| state)) #b1)))) ; assert_obs_detected
 ; yosys-smt2-assert 2 assert_alarm_false_reset
-(define-fun |robot_a 2| ((state |robot_s|)) Bool (or (= ((_ extract 0 0) (|robot#33| state)) #b1) (not (= ((_ extract 0 0) (|robot#37| state)) #b1)))) ; assert_alarm_false_reset
+(define-fun |robot_a 2| ((state |robot_s|)) Bool (or (= ((_ extract 0 0) (|robot#33| state)) #b1) (not (= ((_ extract 0 0) (|robot#38| state)) #b1)))) ; assert_alarm_false_reset
 ; yosys-smt2-assert 3 assert_alarm
-(define-fun |robot_a 3| ((state |robot_s|)) Bool (or (= ((_ extract 0 0) (|robot#31| state)) #b1) (not (= ((_ extract 0 0) (|robot#35| state)) #b1)))) ; assert_alarm
-(define-fun |robot#40| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) #b0 #b1)) ; $0$formal$robot_new.sv:89$1_EN[0:0]$26
+(define-fun |robot_a 3| ((state |robot_s|)) Bool (or (= ((_ extract 0 0) (|robot#31| state)) #b1) (not (= ((_ extract 0 0) (|robot#36| state)) #b1)))) ; assert_alarm
+(define-fun |robot#40| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) #b0 #b1)) ; $0$formal$robot.sv:88$1_EN[0:0]$26
 (define-fun |robot#41| ((state |robot_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|robot#9| state)) #b1) #b1 #b0)) ; $procmux$88_Y
-(define-fun |robot#42| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#41| state) #b0)) ; $0$formal$robot_new.sv:95$3_EN[0:0]$30
+(define-fun |robot#42| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#41| state) #b0)) ; $0$formal$robot.sv:92$3_EN[0:0]$30
 (define-fun |robot#43| ((state |robot_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|robot#10| state)) #b1) #b1 #b0)) ; $procmux$98_Y
-(define-fun |robot#44| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#43| state) #b0)) ; $0$formal$robot_new.sv:98$4_EN[0:0]$32
-(define-fun |robot#45| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#4| state)) #b1) false))) ; $0$formal$robot_new.sv:106$8_CHECK[0:0]$39
-(define-fun |robot#46| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#22| state) (ite (|robot#45| state) #b1 #b0))) ; $0$formal$robot_new.sv:89$1_CHECK[0:0]$25
-(define-fun |robot#47| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#2| state)) #b1) false))) ; $0$formal$robot_new.sv:109$10_CHECK[0:0]$43
-(define-fun |robot#48| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#21| state) (ite (|robot#47| state) #b1 #b0))) ; $0$formal$robot_new.sv:90$2_CHECK[0:0]$27
-(define-fun |robot#49| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#13| state)) #b1) false))) ; $logic_not$robot_new.sv:95$48_Y
+(define-fun |robot#44| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#43| state) #b0)) ; $0$formal$robot.sv:95$4_EN[0:0]$32
+(define-fun |robot#45| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#4| state)) #b1) false))) ; $0$formal$robot.sv:103$8_CHECK[0:0]$39
+(define-fun |robot#46| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#22| state) (ite (|robot#45| state) #b1 #b0))) ; $0$formal$robot.sv:88$1_CHECK[0:0]$25
+(define-fun |robot#47| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#2| state)) #b1) false))) ; $0$formal$robot.sv:106$10_CHECK[0:0]$43
+(define-fun |robot#48| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#21| state) (ite (|robot#47| state) #b1 #b0))) ; $0$formal$robot.sv:89$2_CHECK[0:0]$27
+(define-fun |robot#49| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#13| state)) #b1) false))) ; $logic_not$robot.sv:92$48_Y
 (define-fun |robot#50| ((state |robot_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|robot#9| state)) #b1) (ite (|robot#49| state) #b1 #b0) (|robot#20| state))) ; $procmux$93_Y
-(define-fun |robot#51| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#50| state) (|robot#19| state))) ; $0$formal$robot_new.sv:95$3_CHECK[0:0]$29
-(define-fun |robot#52| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#16| state)) #b1) false))) ; $logic_not$robot_new.sv:98$49_Y
+(define-fun |robot#51| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#50| state) (|robot#19| state))) ; $0$formal$robot.sv:92$3_CHECK[0:0]$29
+(define-fun |robot#52| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#16| state)) #b1) false))) ; $logic_not$robot.sv:95$49_Y
 (define-fun |robot#53| ((state |robot_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|robot#10| state)) #b1) (ite (|robot#52| state) #b1 #b0) (|robot#24| state))) ; $procmux$103_Y
-(define-fun |robot#54| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#53| state) (|robot#23| state))) ; $0$formal$robot_new.sv:98$4_CHECK[0:0]$31
-(define-fun |robot#55| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#5| state)) #b1) (= ((_ extract 1 1) (|robot#5| state)) #b1) (= ((_ extract 2 2) (|robot#5| state)) #b1) (= ((_ extract 3 3) (|robot#5| state)) #b1) (= ((_ extract 4 4) (|robot#5| state)) #b1) (= ((_ extract 5 5) (|robot#5| state)) #b1) (= ((_ extract 6 6) (|robot#5| state)) #b1) (= ((_ extract 7 7) (|robot#5| state)) #b1) (= ((_ extract 8 8) (|robot#5| state)) #b1) (= ((_ extract 9 9) (|robot#5| state)) #b1) (= ((_ extract 10 10) (|robot#5| state)) #b1) (= ((_ extract 11 11) (|robot#5| state)) #b1) (= ((_ extract 12 12) (|robot#5| state)) #b1) (= ((_ extract 13 13) (|robot#5| state)) #b1) (= ((_ extract 14 14) (|robot#5| state)) #b1) (= ((_ extract 15 15) (|robot#5| state)) #b1)))) ; $0$formal$robot_new.sv:102$5_CHECK[0:0]$33
-(define-fun |robot#56| ((state |robot_s|)) Bool (= (|robot#5| state) #b0111111111111111)) ; $0$formal$robot_new.sv:103$6_CHECK[0:0]$35
+(define-fun |robot#54| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#53| state) (|robot#23| state))) ; $0$formal$robot.sv:95$4_CHECK[0:0]$31
+(define-fun |robot#55| ((state |robot_s|)) Bool (not (or  (= ((_ extract 0 0) (|robot#5| state)) #b1) (= ((_ extract 1 1) (|robot#5| state)) #b1) (= ((_ extract 2 2) (|robot#5| state)) #b1) (= ((_ extract 3 3) (|robot#5| state)) #b1) (= ((_ extract 4 4) (|robot#5| state)) #b1) (= ((_ extract 5 5) (|robot#5| state)) #b1) (= ((_ extract 6 6) (|robot#5| state)) #b1) (= ((_ extract 7 7) (|robot#5| state)) #b1) (= ((_ extract 8 8) (|robot#5| state)) #b1) (= ((_ extract 9 9) (|robot#5| state)) #b1) (= ((_ extract 10 10) (|robot#5| state)) #b1) (= ((_ extract 11 11) (|robot#5| state)) #b1) (= ((_ extract 12 12) (|robot#5| state)) #b1) (= ((_ extract 13 13) (|robot#5| state)) #b1) (= ((_ extract 14 14) (|robot#5| state)) #b1) (= ((_ extract 15 15) (|robot#5| state)) #b1)))) ; $0$formal$robot.sv:99$5_CHECK[0:0]$33
+(define-fun |robot#56| ((state |robot_s|)) Bool (= (|robot#5| state) #b0111111111111111)) ; $0$formal$robot.sv:100$6_CHECK[0:0]$35
 (define-fun |robot#57| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#12| state) #b0)) ; $auto$rtlil.cc:2558:Mux$151
 (define-fun |robot#58| ((state |robot_s|)) (_ BitVec 1) (ite (|robot#0| state) (|robot#7| state) #b0)) ; $auto$rtlil.cc:2558:Mux$149
 (define-fun |robot#59| ((state |robot_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|robot#9| state)) #b1) #b1 (|robot#10| state))) ; $0\f_past_past_valid[0:0]
@@ -253,18 +253,18 @@
 )
 (define-fun |robot_i| ((state |robot_s|)) Bool (and
   (= (= ((_ extract 0 0) (|robot#10| state)) #b1) false) ; f_past_past_valid
-  (= (= ((_ extract 0 0) (|robot#35| state)) #b1) false) ; $formal$robot_new.sv:98$4_EN
-  (= (= ((_ extract 0 0) (|robot#36| state)) #b1) false) ; $formal$robot_new.sv:95$3_EN
-  (= (= ((_ extract 0 0) (|robot#37| state)) #b1) false) ; $formal$robot_new.sv:89$1_EN
-  (= (= ((_ extract 0 0) (|robot#38| state)) #b1) false) ; $formal$robot_new.sv:102$5_EN
+  (= (= ((_ extract 0 0) (|robot#35| state)) #b1) false) ; $formal$robot.sv:99$5_EN
+  (= (= ((_ extract 0 0) (|robot#36| state)) #b1) false) ; $formal$robot.sv:95$4_EN
+  (= (= ((_ extract 0 0) (|robot#37| state)) #b1) false) ; $formal$robot.sv:92$3_EN
+  (= (= ((_ extract 0 0) (|robot#38| state)) #b1) false) ; $formal$robot.sv:88$1_EN
   (= (= ((_ extract 0 0) (|robot#8| state)) #b1) false) ; $auto$async2sync.cc:171:execute$142
 ))
 (define-fun |robot_h| ((state |robot_s|)) Bool true)
 (define-fun |robot_t| ((state |robot_s|) (next_state |robot_s|)) Bool (and
-  (= #b1 (|robot#38| next_state)) ; $procdff$119 $formal$robot_new.sv:102$5_EN
-  (= (|robot#40| state) (|robot#37| next_state)) ; $procdff$111 $formal$robot_new.sv:89$1_EN
-  (= (|robot#42| state) (|robot#36| next_state)) ; $procdff$115 $formal$robot_new.sv:95$3_EN
-  (= (|robot#44| state) (|robot#35| next_state)) ; $procdff$117 $formal$robot_new.sv:98$4_EN
+  (= (|robot#40| state) (|robot#38| next_state)) ; $procdff$111 $formal$robot.sv:88$1_EN
+  (= (|robot#42| state) (|robot#37| next_state)) ; $procdff$115 $formal$robot.sv:92$3_EN
+  (= (|robot#44| state) (|robot#36| next_state)) ; $procdff$117 $formal$robot.sv:95$4_EN
+  (= #b1 (|robot#35| next_state)) ; $procdff$119 $formal$robot.sv:99$5_EN
   (= (|robot#46| state) (|robot#34| next_state)) ; $procdff$110 \_witness_.anyinit_procdff_110
   (= (|robot#48| state) (|robot#33| next_state)) ; $procdff$112 \_witness_.anyinit_procdff_112
   (= (|robot#51| state) (|robot#32| next_state)) ; $procdff$114 \_witness_.anyinit_procdff_114

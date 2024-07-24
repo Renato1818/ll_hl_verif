@@ -16,21 +16,21 @@
 15 init 1 14 13
 16 not 1 12
 17 and 1 14 16
-18 bad 17 assert_carry ; full_adder.sv:172.21-172.53
+18 bad 17 assert_carry ; full_adder.sv:169.21-169.53
 19 state 1 _witness_.anyinit_procdff_193
 20 state 1
 21 init 1 20 13
 22 not 1 19
 23 and 1 20 22
-24 bad 23 assert_carry_reset ; full_adder.sv:168.17-168.56
+24 bad 23 assert_carry_reset ; full_adder.sv:165.17-165.56
 25 state 1 _witness_.anyinit_procdff_195
 26 not 1 25
 27 and 1 14 26
-28 bad 27 assert_sum_ ; full_adder.sv:171.21-171.51
+28 bad 27 assert_sum_ ; full_adder.sv:168.21-168.51
 29 state 1 _witness_.anyinit_procdff_191
 30 not 1 29
 31 and 1 20 30
-32 bad 31 assert_sum_reset ; full_adder.sv:167.17-167.48
+32 bad 31 assert_sum_reset ; full_adder.sv:164.17-164.48
 33 state 1 _witness_.anyinit_procdff_226
 34 state 1 _witness_.anyinit_procdff_227
 35 state 1 _witness_.anyinit_procdff_228
@@ -56,32 +56,32 @@
 55 state 1
 56 uext 1 55 0 _witness_.anyseq_auto_setundef_cc_533_execute_325
 57 ite 1 6 43 13
-58 uext 1 57 0 c1 ; full_adder.sv:14.6-14.8
+58 uext 1 57 0 c1 ; full_adder.sv:13.6-13.8
 59 and 1 2 3
-60 uext 1 59 0 c1_next ; full_adder.sv:27.6-27.13
+60 uext 1 59 0 c1_next ; full_adder.sv:24.6-24.13
 61 ite 1 6 39 13
-62 uext 1 61 0 c1_past ; full_adder.sv:16.6-16.13
-63 uext 1 57 0 c1_past_next ; full_adder.sv:26.6-26.18
+62 uext 1 61 0 c1_past ; full_adder.sv:15.6-15.13
+63 uext 1 57 0 c1_past_next ; full_adder.sv:23.6-23.18
 64 ite 1 6 41 13
-65 uext 1 64 0 c2 ; full_adder.sv:18.6-18.8
+65 uext 1 64 0 c2 ; full_adder.sv:17.6-17.8
 66 ite 1 6 42 13
 67 ite 1 6 44 13
 68 and 1 66 67
-69 uext 1 68 0 c2_next ; full_adder.sv:29.6-29.13
-70 uext 1 67 0 c_in ; full_adder.sv:15.6-15.10
-71 uext 1 4 0 c_in_next ; full_adder.sv:25.6-25.15
+69 uext 1 68 0 c2_next ; full_adder.sv:26.6-26.13
+70 uext 1 67 0 c_in ; full_adder.sv:14.6-14.10
+71 uext 1 4 0 c_in_next ; full_adder.sv:22.6-22.15
 72 ite 1 6 38 13
 73 uext 1 72 0 carry_out ; full_adder.sv:9.16-9.25
 74 or 1 61 64
-75 uext 1 74 0 carry_out_next ; full_adder.sv:22.6-22.20
+75 uext 1 74 0 carry_out_next ; full_adder.sv:19.6-19.20
 76 state 1
 77 init 1 76 13
 78 ite 1 6 76 13
-79 uext 1 78 0 f_a ; full_adder.sv:106.13-106.16
+79 uext 1 78 0 f_a ; full_adder.sv:103.13-103.16
 80 state 1
 81 init 1 80 13
 82 ite 1 6 80 13
-83 uext 1 82 0 f_b ; full_adder.sv:107.13-107.16
+83 uext 1 82 0 f_b ; full_adder.sv:104.13-104.16
 84 xor 1 78 82
 85 state 1
 86 init 1 85 13
@@ -89,52 +89,52 @@
 88 and 1 84 87
 89 and 1 78 82
 90 or 1 88 89
-91 uext 1 90 0 f_c1 ; full_adder.sv:114.7-114.11
+91 uext 1 90 0 f_c1 ; full_adder.sv:111.7-111.11
 92 ite 1 6 35 13
-93 uext 1 92 0 f_c2 ; full_adder.sv:115.7-115.11
+93 uext 1 92 0 f_c2 ; full_adder.sv:112.7-112.11
 94 ite 1 6 36 13
-95 uext 1 94 0 f_c3 ; full_adder.sv:129.22-129.26
+95 uext 1 94 0 f_c3 ; full_adder.sv:126.22-126.26
 96 xor 1 94 72
-97 uext 1 96 0 f_carry ; full_adder.sv:129.10-129.17
-98 uext 1 87 0 f_carry_in ; full_adder.sv:108.7-108.17
+97 uext 1 96 0 f_carry ; full_adder.sv:126.10-126.17
+98 uext 1 87 0 f_carry_in ; full_adder.sv:105.7-105.17
 99 state 1
 100 init 1 99 13
 101 ite 1 6 99 13
-102 uext 1 101 0 f_past_2_valid ; full_adder.sv:122.13-122.27
+102 uext 1 101 0 f_past_2_valid ; full_adder.sv:119.13-119.27
 103 state 1
 104 init 1 103 13
 105 ite 1 6 103 13
-106 uext 1 105 0 f_past_3_valid ; full_adder.sv:123.13-123.27
+106 uext 1 105 0 f_past_3_valid ; full_adder.sv:120.13-120.27
 107 state 1
 108 init 1 107 13
 109 ite 1 6 107 13
-110 uext 1 109 0 f_past_valid ; full_adder.sv:121.13-121.25
+110 uext 1 109 0 f_past_valid ; full_adder.sv:118.13-118.25
 111 xor 1 84 87
-112 uext 1 111 0 f_s1 ; full_adder.sv:110.7-110.11
+112 uext 1 111 0 f_s1 ; full_adder.sv:107.7-107.11
 113 ite 1 6 33 13
-114 uext 1 113 0 f_s2 ; full_adder.sv:111.7-111.11
+114 uext 1 113 0 f_s2 ; full_adder.sv:108.7-108.11
 115 ite 1 6 34 13
-116 uext 1 115 0 f_s3 ; full_adder.sv:112.7-112.11
+116 uext 1 115 0 f_s3 ; full_adder.sv:109.7-109.11
 117 ite 1 6 37 13
 118 xor 1 115 117
-119 uext 1 118 0 f_sum ; full_adder.sv:117.7-117.12
+119 uext 1 118 0 f_sum ; full_adder.sv:114.7-114.12
 120 not 1 59
-121 uext 1 120 0 prc_half_adder_1_comb.s_nand ; full_adder.sv:34.8-34.14
+121 uext 1 120 0 prc_half_adder_1_comb.s_nand ; full_adder.sv:31.8-31.14
 122 or 1 2 3
-123 uext 1 122 0 prc_half_adder_1_comb.s_or ; full_adder.sv:35.8-35.12
+123 uext 1 122 0 prc_half_adder_1_comb.s_or ; full_adder.sv:32.8-32.12
 124 not 1 68
-125 uext 1 124 0 prc_half_adder_2_comb.s_nand ; full_adder.sv:61.8-61.14
+125 uext 1 124 0 prc_half_adder_2_comb.s_nand ; full_adder.sv:58.8-58.14
 126 or 1 66 67
-127 uext 1 126 0 prc_half_adder_2_comb.s_or ; full_adder.sv:62.8-62.12
-128 uext 1 66 0 s1 ; full_adder.sv:13.6-13.8
+127 uext 1 126 0 prc_half_adder_2_comb.s_or ; full_adder.sv:59.8-59.12
+128 uext 1 66 0 s1 ; full_adder.sv:12.6-12.8
 129 and 1 120 122
-130 uext 1 129 0 s1_next ; full_adder.sv:24.6-24.13
+130 uext 1 129 0 s1_next ; full_adder.sv:21.6-21.13
 131 ite 1 6 40 13
-132 uext 1 131 0 s2 ; full_adder.sv:17.6-17.8
+132 uext 1 131 0 s2 ; full_adder.sv:16.6-16.8
 133 and 1 124 126
-134 uext 1 133 0 s2_next ; full_adder.sv:28.6-28.13
+134 uext 1 133 0 s2_next ; full_adder.sv:25.6-25.13
 135 uext 1 117 0 sum ; full_adder.sv:8.16-8.19
-136 uext 1 131 0 sum_next ; full_adder.sv:23.6-23.14
+136 uext 1 131 0 sum_next ; full_adder.sv:20.6-20.14
 137 not 1 96
 138 ite 1 105 137 53
 139 ite 1 6 138 55

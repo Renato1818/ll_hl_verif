@@ -2,25 +2,25 @@
 ; yosys-smt2-module full_adder
 (declare-sort |full_adder_s| 0)
 (declare-fun |full_adder_is| (|full_adder_s|) Bool)
-; yosys-smt2-anyinit full_adder#0 1 full_adder.sv:73.2-84.5
+; yosys-smt2-anyinit full_adder#0 1 full_adder.sv:70.2-81.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_236"], "smtname": 0, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#0| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_236
 (declare-fun |full_adder#1| (|full_adder_s|) (_ BitVec 1)) ; \rstn
 (define-fun |full_adder#2| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#0| state) #b0)) ; \s2
 ; yosys-smt2-wire sum_next 1
 (define-fun |full_adder_n sum_next| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#2| state)) #b1))
-; yosys-smt2-anyinit full_adder#3 1 full_adder.sv:93.2-102.5
+; yosys-smt2-anyinit full_adder#3 1 full_adder.sv:90.2-99.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_233"], "smtname": 3, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#3| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_233
 (define-fun |full_adder#4| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#3| state) #b0)) ; \sum
 ; yosys-smt2-output sum 1
 ; yosys-smt2-wire sum 1
 (define-fun |full_adder_n sum| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#4| state)) #b1))
-; yosys-smt2-anyinit full_adder#5 1 full_adder.sv:46.2-57.5
+; yosys-smt2-anyinit full_adder#5 1 full_adder.sv:43.2-54.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_238"], "smtname": 5, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#5| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_238
 (define-fun |full_adder#6| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#5| state) #b0)) ; \s1
-; yosys-smt2-anyinit full_adder#7 1 full_adder.sv:46.2-57.5
+; yosys-smt2-anyinit full_adder#7 1 full_adder.sv:43.2-54.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_240"], "smtname": 7, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#7| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_240
 (define-fun |full_adder#8| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#7| state) #b0)) ; \c_in
@@ -54,7 +54,7 @@
 (define-fun |full_adder_n prc_half_adder_1_comb.s_or| ((state |full_adder_s|)) Bool (|full_adder#17| state))
 ; yosys-smt2-wire prc_half_adder_1_comb.s_nand 1
 (define-fun |full_adder_n prc_half_adder_1_comb.s_nand| ((state |full_adder_s|)) Bool (|full_adder#16| state))
-; yosys-smt2-anyinit full_adder#19 1 full_adder.sv:131.3-163.6
+; yosys-smt2-anyinit full_adder#19 1 full_adder.sv:128.3-160.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_227"], "smtname": 19, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#19| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_227
 (define-fun |full_adder#20| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#19| state) #b0)) ; \f_s3
@@ -63,7 +63,7 @@
 (define-fun |full_adder_n f_sum| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#21| state)) #b1))
 ; yosys-smt2-wire f_s3 1
 (define-fun |full_adder_n f_s3| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#20| state)) #b1))
-; yosys-smt2-anyinit full_adder#22 1 full_adder.sv:131.3-163.6
+; yosys-smt2-anyinit full_adder#22 1 full_adder.sv:128.3-160.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_226"], "smtname": 22, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#22| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_226
 (define-fun |full_adder#23| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#22| state) #b0)) ; \f_s2
@@ -75,7 +75,7 @@
 ; yosys-smt2-witness {"offset": 0, "path": ["$auto$async2sync.cc:171:execute$273"], "smtname": 26, "smtoffset": 0, "type": "reg", "width": 1}
 (declare-fun |full_adder#26| (|full_adder_s|) (_ BitVec 1)) ; $auto$async2sync.cc:171:execute$273
 (define-fun |full_adder#27| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#26| state) #b0)) ; \f_b
-(define-fun |full_adder#28| ((state |full_adder_s|)) (_ BitVec 1) (bvxor (|full_adder#25| state) (|full_adder#27| state))) ; $xor$full_adder.sv:125$37_Y
+(define-fun |full_adder#28| ((state |full_adder_s|)) (_ BitVec 1) (bvxor (|full_adder#25| state) (|full_adder#27| state))) ; $xor$full_adder.sv:122$37_Y
 ; yosys-smt2-witness {"offset": 0, "path": ["$auto$async2sync.cc:171:execute$271"], "smtname": 29, "smtoffset": 0, "type": "reg", "width": 1}
 (declare-fun |full_adder#29| (|full_adder_s|) (_ BitVec 1)) ; $auto$async2sync.cc:171:execute$271
 (define-fun |full_adder#30| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#29| state) #b0)) ; \f_carry_in
@@ -99,11 +99,11 @@
 (define-fun |full_adder_n f_past_2_valid| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#37| state)) #b1))
 ; yosys-smt2-wire f_carry_in 1
 (define-fun |full_adder_n f_carry_in| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#30| state)) #b1))
-; yosys-smt2-anyinit full_adder#38 1 full_adder.sv:131.3-163.6
+; yosys-smt2-anyinit full_adder#38 1 full_adder.sv:128.3-160.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_232"], "smtname": 38, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#38| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_232
 (define-fun |full_adder#39| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#38| state) #b0)) ; \f_c3
-; yosys-smt2-anyinit full_adder#40 1 full_adder.sv:93.2-102.5
+; yosys-smt2-anyinit full_adder#40 1 full_adder.sv:90.2-99.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_234"], "smtname": 40, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#40| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_234
 (define-fun |full_adder#41| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#40| state) #b0)) ; \carry_out
@@ -112,14 +112,14 @@
 (define-fun |full_adder_n f_carry| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#42| state)) #b1))
 ; yosys-smt2-wire f_c3 1
 (define-fun |full_adder_n f_c3| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#39| state)) #b1))
-; yosys-smt2-anyinit full_adder#43 1 full_adder.sv:131.3-163.6
+; yosys-smt2-anyinit full_adder#43 1 full_adder.sv:128.3-160.6
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_228"], "smtname": 43, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#43| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_228
 (define-fun |full_adder#44| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#43| state) #b0)) ; \f_c2
 ; yosys-smt2-wire f_c2 1
 (define-fun |full_adder_n f_c2| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#44| state)) #b1))
-(define-fun |full_adder#45| ((state |full_adder_s|)) Bool (and (or  (= ((_ extract 0 0) (|full_adder#28| state)) #b1) false) (or  (= ((_ extract 0 0) (|full_adder#30| state)) #b1) false))) ; $logic_and$full_adder.sv:128$41_Y
-(define-fun |full_adder#46| ((state |full_adder_s|)) Bool (and (or  (= ((_ extract 0 0) (|full_adder#25| state)) #b1) false) (or  (= ((_ extract 0 0) (|full_adder#27| state)) #b1) false))) ; $logic_and$full_adder.sv:128$42_Y
+(define-fun |full_adder#45| ((state |full_adder_s|)) Bool (and (or  (= ((_ extract 0 0) (|full_adder#28| state)) #b1) false) (or  (= ((_ extract 0 0) (|full_adder#30| state)) #b1) false))) ; $logic_and$full_adder.sv:125$41_Y
+(define-fun |full_adder#46| ((state |full_adder_s|)) Bool (and (or  (= ((_ extract 0 0) (|full_adder#25| state)) #b1) false) (or  (= ((_ extract 0 0) (|full_adder#27| state)) #b1) false))) ; $logic_and$full_adder.sv:125$42_Y
 (define-fun |full_adder#47| ((state |full_adder_s|)) Bool (or  (|full_adder#45| state) false  (|full_adder#46| state) false)) ; \f_c1
 ; yosys-smt2-wire f_c1 1
 (define-fun |full_adder_n f_c1| ((state |full_adder_s|)) Bool (|full_adder#47| state))
@@ -134,11 +134,11 @@
 ; yosys-smt2-witness {"offset": 0, "path": ["\\clk"], "smtname": "clk", "smtoffset": 0, "type": "posedge", "width": 1}
 ; yosys-smt2-witness {"offset": 0, "path": ["\\clk"], "smtname": "clk", "smtoffset": 0, "type": "input", "width": 1}
 (define-fun |full_adder_n clk| ((state |full_adder_s|)) Bool (|full_adder#48| state))
-; yosys-smt2-anyinit full_adder#49 1 full_adder.sv:73.2-84.5
+; yosys-smt2-anyinit full_adder#49 1 full_adder.sv:70.2-81.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_235"], "smtname": 49, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#49| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_235
 (define-fun |full_adder#50| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#49| state) #b0)) ; \c1_past
-; yosys-smt2-anyinit full_adder#51 1 full_adder.sv:73.2-84.5
+; yosys-smt2-anyinit full_adder#51 1 full_adder.sv:70.2-81.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_237"], "smtname": 51, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#51| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_237
 (define-fun |full_adder#52| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#51| state) #b0)) ; \c2
@@ -161,7 +161,7 @@
 (define-fun |full_adder_n c2_next| ((state |full_adder_s|)) Bool (|full_adder#9| state))
 ; yosys-smt2-wire c2 1
 (define-fun |full_adder_n c2| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#52| state)) #b1))
-; yosys-smt2-anyinit full_adder#55 1 full_adder.sv:46.2-57.5
+; yosys-smt2-anyinit full_adder#55 1 full_adder.sv:43.2-54.5
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_239"], "smtname": 55, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#55| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_239
 (define-fun |full_adder#56| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#55| state) #b0)) ; \c1
@@ -247,38 +247,38 @@
 ; yosys-smt2-register _witness_.anyinit_procdff_226 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_226 1
 (define-fun |full_adder_n _witness_.anyinit_procdff_226| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#22| state)) #b1))
-; yosys-smt2-anyinit full_adder#63 1 full_adder.sv:165.9-191.12
+; yosys-smt2-anyinit full_adder#63 1 full_adder.sv:162.9-188.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_197"], "smtname": 63, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#63| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_197
 ; yosys-smt2-register _witness_.anyinit_procdff_197 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_197 1
 (define-fun |full_adder_n _witness_.anyinit_procdff_197| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#63| state)) #b1))
-; yosys-smt2-anyinit full_adder#64 1 full_adder.sv:165.9-191.12
+; yosys-smt2-anyinit full_adder#64 1 full_adder.sv:162.9-188.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_195"], "smtname": 64, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#64| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_195
 ; yosys-smt2-register _witness_.anyinit_procdff_195 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_195 1
 (define-fun |full_adder_n _witness_.anyinit_procdff_195| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#64| state)) #b1))
-; yosys-smt2-anyinit full_adder#65 1 full_adder.sv:165.9-191.12
+; yosys-smt2-anyinit full_adder#65 1 full_adder.sv:162.9-188.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_193"], "smtname": 65, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#65| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_193
 ; yosys-smt2-register _witness_.anyinit_procdff_193 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_193 1
 (define-fun |full_adder_n _witness_.anyinit_procdff_193| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#65| state)) #b1))
-; yosys-smt2-anyinit full_adder#66 1 full_adder.sv:165.9-191.12
+; yosys-smt2-anyinit full_adder#66 1 full_adder.sv:162.9-188.12
 ; yosys-smt2-witness {"offset": 0, "path": ["\\_witness_", "\\anyinit_procdff_191"], "smtname": 66, "smtoffset": 0, "type": "init", "width": 1}
 (declare-fun |full_adder#66| (|full_adder_s|) (_ BitVec 1)) ; \_witness_.anyinit_procdff_191
 ; yosys-smt2-register _witness_.anyinit_procdff_191 1
 ; yosys-smt2-wire _witness_.anyinit_procdff_191 1
 (define-fun |full_adder_n _witness_.anyinit_procdff_191| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#66| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$full_adder.sv:171$3_EN"], "smtname": 67, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |full_adder#67| (|full_adder_s|) (_ BitVec 1)) ; $formal$full_adder.sv:171$3_EN
-; yosys-smt2-register $formal$full_adder.sv:171$3_EN 1
-(define-fun |full_adder_n $formal$full_adder.sv:171$3_EN| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#67| state)) #b1))
-; yosys-smt2-witness {"offset": 0, "path": ["$formal$full_adder.sv:167$1_EN"], "smtname": 68, "smtoffset": 0, "type": "reg", "width": 1}
-(declare-fun |full_adder#68| (|full_adder_s|) (_ BitVec 1)) ; $formal$full_adder.sv:167$1_EN
-; yosys-smt2-register $formal$full_adder.sv:167$1_EN 1
-(define-fun |full_adder_n $formal$full_adder.sv:167$1_EN| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#68| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$full_adder.sv:168$3_EN"], "smtname": 67, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |full_adder#67| (|full_adder_s|) (_ BitVec 1)) ; $formal$full_adder.sv:168$3_EN
+; yosys-smt2-register $formal$full_adder.sv:168$3_EN 1
+(define-fun |full_adder_n $formal$full_adder.sv:168$3_EN| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#67| state)) #b1))
+; yosys-smt2-witness {"offset": 0, "path": ["$formal$full_adder.sv:164$1_EN"], "smtname": 68, "smtoffset": 0, "type": "reg", "width": 1}
+(declare-fun |full_adder#68| (|full_adder_s|) (_ BitVec 1)) ; $formal$full_adder.sv:164$1_EN
+; yosys-smt2-register $formal$full_adder.sv:164$1_EN 1
+(define-fun |full_adder_n $formal$full_adder.sv:164$1_EN| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#68| state)) #b1))
 ; yosys-smt2-register $auto$async2sync.cc:171:execute$275 1
 (define-fun |full_adder_n $auto$async2sync.cc:171:execute$275| ((state |full_adder_s|)) Bool (= ((_ extract 0 0) (|full_adder#24| state)) #b1))
 ; yosys-smt2-register $auto$async2sync.cc:171:execute$273 1
@@ -302,19 +302,19 @@
 (define-fun |full_adder_a 2| ((state |full_adder_s|)) Bool (or (= ((_ extract 0 0) (|full_adder#65| state)) #b1) (not (= ((_ extract 0 0) (|full_adder#68| state)) #b1)))) ; assert_carry_reset
 ; yosys-smt2-assert 3 assert_carry
 (define-fun |full_adder_a 3| ((state |full_adder_s|)) Bool (or (= ((_ extract 0 0) (|full_adder#63| state)) #b1) (not (= ((_ extract 0 0) (|full_adder#67| state)) #b1)))) ; assert_carry
-(define-fun |full_adder#70| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) #b0 #b1)) ; $0$formal$full_adder.sv:167$1_EN[0:0]$49
+(define-fun |full_adder#70| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) #b0 #b1)) ; $0$formal$full_adder.sv:164$1_EN[0:0]$49
 (define-fun |full_adder#71| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#35| state)) #b1) #b1 #b0)) ; $procmux$165_Y
-(define-fun |full_adder#72| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#71| state) #b0)) ; $0$formal$full_adder.sv:171$3_EN[0:0]$53
-(define-fun |full_adder#73| ((state |full_adder_s|)) Bool (not (or  (= ((_ extract 0 0) (|full_adder#4| state)) #b1) false))) ; $0$formal$full_adder.sv:178$6_CHECK[0:0]$58
-(define-fun |full_adder#74| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#62| state) (ite (|full_adder#73| state) #b1 #b0))) ; $0$formal$full_adder.sv:167$1_CHECK[0:0]$48
-(define-fun |full_adder#75| ((state |full_adder_s|)) Bool (not (or  (= ((_ extract 0 0) (|full_adder#41| state)) #b1) false))) ; $0$formal$full_adder.sv:181$8_CHECK[0:0]$62
-(define-fun |full_adder#76| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#61| state) (ite (|full_adder#75| state) #b1 #b0))) ; $0$formal$full_adder.sv:168$2_CHECK[0:0]$50
-(define-fun |full_adder#77| ((state |full_adder_s|)) Bool (not (or  (= ((_ extract 0 0) (|full_adder#21| state)) #b1) false))) ; $logic_not$full_adder.sv:171$83_Y
+(define-fun |full_adder#72| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#71| state) #b0)) ; $0$formal$full_adder.sv:168$3_EN[0:0]$53
+(define-fun |full_adder#73| ((state |full_adder_s|)) Bool (not (or  (= ((_ extract 0 0) (|full_adder#4| state)) #b1) false))) ; $0$formal$full_adder.sv:175$6_CHECK[0:0]$58
+(define-fun |full_adder#74| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#62| state) (ite (|full_adder#73| state) #b1 #b0))) ; $0$formal$full_adder.sv:164$1_CHECK[0:0]$48
+(define-fun |full_adder#75| ((state |full_adder_s|)) Bool (not (or  (= ((_ extract 0 0) (|full_adder#41| state)) #b1) false))) ; $0$formal$full_adder.sv:178$8_CHECK[0:0]$62
+(define-fun |full_adder#76| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#61| state) (ite (|full_adder#75| state) #b1 #b0))) ; $0$formal$full_adder.sv:165$2_CHECK[0:0]$50
+(define-fun |full_adder#77| ((state |full_adder_s|)) Bool (not (or  (= ((_ extract 0 0) (|full_adder#21| state)) #b1) false))) ; $logic_not$full_adder.sv:168$83_Y
 (define-fun |full_adder#78| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#35| state)) #b1) (ite (|full_adder#77| state) #b1 #b0) (|full_adder#60| state))) ; $procmux$170_Y
-(define-fun |full_adder#79| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#78| state) (|full_adder#59| state))) ; $0$formal$full_adder.sv:171$3_CHECK[0:0]$52
-(define-fun |full_adder#80| ((state |full_adder_s|)) Bool (not (or  (= ((_ extract 0 0) (|full_adder#42| state)) #b1) false))) ; $logic_not$full_adder.sv:172$84_Y
+(define-fun |full_adder#79| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#78| state) (|full_adder#59| state))) ; $0$formal$full_adder.sv:168$3_CHECK[0:0]$52
+(define-fun |full_adder#80| ((state |full_adder_s|)) Bool (not (or  (= ((_ extract 0 0) (|full_adder#42| state)) #b1) false))) ; $logic_not$full_adder.sv:169$84_Y
 (define-fun |full_adder#81| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#35| state)) #b1) (ite (|full_adder#80| state) #b1 #b0) (|full_adder#58| state))) ; $procmux$180_Y
-(define-fun |full_adder#82| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#81| state) (|full_adder#57| state))) ; $0$formal$full_adder.sv:172$4_CHECK[0:0]$54
+(define-fun |full_adder#82| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#81| state) (|full_adder#57| state))) ; $0$formal$full_adder.sv:169$4_CHECK[0:0]$54
 (define-fun |full_adder#83| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (ite (|full_adder#15| state) #b1 #b0) #b0)) ; $auto$rtlil.cc:2558:Mux$310
 (define-fun |full_adder#84| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (ite (|full_adder#9| state) #b1 #b0) #b0)) ; $auto$rtlil.cc:2558:Mux$306
 (define-fun |full_adder#85| ((state |full_adder_s|)) (_ BitVec 1) (ite (= ((_ extract 0 0) (|full_adder#1| state)) #b1) (|full_adder#56| state) #b0)) ; $auto$rtlil.cc:2558:Mux$302
@@ -345,8 +345,8 @@
   (|full_adder_u 0| state)
 )
 (define-fun |full_adder_i| ((state |full_adder_s|)) Bool (and
-  (= (= ((_ extract 0 0) (|full_adder#67| state)) #b1) false) ; $formal$full_adder.sv:171$3_EN
-  (= (= ((_ extract 0 0) (|full_adder#68| state)) #b1) false) ; $formal$full_adder.sv:167$1_EN
+  (= (= ((_ extract 0 0) (|full_adder#67| state)) #b1) false) ; $formal$full_adder.sv:168$3_EN
+  (= (= ((_ extract 0 0) (|full_adder#68| state)) #b1) false) ; $formal$full_adder.sv:164$1_EN
   (= (= ((_ extract 0 0) (|full_adder#24| state)) #b1) false) ; $auto$async2sync.cc:171:execute$275
   (= (= ((_ extract 0 0) (|full_adder#26| state)) #b1) false) ; $auto$async2sync.cc:171:execute$273
   (= (= ((_ extract 0 0) (|full_adder#29| state)) #b1) false) ; $auto$async2sync.cc:171:execute$271
@@ -356,8 +356,8 @@
 ))
 (define-fun |full_adder_h| ((state |full_adder_s|)) Bool true)
 (define-fun |full_adder_t| ((state |full_adder_s|) (next_state |full_adder_s|)) Bool (and
-  (= (|full_adder#70| state) (|full_adder#68| next_state)) ; $procdff$192 $formal$full_adder.sv:167$1_EN
-  (= (|full_adder#72| state) (|full_adder#67| next_state)) ; $procdff$196 $formal$full_adder.sv:171$3_EN
+  (= (|full_adder#70| state) (|full_adder#68| next_state)) ; $procdff$192 $formal$full_adder.sv:164$1_EN
+  (= (|full_adder#72| state) (|full_adder#67| next_state)) ; $procdff$196 $formal$full_adder.sv:168$3_EN
   (= (|full_adder#74| state) (|full_adder#66| next_state)) ; $procdff$191 \_witness_.anyinit_procdff_191
   (= (|full_adder#76| state) (|full_adder#65| next_state)) ; $procdff$193 \_witness_.anyinit_procdff_193
   (= (|full_adder#79| state) (|full_adder#64| next_state)) ; $procdff$195 \_witness_.anyinit_procdff_195

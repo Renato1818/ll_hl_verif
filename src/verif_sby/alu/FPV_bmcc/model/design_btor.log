@@ -108,6 +108,6 @@ Finding unused cells or wires in module \alu..
 
 10.3. Executing BWMUXMAP pass.
 
-End of script. Logfile hash: 0630887516, CPU: user 0.08s system 0.07s, MEM: 16.16 MB peak
+End of script. Logfile hash: 0630887516, CPU: user 0.04s system 0.01s, MEM: 16.12 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 30% 2x read_ilang (0 sec), 13% 1x opt_expr (0 sec), ...
+Time spent: 21% 4x write_btor (0 sec), 19% 1x opt_expr (0 sec), ...

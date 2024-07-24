@@ -9,16 +9,13 @@ module full_adder (
     output reg carry_out
 	);
 
-	// Variables generated for SystemC signals
 	reg s1;
 	reg c1;
 	reg c_in;
 	reg c1_past;
 	reg s2;
 	reg c2;
-	//reg aux;
 	
-	// Thread-local variables
 	reg carry_out_next;
 	reg sum_next;
 	reg s1_next;
@@ -29,7 +26,7 @@ module full_adder (
 	reg c2_next;
 	
 			
-	// Next-state combinational logic
+			
 	always @(*) begin : prc_half_adder_1_comb
 		wire s_nand;
 		wire s_or;
@@ -42,7 +39,7 @@ module full_adder (
 		c_in_next = carry_in;
 	end
 	
-	// Synchronous register update
+	
 	always_ff @(posedge clk or negedge rstn) begin : prc_half_adder_1_ff
 	    if ( ~rstn ) begin
 			s1 <= 1'd0;
@@ -69,7 +66,7 @@ module full_adder (
 		c1_past_next = c1;
 	end
 	
-	// Synchronous register update
+	
 	always_ff @(posedge clk or negedge rstn) begin : prc_half_adder_2_ff
 	    if ( ~rstn ) begin
 			s2 <= 1'd0;
@@ -89,7 +86,7 @@ module full_adder (
 		sum_next = s2;
 	end
 	
-	// Synchronous register update
+	
 	always_ff @(posedge clk or negedge rstn) begin : prc_or_ff
 		if ( ~rstn ) begin
 			carry_out <= 1'd0;

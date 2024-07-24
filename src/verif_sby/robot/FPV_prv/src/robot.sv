@@ -85,12 +85,9 @@ module robot #(
 
         always @(posedge clk) begin			
 			if (~rstn) begin				
-
                 assert_obs_detected_reset: assert (!obs_detected_out);                 
                 assert_alarm_false_reset: assert (!alarm_flag);
-
             end else begin  		
-
 				if (f_past_valid) begin										
 					assert_obs_detected: assert ( !f_obs_res );
 				end 	

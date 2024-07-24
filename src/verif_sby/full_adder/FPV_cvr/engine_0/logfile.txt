@@ -34,22 +34,22 @@
 ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace4_tb.v
 ##   0:00:00  Writing trace to constraints file: engine_0/trace4.smtc
 ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace4.yw
-##   0:00:01  Checking cover reachability in step 1..
-##   0:00:01  Reached cover statement at cover_input2 in step 1.
-##   0:00:01  Writing trace to VCD file: engine_0/trace5.vcd
-##   0:00:01  Writing trace to Verilog testbench: engine_0/trace5_tb.v
-##   0:00:01  Writing trace to constraints file: engine_0/trace5.smtc
-##   0:00:01  Writing trace to Yosys witness file: engine_0/trace5.yw
-##   0:00:01  Checking cover reachability in step 1..
-##   0:00:01  Reached cover statement at cover_input1 in step 1.
-##   0:00:01  Writing trace to VCD file: engine_0/trace6.vcd
-##   0:00:01  Writing trace to Verilog testbench: engine_0/trace6_tb.v
-##   0:00:01  Writing trace to constraints file: engine_0/trace6.smtc
-##   0:00:01  Writing trace to Yosys witness file: engine_0/trace6.yw
-##   0:00:01  Checking cover reachability in step 1..
-##   0:00:01  Reached cover statement at cover_input3 in step 1.
-##   0:00:01  Writing trace to VCD file: engine_0/trace7.vcd
-##   0:00:01  Writing trace to Verilog testbench: engine_0/trace7_tb.v
-##   0:00:01  Writing trace to constraints file: engine_0/trace7.smtc
-##   0:00:01  Writing trace to Yosys witness file: engine_0/trace7.yw
-##   0:00:01  Status: passed
+##   0:00:00  Checking cover reachability in step 1..
+##   0:00:00  Reached cover statement at cover_input2 in step 1.
+##   0:00:00  Writing trace to VCD file: engine_0/trace5.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace5_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace5.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace5.yw
+##   0:00:00  Checking cover reachability in step 1..
+##   0:00:00  Reached cover statement at cover_input1 in step 1.
+##   0:00:00  Writing trace to VCD file: engine_0/trace6.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace6_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace6.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace6.yw
+##   0:00:00  Checking cover reachability in step 1..
+##   0:00:00  Reached cover statement at cover_input3 in step 1.
+##   0:00:00  Writing trace to VCD file: engine_0/trace7.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace7_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace7.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace7.yw
+##   0:00:00  Status: passed

@@ -73,6 +73,6 @@ Module half_adder directly or indirectly contains formal properties -> setting "
 6.2. Executing DEMUXMAP pass.
 Creating SMT-LIBv2 representation of module half_adder.
 
-End of script. Logfile hash: 259c997c3b, CPU: user 0.02s system 0.01s, MEM: 14.95 MB peak
+End of script. Logfile hash: 259c997c3b, CPU: user 0.00s system 0.02s, MEM: 15.11 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 47% 2x write_smt2 (0 sec), 31% 2x read_ilang (0 sec), ...
+Time spent: 55% 2x write_smt2 (0 sec), 26% 2x read_ilang (0 sec), ...

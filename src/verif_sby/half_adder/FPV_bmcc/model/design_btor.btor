@@ -15,21 +15,21 @@
 14 init 1 13 12
 15 not 1 11
 16 and 1 13 15
-17 bad 16 assert_carry ; half_adder.sv:81.21-81.53
+17 bad 16 assert_carry ; half_adder.sv:75.21-75.53
 18 state 1 _witness_.anyinit_procdff_126
 19 state 1
 20 init 1 19 12
 21 not 1 18
 22 and 1 19 21
-23 bad 22 assert_carry_reset ; half_adder.sv:77.17-77.52
+23 bad 22 assert_carry_reset ; half_adder.sv:71.17-71.52
 24 state 1 _witness_.anyinit_procdff_128
 25 not 1 24
 26 and 1 13 25
-27 bad 26 assert_sum_ ; half_adder.sv:80.21-80.51
+27 bad 26 assert_sum_ ; half_adder.sv:74.21-74.51
 28 state 1 _witness_.anyinit_procdff_124
 29 not 1 28
 30 and 1 19 29
-31 bad 30 assert_sum_reset ; half_adder.sv:76.17-76.48
+31 bad 30 assert_sum_reset ; half_adder.sv:70.17-70.48
 32 state 1 _witness_.anyinit_procdff_148
 33 state 1 _witness_.anyinit_procdff_149
 34 state 1 _witness_.anyinit_procdff_151

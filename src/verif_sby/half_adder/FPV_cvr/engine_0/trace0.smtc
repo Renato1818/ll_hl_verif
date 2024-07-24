@@ -1,8 +1,8 @@
 initial
 assume (= [$auto$async2sync.cc:171:execute$157] false)
-assume (= [$formal$half_adder.sv:76$1_EN] false)
-assume (= [$formal$half_adder.sv:80$3_EN] false)
-assume (= [$formal$half_adder.sv:86$5_EN] false)
+assume (= [$formal$half_adder.sv:70$1_EN] false)
+assume (= [$formal$half_adder.sv:74$3_EN] false)
+assume (= [$formal$half_adder.sv:80$5_EN] false)
 assume (= [_witness_.anyinit_procdff_124] false)
 assume (= [_witness_.anyinit_procdff_126] false)
 assume (= [_witness_.anyinit_procdff_128] false)

@@ -13,9 +13,9 @@
   ],
   "states": [
     [{"path": ["\\_witness_", "\\anyinit_procdff_197"], "width": 1, "offset": 0}],
-    [{"path": ["$formal$full_adder.sv:171$3_EN"], "width": 1, "offset": 0}],
+    [{"path": ["$formal$full_adder.sv:168$3_EN"], "width": 1, "offset": 0}],
     [{"path": ["\\_witness_", "\\anyinit_procdff_193"], "width": 1, "offset": 0}],
-    [{"path": ["$formal$full_adder.sv:167$1_EN"], "width": 1, "offset": 0}],
+    [{"path": ["$formal$full_adder.sv:164$1_EN"], "width": 1, "offset": 0}],
     [{"path": ["\\_witness_", "\\anyinit_procdff_195"], "width": 1, "offset": 0}],
     [{"path": ["\\_witness_", "\\anyinit_procdff_191"], "width": 1, "offset": 0}],
     [{"path": ["\\_witness_", "\\anyinit_procdff_226"], "width": 1, "offset": 0}],

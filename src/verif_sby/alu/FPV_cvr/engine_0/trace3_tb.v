@@ -8,17 +8,17 @@ module testbench(input clock, output reg genclock);
 `endif
   reg genclock = 1;
   reg [31:0] cycle = 0;
-  reg [3:0] PI_OP2;
-  reg [3:0] PI_OP1;
   reg [0:0] PI_rstn;
   reg [2:0] PI_OPCODE;
+  reg [3:0] PI_OP2;
   wire [0:0] PI_clk = clock;
+  reg [3:0] PI_OP1;
   alu UUT (
-    .OP2(PI_OP2),
-    .OP1(PI_OP1),
     .rstn(PI_rstn),
     .OPCODE(PI_OPCODE),
-    .clk(PI_clk)
+    .OP2(PI_OP2),
+    .clk(PI_clk),
+    .OP1(PI_OP1)
   );
 `ifndef VERILATOR
   initial begin
@@ -38,25 +38,25 @@ module testbench(input clock, output reg genclock);
     #1;
 `endif
     // UUT.$auto$async2sync.\cc:171:execute$4531  = 1'b0;
-    // UUT.$formal$alu.\sv:311$75_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:317$78_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:323$80_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:326$81_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:329$82_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:332$83_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:335$84_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:338$85_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:341$86_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:344$87_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:352$88_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:382$103_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:385$104_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:388$105_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:391$106_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:394$107_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:397$108_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:400$109_EN  = 1'b0;
-    // UUT.$formal$alu.\sv:403$110_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:301$75_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:307$78_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:313$80_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:316$81_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:319$82_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:322$83_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:325$84_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:328$85_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:331$86_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:334$87_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:341$88_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:371$103_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:374$104_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:377$105_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:380$106_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:383$107_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:386$108_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:389$109_EN  = 1'b0;
+    // UUT.$formal$alu.\sv:392$110_EN  = 1'b0;
     UUT._witness_.anyinit_procdff_4441 = 1'b1;
     UUT._witness_.anyinit_procdff_4443 = 1'b1;
     UUT._witness_.anyinit_procdff_4445 = 1'b1;
@@ -101,18 +101,18 @@ module testbench(input clock, output reg genclock);
     UUT._witness_.anyinit_procdff_4519 = 1'b1;
 
     // state 0
-    PI_OP2 = 4'b1010;
-    PI_OP1 = 4'b0100;
     PI_rstn = 1'b1;
     PI_OPCODE = 3'b111;
+    PI_OP2 = 4'b1010;
+    PI_OP1 = 4'b0100;
   end
   always @(posedge clock) begin
     // state 1
     if (cycle == 0) begin
-      PI_OP2 <= 4'b1010;
-      PI_OP1 <= 4'b0100;
       PI_rstn <= 1'b1;
       PI_OPCODE <= 3'b111;
+      PI_OP2 <= 4'b1010;
+      PI_OP1 <= 4'b0100;
     end
 
     genclock <= cycle < 1;

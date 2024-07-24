@@ -9,12 +9,12 @@ module testbench(input clock, output reg genclock);
   reg genclock = 1;
   reg [31:0] cycle = 0;
   reg [15:0] PI_dist_v;
-  wire [0:0] PI_clk = clock;
   reg [0:0] PI_rstn;
+  wire [0:0] PI_clk = clock;
   robot UUT (
     .dist_v(PI_dist_v),
-    .clk(PI_clk),
-    .rstn(PI_rstn)
+    .rstn(PI_rstn),
+    .clk(PI_clk)
   );
 `ifndef VERILATOR
   initial begin
@@ -34,10 +34,10 @@ module testbench(input clock, output reg genclock);
     #1;
 `endif
     // UUT.$auto$async2sync.\cc:171:execute$142  = 1'b0;
-    // UUT.$formal$robot_new.\sv:102$5_EN  = 1'b0;
-    // UUT.$formal$robot_new.\sv:89$1_EN  = 1'b0;
-    // UUT.$formal$robot_new.\sv:95$3_EN  = 1'b0;
-    // UUT.$formal$robot_new.\sv:98$4_EN  = 1'b0;
+    // UUT.$formal$robot.\sv:88$1_EN  = 1'b0;
+    // UUT.$formal$robot.\sv:92$3_EN  = 1'b0;
+    // UUT.$formal$robot.\sv:95$4_EN  = 1'b0;
+    // UUT.$formal$robot.\sv:99$5_EN  = 1'b0;
     UUT._witness_.anyinit_procdff_110 = 1'b1;
     UUT._witness_.anyinit_procdff_112 = 1'b0;
     UUT._witness_.anyinit_procdff_114 = 1'b0;

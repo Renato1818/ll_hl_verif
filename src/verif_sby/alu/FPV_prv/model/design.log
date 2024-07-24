@@ -33,16 +33,16 @@ Successfully finished Verilog frontend.
 
 3. Executing AST frontend in derive mode using pre-parsed AST for module `\alu'.
 Generating RTLIL representation for module `\alu'.
-Warning: reg '\op_add' is assigned in a continuous assignment at alu.sv:270.10-270.36.
-Warning: reg '\op_sub' is assigned in a continuous assignment at alu.sv:271.10-271.36.
-Warning: reg '\op_incr' is assigned in a continuous assignment at alu.sv:272.10-272.31.
-Warning: reg '\op_decr' is assigned in a continuous assignment at alu.sv:273.10-273.31.
-Warning: reg '\op_and' is assigned in a continuous assignment at alu.sv:274.10-274.35.
-Warning: reg '\op_or' is assigned in a continuous assignment at alu.sv:275.10-275.35.
-Warning: reg '\op_nand' is assigned in a continuous assignment at alu.sv:276.10-276.36.
-Warning: reg '\op_xor' is assigned in a continuous assignment at alu.sv:277.10-277.35.
-alu.sv:279: Warning: Identifier `\f_carry' is implicitly declared.
-alu.sv:284: Warning: Identifier `\f_zero' is implicitly declared.
+Warning: reg '\op_add' is assigned in a continuous assignment at alu.sv:260.10-260.36.
+Warning: reg '\op_sub' is assigned in a continuous assignment at alu.sv:261.10-261.36.
+Warning: reg '\op_incr' is assigned in a continuous assignment at alu.sv:262.10-262.31.
+Warning: reg '\op_decr' is assigned in a continuous assignment at alu.sv:263.10-263.31.
+Warning: reg '\op_and' is assigned in a continuous assignment at alu.sv:264.10-264.35.
+Warning: reg '\op_or' is assigned in a continuous assignment at alu.sv:265.10-265.35.
+Warning: reg '\op_nand' is assigned in a continuous assignment at alu.sv:266.10-266.36.
+Warning: reg '\op_xor' is assigned in a continuous assignment at alu.sv:267.10-267.35.
+alu.sv:269: Warning: Identifier `\f_carry' is implicitly declared.
+alu.sv:274: Warning: Identifier `\f_zero' is implicitly declared.
 
 3.1. Analyzing design hierarchy..
 Top module:  \alu
@@ -71,11 +71,11 @@ Module alu directly or indirectly contains formal properties -> setting "keep" a
 Cleaned up 0 empty switches.
 
 4.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 3 switch rules as full_case in process $proc$alu.sv:308$1024 in module alu.
-Marked 1 switch rules as full_case in process $proc$alu.sv:293$1022 in module alu.
-Marked 1 switch rules as full_case in process $proc$alu.sv:233$971 in module alu.
-Removed 1 dead cases from process $proc$alu.sv:175$111 in module alu.
-Marked 82 switch rules as full_case in process $proc$alu.sv:175$111 in module alu.
+Marked 3 switch rules as full_case in process $proc$alu.sv:298$1024 in module alu.
+Marked 1 switch rules as full_case in process $proc$alu.sv:283$1022 in module alu.
+Marked 1 switch rules as full_case in process $proc$alu.sv:229$971 in module alu.
+Removed 1 dead cases from process $proc$alu.sv:171$111 in module alu.
+Marked 82 switch rules as full_case in process $proc$alu.sv:171$111 in module alu.
 Removed a total of 1 dead cases.
 
 4.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
@@ -84,83 +84,83 @@ Promoted 329 assignments to connections.
 
 4.2.4. Executing PROC_INIT pass (extract init attributes).
 Found init rule in `\alu.$proc$alu.sv:0$1222'.
-  Set init value: $formal$alu.sv:403$110_EN = 1'0
+  Set init value: $formal$alu.sv:392$110_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1220'.
-  Set init value: $formal$alu.sv:400$109_EN = 1'0
+  Set init value: $formal$alu.sv:389$109_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1218'.
-  Set init value: $formal$alu.sv:397$108_EN = 1'0
+  Set init value: $formal$alu.sv:386$108_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1216'.
-  Set init value: $formal$alu.sv:394$107_EN = 1'0
+  Set init value: $formal$alu.sv:383$107_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1214'.
-  Set init value: $formal$alu.sv:391$106_EN = 1'0
+  Set init value: $formal$alu.sv:380$106_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1212'.
-  Set init value: $formal$alu.sv:388$105_EN = 1'0
+  Set init value: $formal$alu.sv:377$105_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1210'.
-  Set init value: $formal$alu.sv:385$104_EN = 1'0
+  Set init value: $formal$alu.sv:374$104_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1208'.
-  Set init value: $formal$alu.sv:382$103_EN = 1'0
+  Set init value: $formal$alu.sv:371$103_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1206'.
-  Set init value: $formal$alu.sv:378$102_EN = 1'0
+  Set init value: $formal$alu.sv:367$102_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1204'.
-  Set init value: $formal$alu.sv:377$101_EN = 1'0
+  Set init value: $formal$alu.sv:366$101_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1202'.
-  Set init value: $formal$alu.sv:374$100_EN = 1'0
+  Set init value: $formal$alu.sv:363$100_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1200'.
-  Set init value: $formal$alu.sv:373$99_EN = 1'0
+  Set init value: $formal$alu.sv:362$99_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1198'.
-  Set init value: $formal$alu.sv:370$98_EN = 1'0
+  Set init value: $formal$alu.sv:359$98_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1196'.
-  Set init value: $formal$alu.sv:369$97_EN = 1'0
+  Set init value: $formal$alu.sv:358$97_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1194'.
-  Set init value: $formal$alu.sv:365$96_EN = 1'0
+  Set init value: $formal$alu.sv:354$96_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1192'.
-  Set init value: $formal$alu.sv:363$95_EN = 1'0
+  Set init value: $formal$alu.sv:352$95_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1190'.
-  Set init value: $formal$alu.sv:361$94_EN = 1'0
+  Set init value: $formal$alu.sv:350$94_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1188'.
-  Set init value: $formal$alu.sv:358$93_EN = 1'0
+  Set init value: $formal$alu.sv:347$93_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1186'.
-  Set init value: $formal$alu.sv:357$92_EN = 1'0
+  Set init value: $formal$alu.sv:346$92_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1184'.
-  Set init value: $formal$alu.sv:356$91_EN = 1'0
+  Set init value: $formal$alu.sv:345$91_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1182'.
-  Set init value: $formal$alu.sv:355$90_EN = 1'0
+  Set init value: $formal$alu.sv:344$90_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1180'.
-  Set init value: $formal$alu.sv:353$89_EN = 1'0
+  Set init value: $formal$alu.sv:342$89_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1178'.
-  Set init value: $formal$alu.sv:352$88_EN = 1'0
+  Set init value: $formal$alu.sv:341$88_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1176'.
-  Set init value: $formal$alu.sv:344$87_EN = 1'0
+  Set init value: $formal$alu.sv:334$87_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1174'.
-  Set init value: $formal$alu.sv:341$86_EN = 1'0
+  Set init value: $formal$alu.sv:331$86_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1172'.
-  Set init value: $formal$alu.sv:338$85_EN = 1'0
+  Set init value: $formal$alu.sv:328$85_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1170'.
-  Set init value: $formal$alu.sv:335$84_EN = 1'0
+  Set init value: $formal$alu.sv:325$84_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1168'.
-  Set init value: $formal$alu.sv:332$83_EN = 1'0
+  Set init value: $formal$alu.sv:322$83_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1166'.
-  Set init value: $formal$alu.sv:329$82_EN = 1'0
+  Set init value: $formal$alu.sv:319$82_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1164'.
-  Set init value: $formal$alu.sv:326$81_EN = 1'0
+  Set init value: $formal$alu.sv:316$81_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1162'.
-  Set init value: $formal$alu.sv:323$80_EN = 1'0
+  Set init value: $formal$alu.sv:313$80_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1160'.
-  Set init value: $formal$alu.sv:318$79_EN = 1'0
+  Set init value: $formal$alu.sv:308$79_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1158'.
-  Set init value: $formal$alu.sv:317$78_EN = 1'0
+  Set init value: $formal$alu.sv:307$78_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1156'.
-  Set init value: $formal$alu.sv:313$77_EN = 1'0
+  Set init value: $formal$alu.sv:303$77_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1154'.
-  Set init value: $formal$alu.sv:312$76_EN = 1'0
+  Set init value: $formal$alu.sv:302$76_EN = 1'0
 Found init rule in `\alu.$proc$alu.sv:0$1152'.
-  Set init value: $formal$alu.sv:311$75_EN = 1'0
-Found init rule in `\alu.$proc$alu.sv:261$1151'.
+  Set init value: $formal$alu.sv:301$75_EN = 1'0
+Found init rule in `\alu.$proc$alu.sv:257$1151'.
   Set init value: \f_past_valid = 1'0
 
 4.2.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \rstn in `\alu.$proc$alu.sv:293$1022'.
-Found async reset \rstn in `\alu.$proc$alu.sv:233$971'.
+Found async reset \rstn in `\alu.$proc$alu.sv:283$1022'.
+Found async reset \rstn in `\alu.$proc$alu.sv:229$971'.
 
 4.2.6. Executing PROC_ROM pass (convert switches to ROMs).
 Converted 0 switches.
@@ -203,60 +203,60 @@ Creating decoders for process `\alu.$proc$alu.sv:0$1158'.
 Creating decoders for process `\alu.$proc$alu.sv:0$1156'.
 Creating decoders for process `\alu.$proc$alu.sv:0$1154'.
 Creating decoders for process `\alu.$proc$alu.sv:0$1152'.
-Creating decoders for process `\alu.$proc$alu.sv:261$1151'.
-Creating decoders for process `\alu.$proc$alu.sv:308$1024'.
-     1/42: $0$formal$alu.sv:311$75_EN[0:0]$1026
-     2/42: $0$formal$alu.sv:311$75_CHECK[0:0]$1025
-     3/42: $0$formal$alu.sv:312$76_EN[0:0]$1028
-     4/42: $0$formal$alu.sv:312$76_CHECK[0:0]$1027
-     5/42: $0$formal$alu.sv:313$77_EN[0:0]$1030
-     6/42: $0$formal$alu.sv:313$77_CHECK[0:0]$1029
-     7/42: $0$formal$alu.sv:317$78_EN[0:0]$1032
-     8/42: $0$formal$alu.sv:317$78_CHECK[0:0]$1031
-     9/42: $0$formal$alu.sv:318$79_EN[0:0]$1034
-    10/42: $0$formal$alu.sv:318$79_CHECK[0:0]$1033
-    11/42: $0$formal$alu.sv:323$80_EN[0:0]$1036
-    12/42: $0$formal$alu.sv:323$80_CHECK[0:0]$1035
-    13/42: $0$formal$alu.sv:326$81_EN[0:0]$1038
-    14/42: $0$formal$alu.sv:326$81_CHECK[0:0]$1037
-    15/42: $0$formal$alu.sv:329$82_EN[0:0]$1040
-    16/42: $0$formal$alu.sv:329$82_CHECK[0:0]$1039
-    17/42: $0$formal$alu.sv:332$83_EN[0:0]$1042
-    18/42: $0$formal$alu.sv:332$83_CHECK[0:0]$1041
-    19/42: $0$formal$alu.sv:335$84_EN[0:0]$1044
-    20/42: $0$formal$alu.sv:335$84_CHECK[0:0]$1043
-    21/42: $0$formal$alu.sv:338$85_EN[0:0]$1046
-    22/42: $0$formal$alu.sv:338$85_CHECK[0:0]$1045
-    23/42: $0$formal$alu.sv:341$86_EN[0:0]$1048
-    24/42: $0$formal$alu.sv:341$86_CHECK[0:0]$1047
-    25/42: $0$formal$alu.sv:344$87_EN[0:0]$1050
-    26/42: $0$formal$alu.sv:344$87_CHECK[0:0]$1049
-    27/42: $0$formal$alu.sv:382$103_EN[0:0]$1082
-    28/42: $0$formal$alu.sv:382$103_CHECK[0:0]$1081
-    29/42: $0$formal$alu.sv:385$104_EN[0:0]$1084
-    30/42: $0$formal$alu.sv:385$104_CHECK[0:0]$1083
-    31/42: $0$formal$alu.sv:388$105_EN[0:0]$1086
-    32/42: $0$formal$alu.sv:388$105_CHECK[0:0]$1085
-    33/42: $0$formal$alu.sv:391$106_EN[0:0]$1088
-    34/42: $0$formal$alu.sv:391$106_CHECK[0:0]$1087
-    35/42: $0$formal$alu.sv:394$107_EN[0:0]$1090
-    36/42: $0$formal$alu.sv:394$107_CHECK[0:0]$1089
-    37/42: $0$formal$alu.sv:397$108_EN[0:0]$1092
-    38/42: $0$formal$alu.sv:397$108_CHECK[0:0]$1091
-    39/42: $0$formal$alu.sv:400$109_EN[0:0]$1094
-    40/42: $0$formal$alu.sv:400$109_CHECK[0:0]$1093
-    41/42: $0$formal$alu.sv:403$110_EN[0:0]$1096
-    42/42: $0$formal$alu.sv:403$110_CHECK[0:0]$1095
-Creating decoders for process `\alu.$proc$alu.sv:293$1022'.
+Creating decoders for process `\alu.$proc$alu.sv:257$1151'.
+Creating decoders for process `\alu.$proc$alu.sv:298$1024'.
+     1/42: $0$formal$alu.sv:301$75_EN[0:0]$1026
+     2/42: $0$formal$alu.sv:301$75_CHECK[0:0]$1025
+     3/42: $0$formal$alu.sv:302$76_EN[0:0]$1028
+     4/42: $0$formal$alu.sv:302$76_CHECK[0:0]$1027
+     5/42: $0$formal$alu.sv:303$77_EN[0:0]$1030
+     6/42: $0$formal$alu.sv:303$77_CHECK[0:0]$1029
+     7/42: $0$formal$alu.sv:307$78_EN[0:0]$1032
+     8/42: $0$formal$alu.sv:307$78_CHECK[0:0]$1031
+     9/42: $0$formal$alu.sv:308$79_EN[0:0]$1034
+    10/42: $0$formal$alu.sv:308$79_CHECK[0:0]$1033
+    11/42: $0$formal$alu.sv:313$80_EN[0:0]$1036
+    12/42: $0$formal$alu.sv:313$80_CHECK[0:0]$1035
+    13/42: $0$formal$alu.sv:316$81_EN[0:0]$1038
+    14/42: $0$formal$alu.sv:316$81_CHECK[0:0]$1037
+    15/42: $0$formal$alu.sv:319$82_EN[0:0]$1040
+    16/42: $0$formal$alu.sv:319$82_CHECK[0:0]$1039
+    17/42: $0$formal$alu.sv:322$83_EN[0:0]$1042
+    18/42: $0$formal$alu.sv:322$83_CHECK[0:0]$1041
+    19/42: $0$formal$alu.sv:325$84_EN[0:0]$1044
+    20/42: $0$formal$alu.sv:325$84_CHECK[0:0]$1043
+    21/42: $0$formal$alu.sv:328$85_EN[0:0]$1046
+    22/42: $0$formal$alu.sv:328$85_CHECK[0:0]$1045
+    23/42: $0$formal$alu.sv:331$86_EN[0:0]$1048
+    24/42: $0$formal$alu.sv:331$86_CHECK[0:0]$1047
+    25/42: $0$formal$alu.sv:334$87_EN[0:0]$1050
+    26/42: $0$formal$alu.sv:334$87_CHECK[0:0]$1049
+    27/42: $0$formal$alu.sv:371$103_EN[0:0]$1082
+    28/42: $0$formal$alu.sv:371$103_CHECK[0:0]$1081
+    29/42: $0$formal$alu.sv:374$104_EN[0:0]$1084
+    30/42: $0$formal$alu.sv:374$104_CHECK[0:0]$1083
+    31/42: $0$formal$alu.sv:377$105_EN[0:0]$1086
+    32/42: $0$formal$alu.sv:377$105_CHECK[0:0]$1085
+    33/42: $0$formal$alu.sv:380$106_EN[0:0]$1088
+    34/42: $0$formal$alu.sv:380$106_CHECK[0:0]$1087
+    35/42: $0$formal$alu.sv:383$107_EN[0:0]$1090
+    36/42: $0$formal$alu.sv:383$107_CHECK[0:0]$1089
+    37/42: $0$formal$alu.sv:386$108_EN[0:0]$1092
+    38/42: $0$formal$alu.sv:386$108_CHECK[0:0]$1091
+    39/42: $0$formal$alu.sv:389$109_EN[0:0]$1094
+    40/42: $0$formal$alu.sv:389$109_CHECK[0:0]$1093
+    41/42: $0$formal$alu.sv:392$110_EN[0:0]$1096
+    42/42: $0$formal$alu.sv:392$110_CHECK[0:0]$1095
+Creating decoders for process `\alu.$proc$alu.sv:283$1022'.
      1/4: $0\f_past_valid[0:0]
      2/4: $0\f_opcode[2:0]
      3/4: $0\f_op2[3:0]
      4/4: $0\f_op1[3:0]
-Creating decoders for process `\alu.$proc$alu.sv:233$971'.
+Creating decoders for process `\alu.$proc$alu.sv:229$971'.
      1/3: $0\carry[0:0]
      2/3: $0\result[3:0]
      3/3: $0\zero[0:0]
-Creating decoders for process `\alu.$proc$alu.sv:175$111'.
+Creating decoders for process `\alu.$proc$alu.sv:171$111'.
      1/340: $2\ZERO_next[0:0]
      2/340: $81\res[4:0]
      3/340: $80\res[4:0]
@@ -339,687 +339,687 @@ Creating decoders for process `\alu.$proc$alu.sv:175$111'.
     80/340: $3\res[4:0]
     81/340: $2\res[4:0]
     82/340: $1\result_next[4:0]
-    83/340: $1\func_get_bit$func$alu.sv:53$74.i[3:0]$621
-    84/340: $1\func_get_bit$func$alu.sv:53$74.divisor[3:0]$620
-    85/340: $1\func_get_bit$func$alu.sv:53$74.value[3:0]$619
-    86/340: $1\func_set_bit$func$alu.sv:166$73.i[3:0]$618
-    87/340: $1\func_set_bit$func$alu.sv:166$73.divisor[3:0]$617
-    88/340: $1\func_set_bit$func$alu.sv:166$73.current_bit[0:0]$616
-    89/340: $1\func_set_bit$func$alu.sv:166$73.bit_v[0:0]$615
-    90/340: $1\func_set_bit$func$alu.sv:166$73.value[4:0]$614
-    91/340: $1\func_get_bit$func$alu.sv:161$72.i[3:0]$613
-    92/340: $1\func_get_bit$func$alu.sv:161$72.divisor[3:0]$612
-    93/340: $1\func_get_bit$func$alu.sv:161$72.value[3:0]$611
-    94/340: $1\func_get_bit$func$alu.sv:159$71.i[3:0]$610
-    95/340: $1\func_get_bit$func$alu.sv:159$71.divisor[3:0]$609
-    96/340: $1\func_get_bit$func$alu.sv:159$71.value[3:0]$608
-    97/340: $1\func_get_bit$func$alu.sv:53$70.i[3:0]$607
-    98/340: $1\func_get_bit$func$alu.sv:53$70.divisor[3:0]$606
-    99/340: $1\func_get_bit$func$alu.sv:53$70.value[3:0]$605
-   100/340: $1\func_set_bit$func$alu.sv:166$69.i[3:0]$604
-   101/340: $1\func_set_bit$func$alu.sv:166$69.divisor[3:0]$603
-   102/340: $1\func_set_bit$func$alu.sv:166$69.current_bit[0:0]$602
-   103/340: $1\func_set_bit$func$alu.sv:166$69.bit_v[0:0]$601
-   104/340: $1\func_set_bit$func$alu.sv:166$69.value[4:0]$600
-   105/340: $1\func_get_bit$func$alu.sv:161$68.i[3:0]$599
-   106/340: $1\func_get_bit$func$alu.sv:161$68.divisor[3:0]$598
-   107/340: $1\func_get_bit$func$alu.sv:161$68.value[3:0]$597
-   108/340: $1\func_get_bit$func$alu.sv:159$67.i[3:0]$596
-   109/340: $1\func_get_bit$func$alu.sv:159$67.divisor[3:0]$595
-   110/340: $1\func_get_bit$func$alu.sv:159$67.value[3:0]$594
-   111/340: $1\func_get_bit$func$alu.sv:53$66.i[3:0]$593
-   112/340: $1\func_get_bit$func$alu.sv:53$66.divisor[3:0]$592
-   113/340: $1\func_get_bit$func$alu.sv:53$66.value[3:0]$591
-   114/340: $1\func_set_bit$func$alu.sv:166$65.i[3:0]$590
-   115/340: $1\func_set_bit$func$alu.sv:166$65.divisor[3:0]$589
-   116/340: $1\func_set_bit$func$alu.sv:166$65.current_bit[0:0]$588
-   117/340: $1\func_set_bit$func$alu.sv:166$65.bit_v[0:0]$587
-   118/340: $1\func_set_bit$func$alu.sv:166$65.value[4:0]$586
-   119/340: $1\func_get_bit$func$alu.sv:161$64.i[3:0]$585
-   120/340: $1\func_get_bit$func$alu.sv:161$64.divisor[3:0]$584
-   121/340: $1\func_get_bit$func$alu.sv:161$64.value[3:0]$583
-   122/340: $1\func_get_bit$func$alu.sv:159$63.i[3:0]$582
-   123/340: $1\func_get_bit$func$alu.sv:159$63.divisor[3:0]$581
-   124/340: $1\func_get_bit$func$alu.sv:159$63.value[3:0]$580
-   125/340: $1\func_get_bit$func$alu.sv:53$62.i[3:0]$579
-   126/340: $1\func_get_bit$func$alu.sv:53$62.divisor[3:0]$578
-   127/340: $1\func_get_bit$func$alu.sv:53$62.value[3:0]$577
-   128/340: $1\func_set_bit$func$alu.sv:166$61.i[3:0]$576
-   129/340: $1\func_set_bit$func$alu.sv:166$61.divisor[3:0]$575
-   130/340: $1\func_set_bit$func$alu.sv:166$61.current_bit[0:0]$574
-   131/340: $1\func_set_bit$func$alu.sv:166$61.bit_v[0:0]$573
-   132/340: $1\func_set_bit$func$alu.sv:166$61.value[4:0]$572
-   133/340: $1\func_get_bit$func$alu.sv:161$60.i[3:0]$571
-   134/340: $1\func_get_bit$func$alu.sv:161$60.divisor[3:0]$570
-   135/340: $1\func_get_bit$func$alu.sv:161$60.value[3:0]$569
-   136/340: $1\func_get_bit$func$alu.sv:159$59.i[3:0]$568
-   137/340: $1\func_get_bit$func$alu.sv:159$59.divisor[3:0]$567
-   138/340: $1\func_get_bit$func$alu.sv:159$59.value[3:0]$566
-   139/340: $1\func_xor$func$alu.sv:208$58.aux_2[4:0]$565
-   140/340: $1\func_xor$func$alu.sv:208$58.aux_1[0:0]$564
-   141/340: $1\func_xor$func$alu.sv:208$58.aux_0[0:0]$563
-   142/340: $1\func_xor$func$alu.sv:208$58.bit_v_1[0:0]$562
-   143/340: $1\func_xor$func$alu.sv:208$58.bit_v[1:0]$561
-   144/340: $1\func_xor$func$alu.sv:208$58.i[3:0]$560
-   145/340: $1\func_xor$func$alu.sv:208$58.data2[3:0]$559
-   146/340: $1\func_xor$func$alu.sv:208$58.data1[3:0]$558
-   147/340: $1\func_get_bit$func$alu.sv:53$57.i[3:0]$557
-   148/340: $1\func_get_bit$func$alu.sv:53$57.divisor[3:0]$556
-   149/340: $1\func_get_bit$func$alu.sv:53$57.value[3:0]$555
-   150/340: $1\func_set_bit$func$alu.sv:141$56.i[3:0]$554
-   151/340: $1\func_set_bit$func$alu.sv:141$56.divisor[3:0]$553
-   152/340: $1\func_set_bit$func$alu.sv:141$56.current_bit[0:0]$552
-   153/340: $1\func_set_bit$func$alu.sv:141$56.bit_v[0:0]$551
-   154/340: $1\func_set_bit$func$alu.sv:141$56.value[4:0]$550
-   155/340: $1\func_get_bit$func$alu.sv:136$55.i[3:0]$549
-   156/340: $1\func_get_bit$func$alu.sv:136$55.divisor[3:0]$548
-   157/340: $1\func_get_bit$func$alu.sv:136$55.value[3:0]$547
-   158/340: $1\func_get_bit$func$alu.sv:134$54.i[3:0]$546
-   159/340: $1\func_get_bit$func$alu.sv:134$54.divisor[3:0]$545
-   160/340: $1\func_get_bit$func$alu.sv:134$54.value[3:0]$544
-   161/340: $1\func_get_bit$func$alu.sv:53$53.i[3:0]$543
-   162/340: $1\func_get_bit$func$alu.sv:53$53.divisor[3:0]$542
-   163/340: $1\func_get_bit$func$alu.sv:53$53.value[3:0]$541
-   164/340: $1\func_set_bit$func$alu.sv:141$52.i[3:0]$540
-   165/340: $1\func_set_bit$func$alu.sv:141$52.divisor[3:0]$539
-   166/340: $1\func_set_bit$func$alu.sv:141$52.current_bit[0:0]$538
-   167/340: $1\func_set_bit$func$alu.sv:141$52.bit_v[0:0]$537
-   168/340: $1\func_set_bit$func$alu.sv:141$52.value[4:0]$536
-   169/340: $1\func_get_bit$func$alu.sv:136$51.i[3:0]$535
-   170/340: $1\func_get_bit$func$alu.sv:136$51.divisor[3:0]$534
-   171/340: $1\func_get_bit$func$alu.sv:136$51.value[3:0]$533
-   172/340: $1\func_get_bit$func$alu.sv:134$50.i[3:0]$532
-   173/340: $1\func_get_bit$func$alu.sv:134$50.divisor[3:0]$531
-   174/340: $1\func_get_bit$func$alu.sv:134$50.value[3:0]$530
-   175/340: $1\func_get_bit$func$alu.sv:53$49.i[3:0]$529
-   176/340: $1\func_get_bit$func$alu.sv:53$49.divisor[3:0]$528
-   177/340: $1\func_get_bit$func$alu.sv:53$49.value[3:0]$527
-   178/340: $1\func_set_bit$func$alu.sv:141$48.i[3:0]$526
-   179/340: $1\func_set_bit$func$alu.sv:141$48.divisor[3:0]$525
-   180/340: $1\func_set_bit$func$alu.sv:141$48.current_bit[0:0]$524
-   181/340: $1\func_set_bit$func$alu.sv:141$48.bit_v[0:0]$523
-   182/340: $1\func_set_bit$func$alu.sv:141$48.value[4:0]$522
-   183/340: $1\func_get_bit$func$alu.sv:136$47.i[3:0]$521
-   184/340: $1\func_get_bit$func$alu.sv:136$47.divisor[3:0]$520
-   185/340: $1\func_get_bit$func$alu.sv:136$47.value[3:0]$519
-   186/340: $1\func_get_bit$func$alu.sv:134$46.i[3:0]$518
-   187/340: $1\func_get_bit$func$alu.sv:134$46.divisor[3:0]$517
-   188/340: $1\func_get_bit$func$alu.sv:134$46.value[3:0]$516
-   189/340: $1\func_get_bit$func$alu.sv:53$45.i[3:0]$515
-   190/340: $1\func_get_bit$func$alu.sv:53$45.divisor[3:0]$514
-   191/340: $1\func_get_bit$func$alu.sv:53$45.value[3:0]$513
-   192/340: $1\func_set_bit$func$alu.sv:141$44.i[3:0]$512
-   193/340: $1\func_set_bit$func$alu.sv:141$44.divisor[3:0]$511
-   194/340: $1\func_set_bit$func$alu.sv:141$44.current_bit[0:0]$510
-   195/340: $1\func_set_bit$func$alu.sv:141$44.bit_v[0:0]$509
-   196/340: $1\func_set_bit$func$alu.sv:141$44.value[4:0]$508
-   197/340: $1\func_get_bit$func$alu.sv:136$43.i[3:0]$507
-   198/340: $1\func_get_bit$func$alu.sv:136$43.divisor[3:0]$506
-   199/340: $1\func_get_bit$func$alu.sv:136$43.value[3:0]$505
-   200/340: $1\func_get_bit$func$alu.sv:134$42.i[3:0]$504
-   201/340: $1\func_get_bit$func$alu.sv:134$42.divisor[3:0]$503
-   202/340: $1\func_get_bit$func$alu.sv:134$42.value[3:0]$502
-   203/340: $1\func_nand$func$alu.sv:203$41.aux_2[4:0]$501
-   204/340: $1\func_nand$func$alu.sv:203$41.aux_1[0:0]$500
-   205/340: $1\func_nand$func$alu.sv:203$41.aux_0[0:0]$499
-   206/340: $1\func_nand$func$alu.sv:203$41.bit_v_1[0:0]$498
-   207/340: $1\func_nand$func$alu.sv:203$41.bit_v[0:0]$497
-   208/340: $1\func_nand$func$alu.sv:203$41.i[3:0]$496
-   209/340: $1\func_nand$func$alu.sv:203$41.data2[3:0]$495
-   210/340: $1\func_nand$func$alu.sv:203$41.data1[3:0]$494
-   211/340: $1\func_get_bit$func$alu.sv:53$40.i[3:0]$493
-   212/340: $1\func_get_bit$func$alu.sv:53$40.divisor[3:0]$492
-   213/340: $1\func_get_bit$func$alu.sv:53$40.value[3:0]$491
-   214/340: $1\func_set_bit$func$alu.sv:115$39.i[3:0]$490
-   215/340: $1\func_set_bit$func$alu.sv:115$39.divisor[3:0]$489
-   216/340: $1\func_set_bit$func$alu.sv:115$39.current_bit[0:0]$488
-   217/340: $1\func_set_bit$func$alu.sv:115$39.bit_v[0:0]$487
-   218/340: $1\func_set_bit$func$alu.sv:115$39.value[4:0]$486
-   219/340: $1\func_get_bit$func$alu.sv:110$38.i[3:0]$485
-   220/340: $1\func_get_bit$func$alu.sv:110$38.divisor[3:0]$484
-   221/340: $1\func_get_bit$func$alu.sv:110$38.value[3:0]$483
-   222/340: $1\func_get_bit$func$alu.sv:108$37.i[3:0]$482
-   223/340: $1\func_get_bit$func$alu.sv:108$37.divisor[3:0]$481
-   224/340: $1\func_get_bit$func$alu.sv:108$37.value[3:0]$480
-   225/340: $1\func_get_bit$func$alu.sv:53$36.i[3:0]$479
-   226/340: $1\func_get_bit$func$alu.sv:53$36.divisor[3:0]$478
-   227/340: $1\func_get_bit$func$alu.sv:53$36.value[3:0]$477
-   228/340: $1\func_set_bit$func$alu.sv:115$35.i[3:0]$476
-   229/340: $1\func_set_bit$func$alu.sv:115$35.divisor[3:0]$475
-   230/340: $1\func_set_bit$func$alu.sv:115$35.current_bit[0:0]$474
-   231/340: $1\func_set_bit$func$alu.sv:115$35.bit_v[0:0]$473
-   232/340: $1\func_set_bit$func$alu.sv:115$35.value[4:0]$472
-   233/340: $1\func_get_bit$func$alu.sv:110$34.i[3:0]$471
-   234/340: $1\func_get_bit$func$alu.sv:110$34.divisor[3:0]$470
-   235/340: $1\func_get_bit$func$alu.sv:110$34.value[3:0]$469
-   236/340: $1\func_get_bit$func$alu.sv:108$33.i[3:0]$468
-   237/340: $1\func_get_bit$func$alu.sv:108$33.divisor[3:0]$467
-   238/340: $1\func_get_bit$func$alu.sv:108$33.value[3:0]$466
-   239/340: $1\func_get_bit$func$alu.sv:53$32.i[3:0]$465
-   240/340: $1\func_get_bit$func$alu.sv:53$32.divisor[3:0]$464
-   241/340: $1\func_get_bit$func$alu.sv:53$32.value[3:0]$463
-   242/340: $1\func_set_bit$func$alu.sv:115$31.i[3:0]$462
-   243/340: $1\func_set_bit$func$alu.sv:115$31.divisor[3:0]$461
-   244/340: $1\func_set_bit$func$alu.sv:115$31.current_bit[0:0]$460
-   245/340: $1\func_set_bit$func$alu.sv:115$31.bit_v[0:0]$459
-   246/340: $1\func_set_bit$func$alu.sv:115$31.value[4:0]$458
-   247/340: $1\func_get_bit$func$alu.sv:110$30.i[3:0]$457
-   248/340: $1\func_get_bit$func$alu.sv:110$30.divisor[3:0]$456
-   249/340: $1\func_get_bit$func$alu.sv:110$30.value[3:0]$455
-   250/340: $1\func_get_bit$func$alu.sv:108$29.i[3:0]$454
-   251/340: $1\func_get_bit$func$alu.sv:108$29.divisor[3:0]$453
-   252/340: $1\func_get_bit$func$alu.sv:108$29.value[3:0]$452
-   253/340: $1\func_get_bit$func$alu.sv:53$28.i[3:0]$451
-   254/340: $1\func_get_bit$func$alu.sv:53$28.divisor[3:0]$450
-   255/340: $1\func_get_bit$func$alu.sv:53$28.value[3:0]$449
-   256/340: $1\func_set_bit$func$alu.sv:115$27.i[3:0]$448
-   257/340: $1\func_set_bit$func$alu.sv:115$27.divisor[3:0]$447
-   258/340: $1\func_set_bit$func$alu.sv:115$27.current_bit[0:0]$446
-   259/340: $1\func_set_bit$func$alu.sv:115$27.bit_v[0:0]$445
-   260/340: $1\func_set_bit$func$alu.sv:115$27.value[4:0]$444
-   261/340: $1\func_get_bit$func$alu.sv:110$26.i[3:0]$443
-   262/340: $1\func_get_bit$func$alu.sv:110$26.divisor[3:0]$442
-   263/340: $1\func_get_bit$func$alu.sv:110$26.value[3:0]$441
-   264/340: $1\func_get_bit$func$alu.sv:108$25.i[3:0]$440
-   265/340: $1\func_get_bit$func$alu.sv:108$25.divisor[3:0]$439
-   266/340: $1\func_get_bit$func$alu.sv:108$25.value[3:0]$438
-   267/340: $1\func_or$func$alu.sv:198$24.aux_2[4:0]$437
-   268/340: $1\func_or$func$alu.sv:198$24.aux_1[0:0]$436
-   269/340: $1\func_or$func$alu.sv:198$24.aux_0[0:0]$435
-   270/340: $1\func_or$func$alu.sv:198$24.bit_v_1[0:0]$434
-   271/340: $1\func_or$func$alu.sv:198$24.bit_v[1:0]$433
-   272/340: $1\func_or$func$alu.sv:198$24.i[3:0]$432
-   273/340: $1\func_or$func$alu.sv:198$24.data2[3:0]$431
-   274/340: $1\func_or$func$alu.sv:198$24.data1[3:0]$430
-   275/340: $1\func_get_bit$func$alu.sv:53$23.i[3:0]$429
-   276/340: $1\func_get_bit$func$alu.sv:53$23.divisor[3:0]$428
-   277/340: $1\func_get_bit$func$alu.sv:53$23.value[3:0]$427
-   278/340: $1\func_set_bit$func$alu.sv:90$22.i[3:0]$426
-   279/340: $1\func_set_bit$func$alu.sv:90$22.divisor[3:0]$425
-   280/340: $1\func_set_bit$func$alu.sv:90$22.current_bit[0:0]$424
-   281/340: $1\func_set_bit$func$alu.sv:90$22.bit_v[0:0]$423
-   282/340: $1\func_set_bit$func$alu.sv:90$22.value[4:0]$422
-   283/340: $1\func_get_bit$func$alu.sv:86$21.i[3:0]$421
-   284/340: $1\func_get_bit$func$alu.sv:86$21.divisor[3:0]$420
-   285/340: $1\func_get_bit$func$alu.sv:86$21.value[3:0]$419
-   286/340: $1\func_get_bit$func$alu.sv:84$20.i[3:0]$418
-   287/340: $1\func_get_bit$func$alu.sv:84$20.divisor[3:0]$417
-   288/340: $1\func_get_bit$func$alu.sv:84$20.value[3:0]$416
-   289/340: $1\func_get_bit$func$alu.sv:53$19.i[3:0]$415
-   290/340: $1\func_get_bit$func$alu.sv:53$19.divisor[3:0]$414
-   291/340: $1\func_get_bit$func$alu.sv:53$19.value[3:0]$413
-   292/340: $1\func_set_bit$func$alu.sv:90$18.i[3:0]$412
-   293/340: $1\func_set_bit$func$alu.sv:90$18.divisor[3:0]$411
-   294/340: $1\func_set_bit$func$alu.sv:90$18.current_bit[0:0]$410
-   295/340: $1\func_set_bit$func$alu.sv:90$18.bit_v[0:0]$409
-   296/340: $1\func_set_bit$func$alu.sv:90$18.value[4:0]$408
-   297/340: $1\func_get_bit$func$alu.sv:86$17.i[3:0]$407
-   298/340: $1\func_get_bit$func$alu.sv:86$17.divisor[3:0]$406
-   299/340: $1\func_get_bit$func$alu.sv:86$17.value[3:0]$405
-   300/340: $1\func_get_bit$func$alu.sv:84$16.i[3:0]$404
-   301/340: $1\func_get_bit$func$alu.sv:84$16.divisor[3:0]$403
-   302/340: $1\func_get_bit$func$alu.sv:84$16.value[3:0]$402
-   303/340: $1\func_get_bit$func$alu.sv:53$15.i[3:0]$401
-   304/340: $1\func_get_bit$func$alu.sv:53$15.divisor[3:0]$400
-   305/340: $1\func_get_bit$func$alu.sv:53$15.value[3:0]$399
-   306/340: $1\func_set_bit$func$alu.sv:90$14.i[3:0]$398
-   307/340: $1\func_set_bit$func$alu.sv:90$14.divisor[3:0]$397
-   308/340: $1\func_set_bit$func$alu.sv:90$14.current_bit[0:0]$396
-   309/340: $1\func_set_bit$func$alu.sv:90$14.bit_v[0:0]$395
-   310/340: $1\func_set_bit$func$alu.sv:90$14.value[4:0]$394
-   311/340: $1\func_get_bit$func$alu.sv:86$13.i[3:0]$393
-   312/340: $1\func_get_bit$func$alu.sv:86$13.divisor[3:0]$392
-   313/340: $1\func_get_bit$func$alu.sv:86$13.value[3:0]$391
-   314/340: $1\func_get_bit$func$alu.sv:84$12.i[3:0]$390
-   315/340: $1\func_get_bit$func$alu.sv:84$12.divisor[3:0]$389
-   316/340: $1\func_get_bit$func$alu.sv:84$12.value[3:0]$388
-   317/340: $1\func_get_bit$func$alu.sv:53$11.i[3:0]$387
-   318/340: $1\func_get_bit$func$alu.sv:53$11.divisor[3:0]$386
-   319/340: $1\func_get_bit$func$alu.sv:53$11.value[3:0]$385
-   320/340: $1\func_set_bit$func$alu.sv:90$10.i[3:0]$384
-   321/340: $1\func_set_bit$func$alu.sv:90$10.divisor[3:0]$383
-   322/340: $1\func_set_bit$func$alu.sv:90$10.current_bit[0:0]$382
-   323/340: $1\func_set_bit$func$alu.sv:90$10.bit_v[0:0]$381
-   324/340: $1\func_set_bit$func$alu.sv:90$10.value[4:0]$380
-   325/340: $1\func_get_bit$func$alu.sv:86$9.i[3:0]$379
-   326/340: $1\func_get_bit$func$alu.sv:86$9.divisor[3:0]$378
-   327/340: $1\func_get_bit$func$alu.sv:86$9.value[3:0]$377
-   328/340: $1\func_get_bit$func$alu.sv:84$8.i[3:0]$376
-   329/340: $1\func_get_bit$func$alu.sv:84$8.divisor[3:0]$375
-   330/340: $1\func_get_bit$func$alu.sv:84$8.value[3:0]$374
-   331/340: $1\func_and$func$alu.sv:193$7.aux_2[4:0]$373
-   332/340: $1\func_and$func$alu.sv:193$7.aux_1[0:0]$372
-   333/340: $1\func_and$func$alu.sv:193$7.aux_0[0:0]$371
-   334/340: $1\func_and$func$alu.sv:193$7.bit_v[0:0]$370
-   335/340: $1\func_and$func$alu.sv:193$7.i[3:0]$369
-   336/340: $1\func_and$func$alu.sv:193$7.data2[3:0]$368
-   337/340: $1\func_and$func$alu.sv:193$7.data1[3:0]$367
+    83/340: $1\func_get_bit$func$alu.sv:49$74.i[3:0]$621
+    84/340: $1\func_get_bit$func$alu.sv:49$74.divisor[3:0]$620
+    85/340: $1\func_get_bit$func$alu.sv:49$74.value[3:0]$619
+    86/340: $1\func_set_bit$func$alu.sv:162$73.i[3:0]$618
+    87/340: $1\func_set_bit$func$alu.sv:162$73.divisor[3:0]$617
+    88/340: $1\func_set_bit$func$alu.sv:162$73.current_bit[0:0]$616
+    89/340: $1\func_set_bit$func$alu.sv:162$73.bit_v[0:0]$615
+    90/340: $1\func_set_bit$func$alu.sv:162$73.value[4:0]$614
+    91/340: $1\func_get_bit$func$alu.sv:157$72.i[3:0]$613
+    92/340: $1\func_get_bit$func$alu.sv:157$72.divisor[3:0]$612
+    93/340: $1\func_get_bit$func$alu.sv:157$72.value[3:0]$611
+    94/340: $1\func_get_bit$func$alu.sv:155$71.i[3:0]$610
+    95/340: $1\func_get_bit$func$alu.sv:155$71.divisor[3:0]$609
+    96/340: $1\func_get_bit$func$alu.sv:155$71.value[3:0]$608
+    97/340: $1\func_get_bit$func$alu.sv:49$70.i[3:0]$607
+    98/340: $1\func_get_bit$func$alu.sv:49$70.divisor[3:0]$606
+    99/340: $1\func_get_bit$func$alu.sv:49$70.value[3:0]$605
+   100/340: $1\func_set_bit$func$alu.sv:162$69.i[3:0]$604
+   101/340: $1\func_set_bit$func$alu.sv:162$69.divisor[3:0]$603
+   102/340: $1\func_set_bit$func$alu.sv:162$69.current_bit[0:0]$602
+   103/340: $1\func_set_bit$func$alu.sv:162$69.bit_v[0:0]$601
+   104/340: $1\func_set_bit$func$alu.sv:162$69.value[4:0]$600
+   105/340: $1\func_get_bit$func$alu.sv:157$68.i[3:0]$599
+   106/340: $1\func_get_bit$func$alu.sv:157$68.divisor[3:0]$598
+   107/340: $1\func_get_bit$func$alu.sv:157$68.value[3:0]$597
+   108/340: $1\func_get_bit$func$alu.sv:155$67.i[3:0]$596
+   109/340: $1\func_get_bit$func$alu.sv:155$67.divisor[3:0]$595
+   110/340: $1\func_get_bit$func$alu.sv:155$67.value[3:0]$594
+   111/340: $1\func_get_bit$func$alu.sv:49$66.i[3:0]$593
+   112/340: $1\func_get_bit$func$alu.sv:49$66.divisor[3:0]$592
+   113/340: $1\func_get_bit$func$alu.sv:49$66.value[3:0]$591
+   114/340: $1\func_set_bit$func$alu.sv:162$65.i[3:0]$590
+   115/340: $1\func_set_bit$func$alu.sv:162$65.divisor[3:0]$589
+   116/340: $1\func_set_bit$func$alu.sv:162$65.current_bit[0:0]$588
+   117/340: $1\func_set_bit$func$alu.sv:162$65.bit_v[0:0]$587
+   118/340: $1\func_set_bit$func$alu.sv:162$65.value[4:0]$586
+   119/340: $1\func_get_bit$func$alu.sv:157$64.i[3:0]$585
+   120/340: $1\func_get_bit$func$alu.sv:157$64.divisor[3:0]$584
+   121/340: $1\func_get_bit$func$alu.sv:157$64.value[3:0]$583
+   122/340: $1\func_get_bit$func$alu.sv:155$63.i[3:0]$582
+   123/340: $1\func_get_bit$func$alu.sv:155$63.divisor[3:0]$581
+   124/340: $1\func_get_bit$func$alu.sv:155$63.value[3:0]$580
+   125/340: $1\func_get_bit$func$alu.sv:49$62.i[3:0]$579
+   126/340: $1\func_get_bit$func$alu.sv:49$62.divisor[3:0]$578
+   127/340: $1\func_get_bit$func$alu.sv:49$62.value[3:0]$577
+   128/340: $1\func_set_bit$func$alu.sv:162$61.i[3:0]$576
+   129/340: $1\func_set_bit$func$alu.sv:162$61.divisor[3:0]$575
+   130/340: $1\func_set_bit$func$alu.sv:162$61.current_bit[0:0]$574
+   131/340: $1\func_set_bit$func$alu.sv:162$61.bit_v[0:0]$573
+   132/340: $1\func_set_bit$func$alu.sv:162$61.value[4:0]$572
+   133/340: $1\func_get_bit$func$alu.sv:157$60.i[3:0]$571
+   134/340: $1\func_get_bit$func$alu.sv:157$60.divisor[3:0]$570
+   135/340: $1\func_get_bit$func$alu.sv:157$60.value[3:0]$569
+   136/340: $1\func_get_bit$func$alu.sv:155$59.i[3:0]$568
+   137/340: $1\func_get_bit$func$alu.sv:155$59.divisor[3:0]$567
+   138/340: $1\func_get_bit$func$alu.sv:155$59.value[3:0]$566
+   139/340: $1\func_xor$func$alu.sv:204$58.aux_2[4:0]$565
+   140/340: $1\func_xor$func$alu.sv:204$58.aux_1[0:0]$564
+   141/340: $1\func_xor$func$alu.sv:204$58.aux_0[0:0]$563
+   142/340: $1\func_xor$func$alu.sv:204$58.bit_v_1[0:0]$562
+   143/340: $1\func_xor$func$alu.sv:204$58.bit_v[1:0]$561
+   144/340: $1\func_xor$func$alu.sv:204$58.i[3:0]$560
+   145/340: $1\func_xor$func$alu.sv:204$58.data2[3:0]$559
+   146/340: $1\func_xor$func$alu.sv:204$58.data1[3:0]$558
+   147/340: $1\func_get_bit$func$alu.sv:49$57.i[3:0]$557
+   148/340: $1\func_get_bit$func$alu.sv:49$57.divisor[3:0]$556
+   149/340: $1\func_get_bit$func$alu.sv:49$57.value[3:0]$555
+   150/340: $1\func_set_bit$func$alu.sv:137$56.i[3:0]$554
+   151/340: $1\func_set_bit$func$alu.sv:137$56.divisor[3:0]$553
+   152/340: $1\func_set_bit$func$alu.sv:137$56.current_bit[0:0]$552
+   153/340: $1\func_set_bit$func$alu.sv:137$56.bit_v[0:0]$551
+   154/340: $1\func_set_bit$func$alu.sv:137$56.value[4:0]$550
+   155/340: $1\func_get_bit$func$alu.sv:132$55.i[3:0]$549
+   156/340: $1\func_get_bit$func$alu.sv:132$55.divisor[3:0]$548
+   157/340: $1\func_get_bit$func$alu.sv:132$55.value[3:0]$547
+   158/340: $1\func_get_bit$func$alu.sv:130$54.i[3:0]$546
+   159/340: $1\func_get_bit$func$alu.sv:130$54.divisor[3:0]$545
+   160/340: $1\func_get_bit$func$alu.sv:130$54.value[3:0]$544
+   161/340: $1\func_get_bit$func$alu.sv:49$53.i[3:0]$543
+   162/340: $1\func_get_bit$func$alu.sv:49$53.divisor[3:0]$542
+   163/340: $1\func_get_bit$func$alu.sv:49$53.value[3:0]$541
+   164/340: $1\func_set_bit$func$alu.sv:137$52.i[3:0]$540
+   165/340: $1\func_set_bit$func$alu.sv:137$52.divisor[3:0]$539
+   166/340: $1\func_set_bit$func$alu.sv:137$52.current_bit[0:0]$538
+   167/340: $1\func_set_bit$func$alu.sv:137$52.bit_v[0:0]$537
+   168/340: $1\func_set_bit$func$alu.sv:137$52.value[4:0]$536
+   169/340: $1\func_get_bit$func$alu.sv:132$51.i[3:0]$535
+   170/340: $1\func_get_bit$func$alu.sv:132$51.divisor[3:0]$534
+   171/340: $1\func_get_bit$func$alu.sv:132$51.value[3:0]$533
+   172/340: $1\func_get_bit$func$alu.sv:130$50.i[3:0]$532
+   173/340: $1\func_get_bit$func$alu.sv:130$50.divisor[3:0]$531
+   174/340: $1\func_get_bit$func$alu.sv:130$50.value[3:0]$530
+   175/340: $1\func_get_bit$func$alu.sv:49$49.i[3:0]$529
+   176/340: $1\func_get_bit$func$alu.sv:49$49.divisor[3:0]$528
+   177/340: $1\func_get_bit$func$alu.sv:49$49.value[3:0]$527
+   178/340: $1\func_set_bit$func$alu.sv:137$48.i[3:0]$526
+   179/340: $1\func_set_bit$func$alu.sv:137$48.divisor[3:0]$525
+   180/340: $1\func_set_bit$func$alu.sv:137$48.current_bit[0:0]$524
+   181/340: $1\func_set_bit$func$alu.sv:137$48.bit_v[0:0]$523
+   182/340: $1\func_set_bit$func$alu.sv:137$48.value[4:0]$522
+   183/340: $1\func_get_bit$func$alu.sv:132$47.i[3:0]$521
+   184/340: $1\func_get_bit$func$alu.sv:132$47.divisor[3:0]$520
+   185/340: $1\func_get_bit$func$alu.sv:132$47.value[3:0]$519
+   186/340: $1\func_get_bit$func$alu.sv:130$46.i[3:0]$518
+   187/340: $1\func_get_bit$func$alu.sv:130$46.divisor[3:0]$517
+   188/340: $1\func_get_bit$func$alu.sv:130$46.value[3:0]$516
+   189/340: $1\func_get_bit$func$alu.sv:49$45.i[3:0]$515
+   190/340: $1\func_get_bit$func$alu.sv:49$45.divisor[3:0]$514
+   191/340: $1\func_get_bit$func$alu.sv:49$45.value[3:0]$513
+   192/340: $1\func_set_bit$func$alu.sv:137$44.i[3:0]$512
+   193/340: $1\func_set_bit$func$alu.sv:137$44.divisor[3:0]$511
+   194/340: $1\func_set_bit$func$alu.sv:137$44.current_bit[0:0]$510
+   195/340: $1\func_set_bit$func$alu.sv:137$44.bit_v[0:0]$509
+   196/340: $1\func_set_bit$func$alu.sv:137$44.value[4:0]$508
+   197/340: $1\func_get_bit$func$alu.sv:132$43.i[3:0]$507
+   198/340: $1\func_get_bit$func$alu.sv:132$43.divisor[3:0]$506
+   199/340: $1\func_get_bit$func$alu.sv:132$43.value[3:0]$505
+   200/340: $1\func_get_bit$func$alu.sv:130$42.i[3:0]$504
+   201/340: $1\func_get_bit$func$alu.sv:130$42.divisor[3:0]$503
+   202/340: $1\func_get_bit$func$alu.sv:130$42.value[3:0]$502
+   203/340: $1\func_nand$func$alu.sv:199$41.aux_2[4:0]$501
+   204/340: $1\func_nand$func$alu.sv:199$41.aux_1[0:0]$500
+   205/340: $1\func_nand$func$alu.sv:199$41.aux_0[0:0]$499
+   206/340: $1\func_nand$func$alu.sv:199$41.bit_v_1[0:0]$498
+   207/340: $1\func_nand$func$alu.sv:199$41.bit_v[0:0]$497
+   208/340: $1\func_nand$func$alu.sv:199$41.i[3:0]$496
+   209/340: $1\func_nand$func$alu.sv:199$41.data2[3:0]$495
+   210/340: $1\func_nand$func$alu.sv:199$41.data1[3:0]$494
+   211/340: $1\func_get_bit$func$alu.sv:49$40.i[3:0]$493
+   212/340: $1\func_get_bit$func$alu.sv:49$40.divisor[3:0]$492
+   213/340: $1\func_get_bit$func$alu.sv:49$40.value[3:0]$491
+   214/340: $1\func_set_bit$func$alu.sv:111$39.i[3:0]$490
+   215/340: $1\func_set_bit$func$alu.sv:111$39.divisor[3:0]$489
+   216/340: $1\func_set_bit$func$alu.sv:111$39.current_bit[0:0]$488
+   217/340: $1\func_set_bit$func$alu.sv:111$39.bit_v[0:0]$487
+   218/340: $1\func_set_bit$func$alu.sv:111$39.value[4:0]$486
+   219/340: $1\func_get_bit$func$alu.sv:106$38.i[3:0]$485
+   220/340: $1\func_get_bit$func$alu.sv:106$38.divisor[3:0]$484
+   221/340: $1\func_get_bit$func$alu.sv:106$38.value[3:0]$483
+   222/340: $1\func_get_bit$func$alu.sv:104$37.i[3:0]$482
+   223/340: $1\func_get_bit$func$alu.sv:104$37.divisor[3:0]$481
+   224/340: $1\func_get_bit$func$alu.sv:104$37.value[3:0]$480
+   225/340: $1\func_get_bit$func$alu.sv:49$36.i[3:0]$479
+   226/340: $1\func_get_bit$func$alu.sv:49$36.divisor[3:0]$478
+   227/340: $1\func_get_bit$func$alu.sv:49$36.value[3:0]$477
+   228/340: $1\func_set_bit$func$alu.sv:111$35.i[3:0]$476
+   229/340: $1\func_set_bit$func$alu.sv:111$35.divisor[3:0]$475
+   230/340: $1\func_set_bit$func$alu.sv:111$35.current_bit[0:0]$474
+   231/340: $1\func_set_bit$func$alu.sv:111$35.bit_v[0:0]$473
+   232/340: $1\func_set_bit$func$alu.sv:111$35.value[4:0]$472
+   233/340: $1\func_get_bit$func$alu.sv:106$34.i[3:0]$471
+   234/340: $1\func_get_bit$func$alu.sv:106$34.divisor[3:0]$470
+   235/340: $1\func_get_bit$func$alu.sv:106$34.value[3:0]$469
+   236/340: $1\func_get_bit$func$alu.sv:104$33.i[3:0]$468
+   237/340: $1\func_get_bit$func$alu.sv:104$33.divisor[3:0]$467
+   238/340: $1\func_get_bit$func$alu.sv:104$33.value[3:0]$466
+   239/340: $1\func_get_bit$func$alu.sv:49$32.i[3:0]$465
+   240/340: $1\func_get_bit$func$alu.sv:49$32.divisor[3:0]$464
+   241/340: $1\func_get_bit$func$alu.sv:49$32.value[3:0]$463
+   242/340: $1\func_set_bit$func$alu.sv:111$31.i[3:0]$462
+   243/340: $1\func_set_bit$func$alu.sv:111$31.divisor[3:0]$461
+   244/340: $1\func_set_bit$func$alu.sv:111$31.current_bit[0:0]$460
+   245/340: $1\func_set_bit$func$alu.sv:111$31.bit_v[0:0]$459
+   246/340: $1\func_set_bit$func$alu.sv:111$31.value[4:0]$458
+   247/340: $1\func_get_bit$func$alu.sv:106$30.i[3:0]$457
+   248/340: $1\func_get_bit$func$alu.sv:106$30.divisor[3:0]$456
+   249/340: $1\func_get_bit$func$alu.sv:106$30.value[3:0]$455
+   250/340: $1\func_get_bit$func$alu.sv:104$29.i[3:0]$454
+   251/340: $1\func_get_bit$func$alu.sv:104$29.divisor[3:0]$453
+   252/340: $1\func_get_bit$func$alu.sv:104$29.value[3:0]$452
+   253/340: $1\func_get_bit$func$alu.sv:49$28.i[3:0]$451
+   254/340: $1\func_get_bit$func$alu.sv:49$28.divisor[3:0]$450
+   255/340: $1\func_get_bit$func$alu.sv:49$28.value[3:0]$449
+   256/340: $1\func_set_bit$func$alu.sv:111$27.i[3:0]$448
+   257/340: $1\func_set_bit$func$alu.sv:111$27.divisor[3:0]$447
+   258/340: $1\func_set_bit$func$alu.sv:111$27.current_bit[0:0]$446
+   259/340: $1\func_set_bit$func$alu.sv:111$27.bit_v[0:0]$445
+   260/340: $1\func_set_bit$func$alu.sv:111$27.value[4:0]$444
+   261/340: $1\func_get_bit$func$alu.sv:106$26.i[3:0]$443
+   262/340: $1\func_get_bit$func$alu.sv:106$26.divisor[3:0]$442
+   263/340: $1\func_get_bit$func$alu.sv:106$26.value[3:0]$441
+   264/340: $1\func_get_bit$func$alu.sv:104$25.i[3:0]$440
+   265/340: $1\func_get_bit$func$alu.sv:104$25.divisor[3:0]$439
+   266/340: $1\func_get_bit$func$alu.sv:104$25.value[3:0]$438
+   267/340: $1\func_or$func$alu.sv:194$24.aux_2[4:0]$437
+   268/340: $1\func_or$func$alu.sv:194$24.aux_1[0:0]$436
+   269/340: $1\func_or$func$alu.sv:194$24.aux_0[0:0]$435
+   270/340: $1\func_or$func$alu.sv:194$24.bit_v_1[0:0]$434
+   271/340: $1\func_or$func$alu.sv:194$24.bit_v[1:0]$433
+   272/340: $1\func_or$func$alu.sv:194$24.i[3:0]$432
+   273/340: $1\func_or$func$alu.sv:194$24.data2[3:0]$431
+   274/340: $1\func_or$func$alu.sv:194$24.data1[3:0]$430
+   275/340: $1\func_get_bit$func$alu.sv:49$23.i[3:0]$429
+   276/340: $1\func_get_bit$func$alu.sv:49$23.divisor[3:0]$428
+   277/340: $1\func_get_bit$func$alu.sv:49$23.value[3:0]$427
+   278/340: $1\func_set_bit$func$alu.sv:86$22.i[3:0]$426
+   279/340: $1\func_set_bit$func$alu.sv:86$22.divisor[3:0]$425
+   280/340: $1\func_set_bit$func$alu.sv:86$22.current_bit[0:0]$424
+   281/340: $1\func_set_bit$func$alu.sv:86$22.bit_v[0:0]$423
+   282/340: $1\func_set_bit$func$alu.sv:86$22.value[4:0]$422
+   283/340: $1\func_get_bit$func$alu.sv:82$21.i[3:0]$421
+   284/340: $1\func_get_bit$func$alu.sv:82$21.divisor[3:0]$420
+   285/340: $1\func_get_bit$func$alu.sv:82$21.value[3:0]$419
+   286/340: $1\func_get_bit$func$alu.sv:80$20.i[3:0]$418
+   287/340: $1\func_get_bit$func$alu.sv:80$20.divisor[3:0]$417
+   288/340: $1\func_get_bit$func$alu.sv:80$20.value[3:0]$416
+   289/340: $1\func_get_bit$func$alu.sv:49$19.i[3:0]$415
+   290/340: $1\func_get_bit$func$alu.sv:49$19.divisor[3:0]$414
+   291/340: $1\func_get_bit$func$alu.sv:49$19.value[3:0]$413
+   292/340: $1\func_set_bit$func$alu.sv:86$18.i[3:0]$412
+   293/340: $1\func_set_bit$func$alu.sv:86$18.divisor[3:0]$411
+   294/340: $1\func_set_bit$func$alu.sv:86$18.current_bit[0:0]$410
+   295/340: $1\func_set_bit$func$alu.sv:86$18.bit_v[0:0]$409
+   296/340: $1\func_set_bit$func$alu.sv:86$18.value[4:0]$408
+   297/340: $1\func_get_bit$func$alu.sv:82$17.i[3:0]$407
+   298/340: $1\func_get_bit$func$alu.sv:82$17.divisor[3:0]$406
+   299/340: $1\func_get_bit$func$alu.sv:82$17.value[3:0]$405
+   300/340: $1\func_get_bit$func$alu.sv:80$16.i[3:0]$404
+   301/340: $1\func_get_bit$func$alu.sv:80$16.divisor[3:0]$403
+   302/340: $1\func_get_bit$func$alu.sv:80$16.value[3:0]$402
+   303/340: $1\func_get_bit$func$alu.sv:49$15.i[3:0]$401
+   304/340: $1\func_get_bit$func$alu.sv:49$15.divisor[3:0]$400
+   305/340: $1\func_get_bit$func$alu.sv:49$15.value[3:0]$399
+   306/340: $1\func_set_bit$func$alu.sv:86$14.i[3:0]$398
+   307/340: $1\func_set_bit$func$alu.sv:86$14.divisor[3:0]$397
+   308/340: $1\func_set_bit$func$alu.sv:86$14.current_bit[0:0]$396
+   309/340: $1\func_set_bit$func$alu.sv:86$14.bit_v[0:0]$395
+   310/340: $1\func_set_bit$func$alu.sv:86$14.value[4:0]$394
+   311/340: $1\func_get_bit$func$alu.sv:82$13.i[3:0]$393
+   312/340: $1\func_get_bit$func$alu.sv:82$13.divisor[3:0]$392
+   313/340: $1\func_get_bit$func$alu.sv:82$13.value[3:0]$391
+   314/340: $1\func_get_bit$func$alu.sv:80$12.i[3:0]$390
+   315/340: $1\func_get_bit$func$alu.sv:80$12.divisor[3:0]$389
+   316/340: $1\func_get_bit$func$alu.sv:80$12.value[3:0]$388
+   317/340: $1\func_get_bit$func$alu.sv:49$11.i[3:0]$387
+   318/340: $1\func_get_bit$func$alu.sv:49$11.divisor[3:0]$386
+   319/340: $1\func_get_bit$func$alu.sv:49$11.value[3:0]$385
+   320/340: $1\func_set_bit$func$alu.sv:86$10.i[3:0]$384
+   321/340: $1\func_set_bit$func$alu.sv:86$10.divisor[3:0]$383
+   322/340: $1\func_set_bit$func$alu.sv:86$10.current_bit[0:0]$382
+   323/340: $1\func_set_bit$func$alu.sv:86$10.bit_v[0:0]$381
+   324/340: $1\func_set_bit$func$alu.sv:86$10.value[4:0]$380
+   325/340: $1\func_get_bit$func$alu.sv:82$9.i[3:0]$379
+   326/340: $1\func_get_bit$func$alu.sv:82$9.divisor[3:0]$378
+   327/340: $1\func_get_bit$func$alu.sv:82$9.value[3:0]$377
+   328/340: $1\func_get_bit$func$alu.sv:80$8.i[3:0]$376
+   329/340: $1\func_get_bit$func$alu.sv:80$8.divisor[3:0]$375
+   330/340: $1\func_get_bit$func$alu.sv:80$8.value[3:0]$374
+   331/340: $1\func_and$func$alu.sv:189$7.aux_2[4:0]$373
+   332/340: $1\func_and$func$alu.sv:189$7.aux_1[0:0]$372
+   333/340: $1\func_and$func$alu.sv:189$7.aux_0[0:0]$371
+   334/340: $1\func_and$func$alu.sv:189$7.bit_v[0:0]$370
+   335/340: $1\func_and$func$alu.sv:189$7.i[3:0]$369
+   336/340: $1\func_and$func$alu.sv:189$7.data2[3:0]$368
+   337/340: $1\func_and$func$alu.sv:189$7.data1[3:0]$367
    338/340: $1\res[4:0]
    339/340: $1\CARRY_next[0:0]
    340/340: $1\ZERO_next[0:0]
 
 4.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
-No latch inferred for signal `\alu.\result_next' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\RESULT_next' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\ZERO_next' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\CARRY_next' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\data1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\data2' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_and$func$alu.sv:193$7.data1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_and$func$alu.sv:193$7.data2' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_and$func$alu.sv:193$7.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_and$func$alu.sv:193$7.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_and$func$alu.sv:193$7.aux_0' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_and$func$alu.sv:193$7.aux_1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_and$func$alu.sv:193$7.aux_2' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$8.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$8.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$8.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$9.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$9.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$9.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$10.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$10.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$10.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$10.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$10.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$11.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$11.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$11.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$12.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$12.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$12.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$13.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$13.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$13.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$14.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$14.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$14.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$14.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$14.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$15.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$15.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$15.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$16.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$16.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$16.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$17.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$17.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$17.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$18.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$18.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$18.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$18.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$18.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$19.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$19.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$19.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$20.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$20.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:84$20.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$21.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$21.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:86$21.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$22.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$22.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$22.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$22.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:90$22.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$23.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$23.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$23.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_or$func$alu.sv:198$24.data1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_or$func$alu.sv:198$24.data2' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_or$func$alu.sv:198$24.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_or$func$alu.sv:198$24.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_or$func$alu.sv:198$24.bit_v_1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_or$func$alu.sv:198$24.aux_0' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_or$func$alu.sv:198$24.aux_1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_or$func$alu.sv:198$24.aux_2' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$25.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$25.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$25.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$26.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$26.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$26.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$27.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$27.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$27.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$27.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$27.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$28.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$28.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$28.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$29.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$29.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$29.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$30.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$30.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$30.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$31.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$31.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$31.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$31.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$31.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$32.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$32.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$32.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$33.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$33.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$33.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$34.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$34.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$34.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$35.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$35.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$35.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$35.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$35.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$36.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$36.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$36.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$37.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$37.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:108$37.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$38.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$38.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:110$38.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$39.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$39.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$39.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$39.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:115$39.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$40.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$40.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$40.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_nand$func$alu.sv:203$41.data1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_nand$func$alu.sv:203$41.data2' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_nand$func$alu.sv:203$41.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_nand$func$alu.sv:203$41.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_nand$func$alu.sv:203$41.bit_v_1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_nand$func$alu.sv:203$41.aux_0' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_nand$func$alu.sv:203$41.aux_1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_nand$func$alu.sv:203$41.aux_2' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$42.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$42.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$42.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$43.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$43.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$43.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$44.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$44.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$44.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$44.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$44.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$45.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$45.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$45.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$46.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$46.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$46.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$47.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$47.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$47.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$48.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$48.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$48.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$48.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$48.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$49.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$49.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$49.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$50.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$50.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$50.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$51.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$51.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$51.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$52.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$52.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$52.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$52.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$52.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$53.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$53.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$53.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$54.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$54.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:134$54.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$55.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$55.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:136$55.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$56.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$56.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$56.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$56.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:141$56.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$57.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$57.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$57.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_xor$func$alu.sv:208$58.data1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_xor$func$alu.sv:208$58.data2' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_xor$func$alu.sv:208$58.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_xor$func$alu.sv:208$58.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_xor$func$alu.sv:208$58.bit_v_1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_xor$func$alu.sv:208$58.aux_0' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_xor$func$alu.sv:208$58.aux_1' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_xor$func$alu.sv:208$58.aux_2' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$59.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$59.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$59.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$60.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$60.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$60.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$61.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$61.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$61.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$61.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$61.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$62.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$62.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$62.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$63.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$63.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$63.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$64.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$64.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$64.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$65.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$65.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$65.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$65.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$65.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$66.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$66.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$66.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$67.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$67.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$67.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$68.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$68.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$68.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$69.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$69.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$69.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$69.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$69.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$70.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$70.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$70.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$71.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$71.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:159$71.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$72.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$72.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:161$72.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$73.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$73.bit_v' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$73.current_bit' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$73.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:166$73.i' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$74.value' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$74.divisor' from process `\alu.$proc$alu.sv:175$111'.
-No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:53$74.i' from process `\alu.$proc$alu.sv:175$111'.
-Latch inferred for signal `\alu.\res' from process `\alu.$proc$alu.sv:175$111': $auto$proc_dlatch.cc:427:proc_dlatch$4420
+No latch inferred for signal `\alu.\result_next' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\RESULT_next' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\ZERO_next' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\CARRY_next' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\data1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\data2' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_and$func$alu.sv:189$7.data1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_and$func$alu.sv:189$7.data2' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_and$func$alu.sv:189$7.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_and$func$alu.sv:189$7.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_and$func$alu.sv:189$7.aux_0' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_and$func$alu.sv:189$7.aux_1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_and$func$alu.sv:189$7.aux_2' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$8.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$8.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$8.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$9.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$9.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$9.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$10.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$10.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$10.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$10.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$10.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$11.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$11.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$11.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$12.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$12.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$12.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$13.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$13.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$13.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$14.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$14.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$14.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$14.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$14.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$15.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$15.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$15.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$16.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$16.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$16.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$17.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$17.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$17.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$18.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$18.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$18.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$18.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$18.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$19.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$19.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$19.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$20.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$20.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:80$20.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$21.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$21.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:82$21.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$22.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$22.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$22.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$22.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:86$22.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$23.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$23.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$23.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_or$func$alu.sv:194$24.data1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_or$func$alu.sv:194$24.data2' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_or$func$alu.sv:194$24.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_or$func$alu.sv:194$24.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_or$func$alu.sv:194$24.bit_v_1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_or$func$alu.sv:194$24.aux_0' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_or$func$alu.sv:194$24.aux_1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_or$func$alu.sv:194$24.aux_2' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$25.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$25.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$25.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$26.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$26.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$26.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$27.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$27.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$27.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$27.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$27.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$28.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$28.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$28.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$29.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$29.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$29.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$30.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$30.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$30.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$31.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$31.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$31.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$31.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$31.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$32.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$32.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$32.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$33.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$33.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$33.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$34.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$34.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$34.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$35.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$35.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$35.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$35.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$35.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$36.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$36.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$36.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$37.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$37.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:104$37.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$38.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$38.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:106$38.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$39.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$39.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$39.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$39.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:111$39.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$40.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$40.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$40.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_nand$func$alu.sv:199$41.data1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_nand$func$alu.sv:199$41.data2' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_nand$func$alu.sv:199$41.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_nand$func$alu.sv:199$41.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_nand$func$alu.sv:199$41.bit_v_1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_nand$func$alu.sv:199$41.aux_0' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_nand$func$alu.sv:199$41.aux_1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_nand$func$alu.sv:199$41.aux_2' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$42.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$42.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$42.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$43.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$43.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$43.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$44.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$44.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$44.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$44.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$44.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$45.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$45.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$45.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$46.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$46.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$46.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$47.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$47.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$47.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$48.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$48.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$48.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$48.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$48.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$49.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$49.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$49.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$50.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$50.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$50.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$51.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$51.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$51.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$52.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$52.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$52.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$52.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$52.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$53.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$53.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$53.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$54.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$54.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:130$54.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$55.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$55.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:132$55.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$56.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$56.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$56.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$56.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:137$56.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$57.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$57.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$57.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_xor$func$alu.sv:204$58.data1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_xor$func$alu.sv:204$58.data2' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_xor$func$alu.sv:204$58.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_xor$func$alu.sv:204$58.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_xor$func$alu.sv:204$58.bit_v_1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_xor$func$alu.sv:204$58.aux_0' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_xor$func$alu.sv:204$58.aux_1' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_xor$func$alu.sv:204$58.aux_2' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$59.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$59.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$59.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$60.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$60.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$60.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$61.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$61.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$61.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$61.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$61.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$62.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$62.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$62.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$63.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$63.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$63.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$64.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$64.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$64.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$65.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$65.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$65.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$65.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$65.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$66.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$66.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$66.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$67.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$67.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$67.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$68.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$68.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$68.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$69.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$69.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$69.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$69.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$69.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$70.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$70.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$70.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$71.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$71.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:155$71.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$72.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$72.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:157$72.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$73.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$73.bit_v' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$73.current_bit' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$73.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_set_bit$func$alu.sv:162$73.i' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$74.value' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$74.divisor' from process `\alu.$proc$alu.sv:171$111'.
+No latch inferred for signal `\alu.\func_get_bit$func$alu.sv:49$74.i' from process `\alu.$proc$alu.sv:171$111'.
+Latch inferred for signal `\alu.\res' from process `\alu.$proc$alu.sv:171$111': $auto$proc_dlatch.cc:427:proc_dlatch$4420
 
 4.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\alu.$formal$alu.sv:311$75_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:301$75_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4441' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:311$75_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:301$75_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4442' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:312$76_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:302$76_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4443' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:312$76_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:302$76_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4444' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:313$77_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:303$77_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4445' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:313$77_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:303$77_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4446' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:317$78_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:307$78_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4447' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:317$78_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:307$78_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4448' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:318$79_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:308$79_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4449' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:318$79_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:308$79_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4450' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:323$80_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:313$80_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4451' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:323$80_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:313$80_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4452' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:326$81_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:316$81_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4453' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:326$81_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:316$81_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4454' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:329$82_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:319$82_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4455' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:329$82_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:319$82_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4456' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:332$83_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:322$83_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4457' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:332$83_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:322$83_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4458' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:335$84_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:325$84_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4459' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:335$84_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:325$84_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4460' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:338$85_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:328$85_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4461' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:338$85_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:328$85_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4462' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:341$86_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:331$86_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4463' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:341$86_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:331$86_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4464' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:344$87_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:334$87_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4465' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:344$87_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:334$87_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4466' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:352$88_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:341$88_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4467' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:352$88_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:341$88_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4468' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:353$89_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:342$89_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4469' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:353$89_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:342$89_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4470' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:355$90_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:344$90_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4471' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:355$90_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:344$90_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4472' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:356$91_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:345$91_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4473' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:356$91_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:345$91_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4474' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:357$92_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:346$92_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4475' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:357$92_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:346$92_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4476' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:358$93_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:347$93_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4477' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:358$93_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:347$93_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4478' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:361$94_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:350$94_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4479' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:361$94_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:350$94_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4480' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:363$95_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:352$95_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4481' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:363$95_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:352$95_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4482' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:365$96_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:354$96_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4483' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:365$96_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:354$96_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4484' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:369$97_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:358$97_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4485' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:369$97_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:358$97_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4486' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:370$98_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:359$98_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4487' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:370$98_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:359$98_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4488' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:373$99_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:362$99_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4489' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:373$99_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:362$99_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4490' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:374$100_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:363$100_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4491' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:374$100_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:363$100_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4492' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:377$101_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:366$101_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4493' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:377$101_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:366$101_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4494' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:378$102_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:367$102_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4495' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:378$102_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:367$102_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4496' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:382$103_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:371$103_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4497' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:382$103_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:371$103_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4498' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:385$104_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:374$104_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4499' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:385$104_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:374$104_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4500' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:388$105_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:377$105_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4501' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:388$105_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:377$105_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4502' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:391$106_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:380$106_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4503' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:391$106_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:380$106_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4504' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:394$107_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:383$107_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4505' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:394$107_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:383$107_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4506' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:397$108_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:386$108_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4507' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:397$108_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:386$108_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4508' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:400$109_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:389$109_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4509' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:400$109_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:389$109_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4510' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:403$110_CHECK' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:392$110_CHECK' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4511' with positive edge clock.
-Creating register for signal `\alu.$formal$alu.sv:403$110_EN' using process `\alu.$proc$alu.sv:308$1024'.
+Creating register for signal `\alu.$formal$alu.sv:392$110_EN' using process `\alu.$proc$alu.sv:298$1024'.
   created $dff cell `$procdff$4512' with positive edge clock.
-Creating register for signal `\alu.\f_op1' using process `\alu.$proc$alu.sv:293$1022'.
+Creating register for signal `\alu.\f_op1' using process `\alu.$proc$alu.sv:283$1022'.
   created $adff cell `$procdff$4513' with positive edge clock and negative level reset.
-Creating register for signal `\alu.\f_op2' using process `\alu.$proc$alu.sv:293$1022'.
+Creating register for signal `\alu.\f_op2' using process `\alu.$proc$alu.sv:283$1022'.
   created $adff cell `$procdff$4514' with positive edge clock and negative level reset.
-Creating register for signal `\alu.\f_opcode' using process `\alu.$proc$alu.sv:293$1022'.
+Creating register for signal `\alu.\f_opcode' using process `\alu.$proc$alu.sv:283$1022'.
   created $adff cell `$procdff$4515' with positive edge clock and negative level reset.
-Creating register for signal `\alu.\f_past_valid' using process `\alu.$proc$alu.sv:293$1022'.
+Creating register for signal `\alu.\f_past_valid' using process `\alu.$proc$alu.sv:283$1022'.
   created $adff cell `$procdff$4516' with positive edge clock and negative level reset.
-Creating register for signal `\alu.\result' using process `\alu.$proc$alu.sv:233$971'.
+Creating register for signal `\alu.\result' using process `\alu.$proc$alu.sv:229$971'.
   created $adff cell `$procdff$4517' with positive edge clock and negative level reset.
-Creating register for signal `\alu.\zero' using process `\alu.$proc$alu.sv:233$971'.
+Creating register for signal `\alu.\zero' using process `\alu.$proc$alu.sv:229$971'.
   created $adff cell `$procdff$4518' with positive edge clock and negative level reset.
-Creating register for signal `\alu.\carry' using process `\alu.$proc$alu.sv:233$971'.
+Creating register for signal `\alu.\carry' using process `\alu.$proc$alu.sv:229$971'.
   created $adff cell `$procdff$4519' with positive edge clock and negative level reset.
 
 4.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
@@ -1061,13 +1061,13 @@ Removing empty process `alu.$proc$alu.sv:0$1158'.
 Removing empty process `alu.$proc$alu.sv:0$1156'.
 Removing empty process `alu.$proc$alu.sv:0$1154'.
 Removing empty process `alu.$proc$alu.sv:0$1152'.
-Removing empty process `alu.$proc$alu.sv:261$1151'.
-Found and cleaned up 4 empty switches in `\alu.$proc$alu.sv:308$1024'.
-Removing empty process `alu.$proc$alu.sv:308$1024'.
-Removing empty process `alu.$proc$alu.sv:293$1022'.
-Removing empty process `alu.$proc$alu.sv:233$971'.
-Found and cleaned up 82 empty switches in `\alu.$proc$alu.sv:175$111'.
-Removing empty process `alu.$proc$alu.sv:175$111'.
+Removing empty process `alu.$proc$alu.sv:257$1151'.
+Found and cleaned up 4 empty switches in `\alu.$proc$alu.sv:298$1024'.
+Removing empty process `alu.$proc$alu.sv:298$1024'.
+Removing empty process `alu.$proc$alu.sv:283$1022'.
+Removing empty process `alu.$proc$alu.sv:229$971'.
+Found and cleaned up 82 empty switches in `\alu.$proc$alu.sv:171$111'.
+Removing empty process `alu.$proc$alu.sv:171$111'.
 Cleaned up 86 empty switches.
 
 4.2.12. Executing OPT_EXPR pass (perform const folding).
@@ -1151,80 +1151,80 @@ Optimizing module alu.
 4.7.14. Finished OPT passes. (There is nothing left to do.)
 
 4.8. Executing WREDUCE pass (reducing word size of cells).
-Removed top 3 bits (of 4) from port B of cell alu.$div$alu.sv:42$627 ($div).
-Removed top 3 bits (of 4) from port B of cell alu.$div$alu.sv:42$630 ($div).
-Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:42$642 ($div).
-Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:42$646 ($div).
-Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:42$651 ($div).
-Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:42$661 ($div).
-Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:42$666 ($div).
-Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:42$672 ($div).
-Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:42$735 ($div).
-Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:42$758 ($div).
-Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:42$823 ($div).
-Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:42$846 ($div).
-Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:42$911 ($div).
-Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:42$934 ($div).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$628 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$631 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$643 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$647 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$652 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$662 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$667 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$673 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$685 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$691 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$698 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$736 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$759 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$786 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$824 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$847 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$874 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$912 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$935 ($mod).
-Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:42$962 ($mod).
-Removed top 31 bits (of 32) from port B of cell alu.$add$alu.sv:187$624 ($add).
-Removed top 27 bits (of 32) from port Y of cell alu.$add$alu.sv:187$624 ($add).
-Removed top 31 bits (of 32) from port B of cell alu.$sub$alu.sv:190$625 ($sub).
-Removed top 27 bits (of 32) from port Y of cell alu.$sub$alu.sv:190$625 ($sub).
-Removed top 2 bits (of 4) from port B of cell alu.$add$alu.sv:67$656 ($add).
-Removed top 1 bits (of 4) from port B of cell alu.$add$alu.sv:67$678 ($add).
-Removed top 31 bits (of 32) from port B of cell alu.$gt$alu.sv:114$713 ($gt).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:114$714 ($mux).
-Removed top 31 bits (of 32) from port B of cell alu.$gt$alu.sv:114$731 ($gt).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:114$732 ($mux).
-Removed top 2 bits (of 4) from port B of cell alu.$add$alu.sv:67$740 ($add).
-Removed top 31 bits (of 32) from port B of cell alu.$gt$alu.sv:114$753 ($gt).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:114$754 ($mux).
-Removed top 1 bits (of 4) from port B of cell alu.$add$alu.sv:67$764 ($add).
-Removed top 31 bits (of 32) from port B of cell alu.$gt$alu.sv:114$779 ($gt).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:114$780 ($mux).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:140$802 ($mux).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:140$820 ($mux).
-Removed top 2 bits (of 4) from port B of cell alu.$add$alu.sv:67$828 ($add).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:140$842 ($mux).
-Removed top 1 bits (of 4) from port B of cell alu.$add$alu.sv:67$852 ($add).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:140$868 ($mux).
-Removed top 1 bits (of 2) from port B of cell alu.$eq$alu.sv:165$889 ($eq).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:165$890 ($mux).
-Removed top 1 bits (of 2) from port B of cell alu.$eq$alu.sv:165$907 ($eq).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:165$908 ($mux).
-Removed top 2 bits (of 4) from port B of cell alu.$add$alu.sv:67$916 ($add).
-Removed top 1 bits (of 2) from port B of cell alu.$eq$alu.sv:165$929 ($eq).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:165$930 ($mux).
-Removed top 1 bits (of 4) from port B of cell alu.$add$alu.sv:67$940 ($add).
-Removed top 1 bits (of 2) from port B of cell alu.$eq$alu.sv:165$955 ($eq).
-Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:165$956 ($mux).
-Removed top 31 bits (of 32) from port B of cell alu.$add$alu.sv:272$975 ($add).
-Removed top 27 bits (of 32) from port Y of cell alu.$add$alu.sv:272$975 ($add).
-Removed top 31 bits (of 32) from port B of cell alu.$sub$alu.sv:273$976 ($sub).
-Removed top 27 bits (of 32) from port Y of cell alu.$sub$alu.sv:273$976 ($sub).
-Removed top 2 bits (of 3) from port B of cell alu.$eq$alu.sv:280$984 ($eq).
-Removed top 1 bits (of 3) from port B of cell alu.$eq$alu.sv:281$987 ($eq).
-Removed top 1 bits (of 3) from port B of cell alu.$eq$alu.sv:282$990 ($eq).
-Removed top 1 bits (of 3) from port B of cell alu.$eq$alu.sv:363$1122 ($eq).
+Removed top 3 bits (of 4) from port B of cell alu.$div$alu.sv:38$627 ($div).
+Removed top 3 bits (of 4) from port B of cell alu.$div$alu.sv:38$630 ($div).
+Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:38$642 ($div).
+Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:38$646 ($div).
+Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:38$651 ($div).
+Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:38$661 ($div).
+Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:38$666 ($div).
+Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:38$672 ($div).
+Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:38$735 ($div).
+Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:38$758 ($div).
+Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:38$823 ($div).
+Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:38$846 ($div).
+Removed top 2 bits (of 4) from port B of cell alu.$div$alu.sv:38$911 ($div).
+Removed top 1 bits (of 4) from port B of cell alu.$div$alu.sv:38$934 ($div).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$628 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$631 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$643 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$647 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$652 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$662 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$667 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$673 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$685 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$691 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$698 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$736 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$759 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$786 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$824 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$847 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$874 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$912 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$935 ($mod).
+Removed top 30 bits (of 32) from port B of cell alu.$mod$alu.sv:38$962 ($mod).
+Removed top 31 bits (of 32) from port B of cell alu.$add$alu.sv:183$624 ($add).
+Removed top 27 bits (of 32) from port Y of cell alu.$add$alu.sv:183$624 ($add).
+Removed top 31 bits (of 32) from port B of cell alu.$sub$alu.sv:186$625 ($sub).
+Removed top 27 bits (of 32) from port Y of cell alu.$sub$alu.sv:186$625 ($sub).
+Removed top 2 bits (of 4) from port B of cell alu.$add$alu.sv:63$656 ($add).
+Removed top 1 bits (of 4) from port B of cell alu.$add$alu.sv:63$678 ($add).
+Removed top 31 bits (of 32) from port B of cell alu.$gt$alu.sv:110$713 ($gt).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:110$714 ($mux).
+Removed top 31 bits (of 32) from port B of cell alu.$gt$alu.sv:110$731 ($gt).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:110$732 ($mux).
+Removed top 2 bits (of 4) from port B of cell alu.$add$alu.sv:63$740 ($add).
+Removed top 31 bits (of 32) from port B of cell alu.$gt$alu.sv:110$753 ($gt).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:110$754 ($mux).
+Removed top 1 bits (of 4) from port B of cell alu.$add$alu.sv:63$764 ($add).
+Removed top 31 bits (of 32) from port B of cell alu.$gt$alu.sv:110$779 ($gt).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:110$780 ($mux).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:136$802 ($mux).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:136$820 ($mux).
+Removed top 2 bits (of 4) from port B of cell alu.$add$alu.sv:63$828 ($add).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:136$842 ($mux).
+Removed top 1 bits (of 4) from port B of cell alu.$add$alu.sv:63$852 ($add).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:136$868 ($mux).
+Removed top 1 bits (of 2) from port B of cell alu.$eq$alu.sv:161$889 ($eq).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:161$890 ($mux).
+Removed top 1 bits (of 2) from port B of cell alu.$eq$alu.sv:161$907 ($eq).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:161$908 ($mux).
+Removed top 2 bits (of 4) from port B of cell alu.$add$alu.sv:63$916 ($add).
+Removed top 1 bits (of 2) from port B of cell alu.$eq$alu.sv:161$929 ($eq).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:161$930 ($mux).
+Removed top 1 bits (of 4) from port B of cell alu.$add$alu.sv:63$940 ($add).
+Removed top 1 bits (of 2) from port B of cell alu.$eq$alu.sv:161$955 ($eq).
+Removed top 31 bits (of 32) from mux cell alu.$ternary$alu.sv:161$956 ($mux).
+Removed top 31 bits (of 32) from port B of cell alu.$add$alu.sv:262$975 ($add).
+Removed top 27 bits (of 32) from port Y of cell alu.$add$alu.sv:262$975 ($add).
+Removed top 31 bits (of 32) from port B of cell alu.$sub$alu.sv:263$976 ($sub).
+Removed top 27 bits (of 32) from port Y of cell alu.$sub$alu.sv:263$976 ($sub).
+Removed top 2 bits (of 3) from port B of cell alu.$eq$alu.sv:270$984 ($eq).
+Removed top 1 bits (of 3) from port B of cell alu.$eq$alu.sv:271$987 ($eq).
+Removed top 1 bits (of 3) from port B of cell alu.$eq$alu.sv:272$990 ($eq).
+Removed top 1 bits (of 3) from port B of cell alu.$eq$alu.sv:352$1122 ($eq).
 Removed top 2 bits (of 3) from port B of cell alu.$procmux$1455_CMP0 ($eq).
 Removed top 1 bits (of 3) from port B of cell alu.$procmux$1483_CMP0 ($eq).
 Removed top 4 bits (of 5) from mux cell alu.$procmux$1614 ($mux).
@@ -1235,7 +1235,7 @@ Removed top 4 bits (of 5) from wire alu.$25\res[4:0].
 Removed top 4 bits (of 5) from wire alu.$45\res[4:0].
 Removed top 4 bits (of 5) from wire alu.$5\res[4:0].
 Removed top 4 bits (of 5) from wire alu.$65\res[4:0].
-Removed top 27 bits (of 32) from wire alu.$add$alu.sv:187$624_Y.
+Removed top 27 bits (of 32) from wire alu.$add$alu.sv:183$624_Y.
 
 4.9. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \alu..
@@ -1315,6 +1315,6 @@ Module alu directly or indirectly contains formal properties -> setting "keep" a
 Output filename: ../model/design.il
 
 Warnings: 10 unique messages, 10 total
-End of script. Logfile hash: 489ce88238, CPU: user 3.75s system 0.45s, MEM: 27.34 MB peak
+End of script. Logfile hash: 1a0cbf736f, CPU: user 1.20s system 0.04s, MEM: 27.31 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 32% 1x proc_mux (1 sec), 23% 6x opt_expr (0 sec), ...
+Time spent: 35% 1x proc_mux (0 sec), 18% 6x opt_expr (0 sec), ...

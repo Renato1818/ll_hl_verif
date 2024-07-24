@@ -4,664 +4,664 @@ attribute \keep 1
 attribute \hdlname "\\alu"
 attribute \dynports 1
 attribute \top 1
-attribute \src "alu.sv:1.1-410.10"
+attribute \src "alu.sv:1.1-399.10"
 module \alu
   parameter \OPCODE_WIDTH 2
   parameter \DATA_WIDTH 3
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:311$75_CHECK[0:0]$1025
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:311$75_EN[0:0]$1026
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:312$76_CHECK[0:0]$1027
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:313$77_CHECK[0:0]$1029
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:317$78_CHECK[0:0]$1031
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:317$78_EN[0:0]$1032
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:318$79_CHECK[0:0]$1033
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:323$80_CHECK[0:0]$1035
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:323$80_EN[0:0]$1036
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:326$81_CHECK[0:0]$1037
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:326$81_EN[0:0]$1038
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:329$82_CHECK[0:0]$1039
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:329$82_EN[0:0]$1040
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:332$83_CHECK[0:0]$1041
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:332$83_EN[0:0]$1042
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:335$84_CHECK[0:0]$1043
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:335$84_EN[0:0]$1044
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:338$85_CHECK[0:0]$1045
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:338$85_EN[0:0]$1046
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:341$86_CHECK[0:0]$1047
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:341$86_EN[0:0]$1048
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:344$87_CHECK[0:0]$1049
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:344$87_EN[0:0]$1050
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:352$88_CHECK[0:0]$1051
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:353$89_CHECK[0:0]$1053
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:355$90_CHECK[0:0]$1055
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:356$91_CHECK[0:0]$1057
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:357$92_CHECK[0:0]$1059
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:358$93_CHECK[0:0]$1061
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:361$94_CHECK[0:0]$1063
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:363$95_CHECK[0:0]$1065
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:365$96_CHECK[0:0]$1067
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:370$98_CHECK[0:0]$1071
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:374$100_CHECK[0:0]$1075
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:377$101_CHECK[0:0]$1077
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:378$102_CHECK[0:0]$1079
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:382$103_CHECK[0:0]$1081
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:382$103_EN[0:0]$1082
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:385$104_CHECK[0:0]$1083
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:385$104_EN[0:0]$1084
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:388$105_CHECK[0:0]$1085
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:388$105_EN[0:0]$1086
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:391$106_CHECK[0:0]$1087
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:391$106_EN[0:0]$1088
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:394$107_CHECK[0:0]$1089
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:394$107_EN[0:0]$1090
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:397$108_CHECK[0:0]$1091
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:397$108_EN[0:0]$1092
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:400$109_CHECK[0:0]$1093
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:400$109_EN[0:0]$1094
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:403$110_CHECK[0:0]$1095
-  attribute \src "alu.sv:308.3-406.6"
-  wire $0$formal$alu.sv:403$110_EN[0:0]$1096
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:301$75_CHECK[0:0]$1025
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:301$75_EN[0:0]$1026
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:302$76_CHECK[0:0]$1027
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:303$77_CHECK[0:0]$1029
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:307$78_CHECK[0:0]$1031
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:307$78_EN[0:0]$1032
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:308$79_CHECK[0:0]$1033
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:313$80_CHECK[0:0]$1035
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:313$80_EN[0:0]$1036
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:316$81_CHECK[0:0]$1037
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:316$81_EN[0:0]$1038
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:319$82_CHECK[0:0]$1039
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:319$82_EN[0:0]$1040
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:322$83_CHECK[0:0]$1041
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:322$83_EN[0:0]$1042
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:325$84_CHECK[0:0]$1043
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:325$84_EN[0:0]$1044
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:328$85_CHECK[0:0]$1045
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:328$85_EN[0:0]$1046
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:331$86_CHECK[0:0]$1047
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:331$86_EN[0:0]$1048
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:334$87_CHECK[0:0]$1049
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:334$87_EN[0:0]$1050
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:341$88_CHECK[0:0]$1051
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:342$89_CHECK[0:0]$1053
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:344$90_CHECK[0:0]$1055
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:345$91_CHECK[0:0]$1057
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:346$92_CHECK[0:0]$1059
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:347$93_CHECK[0:0]$1061
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:350$94_CHECK[0:0]$1063
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:352$95_CHECK[0:0]$1065
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:354$96_CHECK[0:0]$1067
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:359$98_CHECK[0:0]$1071
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:363$100_CHECK[0:0]$1075
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:366$101_CHECK[0:0]$1077
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:367$102_CHECK[0:0]$1079
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:371$103_CHECK[0:0]$1081
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:371$103_EN[0:0]$1082
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:374$104_CHECK[0:0]$1083
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:374$104_EN[0:0]$1084
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:377$105_CHECK[0:0]$1085
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:377$105_EN[0:0]$1086
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:380$106_CHECK[0:0]$1087
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:380$106_EN[0:0]$1088
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:383$107_CHECK[0:0]$1089
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:383$107_EN[0:0]$1090
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:386$108_CHECK[0:0]$1091
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:386$108_EN[0:0]$1092
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:389$109_CHECK[0:0]$1093
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:389$109_EN[0:0]$1094
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:392$110_CHECK[0:0]$1095
+  attribute \src "alu.sv:298.3-395.6"
+  wire $0$formal$alu.sv:392$110_EN[0:0]$1096
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $10\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $11\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $12\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $13\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $14\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $15\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $16\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $17\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $18\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $19\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $20\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $21\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $22\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $23\res[4:0]
   wire $25\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $27\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $28\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $29\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $30\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $31\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $34\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $35\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $36\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $39\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $40\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $41\res[4:0]
   wire $45\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $49\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $50\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $51\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $54\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $55\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $56\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $59\res[4:0]
   wire $5\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $60\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $61\res[4:0]
   wire $65\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $69\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $70\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $71\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $74\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $75\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $76\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $79\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $80\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   wire width 5 $81\res[4:0]
-  attribute \src "alu.sv:175.2-226.5"
+  attribute \src "alu.sv:171.2-222.5"
   attribute \unused_bits "1 2 3 4"
   wire width 5 $9\res[4:0]
-  attribute \src "alu.sv:112.12-112.25"
-  wire width 2 $add$alu.sv:112$712_Y
-  attribute \src "alu.sv:112.12-112.25"
-  wire width 2 $add$alu.sv:112$730_Y
-  attribute \src "alu.sv:112.12-112.25"
-  wire width 2 $add$alu.sv:112$752_Y
-  attribute \src "alu.sv:112.12-112.25"
-  wire width 2 $add$alu.sv:112$778_Y
-  attribute \src "alu.sv:181.19-181.32"
-  wire width 5 $add$alu.sv:181$622_Y
-  wire width 5 $add$alu.sv:187$624_Y
-  attribute \src "alu.sv:382.37-382.46"
-  wire width 4 $add$alu.sv:382$1134_Y
-  attribute \src "alu.sv:279.23-279.50"
-  wire $and$alu.sv:279$983_Y
-  attribute \src "alu.sv:280.11-280.38"
-  wire $and$alu.sv:280$985_Y
-  attribute \src "alu.sv:281.11-281.39"
-  wire $and$alu.sv:281$988_Y
-  attribute \src "alu.sv:282.11-282.39"
-  wire $and$alu.sv:282$991_Y
-  attribute \src "alu.sv:284.22-284.55"
-  wire $and$alu.sv:284$996_Y
-  attribute \src "alu.sv:285.10-285.43"
-  wire $and$alu.sv:285$999_Y
-  attribute \src "alu.sv:286.10-286.43"
-  wire $and$alu.sv:286$1003_Y
-  attribute \src "alu.sv:287.10-287.43"
-  wire $and$alu.sv:287$1007_Y
-  attribute \src "alu.sv:288.10-288.43"
-  wire $and$alu.sv:288$1011_Y
-  attribute \src "alu.sv:289.10-289.43"
-  wire $and$alu.sv:289$1015_Y
-  attribute \src "alu.sv:290.10-290.43"
-  wire $and$alu.sv:290$1019_Y
-  attribute \src "alu.sv:394.37-394.46"
-  wire width 4 $and$alu.sv:394$1141_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$627_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$630_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$642_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$646_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$651_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$661_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$666_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$672_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$684_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$690_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$697_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$735_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$758_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$785_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$823_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$846_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$873_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$911_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$934_Y
-  attribute \src "alu.sv:42.12-42.27"
-  wire width 32 $div$alu.sv:42$961_Y
-  attribute \src "alu.sv:140.15-140.25"
-  wire $eq$alu.sv:140$801_Y
-  attribute \src "alu.sv:140.15-140.25"
-  wire $eq$alu.sv:140$819_Y
-  attribute \src "alu.sv:140.15-140.25"
-  wire $eq$alu.sv:140$841_Y
-  attribute \src "alu.sv:140.15-140.25"
-  wire $eq$alu.sv:140$867_Y
-  attribute \src "alu.sv:165.15-165.25"
-  wire $eq$alu.sv:165$889_Y
-  attribute \src "alu.sv:165.15-165.25"
-  wire $eq$alu.sv:165$907_Y
-  attribute \src "alu.sv:165.15-165.25"
-  wire $eq$alu.sv:165$929_Y
-  attribute \src "alu.sv:165.15-165.25"
-  wire $eq$alu.sv:165$955_Y
-  attribute \src "alu.sv:221.7-221.23"
-  wire $eq$alu.sv:221$970_Y
-  attribute \src "alu.sv:279.24-279.37"
-  wire $eq$alu.sv:279$982_Y
-  attribute \src "alu.sv:280.12-280.25"
-  wire $eq$alu.sv:280$984_Y
-  attribute \src "alu.sv:281.12-281.25"
-  wire $eq$alu.sv:281$987_Y
-  attribute \src "alu.sv:282.12-282.25"
-  wire $eq$alu.sv:282$990_Y
-  attribute \src "alu.sv:284.42-284.54"
-  wire $eq$alu.sv:284$995_Y
-  attribute \src "alu.sv:285.30-285.42"
-  wire $eq$alu.sv:285$998_Y
-  attribute \src "alu.sv:286.30-286.42"
-  wire $eq$alu.sv:286$1002_Y
-  attribute \src "alu.sv:287.11-287.24"
-  wire $eq$alu.sv:287$1005_Y
-  attribute \src "alu.sv:287.30-287.42"
-  wire $eq$alu.sv:287$1006_Y
-  attribute \src "alu.sv:288.11-288.24"
-  wire $eq$alu.sv:288$1009_Y
-  attribute \src "alu.sv:288.30-288.42"
-  wire $eq$alu.sv:288$1010_Y
-  attribute \src "alu.sv:289.11-289.24"
-  wire $eq$alu.sv:289$1013_Y
-  attribute \src "alu.sv:289.30-289.42"
-  wire $eq$alu.sv:289$1014_Y
-  attribute \src "alu.sv:290.11-290.24"
-  wire $eq$alu.sv:290$1017_Y
-  attribute \src "alu.sv:290.30-290.42"
-  wire $eq$alu.sv:290$1018_Y
-  attribute \src "alu.sv:323.30-323.53"
-  wire $eq$alu.sv:323$1103_Y
-  attribute \src "alu.sv:326.30-326.53"
-  wire $eq$alu.sv:326$1104_Y
-  attribute \src "alu.sv:329.30-329.54"
-  wire $eq$alu.sv:329$1105_Y
-  attribute \src "alu.sv:332.30-332.54"
-  wire $eq$alu.sv:332$1106_Y
-  attribute \src "alu.sv:335.30-335.46"
-  wire $eq$alu.sv:335$1107_Y
-  attribute \src "alu.sv:338.30-338.45"
-  wire $eq$alu.sv:338$1108_Y
-  attribute \src "alu.sv:341.30-341.47"
-  wire $eq$alu.sv:341$1109_Y
-  attribute \src "alu.sv:344.29-344.45"
-  wire $eq$alu.sv:344$1110_Y
-  attribute \src "alu.sv:361.42-361.54"
-  wire $eq$alu.sv:361$1118_Y
-  attribute \src "alu.sv:361.60-361.72"
-  wire $eq$alu.sv:361$1120_Y
-  attribute \src "alu.sv:363.25-363.36"
-  wire $eq$alu.sv:363$1122_Y
-  attribute \src "alu.sv:363.42-363.54"
-  wire $eq$alu.sv:363$1123_Y
-  attribute \src "alu.sv:382.26-382.47"
-  wire $eq$alu.sv:382$1135_Y
-  attribute \src "alu.sv:385.27-385.48"
-  wire $eq$alu.sv:385$1137_Y
-  attribute \src "alu.sv:391.27-391.46"
-  wire $eq$alu.sv:391$1140_Y
-  attribute \src "alu.sv:394.26-394.47"
-  wire $eq$alu.sv:394$1142_Y
-  attribute \src "alu.sv:397.26-397.47"
-  wire $eq$alu.sv:397$1144_Y
-  attribute \src "alu.sv:400.26-400.48"
-  wire $eq$alu.sv:400$1147_Y
-  attribute \src "alu.sv:403.26-403.48"
-  wire $eq$alu.sv:403$1150_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$654_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$676_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$702_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$738_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$762_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$790_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$826_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$850_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$878_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$914_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$938_Y
-  attribute \src "alu.sv:61.7-61.27"
-  wire $eq$alu.sv:61$966_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$719_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$739_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$763_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$791_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$827_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$851_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$879_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$895_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$915_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$939_Y
-  attribute \src "alu.sv:65.8-65.18"
-  wire $eq$alu.sv:65$967_Y
+  attribute \src "alu.sv:108.12-108.25"
+  wire width 2 $add$alu.sv:108$712_Y
+  attribute \src "alu.sv:108.12-108.25"
+  wire width 2 $add$alu.sv:108$730_Y
+  attribute \src "alu.sv:108.12-108.25"
+  wire width 2 $add$alu.sv:108$752_Y
+  attribute \src "alu.sv:108.12-108.25"
+  wire width 2 $add$alu.sv:108$778_Y
+  attribute \src "alu.sv:177.19-177.32"
+  wire width 5 $add$alu.sv:177$622_Y
+  wire width 5 $add$alu.sv:183$624_Y
+  attribute \src "alu.sv:371.37-371.46"
+  wire width 4 $add$alu.sv:371$1134_Y
+  attribute \src "alu.sv:269.23-269.50"
+  wire $and$alu.sv:269$983_Y
+  attribute \src "alu.sv:270.11-270.38"
+  wire $and$alu.sv:270$985_Y
+  attribute \src "alu.sv:271.11-271.39"
+  wire $and$alu.sv:271$988_Y
+  attribute \src "alu.sv:272.11-272.39"
+  wire $and$alu.sv:272$991_Y
+  attribute \src "alu.sv:274.22-274.55"
+  wire $and$alu.sv:274$996_Y
+  attribute \src "alu.sv:275.10-275.43"
+  wire $and$alu.sv:275$999_Y
+  attribute \src "alu.sv:276.10-276.43"
+  wire $and$alu.sv:276$1003_Y
+  attribute \src "alu.sv:277.10-277.43"
+  wire $and$alu.sv:277$1007_Y
+  attribute \src "alu.sv:278.10-278.43"
+  wire $and$alu.sv:278$1011_Y
+  attribute \src "alu.sv:279.10-279.43"
+  wire $and$alu.sv:279$1015_Y
+  attribute \src "alu.sv:280.10-280.43"
+  wire $and$alu.sv:280$1019_Y
+  attribute \src "alu.sv:383.37-383.46"
+  wire width 4 $and$alu.sv:383$1141_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$627_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$630_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$642_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$646_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$651_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$661_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$666_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$672_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$684_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$690_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$697_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$735_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$758_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$785_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$823_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$846_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$873_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$911_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$934_Y
+  attribute \src "alu.sv:38.12-38.27"
+  wire width 32 $div$alu.sv:38$961_Y
+  attribute \src "alu.sv:136.15-136.25"
+  wire $eq$alu.sv:136$801_Y
+  attribute \src "alu.sv:136.15-136.25"
+  wire $eq$alu.sv:136$819_Y
+  attribute \src "alu.sv:136.15-136.25"
+  wire $eq$alu.sv:136$841_Y
+  attribute \src "alu.sv:136.15-136.25"
+  wire $eq$alu.sv:136$867_Y
+  attribute \src "alu.sv:161.15-161.25"
+  wire $eq$alu.sv:161$889_Y
+  attribute \src "alu.sv:161.15-161.25"
+  wire $eq$alu.sv:161$907_Y
+  attribute \src "alu.sv:161.15-161.25"
+  wire $eq$alu.sv:161$929_Y
+  attribute \src "alu.sv:161.15-161.25"
+  wire $eq$alu.sv:161$955_Y
+  attribute \src "alu.sv:217.7-217.23"
+  wire $eq$alu.sv:217$970_Y
+  attribute \src "alu.sv:269.24-269.37"
+  wire $eq$alu.sv:269$982_Y
+  attribute \src "alu.sv:270.12-270.25"
+  wire $eq$alu.sv:270$984_Y
+  attribute \src "alu.sv:271.12-271.25"
+  wire $eq$alu.sv:271$987_Y
+  attribute \src "alu.sv:272.12-272.25"
+  wire $eq$alu.sv:272$990_Y
+  attribute \src "alu.sv:274.42-274.54"
+  wire $eq$alu.sv:274$995_Y
+  attribute \src "alu.sv:275.30-275.42"
+  wire $eq$alu.sv:275$998_Y
+  attribute \src "alu.sv:276.30-276.42"
+  wire $eq$alu.sv:276$1002_Y
+  attribute \src "alu.sv:277.11-277.24"
+  wire $eq$alu.sv:277$1005_Y
+  attribute \src "alu.sv:277.30-277.42"
+  wire $eq$alu.sv:277$1006_Y
+  attribute \src "alu.sv:278.11-278.24"
+  wire $eq$alu.sv:278$1009_Y
+  attribute \src "alu.sv:278.30-278.42"
+  wire $eq$alu.sv:278$1010_Y
+  attribute \src "alu.sv:279.11-279.24"
+  wire $eq$alu.sv:279$1013_Y
+  attribute \src "alu.sv:279.30-279.42"
+  wire $eq$alu.sv:279$1014_Y
+  attribute \src "alu.sv:280.11-280.24"
+  wire $eq$alu.sv:280$1017_Y
+  attribute \src "alu.sv:280.30-280.42"
+  wire $eq$alu.sv:280$1018_Y
+  attribute \src "alu.sv:313.30-313.53"
+  wire $eq$alu.sv:313$1103_Y
+  attribute \src "alu.sv:316.30-316.53"
+  wire $eq$alu.sv:316$1104_Y
+  attribute \src "alu.sv:319.30-319.54"
+  wire $eq$alu.sv:319$1105_Y
+  attribute \src "alu.sv:322.30-322.54"
+  wire $eq$alu.sv:322$1106_Y
+  attribute \src "alu.sv:325.30-325.46"
+  wire $eq$alu.sv:325$1107_Y
+  attribute \src "alu.sv:328.30-328.45"
+  wire $eq$alu.sv:328$1108_Y
+  attribute \src "alu.sv:331.30-331.47"
+  wire $eq$alu.sv:331$1109_Y
+  attribute \src "alu.sv:334.29-334.45"
+  wire $eq$alu.sv:334$1110_Y
+  attribute \src "alu.sv:350.42-350.54"
+  wire $eq$alu.sv:350$1118_Y
+  attribute \src "alu.sv:350.60-350.72"
+  wire $eq$alu.sv:350$1120_Y
+  attribute \src "alu.sv:352.25-352.36"
+  wire $eq$alu.sv:352$1122_Y
+  attribute \src "alu.sv:352.42-352.54"
+  wire $eq$alu.sv:352$1123_Y
+  attribute \src "alu.sv:371.26-371.47"
+  wire $eq$alu.sv:371$1135_Y
+  attribute \src "alu.sv:374.27-374.48"
+  wire $eq$alu.sv:374$1137_Y
+  attribute \src "alu.sv:380.27-380.46"
+  wire $eq$alu.sv:380$1140_Y
+  attribute \src "alu.sv:383.26-383.47"
+  wire $eq$alu.sv:383$1142_Y
+  attribute \src "alu.sv:386.26-386.47"
+  wire $eq$alu.sv:386$1144_Y
+  attribute \src "alu.sv:389.26-389.48"
+  wire $eq$alu.sv:389$1147_Y
+  attribute \src "alu.sv:392.26-392.48"
+  wire $eq$alu.sv:392$1150_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$654_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$676_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$702_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$738_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$762_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$790_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$826_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$850_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$878_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$914_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$938_Y
+  attribute \src "alu.sv:57.7-57.27"
+  wire $eq$alu.sv:57$966_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$719_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$739_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$763_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$791_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$827_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$851_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$879_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$895_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$915_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$939_Y
+  attribute \src "alu.sv:61.8-61.18"
+  wire $eq$alu.sv:61$967_Y
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:311$75_CHECK
+  wire $formal$alu.sv:301$75_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:311$75_EN
+  wire $formal$alu.sv:301$75_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:312$76_CHECK
+  wire $formal$alu.sv:302$76_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:313$77_CHECK
+  wire $formal$alu.sv:303$77_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:317$78_CHECK
+  wire $formal$alu.sv:307$78_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:317$78_EN
+  wire $formal$alu.sv:307$78_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:318$79_CHECK
+  wire $formal$alu.sv:308$79_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:323$80_CHECK
+  wire $formal$alu.sv:313$80_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:323$80_EN
+  wire $formal$alu.sv:313$80_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:326$81_CHECK
+  wire $formal$alu.sv:316$81_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:326$81_EN
+  wire $formal$alu.sv:316$81_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:329$82_CHECK
+  wire $formal$alu.sv:319$82_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:329$82_EN
+  wire $formal$alu.sv:319$82_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:332$83_CHECK
+  wire $formal$alu.sv:322$83_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:332$83_EN
+  wire $formal$alu.sv:322$83_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:335$84_CHECK
+  wire $formal$alu.sv:325$84_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:335$84_EN
+  wire $formal$alu.sv:325$84_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:338$85_CHECK
+  wire $formal$alu.sv:328$85_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:338$85_EN
+  wire $formal$alu.sv:328$85_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:341$86_CHECK
+  wire $formal$alu.sv:331$86_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:341$86_EN
+  wire $formal$alu.sv:331$86_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:344$87_CHECK
+  wire $formal$alu.sv:334$87_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:344$87_EN
+  wire $formal$alu.sv:334$87_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:352$88_CHECK
+  wire $formal$alu.sv:341$88_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:352$88_EN
+  wire $formal$alu.sv:341$88_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:353$89_CHECK
+  wire $formal$alu.sv:342$89_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:355$90_CHECK
+  wire $formal$alu.sv:344$90_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:356$91_CHECK
+  wire $formal$alu.sv:345$91_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:357$92_CHECK
+  wire $formal$alu.sv:346$92_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:358$93_CHECK
+  wire $formal$alu.sv:347$93_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:361$94_CHECK
+  wire $formal$alu.sv:350$94_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:363$95_CHECK
+  wire $formal$alu.sv:352$95_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:365$96_CHECK
+  wire $formal$alu.sv:354$96_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:369$97_CHECK
+  wire $formal$alu.sv:358$97_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:370$98_CHECK
+  wire $formal$alu.sv:359$98_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:373$99_CHECK
+  wire $formal$alu.sv:362$99_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:374$100_CHECK
+  wire $formal$alu.sv:363$100_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:377$101_CHECK
+  wire $formal$alu.sv:366$101_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:378$102_CHECK
+  wire $formal$alu.sv:367$102_CHECK
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:382$103_CHECK
+  wire $formal$alu.sv:371$103_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:382$103_EN
+  wire $formal$alu.sv:371$103_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:385$104_CHECK
+  wire $formal$alu.sv:374$104_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:385$104_EN
+  wire $formal$alu.sv:374$104_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:388$105_CHECK
+  wire $formal$alu.sv:377$105_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:388$105_EN
+  wire $formal$alu.sv:377$105_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:391$106_CHECK
+  wire $formal$alu.sv:380$106_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:391$106_EN
+  wire $formal$alu.sv:380$106_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:394$107_CHECK
+  wire $formal$alu.sv:383$107_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:394$107_EN
+  wire $formal$alu.sv:383$107_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:397$108_CHECK
+  wire $formal$alu.sv:386$108_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:397$108_EN
+  wire $formal$alu.sv:386$108_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:400$109_CHECK
+  wire $formal$alu.sv:389$109_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:400$109_EN
+  wire $formal$alu.sv:389$109_EN
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:403$110_CHECK
+  wire $formal$alu.sv:392$110_CHECK
   attribute \init 1'0
   attribute \src "alu.sv:0.0-0.0"
-  wire $formal$alu.sv:403$110_EN
-  attribute \src "alu.sv:114.14-114.23"
-  wire $gt$alu.sv:114$713_Y
-  attribute \src "alu.sv:114.14-114.23"
-  wire $gt$alu.sv:114$731_Y
-  attribute \src "alu.sv:114.14-114.23"
-  wire $gt$alu.sv:114$753_Y
-  attribute \src "alu.sv:114.14-114.23"
-  wire $gt$alu.sv:114$779_Y
-  attribute \src "alu.sv:361.24-361.55"
-  wire $logic_and$alu.sv:361$1119_Y
-  attribute \src "alu.sv:365.24-365.55"
-  wire $logic_and$alu.sv:365$1127_Y
-  attribute \src "alu.sv:317.28-317.35"
-  wire $logic_not$alu.sv:317$1101_Y
-  attribute \src "alu.sv:318.29-318.37"
-  wire $logic_not$alu.sv:318$1102_Y
-  attribute \src "alu.sv:279.22-280.39"
-  wire $logic_or$alu.sv:279$986_Y
-  attribute \src "alu.sv:279.22-281.40"
-  wire $logic_or$alu.sv:279$989_Y
-  attribute \src "alu.sv:279.22-282.40"
-  wire $logic_or$alu.sv:279$992_Y
-  attribute \src "alu.sv:284.21-285.44"
-  wire $logic_or$alu.sv:284$1000_Y
-  attribute \src "alu.sv:284.21-286.44"
-  wire $logic_or$alu.sv:284$1004_Y
-  attribute \src "alu.sv:284.21-287.44"
-  wire $logic_or$alu.sv:284$1008_Y
-  attribute \src "alu.sv:284.21-288.44"
-  wire $logic_or$alu.sv:284$1012_Y
-  attribute \src "alu.sv:284.21-289.44"
-  wire $logic_or$alu.sv:284$1016_Y
-  attribute \src "alu.sv:284.21-290.44"
-  wire $logic_or$alu.sv:284$1020_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire $formal$alu.sv:392$110_EN
+  attribute \src "alu.sv:110.14-110.23"
+  wire $gt$alu.sv:110$713_Y
+  attribute \src "alu.sv:110.14-110.23"
+  wire $gt$alu.sv:110$731_Y
+  attribute \src "alu.sv:110.14-110.23"
+  wire $gt$alu.sv:110$753_Y
+  attribute \src "alu.sv:110.14-110.23"
+  wire $gt$alu.sv:110$779_Y
+  attribute \src "alu.sv:350.24-350.55"
+  wire $logic_and$alu.sv:350$1119_Y
+  attribute \src "alu.sv:354.24-354.55"
+  wire $logic_and$alu.sv:354$1127_Y
+  attribute \src "alu.sv:307.28-307.35"
+  wire $logic_not$alu.sv:307$1101_Y
+  attribute \src "alu.sv:308.29-308.37"
+  wire $logic_not$alu.sv:308$1102_Y
+  attribute \src "alu.sv:269.22-270.39"
+  wire $logic_or$alu.sv:269$986_Y
+  attribute \src "alu.sv:269.22-271.40"
+  wire $logic_or$alu.sv:269$989_Y
+  attribute \src "alu.sv:269.22-272.40"
+  wire $logic_or$alu.sv:269$992_Y
+  attribute \src "alu.sv:274.21-275.44"
+  wire $logic_or$alu.sv:274$1000_Y
+  attribute \src "alu.sv:274.21-276.44"
+  wire $logic_or$alu.sv:274$1004_Y
+  attribute \src "alu.sv:274.21-277.44"
+  wire $logic_or$alu.sv:274$1008_Y
+  attribute \src "alu.sv:274.21-278.44"
+  wire $logic_or$alu.sv:274$1012_Y
+  attribute \src "alu.sv:274.21-279.44"
+  wire $logic_or$alu.sv:274$1016_Y
+  attribute \src "alu.sv:274.21-280.44"
+  wire $logic_or$alu.sv:274$1020_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$628_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$628_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$631_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$631_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$643_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$643_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$647_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$647_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$652_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$652_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$662_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$662_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$667_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$667_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$673_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$673_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$685_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$685_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$691_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$691_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$698_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$698_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$736_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$736_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$759_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$759_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$786_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$786_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$824_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$824_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$847_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$847_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$874_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$874_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$912_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$912_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$935_Y
-  attribute \src "alu.sv:42.11-42.32"
+  wire width 32 $mod$alu.sv:38$935_Y
+  attribute \src "alu.sv:38.11-38.32"
   attribute \unused_bits "1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
-  wire width 32 $mod$alu.sv:42$962_Y
-  attribute \src "alu.sv:400.36-400.48"
-  wire width 4 $not$alu.sv:400$1146_Y
-  attribute \src "alu.sv:403.36-403.48"
-  wire width 4 $not$alu.sv:403$1149_Y
-  attribute \src "alu.sv:397.37-397.46"
-  wire width 4 $or$alu.sv:397$1143_Y
+  wire width 32 $mod$alu.sv:38$962_Y
+  attribute \src "alu.sv:389.36-389.48"
+  wire width 4 $not$alu.sv:389$1146_Y
+  attribute \src "alu.sv:392.36-392.48"
+  wire width 4 $not$alu.sv:392$1149_Y
+  attribute \src "alu.sv:386.37-386.46"
+  wire width 4 $or$alu.sv:386$1143_Y
   wire $procmux$1242_Y
   wire $procmux$1247_Y
   wire $procmux$1257_Y
@@ -702,842 +702,842 @@ module \alu
   wire $procmux$1494_CMP
   wire $procmux$1503_CMP
   wire $procmux$1510_CMP
-  attribute \src "alu.sv:184.19-184.32"
-  wire width 5 $sub$alu.sv:184$623_Y
-  attribute \src "alu.sv:190.19-190.28"
-  wire width 32 $sub$alu.sv:190$625_Y
-  attribute \src "alu.sv:385.38-385.47"
-  wire width 4 $sub$alu.sv:385$1136_Y
-  attribute \src "alu.sv:10.14-10.19"
+  attribute \src "alu.sv:180.19-180.32"
+  wire width 5 $sub$alu.sv:180$623_Y
+  attribute \src "alu.sv:186.19-186.28"
+  wire width 32 $sub$alu.sv:186$625_Y
+  attribute \src "alu.sv:374.38-374.47"
+  wire width 4 $sub$alu.sv:374$1136_Y
+  attribute \src "alu.sv:10.15-10.20"
   wire output 6 \CARRY
-  attribute \src "alu.sv:25.6-25.16"
+  attribute \src "alu.sv:21.6-21.16"
   wire \CARRY_next
-  attribute \src "alu.sv:8.28-8.31"
+  attribute \src "alu.sv:8.29-8.32"
   wire width 4 input 4 \OP1
-  attribute \src "alu.sv:9.28-9.31"
+  attribute \src "alu.sv:9.29-9.32"
   wire width 4 input 5 \OP2
-  attribute \src "alu.sv:7.30-7.36"
+  attribute \src "alu.sv:7.31-7.37"
   wire width 3 input 3 \OPCODE
-  attribute \src "alu.sv:12.29-12.35"
+  attribute \src "alu.sv:12.30-12.36"
   wire width 4 output 8 \RESULT
-  attribute \src "alu.sv:20.21-20.32"
+  attribute \src "alu.sv:16.21-16.32"
   wire width 4 \RESULT_next
-  attribute \src "alu.sv:11.14-11.18"
+  attribute \src "alu.sv:11.15-11.19"
   wire output 7 \ZERO
-  attribute \src "alu.sv:23.6-23.15"
+  attribute \src "alu.sv:19.6-19.15"
   wire \ZERO_next
-  attribute \src "alu.sv:24.6-24.11"
+  attribute \src "alu.sv:20.6-20.11"
   wire \carry
-  attribute \src "alu.sv:5.13-5.16"
+  attribute \src "alu.sv:5.14-5.17"
   wire input 1 \clk
-  attribute \src "alu.sv:26.21-26.26"
+  attribute \src "alu.sv:22.21-22.26"
   wire width 4 \data1
-  attribute \src "alu.sv:27.21-27.26"
+  attribute \src "alu.sv:23.21-23.26"
   wire width 4 \data2
-  attribute \src "alu.sv:279.10-279.17"
+  attribute \src "alu.sv:269.10-269.17"
   wire \f_carry
-  attribute \src "alu.sv:246.22-246.27"
+  attribute \src "alu.sv:242.22-242.27"
   wire width 4 \f_op1
-  attribute \src "alu.sv:247.22-247.27"
+  attribute \src "alu.sv:243.22-243.27"
   wire width 4 \f_op2
-  attribute \src "alu.sv:248.24-248.32"
+  attribute \src "alu.sv:244.24-244.32"
   wire width 3 \f_opcode
   attribute \init 1'0
-  attribute \src "alu.sv:261.13-261.25"
+  attribute \src "alu.sv:257.13-257.25"
   wire \f_past_valid
-  attribute \src "alu.sv:284.10-284.16"
+  attribute \src "alu.sv:274.10-274.16"
   wire \f_zero
   attribute \nosync 1
-  attribute \src "alu.sv:78.7-78.12"
-  wire \func_and$func$alu.sv:193$7.aux_0
+  attribute \src "alu.sv:74.7-74.12"
+  wire \func_and$func$alu.sv:189$7.aux_0
   attribute \nosync 1
-  attribute \src "alu.sv:79.7-79.12"
-  wire \func_and$func$alu.sv:193$7.aux_1
+  attribute \src "alu.sv:75.7-75.12"
+  wire \func_and$func$alu.sv:189$7.aux_1
   attribute \nosync 1
-  attribute \src "alu.sv:80.24-80.29"
-  wire width 5 \func_and$func$alu.sv:193$7.aux_2
+  attribute \src "alu.sv:76.24-76.29"
+  wire width 5 \func_and$func$alu.sv:189$7.aux_2
   attribute \nosync 1
-  attribute \src "alu.sv:77.7-77.12"
-  wire \func_and$func$alu.sv:193$7.bit_v
+  attribute \src "alu.sv:73.7-73.12"
+  wire \func_and$func$alu.sv:189$7.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:75.60-75.65"
-  wire width 4 \func_and$func$alu.sv:193$7.data1
+  attribute \src "alu.sv:71.60-71.65"
+  wire width 4 \func_and$func$alu.sv:189$7.data1
   attribute \nosync 1
-  attribute \src "alu.sv:75.86-75.91"
-  wire width 4 \func_and$func$alu.sv:193$7.data2
+  attribute \src "alu.sv:71.86-71.91"
+  wire width 4 \func_and$func$alu.sv:189$7.data2
   attribute \nosync 1
-  attribute \src "alu.sv:76.22-76.23"
-  wire width 4 \func_and$func$alu.sv:193$7.i
+  attribute \src "alu.sv:72.22-72.23"
+  wire width 4 \func_and$func$alu.sv:189$7.i
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:108$25.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:104$25.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:108$25.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:104$25.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:108$25.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:104$25.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:108$29.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:104$29.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:108$29.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:104$29.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:108$29.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:104$29.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:108$33.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:104$33.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:108$33.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:104$33.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:108$33.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:104$33.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:108$37.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:104$37.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:108$37.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:104$37.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:108$37.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:104$37.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:110$26.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:106$26.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:110$26.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:106$26.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:110$26.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:106$26.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:110$30.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:106$30.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:110$30.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:106$30.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:110$30.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:106$30.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:110$34.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:106$34.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:110$34.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:106$34.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:110$34.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:106$34.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:110$38.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:106$38.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:110$38.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:106$38.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:110$38.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:106$38.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:134$42.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:130$42.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:134$42.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:130$42.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:134$42.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:130$42.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:134$46.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:130$46.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:134$46.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:130$46.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:134$46.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:130$46.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:134$50.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:130$50.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:134$50.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:130$50.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:134$50.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:130$50.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:134$54.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:130$54.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:134$54.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:130$54.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:134$54.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:130$54.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:136$43.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:132$43.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:136$43.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:132$43.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:136$43.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:132$43.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:136$47.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:132$47.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:136$47.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:132$47.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:136$47.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:132$47.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:136$51.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:132$51.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:136$51.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:132$51.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:136$51.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:132$51.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:136$55.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:132$55.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:136$55.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:132$55.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:136$55.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:132$55.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:159$59.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:155$59.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:159$59.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:155$59.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:159$59.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:155$59.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:159$63.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:155$63.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:159$63.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:155$63.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:159$63.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:155$63.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:159$67.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:155$67.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:159$67.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:155$67.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:159$67.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:155$67.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:159$71.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:155$71.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:159$71.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:155$71.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:159$71.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:155$71.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:161$60.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:157$60.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:161$60.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:157$60.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:161$60.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:157$60.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:161$64.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:157$64.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:161$64.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:157$64.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:161$64.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:157$64.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:161$68.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:157$68.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:161$68.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:157$68.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:161$68.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:157$68.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:161$72.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:157$72.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:161$72.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:157$72.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:161$72.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:157$72.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$11.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$11.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$11.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$11.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$11.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$11.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$15.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$15.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$15.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$15.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$15.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$15.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$19.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$19.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$19.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$19.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$19.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$19.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$23.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$23.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$23.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$23.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$23.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$23.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$28.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$28.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$28.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$28.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$28.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$28.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$32.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$32.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$32.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$32.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$32.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$32.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$36.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$36.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$36.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$36.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$36.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$36.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$40.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$40.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$40.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$40.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$40.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$40.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$45.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$45.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$45.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$45.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$45.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$45.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$49.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$49.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$49.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$49.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$49.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$49.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$53.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$53.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$53.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$53.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$53.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$53.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$57.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$57.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$57.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$57.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$57.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$57.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$62.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$62.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$62.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$62.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$62.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$62.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$66.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$66.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$66.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$66.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$66.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$66.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$70.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$70.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$70.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$70.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$70.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$70.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:53$74.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:49$74.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:53$74.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:49$74.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:53$74.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:49$74.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:84$12.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:80$12.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:84$12.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:80$12.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:84$12.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:80$12.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:84$16.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:80$16.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:84$16.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:80$16.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:84$16.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:80$16.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:84$20.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:80$20.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:84$20.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:80$20.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:84$20.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:80$20.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:84$8.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:80$8.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:84$8.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:80$8.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:84$8.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:80$8.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:86$13.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:82$13.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:86$13.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:82$13.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:86$13.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:82$13.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:86$17.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:82$17.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:86$17.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:82$17.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:86$17.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:82$17.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:86$21.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:82$21.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:86$21.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:82$21.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:86$21.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:82$21.value
   attribute \nosync 1
-  attribute \src "alu.sv:31.22-31.29"
-  wire width 4 \func_get_bit$func$alu.sv:86$9.divisor
+  attribute \src "alu.sv:27.22-27.29"
+  wire width 4 \func_get_bit$func$alu.sv:82$9.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:32.22-32.23"
-  wire width 4 \func_get_bit$func$alu.sv:86$9.i
+  attribute \src "alu.sv:28.22-28.23"
+  wire width 4 \func_get_bit$func$alu.sv:82$9.i
   attribute \nosync 1
-  attribute \src "alu.sv:30.47-30.52"
-  wire width 4 \func_get_bit$func$alu.sv:86$9.value
+  attribute \src "alu.sv:26.47-26.52"
+  wire width 4 \func_get_bit$func$alu.sv:82$9.value
   attribute \nosync 1
-  attribute \src "alu.sv:127.7-127.12"
-  wire \func_nand$func$alu.sv:203$41.aux_0
-  attribute \nosync 1
-  attribute \src "alu.sv:128.7-128.12"
-  wire \func_nand$func$alu.sv:203$41.aux_1
-  attribute \nosync 1
-  attribute \src "alu.sv:129.24-129.29"
-  wire width 5 \func_nand$func$alu.sv:203$41.aux_2
+  attribute \src "alu.sv:123.7-123.12"
+  wire \func_nand$func$alu.sv:199$41.aux_0
   attribute \nosync 1
   attribute \src "alu.sv:124.7-124.12"
-  wire \func_nand$func$alu.sv:203$41.bit_v
+  wire \func_nand$func$alu.sv:199$41.aux_1
   attribute \nosync 1
-  attribute \src "alu.sv:125.7-125.14"
-  wire \func_nand$func$alu.sv:203$41.bit_v_1
+  attribute \src "alu.sv:125.24-125.29"
+  wire width 5 \func_nand$func$alu.sv:199$41.aux_2
   attribute \nosync 1
-  attribute \src "alu.sv:122.61-122.66"
-  wire width 4 \func_nand$func$alu.sv:203$41.data1
+  attribute \src "alu.sv:120.7-120.12"
+  wire \func_nand$func$alu.sv:199$41.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:122.87-122.92"
-  wire width 4 \func_nand$func$alu.sv:203$41.data2
+  attribute \src "alu.sv:121.7-121.14"
+  wire \func_nand$func$alu.sv:199$41.bit_v_1
   attribute \nosync 1
-  attribute \src "alu.sv:123.22-123.23"
-  wire width 4 \func_nand$func$alu.sv:203$41.i
+  attribute \src "alu.sv:118.61-118.66"
+  wire width 4 \func_nand$func$alu.sv:199$41.data1
   attribute \nosync 1
-  attribute \src "alu.sv:102.7-102.12"
-  wire \func_or$func$alu.sv:198$24.aux_0
+  attribute \src "alu.sv:118.87-118.92"
+  wire width 4 \func_nand$func$alu.sv:199$41.data2
   attribute \nosync 1
-  attribute \src "alu.sv:103.7-103.12"
-  wire \func_or$func$alu.sv:198$24.aux_1
+  attribute \src "alu.sv:119.22-119.23"
+  wire width 4 \func_nand$func$alu.sv:199$41.i
   attribute \nosync 1
-  attribute \src "alu.sv:104.24-104.29"
-  wire width 5 \func_or$func$alu.sv:198$24.aux_2
+  attribute \src "alu.sv:98.7-98.12"
+  wire \func_or$func$alu.sv:194$24.aux_0
   attribute \nosync 1
-  attribute \src "alu.sv:99.13-99.18"
-  wire width 2 \func_or$func$alu.sv:198$24.bit_v
+  attribute \src "alu.sv:99.7-99.12"
+  wire \func_or$func$alu.sv:194$24.aux_1
   attribute \nosync 1
-  attribute \src "alu.sv:100.7-100.14"
-  wire \func_or$func$alu.sv:198$24.bit_v_1
+  attribute \src "alu.sv:100.24-100.29"
+  wire width 5 \func_or$func$alu.sv:194$24.aux_2
   attribute \nosync 1
-  attribute \src "alu.sv:97.59-97.64"
-  wire width 4 \func_or$func$alu.sv:198$24.data1
+  attribute \src "alu.sv:95.13-95.18"
+  wire width 2 \func_or$func$alu.sv:194$24.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:97.85-97.90"
-  wire width 4 \func_or$func$alu.sv:198$24.data2
+  attribute \src "alu.sv:96.7-96.14"
+  wire \func_or$func$alu.sv:194$24.bit_v_1
   attribute \nosync 1
-  attribute \src "alu.sv:98.22-98.23"
-  wire width 4 \func_or$func$alu.sv:198$24.i
+  attribute \src "alu.sv:93.59-93.64"
+  wire width 4 \func_or$func$alu.sv:194$24.data1
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:115$27.bit_v
+  attribute \src "alu.sv:93.85-93.90"
+  wire width 4 \func_or$func$alu.sv:194$24.data2
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:115$27.current_bit
+  attribute \src "alu.sv:94.22-94.23"
+  wire width 4 \func_or$func$alu.sv:194$24.i
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:115$27.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:111$27.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:115$27.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:111$27.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:115$27.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:111$27.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:115$31.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:111$27.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:115$31.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:111$27.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:115$31.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:111$31.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:115$31.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:111$31.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:115$31.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:111$31.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:115$35.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:111$31.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:115$35.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:111$31.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:115$35.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:111$35.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:115$35.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:111$35.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:115$35.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:111$35.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:115$39.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:111$35.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:115$39.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:111$35.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:115$39.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:111$39.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:115$39.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:111$39.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:115$39.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:111$39.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:141$44.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:111$39.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:141$44.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:111$39.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:141$44.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:137$44.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:141$44.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:137$44.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:141$44.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:137$44.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:141$48.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:137$44.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:141$48.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:137$44.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:141$48.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:137$48.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:141$48.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:137$48.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:141$48.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:137$48.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:141$52.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:137$48.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:141$52.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:137$48.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:141$52.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:137$52.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:141$52.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:137$52.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:141$52.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:137$52.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:141$56.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:137$52.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:141$56.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:137$52.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:141$56.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:137$56.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:141$56.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:137$56.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:141$56.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:137$56.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:166$61.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:137$56.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:166$61.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:137$56.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:166$61.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:162$61.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:166$61.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:162$61.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:166$61.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:162$61.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:166$65.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:162$61.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:166$65.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:162$61.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:166$65.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:162$65.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:166$65.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:162$65.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:166$65.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:162$65.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:166$69.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:162$65.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:166$69.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:162$65.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:166$69.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:162$69.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:166$69.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:162$69.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:166$69.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:162$69.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:166$73.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:162$69.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:166$73.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:162$69.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:166$73.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:162$73.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:166$73.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:162$73.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:166$73.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:162$73.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:90$10.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:162$73.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:90$10.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:162$73.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:90$10.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:86$10.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:90$10.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:86$10.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:90$10.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:86$10.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:90$14.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:86$10.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:90$14.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:86$10.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:90$14.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:86$14.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:90$14.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:86$14.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:90$14.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:86$14.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:90$18.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:86$14.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:90$18.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:86$14.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:90$18.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:86$18.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:90$18.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:86$18.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:90$18.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:86$18.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:48.101-48.106"
-  wire \func_set_bit$func$alu.sv:90$22.bit_v
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:86$18.i
   attribute \nosync 1
-  attribute \src "alu.sv:49.7-49.18"
-  wire \func_set_bit$func$alu.sv:90$22.current_bit
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:86$18.value
   attribute \nosync 1
-  attribute \src "alu.sv:50.22-50.29"
-  wire width 4 \func_set_bit$func$alu.sv:90$22.divisor
+  attribute \src "alu.sv:44.101-44.106"
+  wire \func_set_bit$func$alu.sv:86$22.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:51.22-51.23"
-  wire width 4 \func_set_bit$func$alu.sv:90$22.i
+  attribute \src "alu.sv:45.7-45.18"
+  wire \func_set_bit$func$alu.sv:86$22.current_bit
   attribute \nosync 1
-  attribute \src "alu.sv:48.66-48.71"
-  wire width 5 \func_set_bit$func$alu.sv:90$22.value
+  attribute \src "alu.sv:46.22-46.29"
+  wire width 4 \func_set_bit$func$alu.sv:86$22.divisor
   attribute \nosync 1
-  attribute \src "alu.sv:153.7-153.12"
-  wire \func_xor$func$alu.sv:208$58.aux_0
+  attribute \src "alu.sv:47.22-47.23"
+  wire width 4 \func_set_bit$func$alu.sv:86$22.i
   attribute \nosync 1
-  attribute \src "alu.sv:154.7-154.12"
-  wire \func_xor$func$alu.sv:208$58.aux_1
+  attribute \src "alu.sv:44.66-44.71"
+  wire width 5 \func_set_bit$func$alu.sv:86$22.value
   attribute \nosync 1
-  attribute \src "alu.sv:155.24-155.29"
-  wire width 5 \func_xor$func$alu.sv:208$58.aux_2
+  attribute \src "alu.sv:149.7-149.12"
+  wire \func_xor$func$alu.sv:204$58.aux_0
   attribute \nosync 1
-  attribute \src "alu.sv:150.13-150.18"
-  wire width 2 \func_xor$func$alu.sv:208$58.bit_v
+  attribute \src "alu.sv:150.7-150.12"
+  wire \func_xor$func$alu.sv:204$58.aux_1
   attribute \nosync 1
-  attribute \src "alu.sv:151.7-151.14"
-  wire \func_xor$func$alu.sv:208$58.bit_v_1
+  attribute \src "alu.sv:151.24-151.29"
+  wire width 5 \func_xor$func$alu.sv:204$58.aux_2
   attribute \nosync 1
-  attribute \src "alu.sv:148.60-148.65"
-  wire width 4 \func_xor$func$alu.sv:208$58.data1
+  attribute \src "alu.sv:146.13-146.18"
+  wire width 2 \func_xor$func$alu.sv:204$58.bit_v
   attribute \nosync 1
-  attribute \src "alu.sv:148.86-148.91"
-  wire width 4 \func_xor$func$alu.sv:208$58.data2
+  attribute \src "alu.sv:147.7-147.14"
+  wire \func_xor$func$alu.sv:204$58.bit_v_1
   attribute \nosync 1
-  attribute \src "alu.sv:149.22-149.23"
-  wire width 4 \func_xor$func$alu.sv:208$58.i
-  attribute \src "alu.sv:250.13-250.19"
+  attribute \src "alu.sv:144.60-144.65"
+  wire width 4 \func_xor$func$alu.sv:204$58.data1
+  attribute \nosync 1
+  attribute \src "alu.sv:144.86-144.91"
+  wire width 4 \func_xor$func$alu.sv:204$58.data2
+  attribute \nosync 1
+  attribute \src "alu.sv:145.22-145.23"
+  wire width 4 \func_xor$func$alu.sv:204$58.i
+  attribute \src "alu.sv:246.13-246.19"
   wire width 5 \op_add
-  attribute \src "alu.sv:254.13-254.19"
+  attribute \src "alu.sv:250.13-250.19"
   wire width 4 \op_and
-  attribute \src "alu.sv:253.13-253.20"
+  attribute \src "alu.sv:249.13-249.20"
   wire width 5 \op_decr
-  attribute \src "alu.sv:252.13-252.20"
+  attribute \src "alu.sv:248.13-248.20"
   wire width 5 \op_incr
-  attribute \src "alu.sv:256.13-256.20"
+  attribute \src "alu.sv:252.13-252.20"
   wire width 4 \op_nand
-  attribute \src "alu.sv:255.13-255.18"
+  attribute \src "alu.sv:251.13-251.18"
   wire width 4 \op_or
-  attribute \src "alu.sv:251.13-251.19"
+  attribute \src "alu.sv:247.13-247.19"
   wire width 5 \op_sub
-  attribute \src "alu.sv:257.13-257.19"
+  attribute \src "alu.sv:253.13-253.19"
   wire width 4 \op_xor
-  attribute \src "alu.sv:21.21-21.27"
+  attribute \src "alu.sv:17.21-17.27"
   wire width 4 \result
-  attribute \src "alu.sv:19.23-19.34"
+  attribute \src "alu.sv:15.23-15.34"
   wire width 5 \result_next
-  attribute \src "alu.sv:6.13-6.17"
+  attribute \src "alu.sv:6.14-6.18"
   wire input 2 \rstn
-  attribute \src "alu.sv:22.6-22.10"
+  attribute \src "alu.sv:18.6-18.10"
   wire \zero
-  attribute \src "alu.sv:112.12-112.25"
-  cell $add $add$alu.sv:112$712
+  attribute \src "alu.sv:108.12-108.25"
+  cell $add $add$alu.sv:108$712
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1545,10 +1545,10 @@ module \alu
     parameter \Y_WIDTH 2
     connect \A $22\res[4:0] [0]
     connect \B $23\res[4:0] [0]
-    connect \Y $add$alu.sv:112$712_Y
+    connect \Y $add$alu.sv:108$712_Y
   end
-  attribute \src "alu.sv:112.12-112.25"
-  cell $add $add$alu.sv:112$730
+  attribute \src "alu.sv:108.12-108.25"
+  cell $add $add$alu.sv:108$730
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1556,10 +1556,10 @@ module \alu
     parameter \Y_WIDTH 2
     connect \A $27\res[4:0] [0]
     connect \B $28\res[4:0] [0]
-    connect \Y $add$alu.sv:112$730_Y
+    connect \Y $add$alu.sv:108$730_Y
   end
-  attribute \src "alu.sv:112.12-112.25"
-  cell $add $add$alu.sv:112$752
+  attribute \src "alu.sv:108.12-108.25"
+  cell $add $add$alu.sv:108$752
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1567,10 +1567,10 @@ module \alu
     parameter \Y_WIDTH 2
     connect \A $12\res[4:0] [0]
     connect \B $13\res[4:0] [0]
-    connect \Y $add$alu.sv:112$752_Y
+    connect \Y $add$alu.sv:108$752_Y
   end
-  attribute \src "alu.sv:112.12-112.25"
-  cell $add $add$alu.sv:112$778
+  attribute \src "alu.sv:108.12-108.25"
+  cell $add $add$alu.sv:108$778
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -1578,10 +1578,10 @@ module \alu
     parameter \Y_WIDTH 2
     connect \A $17\res[4:0] [0]
     connect \B $18\res[4:0] [0]
-    connect \Y $add$alu.sv:112$778_Y
+    connect \Y $add$alu.sv:108$778_Y
   end
-  attribute \src "alu.sv:181.19-181.32"
-  cell $add $add$alu.sv:181$622
+  attribute \src "alu.sv:177.19-177.32"
+  cell $add $add$alu.sv:177$622
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1589,10 +1589,10 @@ module \alu
     parameter \Y_WIDTH 5
     connect \A \OP1
     connect \B \OP2
-    connect \Y $add$alu.sv:181$622_Y
+    connect \Y $add$alu.sv:177$622_Y
   end
-  attribute \src "alu.sv:187.19-187.28"
-  cell $add $add$alu.sv:187$624
+  attribute \src "alu.sv:183.19-183.28"
+  cell $add $add$alu.sv:183$624
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1600,10 +1600,10 @@ module \alu
     parameter \Y_WIDTH 5
     connect \A \OP1
     connect \B 1'1
-    connect \Y $add$alu.sv:187$624_Y
+    connect \Y $add$alu.sv:183$624_Y
   end
-  attribute \src "alu.sv:270.22-270.35"
-  cell $add $add$alu.sv:270$973
+  attribute \src "alu.sv:260.22-260.35"
+  cell $add $add$alu.sv:260$973
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1613,8 +1613,8 @@ module \alu
     connect \B \f_op2
     connect \Y \op_add
   end
-  attribute \src "alu.sv:272.22-272.31"
-  cell $add $add$alu.sv:272$975
+  attribute \src "alu.sv:262.22-262.31"
+  cell $add $add$alu.sv:262$975
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1624,8 +1624,8 @@ module \alu
     connect \B 1'1
     connect \Y \op_incr
   end
-  attribute \src "alu.sv:382.37-382.46"
-  cell $add $add$alu.sv:382$1134
+  attribute \src "alu.sv:371.37-371.46"
+  cell $add $add$alu.sv:371$1134
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1633,10 +1633,10 @@ module \alu
     parameter \Y_WIDTH 4
     connect \A \OP1
     connect \B \OP2
-    connect \Y $add$alu.sv:382$1134_Y
+    connect \Y $add$alu.sv:371$1134_Y
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$656
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$656
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1646,8 +1646,8 @@ module \alu
     connect \B 2'10
     connect \Y $11\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$678
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$678
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1657,8 +1657,8 @@ module \alu
     connect \B 3'100
     connect \Y $16\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$704
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$704
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1668,8 +1668,8 @@ module \alu
     connect \B 4'1000
     connect \Y $21\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$740
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$740
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1679,8 +1679,8 @@ module \alu
     connect \B 2'10
     connect \Y $31\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$764
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$764
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1690,8 +1690,8 @@ module \alu
     connect \B 3'100
     connect \Y $36\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$792
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$792
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1701,8 +1701,8 @@ module \alu
     connect \B 4'1000
     connect \Y $41\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$828
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$828
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1712,8 +1712,8 @@ module \alu
     connect \B 2'10
     connect \Y $51\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$852
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$852
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1723,8 +1723,8 @@ module \alu
     connect \B 3'100
     connect \Y $56\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$880
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$880
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1734,8 +1734,8 @@ module \alu
     connect \B 4'1000
     connect \Y $61\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$916
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$916
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1745,8 +1745,8 @@ module \alu
     connect \B 2'10
     connect \Y $71\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$940
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$940
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1756,8 +1756,8 @@ module \alu
     connect \B 3'100
     connect \Y $76\res[4:0]
   end
-  attribute \src "alu.sv:67.11-67.26"
-  cell $add $add$alu.sv:67$968
+  attribute \src "alu.sv:63.11-63.26"
+  cell $add $add$alu.sv:63$968
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \B_SIGNED 0
@@ -1767,8 +1767,8 @@ module \alu
     connect \B 4'1000
     connect \Y $81\res[4:0]
   end
-  attribute \src "alu.sv:274.22-274.35"
-  cell $and $and$alu.sv:274$977
+  attribute \src "alu.sv:264.22-264.35"
+  cell $and $and$alu.sv:264$977
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1778,129 +1778,129 @@ module \alu
     connect \B \f_op2
     connect \Y \op_and
   end
-  attribute \src "alu.sv:279.23-279.50"
-  cell $and $and$alu.sv:279$983
+  attribute \src "alu.sv:269.23-269.50"
+  cell $and $and$alu.sv:269$983
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:279$982_Y
+    connect \A $eq$alu.sv:269$982_Y
     connect \B \op_add [4]
-    connect \Y $and$alu.sv:279$983_Y
+    connect \Y $and$alu.sv:269$983_Y
   end
-  attribute \src "alu.sv:280.11-280.38"
-  cell $and $and$alu.sv:280$985
+  attribute \src "alu.sv:270.11-270.38"
+  cell $and $and$alu.sv:270$985
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:280$984_Y
+    connect \A $eq$alu.sv:270$984_Y
     connect \B \op_sub [4]
-    connect \Y $and$alu.sv:280$985_Y
+    connect \Y $and$alu.sv:270$985_Y
   end
-  attribute \src "alu.sv:281.11-281.39"
-  cell $and $and$alu.sv:281$988
+  attribute \src "alu.sv:271.11-271.39"
+  cell $and $and$alu.sv:271$988
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:281$987_Y
+    connect \A $eq$alu.sv:271$987_Y
     connect \B \op_incr [4]
-    connect \Y $and$alu.sv:281$988_Y
+    connect \Y $and$alu.sv:271$988_Y
   end
-  attribute \src "alu.sv:282.11-282.39"
-  cell $and $and$alu.sv:282$991
+  attribute \src "alu.sv:272.11-272.39"
+  cell $and $and$alu.sv:272$991
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:282$990_Y
+    connect \A $eq$alu.sv:272$990_Y
     connect \B \op_decr [4]
-    connect \Y $and$alu.sv:282$991_Y
+    connect \Y $and$alu.sv:272$991_Y
   end
-  attribute \src "alu.sv:284.22-284.55"
-  cell $and $and$alu.sv:284$996
+  attribute \src "alu.sv:274.22-274.55"
+  cell $and $and$alu.sv:274$996
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:279$982_Y
-    connect \B $eq$alu.sv:284$995_Y
-    connect \Y $and$alu.sv:284$996_Y
+    connect \A $eq$alu.sv:269$982_Y
+    connect \B $eq$alu.sv:274$995_Y
+    connect \Y $and$alu.sv:274$996_Y
   end
-  attribute \src "alu.sv:285.10-285.43"
-  cell $and $and$alu.sv:285$999
+  attribute \src "alu.sv:275.10-275.43"
+  cell $and $and$alu.sv:275$999
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:280$984_Y
-    connect \B $eq$alu.sv:285$998_Y
-    connect \Y $and$alu.sv:285$999_Y
+    connect \A $eq$alu.sv:270$984_Y
+    connect \B $eq$alu.sv:275$998_Y
+    connect \Y $and$alu.sv:275$999_Y
   end
-  attribute \src "alu.sv:286.10-286.43"
-  cell $and $and$alu.sv:286$1003
+  attribute \src "alu.sv:276.10-276.43"
+  cell $and $and$alu.sv:276$1003
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:282$990_Y
-    connect \B $eq$alu.sv:286$1002_Y
-    connect \Y $and$alu.sv:286$1003_Y
+    connect \A $eq$alu.sv:272$990_Y
+    connect \B $eq$alu.sv:276$1002_Y
+    connect \Y $and$alu.sv:276$1003_Y
   end
-  attribute \src "alu.sv:287.10-287.43"
-  cell $and $and$alu.sv:287$1007
+  attribute \src "alu.sv:277.10-277.43"
+  cell $and $and$alu.sv:277$1007
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:287$1005_Y
-    connect \B $eq$alu.sv:287$1006_Y
-    connect \Y $and$alu.sv:287$1007_Y
+    connect \A $eq$alu.sv:277$1005_Y
+    connect \B $eq$alu.sv:277$1006_Y
+    connect \Y $and$alu.sv:277$1007_Y
   end
-  attribute \src "alu.sv:288.10-288.43"
-  cell $and $and$alu.sv:288$1011
+  attribute \src "alu.sv:278.10-278.43"
+  cell $and $and$alu.sv:278$1011
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:288$1009_Y
-    connect \B $eq$alu.sv:288$1010_Y
-    connect \Y $and$alu.sv:288$1011_Y
+    connect \A $eq$alu.sv:278$1009_Y
+    connect \B $eq$alu.sv:278$1010_Y
+    connect \Y $and$alu.sv:278$1011_Y
   end
-  attribute \src "alu.sv:289.10-289.43"
-  cell $and $and$alu.sv:289$1015
+  attribute \src "alu.sv:279.10-279.43"
+  cell $and $and$alu.sv:279$1015
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:289$1013_Y
-    connect \B $eq$alu.sv:289$1014_Y
-    connect \Y $and$alu.sv:289$1015_Y
+    connect \A $eq$alu.sv:279$1013_Y
+    connect \B $eq$alu.sv:279$1014_Y
+    connect \Y $and$alu.sv:279$1015_Y
   end
-  attribute \src "alu.sv:290.10-290.43"
-  cell $and $and$alu.sv:290$1019
+  attribute \src "alu.sv:280.10-280.43"
+  cell $and $and$alu.sv:280$1019
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:290$1017_Y
-    connect \B $eq$alu.sv:290$1018_Y
-    connect \Y $and$alu.sv:290$1019_Y
+    connect \A $eq$alu.sv:280$1017_Y
+    connect \B $eq$alu.sv:280$1018_Y
+    connect \Y $and$alu.sv:280$1019_Y
   end
-  attribute \src "alu.sv:394.37-394.46"
-  cell $and $and$alu.sv:394$1141
+  attribute \src "alu.sv:383.37-383.46"
+  cell $and $and$alu.sv:383$1141
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1908,10 +1908,10 @@ module \alu
     parameter \Y_WIDTH 4
     connect \A \OP1
     connect \B \OP2
-    connect \Y $and$alu.sv:394$1141_Y
+    connect \Y $and$alu.sv:383$1141_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$627
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$627
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1919,10 +1919,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A \OP1
     connect \B 1'1
-    connect \Y $div$alu.sv:42$627_Y
+    connect \Y $div$alu.sv:38$627_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$630
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$630
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1930,10 +1930,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A \OP2
     connect \B 1'1
-    connect \Y $div$alu.sv:42$630_Y
+    connect \Y $div$alu.sv:38$630_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$642
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$642
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1941,10 +1941,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A \OP1
     connect \B 2'10
-    connect \Y $div$alu.sv:42$642_Y
+    connect \Y $div$alu.sv:38$642_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$646
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$646
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1952,10 +1952,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A \OP2
     connect \B 2'10
-    connect \Y $div$alu.sv:42$646_Y
+    connect \Y $div$alu.sv:38$646_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$651
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$651
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1963,10 +1963,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A { 3'000 $5\res[4:0] }
     connect \B 2'10
-    connect \Y $div$alu.sv:42$651_Y
+    connect \Y $div$alu.sv:38$651_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$661
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$661
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1974,10 +1974,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A \OP1
     connect \B 3'100
-    connect \Y $div$alu.sv:42$661_Y
+    connect \Y $div$alu.sv:38$661_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$666
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$666
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1985,10 +1985,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A \OP2
     connect \B 3'100
-    connect \Y $div$alu.sv:42$666_Y
+    connect \Y $div$alu.sv:38$666_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$672
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$672
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -1996,10 +1996,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A $10\res[4:0] [3:0]
     connect \B 3'100
-    connect \Y $div$alu.sv:42$672_Y
+    connect \Y $div$alu.sv:38$672_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$684
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$684
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2007,10 +2007,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A \OP1
     connect \B 4'1000
-    connect \Y $div$alu.sv:42$684_Y
+    connect \Y $div$alu.sv:38$684_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$690
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$690
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2018,10 +2018,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A \OP2
     connect \B 4'1000
-    connect \Y $div$alu.sv:42$690_Y
+    connect \Y $div$alu.sv:38$690_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$697
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$697
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2029,10 +2029,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A $15\res[4:0] [3:0]
     connect \B 4'1000
-    connect \Y $div$alu.sv:42$697_Y
+    connect \Y $div$alu.sv:38$697_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$735
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$735
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2040,10 +2040,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A { 3'000 $25\res[4:0] }
     connect \B 2'10
-    connect \Y $div$alu.sv:42$735_Y
+    connect \Y $div$alu.sv:38$735_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$758
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$758
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2051,10 +2051,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A $30\res[4:0] [3:0]
     connect \B 3'100
-    connect \Y $div$alu.sv:42$758_Y
+    connect \Y $div$alu.sv:38$758_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$785
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$785
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2062,10 +2062,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A $35\res[4:0] [3:0]
     connect \B 4'1000
-    connect \Y $div$alu.sv:42$785_Y
+    connect \Y $div$alu.sv:38$785_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$823
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$823
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2073,10 +2073,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A { 3'000 $45\res[4:0] }
     connect \B 2'10
-    connect \Y $div$alu.sv:42$823_Y
+    connect \Y $div$alu.sv:38$823_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$846
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$846
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2084,10 +2084,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A $50\res[4:0] [3:0]
     connect \B 3'100
-    connect \Y $div$alu.sv:42$846_Y
+    connect \Y $div$alu.sv:38$846_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$873
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$873
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2095,10 +2095,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A $55\res[4:0] [3:0]
     connect \B 4'1000
-    connect \Y $div$alu.sv:42$873_Y
+    connect \Y $div$alu.sv:38$873_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$911
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$911
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2106,10 +2106,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A { 3'000 $65\res[4:0] }
     connect \B 2'10
-    connect \Y $div$alu.sv:42$911_Y
+    connect \Y $div$alu.sv:38$911_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$934
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$934
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2117,10 +2117,10 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A $70\res[4:0] [3:0]
     connect \B 3'100
-    connect \Y $div$alu.sv:42$934_Y
+    connect \Y $div$alu.sv:38$934_Y
   end
-  attribute \src "alu.sv:42.12-42.27"
-  cell $div $div$alu.sv:42$961
+  attribute \src "alu.sv:38.12-38.27"
+  cell $div $div$alu.sv:38$961
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2128,70 +2128,70 @@ module \alu
     parameter \Y_WIDTH 32
     connect \A $75\res[4:0] [3:0]
     connect \B 4'1000
-    connect \Y $div$alu.sv:42$961_Y
+    connect \Y $div$alu.sv:38$961_Y
   end
-  attribute \src "alu.sv:165.15-165.25"
-  cell $eq $eq$alu.sv:165$889
+  attribute \src "alu.sv:161.15-161.25"
+  cell $eq $eq$alu.sv:161$889
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $add$alu.sv:112$712_Y
+    connect \A $add$alu.sv:108$712_Y
     connect \B 1'1
-    connect \Y $eq$alu.sv:165$889_Y
+    connect \Y $eq$alu.sv:161$889_Y
   end
-  attribute \src "alu.sv:165.15-165.25"
-  cell $eq $eq$alu.sv:165$907
+  attribute \src "alu.sv:161.15-161.25"
+  cell $eq $eq$alu.sv:161$907
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $add$alu.sv:112$730_Y
+    connect \A $add$alu.sv:108$730_Y
     connect \B 1'1
-    connect \Y $eq$alu.sv:165$907_Y
+    connect \Y $eq$alu.sv:161$907_Y
   end
-  attribute \src "alu.sv:165.15-165.25"
-  cell $eq $eq$alu.sv:165$929
+  attribute \src "alu.sv:161.15-161.25"
+  cell $eq $eq$alu.sv:161$929
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $add$alu.sv:112$752_Y
+    connect \A $add$alu.sv:108$752_Y
     connect \B 1'1
-    connect \Y $eq$alu.sv:165$929_Y
+    connect \Y $eq$alu.sv:161$929_Y
   end
-  attribute \src "alu.sv:165.15-165.25"
-  cell $eq $eq$alu.sv:165$955
+  attribute \src "alu.sv:161.15-161.25"
+  cell $eq $eq$alu.sv:161$955
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $add$alu.sv:112$778_Y
+    connect \A $add$alu.sv:108$778_Y
     connect \B 1'1
-    connect \Y $eq$alu.sv:165$955_Y
+    connect \Y $eq$alu.sv:161$955_Y
   end
-  attribute \src "alu.sv:221.7-221.23"
-  cell $logic_not $eq$alu.sv:221$970
+  attribute \src "alu.sv:217.7-217.23"
+  cell $logic_not $eq$alu.sv:217$970
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \Y_WIDTH 1
     connect \A \result_next
-    connect \Y $eq$alu.sv:221$970_Y
+    connect \Y $eq$alu.sv:217$970_Y
   end
-  attribute \src "alu.sv:279.24-279.37"
-  cell $logic_not $eq$alu.sv:279$982
+  attribute \src "alu.sv:269.24-269.37"
+  cell $logic_not $eq$alu.sv:269$982
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \Y_WIDTH 1
     connect \A \f_opcode
-    connect \Y $eq$alu.sv:279$982_Y
+    connect \Y $eq$alu.sv:269$982_Y
   end
-  attribute \src "alu.sv:280.12-280.25"
-  cell $eq $eq$alu.sv:280$984
+  attribute \src "alu.sv:270.12-270.25"
+  cell $eq $eq$alu.sv:270$984
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \B_SIGNED 0
@@ -2199,10 +2199,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \f_opcode
     connect \B 1'1
-    connect \Y $eq$alu.sv:280$984_Y
+    connect \Y $eq$alu.sv:270$984_Y
   end
-  attribute \src "alu.sv:281.12-281.25"
-  cell $eq $eq$alu.sv:281$987
+  attribute \src "alu.sv:271.12-271.25"
+  cell $eq $eq$alu.sv:271$987
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \B_SIGNED 0
@@ -2210,10 +2210,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \f_opcode
     connect \B 2'10
-    connect \Y $eq$alu.sv:281$987_Y
+    connect \Y $eq$alu.sv:271$987_Y
   end
-  attribute \src "alu.sv:282.12-282.25"
-  cell $eq $eq$alu.sv:282$990
+  attribute \src "alu.sv:272.12-272.25"
+  cell $eq $eq$alu.sv:272$990
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \B_SIGNED 0
@@ -2221,34 +2221,34 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \f_opcode
     connect \B 2'11
-    connect \Y $eq$alu.sv:282$990_Y
+    connect \Y $eq$alu.sv:272$990_Y
   end
-  attribute \src "alu.sv:284.42-284.54"
-  cell $logic_not $eq$alu.sv:284$995
+  attribute \src "alu.sv:274.42-274.54"
+  cell $logic_not $eq$alu.sv:274$995
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \Y_WIDTH 1
     connect \A \op_add
-    connect \Y $eq$alu.sv:284$995_Y
+    connect \Y $eq$alu.sv:274$995_Y
   end
-  attribute \src "alu.sv:285.30-285.42"
-  cell $logic_not $eq$alu.sv:285$998
+  attribute \src "alu.sv:275.30-275.42"
+  cell $logic_not $eq$alu.sv:275$998
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \Y_WIDTH 1
     connect \A \op_sub
-    connect \Y $eq$alu.sv:285$998_Y
+    connect \Y $eq$alu.sv:275$998_Y
   end
-  attribute \src "alu.sv:286.30-286.42"
-  cell $logic_not $eq$alu.sv:286$1002
+  attribute \src "alu.sv:276.30-276.42"
+  cell $logic_not $eq$alu.sv:276$1002
     parameter \A_SIGNED 0
     parameter \A_WIDTH 5
     parameter \Y_WIDTH 1
     connect \A \op_decr
-    connect \Y $eq$alu.sv:286$1002_Y
+    connect \Y $eq$alu.sv:276$1002_Y
   end
-  attribute \src "alu.sv:287.11-287.24"
-  cell $eq $eq$alu.sv:287$1005
+  attribute \src "alu.sv:277.11-277.24"
+  cell $eq $eq$alu.sv:277$1005
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \B_SIGNED 0
@@ -2256,18 +2256,18 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \f_opcode
     connect \B 3'100
-    connect \Y $eq$alu.sv:287$1005_Y
+    connect \Y $eq$alu.sv:277$1005_Y
   end
-  attribute \src "alu.sv:287.30-287.42"
-  cell $logic_not $eq$alu.sv:287$1006
+  attribute \src "alu.sv:277.30-277.42"
+  cell $logic_not $eq$alu.sv:277$1006
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \op_and
-    connect \Y $eq$alu.sv:287$1006_Y
+    connect \Y $eq$alu.sv:277$1006_Y
   end
-  attribute \src "alu.sv:288.11-288.24"
-  cell $eq $eq$alu.sv:288$1009
+  attribute \src "alu.sv:278.11-278.24"
+  cell $eq $eq$alu.sv:278$1009
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \B_SIGNED 0
@@ -2275,18 +2275,18 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \f_opcode
     connect \B 3'101
-    connect \Y $eq$alu.sv:288$1009_Y
+    connect \Y $eq$alu.sv:278$1009_Y
   end
-  attribute \src "alu.sv:288.30-288.42"
-  cell $logic_not $eq$alu.sv:288$1010
+  attribute \src "alu.sv:278.30-278.42"
+  cell $logic_not $eq$alu.sv:278$1010
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \op_or
-    connect \Y $eq$alu.sv:288$1010_Y
+    connect \Y $eq$alu.sv:278$1010_Y
   end
-  attribute \src "alu.sv:289.11-289.24"
-  cell $eq $eq$alu.sv:289$1013
+  attribute \src "alu.sv:279.11-279.24"
+  cell $eq $eq$alu.sv:279$1013
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \B_SIGNED 0
@@ -2294,18 +2294,18 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \f_opcode
     connect \B 3'110
-    connect \Y $eq$alu.sv:289$1013_Y
+    connect \Y $eq$alu.sv:279$1013_Y
   end
-  attribute \src "alu.sv:289.30-289.42"
-  cell $logic_not $eq$alu.sv:289$1014
+  attribute \src "alu.sv:279.30-279.42"
+  cell $logic_not $eq$alu.sv:279$1014
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \op_nand
-    connect \Y $eq$alu.sv:289$1014_Y
+    connect \Y $eq$alu.sv:279$1014_Y
   end
-  attribute \src "alu.sv:290.11-290.24"
-  cell $eq $eq$alu.sv:290$1017
+  attribute \src "alu.sv:280.11-280.24"
+  cell $eq $eq$alu.sv:280$1017
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \B_SIGNED 0
@@ -2313,26 +2313,26 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \f_opcode
     connect \B 3'111
-    connect \Y $eq$alu.sv:290$1017_Y
+    connect \Y $eq$alu.sv:280$1017_Y
   end
-  attribute \src "alu.sv:290.30-290.42"
-  cell $logic_not $eq$alu.sv:290$1018
+  attribute \src "alu.sv:280.30-280.42"
+  cell $logic_not $eq$alu.sv:280$1018
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \op_xor
-    connect \Y $eq$alu.sv:290$1018_Y
+    connect \Y $eq$alu.sv:280$1018_Y
   end
-  attribute \src "alu.sv:313.34-313.48"
-  cell $logic_not $eq$alu.sv:313$1100
+  attribute \src "alu.sv:303.34-303.48"
+  cell $logic_not $eq$alu.sv:303$1100
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \result
-    connect \Y $0$formal$alu.sv:377$101_CHECK[0:0]$1077
+    connect \Y $0$formal$alu.sv:366$101_CHECK[0:0]$1077
   end
-  attribute \src "alu.sv:323.30-323.53"
-  cell $eq $eq$alu.sv:323$1103
+  attribute \src "alu.sv:313.30-313.53"
+  cell $eq $eq$alu.sv:313$1103
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2340,10 +2340,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \result
     connect \B \op_add [3:0]
-    connect \Y $eq$alu.sv:323$1103_Y
+    connect \Y $eq$alu.sv:313$1103_Y
   end
-  attribute \src "alu.sv:326.30-326.53"
-  cell $eq $eq$alu.sv:326$1104
+  attribute \src "alu.sv:316.30-316.53"
+  cell $eq $eq$alu.sv:316$1104
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2351,10 +2351,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \result
     connect \B \op_sub [3:0]
-    connect \Y $eq$alu.sv:326$1104_Y
+    connect \Y $eq$alu.sv:316$1104_Y
   end
-  attribute \src "alu.sv:329.30-329.54"
-  cell $eq $eq$alu.sv:329$1105
+  attribute \src "alu.sv:319.30-319.54"
+  cell $eq $eq$alu.sv:319$1105
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2362,10 +2362,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \result
     connect \B \op_incr [3:0]
-    connect \Y $eq$alu.sv:329$1105_Y
+    connect \Y $eq$alu.sv:319$1105_Y
   end
-  attribute \src "alu.sv:332.30-332.54"
-  cell $eq $eq$alu.sv:332$1106
+  attribute \src "alu.sv:322.30-322.54"
+  cell $eq $eq$alu.sv:322$1106
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2373,10 +2373,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \result
     connect \B \op_decr [3:0]
-    connect \Y $eq$alu.sv:332$1106_Y
+    connect \Y $eq$alu.sv:322$1106_Y
   end
-  attribute \src "alu.sv:335.30-335.46"
-  cell $eq $eq$alu.sv:335$1107
+  attribute \src "alu.sv:325.30-325.46"
+  cell $eq $eq$alu.sv:325$1107
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2384,10 +2384,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \result
     connect \B \op_and
-    connect \Y $eq$alu.sv:335$1107_Y
+    connect \Y $eq$alu.sv:325$1107_Y
   end
-  attribute \src "alu.sv:338.30-338.45"
-  cell $eq $eq$alu.sv:338$1108
+  attribute \src "alu.sv:328.30-328.45"
+  cell $eq $eq$alu.sv:328$1108
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2395,10 +2395,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \result
     connect \B \op_or
-    connect \Y $eq$alu.sv:338$1108_Y
+    connect \Y $eq$alu.sv:328$1108_Y
   end
-  attribute \src "alu.sv:341.30-341.47"
-  cell $eq $eq$alu.sv:341$1109
+  attribute \src "alu.sv:331.30-331.47"
+  cell $eq $eq$alu.sv:331$1109
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2406,10 +2406,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \result
     connect \B \op_nand
-    connect \Y $eq$alu.sv:341$1109_Y
+    connect \Y $eq$alu.sv:331$1109_Y
   end
-  attribute \src "alu.sv:344.29-344.45"
-  cell $eq $eq$alu.sv:344$1110
+  attribute \src "alu.sv:334.29-334.45"
+  cell $eq $eq$alu.sv:334$1110
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2417,18 +2417,18 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \result
     connect \B \op_xor
-    connect \Y $eq$alu.sv:344$1110_Y
+    connect \Y $eq$alu.sv:334$1110_Y
   end
-  attribute \src "alu.sv:352.28-352.42"
-  cell $logic_not $eq$alu.sv:352$1111
+  attribute \src "alu.sv:341.28-341.42"
+  cell $logic_not $eq$alu.sv:341$1111
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \Y_WIDTH 1
     connect \A \OPCODE
-    connect \Y $0$formal$alu.sv:352$88_CHECK[0:0]$1051
+    connect \Y $0$formal$alu.sv:341$88_CHECK[0:0]$1051
   end
-  attribute \src "alu.sv:353.28-353.42"
-  cell $eq $eq$alu.sv:353$1112
+  attribute \src "alu.sv:342.28-342.42"
+  cell $eq $eq$alu.sv:342$1112
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \B_SIGNED 0
@@ -2436,18 +2436,18 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \OPCODE
     connect \B 3'111
-    connect \Y $0$formal$alu.sv:353$89_CHECK[0:0]$1053
+    connect \Y $0$formal$alu.sv:342$89_CHECK[0:0]$1053
   end
-  attribute \src "alu.sv:355.25-355.37"
-  cell $logic_not $eq$alu.sv:355$1113
+  attribute \src "alu.sv:344.25-344.37"
+  cell $logic_not $eq$alu.sv:344$1113
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \OP1
-    connect \Y $0$formal$alu.sv:355$90_CHECK[0:0]$1055
+    connect \Y $0$formal$alu.sv:344$90_CHECK[0:0]$1055
   end
-  attribute \src "alu.sv:356.25-356.37"
-  cell $eq $eq$alu.sv:356$1114
+  attribute \src "alu.sv:345.25-345.37"
+  cell $eq $eq$alu.sv:345$1114
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2455,18 +2455,18 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \OP1
     connect \B 4'1111
-    connect \Y $0$formal$alu.sv:356$91_CHECK[0:0]$1057
+    connect \Y $0$formal$alu.sv:345$91_CHECK[0:0]$1057
   end
-  attribute \src "alu.sv:357.25-357.37"
-  cell $logic_not $eq$alu.sv:357$1115
+  attribute \src "alu.sv:346.25-346.37"
+  cell $logic_not $eq$alu.sv:346$1115
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \OP2
-    connect \Y $0$formal$alu.sv:357$92_CHECK[0:0]$1059
+    connect \Y $0$formal$alu.sv:346$92_CHECK[0:0]$1059
   end
-  attribute \src "alu.sv:358.25-358.37"
-  cell $eq $eq$alu.sv:358$1116
+  attribute \src "alu.sv:347.25-347.37"
+  cell $eq $eq$alu.sv:347$1116
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2474,10 +2474,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \OP2
     connect \B 4'1111
-    connect \Y $0$formal$alu.sv:358$93_CHECK[0:0]$1061
+    connect \Y $0$formal$alu.sv:347$93_CHECK[0:0]$1061
   end
-  attribute \src "alu.sv:361.42-361.54"
-  cell $eq $eq$alu.sv:361$1118
+  attribute \src "alu.sv:350.42-350.54"
+  cell $eq $eq$alu.sv:350$1118
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2485,10 +2485,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \OP1
     connect \B 4'1010
-    connect \Y $eq$alu.sv:361$1118_Y
+    connect \Y $eq$alu.sv:350$1118_Y
   end
-  attribute \src "alu.sv:361.60-361.72"
-  cell $eq $eq$alu.sv:361$1120
+  attribute \src "alu.sv:350.60-350.72"
+  cell $eq $eq$alu.sv:350$1120
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2496,10 +2496,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \OP2
     connect \B 4'1010
-    connect \Y $eq$alu.sv:361$1120_Y
+    connect \Y $eq$alu.sv:350$1120_Y
   end
-  attribute \src "alu.sv:363.25-363.36"
-  cell $eq $eq$alu.sv:363$1122
+  attribute \src "alu.sv:352.25-352.36"
+  cell $eq $eq$alu.sv:352$1122
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
     parameter \B_SIGNED 0
@@ -2507,10 +2507,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \OPCODE
     connect \B 2'10
-    connect \Y $eq$alu.sv:363$1122_Y
+    connect \Y $eq$alu.sv:352$1122_Y
   end
-  attribute \src "alu.sv:363.42-363.54"
-  cell $eq $eq$alu.sv:363$1123
+  attribute \src "alu.sv:352.42-352.54"
+  cell $eq $eq$alu.sv:352$1123
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2518,10 +2518,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \OP1
     connect \B 4'1000
-    connect \Y $eq$alu.sv:363$1123_Y
+    connect \Y $eq$alu.sv:352$1123_Y
   end
-  attribute \src "alu.sv:378.28-378.43"
-  cell $eq $eq$alu.sv:378$1133
+  attribute \src "alu.sv:367.28-367.43"
+  cell $eq $eq$alu.sv:367$1133
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -2529,669 +2529,669 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A \result
     connect \B 4'1111
-    connect \Y $0$formal$alu.sv:378$102_CHECK[0:0]$1079
+    connect \Y $0$formal$alu.sv:367$102_CHECK[0:0]$1079
   end
-  attribute \src "alu.sv:382.26-382.47"
-  cell $eq $eq$alu.sv:382$1135
+  attribute \src "alu.sv:371.26-371.47"
+  cell $eq $eq$alu.sv:371$1135
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
     parameter \B_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \result
-    connect \B $add$alu.sv:382$1134_Y
-    connect \Y $eq$alu.sv:382$1135_Y
+    connect \B $add$alu.sv:371$1134_Y
+    connect \Y $eq$alu.sv:371$1135_Y
   end
-  attribute \src "alu.sv:385.27-385.48"
-  cell $eq $eq$alu.sv:385$1137
+  attribute \src "alu.sv:374.27-374.48"
+  cell $eq $eq$alu.sv:374$1137
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
     parameter \B_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \result
-    connect \B $sub$alu.sv:385$1136_Y
-    connect \Y $eq$alu.sv:385$1137_Y
+    connect \B $sub$alu.sv:374$1136_Y
+    connect \Y $eq$alu.sv:374$1137_Y
   end
-  attribute \src "alu.sv:391.27-391.46"
-  cell $eq $eq$alu.sv:391$1140
+  attribute \src "alu.sv:380.27-380.46"
+  cell $eq $eq$alu.sv:380$1140
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
     parameter \B_WIDTH 32
     parameter \Y_WIDTH 1
     connect \A \result
-    connect \B { $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [3:0] }
-    connect \Y $eq$alu.sv:391$1140_Y
+    connect \B { $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [3:0] }
+    connect \Y $eq$alu.sv:380$1140_Y
   end
-  attribute \src "alu.sv:394.26-394.47"
-  cell $eq $eq$alu.sv:394$1142
+  attribute \src "alu.sv:383.26-383.47"
+  cell $eq $eq$alu.sv:383$1142
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
     parameter \B_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \result
-    connect \B $and$alu.sv:394$1141_Y
-    connect \Y $eq$alu.sv:394$1142_Y
+    connect \B $and$alu.sv:383$1141_Y
+    connect \Y $eq$alu.sv:383$1142_Y
   end
-  attribute \src "alu.sv:397.26-397.47"
-  cell $eq $eq$alu.sv:397$1144
+  attribute \src "alu.sv:386.26-386.47"
+  cell $eq $eq$alu.sv:386$1144
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
     parameter \B_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \result
-    connect \B $or$alu.sv:397$1143_Y
-    connect \Y $eq$alu.sv:397$1144_Y
+    connect \B $or$alu.sv:386$1143_Y
+    connect \Y $eq$alu.sv:386$1144_Y
   end
-  attribute \src "alu.sv:400.26-400.48"
-  cell $eq $eq$alu.sv:400$1147
+  attribute \src "alu.sv:389.26-389.48"
+  cell $eq $eq$alu.sv:389$1147
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
     parameter \B_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \result
-    connect \B $not$alu.sv:400$1146_Y
-    connect \Y $eq$alu.sv:400$1147_Y
+    connect \B $not$alu.sv:389$1146_Y
+    connect \Y $eq$alu.sv:389$1147_Y
   end
-  attribute \src "alu.sv:403.26-403.48"
-  cell $eq $eq$alu.sv:403$1150
+  attribute \src "alu.sv:392.26-392.48"
+  cell $eq $eq$alu.sv:392$1150
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
     parameter \B_WIDTH 4
     parameter \Y_WIDTH 1
     connect \A \result
-    connect \B $not$alu.sv:403$1149_Y
-    connect \Y $eq$alu.sv:403$1150_Y
+    connect \B $not$alu.sv:392$1149_Y
+    connect \Y $eq$alu.sv:392$1150_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$654
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$654
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $9\res[4:0] [0]
-    connect \B $eq$alu.sv:140$819_Y
-    connect \Y $eq$alu.sv:61$654_Y
+    connect \B $eq$alu.sv:136$819_Y
+    connect \Y $eq$alu.sv:57$654_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$676
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$676
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $14\res[4:0] [0]
-    connect \B $eq$alu.sv:140$841_Y
-    connect \Y $eq$alu.sv:61$676_Y
+    connect \B $eq$alu.sv:136$841_Y
+    connect \Y $eq$alu.sv:57$676_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$702
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$702
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $19\res[4:0] [0]
-    connect \B $eq$alu.sv:140$867_Y
-    connect \Y $eq$alu.sv:61$702_Y
+    connect \B $eq$alu.sv:136$867_Y
+    connect \Y $eq$alu.sv:57$702_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$738
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$738
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $29\res[4:0] [0]
-    connect \B $eq$alu.sv:65$739_Y
-    connect \Y $eq$alu.sv:61$738_Y
+    connect \B $eq$alu.sv:61$739_Y
+    connect \Y $eq$alu.sv:57$738_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$762
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$762
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $34\res[4:0] [0]
-    connect \B $eq$alu.sv:65$763_Y
-    connect \Y $eq$alu.sv:61$762_Y
+    connect \B $eq$alu.sv:61$763_Y
+    connect \Y $eq$alu.sv:57$762_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$790
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$790
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $39\res[4:0] [0]
-    connect \B $eq$alu.sv:65$791_Y
-    connect \Y $eq$alu.sv:61$790_Y
+    connect \B $eq$alu.sv:61$791_Y
+    connect \Y $eq$alu.sv:57$790_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$826
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$826
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $49\res[4:0] [0]
-    connect \B $eq$alu.sv:65$827_Y
-    connect \Y $eq$alu.sv:61$826_Y
+    connect \B $eq$alu.sv:61$827_Y
+    connect \Y $eq$alu.sv:57$826_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$850
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$850
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $54\res[4:0] [0]
-    connect \B $eq$alu.sv:65$851_Y
-    connect \Y $eq$alu.sv:61$850_Y
+    connect \B $eq$alu.sv:61$851_Y
+    connect \Y $eq$alu.sv:57$850_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$878
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$878
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $59\res[4:0] [0]
-    connect \B $eq$alu.sv:65$879_Y
-    connect \Y $eq$alu.sv:61$878_Y
+    connect \B $eq$alu.sv:61$879_Y
+    connect \Y $eq$alu.sv:57$878_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$914
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$914
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $69\res[4:0] [0]
-    connect \B $eq$alu.sv:65$915_Y
-    connect \Y $eq$alu.sv:61$914_Y
+    connect \B $eq$alu.sv:61$915_Y
+    connect \Y $eq$alu.sv:57$914_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$938
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$938
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $74\res[4:0] [0]
-    connect \B $eq$alu.sv:65$939_Y
-    connect \Y $eq$alu.sv:61$938_Y
+    connect \B $eq$alu.sv:61$939_Y
+    connect \Y $eq$alu.sv:57$938_Y
   end
-  attribute \src "alu.sv:61.7-61.27"
-  cell $eq $eq$alu.sv:61$966
+  attribute \src "alu.sv:57.7-57.27"
+  cell $eq $eq$alu.sv:57$966
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A $79\res[4:0] [0]
-    connect \B $eq$alu.sv:65$967_Y
-    connect \Y $eq$alu.sv:61$966_Y
+    connect \B $eq$alu.sv:61$967_Y
+    connect \Y $eq$alu.sv:57$966_Y
   end
-  attribute \src "alu.sv:114.14-114.23"
-  cell $gt $gt$alu.sv:114$713
+  attribute \src "alu.sv:110.14-110.23"
+  cell $gt $gt$alu.sv:110$713
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $add$alu.sv:112$712_Y
+    connect \A $add$alu.sv:108$712_Y
     connect \B 1'0
-    connect \Y $gt$alu.sv:114$713_Y
+    connect \Y $gt$alu.sv:110$713_Y
   end
-  attribute \src "alu.sv:114.14-114.23"
-  cell $gt $gt$alu.sv:114$731
+  attribute \src "alu.sv:110.14-110.23"
+  cell $gt $gt$alu.sv:110$731
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $add$alu.sv:112$730_Y
+    connect \A $add$alu.sv:108$730_Y
     connect \B 1'0
-    connect \Y $gt$alu.sv:114$731_Y
+    connect \Y $gt$alu.sv:110$731_Y
   end
-  attribute \src "alu.sv:114.14-114.23"
-  cell $gt $gt$alu.sv:114$753
+  attribute \src "alu.sv:110.14-110.23"
+  cell $gt $gt$alu.sv:110$753
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $add$alu.sv:112$752_Y
+    connect \A $add$alu.sv:108$752_Y
     connect \B 1'0
-    connect \Y $gt$alu.sv:114$753_Y
+    connect \Y $gt$alu.sv:110$753_Y
   end
-  attribute \src "alu.sv:114.14-114.23"
-  cell $gt $gt$alu.sv:114$779
+  attribute \src "alu.sv:110.14-110.23"
+  cell $gt $gt$alu.sv:110$779
     parameter \A_SIGNED 0
     parameter \A_WIDTH 2
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $add$alu.sv:112$778_Y
+    connect \A $add$alu.sv:108$778_Y
     connect \B 1'0
-    connect \Y $gt$alu.sv:114$779_Y
+    connect \Y $gt$alu.sv:110$779_Y
   end
-  attribute \src "alu.sv:361.24-361.55"
-  cell $logic_and $logic_and$alu.sv:361$1119
+  attribute \src "alu.sv:350.24-350.55"
+  cell $logic_and $logic_and$alu.sv:350$1119
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $0$formal$alu.sv:352$88_CHECK[0:0]$1051
-    connect \B $eq$alu.sv:361$1118_Y
-    connect \Y $logic_and$alu.sv:361$1119_Y
+    connect \A $0$formal$alu.sv:341$88_CHECK[0:0]$1051
+    connect \B $eq$alu.sv:350$1118_Y
+    connect \Y $logic_and$alu.sv:350$1119_Y
   end
-  attribute \src "alu.sv:361.24-361.73"
-  cell $logic_and $logic_and$alu.sv:361$1121
+  attribute \src "alu.sv:350.24-350.73"
+  cell $logic_and $logic_and$alu.sv:350$1121
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_and$alu.sv:361$1119_Y
-    connect \B $eq$alu.sv:361$1120_Y
-    connect \Y $0$formal$alu.sv:361$94_CHECK[0:0]$1063
+    connect \A $logic_and$alu.sv:350$1119_Y
+    connect \B $eq$alu.sv:350$1120_Y
+    connect \Y $0$formal$alu.sv:350$94_CHECK[0:0]$1063
   end
-  attribute \src "alu.sv:363.24-363.55"
-  cell $logic_and $logic_and$alu.sv:363$1124
+  attribute \src "alu.sv:352.24-352.55"
+  cell $logic_and $logic_and$alu.sv:352$1124
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $eq$alu.sv:363$1122_Y
-    connect \B $eq$alu.sv:363$1123_Y
-    connect \Y $0$formal$alu.sv:363$95_CHECK[0:0]$1065
+    connect \A $eq$alu.sv:352$1122_Y
+    connect \B $eq$alu.sv:352$1123_Y
+    connect \Y $0$formal$alu.sv:352$95_CHECK[0:0]$1065
   end
-  attribute \src "alu.sv:365.24-365.55"
-  cell $logic_and $logic_and$alu.sv:365$1127
+  attribute \src "alu.sv:354.24-354.55"
+  cell $logic_and $logic_and$alu.sv:354$1127
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $0$formal$alu.sv:352$88_CHECK[0:0]$1051
-    connect \B $0$formal$alu.sv:355$90_CHECK[0:0]$1055
-    connect \Y $logic_and$alu.sv:365$1127_Y
+    connect \A $0$formal$alu.sv:341$88_CHECK[0:0]$1051
+    connect \B $0$formal$alu.sv:344$90_CHECK[0:0]$1055
+    connect \Y $logic_and$alu.sv:354$1127_Y
   end
-  attribute \src "alu.sv:365.24-365.73"
-  cell $logic_and $logic_and$alu.sv:365$1129
+  attribute \src "alu.sv:354.24-354.73"
+  cell $logic_and $logic_and$alu.sv:354$1129
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_and$alu.sv:365$1127_Y
-    connect \B $0$formal$alu.sv:357$92_CHECK[0:0]$1059
-    connect \Y $0$formal$alu.sv:365$96_CHECK[0:0]$1067
+    connect \A $logic_and$alu.sv:354$1127_Y
+    connect \B $0$formal$alu.sv:346$92_CHECK[0:0]$1059
+    connect \Y $0$formal$alu.sv:354$96_CHECK[0:0]$1067
   end
-  attribute \src "alu.sv:311.33-311.39"
-  cell $logic_not $logic_not$alu.sv:311$1098
+  attribute \src "alu.sv:301.33-301.39"
+  cell $logic_not $logic_not$alu.sv:301$1098
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \carry
-    connect \Y $0$formal$alu.sv:370$98_CHECK[0:0]$1071
+    connect \Y $0$formal$alu.sv:359$98_CHECK[0:0]$1071
   end
-  attribute \src "alu.sv:312.32-312.37"
-  cell $logic_not $logic_not$alu.sv:312$1099
+  attribute \src "alu.sv:302.32-302.37"
+  cell $logic_not $logic_not$alu.sv:302$1099
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \zero
-    connect \Y $0$formal$alu.sv:374$100_CHECK[0:0]$1075
+    connect \Y $0$formal$alu.sv:363$100_CHECK[0:0]$1075
   end
-  attribute \src "alu.sv:317.28-317.35"
-  cell $logic_not $logic_not$alu.sv:317$1101
+  attribute \src "alu.sv:307.28-307.35"
+  cell $logic_not $logic_not$alu.sv:307$1101
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \f_zero
-    connect \Y $logic_not$alu.sv:317$1101_Y
+    connect \Y $logic_not$alu.sv:307$1101_Y
   end
-  attribute \src "alu.sv:318.29-318.37"
-  cell $logic_not $logic_not$alu.sv:318$1102
+  attribute \src "alu.sv:308.29-308.37"
+  cell $logic_not $logic_not$alu.sv:308$1102
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \f_carry
-    connect \Y $logic_not$alu.sv:318$1102_Y
+    connect \Y $logic_not$alu.sv:308$1102_Y
   end
-  attribute \src "alu.sv:279.22-280.39"
-  cell $logic_or $logic_or$alu.sv:279$986
+  attribute \src "alu.sv:269.22-270.39"
+  cell $logic_or $logic_or$alu.sv:269$986
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $and$alu.sv:279$983_Y
-    connect \B $and$alu.sv:280$985_Y
-    connect \Y $logic_or$alu.sv:279$986_Y
+    connect \A $and$alu.sv:269$983_Y
+    connect \B $and$alu.sv:270$985_Y
+    connect \Y $logic_or$alu.sv:269$986_Y
   end
-  attribute \src "alu.sv:279.22-281.40"
-  cell $logic_or $logic_or$alu.sv:279$989
+  attribute \src "alu.sv:269.22-271.40"
+  cell $logic_or $logic_or$alu.sv:269$989
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_or$alu.sv:279$986_Y
-    connect \B $and$alu.sv:281$988_Y
-    connect \Y $logic_or$alu.sv:279$989_Y
+    connect \A $logic_or$alu.sv:269$986_Y
+    connect \B $and$alu.sv:271$988_Y
+    connect \Y $logic_or$alu.sv:269$989_Y
   end
-  attribute \src "alu.sv:279.22-282.40"
-  cell $logic_or $logic_or$alu.sv:279$992
+  attribute \src "alu.sv:269.22-272.40"
+  cell $logic_or $logic_or$alu.sv:269$992
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_or$alu.sv:279$989_Y
-    connect \B $and$alu.sv:282$991_Y
-    connect \Y $logic_or$alu.sv:279$992_Y
+    connect \A $logic_or$alu.sv:269$989_Y
+    connect \B $and$alu.sv:272$991_Y
+    connect \Y $logic_or$alu.sv:269$992_Y
   end
-  attribute \src "alu.sv:284.21-285.44"
-  cell $logic_or $logic_or$alu.sv:284$1000
+  attribute \src "alu.sv:274.21-275.44"
+  cell $logic_or $logic_or$alu.sv:274$1000
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $and$alu.sv:284$996_Y
-    connect \B $and$alu.sv:285$999_Y
-    connect \Y $logic_or$alu.sv:284$1000_Y
+    connect \A $and$alu.sv:274$996_Y
+    connect \B $and$alu.sv:275$999_Y
+    connect \Y $logic_or$alu.sv:274$1000_Y
   end
-  attribute \src "alu.sv:284.21-286.44"
-  cell $logic_or $logic_or$alu.sv:284$1004
+  attribute \src "alu.sv:274.21-276.44"
+  cell $logic_or $logic_or$alu.sv:274$1004
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_or$alu.sv:284$1000_Y
-    connect \B $and$alu.sv:286$1003_Y
-    connect \Y $logic_or$alu.sv:284$1004_Y
+    connect \A $logic_or$alu.sv:274$1000_Y
+    connect \B $and$alu.sv:276$1003_Y
+    connect \Y $logic_or$alu.sv:274$1004_Y
   end
-  attribute \src "alu.sv:284.21-287.44"
-  cell $logic_or $logic_or$alu.sv:284$1008
+  attribute \src "alu.sv:274.21-277.44"
+  cell $logic_or $logic_or$alu.sv:274$1008
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_or$alu.sv:284$1004_Y
-    connect \B $and$alu.sv:287$1007_Y
-    connect \Y $logic_or$alu.sv:284$1008_Y
+    connect \A $logic_or$alu.sv:274$1004_Y
+    connect \B $and$alu.sv:277$1007_Y
+    connect \Y $logic_or$alu.sv:274$1008_Y
   end
-  attribute \src "alu.sv:284.21-288.44"
-  cell $logic_or $logic_or$alu.sv:284$1012
+  attribute \src "alu.sv:274.21-278.44"
+  cell $logic_or $logic_or$alu.sv:274$1012
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_or$alu.sv:284$1008_Y
-    connect \B $and$alu.sv:288$1011_Y
-    connect \Y $logic_or$alu.sv:284$1012_Y
+    connect \A $logic_or$alu.sv:274$1008_Y
+    connect \B $and$alu.sv:278$1011_Y
+    connect \Y $logic_or$alu.sv:274$1012_Y
   end
-  attribute \src "alu.sv:284.21-289.44"
-  cell $logic_or $logic_or$alu.sv:284$1016
+  attribute \src "alu.sv:274.21-279.44"
+  cell $logic_or $logic_or$alu.sv:274$1016
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_or$alu.sv:284$1012_Y
-    connect \B $and$alu.sv:289$1015_Y
-    connect \Y $logic_or$alu.sv:284$1016_Y
+    connect \A $logic_or$alu.sv:274$1012_Y
+    connect \B $and$alu.sv:279$1015_Y
+    connect \Y $logic_or$alu.sv:274$1016_Y
   end
-  attribute \src "alu.sv:284.21-290.44"
-  cell $logic_or $logic_or$alu.sv:284$1020
+  attribute \src "alu.sv:274.21-280.44"
+  cell $logic_or $logic_or$alu.sv:274$1020
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_or$alu.sv:284$1016_Y
-    connect \B $and$alu.sv:290$1019_Y
-    connect \Y $logic_or$alu.sv:284$1020_Y
+    connect \A $logic_or$alu.sv:274$1016_Y
+    connect \B $and$alu.sv:280$1019_Y
+    connect \Y $logic_or$alu.sv:274$1020_Y
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$628
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$628
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$627_Y
+    connect \A $div$alu.sv:38$627_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$628_Y [31:5] $22\res[4:0] }
+    connect \Y { $mod$alu.sv:38$628_Y [31:5] $22\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$631
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$631
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$630_Y
+    connect \A $div$alu.sv:38$630_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$631_Y [31:5] $23\res[4:0] }
+    connect \Y { $mod$alu.sv:38$631_Y [31:5] $23\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$643
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$643
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$642_Y
+    connect \A $div$alu.sv:38$642_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$643_Y [31:5] $27\res[4:0] }
+    connect \Y { $mod$alu.sv:38$643_Y [31:5] $27\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$647
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$647
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$646_Y
+    connect \A $div$alu.sv:38$646_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$647_Y [31:5] $28\res[4:0] }
+    connect \Y { $mod$alu.sv:38$647_Y [31:5] $28\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$652
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$652
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$651_Y
+    connect \A $div$alu.sv:38$651_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$652_Y [31:5] $9\res[4:0] }
+    connect \Y { $mod$alu.sv:38$652_Y [31:5] $9\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$662
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$662
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$661_Y
+    connect \A $div$alu.sv:38$661_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$662_Y [31:5] $12\res[4:0] }
+    connect \Y { $mod$alu.sv:38$662_Y [31:5] $12\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$667
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$667
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$666_Y
+    connect \A $div$alu.sv:38$666_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$667_Y [31:5] $13\res[4:0] }
+    connect \Y { $mod$alu.sv:38$667_Y [31:5] $13\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$673
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$673
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$672_Y
+    connect \A $div$alu.sv:38$672_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$673_Y [31:5] $14\res[4:0] }
+    connect \Y { $mod$alu.sv:38$673_Y [31:5] $14\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$685
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$685
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$684_Y
+    connect \A $div$alu.sv:38$684_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$685_Y [31:5] $17\res[4:0] }
+    connect \Y { $mod$alu.sv:38$685_Y [31:5] $17\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$691
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$691
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$690_Y
+    connect \A $div$alu.sv:38$690_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$691_Y [31:5] $18\res[4:0] }
+    connect \Y { $mod$alu.sv:38$691_Y [31:5] $18\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$698
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$698
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$697_Y
+    connect \A $div$alu.sv:38$697_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$698_Y [31:5] $19\res[4:0] }
+    connect \Y { $mod$alu.sv:38$698_Y [31:5] $19\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$736
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$736
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$735_Y
+    connect \A $div$alu.sv:38$735_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$736_Y [31:5] $29\res[4:0] }
+    connect \Y { $mod$alu.sv:38$736_Y [31:5] $29\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$759
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$759
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$758_Y
+    connect \A $div$alu.sv:38$758_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$759_Y [31:5] $34\res[4:0] }
+    connect \Y { $mod$alu.sv:38$759_Y [31:5] $34\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$786
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$786
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$785_Y
+    connect \A $div$alu.sv:38$785_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$786_Y [31:5] $39\res[4:0] }
+    connect \Y { $mod$alu.sv:38$786_Y [31:5] $39\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$824
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$824
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$823_Y
+    connect \A $div$alu.sv:38$823_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$824_Y [31:5] $49\res[4:0] }
+    connect \Y { $mod$alu.sv:38$824_Y [31:5] $49\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$847
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$847
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$846_Y
+    connect \A $div$alu.sv:38$846_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$847_Y [31:5] $54\res[4:0] }
+    connect \Y { $mod$alu.sv:38$847_Y [31:5] $54\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$874
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$874
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$873_Y
+    connect \A $div$alu.sv:38$873_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$874_Y [31:5] $59\res[4:0] }
+    connect \Y { $mod$alu.sv:38$874_Y [31:5] $59\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$912
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$912
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$911_Y
+    connect \A $div$alu.sv:38$911_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$912_Y [31:5] $69\res[4:0] }
+    connect \Y { $mod$alu.sv:38$912_Y [31:5] $69\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$935
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$935
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$934_Y
+    connect \A $div$alu.sv:38$934_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$935_Y [31:5] $74\res[4:0] }
+    connect \Y { $mod$alu.sv:38$935_Y [31:5] $74\res[4:0] }
   end
-  attribute \src "alu.sv:42.11-42.32"
-  cell $mod $mod$alu.sv:42$962
+  attribute \src "alu.sv:38.11-38.32"
+  cell $mod $mod$alu.sv:38$962
     parameter \A_SIGNED 0
     parameter \A_WIDTH 32
     parameter \B_SIGNED 0
     parameter \B_WIDTH 2
     parameter \Y_WIDTH 32
-    connect \A $div$alu.sv:42$961_Y
+    connect \A $div$alu.sv:38$961_Y
     connect \B 2'10
-    connect \Y { $mod$alu.sv:42$962_Y [31:5] $79\res[4:0] }
+    connect \Y { $mod$alu.sv:38$962_Y [31:5] $79\res[4:0] }
   end
-  attribute \src "alu.sv:138.12-138.25"
-  cell $mul $mul$alu.sv:138$800
+  attribute \src "alu.sv:134.12-134.25"
+  cell $mul $mul$alu.sv:134$800
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -3199,10 +3199,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A $22\res[4:0] [0]
     connect \B $23\res[4:0] [0]
-    connect \Y $eq$alu.sv:140$801_Y
+    connect \Y $eq$alu.sv:136$801_Y
   end
-  attribute \src "alu.sv:138.12-138.25"
-  cell $mul $mul$alu.sv:138$818
+  attribute \src "alu.sv:134.12-134.25"
+  cell $mul $mul$alu.sv:134$818
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -3210,10 +3210,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A $27\res[4:0] [0]
     connect \B $28\res[4:0] [0]
-    connect \Y $eq$alu.sv:140$819_Y
+    connect \Y $eq$alu.sv:136$819_Y
   end
-  attribute \src "alu.sv:138.12-138.25"
-  cell $mul $mul$alu.sv:138$840
+  attribute \src "alu.sv:134.12-134.25"
+  cell $mul $mul$alu.sv:134$840
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -3221,10 +3221,10 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A $12\res[4:0] [0]
     connect \B $13\res[4:0] [0]
-    connect \Y $eq$alu.sv:140$841_Y
+    connect \Y $eq$alu.sv:136$841_Y
   end
-  attribute \src "alu.sv:138.12-138.25"
-  cell $mul $mul$alu.sv:138$866
+  attribute \src "alu.sv:134.12-134.25"
+  cell $mul $mul$alu.sv:134$866
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -3232,34 +3232,34 @@ module \alu
     parameter \Y_WIDTH 1
     connect \A $17\res[4:0] [0]
     connect \B $18\res[4:0] [0]
-    connect \Y $eq$alu.sv:140$867_Y
+    connect \Y $eq$alu.sv:136$867_Y
   end
-  attribute \src "alu.sv:276.20-276.36"
-  cell $not $not$alu.sv:276$980
+  attribute \src "alu.sv:266.20-266.36"
+  cell $not $not$alu.sv:266$980
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 4
     connect \A \op_and
     connect \Y \op_nand
   end
-  attribute \src "alu.sv:400.36-400.48"
-  cell $not $not$alu.sv:400$1146
+  attribute \src "alu.sv:389.36-389.48"
+  cell $not $not$alu.sv:389$1146
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 4
-    connect \A $and$alu.sv:394$1141_Y
-    connect \Y $not$alu.sv:400$1146_Y
+    connect \A $and$alu.sv:383$1141_Y
+    connect \Y $not$alu.sv:389$1146_Y
   end
-  attribute \src "alu.sv:403.36-403.48"
-  cell $not $not$alu.sv:403$1149
+  attribute \src "alu.sv:392.36-392.48"
+  cell $not $not$alu.sv:392$1149
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \Y_WIDTH 4
-    connect \A $or$alu.sv:397$1143_Y
-    connect \Y $not$alu.sv:403$1149_Y
+    connect \A $or$alu.sv:386$1143_Y
+    connect \Y $not$alu.sv:392$1149_Y
   end
-  attribute \src "alu.sv:275.22-275.35"
-  cell $or $or$alu.sv:275$978
+  attribute \src "alu.sv:265.22-265.35"
+  cell $or $or$alu.sv:265$978
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -3269,8 +3269,8 @@ module \alu
     connect \B \f_op2
     connect \Y \op_or
   end
-  attribute \src "alu.sv:397.37-397.46"
-  cell $or $or$alu.sv:397$1143
+  attribute \src "alu.sv:386.37-386.46"
+  cell $or $or$alu.sv:386$1143
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -3278,449 +3278,449 @@ module \alu
     parameter \Y_WIDTH 4
     connect \A \OP1
     connect \B \OP2
-    connect \Y $or$alu.sv:397$1143_Y
+    connect \Y $or$alu.sv:386$1143_Y
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4441
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:311$75_CHECK[0:0]$1025
-    connect \Q $formal$alu.sv:311$75_CHECK
+    connect \D $0$formal$alu.sv:301$75_CHECK[0:0]$1025
+    connect \Q $formal$alu.sv:301$75_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4442
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:311$75_EN[0:0]$1026
-    connect \Q $formal$alu.sv:311$75_EN
+    connect \D $0$formal$alu.sv:301$75_EN[0:0]$1026
+    connect \Q $formal$alu.sv:301$75_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4443
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:312$76_CHECK[0:0]$1027
-    connect \Q $formal$alu.sv:312$76_CHECK
+    connect \D $0$formal$alu.sv:302$76_CHECK[0:0]$1027
+    connect \Q $formal$alu.sv:302$76_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4445
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:313$77_CHECK[0:0]$1029
-    connect \Q $formal$alu.sv:313$77_CHECK
+    connect \D $0$formal$alu.sv:303$77_CHECK[0:0]$1029
+    connect \Q $formal$alu.sv:303$77_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4447
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:317$78_CHECK[0:0]$1031
-    connect \Q $formal$alu.sv:317$78_CHECK
+    connect \D $0$formal$alu.sv:307$78_CHECK[0:0]$1031
+    connect \Q $formal$alu.sv:307$78_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4448
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:317$78_EN[0:0]$1032
-    connect \Q $formal$alu.sv:317$78_EN
+    connect \D $0$formal$alu.sv:307$78_EN[0:0]$1032
+    connect \Q $formal$alu.sv:307$78_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4449
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:318$79_CHECK[0:0]$1033
-    connect \Q $formal$alu.sv:318$79_CHECK
+    connect \D $0$formal$alu.sv:308$79_CHECK[0:0]$1033
+    connect \Q $formal$alu.sv:308$79_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4451
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:323$80_CHECK[0:0]$1035
-    connect \Q $formal$alu.sv:323$80_CHECK
+    connect \D $0$formal$alu.sv:313$80_CHECK[0:0]$1035
+    connect \Q $formal$alu.sv:313$80_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4452
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:323$80_EN[0:0]$1036
-    connect \Q $formal$alu.sv:323$80_EN
+    connect \D $0$formal$alu.sv:313$80_EN[0:0]$1036
+    connect \Q $formal$alu.sv:313$80_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4453
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:326$81_CHECK[0:0]$1037
-    connect \Q $formal$alu.sv:326$81_CHECK
+    connect \D $0$formal$alu.sv:316$81_CHECK[0:0]$1037
+    connect \Q $formal$alu.sv:316$81_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4454
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:326$81_EN[0:0]$1038
-    connect \Q $formal$alu.sv:326$81_EN
+    connect \D $0$formal$alu.sv:316$81_EN[0:0]$1038
+    connect \Q $formal$alu.sv:316$81_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4455
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:329$82_CHECK[0:0]$1039
-    connect \Q $formal$alu.sv:329$82_CHECK
+    connect \D $0$formal$alu.sv:319$82_CHECK[0:0]$1039
+    connect \Q $formal$alu.sv:319$82_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4456
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:329$82_EN[0:0]$1040
-    connect \Q $formal$alu.sv:329$82_EN
+    connect \D $0$formal$alu.sv:319$82_EN[0:0]$1040
+    connect \Q $formal$alu.sv:319$82_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4457
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:332$83_CHECK[0:0]$1041
-    connect \Q $formal$alu.sv:332$83_CHECK
+    connect \D $0$formal$alu.sv:322$83_CHECK[0:0]$1041
+    connect \Q $formal$alu.sv:322$83_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4458
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:332$83_EN[0:0]$1042
-    connect \Q $formal$alu.sv:332$83_EN
+    connect \D $0$formal$alu.sv:322$83_EN[0:0]$1042
+    connect \Q $formal$alu.sv:322$83_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4459
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:335$84_CHECK[0:0]$1043
-    connect \Q $formal$alu.sv:335$84_CHECK
+    connect \D $0$formal$alu.sv:325$84_CHECK[0:0]$1043
+    connect \Q $formal$alu.sv:325$84_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4460
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:335$84_EN[0:0]$1044
-    connect \Q $formal$alu.sv:335$84_EN
+    connect \D $0$formal$alu.sv:325$84_EN[0:0]$1044
+    connect \Q $formal$alu.sv:325$84_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4461
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:338$85_CHECK[0:0]$1045
-    connect \Q $formal$alu.sv:338$85_CHECK
+    connect \D $0$formal$alu.sv:328$85_CHECK[0:0]$1045
+    connect \Q $formal$alu.sv:328$85_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4462
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:338$85_EN[0:0]$1046
-    connect \Q $formal$alu.sv:338$85_EN
+    connect \D $0$formal$alu.sv:328$85_EN[0:0]$1046
+    connect \Q $formal$alu.sv:328$85_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4463
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:341$86_CHECK[0:0]$1047
-    connect \Q $formal$alu.sv:341$86_CHECK
+    connect \D $0$formal$alu.sv:331$86_CHECK[0:0]$1047
+    connect \Q $formal$alu.sv:331$86_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4464
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:341$86_EN[0:0]$1048
-    connect \Q $formal$alu.sv:341$86_EN
+    connect \D $0$formal$alu.sv:331$86_EN[0:0]$1048
+    connect \Q $formal$alu.sv:331$86_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4465
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:344$87_CHECK[0:0]$1049
-    connect \Q $formal$alu.sv:344$87_CHECK
+    connect \D $0$formal$alu.sv:334$87_CHECK[0:0]$1049
+    connect \Q $formal$alu.sv:334$87_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4466
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:344$87_EN[0:0]$1050
-    connect \Q $formal$alu.sv:344$87_EN
+    connect \D $0$formal$alu.sv:334$87_EN[0:0]$1050
+    connect \Q $formal$alu.sv:334$87_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4467
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:352$88_CHECK[0:0]$1051
-    connect \Q $formal$alu.sv:352$88_CHECK
+    connect \D $0$formal$alu.sv:341$88_CHECK[0:0]$1051
+    connect \Q $formal$alu.sv:341$88_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4468
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D 1'1
-    connect \Q $formal$alu.sv:352$88_EN
+    connect \Q $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4469
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:353$89_CHECK[0:0]$1053
-    connect \Q $formal$alu.sv:353$89_CHECK
+    connect \D $0$formal$alu.sv:342$89_CHECK[0:0]$1053
+    connect \Q $formal$alu.sv:342$89_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4471
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:355$90_CHECK[0:0]$1055
-    connect \Q $formal$alu.sv:355$90_CHECK
+    connect \D $0$formal$alu.sv:344$90_CHECK[0:0]$1055
+    connect \Q $formal$alu.sv:344$90_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4473
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:356$91_CHECK[0:0]$1057
-    connect \Q $formal$alu.sv:356$91_CHECK
+    connect \D $0$formal$alu.sv:345$91_CHECK[0:0]$1057
+    connect \Q $formal$alu.sv:345$91_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4475
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:357$92_CHECK[0:0]$1059
-    connect \Q $formal$alu.sv:357$92_CHECK
+    connect \D $0$formal$alu.sv:346$92_CHECK[0:0]$1059
+    connect \Q $formal$alu.sv:346$92_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4477
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:358$93_CHECK[0:0]$1061
-    connect \Q $formal$alu.sv:358$93_CHECK
+    connect \D $0$formal$alu.sv:347$93_CHECK[0:0]$1061
+    connect \Q $formal$alu.sv:347$93_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4479
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:361$94_CHECK[0:0]$1063
-    connect \Q $formal$alu.sv:361$94_CHECK
+    connect \D $0$formal$alu.sv:350$94_CHECK[0:0]$1063
+    connect \Q $formal$alu.sv:350$94_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4481
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:363$95_CHECK[0:0]$1065
-    connect \Q $formal$alu.sv:363$95_CHECK
+    connect \D $0$formal$alu.sv:352$95_CHECK[0:0]$1065
+    connect \Q $formal$alu.sv:352$95_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4483
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:365$96_CHECK[0:0]$1067
-    connect \Q $formal$alu.sv:365$96_CHECK
+    connect \D $0$formal$alu.sv:354$96_CHECK[0:0]$1067
+    connect \Q $formal$alu.sv:354$96_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4485
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D \carry
-    connect \Q $formal$alu.sv:369$97_CHECK
+    connect \Q $formal$alu.sv:358$97_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4487
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:370$98_CHECK[0:0]$1071
-    connect \Q $formal$alu.sv:370$98_CHECK
+    connect \D $0$formal$alu.sv:359$98_CHECK[0:0]$1071
+    connect \Q $formal$alu.sv:359$98_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4489
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D \zero
-    connect \Q $formal$alu.sv:373$99_CHECK
+    connect \Q $formal$alu.sv:362$99_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4491
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:374$100_CHECK[0:0]$1075
-    connect \Q $formal$alu.sv:374$100_CHECK
+    connect \D $0$formal$alu.sv:363$100_CHECK[0:0]$1075
+    connect \Q $formal$alu.sv:363$100_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4493
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:377$101_CHECK[0:0]$1077
-    connect \Q $formal$alu.sv:377$101_CHECK
+    connect \D $0$formal$alu.sv:366$101_CHECK[0:0]$1077
+    connect \Q $formal$alu.sv:366$101_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4495
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:378$102_CHECK[0:0]$1079
-    connect \Q $formal$alu.sv:378$102_CHECK
+    connect \D $0$formal$alu.sv:367$102_CHECK[0:0]$1079
+    connect \Q $formal$alu.sv:367$102_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4497
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:382$103_CHECK[0:0]$1081
-    connect \Q $formal$alu.sv:382$103_CHECK
+    connect \D $0$formal$alu.sv:371$103_CHECK[0:0]$1081
+    connect \Q $formal$alu.sv:371$103_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4498
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:382$103_EN[0:0]$1082
-    connect \Q $formal$alu.sv:382$103_EN
+    connect \D $0$formal$alu.sv:371$103_EN[0:0]$1082
+    connect \Q $formal$alu.sv:371$103_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4499
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:385$104_CHECK[0:0]$1083
-    connect \Q $formal$alu.sv:385$104_CHECK
+    connect \D $0$formal$alu.sv:374$104_CHECK[0:0]$1083
+    connect \Q $formal$alu.sv:374$104_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4500
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:385$104_EN[0:0]$1084
-    connect \Q $formal$alu.sv:385$104_EN
+    connect \D $0$formal$alu.sv:374$104_EN[0:0]$1084
+    connect \Q $formal$alu.sv:374$104_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4501
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:388$105_CHECK[0:0]$1085
-    connect \Q $formal$alu.sv:388$105_CHECK
+    connect \D $0$formal$alu.sv:377$105_CHECK[0:0]$1085
+    connect \Q $formal$alu.sv:377$105_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4502
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:388$105_EN[0:0]$1086
-    connect \Q $formal$alu.sv:388$105_EN
+    connect \D $0$formal$alu.sv:377$105_EN[0:0]$1086
+    connect \Q $formal$alu.sv:377$105_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4503
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:391$106_CHECK[0:0]$1087
-    connect \Q $formal$alu.sv:391$106_CHECK
+    connect \D $0$formal$alu.sv:380$106_CHECK[0:0]$1087
+    connect \Q $formal$alu.sv:380$106_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4504
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:391$106_EN[0:0]$1088
-    connect \Q $formal$alu.sv:391$106_EN
+    connect \D $0$formal$alu.sv:380$106_EN[0:0]$1088
+    connect \Q $formal$alu.sv:380$106_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4505
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:394$107_CHECK[0:0]$1089
-    connect \Q $formal$alu.sv:394$107_CHECK
+    connect \D $0$formal$alu.sv:383$107_CHECK[0:0]$1089
+    connect \Q $formal$alu.sv:383$107_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4506
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:394$107_EN[0:0]$1090
-    connect \Q $formal$alu.sv:394$107_EN
+    connect \D $0$formal$alu.sv:383$107_EN[0:0]$1090
+    connect \Q $formal$alu.sv:383$107_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4507
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:397$108_CHECK[0:0]$1091
-    connect \Q $formal$alu.sv:397$108_CHECK
+    connect \D $0$formal$alu.sv:386$108_CHECK[0:0]$1091
+    connect \Q $formal$alu.sv:386$108_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4508
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:397$108_EN[0:0]$1092
-    connect \Q $formal$alu.sv:397$108_EN
+    connect \D $0$formal$alu.sv:386$108_EN[0:0]$1092
+    connect \Q $formal$alu.sv:386$108_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4509
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:400$109_CHECK[0:0]$1093
-    connect \Q $formal$alu.sv:400$109_CHECK
+    connect \D $0$formal$alu.sv:389$109_CHECK[0:0]$1093
+    connect \Q $formal$alu.sv:389$109_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4510
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:400$109_EN[0:0]$1094
-    connect \Q $formal$alu.sv:400$109_EN
+    connect \D $0$formal$alu.sv:389$109_EN[0:0]$1094
+    connect \Q $formal$alu.sv:389$109_EN
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4511
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:403$110_CHECK[0:0]$1095
-    connect \Q $formal$alu.sv:403$110_CHECK
+    connect \D $0$formal$alu.sv:392$110_CHECK[0:0]$1095
+    connect \Q $formal$alu.sv:392$110_CHECK
   end
-  attribute \src "alu.sv:308.3-406.6"
+  attribute \src "alu.sv:298.3-395.6"
   cell $dff $procdff$4512
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$alu.sv:403$110_EN[0:0]$1096
-    connect \Q $formal$alu.sv:403$110_EN
+    connect \D $0$formal$alu.sv:392$110_EN[0:0]$1096
+    connect \Q $formal$alu.sv:392$110_EN
   end
-  attribute \src "alu.sv:293.3-305.6"
+  attribute \src "alu.sv:283.3-295.6"
   cell $adff $procdff$4513
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 4'0000
@@ -3731,7 +3731,7 @@ module \alu
     connect \D \OP1
     connect \Q \f_op1
   end
-  attribute \src "alu.sv:293.3-305.6"
+  attribute \src "alu.sv:283.3-295.6"
   cell $adff $procdff$4514
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 4'0000
@@ -3742,7 +3742,7 @@ module \alu
     connect \D \OP2
     connect \Q \f_op2
   end
-  attribute \src "alu.sv:293.3-305.6"
+  attribute \src "alu.sv:283.3-295.6"
   cell $adff $procdff$4515
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 3'000
@@ -3753,7 +3753,7 @@ module \alu
     connect \D \OPCODE
     connect \Q \f_opcode
   end
-  attribute \src "alu.sv:293.3-305.6"
+  attribute \src "alu.sv:283.3-295.6"
   cell $adff $procdff$4516
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 1'0
@@ -3765,7 +3765,7 @@ module \alu
     connect \Q \f_past_valid
   end
   attribute \always_ff 1
-  attribute \src "alu.sv:233.2-243.5"
+  attribute \src "alu.sv:229.2-239.5"
   cell $adff $procdff$4517
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 4'0000
@@ -3777,7 +3777,7 @@ module \alu
     connect \Q \result
   end
   attribute \always_ff 1
-  attribute \src "alu.sv:233.2-243.5"
+  attribute \src "alu.sv:229.2-239.5"
   cell $adff $procdff$4518
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 1'0
@@ -3789,7 +3789,7 @@ module \alu
     connect \Q \zero
   end
   attribute \always_ff 1
-  attribute \src "alu.sv:233.2-243.5"
+  attribute \src "alu.sv:229.2-239.5"
   cell $adff $procdff$4519
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 1'0
@@ -3801,42 +3801,42 @@ module \alu
     connect \Q \carry
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1225
     parameter \WIDTH 1
     connect \A 1'1
     connect \B 1'0
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:311$75_EN[0:0]$1026
+    connect \Y $0$formal$alu.sv:301$75_EN[0:0]$1026
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1228
     parameter \WIDTH 1
-    connect \A $0$formal$alu.sv:370$98_CHECK[0:0]$1071
+    connect \A $0$formal$alu.sv:359$98_CHECK[0:0]$1071
     connect \B 1'x
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:311$75_CHECK[0:0]$1025
+    connect \Y $0$formal$alu.sv:301$75_CHECK[0:0]$1025
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1234
     parameter \WIDTH 1
-    connect \A $0$formal$alu.sv:374$100_CHECK[0:0]$1075
+    connect \A $0$formal$alu.sv:363$100_CHECK[0:0]$1075
     connect \B 1'x
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:312$76_CHECK[0:0]$1027
+    connect \Y $0$formal$alu.sv:302$76_CHECK[0:0]$1027
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1240
     parameter \WIDTH 1
-    connect \A $0$formal$alu.sv:377$101_CHECK[0:0]$1077
+    connect \A $0$formal$alu.sv:366$101_CHECK[0:0]$1077
     connect \B 1'x
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:313$77_CHECK[0:0]$1029
+    connect \Y $0$formal$alu.sv:303$77_CHECK[0:0]$1029
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1242
     parameter \WIDTH 1
     connect \A 1'0
@@ -3845,58 +3845,58 @@ module \alu
     connect \Y $procmux$1242_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1245
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$1242_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:317$78_EN[0:0]$1032
+    connect \Y $0$formal$alu.sv:307$78_EN[0:0]$1032
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1247
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $logic_not$alu.sv:317$1101_Y
+    connect \B $logic_not$alu.sv:307$1101_Y
     connect \S \f_past_valid
     connect \Y $procmux$1247_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1250
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1247_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:317$78_CHECK[0:0]$1031
+    connect \Y $0$formal$alu.sv:307$78_CHECK[0:0]$1031
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1257
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $logic_not$alu.sv:318$1102_Y
+    connect \B $logic_not$alu.sv:308$1102_Y
     connect \S \f_past_valid
     connect \Y $procmux$1257_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1260
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1257_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:318$79_CHECK[0:0]$1033
+    connect \Y $0$formal$alu.sv:308$79_CHECK[0:0]$1033
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1269
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:279$982_Y
+    connect \S $eq$alu.sv:269$982_Y
     connect \Y $procmux$1269_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1271
     parameter \WIDTH 1
     connect \A 1'0
@@ -3905,24 +3905,24 @@ module \alu
     connect \Y $procmux$1271_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1274
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$1271_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:323$80_EN[0:0]$1036
+    connect \Y $0$formal$alu.sv:313$80_EN[0:0]$1036
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1283
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:323$1103_Y
-    connect \S $eq$alu.sv:279$982_Y
+    connect \B $eq$alu.sv:313$1103_Y
+    connect \S $eq$alu.sv:269$982_Y
     connect \Y $procmux$1283_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1285
     parameter \WIDTH 1
     connect \A 1'x
@@ -3931,24 +3931,24 @@ module \alu
     connect \Y $procmux$1285_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1288
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1285_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:323$80_CHECK[0:0]$1035
+    connect \Y $0$formal$alu.sv:313$80_CHECK[0:0]$1035
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1296
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:280$984_Y
+    connect \S $eq$alu.sv:270$984_Y
     connect \Y $procmux$1296_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1298
     parameter \WIDTH 1
     connect \A 1'0
@@ -3957,24 +3957,24 @@ module \alu
     connect \Y $procmux$1298_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1301
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$1298_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:326$81_EN[0:0]$1038
+    connect \Y $0$formal$alu.sv:316$81_EN[0:0]$1038
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1309
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:326$1104_Y
-    connect \S $eq$alu.sv:280$984_Y
+    connect \B $eq$alu.sv:316$1104_Y
+    connect \S $eq$alu.sv:270$984_Y
     connect \Y $procmux$1309_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1311
     parameter \WIDTH 1
     connect \A 1'x
@@ -3983,24 +3983,24 @@ module \alu
     connect \Y $procmux$1311_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1314
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1311_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:326$81_CHECK[0:0]$1037
+    connect \Y $0$formal$alu.sv:316$81_CHECK[0:0]$1037
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1321
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:281$987_Y
+    connect \S $eq$alu.sv:271$987_Y
     connect \Y $procmux$1321_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1323
     parameter \WIDTH 1
     connect \A 1'0
@@ -4009,24 +4009,24 @@ module \alu
     connect \Y $procmux$1323_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1326
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$1323_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:329$82_EN[0:0]$1040
+    connect \Y $0$formal$alu.sv:319$82_EN[0:0]$1040
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1333
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:329$1105_Y
-    connect \S $eq$alu.sv:281$987_Y
+    connect \B $eq$alu.sv:319$1105_Y
+    connect \S $eq$alu.sv:271$987_Y
     connect \Y $procmux$1333_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1335
     parameter \WIDTH 1
     connect \A 1'x
@@ -4035,24 +4035,24 @@ module \alu
     connect \Y $procmux$1335_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1338
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1335_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:329$82_CHECK[0:0]$1039
+    connect \Y $0$formal$alu.sv:319$82_CHECK[0:0]$1039
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1344
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:282$990_Y
+    connect \S $eq$alu.sv:272$990_Y
     connect \Y $procmux$1344_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1346
     parameter \WIDTH 1
     connect \A 1'0
@@ -4061,24 +4061,24 @@ module \alu
     connect \Y $procmux$1346_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1349
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$1346_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:332$83_EN[0:0]$1042
+    connect \Y $0$formal$alu.sv:322$83_EN[0:0]$1042
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1355
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:332$1106_Y
-    connect \S $eq$alu.sv:282$990_Y
+    connect \B $eq$alu.sv:322$1106_Y
+    connect \S $eq$alu.sv:272$990_Y
     connect \Y $procmux$1355_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1357
     parameter \WIDTH 1
     connect \A 1'x
@@ -4087,24 +4087,24 @@ module \alu
     connect \Y $procmux$1357_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1360
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1357_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:332$83_CHECK[0:0]$1041
+    connect \Y $0$formal$alu.sv:322$83_CHECK[0:0]$1041
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1365
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:287$1005_Y
+    connect \S $eq$alu.sv:277$1005_Y
     connect \Y $procmux$1365_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1367
     parameter \WIDTH 1
     connect \A 1'0
@@ -4113,24 +4113,24 @@ module \alu
     connect \Y $procmux$1367_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1370
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$1367_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:335$84_EN[0:0]$1044
+    connect \Y $0$formal$alu.sv:325$84_EN[0:0]$1044
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1375
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:335$1107_Y
-    connect \S $eq$alu.sv:287$1005_Y
+    connect \B $eq$alu.sv:325$1107_Y
+    connect \S $eq$alu.sv:277$1005_Y
     connect \Y $procmux$1375_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1377
     parameter \WIDTH 1
     connect \A 1'x
@@ -4139,24 +4139,24 @@ module \alu
     connect \Y $procmux$1377_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1380
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1377_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:335$84_CHECK[0:0]$1043
+    connect \Y $0$formal$alu.sv:325$84_CHECK[0:0]$1043
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1384
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:288$1009_Y
+    connect \S $eq$alu.sv:278$1009_Y
     connect \Y $procmux$1384_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1386
     parameter \WIDTH 1
     connect \A 1'0
@@ -4165,24 +4165,24 @@ module \alu
     connect \Y $procmux$1386_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1389
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$1386_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:338$85_EN[0:0]$1046
+    connect \Y $0$formal$alu.sv:328$85_EN[0:0]$1046
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1393
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:338$1108_Y
-    connect \S $eq$alu.sv:288$1009_Y
+    connect \B $eq$alu.sv:328$1108_Y
+    connect \S $eq$alu.sv:278$1009_Y
     connect \Y $procmux$1393_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1395
     parameter \WIDTH 1
     connect \A 1'x
@@ -4191,24 +4191,24 @@ module \alu
     connect \Y $procmux$1395_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1398
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1395_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:338$85_CHECK[0:0]$1045
+    connect \Y $0$formal$alu.sv:328$85_CHECK[0:0]$1045
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1401
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:289$1013_Y
+    connect \S $eq$alu.sv:279$1013_Y
     connect \Y $procmux$1401_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1403
     parameter \WIDTH 1
     connect \A 1'0
@@ -4217,24 +4217,24 @@ module \alu
     connect \Y $procmux$1403_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1406
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$1403_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:341$86_EN[0:0]$1048
+    connect \Y $0$formal$alu.sv:331$86_EN[0:0]$1048
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1409
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:341$1109_Y
-    connect \S $eq$alu.sv:289$1013_Y
+    connect \B $eq$alu.sv:331$1109_Y
+    connect \S $eq$alu.sv:279$1013_Y
     connect \Y $procmux$1409_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1411
     parameter \WIDTH 1
     connect \A 1'x
@@ -4243,24 +4243,24 @@ module \alu
     connect \Y $procmux$1411_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1414
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1411_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:341$86_CHECK[0:0]$1047
+    connect \Y $0$formal$alu.sv:331$86_CHECK[0:0]$1047
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1416
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:290$1017_Y
+    connect \S $eq$alu.sv:280$1017_Y
     connect \Y $procmux$1416_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1418
     parameter \WIDTH 1
     connect \A 1'0
@@ -4269,24 +4269,24 @@ module \alu
     connect \Y $procmux$1418_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1421
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$1418_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:344$87_EN[0:0]$1050
+    connect \Y $0$formal$alu.sv:334$87_EN[0:0]$1050
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:321.6-346.13"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:311.6-336.13"
   cell $mux $procmux$1423
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:344$1110_Y
-    connect \S $eq$alu.sv:290$1017_Y
+    connect \B $eq$alu.sv:334$1110_Y
+    connect \S $eq$alu.sv:280$1017_Y
     connect \Y $procmux$1423_Y
   end
-  attribute \src "alu.sv:316.9-316.21|alu.sv:316.5-347.8"
+  attribute \src "alu.sv:306.9-306.21|alu.sv:306.5-337.8"
   cell $mux $procmux$1425
     parameter \WIDTH 1
     connect \A 1'x
@@ -4295,43 +4295,43 @@ module \alu
     connect \Y $procmux$1425_Y
   end
   attribute \full_case 1
-  attribute \src "alu.sv:310.8-310.13|alu.sv:310.4-348.7"
+  attribute \src "alu.sv:300.8-300.13|alu.sv:300.4-338.7"
   cell $mux $procmux$1428
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$1425_Y
     connect \S \rstn
-    connect \Y $0$formal$alu.sv:344$87_CHECK[0:0]$1049
+    connect \Y $0$formal$alu.sv:334$87_CHECK[0:0]$1049
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1437
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $0$formal$alu.sv:352$88_CHECK[0:0]$1051
-    connect \Y $0$formal$alu.sv:382$103_EN[0:0]$1082
+    connect \S $0$formal$alu.sv:341$88_CHECK[0:0]$1051
+    connect \Y $0$formal$alu.sv:371$103_EN[0:0]$1082
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1446
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:382$1135_Y
-    connect \S $0$formal$alu.sv:352$88_CHECK[0:0]$1051
-    connect \Y $0$formal$alu.sv:382$103_CHECK[0:0]$1081
+    connect \B $eq$alu.sv:371$1135_Y
+    connect \S $0$formal$alu.sv:341$88_CHECK[0:0]$1051
+    connect \Y $0$formal$alu.sv:371$103_CHECK[0:0]$1081
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1454
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
     connect \S $procmux$1455_CMP
-    connect \Y $0$formal$alu.sv:385$104_EN[0:0]$1084
+    connect \Y $0$formal$alu.sv:374$104_EN[0:0]$1084
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $eq $procmux$1455_CMP0
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
@@ -4343,43 +4343,43 @@ module \alu
     connect \Y $procmux$1455_CMP
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1462
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:385$1137_Y
+    connect \B $eq$alu.sv:374$1137_Y
     connect \S $procmux$1455_CMP
-    connect \Y $0$formal$alu.sv:385$104_CHECK[0:0]$1083
+    connect \Y $0$formal$alu.sv:374$104_CHECK[0:0]$1083
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1469
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:363$1122_Y
-    connect \Y $0$formal$alu.sv:388$105_EN[0:0]$1086
+    connect \S $eq$alu.sv:352$1122_Y
+    connect \Y $0$formal$alu.sv:377$105_EN[0:0]$1086
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1476
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:329$1105_Y
-    connect \S $eq$alu.sv:363$1122_Y
-    connect \Y $0$formal$alu.sv:388$105_CHECK[0:0]$1085
+    connect \B $eq$alu.sv:319$1105_Y
+    connect \S $eq$alu.sv:352$1122_Y
+    connect \Y $0$formal$alu.sv:377$105_CHECK[0:0]$1085
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1482
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
     connect \S $procmux$1483_CMP
-    connect \Y $0$formal$alu.sv:391$106_EN[0:0]$1088
+    connect \Y $0$formal$alu.sv:380$106_EN[0:0]$1088
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $eq $procmux$1483_CMP0
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
@@ -4391,25 +4391,25 @@ module \alu
     connect \Y $procmux$1483_CMP
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1488
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:391$1140_Y
+    connect \B $eq$alu.sv:380$1140_Y
     connect \S $procmux$1483_CMP
-    connect \Y $0$formal$alu.sv:391$106_CHECK[0:0]$1087
+    connect \Y $0$formal$alu.sv:380$106_CHECK[0:0]$1087
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1493
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
     connect \S $procmux$1494_CMP
-    connect \Y $0$formal$alu.sv:394$107_EN[0:0]$1090
+    connect \Y $0$formal$alu.sv:383$107_EN[0:0]$1090
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $eq $procmux$1494_CMP0
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
@@ -4421,25 +4421,25 @@ module \alu
     connect \Y $procmux$1494_CMP
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1498
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:394$1142_Y
+    connect \B $eq$alu.sv:383$1142_Y
     connect \S $procmux$1494_CMP
-    connect \Y $0$formal$alu.sv:394$107_CHECK[0:0]$1089
+    connect \Y $0$formal$alu.sv:383$107_CHECK[0:0]$1089
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1502
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
     connect \S $procmux$1503_CMP
-    connect \Y $0$formal$alu.sv:397$108_EN[0:0]$1092
+    connect \Y $0$formal$alu.sv:386$108_EN[0:0]$1092
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $eq $procmux$1503_CMP0
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
@@ -4451,25 +4451,25 @@ module \alu
     connect \Y $procmux$1503_CMP
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1506
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:397$1144_Y
+    connect \B $eq$alu.sv:386$1144_Y
     connect \S $procmux$1503_CMP
-    connect \Y $0$formal$alu.sv:397$108_CHECK[0:0]$1091
+    connect \Y $0$formal$alu.sv:386$108_CHECK[0:0]$1091
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1509
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
     connect \S $procmux$1510_CMP
-    connect \Y $0$formal$alu.sv:400$109_EN[0:0]$1094
+    connect \Y $0$formal$alu.sv:389$109_EN[0:0]$1094
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $eq $procmux$1510_CMP0
     parameter \A_SIGNED 0
     parameter \A_WIDTH 3
@@ -4481,197 +4481,197 @@ module \alu
     connect \Y $procmux$1510_CMP
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1512
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:400$1147_Y
+    connect \B $eq$alu.sv:389$1147_Y
     connect \S $procmux$1510_CMP
-    connect \Y $0$formal$alu.sv:400$109_CHECK[0:0]$1093
+    connect \Y $0$formal$alu.sv:389$109_CHECK[0:0]$1093
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1514
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $0$formal$alu.sv:353$89_CHECK[0:0]$1053
-    connect \Y $0$formal$alu.sv:403$110_EN[0:0]$1096
+    connect \S $0$formal$alu.sv:342$89_CHECK[0:0]$1053
+    connect \Y $0$formal$alu.sv:392$110_EN[0:0]$1096
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:380.4-405.11"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:369.4-394.11"
   cell $mux $procmux$1516
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $eq$alu.sv:403$1150_Y
-    connect \S $0$formal$alu.sv:353$89_CHECK[0:0]$1053
-    connect \Y $0$formal$alu.sv:403$110_CHECK[0:0]$1095
+    connect \B $eq$alu.sv:392$1150_Y
+    connect \S $0$formal$alu.sv:342$89_CHECK[0:0]$1053
+    connect \Y $0$formal$alu.sv:392$110_CHECK[0:0]$1095
   end
   attribute \full_case 1
-  attribute \src "alu.sv:221.7-221.23|alu.sv:221.3-225.6"
+  attribute \src "alu.sv:217.7-217.23|alu.sv:217.3-221.6"
   cell $mux $procmux$1519
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:221$970_Y
+    connect \S $eq$alu.sv:217$970_Y
     connect \Y \ZERO_next
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1530
     parameter \WIDTH 5
     connect \A $81\res[4:0]
     connect \B $75\res[4:0]
-    connect \S $eq$alu.sv:61$966_Y
+    connect \S $eq$alu.sv:57$966_Y
     connect \Y $80\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1558
     parameter \WIDTH 5
     connect \A $76\res[4:0]
     connect \B $70\res[4:0]
-    connect \S $eq$alu.sv:61$938_Y
+    connect \S $eq$alu.sv:57$938_Y
     connect \Y $75\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1586
     parameter \WIDTH 5
     connect \A $71\res[4:0]
     connect \B { 4'0000 $65\res[4:0] }
-    connect \S $eq$alu.sv:61$914_Y
+    connect \S $eq$alu.sv:57$914_Y
     connect \Y $70\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1614
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:65$895_Y
+    connect \S $eq$alu.sv:61$895_Y
     connect \Y $65\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1644
     parameter \WIDTH 5
     connect \A $61\res[4:0]
     connect \B $55\res[4:0]
-    connect \S $eq$alu.sv:61$878_Y
+    connect \S $eq$alu.sv:57$878_Y
     connect \Y $60\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1677
     parameter \WIDTH 5
     connect \A $56\res[4:0]
     connect \B $50\res[4:0]
-    connect \S $eq$alu.sv:61$850_Y
+    connect \S $eq$alu.sv:57$850_Y
     connect \Y $55\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1710
     parameter \WIDTH 5
     connect \A $51\res[4:0]
     connect \B { 4'0000 $45\res[4:0] }
-    connect \S $eq$alu.sv:61$826_Y
+    connect \S $eq$alu.sv:57$826_Y
     connect \Y $50\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1743
     parameter \WIDTH 1
     connect \A 1'1
     connect \B 1'0
-    connect \S $eq$alu.sv:140$801_Y
+    connect \S $eq$alu.sv:136$801_Y
     connect \Y $45\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1778
     parameter \WIDTH 5
     connect \A $41\res[4:0]
     connect \B $35\res[4:0]
-    connect \S $eq$alu.sv:61$790_Y
+    connect \S $eq$alu.sv:57$790_Y
     connect \Y $40\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1816
     parameter \WIDTH 5
     connect \A $36\res[4:0]
     connect \B $30\res[4:0]
-    connect \S $eq$alu.sv:61$762_Y
+    connect \S $eq$alu.sv:57$762_Y
     connect \Y $35\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1854
     parameter \WIDTH 5
     connect \A $31\res[4:0]
     connect \B { 4'0000 $25\res[4:0] }
-    connect \S $eq$alu.sv:61$738_Y
+    connect \S $eq$alu.sv:57$738_Y
     connect \Y $30\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1892
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:65$719_Y
+    connect \S $eq$alu.sv:61$719_Y
     connect \Y $25\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1932
     parameter \WIDTH 5
     connect \A $21\res[4:0]
     connect \B $15\res[4:0]
-    connect \S $eq$alu.sv:61$702_Y
+    connect \S $eq$alu.sv:57$702_Y
     connect \Y $20\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$1975
     parameter \WIDTH 5
     connect \A $16\res[4:0]
     connect \B $10\res[4:0]
-    connect \S $eq$alu.sv:61$676_Y
+    connect \S $eq$alu.sv:57$676_Y
     connect \Y $15\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$2018
     parameter \WIDTH 5
     connect \A $11\res[4:0]
     connect \B { 4'0000 $5\res[4:0] }
-    connect \S $eq$alu.sv:61$654_Y
+    connect \S $eq$alu.sv:57$654_Y
     connect \Y $10\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:61.7-61.27|alu.sv:61.3-72.6"
+  attribute \src "alu.sv:57.7-57.27|alu.sv:57.3-68.6"
   cell $mux $procmux$2061
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:140$801_Y
+    connect \S $eq$alu.sv:136$801_Y
     connect \Y $5\res[4:0]
   end
   attribute \full_case 1
-  attribute \src "alu.sv:0.0-0.0|alu.sv:179.3-217.10"
+  attribute \src "alu.sv:0.0-0.0|alu.sv:175.3-213.10"
   cell $pmux $procmux$2089
     parameter \S_WIDTH 8
     parameter \WIDTH 5
     connect \A 5'x
-    connect \B { $add$alu.sv:181$622_Y $sub$alu.sv:184$623_Y $add$alu.sv:187$624_Y $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [3:0] $20\res[4:0] $40\res[4:0] $60\res[4:0] $80\res[4:0] }
-    connect \S { $0$formal$alu.sv:352$88_CHECK[0:0]$1051 $procmux$1455_CMP $eq$alu.sv:363$1122_Y $procmux$1483_CMP $procmux$1494_CMP $procmux$1503_CMP $procmux$1510_CMP $0$formal$alu.sv:353$89_CHECK[0:0]$1053 }
+    connect \B { $add$alu.sv:177$622_Y $sub$alu.sv:180$623_Y $add$alu.sv:183$624_Y $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [3:0] $20\res[4:0] $40\res[4:0] $60\res[4:0] $80\res[4:0] }
+    connect \S { $0$formal$alu.sv:341$88_CHECK[0:0]$1051 $procmux$1455_CMP $eq$alu.sv:352$1122_Y $procmux$1483_CMP $procmux$1494_CMP $procmux$1503_CMP $procmux$1510_CMP $0$formal$alu.sv:342$89_CHECK[0:0]$1053 }
     connect \Y \result_next
   end
-  attribute \src "alu.sv:184.19-184.32"
-  cell $sub $sub$alu.sv:184$623
+  attribute \src "alu.sv:180.19-180.32"
+  cell $sub $sub$alu.sv:180$623
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -4679,10 +4679,10 @@ module \alu
     parameter \Y_WIDTH 5
     connect \A \OP1
     connect \B \OP2
-    connect \Y $sub$alu.sv:184$623_Y
+    connect \Y $sub$alu.sv:180$623_Y
   end
-  attribute \src "alu.sv:190.19-190.28"
-  cell $sub $sub$alu.sv:190$625
+  attribute \src "alu.sv:186.19-186.28"
+  cell $sub $sub$alu.sv:186$625
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -4690,10 +4690,10 @@ module \alu
     parameter \Y_WIDTH 5
     connect \A \OP1
     connect \B 1'1
-    connect \Y { $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [3:0] }
+    connect \Y { $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [3:0] }
   end
-  attribute \src "alu.sv:271.22-271.35"
-  cell $sub $sub$alu.sv:271$974
+  attribute \src "alu.sv:261.22-261.35"
+  cell $sub $sub$alu.sv:261$974
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -4703,8 +4703,8 @@ module \alu
     connect \B \f_op2
     connect \Y \op_sub
   end
-  attribute \src "alu.sv:273.22-273.31"
-  cell $sub $sub$alu.sv:273$976
+  attribute \src "alu.sv:263.22-263.31"
+  cell $sub $sub$alu.sv:263$976
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -4714,8 +4714,8 @@ module \alu
     connect \B 1'1
     connect \Y \op_decr
   end
-  attribute \src "alu.sv:385.38-385.47"
-  cell $sub $sub$alu.sv:385$1136
+  attribute \src "alu.sv:374.38-374.47"
+  cell $sub $sub$alu.sv:374$1136
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -4723,98 +4723,98 @@ module \alu
     parameter \Y_WIDTH 4
     connect \A \OP1
     connect \B \OP2
-    connect \Y $sub$alu.sv:385$1136_Y
+    connect \Y $sub$alu.sv:374$1136_Y
   end
-  attribute \src "alu.sv:114.14-114.31"
-  cell $mux $ternary$alu.sv:114$714
+  attribute \src "alu.sv:110.14-110.31"
+  cell $mux $ternary$alu.sv:110$714
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $gt$alu.sv:114$713_Y
-    connect \Y $eq$alu.sv:65$719_Y
+    connect \S $gt$alu.sv:110$713_Y
+    connect \Y $eq$alu.sv:61$719_Y
   end
-  attribute \src "alu.sv:114.14-114.31"
-  cell $mux $ternary$alu.sv:114$732
+  attribute \src "alu.sv:110.14-110.31"
+  cell $mux $ternary$alu.sv:110$732
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $gt$alu.sv:114$731_Y
-    connect \Y $eq$alu.sv:65$739_Y
+    connect \S $gt$alu.sv:110$731_Y
+    connect \Y $eq$alu.sv:61$739_Y
   end
-  attribute \src "alu.sv:114.14-114.31"
-  cell $mux $ternary$alu.sv:114$754
+  attribute \src "alu.sv:110.14-110.31"
+  cell $mux $ternary$alu.sv:110$754
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $gt$alu.sv:114$753_Y
-    connect \Y $eq$alu.sv:65$763_Y
+    connect \S $gt$alu.sv:110$753_Y
+    connect \Y $eq$alu.sv:61$763_Y
   end
-  attribute \src "alu.sv:114.14-114.31"
-  cell $mux $ternary$alu.sv:114$780
+  attribute \src "alu.sv:110.14-110.31"
+  cell $mux $ternary$alu.sv:110$780
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $gt$alu.sv:114$779_Y
-    connect \Y $eq$alu.sv:65$791_Y
+    connect \S $gt$alu.sv:110$779_Y
+    connect \Y $eq$alu.sv:61$791_Y
   end
-  attribute \src "alu.sv:140.14-140.34"
-  cell $mux $ternary$alu.sv:140$820
+  attribute \src "alu.sv:136.14-136.34"
+  cell $mux $ternary$alu.sv:136$820
     parameter \WIDTH 1
     connect \A 1'1
     connect \B 1'0
-    connect \S $eq$alu.sv:140$819_Y
-    connect \Y $eq$alu.sv:65$827_Y
+    connect \S $eq$alu.sv:136$819_Y
+    connect \Y $eq$alu.sv:61$827_Y
   end
-  attribute \src "alu.sv:140.14-140.34"
-  cell $mux $ternary$alu.sv:140$842
+  attribute \src "alu.sv:136.14-136.34"
+  cell $mux $ternary$alu.sv:136$842
     parameter \WIDTH 1
     connect \A 1'1
     connect \B 1'0
-    connect \S $eq$alu.sv:140$841_Y
-    connect \Y $eq$alu.sv:65$851_Y
+    connect \S $eq$alu.sv:136$841_Y
+    connect \Y $eq$alu.sv:61$851_Y
   end
-  attribute \src "alu.sv:140.14-140.34"
-  cell $mux $ternary$alu.sv:140$868
+  attribute \src "alu.sv:136.14-136.34"
+  cell $mux $ternary$alu.sv:136$868
     parameter \WIDTH 1
     connect \A 1'1
     connect \B 1'0
-    connect \S $eq$alu.sv:140$867_Y
-    connect \Y $eq$alu.sv:65$879_Y
+    connect \S $eq$alu.sv:136$867_Y
+    connect \Y $eq$alu.sv:61$879_Y
   end
-  attribute \src "alu.sv:165.14-165.34"
-  cell $mux $ternary$alu.sv:165$890
+  attribute \src "alu.sv:161.14-161.34"
+  cell $mux $ternary$alu.sv:161$890
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:165$889_Y
-    connect \Y $eq$alu.sv:65$895_Y
+    connect \S $eq$alu.sv:161$889_Y
+    connect \Y $eq$alu.sv:61$895_Y
   end
-  attribute \src "alu.sv:165.14-165.34"
-  cell $mux $ternary$alu.sv:165$908
+  attribute \src "alu.sv:161.14-161.34"
+  cell $mux $ternary$alu.sv:161$908
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:165$907_Y
-    connect \Y $eq$alu.sv:65$915_Y
+    connect \S $eq$alu.sv:161$907_Y
+    connect \Y $eq$alu.sv:61$915_Y
   end
-  attribute \src "alu.sv:165.14-165.34"
-  cell $mux $ternary$alu.sv:165$930
+  attribute \src "alu.sv:161.14-161.34"
+  cell $mux $ternary$alu.sv:161$930
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:165$929_Y
-    connect \Y $eq$alu.sv:65$939_Y
+    connect \S $eq$alu.sv:161$929_Y
+    connect \Y $eq$alu.sv:61$939_Y
   end
-  attribute \src "alu.sv:165.14-165.34"
-  cell $mux $ternary$alu.sv:165$956
+  attribute \src "alu.sv:161.14-161.34"
+  cell $mux $ternary$alu.sv:161$956
     parameter \WIDTH 1
     connect \A 1'0
     connect \B 1'1
-    connect \S $eq$alu.sv:165$955_Y
-    connect \Y $eq$alu.sv:65$967_Y
+    connect \S $eq$alu.sv:161$955_Y
+    connect \Y $eq$alu.sv:61$967_Y
   end
-  attribute \src "alu.sv:277.22-277.35"
-  cell $xor $xor$alu.sv:277$981
+  attribute \src "alu.sv:267.22-267.35"
+  cell $xor $xor$alu.sv:267$981
     parameter \A_SIGNED 0
     parameter \A_WIDTH 4
     parameter \B_SIGNED 0
@@ -4824,229 +4824,229 @@ module \alu
     connect \B \f_op2
     connect \Y \op_xor
   end
-  attribute \src "alu.sv:279.20-282.52"
-  cell $xor $xor$alu.sv:279$993
+  attribute \src "alu.sv:269.20-272.52"
+  cell $xor $xor$alu.sv:269$993
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_or$alu.sv:279$992_Y
+    connect \A $logic_or$alu.sv:269$992_Y
     connect \B \carry
     connect \Y \f_carry
   end
-  attribute \src "alu.sv:284.19-290.56"
-  cell $xor $xor$alu.sv:284$1021
+  attribute \src "alu.sv:274.19-280.56"
+  cell $xor $xor$alu.sv:274$1021
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
     parameter \B_WIDTH 1
     parameter \Y_WIDTH 1
-    connect \A $logic_or$alu.sv:284$1020_Y
+    connect \A $logic_or$alu.sv:274$1020_Y
     connect \B \zero
     connect \Y \f_zero
   end
-  attribute \src "alu.sv:318.6-318.39"
+  attribute \src "alu.sv:308.6-308.39"
   cell $assert \assert_carry
-    connect \A $formal$alu.sv:318$79_CHECK
-    connect \EN $formal$alu.sv:317$78_EN
+    connect \A $formal$alu.sv:308$79_CHECK
+    connect \EN $formal$alu.sv:307$78_EN
   end
-  attribute \src "alu.sv:311.5-311.40"
+  attribute \src "alu.sv:301.5-301.40"
   cell $assert \assert_carry_reset
-    connect \A $formal$alu.sv:311$75_CHECK
-    connect \EN $formal$alu.sv:311$75_EN
+    connect \A $formal$alu.sv:301$75_CHECK
+    connect \EN $formal$alu.sv:301$75_EN
   end
-  attribute \src "alu.sv:323.8-323.55"
+  attribute \src "alu.sv:313.8-313.55"
   cell $assert \assert_res0
-    connect \A $formal$alu.sv:323$80_CHECK
-    connect \EN $formal$alu.sv:323$80_EN
+    connect \A $formal$alu.sv:313$80_CHECK
+    connect \EN $formal$alu.sv:313$80_EN
   end
-  attribute \src "alu.sv:326.8-326.55"
+  attribute \src "alu.sv:316.8-316.55"
   cell $assert \assert_res1
-    connect \A $formal$alu.sv:326$81_CHECK
-    connect \EN $formal$alu.sv:326$81_EN
+    connect \A $formal$alu.sv:316$81_CHECK
+    connect \EN $formal$alu.sv:316$81_EN
   end
-  attribute \src "alu.sv:329.8-329.56"
+  attribute \src "alu.sv:319.8-319.56"
   cell $assert \assert_res2
-    connect \A $formal$alu.sv:329$82_CHECK
-    connect \EN $formal$alu.sv:329$82_EN
+    connect \A $formal$alu.sv:319$82_CHECK
+    connect \EN $formal$alu.sv:319$82_EN
   end
-  attribute \src "alu.sv:332.8-332.56"
+  attribute \src "alu.sv:322.8-322.56"
   cell $assert \assert_res3
-    connect \A $formal$alu.sv:332$83_CHECK
-    connect \EN $formal$alu.sv:332$83_EN
+    connect \A $formal$alu.sv:322$83_CHECK
+    connect \EN $formal$alu.sv:322$83_EN
   end
-  attribute \src "alu.sv:335.8-335.48"
+  attribute \src "alu.sv:325.8-325.48"
   cell $assert \assert_res4
-    connect \A $formal$alu.sv:335$84_CHECK
-    connect \EN $formal$alu.sv:335$84_EN
+    connect \A $formal$alu.sv:325$84_CHECK
+    connect \EN $formal$alu.sv:325$84_EN
   end
-  attribute \src "alu.sv:338.8-338.47"
+  attribute \src "alu.sv:328.8-328.47"
   cell $assert \assert_res5
-    connect \A $formal$alu.sv:338$85_CHECK
-    connect \EN $formal$alu.sv:338$85_EN
+    connect \A $formal$alu.sv:328$85_CHECK
+    connect \EN $formal$alu.sv:328$85_EN
   end
-  attribute \src "alu.sv:341.8-341.49"
+  attribute \src "alu.sv:331.8-331.49"
   cell $assert \assert_res6
-    connect \A $formal$alu.sv:341$86_CHECK
-    connect \EN $formal$alu.sv:341$86_EN
+    connect \A $formal$alu.sv:331$86_CHECK
+    connect \EN $formal$alu.sv:331$86_EN
   end
-  attribute \src "alu.sv:344.8-344.47"
+  attribute \src "alu.sv:334.8-334.47"
   cell $assert \assert_res7
-    connect \A $formal$alu.sv:344$87_CHECK
-    connect \EN $formal$alu.sv:344$87_EN
+    connect \A $formal$alu.sv:334$87_CHECK
+    connect \EN $formal$alu.sv:334$87_EN
   end
-  attribute \src "alu.sv:317.6-317.37"
+  attribute \src "alu.sv:307.6-307.37"
   cell $assert \assert_zero
-    connect \A $formal$alu.sv:317$78_CHECK
-    connect \EN $formal$alu.sv:317$78_EN
+    connect \A $formal$alu.sv:307$78_CHECK
+    connect \EN $formal$alu.sv:307$78_EN
   end
-  attribute \src "alu.sv:312.5-312.38"
+  attribute \src "alu.sv:302.5-302.38"
   cell $assert \assert_zero_reset
-    connect \A $formal$alu.sv:312$76_CHECK
-    connect \EN $formal$alu.sv:311$75_EN
+    connect \A $formal$alu.sv:302$76_CHECK
+    connect \EN $formal$alu.sv:301$75_EN
   end
-  attribute \src "alu.sv:313.5-313.50"
+  attribute \src "alu.sv:303.5-303.50"
   cell $assert \assert_zero_result
-    connect \A $formal$alu.sv:313$77_CHECK
-    connect \EN $formal$alu.sv:311$75_EN
+    connect \A $formal$alu.sv:303$77_CHECK
+    connect \EN $formal$alu.sv:301$75_EN
   end
-  attribute \src "alu.sv:370.4-370.35"
+  attribute \src "alu.sv:359.4-359.35"
   cell $cover \cov_carry_false
-    connect \A $formal$alu.sv:370$98_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:359$98_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:369.4-369.34"
+  attribute \src "alu.sv:358.4-358.34"
   cell $cover \cov_carry_true
-    connect \A $formal$alu.sv:369$97_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:358$97_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:356.4-356.38"
+  attribute \src "alu.sv:345.4-345.38"
   cell $cover \cov_op1_one
-    connect \A $formal$alu.sv:356$91_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:345$91_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:355.4-355.38"
+  attribute \src "alu.sv:344.4-344.38"
   cell $cover \cov_op1_zero
-    connect \A $formal$alu.sv:355$90_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:344$90_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:358.4-358.38"
+  attribute \src "alu.sv:347.4-347.38"
   cell $cover \cov_op2_one
-    connect \A $formal$alu.sv:358$93_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:347$93_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:357.4-357.38"
+  attribute \src "alu.sv:346.4-346.38"
   cell $cover \cov_op2_zero
-    connect \A $formal$alu.sv:357$92_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:346$92_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:353.4-353.43"
+  attribute \src "alu.sv:342.4-342.43"
   cell $cover \cov_opcode_one
-    connect \A $formal$alu.sv:353$89_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:342$89_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:352.4-352.43"
+  attribute \src "alu.sv:341.4-341.43"
   cell $cover \cov_opcode_zero
-    connect \A $formal$alu.sv:352$88_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:341$88_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:361.4-361.74"
+  attribute \src "alu.sv:350.4-350.74"
   cell $cover \cov_optest1
-    connect \A $formal$alu.sv:361$94_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:350$94_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:363.4-363.56"
+  attribute \src "alu.sv:352.4-352.56"
   cell $cover \cov_optest2
-    connect \A $formal$alu.sv:363$95_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:352$95_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:365.4-365.74"
+  attribute \src "alu.sv:354.4-354.74"
   cell $cover \cov_optest4
-    connect \A $formal$alu.sv:365$96_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:354$96_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:378.4-378.44"
+  attribute \src "alu.sv:367.4-367.44"
   cell $cover \cov_result_one
-    connect \A $formal$alu.sv:378$102_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:367$102_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:377.4-377.44"
+  attribute \src "alu.sv:366.4-366.44"
   cell $cover \cov_result_zero
-    connect \A $formal$alu.sv:377$101_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:366$101_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:374.4-374.33"
+  attribute \src "alu.sv:363.4-363.33"
   cell $cover \cov_zero_false
-    connect \A $formal$alu.sv:374$100_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:363$100_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:373.4-373.32"
+  attribute \src "alu.sv:362.4-362.32"
   cell $cover \cov_zero_true
-    connect \A $formal$alu.sv:373$99_CHECK
-    connect \EN $formal$alu.sv:352$88_EN
+    connect \A $formal$alu.sv:362$99_CHECK
+    connect \EN $formal$alu.sv:341$88_EN
   end
-  attribute \src "alu.sv:382.6-382.49"
+  attribute \src "alu.sv:371.6-371.49"
   cell $cover \cover_res0
-    connect \A $formal$alu.sv:382$103_CHECK
-    connect \EN $formal$alu.sv:382$103_EN
+    connect \A $formal$alu.sv:371$103_CHECK
+    connect \EN $formal$alu.sv:371$103_EN
   end
-  attribute \src "alu.sv:385.6-385.50"
+  attribute \src "alu.sv:374.6-374.50"
   cell $cover \cover_res1
-    connect \A $formal$alu.sv:385$104_CHECK
-    connect \EN $formal$alu.sv:385$104_EN
+    connect \A $formal$alu.sv:374$104_CHECK
+    connect \EN $formal$alu.sv:374$104_EN
   end
-  attribute \src "alu.sv:388.6-388.51"
+  attribute \src "alu.sv:377.6-377.51"
   cell $cover \cover_res2
-    connect \A $formal$alu.sv:388$105_CHECK
-    connect \EN $formal$alu.sv:388$105_EN
+    connect \A $formal$alu.sv:377$105_CHECK
+    connect \EN $formal$alu.sv:377$105_EN
   end
-  attribute \src "alu.sv:391.6-391.48"
+  attribute \src "alu.sv:380.6-380.48"
   cell $cover \cover_res3
-    connect \A $formal$alu.sv:391$106_CHECK
-    connect \EN $formal$alu.sv:391$106_EN
+    connect \A $formal$alu.sv:380$106_CHECK
+    connect \EN $formal$alu.sv:380$106_EN
   end
-  attribute \src "alu.sv:394.6-394.49"
+  attribute \src "alu.sv:383.6-383.49"
   cell $cover \cover_res4
-    connect \A $formal$alu.sv:394$107_CHECK
-    connect \EN $formal$alu.sv:394$107_EN
+    connect \A $formal$alu.sv:383$107_CHECK
+    connect \EN $formal$alu.sv:383$107_EN
   end
-  attribute \src "alu.sv:397.6-397.49"
+  attribute \src "alu.sv:386.6-386.49"
   cell $cover \cover_res5
-    connect \A $formal$alu.sv:397$108_CHECK
-    connect \EN $formal$alu.sv:397$108_EN
+    connect \A $formal$alu.sv:386$108_CHECK
+    connect \EN $formal$alu.sv:386$108_EN
   end
-  attribute \src "alu.sv:400.6-400.50"
+  attribute \src "alu.sv:389.6-389.50"
   cell $cover \cover_res6
-    connect \A $formal$alu.sv:400$109_CHECK
-    connect \EN $formal$alu.sv:400$109_EN
+    connect \A $formal$alu.sv:389$109_CHECK
+    connect \EN $formal$alu.sv:389$109_EN
   end
-  attribute \src "alu.sv:403.6-403.50"
+  attribute \src "alu.sv:392.6-392.50"
   cell $cover \cover_res7
-    connect \A $formal$alu.sv:403$110_CHECK
-    connect \EN $formal$alu.sv:403$110_EN
+    connect \A $formal$alu.sv:392$110_CHECK
+    connect \EN $formal$alu.sv:392$110_EN
   end
-  connect $mod$alu.sv:42$628_Y [4:0] $22\res[4:0]
-  connect $mod$alu.sv:42$631_Y [4:0] $23\res[4:0]
-  connect $mod$alu.sv:42$643_Y [4:0] $27\res[4:0]
-  connect $mod$alu.sv:42$647_Y [4:0] $28\res[4:0]
-  connect $mod$alu.sv:42$652_Y [4:0] $9\res[4:0]
-  connect $mod$alu.sv:42$662_Y [4:0] $12\res[4:0]
-  connect $mod$alu.sv:42$667_Y [4:0] $13\res[4:0]
-  connect $mod$alu.sv:42$673_Y [4:0] $14\res[4:0]
-  connect $mod$alu.sv:42$685_Y [4:0] $17\res[4:0]
-  connect $mod$alu.sv:42$691_Y [4:0] $18\res[4:0]
-  connect $mod$alu.sv:42$698_Y [4:0] $19\res[4:0]
-  connect $mod$alu.sv:42$736_Y [4:0] $29\res[4:0]
-  connect $mod$alu.sv:42$759_Y [4:0] $34\res[4:0]
-  connect $mod$alu.sv:42$786_Y [4:0] $39\res[4:0]
-  connect $mod$alu.sv:42$824_Y [4:0] $49\res[4:0]
-  connect $mod$alu.sv:42$847_Y [4:0] $54\res[4:0]
-  connect $mod$alu.sv:42$874_Y [4:0] $59\res[4:0]
-  connect $mod$alu.sv:42$912_Y [4:0] $69\res[4:0]
-  connect $mod$alu.sv:42$935_Y [4:0] $74\res[4:0]
-  connect $mod$alu.sv:42$962_Y [4:0] $79\res[4:0]
-  connect $sub$alu.sv:190$625_Y [30:4] { $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] $sub$alu.sv:190$625_Y [31] }
+  connect $mod$alu.sv:38$628_Y [4:0] $22\res[4:0]
+  connect $mod$alu.sv:38$631_Y [4:0] $23\res[4:0]
+  connect $mod$alu.sv:38$643_Y [4:0] $27\res[4:0]
+  connect $mod$alu.sv:38$647_Y [4:0] $28\res[4:0]
+  connect $mod$alu.sv:38$652_Y [4:0] $9\res[4:0]
+  connect $mod$alu.sv:38$662_Y [4:0] $12\res[4:0]
+  connect $mod$alu.sv:38$667_Y [4:0] $13\res[4:0]
+  connect $mod$alu.sv:38$673_Y [4:0] $14\res[4:0]
+  connect $mod$alu.sv:38$685_Y [4:0] $17\res[4:0]
+  connect $mod$alu.sv:38$691_Y [4:0] $18\res[4:0]
+  connect $mod$alu.sv:38$698_Y [4:0] $19\res[4:0]
+  connect $mod$alu.sv:38$736_Y [4:0] $29\res[4:0]
+  connect $mod$alu.sv:38$759_Y [4:0] $34\res[4:0]
+  connect $mod$alu.sv:38$786_Y [4:0] $39\res[4:0]
+  connect $mod$alu.sv:38$824_Y [4:0] $49\res[4:0]
+  connect $mod$alu.sv:38$847_Y [4:0] $54\res[4:0]
+  connect $mod$alu.sv:38$874_Y [4:0] $59\res[4:0]
+  connect $mod$alu.sv:38$912_Y [4:0] $69\res[4:0]
+  connect $mod$alu.sv:38$935_Y [4:0] $74\res[4:0]
+  connect $mod$alu.sv:38$962_Y [4:0] $79\res[4:0]
+  connect $sub$alu.sv:186$625_Y [30:4] { $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] $sub$alu.sv:186$625_Y [31] }
   connect \CARRY \carry
   connect \CARRY_next \result_next [4]
   connect \RESULT \result
@@ -5054,259 +5054,259 @@ module \alu
   connect \ZERO \zero
   connect \data1 \OP1
   connect \data2 \OP2
-  connect \func_and$func$alu.sv:193$7.aux_0 1'x
-  connect \func_and$func$alu.sv:193$7.aux_1 1'x
-  connect \func_and$func$alu.sv:193$7.aux_2 5'x
-  connect \func_and$func$alu.sv:193$7.bit_v 1'x
-  connect \func_and$func$alu.sv:193$7.data1 4'x
-  connect \func_and$func$alu.sv:193$7.data2 4'x
-  connect \func_and$func$alu.sv:193$7.i 4'x
-  connect \func_get_bit$func$alu.sv:108$25.divisor 4'x
-  connect \func_get_bit$func$alu.sv:108$25.i 4'x
-  connect \func_get_bit$func$alu.sv:108$25.value 4'x
-  connect \func_get_bit$func$alu.sv:108$29.divisor 4'x
-  connect \func_get_bit$func$alu.sv:108$29.i 4'x
-  connect \func_get_bit$func$alu.sv:108$29.value 4'x
-  connect \func_get_bit$func$alu.sv:108$33.divisor 4'x
-  connect \func_get_bit$func$alu.sv:108$33.i 4'x
-  connect \func_get_bit$func$alu.sv:108$33.value 4'x
-  connect \func_get_bit$func$alu.sv:108$37.divisor 4'x
-  connect \func_get_bit$func$alu.sv:108$37.i 4'x
-  connect \func_get_bit$func$alu.sv:108$37.value 4'x
-  connect \func_get_bit$func$alu.sv:110$26.divisor 4'x
-  connect \func_get_bit$func$alu.sv:110$26.i 4'x
-  connect \func_get_bit$func$alu.sv:110$26.value 4'x
-  connect \func_get_bit$func$alu.sv:110$30.divisor 4'x
-  connect \func_get_bit$func$alu.sv:110$30.i 4'x
-  connect \func_get_bit$func$alu.sv:110$30.value 4'x
-  connect \func_get_bit$func$alu.sv:110$34.divisor 4'x
-  connect \func_get_bit$func$alu.sv:110$34.i 4'x
-  connect \func_get_bit$func$alu.sv:110$34.value 4'x
-  connect \func_get_bit$func$alu.sv:110$38.divisor 4'x
-  connect \func_get_bit$func$alu.sv:110$38.i 4'x
-  connect \func_get_bit$func$alu.sv:110$38.value 4'x
-  connect \func_get_bit$func$alu.sv:134$42.divisor 4'x
-  connect \func_get_bit$func$alu.sv:134$42.i 4'x
-  connect \func_get_bit$func$alu.sv:134$42.value 4'x
-  connect \func_get_bit$func$alu.sv:134$46.divisor 4'x
-  connect \func_get_bit$func$alu.sv:134$46.i 4'x
-  connect \func_get_bit$func$alu.sv:134$46.value 4'x
-  connect \func_get_bit$func$alu.sv:134$50.divisor 4'x
-  connect \func_get_bit$func$alu.sv:134$50.i 4'x
-  connect \func_get_bit$func$alu.sv:134$50.value 4'x
-  connect \func_get_bit$func$alu.sv:134$54.divisor 4'x
-  connect \func_get_bit$func$alu.sv:134$54.i 4'x
-  connect \func_get_bit$func$alu.sv:134$54.value 4'x
-  connect \func_get_bit$func$alu.sv:136$43.divisor 4'x
-  connect \func_get_bit$func$alu.sv:136$43.i 4'x
-  connect \func_get_bit$func$alu.sv:136$43.value 4'x
-  connect \func_get_bit$func$alu.sv:136$47.divisor 4'x
-  connect \func_get_bit$func$alu.sv:136$47.i 4'x
-  connect \func_get_bit$func$alu.sv:136$47.value 4'x
-  connect \func_get_bit$func$alu.sv:136$51.divisor 4'x
-  connect \func_get_bit$func$alu.sv:136$51.i 4'x
-  connect \func_get_bit$func$alu.sv:136$51.value 4'x
-  connect \func_get_bit$func$alu.sv:136$55.divisor 4'x
-  connect \func_get_bit$func$alu.sv:136$55.i 4'x
-  connect \func_get_bit$func$alu.sv:136$55.value 4'x
-  connect \func_get_bit$func$alu.sv:159$59.divisor 4'x
-  connect \func_get_bit$func$alu.sv:159$59.i 4'x
-  connect \func_get_bit$func$alu.sv:159$59.value 4'x
-  connect \func_get_bit$func$alu.sv:159$63.divisor 4'x
-  connect \func_get_bit$func$alu.sv:159$63.i 4'x
-  connect \func_get_bit$func$alu.sv:159$63.value 4'x
-  connect \func_get_bit$func$alu.sv:159$67.divisor 4'x
-  connect \func_get_bit$func$alu.sv:159$67.i 4'x
-  connect \func_get_bit$func$alu.sv:159$67.value 4'x
-  connect \func_get_bit$func$alu.sv:159$71.divisor 4'x
-  connect \func_get_bit$func$alu.sv:159$71.i 4'x
-  connect \func_get_bit$func$alu.sv:159$71.value 4'x
-  connect \func_get_bit$func$alu.sv:161$60.divisor 4'x
-  connect \func_get_bit$func$alu.sv:161$60.i 4'x
-  connect \func_get_bit$func$alu.sv:161$60.value 4'x
-  connect \func_get_bit$func$alu.sv:161$64.divisor 4'x
-  connect \func_get_bit$func$alu.sv:161$64.i 4'x
-  connect \func_get_bit$func$alu.sv:161$64.value 4'x
-  connect \func_get_bit$func$alu.sv:161$68.divisor 4'x
-  connect \func_get_bit$func$alu.sv:161$68.i 4'x
-  connect \func_get_bit$func$alu.sv:161$68.value 4'x
-  connect \func_get_bit$func$alu.sv:161$72.divisor 4'x
-  connect \func_get_bit$func$alu.sv:161$72.i 4'x
-  connect \func_get_bit$func$alu.sv:161$72.value 4'x
-  connect \func_get_bit$func$alu.sv:53$11.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$11.i 4'x
-  connect \func_get_bit$func$alu.sv:53$11.value 4'x
-  connect \func_get_bit$func$alu.sv:53$15.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$15.i 4'x
-  connect \func_get_bit$func$alu.sv:53$15.value 4'x
-  connect \func_get_bit$func$alu.sv:53$19.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$19.i 4'x
-  connect \func_get_bit$func$alu.sv:53$19.value 4'x
-  connect \func_get_bit$func$alu.sv:53$23.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$23.i 4'x
-  connect \func_get_bit$func$alu.sv:53$23.value 4'x
-  connect \func_get_bit$func$alu.sv:53$28.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$28.i 4'x
-  connect \func_get_bit$func$alu.sv:53$28.value 4'x
-  connect \func_get_bit$func$alu.sv:53$32.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$32.i 4'x
-  connect \func_get_bit$func$alu.sv:53$32.value 4'x
-  connect \func_get_bit$func$alu.sv:53$36.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$36.i 4'x
-  connect \func_get_bit$func$alu.sv:53$36.value 4'x
-  connect \func_get_bit$func$alu.sv:53$40.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$40.i 4'x
-  connect \func_get_bit$func$alu.sv:53$40.value 4'x
-  connect \func_get_bit$func$alu.sv:53$45.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$45.i 4'x
-  connect \func_get_bit$func$alu.sv:53$45.value 4'x
-  connect \func_get_bit$func$alu.sv:53$49.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$49.i 4'x
-  connect \func_get_bit$func$alu.sv:53$49.value 4'x
-  connect \func_get_bit$func$alu.sv:53$53.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$53.i 4'x
-  connect \func_get_bit$func$alu.sv:53$53.value 4'x
-  connect \func_get_bit$func$alu.sv:53$57.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$57.i 4'x
-  connect \func_get_bit$func$alu.sv:53$57.value 4'x
-  connect \func_get_bit$func$alu.sv:53$62.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$62.i 4'x
-  connect \func_get_bit$func$alu.sv:53$62.value 4'x
-  connect \func_get_bit$func$alu.sv:53$66.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$66.i 4'x
-  connect \func_get_bit$func$alu.sv:53$66.value 4'x
-  connect \func_get_bit$func$alu.sv:53$70.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$70.i 4'x
-  connect \func_get_bit$func$alu.sv:53$70.value 4'x
-  connect \func_get_bit$func$alu.sv:53$74.divisor 4'x
-  connect \func_get_bit$func$alu.sv:53$74.i 4'x
-  connect \func_get_bit$func$alu.sv:53$74.value 4'x
-  connect \func_get_bit$func$alu.sv:84$12.divisor 4'x
-  connect \func_get_bit$func$alu.sv:84$12.i 4'x
-  connect \func_get_bit$func$alu.sv:84$12.value 4'x
-  connect \func_get_bit$func$alu.sv:84$16.divisor 4'x
-  connect \func_get_bit$func$alu.sv:84$16.i 4'x
-  connect \func_get_bit$func$alu.sv:84$16.value 4'x
-  connect \func_get_bit$func$alu.sv:84$20.divisor 4'x
-  connect \func_get_bit$func$alu.sv:84$20.i 4'x
-  connect \func_get_bit$func$alu.sv:84$20.value 4'x
-  connect \func_get_bit$func$alu.sv:84$8.divisor 4'x
-  connect \func_get_bit$func$alu.sv:84$8.i 4'x
-  connect \func_get_bit$func$alu.sv:84$8.value 4'x
-  connect \func_get_bit$func$alu.sv:86$13.divisor 4'x
-  connect \func_get_bit$func$alu.sv:86$13.i 4'x
-  connect \func_get_bit$func$alu.sv:86$13.value 4'x
-  connect \func_get_bit$func$alu.sv:86$17.divisor 4'x
-  connect \func_get_bit$func$alu.sv:86$17.i 4'x
-  connect \func_get_bit$func$alu.sv:86$17.value 4'x
-  connect \func_get_bit$func$alu.sv:86$21.divisor 4'x
-  connect \func_get_bit$func$alu.sv:86$21.i 4'x
-  connect \func_get_bit$func$alu.sv:86$21.value 4'x
-  connect \func_get_bit$func$alu.sv:86$9.divisor 4'x
-  connect \func_get_bit$func$alu.sv:86$9.i 4'x
-  connect \func_get_bit$func$alu.sv:86$9.value 4'x
-  connect \func_nand$func$alu.sv:203$41.aux_0 1'x
-  connect \func_nand$func$alu.sv:203$41.aux_1 1'x
-  connect \func_nand$func$alu.sv:203$41.aux_2 5'x
-  connect \func_nand$func$alu.sv:203$41.bit_v 1'x
-  connect \func_nand$func$alu.sv:203$41.bit_v_1 1'x
-  connect \func_nand$func$alu.sv:203$41.data1 4'x
-  connect \func_nand$func$alu.sv:203$41.data2 4'x
-  connect \func_nand$func$alu.sv:203$41.i 4'x
-  connect \func_or$func$alu.sv:198$24.aux_0 1'x
-  connect \func_or$func$alu.sv:198$24.aux_1 1'x
-  connect \func_or$func$alu.sv:198$24.aux_2 5'x
-  connect \func_or$func$alu.sv:198$24.bit_v 2'x
-  connect \func_or$func$alu.sv:198$24.bit_v_1 1'x
-  connect \func_or$func$alu.sv:198$24.data1 4'x
-  connect \func_or$func$alu.sv:198$24.data2 4'x
-  connect \func_or$func$alu.sv:198$24.i 4'x
-  connect \func_set_bit$func$alu.sv:115$27.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:115$27.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:115$27.divisor 4'x
-  connect \func_set_bit$func$alu.sv:115$27.i 4'x
-  connect \func_set_bit$func$alu.sv:115$27.value 5'x
-  connect \func_set_bit$func$alu.sv:115$31.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:115$31.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:115$31.divisor 4'x
-  connect \func_set_bit$func$alu.sv:115$31.i 4'x
-  connect \func_set_bit$func$alu.sv:115$31.value 5'x
-  connect \func_set_bit$func$alu.sv:115$35.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:115$35.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:115$35.divisor 4'x
-  connect \func_set_bit$func$alu.sv:115$35.i 4'x
-  connect \func_set_bit$func$alu.sv:115$35.value 5'x
-  connect \func_set_bit$func$alu.sv:115$39.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:115$39.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:115$39.divisor 4'x
-  connect \func_set_bit$func$alu.sv:115$39.i 4'x
-  connect \func_set_bit$func$alu.sv:115$39.value 5'x
-  connect \func_set_bit$func$alu.sv:141$44.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:141$44.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:141$44.divisor 4'x
-  connect \func_set_bit$func$alu.sv:141$44.i 4'x
-  connect \func_set_bit$func$alu.sv:141$44.value 5'x
-  connect \func_set_bit$func$alu.sv:141$48.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:141$48.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:141$48.divisor 4'x
-  connect \func_set_bit$func$alu.sv:141$48.i 4'x
-  connect \func_set_bit$func$alu.sv:141$48.value 5'x
-  connect \func_set_bit$func$alu.sv:141$52.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:141$52.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:141$52.divisor 4'x
-  connect \func_set_bit$func$alu.sv:141$52.i 4'x
-  connect \func_set_bit$func$alu.sv:141$52.value 5'x
-  connect \func_set_bit$func$alu.sv:141$56.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:141$56.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:141$56.divisor 4'x
-  connect \func_set_bit$func$alu.sv:141$56.i 4'x
-  connect \func_set_bit$func$alu.sv:141$56.value 5'x
-  connect \func_set_bit$func$alu.sv:166$61.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:166$61.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:166$61.divisor 4'x
-  connect \func_set_bit$func$alu.sv:166$61.i 4'x
-  connect \func_set_bit$func$alu.sv:166$61.value 5'x
-  connect \func_set_bit$func$alu.sv:166$65.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:166$65.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:166$65.divisor 4'x
-  connect \func_set_bit$func$alu.sv:166$65.i 4'x
-  connect \func_set_bit$func$alu.sv:166$65.value 5'x
-  connect \func_set_bit$func$alu.sv:166$69.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:166$69.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:166$69.divisor 4'x
-  connect \func_set_bit$func$alu.sv:166$69.i 4'x
-  connect \func_set_bit$func$alu.sv:166$69.value 5'x
-  connect \func_set_bit$func$alu.sv:166$73.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:166$73.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:166$73.divisor 4'x
-  connect \func_set_bit$func$alu.sv:166$73.i 4'x
-  connect \func_set_bit$func$alu.sv:166$73.value 5'x
-  connect \func_set_bit$func$alu.sv:90$10.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:90$10.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:90$10.divisor 4'x
-  connect \func_set_bit$func$alu.sv:90$10.i 4'x
-  connect \func_set_bit$func$alu.sv:90$10.value 5'x
-  connect \func_set_bit$func$alu.sv:90$14.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:90$14.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:90$14.divisor 4'x
-  connect \func_set_bit$func$alu.sv:90$14.i 4'x
-  connect \func_set_bit$func$alu.sv:90$14.value 5'x
-  connect \func_set_bit$func$alu.sv:90$18.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:90$18.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:90$18.divisor 4'x
-  connect \func_set_bit$func$alu.sv:90$18.i 4'x
-  connect \func_set_bit$func$alu.sv:90$18.value 5'x
-  connect \func_set_bit$func$alu.sv:90$22.bit_v 1'x
-  connect \func_set_bit$func$alu.sv:90$22.current_bit 1'x
-  connect \func_set_bit$func$alu.sv:90$22.divisor 4'x
-  connect \func_set_bit$func$alu.sv:90$22.i 4'x
-  connect \func_set_bit$func$alu.sv:90$22.value 5'x
-  connect \func_xor$func$alu.sv:208$58.aux_0 1'x
-  connect \func_xor$func$alu.sv:208$58.aux_1 1'x
-  connect \func_xor$func$alu.sv:208$58.aux_2 5'x
-  connect \func_xor$func$alu.sv:208$58.bit_v 2'x
-  connect \func_xor$func$alu.sv:208$58.bit_v_1 1'x
-  connect \func_xor$func$alu.sv:208$58.data1 4'x
-  connect \func_xor$func$alu.sv:208$58.data2 4'x
-  connect \func_xor$func$alu.sv:208$58.i 4'x
+  connect \func_and$func$alu.sv:189$7.aux_0 1'x
+  connect \func_and$func$alu.sv:189$7.aux_1 1'x
+  connect \func_and$func$alu.sv:189$7.aux_2 5'x
+  connect \func_and$func$alu.sv:189$7.bit_v 1'x
+  connect \func_and$func$alu.sv:189$7.data1 4'x
+  connect \func_and$func$alu.sv:189$7.data2 4'x
+  connect \func_and$func$alu.sv:189$7.i 4'x
+  connect \func_get_bit$func$alu.sv:104$25.divisor 4'x
+  connect \func_get_bit$func$alu.sv:104$25.i 4'x
+  connect \func_get_bit$func$alu.sv:104$25.value 4'x
+  connect \func_get_bit$func$alu.sv:104$29.divisor 4'x
+  connect \func_get_bit$func$alu.sv:104$29.i 4'x
+  connect \func_get_bit$func$alu.sv:104$29.value 4'x
+  connect \func_get_bit$func$alu.sv:104$33.divisor 4'x
+  connect \func_get_bit$func$alu.sv:104$33.i 4'x
+  connect \func_get_bit$func$alu.sv:104$33.value 4'x
+  connect \func_get_bit$func$alu.sv:104$37.divisor 4'x
+  connect \func_get_bit$func$alu.sv:104$37.i 4'x
+  connect \func_get_bit$func$alu.sv:104$37.value 4'x
+  connect \func_get_bit$func$alu.sv:106$26.divisor 4'x
+  connect \func_get_bit$func$alu.sv:106$26.i 4'x
+  connect \func_get_bit$func$alu.sv:106$26.value 4'x
+  connect \func_get_bit$func$alu.sv:106$30.divisor 4'x
+  connect \func_get_bit$func$alu.sv:106$30.i 4'x
+  connect \func_get_bit$func$alu.sv:106$30.value 4'x
+  connect \func_get_bit$func$alu.sv:106$34.divisor 4'x
+  connect \func_get_bit$func$alu.sv:106$34.i 4'x
+  connect \func_get_bit$func$alu.sv:106$34.value 4'x
+  connect \func_get_bit$func$alu.sv:106$38.divisor 4'x
+  connect \func_get_bit$func$alu.sv:106$38.i 4'x
+  connect \func_get_bit$func$alu.sv:106$38.value 4'x
+  connect \func_get_bit$func$alu.sv:130$42.divisor 4'x
+  connect \func_get_bit$func$alu.sv:130$42.i 4'x
+  connect \func_get_bit$func$alu.sv:130$42.value 4'x
+  connect \func_get_bit$func$alu.sv:130$46.divisor 4'x
+  connect \func_get_bit$func$alu.sv:130$46.i 4'x
+  connect \func_get_bit$func$alu.sv:130$46.value 4'x
+  connect \func_get_bit$func$alu.sv:130$50.divisor 4'x
+  connect \func_get_bit$func$alu.sv:130$50.i 4'x
+  connect \func_get_bit$func$alu.sv:130$50.value 4'x
+  connect \func_get_bit$func$alu.sv:130$54.divisor 4'x
+  connect \func_get_bit$func$alu.sv:130$54.i 4'x
+  connect \func_get_bit$func$alu.sv:130$54.value 4'x
+  connect \func_get_bit$func$alu.sv:132$43.divisor 4'x
+  connect \func_get_bit$func$alu.sv:132$43.i 4'x
+  connect \func_get_bit$func$alu.sv:132$43.value 4'x
+  connect \func_get_bit$func$alu.sv:132$47.divisor 4'x
+  connect \func_get_bit$func$alu.sv:132$47.i 4'x
+  connect \func_get_bit$func$alu.sv:132$47.value 4'x
+  connect \func_get_bit$func$alu.sv:132$51.divisor 4'x
+  connect \func_get_bit$func$alu.sv:132$51.i 4'x
+  connect \func_get_bit$func$alu.sv:132$51.value 4'x
+  connect \func_get_bit$func$alu.sv:132$55.divisor 4'x
+  connect \func_get_bit$func$alu.sv:132$55.i 4'x
+  connect \func_get_bit$func$alu.sv:132$55.value 4'x
+  connect \func_get_bit$func$alu.sv:155$59.divisor 4'x
+  connect \func_get_bit$func$alu.sv:155$59.i 4'x
+  connect \func_get_bit$func$alu.sv:155$59.value 4'x
+  connect \func_get_bit$func$alu.sv:155$63.divisor 4'x
+  connect \func_get_bit$func$alu.sv:155$63.i 4'x
+  connect \func_get_bit$func$alu.sv:155$63.value 4'x
+  connect \func_get_bit$func$alu.sv:155$67.divisor 4'x
+  connect \func_get_bit$func$alu.sv:155$67.i 4'x
+  connect \func_get_bit$func$alu.sv:155$67.value 4'x
+  connect \func_get_bit$func$alu.sv:155$71.divisor 4'x
+  connect \func_get_bit$func$alu.sv:155$71.i 4'x
+  connect \func_get_bit$func$alu.sv:155$71.value 4'x
+  connect \func_get_bit$func$alu.sv:157$60.divisor 4'x
+  connect \func_get_bit$func$alu.sv:157$60.i 4'x
+  connect \func_get_bit$func$alu.sv:157$60.value 4'x
+  connect \func_get_bit$func$alu.sv:157$64.divisor 4'x
+  connect \func_get_bit$func$alu.sv:157$64.i 4'x
+  connect \func_get_bit$func$alu.sv:157$64.value 4'x
+  connect \func_get_bit$func$alu.sv:157$68.divisor 4'x
+  connect \func_get_bit$func$alu.sv:157$68.i 4'x
+  connect \func_get_bit$func$alu.sv:157$68.value 4'x
+  connect \func_get_bit$func$alu.sv:157$72.divisor 4'x
+  connect \func_get_bit$func$alu.sv:157$72.i 4'x
+  connect \func_get_bit$func$alu.sv:157$72.value 4'x
+  connect \func_get_bit$func$alu.sv:49$11.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$11.i 4'x
+  connect \func_get_bit$func$alu.sv:49$11.value 4'x
+  connect \func_get_bit$func$alu.sv:49$15.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$15.i 4'x
+  connect \func_get_bit$func$alu.sv:49$15.value 4'x
+  connect \func_get_bit$func$alu.sv:49$19.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$19.i 4'x
+  connect \func_get_bit$func$alu.sv:49$19.value 4'x
+  connect \func_get_bit$func$alu.sv:49$23.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$23.i 4'x
+  connect \func_get_bit$func$alu.sv:49$23.value 4'x
+  connect \func_get_bit$func$alu.sv:49$28.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$28.i 4'x
+  connect \func_get_bit$func$alu.sv:49$28.value 4'x
+  connect \func_get_bit$func$alu.sv:49$32.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$32.i 4'x
+  connect \func_get_bit$func$alu.sv:49$32.value 4'x
+  connect \func_get_bit$func$alu.sv:49$36.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$36.i 4'x
+  connect \func_get_bit$func$alu.sv:49$36.value 4'x
+  connect \func_get_bit$func$alu.sv:49$40.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$40.i 4'x
+  connect \func_get_bit$func$alu.sv:49$40.value 4'x
+  connect \func_get_bit$func$alu.sv:49$45.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$45.i 4'x
+  connect \func_get_bit$func$alu.sv:49$45.value 4'x
+  connect \func_get_bit$func$alu.sv:49$49.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$49.i 4'x
+  connect \func_get_bit$func$alu.sv:49$49.value 4'x
+  connect \func_get_bit$func$alu.sv:49$53.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$53.i 4'x
+  connect \func_get_bit$func$alu.sv:49$53.value 4'x
+  connect \func_get_bit$func$alu.sv:49$57.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$57.i 4'x
+  connect \func_get_bit$func$alu.sv:49$57.value 4'x
+  connect \func_get_bit$func$alu.sv:49$62.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$62.i 4'x
+  connect \func_get_bit$func$alu.sv:49$62.value 4'x
+  connect \func_get_bit$func$alu.sv:49$66.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$66.i 4'x
+  connect \func_get_bit$func$alu.sv:49$66.value 4'x
+  connect \func_get_bit$func$alu.sv:49$70.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$70.i 4'x
+  connect \func_get_bit$func$alu.sv:49$70.value 4'x
+  connect \func_get_bit$func$alu.sv:49$74.divisor 4'x
+  connect \func_get_bit$func$alu.sv:49$74.i 4'x
+  connect \func_get_bit$func$alu.sv:49$74.value 4'x
+  connect \func_get_bit$func$alu.sv:80$12.divisor 4'x
+  connect \func_get_bit$func$alu.sv:80$12.i 4'x
+  connect \func_get_bit$func$alu.sv:80$12.value 4'x
+  connect \func_get_bit$func$alu.sv:80$16.divisor 4'x
+  connect \func_get_bit$func$alu.sv:80$16.i 4'x
+  connect \func_get_bit$func$alu.sv:80$16.value 4'x
+  connect \func_get_bit$func$alu.sv:80$20.divisor 4'x
+  connect \func_get_bit$func$alu.sv:80$20.i 4'x
+  connect \func_get_bit$func$alu.sv:80$20.value 4'x
+  connect \func_get_bit$func$alu.sv:80$8.divisor 4'x
+  connect \func_get_bit$func$alu.sv:80$8.i 4'x
+  connect \func_get_bit$func$alu.sv:80$8.value 4'x
+  connect \func_get_bit$func$alu.sv:82$13.divisor 4'x
+  connect \func_get_bit$func$alu.sv:82$13.i 4'x
+  connect \func_get_bit$func$alu.sv:82$13.value 4'x
+  connect \func_get_bit$func$alu.sv:82$17.divisor 4'x
+  connect \func_get_bit$func$alu.sv:82$17.i 4'x
+  connect \func_get_bit$func$alu.sv:82$17.value 4'x
+  connect \func_get_bit$func$alu.sv:82$21.divisor 4'x
+  connect \func_get_bit$func$alu.sv:82$21.i 4'x
+  connect \func_get_bit$func$alu.sv:82$21.value 4'x
+  connect \func_get_bit$func$alu.sv:82$9.divisor 4'x
+  connect \func_get_bit$func$alu.sv:82$9.i 4'x
+  connect \func_get_bit$func$alu.sv:82$9.value 4'x
+  connect \func_nand$func$alu.sv:199$41.aux_0 1'x
+  connect \func_nand$func$alu.sv:199$41.aux_1 1'x
+  connect \func_nand$func$alu.sv:199$41.aux_2 5'x
+  connect \func_nand$func$alu.sv:199$41.bit_v 1'x
+  connect \func_nand$func$alu.sv:199$41.bit_v_1 1'x
+  connect \func_nand$func$alu.sv:199$41.data1 4'x
+  connect \func_nand$func$alu.sv:199$41.data2 4'x
+  connect \func_nand$func$alu.sv:199$41.i 4'x
+  connect \func_or$func$alu.sv:194$24.aux_0 1'x
+  connect \func_or$func$alu.sv:194$24.aux_1 1'x
+  connect \func_or$func$alu.sv:194$24.aux_2 5'x
+  connect \func_or$func$alu.sv:194$24.bit_v 2'x
+  connect \func_or$func$alu.sv:194$24.bit_v_1 1'x
+  connect \func_or$func$alu.sv:194$24.data1 4'x
+  connect \func_or$func$alu.sv:194$24.data2 4'x
+  connect \func_or$func$alu.sv:194$24.i 4'x
+  connect \func_set_bit$func$alu.sv:111$27.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:111$27.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:111$27.divisor 4'x
+  connect \func_set_bit$func$alu.sv:111$27.i 4'x
+  connect \func_set_bit$func$alu.sv:111$27.value 5'x
+  connect \func_set_bit$func$alu.sv:111$31.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:111$31.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:111$31.divisor 4'x
+  connect \func_set_bit$func$alu.sv:111$31.i 4'x
+  connect \func_set_bit$func$alu.sv:111$31.value 5'x
+  connect \func_set_bit$func$alu.sv:111$35.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:111$35.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:111$35.divisor 4'x
+  connect \func_set_bit$func$alu.sv:111$35.i 4'x
+  connect \func_set_bit$func$alu.sv:111$35.value 5'x
+  connect \func_set_bit$func$alu.sv:111$39.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:111$39.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:111$39.divisor 4'x
+  connect \func_set_bit$func$alu.sv:111$39.i 4'x
+  connect \func_set_bit$func$alu.sv:111$39.value 5'x
+  connect \func_set_bit$func$alu.sv:137$44.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:137$44.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:137$44.divisor 4'x
+  connect \func_set_bit$func$alu.sv:137$44.i 4'x
+  connect \func_set_bit$func$alu.sv:137$44.value 5'x
+  connect \func_set_bit$func$alu.sv:137$48.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:137$48.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:137$48.divisor 4'x
+  connect \func_set_bit$func$alu.sv:137$48.i 4'x
+  connect \func_set_bit$func$alu.sv:137$48.value 5'x
+  connect \func_set_bit$func$alu.sv:137$52.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:137$52.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:137$52.divisor 4'x
+  connect \func_set_bit$func$alu.sv:137$52.i 4'x
+  connect \func_set_bit$func$alu.sv:137$52.value 5'x
+  connect \func_set_bit$func$alu.sv:137$56.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:137$56.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:137$56.divisor 4'x
+  connect \func_set_bit$func$alu.sv:137$56.i 4'x
+  connect \func_set_bit$func$alu.sv:137$56.value 5'x
+  connect \func_set_bit$func$alu.sv:162$61.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:162$61.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:162$61.divisor 4'x
+  connect \func_set_bit$func$alu.sv:162$61.i 4'x
+  connect \func_set_bit$func$alu.sv:162$61.value 5'x
+  connect \func_set_bit$func$alu.sv:162$65.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:162$65.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:162$65.divisor 4'x
+  connect \func_set_bit$func$alu.sv:162$65.i 4'x
+  connect \func_set_bit$func$alu.sv:162$65.value 5'x
+  connect \func_set_bit$func$alu.sv:162$69.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:162$69.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:162$69.divisor 4'x
+  connect \func_set_bit$func$alu.sv:162$69.i 4'x
+  connect \func_set_bit$func$alu.sv:162$69.value 5'x
+  connect \func_set_bit$func$alu.sv:162$73.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:162$73.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:162$73.divisor 4'x
+  connect \func_set_bit$func$alu.sv:162$73.i 4'x
+  connect \func_set_bit$func$alu.sv:162$73.value 5'x
+  connect \func_set_bit$func$alu.sv:86$10.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:86$10.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:86$10.divisor 4'x
+  connect \func_set_bit$func$alu.sv:86$10.i 4'x
+  connect \func_set_bit$func$alu.sv:86$10.value 5'x
+  connect \func_set_bit$func$alu.sv:86$14.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:86$14.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:86$14.divisor 4'x
+  connect \func_set_bit$func$alu.sv:86$14.i 4'x
+  connect \func_set_bit$func$alu.sv:86$14.value 5'x
+  connect \func_set_bit$func$alu.sv:86$18.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:86$18.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:86$18.divisor 4'x
+  connect \func_set_bit$func$alu.sv:86$18.i 4'x
+  connect \func_set_bit$func$alu.sv:86$18.value 5'x
+  connect \func_set_bit$func$alu.sv:86$22.bit_v 1'x
+  connect \func_set_bit$func$alu.sv:86$22.current_bit 1'x
+  connect \func_set_bit$func$alu.sv:86$22.divisor 4'x
+  connect \func_set_bit$func$alu.sv:86$22.i 4'x
+  connect \func_set_bit$func$alu.sv:86$22.value 5'x
+  connect \func_xor$func$alu.sv:204$58.aux_0 1'x
+  connect \func_xor$func$alu.sv:204$58.aux_1 1'x
+  connect \func_xor$func$alu.sv:204$58.aux_2 5'x
+  connect \func_xor$func$alu.sv:204$58.bit_v 2'x
+  connect \func_xor$func$alu.sv:204$58.bit_v_1 1'x
+  connect \func_xor$func$alu.sv:204$58.data1 4'x
+  connect \func_xor$func$alu.sv:204$58.data2 4'x
+  connect \func_xor$func$alu.sv:204$58.i 4'x
 end
