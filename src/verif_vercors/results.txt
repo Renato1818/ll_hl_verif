@@ -1,0 +1,30 @@
+Testing robot/robot.pvl:
+40.758
+36.138
+41.626
+
+Min: 36.138
+Max: 41.626
+Average: 39.507
+Standard Deviation: 2.950
+
+Testing half_adder/Main.pvl:
+0.520
+0.519
+0.606
+
+Min: 0.519
+Max: 0.606
+Average: 0.548
+Standard Deviation: 0.050
+
+Testing full_adder/Main.pvl:
+0.726
+0.676
+0.577
+
+Min: 0.577
+Max: 0.726
+Average: 0.660
+Standard Deviation: 0.076
+

@@ -13,13 +13,13 @@ import numpy as np
 N = 3
 
 # Command to execute
-command = ["vercors", "--silicon", "--progress"]
+command = ["vercors-1", "--silicon"]
 
 # List of files to test and their corresponding names
 files_to_test = [
     ("robot/robot.pvl", "Robot"),
-    ("half_adder/Main.pvl", "Half Adder"),
-    ("full_adder/Main.pvl", "Full Adder")
+    ("half_adder/half_adder.pvl", "Half Adder"),
+    ("full_adder/full_adder.pvl", "Full Adder")
 ]
 
 output_file = "results.txt"
