@@ -9,8 +9,9 @@ results_files = [
 ]  # List of result files
 plot_title = "Performance Metrics Comparison"  # Title of the plot
 output_image = "performance_metrics_comparison.png"  # Output image file name
+add_trendline = True  # Set to True to add a trendline
 
-# Function to read results from the file
+# Read results from the file
 def read_results(file_path):
     statistics_data = []
     with open(file_path, 'r') as file:
@@ -34,45 +35,48 @@ def read_results(file_path):
                 i += 1
     return statistics_data
 
-# Function to plot data from multiple files
-def plot_results(results_data, plot_title, output_image):
-    fig, ax = plt.subplots(figsize=(12, 6))
+# Plot data from multiple files
+def plot_results(results_data, plot_title, output_image, add_trendline):
+    fig, ax1 = plt.subplots(figsize=(12, 6))
 
     colors = ['gray', 'lightgray']
     labels = []
 
+    # Create a secondary y-axis
+    ax2 = ax1.twinx()
+
+    bar_width = 0.35
     for index, data in enumerate(results_data):
         test_names, min_times, max_times, avg_times, _ = zip(*data)
         x = np.arange(len(test_names))  # the label locations
 
         # Plot the average bars
-        bar_width = 0.35
-        bars_avg = ax.bar(x + index * bar_width, avg_times, bar_width, label=f'Average - Dataset {index + 1}', color=colors[index])
-        
+        bars_avg = ax1.bar(x + index * bar_width, avg_times, bar_width, label=f'Average - Dataset {index + 1}', color=colors[index])
+
         # Add the variation between min and max
         for i in range(len(x)):
-            ax.vlines(x[i] + index * bar_width, min_times[i], max_times[i], color='black', linestyle='dashed')
+            ax1.vlines(x[i] + index * bar_width, min_times[i], max_times[i], color='black', linestyle='dashed')
+
+        # Optional trendline
+        if add_trendline:
+            z = np.polyfit(x, avg_times, 1)
+            p = np.poly1d(z)
+            ax1.plot(x + index * bar_width, p(x), "--", color='black', label=f'Trendline - Dataset {index + 1}')
 
         labels.append(f'Dataset {index + 1}')
 
-    # Optional trendline
-    add_trendline = True
-    if add_trendline:
-        for index, data in enumerate(results_data):
-            _, _, _, avg_times, _ = zip(*data)
-            x = np.arange(len(avg_times))
-            z = np.polyfit(x, avg_times, 1)
-            p = np.poly1d(z)
-            plt.plot(x + index * bar_width, p(x), "--", color='black', label=f'Trendline - Dataset {index + 1}')
+    # Add some text for labels, title, and custom x-axis tick labels, etc.
+    ax1.set_xlabel('Test Case')
+    ax1.set_ylabel('Time (s)')
+    ax1.set_title(plot_title)
+    ax1.set_xticks(x + (len(results_data) - 1) * bar_width / 2)
+    ax1.set_xticklabels(test_names)
+    ax1.legend(loc='upper left')
 
-    # Add some text for labels, title and custom x-axis tick labels, etc.
-    ax.set_xlabel('Test Case')
-    ax.set_ylabel('Time (s)')
-    ax.set_title(plot_title)
-    ax.set_xticks(x + (len(results_data) - 1) * bar_width / 2)
-    ax.set_xticklabels(test_names)
-    ax.legend()
+    # Add the secondary y-axis label (example purpose)
+    ax2.set_ylabel('Secondary Metric')  # You can change this label according to your needs
 
+    # Adjust layout and save image
     fig.tight_layout()
     plt.grid(True)
     plt.savefig(output_image)
@@ -83,4 +87,4 @@ def plot_results(results_data, plot_title, output_image):
 results_data = [read_results(file) for file in results_files]
 
 # Plot the results
-plot_results(results_data, plot_title, output_image)
+plot_results(results_data, plot_title, output_image, add_trendline)
