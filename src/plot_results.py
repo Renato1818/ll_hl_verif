@@ -8,15 +8,12 @@ results_files = [
     "verif_sby/results.txt"
 ]  # List of result files
 file_labels = [
-    "Robot", 
-    "Half Adder",
-    "Full Adder",
-    "ALU"
-] 
-
-plot_title = "Performance Metrics Comparison"  # Title of the plot
+    "HL Verif",  # Legend label for the first dataset
+    "LL Verif"   # Legend label for the second dataset
+]  # Simplified labels for each dataset
+plot_title = "Experimental Results Comparison"  # Title of the plot
 output_image = "performance_metrics_comparison.png"  # Output image file name
-add_trendline = True  # Set to True to add a trendline
+add_trendline = False  # Set to True to add a trendline
 
 # Read results from the file
 def read_results(file_path):
@@ -54,7 +51,7 @@ def plot_results(results_data, file_labels, plot_title, output_image, add_trendl
     x1 = np.arange(len(test_names1))  # Positions for the bars
 
     # Plot the average bars for the first dataset
-    bars_avg1 = ax1.bar(x1 - offset, avg_times1, bar_width, label=f'Average - {file_labels[0]}', color='gray')
+    bars_avg1 = ax1.bar(x1 - offset, avg_times1, bar_width, label=file_labels[0], color='gray')
 
     # Add the variation between min and max for the first dataset
     for i in range(len(x1)):
@@ -74,7 +71,7 @@ def plot_results(results_data, file_labels, plot_title, output_image, add_trendl
     x2 = np.arange(len(test_names2))  # Positions for the bars
 
     # Plot the average bars for the second dataset
-    bars_avg2 = ax2.bar(x2 + offset, avg_times2, bar_width, label=f'Average - {file_labels[1]}', color='lightgray')
+    bars_avg2 = ax2.bar(x2 + offset, avg_times2, bar_width, label=file_labels[1], color='lightgray')
 
     # Add the variation between min and max for the second dataset
     for i in range(len(x2)):
@@ -86,17 +83,17 @@ def plot_results(results_data, file_labels, plot_title, output_image, add_trendl
         p = np.poly1d(z)
         ax2.plot(x2, p(x2), "--", color='black', label=f'Trendline - {file_labels[1]}')
 
-    # Add labels, title, and custom x-axis tick labels
-    ax1.set_xlabel('Test Case')
-    ax1.set_ylabel('Time (s) - Dataset 1')
-    ax2.set_ylabel('Time (s) - Dataset 2')
+    # Set labels, title, and custom x-axis tick labels
+    ax1.set_xlabel('Verif Case')
+    ax1.set_ylabel('Time (s) - HL Verif')
+    ax2.set_ylabel('Time (s) - LL Verif')
     ax1.set_title(plot_title)
 
     # Combine x-ticks and labels for both datasets
     combined_x = np.concatenate([x1 - offset, x2 + offset])
-    combined_labels = file_labels * max(len(test_names1), len(test_names2))
-    
-    # Set x-ticks and labels
+    combined_labels = test_names1 + test_names2
+
+    # Set x-ticks and labels for primary and secondary axes
     ax1.set_xticks(x1)  # Set ticks only where bars are placed
     ax1.set_xticklabels(test_names1, rotation=45, ha='right')
 
