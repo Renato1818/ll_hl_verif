@@ -25,7 +25,7 @@ files_to_test = [
 output_file = "results.txt"
 statistics_file = "statistics.txt"
 tmp_folder = "tmp"
-add_trendline = True  # Set to True to add a trendline
+add_trendline = False  # Set to True to add a trendline
 
 # Function to write results to the output file
 def write_results(file, file_path, elapsed_times):
@@ -92,17 +92,15 @@ x = np.arange(len(test_names))  # the label locations
 
 fig, ax = plt.subplots(figsize=(10, 5))
 
-# Plot the bars
+# Plot the average bars
 bar_width = 0.35
-bars_avg = ax.bar(x, avg_times, bar_width, label='Average', color='b')
-bars_min = ax.bar(x - bar_width / 2, min_times, bar_width, label='Min', color='r')
-bars_max = ax.bar(x + bar_width / 2, max_times, bar_width, label='Max', color='g')
+bars_avg = ax.bar(x, avg_times, bar_width, label='Average', color='lightgrey')
 
 # Optional trendline
 if add_trendline:
     z = np.polyfit(x, avg_times, 1)
     p = np.poly1d(z)
-    plt.plot(x, p(x), "--", color='lightgrey', label='Trendline (Average)')
+    plt.plot(x, p(x), "--", color='black', label='Trendline (Average)')
 
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_xlabel('Test Case')
@@ -114,7 +112,7 @@ ax.legend()
 
 # Add the variation between min and max
 for i in range(len(x)):
-    ax.vlines(x[i], min_times[i], max_times[i], color='gray', linestyle='dashed')
+    ax.vlines(x[i], min_times[i], max_times[i], color='black', linestyle='dashed')
 
 fig.tight_layout()
 plt.grid(True)
