@@ -1,4 +1,4 @@
-Testing robot/FPV.sby:
+Testing Robot:
 1.134
 0.990
 1.025
@@ -20,7 +20,7 @@ Max: 1.726
 Average: 1.312
 Standard Deviation: 0.250
 
-Testing half_adder/FPV.sby:
+Testing Half_Adder:
 1.578
 1.464
 1.426
@@ -42,7 +42,7 @@ Max: 1.850
 Average: 1.675
 Standard Deviation: 0.134
 
-Testing full_adder/FPV.sby:
+Testing Full_Adder:
 1.742
 1.774
 2.545
@@ -64,7 +64,7 @@ Max: 3.391
 Average: 1.884
 Standard Deviation: 0.474
 
-Testing alu/FPV.sby:
+Testing ALU:
 7.987
 7.766
 7.905
