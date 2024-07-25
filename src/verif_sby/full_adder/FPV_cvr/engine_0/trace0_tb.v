@@ -8,16 +8,16 @@ module testbench(input clock, output reg genclock);
 `endif
   reg genclock = 1;
   reg [31:0] cycle = 0;
-  wire [0:0] PI_clk = clock;
   reg [0:0] PI_carry_in;
   reg [0:0] PI_rstn;
   reg [0:0] PI_b;
+  wire [0:0] PI_clk = clock;
   reg [0:0] PI_a;
   full_adder UUT (
-    .clk(PI_clk),
     .carry_in(PI_carry_in),
     .rstn(PI_rstn),
     .b(PI_b),
+    .clk(PI_clk),
     .a(PI_a)
   );
 `ifndef VERILATOR

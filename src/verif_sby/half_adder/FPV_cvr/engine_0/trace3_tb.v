@@ -10,13 +10,13 @@ module testbench(input clock, output reg genclock);
   reg [31:0] cycle = 0;
   wire [0:0] PI_clk = clock;
   reg [0:0] PI_a;
-  reg [0:0] PI_rstn;
   reg [0:0] PI_b;
+  reg [0:0] PI_rstn;
   half_adder UUT (
     .clk(PI_clk),
     .a(PI_a),
-    .rstn(PI_rstn),
-    .b(PI_b)
+    .b(PI_b),
+    .rstn(PI_rstn)
   );
 `ifndef VERILATOR
   initial begin
@@ -58,15 +58,15 @@ module testbench(input clock, output reg genclock);
 
     // state 0
     PI_a = 1'b0;
-    PI_rstn = 1'b0;
     PI_b = 1'b0;
+    PI_rstn = 1'b0;
   end
   always @(posedge clock) begin
     // state 1
     if (cycle == 0) begin
       PI_a <= 1'b0;
-      PI_rstn <= 1'b0;
       PI_b <= 1'b0;
+      PI_rstn <= 1'b0;
     end
 
     genclock <= cycle < 1;

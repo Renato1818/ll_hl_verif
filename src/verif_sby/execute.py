@@ -13,19 +13,18 @@ import numpy as np
 N = 15
 
 # Command to execute
-command = ["vercors-1", "--silicon"]
+command = ["sby", "-f"]
 
 # List of files to test and their corresponding names
 files_to_test = [
-    ("robot/robot.pvl", "Robot"),
-    ("half_adder/half_adder.pvl", "Half Adder"),
-    ("full_adder/full_adder.pvl", "Full Adder"),
-    ("alu/alu.pvl", "ALU")
+    ("robot/FPV.sby", "Robot"),
+    ("half_adder/FPV.sby", "Half Adder"),
+    ("full_adder/FPV.sby", "Full Adder"),
+    ("alu/FPV.sby", "ALU")
 ]
 
 output_file = "results.txt"
 statistics_file = "statistics.txt"
-tmp_folder = "tmp"
 add_trendline = False  # Set to True to add a trendline
 
 # Function to write results to the output file
@@ -81,11 +80,6 @@ with open(output_file, 'w') as results_file, open(statistics_file, 'w') as stats
 
         # Append data for chart
         statistics_data.append((test_name, min_time, max_time, avg_time))
-
-# Delete the tmp folder and its contents
-if os.path.exists(tmp_folder):
-    shutil.rmtree(tmp_folder)
-    print(f"Deleted the {tmp_folder} folder and its contents.")
 
 # Create the stock chart
 test_names, min_times, max_times, avg_times = zip(*statistics_data)

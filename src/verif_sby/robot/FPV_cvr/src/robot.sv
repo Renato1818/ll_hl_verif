@@ -56,12 +56,6 @@ module robot #(
 		//Declare when verifications is valid
         reg f_past_valid = 1'b0;
         reg f_past_past_valid = 1'b0;
-        //always @($global_clock) f_past_valid <= 1'b1; //to use $past property
-		//always @(negedge rstn) begin
-		//	if ( !rstn ) begin
-		//		f_past_valid <= 1'd0;
-		//	end 
-		//end
 
 		assign f_obs = (dist_v < MIN_DIST) ? 1'd1 : 1'd0;
 		assign f_obs_res = f_obs_past ^ obs_detected_out;

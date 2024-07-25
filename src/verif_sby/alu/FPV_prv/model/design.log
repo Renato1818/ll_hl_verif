@@ -1315,6 +1315,6 @@ Module alu directly or indirectly contains formal properties -> setting "keep" a
 Output filename: ../model/design.il
 
 Warnings: 10 unique messages, 10 total
-End of script. Logfile hash: 1a0cbf736f, CPU: user 1.20s system 0.04s, MEM: 27.31 MB peak
+End of script. Logfile hash: 1a0cbf736f, CPU: user 0.80s system 0.03s, MEM: 27.50 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 35% 1x proc_mux (0 sec), 18% 6x opt_expr (0 sec), ...
+Time spent: 27% 1x proc_mux (0 sec), 20% 6x opt_expr (0 sec), ...

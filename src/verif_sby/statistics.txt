@@ -1,0 +1,5 @@
+Test Case            Min        Max        Average         Standard Deviation  
+Robot                0.960      1.726      1.312           0.250               
+Half Adder           1.426      1.850      1.675           0.134               
+Full Adder           1.581      3.391      1.884           0.474               
+ALU                  7.691      9.725      8.467           0.685               

@@ -8,17 +8,17 @@ module testbench(input clock, output reg genclock);
 `endif
   reg genclock = 1;
   reg [31:0] cycle = 0;
-  reg [0:0] PI_rstn;
   reg [2:0] PI_OPCODE;
   reg [3:0] PI_OP2;
-  wire [0:0] PI_clk = clock;
   reg [3:0] PI_OP1;
+  wire [0:0] PI_clk = clock;
+  reg [0:0] PI_rstn;
   alu UUT (
-    .rstn(PI_rstn),
     .OPCODE(PI_OPCODE),
     .OP2(PI_OP2),
+    .OP1(PI_OP1),
     .clk(PI_clk),
-    .OP1(PI_OP1)
+    .rstn(PI_rstn)
   );
 `ifndef VERILATOR
   initial begin
@@ -101,18 +101,18 @@ module testbench(input clock, output reg genclock);
     UUT._witness_.anyinit_procdff_4519 = 1'b0;
 
     // state 0
-    PI_rstn = 1'b1;
     PI_OPCODE = 3'b010;
     PI_OP2 = 4'b0000;
     PI_OP1 = 4'b0000;
+    PI_rstn = 1'b1;
   end
   always @(posedge clock) begin
     // state 1
     if (cycle == 0) begin
-      PI_rstn <= 1'b1;
       PI_OPCODE <= 3'b010;
       PI_OP2 <= 4'b0000;
       PI_OP1 <= 4'b0000;
+      PI_rstn <= 1'b1;
     end
 
     genclock <= cycle < 1;

@@ -4,71 +4,71 @@ attribute \keep 1
 attribute \hdlname "\\robot"
 attribute \dynports 1
 attribute \top 1
-attribute \src "robot.sv:1.1-112.10"
+attribute \src "robot.sv:1.1-106.10"
 module \robot
   parameter \DATA_IN_WIDTH 16
   parameter \MIN_DIST 16'0000000000110010
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:100$6_CHECK[0:0]$35
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:103$8_CHECK[0:0]$39
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:106$10_CHECK[0:0]$43
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:88$1_CHECK[0:0]$25
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:88$1_EN[0:0]$26
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:89$2_CHECK[0:0]$27
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:92$3_CHECK[0:0]$29
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:92$3_EN[0:0]$30
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:95$4_CHECK[0:0]$31
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:95$4_EN[0:0]$32
-  attribute \src "robot.sv:86.9-108.12"
-  wire $0$formal$robot.sv:99$5_CHECK[0:0]$33
-  attribute \src "robot.sv:70.3-83.6"
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:100$10_CHECK[0:0]$43
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:82$1_CHECK[0:0]$25
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:82$1_EN[0:0]$26
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:83$2_CHECK[0:0]$27
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:86$3_CHECK[0:0]$29
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:86$3_EN[0:0]$30
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:89$4_CHECK[0:0]$31
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:89$4_EN[0:0]$32
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:93$5_CHECK[0:0]$33
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:94$6_CHECK[0:0]$35
+  attribute \src "robot.sv:80.9-102.12"
+  wire $0$formal$robot.sv:97$8_CHECK[0:0]$39
+  attribute \src "robot.sv:64.3-77.6"
   wire $0\f_past_past_valid[0:0]
   wire $auto$rtlil.cc:2558:Mux$134
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:100$6_CHECK
+  wire $formal$robot.sv:100$10_CHECK
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:102$7_CHECK
-  attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:103$8_CHECK
-  attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:105$9_CHECK
-  attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:106$10_CHECK
-  attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:88$1_CHECK
+  wire $formal$robot.sv:82$1_CHECK
   attribute \init 1'0
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:88$1_EN
+  wire $formal$robot.sv:82$1_EN
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:89$2_CHECK
+  wire $formal$robot.sv:83$2_CHECK
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:92$3_CHECK
+  wire $formal$robot.sv:86$3_CHECK
   attribute \init 1'0
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:92$3_EN
+  wire $formal$robot.sv:86$3_EN
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:95$4_CHECK
+  wire $formal$robot.sv:89$4_CHECK
   attribute \init 1'0
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:95$4_EN
+  wire $formal$robot.sv:89$4_EN
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:99$5_CHECK
+  wire $formal$robot.sv:93$5_CHECK
   attribute \init 1'0
   attribute \src "robot.sv:0.0-0.0"
-  wire $formal$robot.sv:99$5_EN
-  attribute \src "robot.sv:92.36-92.46"
-  wire $logic_not$robot.sv:92$48_Y
-  attribute \src "robot.sv:95.29-95.41"
-  wire $logic_not$robot.sv:95$49_Y
+  wire $formal$robot.sv:93$5_EN
+  attribute \src "robot.sv:0.0-0.0"
+  wire $formal$robot.sv:94$6_CHECK
+  attribute \src "robot.sv:0.0-0.0"
+  wire $formal$robot.sv:96$7_CHECK
+  attribute \src "robot.sv:0.0-0.0"
+  wire $formal$robot.sv:97$8_CHECK
+  attribute \src "robot.sv:0.0-0.0"
+  wire $formal$robot.sv:99$9_CHECK
+  attribute \src "robot.sv:86.36-86.46"
+  wire $logic_not$robot.sv:86$48_Y
+  attribute \src "robot.sv:89.29-89.41"
+  wire $logic_not$robot.sv:89$49_Y
   attribute \src "robot.sv:24.30-24.52"
   wire $lt$robot.sv:24$11_Y
   wire $procmux$103_Y
@@ -118,8 +118,16 @@ module \robot
     connect \S \rstn
     connect \Y $auto$rtlil.cc:2558:Mux$134
   end
-  attribute \src "robot.sv:100.27-100.45"
-  cell $eq $eq$robot.sv:100$51
+  attribute \src "robot.sv:93.27-93.45"
+  cell $logic_not $eq$robot.sv:93$50
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 16
+    parameter \Y_WIDTH 1
+    connect \A \dist_v
+    connect \Y $0$formal$robot.sv:93$5_CHECK[0:0]$33
+  end
+  attribute \src "robot.sv:94.27-94.45"
+  cell $eq $eq$robot.sv:94$51
     parameter \A_SIGNED 0
     parameter \A_WIDTH 16
     parameter \B_SIGNED 0
@@ -127,47 +135,39 @@ module \robot
     parameter \Y_WIDTH 1
     connect \A \dist_v
     connect \B 15'111111111111111
-    connect \Y $0$formal$robot.sv:100$6_CHECK[0:0]$35
+    connect \Y $0$formal$robot.sv:94$6_CHECK[0:0]$35
   end
-  attribute \src "robot.sv:99.27-99.45"
-  cell $logic_not $eq$robot.sv:99$50
-    parameter \A_SIGNED 0
-    parameter \A_WIDTH 16
-    parameter \Y_WIDTH 1
-    connect \A \dist_v
-    connect \Y $0$formal$robot.sv:99$5_CHECK[0:0]$33
-  end
-  attribute \src "robot.sv:103.38-103.55"
-  cell $logic_not $logic_not$robot.sv:103$52
-    parameter \A_SIGNED 0
-    parameter \A_WIDTH 1
-    parameter \Y_WIDTH 1
-    connect \A \obs_detected
-    connect \Y $0$formal$robot.sv:103$8_CHECK[0:0]$39
-  end
-  attribute \src "robot.sv:106.27-106.38"
-  cell $logic_not $logic_not$robot.sv:106$53
+  attribute \src "robot.sv:100.27-100.38"
+  cell $logic_not $logic_not$robot.sv:100$53
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \out_alarm_flag
-    connect \Y $0$formal$robot.sv:106$10_CHECK[0:0]$43
+    connect \Y $0$formal$robot.sv:100$10_CHECK[0:0]$43
   end
-  attribute \src "robot.sv:92.36-92.46"
-  cell $logic_not $logic_not$robot.sv:92$48
+  attribute \src "robot.sv:82.52-82.69"
+  cell $logic_not $logic_not$robot.sv:82$46
+    parameter \A_SIGNED 0
+    parameter \A_WIDTH 1
+    parameter \Y_WIDTH 1
+    connect \A \obs_detected
+    connect \Y $0$formal$robot.sv:97$8_CHECK[0:0]$39
+  end
+  attribute \src "robot.sv:86.36-86.46"
+  cell $logic_not $logic_not$robot.sv:86$48
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \f_obs_res
-    connect \Y $logic_not$robot.sv:92$48_Y
+    connect \Y $logic_not$robot.sv:86$48_Y
   end
-  attribute \src "robot.sv:95.29-95.41"
-  cell $logic_not $logic_not$robot.sv:95$49
+  attribute \src "robot.sv:89.29-89.41"
+  cell $logic_not $logic_not$robot.sv:89$49
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \Y_WIDTH 1
     connect \A \f_alarm_res
-    connect \Y $logic_not$robot.sv:95$49_Y
+    connect \Y $logic_not$robot.sv:89$49_Y
   end
   attribute \src "robot.sv:24.30-24.52"
   cell $lt $lt$robot.sv:24$11
@@ -180,119 +180,119 @@ module \robot
     connect \B 6'110010
     connect \Y $lt$robot.sv:24$11_Y
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$110
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:88$1_CHECK[0:0]$25
-    connect \Q $formal$robot.sv:88$1_CHECK
+    connect \D $0$formal$robot.sv:82$1_CHECK[0:0]$25
+    connect \Q $formal$robot.sv:82$1_CHECK
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$111
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:88$1_EN[0:0]$26
-    connect \Q $formal$robot.sv:88$1_EN
+    connect \D $0$formal$robot.sv:82$1_EN[0:0]$26
+    connect \Q $formal$robot.sv:82$1_EN
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$112
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:89$2_CHECK[0:0]$27
-    connect \Q $formal$robot.sv:89$2_CHECK
+    connect \D $0$formal$robot.sv:83$2_CHECK[0:0]$27
+    connect \Q $formal$robot.sv:83$2_CHECK
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$114
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:92$3_CHECK[0:0]$29
-    connect \Q $formal$robot.sv:92$3_CHECK
+    connect \D $0$formal$robot.sv:86$3_CHECK[0:0]$29
+    connect \Q $formal$robot.sv:86$3_CHECK
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$115
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:92$3_EN[0:0]$30
-    connect \Q $formal$robot.sv:92$3_EN
+    connect \D $0$formal$robot.sv:86$3_EN[0:0]$30
+    connect \Q $formal$robot.sv:86$3_EN
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$116
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:95$4_CHECK[0:0]$31
-    connect \Q $formal$robot.sv:95$4_CHECK
+    connect \D $0$formal$robot.sv:89$4_CHECK[0:0]$31
+    connect \Q $formal$robot.sv:89$4_CHECK
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$117
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:95$4_EN[0:0]$32
-    connect \Q $formal$robot.sv:95$4_EN
+    connect \D $0$formal$robot.sv:89$4_EN[0:0]$32
+    connect \Q $formal$robot.sv:89$4_EN
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$118
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:99$5_CHECK[0:0]$33
-    connect \Q $formal$robot.sv:99$5_CHECK
+    connect \D $0$formal$robot.sv:93$5_CHECK[0:0]$33
+    connect \Q $formal$robot.sv:93$5_CHECK
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$119
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D 1'1
-    connect \Q $formal$robot.sv:99$5_EN
+    connect \Q $formal$robot.sv:93$5_EN
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$120
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:100$6_CHECK[0:0]$35
-    connect \Q $formal$robot.sv:100$6_CHECK
+    connect \D $0$formal$robot.sv:94$6_CHECK[0:0]$35
+    connect \Q $formal$robot.sv:94$6_CHECK
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$122
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D \obs_detected
-    connect \Q $formal$robot.sv:102$7_CHECK
+    connect \Q $formal$robot.sv:96$7_CHECK
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$124
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:103$8_CHECK[0:0]$39
-    connect \Q $formal$robot.sv:103$8_CHECK
+    connect \D $0$formal$robot.sv:97$8_CHECK[0:0]$39
+    connect \Q $formal$robot.sv:97$8_CHECK
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$126
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
     connect \D \out_alarm_flag
-    connect \Q $formal$robot.sv:105$9_CHECK
+    connect \Q $formal$robot.sv:99$9_CHECK
   end
-  attribute \src "robot.sv:86.9-108.12"
+  attribute \src "robot.sv:80.9-102.12"
   cell $dff $procdff$128
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
     connect \CLK \clk
-    connect \D $0$formal$robot.sv:106$10_CHECK[0:0]$43
-    connect \Q $formal$robot.sv:106$10_CHECK
+    connect \D $0$formal$robot.sv:100$10_CHECK[0:0]$43
+    connect \Q $formal$robot.sv:100$10_CHECK
   end
-  attribute \src "robot.sv:70.3-83.6"
+  attribute \src "robot.sv:64.3-77.6"
   cell $adff $procdff$130
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 1'0
@@ -303,7 +303,7 @@ module \robot
     connect \D \f_obs
     connect \Q \f_obs_past
   end
-  attribute \src "robot.sv:70.3-83.6"
+  attribute \src "robot.sv:64.3-77.6"
   cell $adff $procdff$131
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 1'0
@@ -314,7 +314,7 @@ module \robot
     connect \D \f_obs_past
     connect \Q \f_obs_past_past
   end
-  attribute \src "robot.sv:70.3-83.6"
+  attribute \src "robot.sv:64.3-77.6"
   cell $adff $procdff$132
     parameter \ARST_POLARITY 1'0
     parameter \ARST_VALUE 1'0
@@ -325,7 +325,7 @@ module \robot
     connect \D 1'1
     connect \Q \f_past_valid
   end
-  attribute \src "robot.sv:70.3-83.6"
+  attribute \src "robot.sv:64.3-77.6"
   cell $dff $procdff$135
     parameter \CLK_POLARITY 1'1
     parameter \WIDTH 1
@@ -356,32 +356,32 @@ module \robot
     connect \Q \obs_detected
   end
   attribute \full_case 1
-  attribute \src "robot.sv:87.8-87.13|robot.sv:87.4-97.16"
+  attribute \src "robot.sv:81.8-81.13|robot.sv:81.4-91.16"
   cell $mux $procmux$101
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$98_Y
     connect \S \rstn
-    connect \Y $0$formal$robot.sv:95$4_EN[0:0]$32
+    connect \Y $0$formal$robot.sv:89$4_EN[0:0]$32
   end
-  attribute \src "robot.sv:94.9-94.26|robot.sv:94.5-96.8"
+  attribute \src "robot.sv:88.9-88.26|robot.sv:88.5-90.8"
   cell $mux $procmux$103
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $logic_not$robot.sv:95$49_Y
+    connect \B $logic_not$robot.sv:89$49_Y
     connect \S \f_past_past_valid
     connect \Y $procmux$103_Y
   end
   attribute \full_case 1
-  attribute \src "robot.sv:87.8-87.13|robot.sv:87.4-97.16"
+  attribute \src "robot.sv:81.8-81.13|robot.sv:81.4-91.16"
   cell $mux $procmux$106
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$103_Y
     connect \S \rstn
-    connect \Y $0$formal$robot.sv:95$4_CHECK[0:0]$31
+    connect \Y $0$formal$robot.sv:89$4_CHECK[0:0]$31
   end
-  attribute \src "robot.sv:78.9-78.21|robot.sv:78.5-80.8"
+  attribute \src "robot.sv:72.9-72.21|robot.sv:72.5-74.8"
   cell $mux $procmux$108
     parameter \WIDTH 1
     connect \A \f_past_past_valid
@@ -390,33 +390,33 @@ module \robot
     connect \Y $0\f_past_past_valid[0:0]
   end
   attribute \full_case 1
-  attribute \src "robot.sv:87.8-87.13|robot.sv:87.4-97.16"
+  attribute \src "robot.sv:81.8-81.13|robot.sv:81.4-91.16"
   cell $mux $procmux$77
     parameter \WIDTH 1
     connect \A 1'1
     connect \B 1'0
     connect \S \rstn
-    connect \Y $0$formal$robot.sv:88$1_EN[0:0]$26
+    connect \Y $0$formal$robot.sv:82$1_EN[0:0]$26
   end
   attribute \full_case 1
-  attribute \src "robot.sv:87.8-87.13|robot.sv:87.4-97.16"
+  attribute \src "robot.sv:81.8-81.13|robot.sv:81.4-91.16"
   cell $mux $procmux$80
     parameter \WIDTH 1
-    connect \A $0$formal$robot.sv:103$8_CHECK[0:0]$39
+    connect \A $0$formal$robot.sv:97$8_CHECK[0:0]$39
     connect \B 1'x
     connect \S \rstn
-    connect \Y $0$formal$robot.sv:88$1_CHECK[0:0]$25
+    connect \Y $0$formal$robot.sv:82$1_CHECK[0:0]$25
   end
   attribute \full_case 1
-  attribute \src "robot.sv:87.8-87.13|robot.sv:87.4-97.16"
+  attribute \src "robot.sv:81.8-81.13|robot.sv:81.4-91.16"
   cell $mux $procmux$86
     parameter \WIDTH 1
-    connect \A $0$formal$robot.sv:106$10_CHECK[0:0]$43
+    connect \A $0$formal$robot.sv:100$10_CHECK[0:0]$43
     connect \B 1'x
     connect \S \rstn
-    connect \Y $0$formal$robot.sv:89$2_CHECK[0:0]$27
+    connect \Y $0$formal$robot.sv:83$2_CHECK[0:0]$27
   end
-  attribute \src "robot.sv:91.9-91.21|robot.sv:91.5-93.8"
+  attribute \src "robot.sv:85.9-85.21|robot.sv:85.5-87.8"
   cell $mux $procmux$88
     parameter \WIDTH 1
     connect \A 1'0
@@ -425,32 +425,32 @@ module \robot
     connect \Y $procmux$88_Y
   end
   attribute \full_case 1
-  attribute \src "robot.sv:87.8-87.13|robot.sv:87.4-97.16"
+  attribute \src "robot.sv:81.8-81.13|robot.sv:81.4-91.16"
   cell $mux $procmux$91
     parameter \WIDTH 1
     connect \A 1'0
     connect \B $procmux$88_Y
     connect \S \rstn
-    connect \Y $0$formal$robot.sv:92$3_EN[0:0]$30
+    connect \Y $0$formal$robot.sv:86$3_EN[0:0]$30
   end
-  attribute \src "robot.sv:91.9-91.21|robot.sv:91.5-93.8"
+  attribute \src "robot.sv:85.9-85.21|robot.sv:85.5-87.8"
   cell $mux $procmux$93
     parameter \WIDTH 1
     connect \A 1'x
-    connect \B $logic_not$robot.sv:92$48_Y
+    connect \B $logic_not$robot.sv:86$48_Y
     connect \S \f_past_valid
     connect \Y $procmux$93_Y
   end
   attribute \full_case 1
-  attribute \src "robot.sv:87.8-87.13|robot.sv:87.4-97.16"
+  attribute \src "robot.sv:81.8-81.13|robot.sv:81.4-91.16"
   cell $mux $procmux$96
     parameter \WIDTH 1
     connect \A 1'x
     connect \B $procmux$93_Y
     connect \S \rstn
-    connect \Y $0$formal$robot.sv:92$3_CHECK[0:0]$29
+    connect \Y $0$formal$robot.sv:86$3_CHECK[0:0]$29
   end
-  attribute \src "robot.sv:94.9-94.26|robot.sv:94.5-96.8"
+  attribute \src "robot.sv:88.9-88.26|robot.sv:88.5-90.8"
   cell $mux $procmux$98
     parameter \WIDTH 1
     connect \A 1'0
@@ -474,8 +474,8 @@ module \robot
     connect \S \obs_detected
     connect \Y \alarm_flag_next
   end
-  attribute \src "robot.sv:67.22-67.51"
-  cell $xor $xor$robot.sv:67$20
+  attribute \src "robot.sv:61.22-61.51"
+  cell $xor $xor$robot.sv:61$20
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -485,8 +485,8 @@ module \robot
     connect \B \obs_detected
     connect \Y \f_obs_res
   end
-  attribute \src "robot.sv:68.24-68.52"
-  cell $xor $xor$robot.sv:68$21
+  attribute \src "robot.sv:62.24-62.52"
+  cell $xor $xor$robot.sv:62$21
     parameter \A_SIGNED 0
     parameter \A_WIDTH 1
     parameter \B_SIGNED 0
@@ -496,55 +496,55 @@ module \robot
     connect \B \out_alarm_flag
     connect \Y \f_alarm_res
   end
-  attribute \src "robot.sv:95.6-95.43"
+  attribute \src "robot.sv:89.6-89.43"
   cell $assert \assert_alarm
-    connect \A $formal$robot.sv:95$4_CHECK
-    connect \EN $formal$robot.sv:95$4_EN
+    connect \A $formal$robot.sv:89$4_CHECK
+    connect \EN $formal$robot.sv:89$4_EN
   end
-  attribute \src "robot.sv:89.17-89.63"
+  attribute \src "robot.sv:83.17-83.63"
   cell $assert \assert_alarm_false_reset
-    connect \A $formal$robot.sv:89$2_CHECK
-    connect \EN $formal$robot.sv:88$1_EN
+    connect \A $formal$robot.sv:83$2_CHECK
+    connect \EN $formal$robot.sv:82$1_EN
   end
-  attribute \src "robot.sv:92.6-92.48"
+  attribute \src "robot.sv:86.6-86.48"
   cell $assert \assert_obs_detected
-    connect \A $formal$robot.sv:92$3_CHECK
-    connect \EN $formal$robot.sv:92$3_EN
+    connect \A $formal$robot.sv:86$3_CHECK
+    connect \EN $formal$robot.sv:86$3_EN
   end
-  attribute \src "robot.sv:88.17-88.70"
+  attribute \src "robot.sv:82.17-82.70"
   cell $assert \assert_obs_detected_reset
-    connect \A $formal$robot.sv:88$1_CHECK
-    connect \EN $formal$robot.sv:88$1_EN
+    connect \A $formal$robot.sv:82$1_CHECK
+    connect \EN $formal$robot.sv:82$1_EN
   end
-  attribute \src "robot.sv:106.4-106.39"
+  attribute \src "robot.sv:100.4-100.39"
   cell $cover \cov_alarm_one
-    connect \A $formal$robot.sv:106$10_CHECK
-    connect \EN $formal$robot.sv:99$5_EN
+    connect \A $formal$robot.sv:100$10_CHECK
+    connect \EN $formal$robot.sv:93$5_EN
   end
-  attribute \src "robot.sv:105.4-105.38"
+  attribute \src "robot.sv:99.4-99.38"
   cell $cover \cov_alarm_zero
-    connect \A $formal$robot.sv:105$9_CHECK
-    connect \EN $formal$robot.sv:99$5_EN
+    connect \A $formal$robot.sv:99$9_CHECK
+    connect \EN $formal$robot.sv:93$5_EN
   end
-  attribute \src "robot.sv:100.4-100.46"
+  attribute \src "robot.sv:94.4-94.46"
   cell $cover \cov_dist_one
-    connect \A $formal$robot.sv:100$6_CHECK
-    connect \EN $formal$robot.sv:99$5_EN
+    connect \A $formal$robot.sv:94$6_CHECK
+    connect \EN $formal$robot.sv:93$5_EN
   end
-  attribute \src "robot.sv:99.4-99.46"
+  attribute \src "robot.sv:93.4-93.46"
   cell $cover \cov_dist_zero
-    connect \A $formal$robot.sv:99$5_CHECK
-    connect \EN $formal$robot.sv:99$5_EN
+    connect \A $formal$robot.sv:93$5_CHECK
+    connect \EN $formal$robot.sv:93$5_EN
   end
-  attribute \src "robot.sv:103.4-103.56"
+  attribute \src "robot.sv:97.4-97.56"
   cell $cover \cov_obs_detected_out_one
-    connect \A $formal$robot.sv:103$8_CHECK
-    connect \EN $formal$robot.sv:99$5_EN
+    connect \A $formal$robot.sv:97$8_CHECK
+    connect \EN $formal$robot.sv:93$5_EN
   end
-  attribute \src "robot.sv:102.4-102.55"
+  attribute \src "robot.sv:96.4-96.55"
   cell $cover \cov_obs_detected_out_zero
-    connect \A $formal$robot.sv:102$7_CHECK
-    connect \EN $formal$robot.sv:99$5_EN
+    connect \A $formal$robot.sv:96$7_CHECK
+    connect \EN $formal$robot.sv:93$5_EN
   end
   connect \alarm_flag \out_alarm_flag
   connect \buff_dist_v \dist_v

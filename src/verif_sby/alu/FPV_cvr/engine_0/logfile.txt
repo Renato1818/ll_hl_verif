@@ -79,13 +79,13 @@
 ##   0:00:00  Checking cover reachability in step 1..
 ##   0:00:00  Reached cover statement at cover_res2 in step 1.
 ##   0:00:00  Writing trace to VCD file: engine_0/trace11.vcd
-##   0:00:01  Writing trace to Verilog testbench: engine_0/trace11_tb.v
-##   0:00:01  Writing trace to constraints file: engine_0/trace11.smtc
-##   0:00:01  Writing trace to Yosys witness file: engine_0/trace11.yw
-##   0:00:01  Checking cover reachability in step 1..
-##   0:00:01  Reached cover statement at cov_optest2 in step 1.
-##   0:00:01  Writing trace to VCD file: engine_0/trace12.vcd
-##   0:00:01  Writing trace to Verilog testbench: engine_0/trace12_tb.v
-##   0:00:01  Writing trace to constraints file: engine_0/trace12.smtc
-##   0:00:01  Writing trace to Yosys witness file: engine_0/trace12.yw
-##   0:00:01  Status: passed
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace11_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace11.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace11.yw
+##   0:00:00  Checking cover reachability in step 1..
+##   0:00:00  Reached cover statement at cov_optest2 in step 1.
+##   0:00:00  Writing trace to VCD file: engine_0/trace12.vcd
+##   0:00:00  Writing trace to Verilog testbench: engine_0/trace12_tb.v
+##   0:00:00  Writing trace to constraints file: engine_0/trace12.smtc
+##   0:00:00  Writing trace to Yosys witness file: engine_0/trace12.yw
+##   0:00:00  Status: passed

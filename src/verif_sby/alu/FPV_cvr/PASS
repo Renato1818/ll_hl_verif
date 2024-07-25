@@ -1,5 +1,5 @@
-Elapsed clock time [H:MM:SS (secs)]: 0:00:03 (3)
-Elapsed process time [H:MM:SS (secs)]: 0:00:05 (5)
+Elapsed clock time [H:MM:SS (secs)]: 0:00:02 (2)
+Elapsed process time [H:MM:SS (secs)]: 0:00:04 (4)
 engine_0 (smtbmc z3) returned pass
 cover trace: engine_0/trace0.vcd
   reached cover statement alu.cov_carry_true at alu.sv:358.4-358.34 in step 1
