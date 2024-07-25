@@ -3,15 +3,29 @@ import time
 import shutil
 import os
 import statistics
+import matplotlib.pyplot as plt
+import numpy as np
+
+# How to execute the script on terminal:
+# python3 execute.py
 
 # Number of times to run the command
-N = 5
+N = 3
 
-# List of files to test
-files_to_test = ["robot/robot.pvl", "half_adder/Main.pvl"]
+# Command to execute
+command = ["vercors", "--silicon", "--progress"]
+
+# List of files to test and their corresponding names
+files_to_test = [
+    ("robot/robot.pvl", "Robot"),
+    ("half_adder/Main.pvl", "Half Adder"),
+    ("full_adder/Main.pvl", "Full Adder")
+]
+
 output_file = "results.txt"
 statistics_file = "statistics.txt"
 tmp_folder = "tmp"
+add_trendline = True  # Set to True to add a trendline
 
 # Function to write results to the output file
 def write_results(file, file_path, elapsed_times):
@@ -38,12 +52,14 @@ with open(output_file, 'w') as results_file, open(statistics_file, 'w') as stats
     # Write the header for the statistics file
     stats_file.write(f"{'Test Case':<20} {'Min':<10} {'Max':<10} {'Average':<15} {'Standard Deviation':<20}\n")
 
-    for file_path in files_to_test:
+    statistics_data = []
+
+    for file_path, test_name in files_to_test:
         # Run the command N times and measure the time
         elapsed_times = []
         for i in range(N):
             start_time = time.time()  # Start time
-            result = subprocess.run(["vercors", "--silicon", "--progress", file_path], capture_output=True, text=True)
+            result = subprocess.run(command + [file_path], capture_output=True, text=True)
             end_time = time.time()    # End time
 
             # Calculate the elapsed time
@@ -60,13 +76,51 @@ with open(output_file, 'w') as results_file, open(statistics_file, 'w') as stats
         min_time, max_time, avg_time, std_dev_time = write_results(results_file, file_path, elapsed_times)
 
         # Write statistics to the statistics file
-        test_case_name = os.path.basename(file_path).split('.')[0]
-        stats_file.write(f"{test_case_name:<20} {min_time:<10.3f} {max_time:<10.3f} {avg_time:<15.3f} {std_dev_time:<20.3f}\n")
+        stats_file.write(f"{test_name:<20} {min_time:<10.3f} {max_time:<10.3f} {avg_time:<15.3f} {std_dev_time:<20.3f}\n")
+
+        # Append data for chart
+        statistics_data.append((test_name, min_time, max_time, avg_time))
 
 # Delete the tmp folder and its contents
 if os.path.exists(tmp_folder):
     shutil.rmtree(tmp_folder)
     print(f"Deleted the {tmp_folder} folder and its contents.")
+
+# Create the stock chart
+test_names, min_times, max_times, avg_times = zip(*statistics_data)
+x = np.arange(len(test_names))  # the label locations
+
+fig, ax = plt.subplots(figsize=(10, 5))
+
+# Plot the bars
+bar_width = 0.35
+bars_avg = ax.bar(x, avg_times, bar_width, label='Average', color='b')
+bars_min = ax.bar(x - bar_width / 2, min_times, bar_width, label='Min', color='r')
+bars_max = ax.bar(x + bar_width / 2, max_times, bar_width, label='Max', color='g')
+
+# Optional trendline
+if add_trendline:
+    z = np.polyfit(x, avg_times, 1)
+    p = np.poly1d(z)
+    plt.plot(x, p(x), "--", color='lightgrey', label='Trendline (Average)')
+
+# Add some text for labels, title and custom x-axis tick labels, etc.
+ax.set_xlabel('Test Case')
+ax.set_ylabel('Time (s)')
+ax.set_title('Performance Metrics')
+ax.set_xticks(x)
+ax.set_xticklabels(test_names)
+ax.legend()
+
+# Add the variation between min and max
+for i in range(len(x)):
+    ax.vlines(x[i], min_times[i], max_times[i], color='gray', linestyle='dashed')
+
+fig.tight_layout()
+plt.grid(True)
+plt.savefig('performance_metrics.png')
+plt.close()
+print(f"Chart saved as performance_metrics.png")
 
 # Inform the user that the results have been written to the files
 print(f"Results have been written to {output_file}")
