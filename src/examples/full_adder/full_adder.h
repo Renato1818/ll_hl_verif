@@ -1,4 +1,5 @@
 #include <systemc.h>
+#include "half_adder.h"
 
 SC_MODULE (full_adder) {
   sc_in<bool> a, b, carry_in;
