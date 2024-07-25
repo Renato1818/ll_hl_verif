@@ -1,5 +1,5 @@
 Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
-Elapsed process time [H:MM:SS (secs)]: 0:00:01 (1)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
 engine_0 (smtbmc z3) returned pass
 cover trace: engine_0/trace0.vcd
   reached cover statement half_adder.cov_carry_true at half_adder.sv:83.13-83.43 in step 1

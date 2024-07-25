@@ -15,23 +15,23 @@
 14 init 1 13 12
 15 not 1 11
 16 and 1 13 15
-17 bad 16 assert_alarm ; robot.sv:95.6-95.43
+17 bad 16 assert_alarm ; robot.sv:89.6-89.43
 18 state 1 _witness_.anyinit_procdff_112
 19 state 1
 20 init 1 19 12
 21 not 1 18
 22 and 1 19 21
-23 bad 22 assert_alarm_false_reset ; robot.sv:89.17-89.63
+23 bad 22 assert_alarm_false_reset ; robot.sv:83.17-83.63
 24 state 1 _witness_.anyinit_procdff_114
 25 state 1
 26 init 1 25 12
 27 not 1 24
 28 and 1 25 27
-29 bad 28 assert_obs_detected ; robot.sv:92.6-92.48
+29 bad 28 assert_obs_detected ; robot.sv:86.6-86.48
 30 state 1 _witness_.anyinit_procdff_110
 31 not 1 30
 32 and 1 19 31
-33 bad 32 assert_obs_detected_reset ; robot.sv:88.17-88.70
+33 bad 32 assert_obs_detected_reset ; robot.sv:82.17-82.70
 34 state 1 _witness_.anyinit_procdff_130
 35 state 1 _witness_.anyinit_procdff_131
 36 state 1 _witness_.anyinit_procdff_136

@@ -66,8 +66,8 @@ Module robot directly or indirectly contains formal properties -> setting "keep"
 Cleaned up 0 empty switches.
 
 5.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
-Marked 1 switch rules as full_case in process $proc$robot.sv:86$24 in module robot.
-Marked 1 switch rules as full_case in process $proc$robot.sv:70$22 in module robot.
+Marked 1 switch rules as full_case in process $proc$robot.sv:80$24 in module robot.
+Marked 1 switch rules as full_case in process $proc$robot.sv:64$22 in module robot.
 Marked 1 switch rules as full_case in process $proc$robot.sv:37$16 in module robot.
 Marked 1 switch rules as full_case in process $proc$robot.sv:26$13 in module robot.
 Removed a total of 0 dead cases.
@@ -78,32 +78,32 @@ Promoted 24 assignments to connections.
 
 5.2.4. Executing PROC_INIT pass (extract init attributes).
 Found init rule in `\robot.$proc$robot.sv:0$74'.
-  Set init value: $formal$robot.sv:106$10_EN = 1'0
+  Set init value: $formal$robot.sv:100$10_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:0$72'.
-  Set init value: $formal$robot.sv:105$9_EN = 1'0
+  Set init value: $formal$robot.sv:99$9_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:0$70'.
-  Set init value: $formal$robot.sv:103$8_EN = 1'0
+  Set init value: $formal$robot.sv:97$8_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:0$68'.
-  Set init value: $formal$robot.sv:102$7_EN = 1'0
+  Set init value: $formal$robot.sv:96$7_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:0$66'.
-  Set init value: $formal$robot.sv:100$6_EN = 1'0
+  Set init value: $formal$robot.sv:94$6_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:0$64'.
-  Set init value: $formal$robot.sv:99$5_EN = 1'0
+  Set init value: $formal$robot.sv:93$5_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:0$62'.
-  Set init value: $formal$robot.sv:95$4_EN = 1'0
+  Set init value: $formal$robot.sv:89$4_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:0$60'.
-  Set init value: $formal$robot.sv:92$3_EN = 1'0
+  Set init value: $formal$robot.sv:86$3_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:0$58'.
-  Set init value: $formal$robot.sv:89$2_EN = 1'0
+  Set init value: $formal$robot.sv:83$2_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:0$56'.
-  Set init value: $formal$robot.sv:88$1_EN = 1'0
+  Set init value: $formal$robot.sv:82$1_EN = 1'0
 Found init rule in `\robot.$proc$robot.sv:58$55'.
   Set init value: \f_past_past_valid = 1'0
 Found init rule in `\robot.$proc$robot.sv:57$54'.
   Set init value: \f_past_valid = 1'0
 
 5.2.5. Executing PROC_ARST pass (detect async resets in processes).
-Found async reset \rstn in `\robot.$proc$robot.sv:70$22'.
+Found async reset \rstn in `\robot.$proc$robot.sv:64$22'.
 Found async reset \rstn in `\robot.$proc$robot.sv:37$16'.
 Found async reset \rstn in `\robot.$proc$robot.sv:26$13'.
 
@@ -124,16 +124,16 @@ Creating decoders for process `\robot.$proc$robot.sv:0$58'.
 Creating decoders for process `\robot.$proc$robot.sv:0$56'.
 Creating decoders for process `\robot.$proc$robot.sv:58$55'.
 Creating decoders for process `\robot.$proc$robot.sv:57$54'.
-Creating decoders for process `\robot.$proc$robot.sv:86$24'.
-     1/8: $0$formal$robot.sv:88$1_EN[0:0]$26
-     2/8: $0$formal$robot.sv:88$1_CHECK[0:0]$25
-     3/8: $0$formal$robot.sv:89$2_EN[0:0]$28
-     4/8: $0$formal$robot.sv:89$2_CHECK[0:0]$27
-     5/8: $0$formal$robot.sv:92$3_EN[0:0]$30
-     6/8: $0$formal$robot.sv:92$3_CHECK[0:0]$29
-     7/8: $0$formal$robot.sv:95$4_EN[0:0]$32
-     8/8: $0$formal$robot.sv:95$4_CHECK[0:0]$31
-Creating decoders for process `\robot.$proc$robot.sv:70$22'.
+Creating decoders for process `\robot.$proc$robot.sv:80$24'.
+     1/8: $0$formal$robot.sv:82$1_EN[0:0]$26
+     2/8: $0$formal$robot.sv:82$1_CHECK[0:0]$25
+     3/8: $0$formal$robot.sv:83$2_EN[0:0]$28
+     4/8: $0$formal$robot.sv:83$2_CHECK[0:0]$27
+     5/8: $0$formal$robot.sv:86$3_EN[0:0]$30
+     6/8: $0$formal$robot.sv:86$3_CHECK[0:0]$29
+     7/8: $0$formal$robot.sv:89$4_EN[0:0]$32
+     8/8: $0$formal$robot.sv:89$4_CHECK[0:0]$31
+Creating decoders for process `\robot.$proc$robot.sv:64$22'.
      1/4: $0\f_past_valid[0:0]
      2/4: $0\f_obs_past_past[0:0]
      3/4: $0\f_obs_past[0:0]
@@ -146,53 +146,53 @@ Creating decoders for process `\robot.$proc$robot.sv:26$13'.
 5.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
 
 5.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
-Creating register for signal `\robot.$formal$robot.sv:88$1_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:82$1_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$110' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:88$1_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:82$1_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$111' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:89$2_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:83$2_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$112' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:89$2_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:83$2_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$113' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:92$3_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:86$3_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$114' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:92$3_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:86$3_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$115' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:95$4_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:89$4_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$116' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:95$4_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:89$4_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$117' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:99$5_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:93$5_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$118' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:99$5_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:93$5_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$119' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:100$6_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:94$6_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$120' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:100$6_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:94$6_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$121' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:102$7_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:96$7_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$122' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:102$7_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:96$7_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$123' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:103$8_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:97$8_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$124' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:103$8_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:97$8_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$125' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:105$9_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:99$9_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$126' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:105$9_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:99$9_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$127' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:106$10_CHECK' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:100$10_CHECK' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$128' with positive edge clock.
-Creating register for signal `\robot.$formal$robot.sv:106$10_EN' using process `\robot.$proc$robot.sv:86$24'.
+Creating register for signal `\robot.$formal$robot.sv:100$10_EN' using process `\robot.$proc$robot.sv:80$24'.
   created $dff cell `$procdff$129' with positive edge clock.
-Creating register for signal `\robot.\f_obs_past' using process `\robot.$proc$robot.sv:70$22'.
+Creating register for signal `\robot.\f_obs_past' using process `\robot.$proc$robot.sv:64$22'.
   created $adff cell `$procdff$130' with positive edge clock and negative level reset.
-Creating register for signal `\robot.\f_obs_past_past' using process `\robot.$proc$robot.sv:70$22'.
+Creating register for signal `\robot.\f_obs_past_past' using process `\robot.$proc$robot.sv:64$22'.
   created $adff cell `$procdff$131' with positive edge clock and negative level reset.
-Creating register for signal `\robot.\f_past_valid' using process `\robot.$proc$robot.sv:70$22'.
+Creating register for signal `\robot.\f_past_valid' using process `\robot.$proc$robot.sv:64$22'.
   created $adff cell `$procdff$132' with positive edge clock and negative level reset.
-Creating register for signal `\robot.\f_past_past_valid' using process `\robot.$proc$robot.sv:70$22'.
+Creating register for signal `\robot.\f_past_past_valid' using process `\robot.$proc$robot.sv:64$22'.
   created $dff cell `$procdff$135' with positive edge clock.
 Creating register for signal `\robot.\out_alarm_flag' using process `\robot.$proc$robot.sv:37$16'.
   created $adff cell `$procdff$136' with positive edge clock and negative level reset.
@@ -214,10 +214,10 @@ Removing empty process `robot.$proc$robot.sv:0$58'.
 Removing empty process `robot.$proc$robot.sv:0$56'.
 Removing empty process `robot.$proc$robot.sv:58$55'.
 Removing empty process `robot.$proc$robot.sv:57$54'.
-Found and cleaned up 3 empty switches in `\robot.$proc$robot.sv:86$24'.
-Removing empty process `robot.$proc$robot.sv:86$24'.
-Found and cleaned up 1 empty switch in `\robot.$proc$robot.sv:70$22'.
-Removing empty process `robot.$proc$robot.sv:70$22'.
+Found and cleaned up 3 empty switches in `\robot.$proc$robot.sv:80$24'.
+Removing empty process `robot.$proc$robot.sv:80$24'.
+Found and cleaned up 1 empty switch in `\robot.$proc$robot.sv:64$22'.
+Removing empty process `robot.$proc$robot.sv:64$22'.
 Removing empty process `robot.$proc$robot.sv:37$16'.
 Removing empty process `robot.$proc$robot.sv:26$13'.
 Cleaned up 4 empty switches.
@@ -303,7 +303,7 @@ Optimizing module robot.
 
 5.8. Executing WREDUCE pass (reducing word size of cells).
 Removed top 10 bits (of 16) from port B of cell robot.$lt$robot.sv:24$11 ($lt).
-Removed top 1 bits (of 16) from port B of cell robot.$eq$robot.sv:100$51 ($eq).
+Removed top 1 bits (of 16) from port B of cell robot.$eq$robot.sv:94$51 ($eq).
 
 5.9. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \robot..
@@ -366,6 +366,6 @@ Module robot directly or indirectly contains formal properties -> setting "keep"
 Output filename: ../model/design.il
 
 Warnings: 3 unique messages, 3 total
-End of script. Logfile hash: 2cbbf7b4b5, CPU: user 0.03s system 0.02s, MEM: 14.77 MB peak
+End of script. Logfile hash: 4783ee6da1, CPU: user 0.03s system 0.00s, MEM: 14.81 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 22% 5x opt_clean (0 sec), 19% 4x opt_merge (0 sec), ...
+Time spent: 21% 5x opt_clean (0 sec), 21% 6x opt_expr (0 sec), ...

@@ -85,6 +85,6 @@ Removed 0 unused cells and 14 unused wires.
 13. Executing RTLIL backend.
 Output filename: ../model/design_prep.il
 
-End of script. Logfile hash: d24dc7dfea, CPU: user 0.03s system 0.01s, MEM: 15.01 MB peak
+End of script. Logfile hash: d24dc7dfea, CPU: user 0.02s system 0.00s, MEM: 15.02 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 43% 4x opt_clean (0 sec), 10% 1x opt_expr (0 sec), ...
+Time spent: 37% 4x opt_clean (0 sec), 13% 1x opt_expr (0 sec), ...

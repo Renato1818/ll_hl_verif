@@ -492,6 +492,6 @@ Module full_adder directly or indirectly contains formal properties -> setting "
 Output filename: ../model/design.il
 
 Warnings: 11 unique messages, 11 total
-End of script. Logfile hash: 5d1082fdd9, CPU: user 0.10s system 0.00s, MEM: 14.77 MB peak
+End of script. Logfile hash: 5d1082fdd9, CPU: user 0.05s system 0.00s, MEM: 14.77 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 22% 5x opt_clean (0 sec), 19% 3x hierarchy (0 sec), ...
+Time spent: 21% 3x hierarchy (0 sec), 18% 6x opt_expr (0 sec), ...

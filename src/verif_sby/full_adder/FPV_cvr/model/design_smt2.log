@@ -73,6 +73,6 @@ Module full_adder directly or indirectly contains formal properties -> setting "
 6.2. Executing DEMUXMAP pass.
 Creating SMT-LIBv2 representation of module full_adder.
 
-End of script. Logfile hash: 63f7654c3f, CPU: user 0.03s system 0.00s, MEM: 15.20 MB peak
+End of script. Logfile hash: 63f7654c3f, CPU: user 0.01s system 0.00s, MEM: 15.21 MB peak
 Yosys 0.37 (git sha1 a5c7f69ed8f, clang 14.0.6 -fPIC -Os)
-Time spent: 56% 2x write_smt2 (0 sec), 29% 2x read_ilang (0 sec), ...
+Time spent: 54% 2x write_smt2 (0 sec), 34% 2x read_ilang (0 sec), ...
