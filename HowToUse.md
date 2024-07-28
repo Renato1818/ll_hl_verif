@@ -1,13 +1,9 @@
-# Instalation Dependencies
-
-
-
-
+# How to Use
 
 ## Converter to PVL
 
 Manually: 
-Go to folde tool/ (ex. Robot)
+Go to folder src/pvl_convert/ (ex. Robot)
 
     java -jar sc2ast.jar -f  ./examples/simple_robot/main.cpp -o ./examples/simple_robot/main_ast
     java -jar sc2pvl.jar -i ./examples/simple_robot/main_ast.ast.xml -o ./results/simple_robot/ -tr 1
@@ -23,7 +19,7 @@ Go to the folder were pvl is and
 
 ## Vercors
 
-Go to the .pvl folder
+Go to the folder src/verif_vercors and choose a desing folder
 
     vercors-1 --silicon *.pvl
 
@@ -63,6 +59,7 @@ Result inside folder:  $ICSC_HOME/build/designs
 Or SymbiYosys.
 The oficial website is [this](https://yosyshq.readthedocs.io/projects/sby/en/latest/install.html). 
 
+Go to the folder src/verif_sby
 
 Run the fifo example: (docs/examples/fifo)
 
