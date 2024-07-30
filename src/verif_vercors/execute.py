@@ -26,6 +26,8 @@ files_to_test = [
 output_file = "results.txt"
 statistics_file = "statistics.txt"
 tmp_folder = "tmp"
+plot_title = "performance_metrics"  
+output_image = "performance_metrics.png"
 add_trendline = False  # Set to True to add a trendline
 
 # Function to write results to the output file
@@ -106,7 +108,7 @@ if add_trendline:
 # Add some text for labels, title and custom x-axis tick labels, etc.
 ax.set_xlabel('Test Case')
 ax.set_ylabel('Time (s)')
-ax.set_title('Performance Metrics')
+ax.set_title(plot_title)
 ax.set_xticks(x)
 ax.set_xticklabels(test_names)
 ax.legend()
@@ -117,9 +119,9 @@ for i in range(len(x)):
 
 fig.tight_layout()
 plt.grid(True)
-plt.savefig('performance_metrics.png')
+plt.savefig(output_image)
 plt.close()
-print(f"Chart saved as performance_metrics.png")
+print(f"Chart saved as {output_image}")
 
 # Inform the user that the results have been written to the files
 print(f"Results have been written to {output_file}")
