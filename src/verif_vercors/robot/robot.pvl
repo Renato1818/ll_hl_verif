@@ -38,7 +38,7 @@ class Sensor {
                 ** Perm(m, 1\2) 
                 ** (m != null) 
                 ** held(m)  
-                ** m.global_permission_invariant() 
+                ** m.global_permission() 
                 ** (m.sensor == this) 
                 ** Perm(init, 1\2)
                 ** init;
@@ -49,7 +49,7 @@ class Sensor {
                     ** Perm(m, 1\2) 
                     ** (m != null) 
                     ** held(m)  
-                    ** m.global_permission_invariant() 
+                    ** m.global_permission() 
                     ** (m.sensor == this) 
                     ** Perm(init, 1\2)
                     ** init;
@@ -105,7 +105,7 @@ class Controller {
                 ** Perm(m, 1\2) 
                 ** (m != null) 
                 ** held(m) 
-                ** m.global_permission_invariant() 
+                ** m.global_permission() 
                 ** (m.controller == this) 
                 ** Perm(init, 1\2)
                 ** init;
@@ -115,7 +115,7 @@ class Controller {
                     ** Perm(m, 1\2) 
                     ** (m != null) 
                     ** held(m) 
-                    ** m.global_permission_invariant() 
+                    ** m.global_permission() 
                     ** (m.controller == this) 
                     ** Perm(init, 1\2)
                     ** init;
@@ -151,7 +151,7 @@ class Main {
             |event_state| == 3 **
             (\forall int i = 0 .. |process_state|; ((({: process_state[i] :} == -1)) || (((process_state[i] >= 0) && (process_state[i] < |event_state|))) ))
             ;
-    inline resource global_permission_invariant() = true  
+    inline resource global_permission() = true  
             ** scheduler_permission_invariant() 
 
             //sensor
@@ -168,7 +168,7 @@ class Main {
             ** Perm(controller.init, 1\2)
             ;
 
-    resource lock_invariant() = global_permission_invariant();
+    resource lock_invariant() = global_permission();
     
     ensures Perm(sensor, read)
             ** sensor != null

@@ -39,7 +39,7 @@ class Full_adder {
     context Perm(m, read) 
             ** (m != null) 
             ** held(m) 
-            ** m.global_permission_invariant()
+            ** m.global_permission()
             ** Perm(m.adder, read)
             ** (m.adder == this) ;
     boolean sum_(boolean a, boolean b){
@@ -83,7 +83,7 @@ class Prc_half_adder_1 {
                 ** Perm(m, 1\2)
                 ** (m != null)  
                 ** held(m)  
-                ** m.global_permission_invariant()
+                ** m.global_permission()
                 ** (m.adder_half_adder1 == this)            
                 ** Perm(init, 1\2)
                 ** init;
@@ -95,7 +95,7 @@ class Prc_half_adder_1 {
                 ** Perm(m, 1\2)
                 ** (m != null)  
                 ** held(m)  
-                ** m.global_permission_invariant()
+                ** m.global_permission()
                 ** (m.adder_half_adder1 == this)             
                 ** Perm(init, 1\2)
                 ** init;
@@ -108,7 +108,7 @@ class Prc_half_adder_1 {
                         ** Perm(m, 1\2) 
                         ** (m != null) 
                         ** held(m)  
-                        ** m.global_permission_invariant() 
+                        ** m.global_permission() 
                         ** (m.adder_half_adder1 == this)            
                         ** Perm(init, 1\2)
                         ** init;
@@ -152,7 +152,7 @@ class Prc_half_adder_2 {
                 ** Perm(m, 1\2) 
                 ** (m != null)  
                 ** held(m)  
-                ** m.global_permission_invariant() 
+                ** m.global_permission() 
                 ** (m.adder_half_adder2 == this)             
                 ** Perm(init, 1\2)
                 ** init;
@@ -164,7 +164,7 @@ class Prc_half_adder_2 {
                 ** Perm(m, 1\2)  
                 ** (m != null)  
                 ** held(m)  
-                ** m.global_permission_invariant() 
+                ** m.global_permission() 
                 ** (m.adder_half_adder2 == this)            
                 ** Perm(init, 1\2)
                 ** init;
@@ -177,7 +177,7 @@ class Prc_half_adder_2 {
                         ** Perm(m, 1\2)  
                         ** (m != null)  
                         ** held(m)  
-                        ** m.global_permission_invariant() 
+                        ** m.global_permission() 
                         ** (m.adder_half_adder2 == this)            
                         ** Perm(init, 1\2)
                         ** init;
@@ -222,7 +222,7 @@ class Prc_or {
                 ** Perm(m, 1\2) 
                 ** (m != null)  
                 ** held(m)  
-                ** m.global_permission_invariant() 
+                ** m.global_permission() 
                 ** (m.adder_prc == this)             
                 ** Perm(init, 1\2)
                 ** init;
@@ -234,7 +234,7 @@ class Prc_or {
                 ** Perm(m, 1\2) 
                 ** (m != null)  
                 ** held(m)  
-                ** m.global_permission_invariant() 
+                ** m.global_permission() 
                 ** (m.adder_prc == this)             
                 ** Perm(init, 1\2)
                 ** init;
@@ -247,7 +247,7 @@ class Prc_or {
                         ** Perm(m, 1\2) 
                         ** (m != null)  
                         ** held(m)  
-                        ** m.global_permission_invariant() 
+                        ** m.global_permission() 
                         ** (m.adder_prc == this)             
                         ** Perm(init, 1\2)
                         ** init;
@@ -277,7 +277,7 @@ class Main {
             |event_state| == 6 **
             (\forall int i = 0 .. |process_state|; ((({: process_state[i] :} == -1)) || (((process_state[i] >= 0) && (process_state[i] < |event_state|))) ))
             ;
-    inline resource global_permission_invariant() = true 
+    inline resource global_permission() = true 
             ** scheduler_permission_invariant() 
 
             //full_adder
@@ -311,7 +311,7 @@ class Main {
             ** Perm(adder_half_adder2.init, 1\2)
             ;
 
-    resource lock_invariant() = global_permission_invariant();
+    resource lock_invariant() = global_permission();
     
     ensures Perm(adder_prc, read)
             ** adder_prc != null
