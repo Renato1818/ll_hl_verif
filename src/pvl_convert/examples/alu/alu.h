@@ -1,14 +1,6 @@
 #include <systemc.h>
 
 SC_MODULE(ALU) {
-	/*sc_in < sc_uint<3> > OPCODE;
-	sc_in < sc_uint<4> > OP1,OP2;
-	sc_out < bool > CARRY, ZERO;
-	sc_out < sc_uint<4> > RESULT;
-
-    sc_uint<4> data1, data2;
-    sc_uint<5> result;*/
-
 	int OPCODE;
 	int OP1,OP2;
 	bool CARRY, ZERO;
@@ -18,13 +10,6 @@ SC_MODULE(ALU) {
     int result;
 	int i;
 	int bit;
-
-
-	SC_CTOR(ALU){
-		SC_THREAD(operate);
-		SC_METHOD(get_bit);
-		SC_METHOD(set_bit);
-	}
 
 	// Helper function to get the bit at position pos
 	int get_bit(int value, int pos) {
@@ -57,14 +42,13 @@ SC_MODULE(ALU) {
 	}
 
     void operate()	{
-    	wait(2, SC_MS);
 		while(true){
+      		wait(5, SC_MS);
 			ZERO = false;
-			data1 = OP1.read() % 16;
-			data2 = OP2.read() % 16;
+			data1 = OP1 % 16;
+			data2 = OP2 % 16;
 			
-			switch(OPCODE.read() % 8)
-			{					
+			switch(OPCODE % 8){					
 				case 0: //addition
 					result = data1 + data2;
 					break;
@@ -110,14 +94,17 @@ SC_MODULE(ALU) {
 					break;
 			}
 			
-			RESULT.write(result % 16);  // Ensuring RESULT is 4-bit
-			CARRY.write((result / 16) % 2); 
+			RESULT = (result % 16);  // Ensuring RESULT is 4-bit
+			CARRY = ((result / 16) % 2); 
 			if((result % 16) == 0)
-				ZERO.write(true);
-					
-			
-      		wait(5, SC_MS);
+				ZERO = (true);
+								
 		}
 	}
     
+	SC_CTOR(ALU){
+		SC_THREAD(operate);
+		SC_METHOD(get_bit);
+		SC_METHOD(set_bit);
+	}
 };

@@ -22,6 +22,27 @@ full_adder:
 	fi
 	$(JAVA) -jar sc2pvl.jar -i ./examples/full_adder/main_ast.ast.xml -o ./results/full_adder/ 
 
+bit2_adder: 	
+	$(JAVA) -jar sc2ast.jar -f  ./examples/bit2_adder/main.cpp -o ./examples/bit2_adder/main_ast
+	if ! test -d ./results/bit2_adder/; \
+	then mkdir -p ./results/bit2_adder/; \
+	fi
+	$(JAVA) -jar sc2pvl.jar -i ./examples/bit2_adder/main_ast.ast.xml -o ./results/bit2_adder/ 
+
+bit4_adder: 	
+	$(JAVA) -jar sc2ast.jar -f  ./examples/bit4_adder/main.cpp -o ./examples/bit4_adder/main_ast
+	if ! test -d ./results/bit4_adder/; \
+	then mkdir -p ./results/bit4_adder/; \
+	fi
+	$(JAVA) -jar sc2pvl.jar -i ./examples/bit4_adder/main_ast.ast.xml -o ./results/bit4_adder/ 
+
+bit8_adder: 	
+	$(JAVA) -jar sc2ast.jar -f  ./examples/bit8_adder/main.cpp -o ./examples/bit8_adder/main_ast
+	if ! test -d ./results/bit8_adder/; \
+	then mkdir -p ./results/bit8_adder/; \
+	fi
+	$(JAVA) -jar sc2pvl.jar -i ./examples/bit8_adder/main_ast.ast.xml -o ./results/bit8_adder/ 
+
 alu: 	
 	$(JAVA) -jar sc2ast.jar -f  ./examples/alu/main.cpp -o ./examples/alu/main_ast
 	if ! test -d ./results/alu/; \
@@ -30,7 +51,7 @@ alu:
 	$(JAVA) -jar sc2pvl.jar -i ./examples/alu/main_ast.ast.xml -o ./results/alu/ 
 
 
-all: robot half_adder full_adder alu
+all: robot half_adder full_adder bit2_adder bit4_adder bit8_adder alu
 
 
 clean_robot:
@@ -49,12 +70,27 @@ clean_full_adder:
 	rm -f ./examples/full_adder/main_ast
 	rm -rf ./results/full_adder
 
+clean_bit2_adder:
+	rm -f ./examples/bit2_adder/*.xml
+	rm -f ./examples/bit2_adder/main_ast
+	rm -rf ./results/bit2_adder
+
+clean_bit4_adder:
+	rm -f ./examples/bit4_adder/*.xml
+	rm -f ./examples/bit4_adder/main_ast
+	rm -rf ./results/bit4_adder
+
+clean_bit8_adder:
+	rm -f ./examples/bit8_adder/*.xml
+	rm -f ./examples/bit8_adder/main_ast
+	rm -rf ./results/bit8_adder
+	
 clean_alu:
 	rm -f ./examples/alu/*.xml
 	rm -f ./examples/alu/main_ast
 	rm -rf ./results/alu
 
-all_clean: clean_robot clean_half_adder clean_full_adder clean_alu
+all_clean: clean_robot clean_half_adder clean_full_adder clean_bit2_adder clean_bit4_adder clean_bit8_adder clean_alu
 	
 	
 	

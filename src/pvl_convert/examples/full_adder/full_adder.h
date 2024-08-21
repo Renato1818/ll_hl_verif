@@ -1,58 +1,33 @@
-// File: full_adder.h
+#include <systemc.h>
 
-//#include "half_adder.h"
+SC_MODULE(full_adder) {
+  bool Cin, A1, B1;
+  bool S1, Cout;
 
-SC_MODULE (full_adder) {
-  /*sc_in<bool> a, b, carry_in;
-  sc_out<bool> sum, carry_out;*/
+  bool s11, c11, cin_1d;
 
-  bool a, b, carry_in;
-  bool sum, carry_out;
-
-  bool c1, s1, c2;
-  bool sum_next;
-  
-  void prc_or () {
-    wait(2, SC_MS);
-		while (true) {			
-      carry_out = (c1 | c2);
-      sum = sum_next;
-      wait(5, SC_MS);
-		}
+  void ha_1() {
+    s11 = (!(A1 && B1)) && (A1 || B1);
+    c11 = (A1 && B1);	
+    cin_1d = Cin;
   }
 
-  void prc_half_adder_1(){
-    wait(2, SC_MS);
-		while (true) {			
-      s1 = sum_(a, b);						
-      c1 = (a & b);	
-      wait(5, SC_MS);
-		}
-	}
-
-  void prc_half_adder_2(){
-    wait(2, SC_MS);
-		while (true) {			
-      sum_next = sum_(s1, carry_in);						
-      c2 = (s1 & carry_in);	
-      wait(5, SC_MS);
-		}
-	}
-
-  bool sum_(bool a, bool b)  {
-    bool s_nand, s_or;
-
-    s_nand = !(a & b);
-    s_or = a | b ;
-
-    return (s_nand & s_or);	
-
+  void fa_1() {
+    S1 = (!(s11 && cin_1d)) && (s11 || cin_1d);
+    Cout = (c11 || (s11 && cin_1d));
   }
 
-  SC_CTOR (full_adder) {
-    SC_THREAD (prc_or);
-    SC_THREAD (prc_half_adder_1);
-    SC_THREAD (prc_half_adder_2);
-    SC_METHOD (sum_);
+  void process() {
+    while (true) {
+      wait(5, SC_MS); 
+      ha_1(); 
+      fa_1();  
+    }
+  }
+
+  SC_CTOR (full_adder) {  
+    SC_THREAD (process);
+    SC_METHOD (ha_1);
+    SC_METHOD (fa_1);    
   }
 };

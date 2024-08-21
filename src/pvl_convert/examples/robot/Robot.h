@@ -7,11 +7,6 @@ public:
 	bool obs_detected;
 	int dist_in;
 
-	SC_CTOR(Robot) {
-		SC_THREAD(sensor);
-		SC_THREAD(controller);
-	}
-
 	void sensor() {
 	  int dist;
 	  while(true) {
@@ -38,5 +33,10 @@ public:
 	    	alarm_flag = false;
 		}
 	  }
+	}
+	
+	SC_CTOR(Robot) {
+		SC_THREAD(sensor);
+		SC_THREAD(controller);
 	}
 };
