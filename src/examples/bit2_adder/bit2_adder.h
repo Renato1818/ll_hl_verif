@@ -5,17 +5,17 @@ SC_MODULE (bit2_adder) {
   sc_out <bool> S1, S2, Cout;
 
   //Auxiliar variables to ha1 and fa1
-  bool s11, c11, cin_1d;
-  bool s1, c1;
+  sc_signal <bool> s11, c11, cin_1d;
+  sc_signal <bool> s1, c1;
   
   //Auxiliar variables to ha2 and fa2
-  bool s21, c21, c1_1d;
-  bool s2, c2;
+  sc_signal <bool> s21, c21, c1_1d;
+  sc_signal <bool> s2, c2;
 
   //Delay 2nd Inputs
-  bool a2_1d, a2_2d, b2_1d, b2_2d;
+  sc_signal <bool> a2_1d, a2_2d, b2_1d, b2_2d;
   //Delay 1st Output
-  bool s1_1d, s1_2d;
+  sc_signal <bool> s1_1d, s1_2d;
 
 
   void ha_1(){

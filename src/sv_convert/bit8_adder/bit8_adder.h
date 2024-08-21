@@ -1,7 +1,10 @@
-#include <systemc.h>
+//#include "full_adder.h"
 
 
 SC_MODULE (bit8_adder) {
+  sc_in <bool>       clk;
+  sc_in <bool>       rstn;
+
   sc_in  <bool> Cin;
   sc_in  <bool> A1, A2, A3, A4, A5, A6, A7, A8;
   sc_in  <bool> B1, B2, B3, B4, B5, B6, B7, B8;
@@ -68,6 +71,9 @@ SC_MODULE (bit8_adder) {
 
 
   void ha_1() {
+    //wait(2, SC_MS);
+		while (true) {			
+      wait();
       s11 = (!(A1 && B1)) && (A1 || B1);
       c11 = (A1 && B1);	
       cin_1d = Cin;
@@ -87,9 +93,13 @@ SC_MODULE (bit8_adder) {
       a7_1d = A7;
       b8_1d = B8;
       a8_1d = A8;
+		}
 	}
 
   void fa_1() {
+    //wait(2, SC_MS);
+		while (true) {		
+      wait();	
       s1 = (!(s11 && cin_1d)) && (s11 || cin_1d);
       c1 = (c11 || (s11 && cin_1d));
       
@@ -108,9 +118,13 @@ SC_MODULE (bit8_adder) {
       b7_2d = b7_1d;
       a8_2d = a8_1d;
       b8_2d = b8_1d;
+		}
   }
 
   void ha_2() {
+    //wait(2, SC_MS);
+		while (true) {		
+      wait();	
       s21 = (!(a2_2d && b2_2d)) && (a2_2d || b2_2d);
       c21 = (a2_2d && b2_2d);	
       c1_1d = c1;
@@ -120,8 +134,8 @@ SC_MODULE (bit8_adder) {
       b3_3d = b3_2d;
       a4_3d = a4_2d;
       b4_3d = b4_2d;
-      a5_3d = a5_2d;
-      b5_3d = b5_2d;
+      a5_3d = a6_2d;
+      b5_3d = b6_2d;
       a6_3d = a6_2d;
       b6_3d = b6_2d;
       a7_3d = a7_2d;
@@ -131,9 +145,13 @@ SC_MODULE (bit8_adder) {
 
       //Delay output
       s1_1d = s1;
+		}
 	}
   
-  void fa_2 () {		
+  void fa_2 () {
+    //wait(2, SC_MS);
+		while (true) {	
+      wait();			
       s2 = (!(s21 && c1_1d)) && (s21 || c1_1d);
       c2 = (c21 || (s21 && c1_1d));
 
@@ -142,8 +160,8 @@ SC_MODULE (bit8_adder) {
       b3_4d = b3_3d;
       a4_4d = a4_3d;
       b4_4d = b4_3d;
-      a5_4d = a5_3d;
-      b5_4d = b5_3d;
+      a5_4d = a6_3d;
+      b5_4d = b6_3d;
       a6_4d = a6_3d;
       b6_4d = b6_3d;
       a7_4d = a7_3d;
@@ -153,9 +171,13 @@ SC_MODULE (bit8_adder) {
 
       //Delay output
       s1_2d = s1_1d;
+		}
   }
 
   void ha_3() {
+    //wait(2, SC_MS);
+		while (true) {			
+      wait();
       s31 = (!(a3_4d && b3_4d)) && (a3_4d || b3_4d);
       c31 = (a3_4d && b3_4d);	
       c2_1d = c2;
@@ -164,8 +186,8 @@ SC_MODULE (bit8_adder) {
       //Delay inputs
       a4_5d = a4_4d;
       b4_5d = b4_4d;
-      a5_5d = a5_4d;
-      b5_5d = b5_4d;
+      a5_5d = a6_4d;
+      b5_5d = b6_4d;
       a6_5d = a6_4d;
       b6_5d = b6_4d;
       a7_5d = a7_4d;
@@ -176,17 +198,21 @@ SC_MODULE (bit8_adder) {
       //Delay output
       s1_3d = s1_2d;
       s2_1d = s2;
+		}
 	}
 
   void fa_3() {
+    //wait(2, SC_MS);
+		while (true) {		
+      wait();	
       s3 = (!(s31 && c2_1d)) && (s31 || c2_1d);
       c3 = (c31 || (s31 && c2_1d));
       
       //Delay inputs
       a4_6d = a4_5d;
       b4_6d = b4_5d;
-      a5_6d = a5_5d;
-      b5_6d = b5_5d;
+      a5_6d = a6_5d;
+      b5_6d = b6_5d;
       a6_6d = a6_5d;
       b6_6d = b6_5d;
       a7_6d = a7_5d;
@@ -197,16 +223,20 @@ SC_MODULE (bit8_adder) {
       //Delay output
       s1_4d = s1_3d;
       s2_2d = s2_1d;
+		}
   }
 
   void ha_4() {
+    //wait(2, SC_MS);
+		while (true) {		
+      wait();	
       s41 = (!(a4_6d && b4_6d)) && (a4_6d || b4_6d);
       c41 = (a4_6d && b4_6d);	
       c3_1d = c3;
 
       //Delay inputs
-      a5_7d = a5_6d;
-      b5_7d = b5_6d;
+      a5_7d = a6_6d;
+      b5_7d = b6_6d;
       a6_7d = a6_6d;
       b6_7d = b6_6d;
       a7_7d = a7_6d;
@@ -218,15 +248,19 @@ SC_MODULE (bit8_adder) {
       s1_5d = s1_4d;
       s2_3d = s2_2d;
       s3_1d = s3;
+		}
 	}
   
-  void fa_4() {		
+  void fa_4() {
+    //wait(2, SC_MS);
+		while (true) {	
+      wait();			
       s4 = (!(s41 && c3_1d)) && (s41 || c3_1d);
       c4 = (c41 || (s41 && c3_1d));
 
       //Delay inputs
-      a5_8d = a5_7d;
-      b5_8d = b5_7d;
+      a5_8d = a6_7d;
+      b5_8d = b6_7d;
       a6_8d = a6_7d;
       b6_8d = b6_7d;
       a7_8d = a7_7d;
@@ -238,10 +272,14 @@ SC_MODULE (bit8_adder) {
       s1_6d = s1_5d;
       s2_4d = s2_3d;
       s3_2d = s3_1d;
+		}
   }
 
 
   void ha_5() {
+    //wait(2, SC_MS);
+		while (true) {			
+      wait();
       s51 = (!(a5_8d && b5_8d)) && (a5_8d || b5_8d);
       c51 = (a5_8d && b5_8d);	
       c4_1d = c4;
@@ -259,9 +297,13 @@ SC_MODULE (bit8_adder) {
       s2_5d = s2_4d;
       s3_3d = s3_2d;
       s4_1d = s4;
+		}
 	}
 
   void fa_5() {
+    //wait(2, SC_MS);
+		while (true) {		
+      wait();	
       s5 = (!(s51 && c4_1d)) && (s51 || c4_1d);
       c5 = (c51 || (s51 && c4_1d));
       
@@ -278,9 +320,13 @@ SC_MODULE (bit8_adder) {
       s2_6d = s2_5d;
       s3_4d = s3_3d;
       s4_2d = s4_1d;
+		}
   }
 
   void ha_6() {
+    //wait(2, SC_MS);
+		while (true) {		
+      wait();	
       s61 = (!(a6_10d && b6_10d)) && (a6_10d || b6_10d);
       c61 = (a6_10d && b6_10d);	
       c5_1d = c5;
@@ -297,9 +343,13 @@ SC_MODULE (bit8_adder) {
       s3_5d = s3_4d;
       s4_3d = s4_2d;
       s5_1d = s5;
+		}
 	}
   
-  void fa_6 () {	
+  void fa_6 () {
+    //wait(2, SC_MS);
+		while (true) {	
+      wait();			
       s6 = (!(s61 && c5_1d)) && (s61 || c5_1d);
       c6 = (c61 || (s61 && c5_1d));
 
@@ -315,9 +365,13 @@ SC_MODULE (bit8_adder) {
       s3_6d  = s3_5d;
       s4_4d  = s4_3d;
       s5_2d  = s5_1d;
+		}
   }
 
   void ha_7() {
+    //wait(2, SC_MS);
+		while (true) {			
+      wait();
       s71 = (!(a7_12d && b7_12d)) && (a7_12d || b7_12d);
       c71 = (a7_12d && b7_12d);	
       c6_1d = c6;
@@ -334,9 +388,13 @@ SC_MODULE (bit8_adder) {
       s4_5d  = s4_4d;
       s5_3d  = s5_2d;
       s6_1d = s6;
+		}
 	}
 
   void fa_7() {
+    //wait(2, SC_MS);
+		while (true) {		
+      wait();	
       s7 = (!(s71 && c6_1d)) && (s71 || c6_1d);
       c7 = (c71 || (s71 && c6_1d));
       
@@ -351,9 +409,13 @@ SC_MODULE (bit8_adder) {
       s4_6d  = s4_5d;
       s5_4d  = s5_3d;
       s6_2d  = s6_1d;
+		}
   }
 
   void ha_8() {
+    //wait(2, SC_MS);
+		while (true) {		
+      wait();	
       s81 = (!(a8_14d && b8_14d)) && (a8_14d || b8_14d);
       c81 = (a8_14d && b8_14d);	
       c7_1d = c7;
@@ -366,9 +428,13 @@ SC_MODULE (bit8_adder) {
       s5_5d  = s5_4d;
       s6_3d  = s6_2d;
       s7_1d  = s7;
+		}
 	}
   
-  void fa_8() {		
+  void fa_8() {
+    //wait(2, SC_MS);
+		while (true) {	
+      wait();			
       s8 = (!(s81 && c7_1d)) && (s81 || c7_1d);
       c8 = (c81 || (s81 && c7_1d));
 
@@ -391,51 +457,49 @@ SC_MODULE (bit8_adder) {
       S7 = s7_2d;
       S8 = s8;
       Cout = c8;
-  }
-
-  void process() {
-    while (true) {
-      wait(5, SC_MS); 
-
-      ha_1(); 
-      fa_1();  
-      ha_2();
-      fa_2();
-      ha_3(); 
-      fa_3();  
-      ha_4();
-      fa_4();
-      ha_5();
-      fa_5();
-      ha_6();
-      fa_6();
-      ha_7();
-      fa_7();
-      ha_8();
-      fa_8();      
-
-    }
+		}
   }
 
   SC_CTOR (bit8_adder){
-    SC_THREAD (process);
+    SC_CTHREAD (ha_1, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_1, clk.pos());
+    async_reset_signal_is(rstn, false);
 
-    SC_METHOD (ha_1);
-    SC_METHOD (fa_1);
-    SC_METHOD (ha_2);
-    SC_METHOD (fa_2);    
-    SC_METHOD (ha_3);
-    SC_METHOD (fa_3);
-    SC_METHOD (ha_4);
-    SC_METHOD (fa_4);
-    SC_METHOD (ha_5);
-    SC_METHOD (fa_5);
-    SC_METHOD (ha_6);
-    SC_METHOD (fa_6);    
-    SC_METHOD (ha_7);
-    SC_METHOD (fa_7);
-    SC_METHOD (ha_8);
-    SC_METHOD (fa_8);
+    SC_CTHREAD (ha_2, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_2, clk.pos());    
+    async_reset_signal_is(rstn, false);
+
+    SC_CTHREAD (ha_3, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_3, clk.pos());
+    async_reset_signal_is(rstn, false);
+
+    SC_CTHREAD (ha_4, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_4, clk.pos());
+    async_reset_signal_is(rstn, false);
+
+    SC_CTHREAD (ha_5, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_5, clk.pos());
+    async_reset_signal_is(rstn, false);
+
+    SC_CTHREAD (ha_6, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_6, clk.pos());    
+    async_reset_signal_is(rstn, false);
+
+    SC_CTHREAD (ha_7, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_7, clk.pos());
+    async_reset_signal_is(rstn, false);
+
+    SC_CTHREAD (ha_8, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_8, clk.pos());
+    async_reset_signal_is(rstn, false);
   }
 
 }; 

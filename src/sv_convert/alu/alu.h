@@ -1,26 +1,16 @@
 #include <systemc.h>
 
 
-struct alu : sc_module {
-    sc_in < bool >        clk{"clk"};
-    sc_in < bool >        rstn{"rstn"};
+SC_MODULE(ALU) {
+    sc_in < bool >        clk;
+    sc_in < bool >        rstn;
 
-	sc_in < sc_uint<3> > OPCODE {"OPCODE"};
-	sc_in < sc_uint<4> >   OP1  {"OP1"};
-	sc_in < sc_uint<4> >   OP2  {"OP2"};
+	sc_in < sc_uint<3> > OPCODE;
+	sc_in < sc_uint<4> > OP1,OP2;
 
-	sc_out < bool > 	 CARRY {"CARRY"};
-	sc_out < bool > 	  ZERO {"ZERO"};
-	sc_out < sc_uint<4> > RESULT {"RESULT"};
+	sc_out < bool > CARRY, ZERO;
+	sc_out < sc_uint<4> > RESULT;
 
-	SC_CTOR(alu){
-		SC_CTHREAD(operate, clk.pos());
-        async_reset_signal_is(rstn, false);
-
-		SC_METHOD(get_bit);
-		SC_METHOD(set_bit);
-
-	}
 
 	// Helper function to get the bit at position pos
 	sc_uint<4> get_bit(sc_uint<4> value, sc_uint<4> pos) {
@@ -133,6 +123,15 @@ struct alu : sc_module {
 				ZERO.write(false);
 			}
 		}
+	}
+	
+	SC_CTOR(alu){
+		SC_CTHREAD(operate, clk.pos());
+        async_reset_signal_is(rstn, false);
+
+		SC_METHOD(get_bit);
+		SC_METHOD(set_bit);
+
 	}
     
 };

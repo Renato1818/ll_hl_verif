@@ -9,7 +9,7 @@ src \
   |-> examples       - SystemC files used on the thesis \
   |-> pvl_convert    - For reproduce PVL convertion \
   |-> verif_vercors  - The final pvl codes tested \
-  |-> sv_convert     - Sv files obtained after convertion \
+  |-> sv_convert     - SystemC files for the use of the ICSC converter \
   |-> verif_sby      - Verification at LL 
 
 There is also avaliable a makefile how to use the tools

@@ -1,13 +1,16 @@
-#include <systemc.h>
+//#include "full_adder.h"
 
 
 SC_MODULE (bit4_adder) {
-  sc_in  <bool> Cin;
-  sc_in  <bool> A1, A2, A3, A4;
-  sc_in  <bool> B1, B2, B3, B4;
+  sc_in <bool>       clk;
+  sc_in <bool>       rstn;
 
-  sc_out <bool> S1, S2, S3, S4;
-  sc_out <bool> Cout; 
+  sc_in <bool>   Cin;
+  sc_in <bool>   A1, A2, A3, A4;
+  sc_in <bool>   B1, B2, B3, B4;
+
+  sc_out <bool>  S1, S2, S3, S4;
+  sc_out <bool>  Cout; 
 
   //Auxiliar variables to ha1 and fa1
   sc_signal <bool> s11, c11, cin_1d;
@@ -38,6 +41,8 @@ SC_MODULE (bit4_adder) {
 
 
   void ha_1() {
+    //wait(2, SC_MS);
+		while (true) {	
       s11 = (!(A1 && B1)) && (A1 || B1);
       c11 = (A1 && B1);	
       cin_1d = Cin;
@@ -48,10 +53,14 @@ SC_MODULE (bit4_adder) {
       a3_1d = A3;
       b3_1d = B3;
       a4_1d = A4;
-      b4_1d = B4;
+      b4_1d = B4;		
+      wait();
+		}
 	}
 
   void fa_1() {
+    //wait(2, SC_MS);
+		while (true) {		
       s1 = (!(s11 && cin_1d)) && (s11 || cin_1d);
       c1 = (c11 || (s11 && cin_1d));
       
@@ -62,10 +71,14 @@ SC_MODULE (bit4_adder) {
       b3_2d = b3_1d;
       a4_2d = a4_1d;
       b4_2d = b4_1d;
+      wait();	
+		}
   }
 
   
   void ha_2() {
+    //wait(2, SC_MS);
+		while (true) {	
       s21 = (!(a2_2d && b2_2d)) && (a2_2d || b2_2d);
       c21 = (a2_2d && b2_2d);	
       c1_1d = c1;
@@ -77,10 +90,14 @@ SC_MODULE (bit4_adder) {
       b4_3d = b4_2d;
 
       //Delay output
-      s1_1d = s1;
+      s1_1d = s1;	
+      wait();	
+		}
 	}
   
-  void fa_2 () {		
+  void fa_2 () {
+    //wait(2, SC_MS);
+		while (true) {	
       s2 = (!(s21 && c1_1d)) && (s21 || c1_1d);
       c2 = (c21 || (s21 && c1_1d));
 
@@ -92,9 +109,13 @@ SC_MODULE (bit4_adder) {
 
       //Delay output
       s1_2d = s1_1d;
+      wait();			
+		}
   }
 
   void ha_3() {
+    //wait(2, SC_MS);
+		while (true) {		
       s31 = (!(a3_4d && b3_4d)) && (a3_4d || b3_4d);
       c31 = (a3_4d && b3_4d);	
       c2_1d = c2;
@@ -106,10 +127,14 @@ SC_MODULE (bit4_adder) {
 
       //Delay output
       s1_3d = s1_2d;
-      s2_1d = s2;
+      s2_1d = s2;	
+      wait();
+		}
 	}
 
   void fa_3() {
+    //wait(2, SC_MS);
+		while (true) {		
       s3 = (!(s31 && c2_1d)) && (s31 || c2_1d);
       c3 = (c31 || (s31 && c2_1d));
       
@@ -120,10 +145,14 @@ SC_MODULE (bit4_adder) {
       //Delay output
       s1_4d = s1_3d;
       s2_2d = s2_1d;
+      wait();	
+		}
   }
 
   
   void ha_4() {
+    //wait(2, SC_MS);
+		while (true) {		
       s41 = (!(a4_6d && b4_6d)) && (a4_6d || b4_6d);
       c41 = (a4_6d && b4_6d);	
       c3_1d = c3;
@@ -132,9 +161,13 @@ SC_MODULE (bit4_adder) {
       s1_5d = s1_4d;
       s2_3d = s2_2d;
       s3_1d = s3;
+      wait();	
+		}
 	}
   
-  void fa_4() {	
+  void fa_4() {
+    //wait(2, SC_MS);
+		while (true) {			
       s4 = (!(s41 && c3_1d)) && (s41 || c3_1d);
       c4 = (c41 || (s41 && c3_1d));
 
@@ -149,34 +182,30 @@ SC_MODULE (bit4_adder) {
       S3 = s3_2d;
       S4 = s4;
       Cout = c4;
-  }
-
-  void process() {
-    while (true) {
-      wait(5, SC_MS); 
-
-      ha_1(); 
-      fa_1();  
-      ha_2();
-      fa_2();
-      ha_3(); 
-      fa_3();  
-      ha_4();
-      fa_4();
-    }
+      wait();	
+		}
   }
 
   SC_CTOR (bit4_adder){
-    SC_THREAD (process);
-    
-    SC_METHOD (ha_1);
-    SC_METHOD (fa_1);
-    SC_METHOD (ha_2);
-    SC_METHOD (fa_2);    
-    SC_METHOD (ha_3);
-    SC_METHOD (fa_3);
-    SC_METHOD (ha_4);
-    SC_METHOD (fa_4);
+    SC_CTHREAD (ha_1, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_1, clk.pos());
+    async_reset_signal_is(rstn, false);
+
+    SC_CTHREAD (ha_2, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_2, clk.pos());    
+    async_reset_signal_is(rstn, false);
+
+    SC_CTHREAD (ha_3, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_3, clk.pos());
+    async_reset_signal_is(rstn, false);
+
+    SC_CTHREAD (ha_4, clk.pos());
+    async_reset_signal_is(rstn, false);
+    SC_CTHREAD (fa_4, clk.pos());
+    async_reset_signal_is(rstn, false);
   }
 
 }; 
