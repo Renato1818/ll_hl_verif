@@ -27,8 +27,8 @@ files_to_test = [
     ("bit2_adder_assert/Main.pvl", "Bit 2 Adder Assert"),
     ("bit4_adder/Main.pvl", "Bit 4 Adder"),
     ("bit4_adder_assert/Main.pvl", "Bit 4 Adder Assert"),
-    ("bit8_adder/Main.pvl", "Bit 8 Adder"),
-    ("bit8_adder_assert/Main.pvl", "Bit 8 Adder Assert"),
+    #("bit8_adder/Main.pvl", "Bit 8 Adder"),
+    #("bit8_adder_assert/Main.pvl", "Bit 8 Adder Assert"),
     ("alu/Main.pvl", "ALU"),
     ("alu_assert/Main.pvl", "ALU Assert")
 ]

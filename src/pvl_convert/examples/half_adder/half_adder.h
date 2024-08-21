@@ -1,12 +1,13 @@
 #include <systemc.h>          
 
 SC_MODULE (half_adder) {       
-  bool a, b, sum, carry; 
+  bool a, b;
+  bool sum, carry; 
 
   void prc_half_adder(){
 		while (true) {			
       wait(5, SC_MS);	
-      sum = !(a & b) & (a | b) ;						
+      sum = !(a & b) & (a | b) ;
       carry = a & b;	
 		}
 	}

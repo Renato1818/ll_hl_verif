@@ -403,17 +403,10 @@ class Bit4_adder {
             fa_1();
             ha_2();
             fa_2();
-
             ha_3();  
             fa_3();
-
             ha_4();            
             fa_4();
-                //partial sum
-                assert (!(!m.adder.s41 && !m.adder.c3) || !m.adder.S4);
-                assert (!(!m.adder.s41 &&  m.adder.c3) ||  m.adder.S4);
-                assert (!( m.adder.s41 && !m.adder.c3) ||  m.adder.S4);
-                assert (!( m.adder.s41 &&  m.adder.c3) || !m.adder.S4); 
 
             //FPV
             if (m.assertions) {

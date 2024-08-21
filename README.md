@@ -8,7 +8,7 @@ You can found all the falies related with.
 src \
   |-> examples       - SystemC files used on the thesis \
   |-> pvl_convert    - For reproduce PVL convertion \
-  |-> verif_vercors  - The final pvl codes tested \
+  |-> verif_vercors  - The final pvl codes formal verified \
   |-> sv_convert     - SystemC files for the use of the ICSC converter \
   |-> verif_sby      - Verification at LL 
 
