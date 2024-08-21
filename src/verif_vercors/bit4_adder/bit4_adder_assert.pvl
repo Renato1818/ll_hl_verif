@@ -1,0 +1,727 @@
+class Bit4_adder { 
+    Main m;
+    boolean Cin;
+    boolean A1, A2, A3, A4;
+    boolean B1, B2, B3, B4;
+
+    boolean S1, S2, S3, S4;
+    boolean Cout; 
+
+    //Auxiliar variables to ha1 and fa1
+    boolean s11, c11, cin_1d;
+    boolean s1, c1;
+    
+    //Auxiliar variables to ha2 and fa2
+    boolean s21, c21, c1_1d;
+    boolean s2, c2;
+
+    //Auxiliar variables to ha3 and fa3
+    boolean s31, c31, c2_1d;
+    boolean s3, c3;
+    
+    //Auxiliar variables to ha4 and fa4
+    boolean s41, c41, c3_1d;
+    boolean s4, c4;
+
+    //Delay Inputs to prevent miss match
+    boolean a2_1d, a2_2d, b2_1d, b2_2d;
+    boolean a3_1d, a3_2d, a3_3d, a3_4d, b3_1d, b3_2d, b3_3d, b3_4d;
+    boolean a4_1d, a4_2d, a4_3d, a4_4d, a4_5d, a4_6d;
+    boolean b4_1d, b4_2d, b4_3d, b4_4d, b4_5d, b4_6d;
+
+    //Delay Outputs
+    boolean s1_1d, s1_2d, s1_3d, s1_4d, s1_5d, s1_6d;
+    boolean s2_1d, s2_2d, s2_3d, s2_4d;
+    boolean s3_1d, s3_2d;
+    
+    ensures Perm(m, write) ** (m == m_param)
+            ** Perm(Cin, write)    ** !Cin  
+            ** Perm(A1, write)     ** !A1 
+            ** Perm(A2, write)     ** !A2  
+            ** Perm(A3, write)     ** !A3 
+            ** Perm(A4, write)     ** !A4 
+            ** Perm(B1, write)     ** !B1 
+            ** Perm(B2, write)     ** !B2 
+            ** Perm(B3, write)     ** !B3 
+            ** Perm(B4, write)     ** !B4 
+            ** Perm(S1, write)     ** !S1 
+            ** Perm(S2, write)     ** !S2 
+            ** Perm(S3, write)     ** !S3 
+            ** Perm(S4, write)     ** !S4 
+            ** Perm(Cout, write)   ** !Cout  
+            ** Perm(s11, write) 
+            ** Perm(c11, write) 
+            ** Perm(cin_1d, write) 
+            ** Perm(s1, write) 
+            ** Perm(c1, write) 
+            ** Perm(s21, write) 
+            ** Perm(c21, write) 
+            ** Perm(c1_1d, write) 
+            ** Perm(s2, write) 
+            ** Perm(c2, write) 
+            ** Perm(s31, write) 
+            ** Perm(c31, write) 
+            ** Perm(c2_1d, write) 
+            ** Perm(s3, write) 
+            ** Perm(c3, write) 
+            ** Perm(s41, write) 
+            ** Perm(c41, write) 
+            ** Perm(c3_1d, write) 
+            ** Perm(s4, write) 
+            ** Perm(c4, write) 
+            ** Perm(a2_1d, write) 
+            ** Perm(a2_2d, write) 
+            ** Perm(b2_1d, write) 
+            ** Perm(b2_2d, write) 
+            ** Perm(a3_1d, write) 
+            ** Perm(a3_2d, write) 
+            ** Perm(a3_3d, write) 
+            ** Perm(a3_4d, write) 
+            ** Perm(b3_1d, write) 
+            ** Perm(b3_2d, write) 
+            ** Perm(b3_3d, write) 
+            ** Perm(b3_4d, write) 
+            ** Perm(a4_1d, write) 
+            ** Perm(a4_2d, write) 
+            ** Perm(a4_3d, write) 
+            ** Perm(a4_4d, write) 
+            ** Perm(a4_5d, write) 
+            ** Perm(a4_6d, write) 
+            ** Perm(b4_1d, write) 
+            ** Perm(b4_2d, write) 
+            ** Perm(b4_3d, write) 
+            ** Perm(b4_4d, write) 
+            ** Perm(b4_5d, write) 
+            ** Perm(b4_6d, write) 
+            ** Perm(s1_1d, write) 
+            ** Perm(s1_2d, write) 
+            ** Perm(s1_3d, write) 
+            ** Perm(s1_4d, write) 
+            ** Perm(s1_5d, write) 
+            ** Perm(s1_6d, write) 
+            ** Perm(s2_1d, write) 
+            ** Perm(s2_2d, write) 
+            ** Perm(s2_3d, write) 
+            ** Perm(s2_4d, write) 
+            ** Perm(s3_1d, write) 
+            ** Perm(s3_2d, write) 
+            ;
+    Bit4_adder(Main m_param){
+        m = m_param;
+        Cin    = false; 
+        A1     = false; 
+        A2     = false; 
+        A3     = false; 
+        A4     = false; 
+        B1     = false; 
+        B2     = false;  
+        B3     = false; 
+        B4     = false; 
+        S1     = false;     
+        S2     = false;     
+        S3     = false; 
+        S4     = false;   
+        Cout   = false;
+    }
+
+
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.adder == this) 
+            ;
+    ensures m.ha1_permission()
+            ** s11 == (!(A1 && B1) && (A1 || B1))
+            ** c11 == (A1 && B1)
+            ** cin_1d == Cin
+            ** a2_1d == A2
+            ** b2_1d == B2
+            ** a3_1d == A3
+            ** b3_1d == B3
+            ** a4_1d == A4
+            ** b4_1d == B4
+            ;
+    void ha_1(){
+        s11 = !(A1 && B1) && (A1 || B1);
+        c11 = (A1 && B1);
+        cin_1d = Cin;
+        a2_1d = A2;
+        b2_1d = B2;
+        a3_1d = A3;
+        b3_1d = B3;
+        a4_1d = A4;
+        b4_1d = B4;
+    }
+    
+    //Auto-generated specifications of the function fa_1:
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.adder == this) 
+            ;
+    ensures m.ha1_permission()
+            ** m.fa1_permission()
+            ** s1 == (!(s11 && cin_1d) && (s11 || cin_1d))
+            ** c1 == (c11 || (s11 && cin_1d))
+            ** a2_2d == a2_1d
+            ** b2_2d == b2_1d
+            ** a3_2d == a3_1d
+            ** b3_2d == b3_1d
+            ** a4_2d == a4_1d
+            ** b4_2d == b4_1d
+            ;
+    void fa_1(){
+        s1 = !(s11 && cin_1d) && (s11 || cin_1d);
+        c1 = (c11 || (s11 && cin_1d));
+        a2_2d = a2_1d;
+        b2_2d = b2_1d;
+        a3_2d = a3_1d;
+        b3_2d = b3_1d;
+        a4_2d = a4_1d;
+        b4_2d = b4_1d;
+    }
+    
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.adder == this) 
+            ;
+    ensures m.ha1_permission()
+            ** m.fa1_permission()
+            ** m.ha2_permission()
+            ** s21 == (!(a2_2d && b2_2d) && (a2_2d || b2_2d))
+            ** c21 == (a2_2d && b2_2d)
+            ** c1_1d == c1
+            ** a3_3d == a3_2d
+            ** b3_3d == b3_2d
+            ** a4_3d == a4_2d
+            ** b4_3d == b4_2d
+            ** s1_1d == s1
+            ;
+    void ha_2(){
+        s21 = !(a2_2d && b2_2d) && (a2_2d || b2_2d);
+        c21 = (a2_2d && b2_2d);
+        c1_1d = c1;
+        a3_3d = a3_2d;
+        b3_3d = b3_2d;
+        a4_3d = a4_2d;
+        b4_3d = b4_2d;
+        s1_1d = s1;
+    }
+    
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.adder == this) 
+            ;
+    ensures m.ha1_permission()
+            ** m.fa1_permission()
+            ** m.ha2_permission()
+            ** m.fa2_permission()
+            ** s2 == (!(s21 && c1_1d) && (s21 || c1_1d))
+            ** c2 == (c21 || (s21 && c1_1d))
+            ** a3_4d == a3_3d 
+            ** b3_4d == b3_3d 
+            ** a4_4d == a4_3d 
+            ** b4_4d == b4_3d 
+            ** s1_2d == s1_1d
+            ;
+    void fa_2(){
+        s2 = !(s21 && c1_1d) && (s21 || c1_1d);
+        c2 = (c21 || (s21 && c1_1d));
+        a3_4d = a3_3d;
+        b3_4d = b3_3d;
+        a4_4d = a4_3d;
+        b4_4d = b4_3d;
+        s1_2d = s1_1d;
+    }
+    
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.adder == this) 
+            ;
+    ensures m.ha1_permission()
+            ** m.fa1_permission()
+            ** m.ha2_permission()
+            ** m.fa2_permission() 
+            ** m.ha3_permission()
+            ** s31 == (!(a3_4d && b3_4d) && (a3_4d || b3_4d))
+            ** c31 == (a3_4d && b3_4d)
+            ** c2_1d == c2
+            ** a4_5d == a4_4d
+            ** b4_5d == b4_4d
+            ** s1_3d == s1_2d
+            ** s2_1d == s2
+            ;
+    void ha_3(){
+        s31 = !(a3_4d && b3_4d) && (a3_4d || b3_4d);
+        c31 = (a3_4d && b3_4d);
+        c2_1d = c2;
+        a4_5d = a4_4d;
+        b4_5d = b4_4d;
+        s1_3d = s1_2d;
+        s2_1d = s2;
+    }
+    
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.adder == this) 
+            ;
+    ensures m.ha1_permission()
+            ** m.fa1_permission()
+            ** m.ha2_permission()
+            ** m.fa2_permission()  
+            ** m.ha3_permission() 
+            ** m.fa3_permission()
+            ** s3 == (!(s31 && c2_1d) && (s31 || c2_1d))
+            ** c3 == (c31 || (s31 && c2_1d))
+            ** a4_6d == a4_5d
+            ** b4_6d == b4_5d
+            ** s1_4d == s1_3d
+            ** s2_2d == s2_1d
+            ;
+    void fa_3(){
+        s3 = !(s31 && c2_1d) && (s31 || c2_1d);
+        c3 = (c31 || (s31 && c2_1d));
+        a4_6d = a4_5d;
+        b4_6d = b4_5d;
+        s1_4d = s1_3d;
+        s2_2d = s2_1d;
+    }
+    
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.adder == this) 
+            ;
+    ensures m.ha1_permission()
+            ** m.fa1_permission()
+            ** m.ha2_permission()
+            ** m.fa2_permission() 
+            ** m.ha3_permission()   
+            ** m.fa3_permission() 
+            ** m.ha4_permission()
+            ** s41 == (!(a4_6d && b4_6d) && (a4_6d || b4_6d))
+            ** c41 == (a4_6d && b4_6d)
+            ** c3_1d == c3
+            ** s1_5d == s1_4d
+            ** s2_3d == s2_2d
+            ** s3_1d == s3
+            ;
+    void ha_4(){
+        s41 = !(a4_6d && b4_6d) && (a4_6d || b4_6d);
+        c41 = (a4_6d && b4_6d);
+        c3_1d = c3;
+        s1_5d = s1_4d;
+        s2_3d = s2_2d;
+        s3_1d = s3;
+    }
+    
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.adder == this) 
+            ;
+    ensures m.ha1_permission()
+            ** m.fa1_permission()
+            ** m.ha2_permission()
+            ** m.fa2_permission()
+            ** m.ha3_permission()
+            ** m.fa3_permission()
+            ** m.ha4_permission()
+            ** m.fa4_permission()
+            ** s4 == (!(s41 && c3_1d) && (s41 || c3_1d))
+            ** c4 == (c41 || (s41 && c3_1d))
+            ** s1_6d == s1_5d
+            ** s2_4d == s2_3d
+            ** s3_2d == s3_1d
+            ** S1 == s1_6d
+            ** S2 == s2_4d
+            ** S3 == s3_2d
+            ** S4 == s4
+            ** Cout == c4
+            ;
+    void fa_4(){
+        s4 = !(s41 && c3_1d) && (s41 || c3_1d);
+        c4 = (c41 || (s41 && c3_1d));
+        s1_6d = s1_5d;
+        s2_4d = s2_3d;
+        s3_2d = s3_1d;
+        S1 = s1_6d;
+        S2 = s2_4d;
+        S3 = s3_2d;
+        S4 = s4;
+        Cout = c4;
+    }
+    
+    context Perm(m, read) 
+            ** (m != null) 
+            ** Perm(m.adder, read) 
+            ** (m.adder == this) 
+            ;
+    void run(){
+        int sum1;
+        int sum2;
+        int sum3;
+        int sum4;
+
+        lock m;
+
+        loop_invariant true 
+                ** Perm(m, read) 
+                ** (m != null) 
+                ** held(m) 
+                ** m.global_permission() 
+                ** (m.adder == this) 
+                ;
+        while (true) {
+            m.process_state = m.process_state[0 -> 0];
+            m.event_state = m.event_state[0 -> 5];
+            loop_invariant true 
+                    ** Perm(m, read)  
+                    ** (m != null) 
+                    ** held(m)  
+                    ** m.global_permission()  
+                    ** (m.adder == this) 
+                    ;
+            while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+                unlock m;
+                lock m;
+            }
+
+            ha_1(); 
+            fa_1();
+            ha_2();
+            fa_2();
+
+            ha_3();  
+            fa_3();
+
+            ha_4();            
+            fa_4();
+                //partial sum
+                assert (!(!m.adder.s41 && !m.adder.c3) || !m.adder.S4);
+                assert (!(!m.adder.s41 &&  m.adder.c3) ||  m.adder.S4);
+                assert (!( m.adder.s41 && !m.adder.c3) ||  m.adder.S4);
+                assert (!( m.adder.s41 &&  m.adder.c3) || !m.adder.S4); 
+
+            //FPV
+            if (m.assertions) {
+                sum1 = (A1 ? 1 : 0) + (B1 ? 1: 0) + (Cin ? 1 : 0);
+                sum2 = (A2 ? 1 : 0) + (B2 ? 1: 0) + ((sum1 >= 2) ? 1 : 0);
+                sum3 = (A3 ? 1 : 0) + (B3 ? 1: 0) + ((sum2 >= 2) ? 1 : 0);
+                sum4 = (A4 ? 1 : 0) + (B4 ? 1: 0) + ((sum3 >= 2) ? 1 : 0);
+                
+                //S1
+                assert (!(!A1 && !B1 && !Cin) || (!S1));
+                assert (!(!A1 && !B1 &&  Cin) || ( S1));
+                assert (!(!A1 &&  B1 && !Cin) || ( S1));
+                assert (!(!A1 &&  B1 &&  Cin) || (!S1));
+                assert (!( A1 && !B1 && !Cin) || ( S1));
+                assert (!( A1 && !B1 &&  Cin) || (!S1));
+                assert (!( A1 &&  B1 && !Cin) || (!S1));
+                assert (!( A1 &&  B1 &&  Cin) || ( S1));
+
+                //S2
+                assert ( !( sum2 == 0 ) || (!S2) );
+                assert ( !( sum2 == 1 ) || ( S2) );
+                assert ( !( sum2 == 2 ) || (!S2) );
+                assert ( !( sum2 == 3 ) || ( S2) );
+
+                //S3
+                assert ( !( sum3 == 0 ) || (!S3) );
+                assert ( !( sum3 == 1 ) || ( S3) );
+                assert ( !( sum3 == 2 ) || (!S3) );
+                assert ( !( sum3 == 3 ) || ( S3) );
+                
+                //S4
+                assert ( !( sum4 == 0 ) || (!S4) );
+                assert ( !( sum4 == 1 ) || ( S4) );
+                assert ( !( sum4 == 2 ) || (!S4) );
+                assert ( !( sum4 == 3 ) || ( S4) );
+                
+                //Cout
+                assert ( !( sum4 == 0 ) || (!Cout) );
+                assert ( !( sum4 == 1 ) || (!Cout) );
+                assert ( !( sum4 == 2 ) || ( Cout) );
+                assert ( !( sum4 == 3 ) || ( Cout) );
+            }
+        }
+        unlock m;
+    }
+    
+}
+
+class Main { 
+    seq<int> process_state;
+    seq<int> event_state;
+    Bit4_adder adder;
+    
+    boolean assertions;
+    
+    inline resource scheduler_permission_invariant() = true 
+            ** Perm(process_state, write) ** |process_state| == 1 
+            ** Perm(event_state, write) **   |event_state| == 1 
+            ** (\forall int i = 0 .. |process_state|; ((({: process_state[i] :} == -1)) 
+               || (((process_state[i] >= 0) && (process_state[i] < |event_state|))) ))
+            ;
+
+    inline resource ha1_permission() = true
+            ** (adder.A1  == \old(adder.A1))
+            ** (adder.B1  == \old(adder.B1))
+            ** (adder.Cin == \old(adder.Cin))
+            ** (adder.A2  == \old(adder.A2))
+            ** (adder.B2  == \old(adder.B2))
+            ** (adder.A3  == \old(adder.A3))
+            ** (adder.B3  == \old(adder.B3))
+            ** (adder.A4  == \old(adder.A4))
+            ** (adder.B4  == \old(adder.B4))
+            ;
+
+    inline resource fa1_permission() = true
+            ** (adder.c11    == \old(adder.c11))
+            ** (adder.s11    == \old(adder.s11))
+            ** (adder.cin_1d == \old(adder.cin_1d)) 
+            ** (adder.a2_1d  == \old(adder.a2_1d))
+            ** (adder.b2_1d  == \old(adder.b2_1d))
+            ** (adder.a3_1d  == \old(adder.a3_1d))
+            ** (adder.b3_1d  == \old(adder.b3_1d))
+            ** (adder.a4_1d  == \old(adder.a4_1d))
+            ** (adder.b4_1d  == \old(adder.b4_1d))
+            ;
+
+    inline resource ha2_permission() = true
+            ** (adder.a2_2d  == \old(adder.a2_2d))
+            ** (adder.b2_2d  == \old(adder.b2_2d))
+            ** (adder.c1     == \old(adder.c1))
+            ** (adder.a3_2d  == \old(adder.a3_2d))
+            ** (adder.b3_2d  == \old(adder.b3_2d))
+            ** (adder.a4_2d  == \old(adder.a4_2d))
+            ** (adder.b4_2d  == \old(adder.b4_2d))
+            ** (adder.s1     == \old(adder.s1))
+            ;
+
+    inline resource fa2_permission() = true
+            ** (adder.c21    == \old(adder.c21))
+            ** (adder.s21    == \old(adder.s21))
+            ** (adder.c1_1d  == \old(adder.c1_1d)) 
+            ** (adder.a3_3d  == \old(adder.a3_3d))
+            ** (adder.b3_3d  == \old(adder.b3_3d))
+            ** (adder.a4_3d  == \old(adder.a4_3d))
+            ** (adder.b4_3d  == \old(adder.b4_3d))
+            ** (adder.s1_1d  == \old(adder.s1_1d))
+            ;
+
+    inline resource ha3_permission() = true
+            ** (adder.a3_4d == \old(adder.a3_4d))
+            ** (adder.b3_4d == \old(adder.b3_4d))
+            ** (adder.c2    == \old(adder.c2))
+            ** (adder.a4_4d == \old(adder.a4_4d))
+            ** (adder.b4_4d == \old(adder.b4_4d))
+            ** (adder.s1_2d == \old(adder.s1_2d))
+            ** (adder.s2    == \old(adder.s2)) 
+            ;
+            
+    inline resource fa3_permission() = true
+            ** (adder.c31    == \old(adder.c31))
+            ** (adder.s31    == \old(adder.s31))
+            ** (adder.c2_1d  == \old(adder.c2_1d)) 
+            ** (adder.a4_5d  == \old(adder.a4_5d))
+            ** (adder.b4_5d  == \old(adder.b4_5d))
+            ** (adder.s1_3d  == \old(adder.s1_3d))
+            ** (adder.s2_1d  == \old(adder.s2_1d))
+            ;
+    
+    inline resource ha4_permission() = true
+            ** (adder.a4_6d  == \old(adder.a4_6d))
+            ** (adder.b4_6d  == \old(adder.b4_6d))
+            ** (adder.c3     == \old(adder.c3))
+            ** (adder.s1_4d  == \old(adder.s1_4d))
+            ** (adder.s2_2d  == \old(adder.s2_2d))
+            ** (adder.s3     == \old(adder.s3))
+            ;
+            
+    inline resource fa4_permission() = true
+            ** (adder.c41    == \old(adder.c41))
+            ** (adder.s41    == \old(adder.s41))
+            ** (adder.c3_1d  == \old(adder.c3_1d)) 
+            ** (adder.s1_5d  == \old(adder.s1_5d))
+            ** (adder.s2_3d  == \old(adder.s2_3d))
+            ** (adder.s3_1d  == \old(adder.s3_1d))
+            ;
+
+    inline resource global_permission() = true  
+            ** scheduler_permission_invariant() 
+
+            ** Perm(assertions, read)
+            ** assertions  //disable all the assert
+
+            ** Perm(adder, read) 
+            ** (adder != null)
+            ** Perm(adder.Cin, write)   
+            ** Perm(adder.A1, write)  
+            ** Perm(adder.A2, write)   
+            ** Perm(adder.A3, write)  
+            ** Perm(adder.A4, write)  
+            ** Perm(adder.B1, write)  
+            ** Perm(adder.B2, write)  
+            ** Perm(adder.B3, write)  
+            ** Perm(adder.B4, write)  
+            ** Perm(adder.S1, write)  
+            ** Perm(adder.S2, write)  
+            ** Perm(adder.S3, write)  
+            ** Perm(adder.S4, write)  
+            ** Perm(adder.Cout, write)   
+            ** Perm(adder.s11, write) 
+            ** Perm(adder.c11, write) 
+            ** Perm(adder.cin_1d, write) 
+            ** Perm(adder.s1, write) 
+            ** Perm(adder.c1, write) 
+            ** Perm(adder.s21, write) 
+            ** Perm(adder.c21, write) 
+            ** Perm(adder.c1_1d, write) 
+            ** Perm(adder.s2, write) 
+            ** Perm(adder.c2, write) 
+            ** Perm(adder.s31, write) 
+            ** Perm(adder.c31, write) 
+            ** Perm(adder.c2_1d, write) 
+            ** Perm(adder.s3, write) 
+            ** Perm(adder.c3, write) 
+            ** Perm(adder.s41, write) 
+            ** Perm(adder.c41, write) 
+            ** Perm(adder.c3_1d, write) 
+            ** Perm(adder.s4, write) 
+            ** Perm(adder.c4, write) 
+            ** Perm(adder.a2_1d, write) 
+            ** Perm(adder.a2_2d, write) 
+            ** Perm(adder.b2_1d, write) 
+            ** Perm(adder.b2_2d, write) 
+            ** Perm(adder.a3_1d, write) 
+            ** Perm(adder.a3_2d, write) 
+            ** Perm(adder.a3_3d, write) 
+            ** Perm(adder.a3_4d, write) 
+            ** Perm(adder.b3_1d, write) 
+            ** Perm(adder.b3_2d, write) 
+            ** Perm(adder.b3_3d, write) 
+            ** Perm(adder.b3_4d, write) 
+            ** Perm(adder.a4_1d, write) 
+            ** Perm(adder.a4_2d, write) 
+            ** Perm(adder.a4_3d, write) 
+            ** Perm(adder.a4_4d, write) 
+            ** Perm(adder.a4_5d, write) 
+            ** Perm(adder.a4_6d, write) 
+            ** Perm(adder.b4_1d, write) 
+            ** Perm(adder.b4_2d, write) 
+            ** Perm(adder.b4_3d, write) 
+            ** Perm(adder.b4_4d, write) 
+            ** Perm(adder.b4_5d, write) 
+            ** Perm(adder.b4_6d, write) 
+            ** Perm(adder.s1_1d, write) 
+            ** Perm(adder.s1_2d, write) 
+            ** Perm(adder.s1_3d, write) 
+            ** Perm(adder.s1_4d, write) 
+            ** Perm(adder.s1_5d, write) 
+            ** Perm(adder.s1_6d, write) 
+            ** Perm(adder.s2_1d, write) 
+            ** Perm(adder.s2_2d, write) 
+            ** Perm(adder.s2_3d, write) 
+            ** Perm(adder.s2_4d, write) 
+            ** Perm(adder.s3_1d, write) 
+            ** Perm(adder.s3_2d, write) 
+            ;
+    
+    resource lock_invariant() = global_permission();
+    
+    
+    ensures Perm(adder, read)
+            ** adder != null
+            ** Perm(adder.m, read)
+            ** adder.m == this
+            //** Perm(adder_fa_4.init, 1\2)
+            //** !adder_fa_4.init
+            ;
+    ensures idle(adder);
+    Main(){
+        process_state = [-1];
+        event_state = [-3];
+        
+        assertions = true; //disable all the assert
+        adder = new Bit4_adder(this);
+    }
+    
+    
+    context Perm(adder, read)
+            ** adder != null
+            ** Perm(adder.m, read)
+            ** adder.m == this
+            //** Perm(adder_fa_4.init, 1\2)
+            //** !adder_fa_4.init
+            ;
+    context idle(adder);
+    void main(){
+        lock this;
+        fork adder;
+        unlock this;
+        loop_invariant true ;
+        while (true) {
+            lock this;
+            immediate_wakeup();
+            reset_events_no_delta();
+            if (process_state[0] != -1 ) {
+                int min_advance = find_minimum_advance(event_state);
+                if (min_advance == -1) {
+                    min_advance = 0;
+                }
+                event_state = [event_state[0] < -1 ? -3 : event_state[0] - min_advance];
+                wakeup_after_wait();
+                reset_all_events();
+            }
+            unlock this;
+        }
+        join adder;
+    }
+    
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == \old(process_state[0]))) ))) );
+    void immediate_wakeup();
+    
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures ((((((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == -2)) ))) );
+    ensures (((!(((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == \old(event_state[0]))) ))) );
+    void reset_events_no_delta();
+    
+    requires (|vals| == 1);
+    ensures ((((vals[0] < -1) || (\result <= vals[0]))) );
+    ensures (((((vals[0] < -1)) ) ==> (\result == 0)) && ((((vals[0] >= -1)) ) ==> ((((vals[0] >= -1) && (\result == vals[0]))) )));
+    pure int find_minimum_advance(seq<int> vals);
+    
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == \old(process_state[0]))) ))) );
+    void wakeup_after_wait();
+    
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures (((((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == -2)) ))) );
+    ensures (((!((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == \old(event_state[0]))) ))) );
+    void reset_all_events();
+}
+

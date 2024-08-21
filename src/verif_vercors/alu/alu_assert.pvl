@@ -230,7 +230,7 @@ class Main {
             ** scheduler_permission_invariant()
 
             ** Perm(assertions, read)
-            ** !assertions  //disable all the assert
+            ** assertions  //disable all the assert
 
             ** Perm(N_BITS, read)
             ** N_BITS == 4
@@ -264,7 +264,7 @@ class Main {
         process_state = [-1];
         event_state = [-3];
 
-        assertions = false; //disable all the assert
+        assertions = true; //disable all the assert
         N_BITS = 4;
         MAX_RESULT = 16; //from 2^N_bits
         MAX_OPCODE = 8;

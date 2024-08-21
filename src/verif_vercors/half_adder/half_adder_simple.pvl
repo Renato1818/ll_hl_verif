@@ -1,96 +1,64 @@
 class Half_adder { 
     Main m;
-
     boolean a;
     boolean b;
     boolean sum;
     boolean carry;
 
-    boolean init;
-
-    ensures Perm(m, write)
+    ensures Perm(m, write) ** (m == m_param)
             ** Perm(a, write) ** !a 
             ** Perm(b, write) ** !b 
             ** Perm(sum, write) ** !sum 
             ** Perm(carry, write) ** !carry 
-            ** (m == m_param) ;
-    ensures Perm(init, write)
-            ** !init;
+            ;
     Half_adder(Main m_param){
         m = m_param;
-
         a = false;
         b = false;
         sum = false;
         carry = false;
-
-        init = false;
     }
     
     
-    context Perm(m, 1\2)
+    context Perm(m, read)
             ** (m != null)
             ** Perm(m.half, read)
             ** (m.half == this) 
-            ** Perm(init, 1\2)
-            ** !init;
+            ;
     void run(){
         boolean s_nand;
         boolean s_or;
         
         lock m;
-        m.process_state = m.process_state[0 -> 0];
-        m.event_state = m.event_state[0 -> 20];
-        init = true;
 
         loop_invariant true 
-                ** Perm(m, 1\2)  
+                ** Perm(m, read)  
                 ** (m != null)  
                 ** held(m)  
                 ** m.global_permission() 
                 ** (m.half == this) 
-                ** Perm(init, 1\2)
-                ** init;
-        while (m.process_state[0] != -1 || m.event_state[0] != -2) {
-            unlock m;
-            lock m;
-        }
-        loop_invariant true 
-                ** Perm(m, 1\2)  
-                ** (m != null)  
-                ** held(m)  
-                ** m.global_permission() 
-                ** (m.half == this) 
-                ** Perm(init, 1\2)
-                ** init;
+                ;
         while (true) {
-            m.process_state = m.process_state[0 -> 1];
-            m.event_state = m.event_state[1 -> 50];
-            loop_invariant true 
-                        ** Perm(m, 1\2)  
-                        ** (m != null)  
-                        ** held(m)  
-                        ** m.global_permission() 
-                        ** (m.half == this) 
-                        ** Perm(init, 1\2)
-                        ** init;
-            while (m.process_state[0] != -1 || m.event_state[1] != -2) {
-                unlock m;
-                lock m;
-            }
-            s_nand = !(a && b);
-            s_or = a || b;
-            sum = s_nand && s_or;
-            carry = a && b;
+            //m.process_state = m.process_state[0 -> 0];
+            //m.event_state = m.event_state[0 -> 50];
+            //loop_invariant true 
+            //            ** Perm(m, read)  
+            //            ** (m != null)  
+            //            ** held(m)  
+            //            ** m.global_permission() 
+            //            ** (m.half == this) 
+            //            ;
+            //while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+            //    unlock m;
+            //    lock m;
+            //}
 
-            assert ((!(a && b)) && (a || b)) == sum;
-            assert (a && b) == carry;
+            sum = !(a && b) && (a || b);
+            carry = a && b;
         }
         unlock m;
-    }
-    
+    }    
 }
-
 
 
 class Main { 
@@ -98,13 +66,14 @@ class Main {
     seq<int> event_state;
     Half_adder half;
     
-    inline resource scheduler_permission_invariant() = true ** 
-            Perm(process_state, write) **
-            |process_state| == 1 **
-            Perm(event_state, write) **
-            |event_state| == 2 **
-            (\forall int i = 0 .. |process_state|; ((({: process_state[i] :} == -1)) || (((process_state[i] >= 0) && (process_state[i] < |event_state|))) ))
+
+    inline resource scheduler_permission_invariant() = true 
+            ** Perm(process_state, write) ** |process_state| == 1
+            ** Perm(event_state, write)   ** |event_state| == 1 
+            ** (\forall int i = 0 .. |process_state|; ((({: process_state[i] :} == -1)) 
+                || (((process_state[i] >= 0) && (process_state[i] < |event_state|))) ))
             ;
+    
     inline resource global_permission() = true 
             ** scheduler_permission_invariant() 
 
@@ -114,23 +83,20 @@ class Main {
             ** Perm(half.a, write) 
             ** Perm(half.b, write) 
             ** Perm(half.sum, write) 
-            ** Perm(half.carry, write)             
-            ** Perm(half.init, 1\2)
+            ** Perm(half.carry, write)  
             ;
 
     resource lock_invariant() = global_permission();
     
     ensures Perm(half, read)
             ** half != null
-            ** Perm(half.m, 1\2)
+            ** Perm(half.m, read)
             ** half.m == this
-            ** Perm(half.init, 1\2)
-            ** !half.init
             ;
     ensures idle(half);
     Main(){
         process_state = [-1];
-        event_state = [-3,-3];
+        event_state = [-3];
         
         half = new Half_adder(this);
     }
@@ -138,10 +104,8 @@ class Main {
     
     context Perm(half, read)
             ** half != null
-            ** Perm(half.m, 1\2)
+            ** Perm(half.m, read)
             ** half.m == this
-            ** Perm(half.init, 1\2)
-            ** !half.init
             ;
     context idle(half);
     void main(){
@@ -159,7 +123,7 @@ class Main {
                 if (min_advance == -1) {
                     min_advance = 0;
                 }
-                event_state = [event_state[0] < -1 ? -3 : event_state[0] - min_advance,event_state[1] < -1 ? -3 : event_state[1] - min_advance];
+                event_state = [event_state[0] < -1 ? -3 : event_state[0] - min_advance];
                 wakeup_after_wait();
                 reset_all_events();
             }
@@ -178,13 +142,13 @@ class Main {
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((process_state == \old(process_state))) );
-    ensures ((((((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == -2)) ))) && (((((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == -2)) ))) );
-    ensures (((!(((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!(((\old(event_state[1]) == 0)) ) ==> (((event_state[1] == \old(event_state[1]))) ))) );
+    ensures ((((((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == -2)) ))) );
+    ensures (((!(((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == \old(event_state[0]))) ))) );
     void reset_events_no_delta();
     
-    requires (|vals| == 2);
-    ensures ((((vals[0] < -1) || (\result <= vals[0]))) && (((vals[1] < -1) || (\result <= vals[1]))) );
-    ensures (((((vals[0] < -1)) && ((vals[1] < -1)) ) ==> (\result == 0)) && ((((vals[0] >= -1)) || ((vals[1] >= -1)) ) ==> ((((vals[0] >= -1) && (\result == vals[0]))) || (((vals[1] >= -1) && (\result == vals[1]))) )));
+    requires (|vals| == 1);
+    ensures ((((vals[0] < -1) || (\result <= vals[0]))) );
+    ensures (((((vals[0] < -1)) ) ==> (\result == 0)) && ((((vals[0] >= -1)) ) ==> ((((vals[0] >= -1) && (\result == vals[0]))) )));
     pure int find_minimum_advance(seq<int> vals);
     
     context held(this) **
@@ -197,8 +161,8 @@ class Main {
     context held(this) **
             scheduler_permission_invariant() ;
     ensures (((process_state == \old(process_state))) );
-    ensures (((((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == -2)) ))) && ((((\old(event_state[1]) == 0) || (\old(event_state[1]) == -1)) ==> (((event_state[1] == -2)) ))) );
-    ensures (((!((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == \old(event_state[0]))) ))) && ((!((\old(event_state[1]) == 0) || (\old(event_state[1]) == -1)) ==> (((event_state[1] == \old(event_state[1]))) ))) );
+    ensures (((((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == -2)) ))) );
+    ensures (((!((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == \old(event_state[0]))) ))) );
     void reset_all_events();
     
 }

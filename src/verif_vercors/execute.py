@@ -10,7 +10,7 @@ import numpy as np
 # python3 execute.py
 
 # Number of times to run the command
-N = 15
+N = 3
 
 # Command to execute
 command = ["vercors-1", "--silicon"]
@@ -18,23 +18,36 @@ command = ["vercors-1", "--silicon"]
 # List of files to test and their corresponding names
 files_to_test = [
     ("robot/robot.pvl", "Robot"),
-    ("half_adder/half_adder.pvl", "Half Adder"),
-    ("full_adder/full_adder.pvl", "Full Adder"),
-    ("alu/alu.pvl", "ALU")
+    ("robot/robot_assert.pvl", "Robot Assert"),
+    ("half_adder/Main.pvl", "Half Adder"),
+    ("half_adder_assert/Main.pvl", "Half Adder Assert"),
+    ("full_adder/Main.pvl", "Full Adder"),
+    ("full_adder_assert/Main.pvl", "Full Adder Assert"),
+    ("bit2_adder/Main.pvl", "Bit 2 Adder"),
+    ("bit2_adder_assert/Main.pvl", "Bit 2 Adder Assert"),
+    ("bit4_adder/Main.pvl", "Bit 4 Adder"),
+    ("bit4_adder_assert/Main.pvl", "Bit 4 Adder Assert"),
+    ("bit8_adder/Main.pvl", "Bit 8 Adder"),
+    ("bit8_adder_assert/Main.pvl", "Bit 8 Adder Assert"),
+    ("alu/Main.pvl", "ALU"),
+    ("alu_assert/Main.pvl", "ALU Assert")
 ]
 
 output_file = "results.txt"
 statistics_file = "statistics.txt"
 tmp_folder = "tmp"
-plot_title = "performance_metrics"  
+plot_title = "Performance Metrics"
 output_image = "performance_metrics.png"
 add_trendline = False  # Set to True to add a trendline
 
 # Function to write results to the output file
 def write_results(file, file_path, elapsed_times):
     file.write(f"Testing {file_path}:\n")
+    file.flush()  # Ensure data is written to the file immediately
+
     for elapsed_time in elapsed_times:
         file.write(f"{elapsed_time:.3f}\n")
+        file.flush()  # Ensure each time is written immediately
 
     # Calculate statistics
     min_time = min(elapsed_times)
@@ -47,13 +60,15 @@ def write_results(file, file_path, elapsed_times):
     file.write(f"Max: {max_time:.3f}\n")
     file.write(f"Average: {avg_time:.3f}\n")
     file.write(f"Standard Deviation: {std_dev_time:.3f}\n\n")
+    file.flush()  # Ensure statistics are written immediately
     
     return min_time, max_time, avg_time, std_dev_time
 
-# Open the results file for writing
-with open(output_file, 'w') as results_file, open(statistics_file, 'w') as stats_file:
-    # Write the header for the statistics file
-    stats_file.write(f"{'Test Case':<20} {'Min':<10} {'Max':<10} {'Average':<15} {'Standard Deviation':<20}\n")
+# Open the results file and statistics file in append mode
+with open(output_file, 'a') as results_file, open(statistics_file, 'a') as stats_file:
+    # Write the header for the statistics file if it's a new file
+    if os.stat(statistics_file).st_size == 0:
+        stats_file.write(f"{'Test Case':<20} {'Min':<10} {'Max':<10} {'Average':<15} {'Standard Deviation':<20}\n")
 
     statistics_data = []
 
@@ -80,6 +95,7 @@ with open(output_file, 'w') as results_file, open(statistics_file, 'w') as stats
 
         # Write statistics to the statistics file
         stats_file.write(f"{test_name:<20} {min_time:<10.3f} {max_time:<10.3f} {avg_time:<15.3f} {std_dev_time:<20.3f}\n")
+        stats_file.flush()  # Ensure each line of statistics is written immediately
 
         # Append data for chart
         statistics_data.append((test_name, min_time, max_time, avg_time))

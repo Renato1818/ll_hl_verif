@@ -1,3 +1,0 @@
-Test Case            Min        Max        Average         Standard Deviation  
-Half Adder           30.311     40.190     34.514          3.570               
-Half Adder Extra     33.178     44.792     39.251          3.225               

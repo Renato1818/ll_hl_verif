@@ -53,6 +53,7 @@ class Sensor {
                 obs_detected = false;
             }
             
+            assert (dist < 50) == obs_detected;
         }
         unlock m;
     }
@@ -104,6 +105,8 @@ class Controller {
             } else {
                 alarm_flag = false;
             }
+
+            assert m.sensor.obs_detected == alarm_flag;
         }
         unlock m;
     }
