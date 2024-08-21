@@ -14,14 +14,13 @@ SC_MODULE(ALU) {
 	}
 
     void operate()	{
-    	wait(2, SC_MS);
 		while(true){
+      		wait(5, SC_MS);
 			ZERO = false;
 			data1 = OP1.read();
 			data2 = OP2.read();
 			
-			switch(OPCODE.read())
-			{					
+			switch(OPCODE.read()) {					
 				case 0: //addition
 					result = data1 + data2;
 					break;
@@ -58,11 +57,7 @@ SC_MODULE(ALU) {
 			RESULT.write(result.range(3, 0));			
 			CARRY.write((bool) result[4]);			
 			if(result == 0)
-				ZERO.write(true);
-			
-			
-      		wait(5, SC_MS);
+				ZERO.write(true);			
 		}
-	}
-    
+	}    
 };

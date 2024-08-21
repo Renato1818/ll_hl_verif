@@ -10,13 +10,13 @@ SC_MODULE (half_adder) {
   bool s_nand, s_or;
 
   void prc_half_adder(){
-    wait(2, SC_MS);
-		while (true) {			
+		while (true) {		
+      wait(5, SC_MS);	
       s_nand = !(a & b);
       s_or = a | b ;
+      
       sum.write(s_nand & s_or);						
       carry.write(a & b);	
-      wait(5, SC_MS);
 		}
 	}
 

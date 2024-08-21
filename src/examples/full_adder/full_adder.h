@@ -10,11 +10,10 @@ SC_MODULE (full_adder) {
   bool sum_next;
   
   void prc_or () {
-    wait(2, SC_MS);
-		while (true) {			
+		while (true) {	
+      wait(5, SC_MS);		
       carry_out = (c1 | c2);
       sum = sum_next;
-      wait(5, SC_MS);
 		}
   }
 
