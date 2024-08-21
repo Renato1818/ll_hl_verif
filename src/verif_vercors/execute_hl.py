@@ -10,7 +10,7 @@ import numpy as np
 # python3 execute.py
 
 # Number of times to run the command
-N = 3
+N = 40
 
 # Command to execute
 command = ["vercors-1", "--silicon"]

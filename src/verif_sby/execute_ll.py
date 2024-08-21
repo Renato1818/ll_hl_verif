@@ -10,7 +10,7 @@ import numpy as np
 # python3 execute.py
 
 # Number of times to run the command
-N = 15
+N = 40
 
 # Command to execute
 command = ["sby", "-f"]
@@ -27,8 +27,8 @@ files_to_test = [
     ("bit2_adder/FPV_assert.sby", "Bit 2 Adder Assert"),
     ("bit4_adder/FPV.sby", "Bit 4 Adder"),
     ("bit4_adder/FPV_assert.sby", "Bit 4 Adder Assert"),
-    ("bit8_adder/FPV.sby", "Bit 8 Adder"),
-    ("bit8_adder/FPV_assert.sby", "Bit 8 Adder Assert"),
+    # ("bit8_adder/FPV.sby", "Bit 8 Adder"),
+    # ("bit8_adder/FPV_assert.sby", "Bit 8 Adder Assert"),
     ("alu/FPV.sby", "ALU"),
     ("alu/FPV_assert.sby", "ALU Assert")
 ]
