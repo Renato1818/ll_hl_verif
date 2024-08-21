@@ -15,7 +15,7 @@ bmcc: btor btormc
 
 [script]
 design -reset
-read -sv full_adder.sv
+read -formal full_adder.sv
 hierarchy -check -top full_adder
 prep -top full_adder
 

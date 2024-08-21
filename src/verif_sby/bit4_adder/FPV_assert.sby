@@ -15,9 +15,9 @@ bmcc: btor btormc
 
 [script]
 design -reset
-read -sv full_adder.sv
-hierarchy -check -top full_adder
-prep -top full_adder
+read -formal bit4_adder.sv
+hierarchy -check -top bit4_adder
+prep -top bit4_adder
 
 [files]
-full_adder/full_adder.sv
+bit4_adder/bit4_adder.sv

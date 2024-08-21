@@ -15,7 +15,7 @@ bmcc: btor btormc
 
 [script]
 design -reset
-read -formal half_adder.sv
+read -sv half_adder.sv
 hierarchy -check -top half_adder
 prep -top half_adder
 

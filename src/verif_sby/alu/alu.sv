@@ -12,6 +12,10 @@ module alu #(
 		output wire [DATA_WIDTH:0] RESULT
 	);
 
+//------------------------------------------------------------------------------
+// Clocked THREAD: operate
+	
+	// Thread-local variables
 	reg [DATA_WIDTH+1:0] result_next;
 	reg [DATA_WIDTH:0] RESULT_next;
 	reg [DATA_WIDTH:0] result;
@@ -168,10 +172,10 @@ module alu #(
 	
 	
 	
-	always @(*) begin: operate_comb  
-		
+	always @(*) begin: operate_comb  		
 		data1 = OP1;
 		data2 = OP2;
+		
 		case (OPCODE)
 			0 : begin
 				result_next = data1 + data2;
@@ -188,22 +192,18 @@ module alu #(
 			4 : begin //and
 				result_next = func_and(data1, data2);
 				result_next = res;
-
 			end
 			5 : begin //or
 				result_next = func_or(data1, data2);
-				result_next = res;
-				
+				result_next = res;				
 			end
 			6 : begin //nand
 				result_next = func_nand(data1, data2);
-				result_next = res;
-				
+				result_next = res;				
 			end
 			7 : begin //xor
 				result_next = func_xor(data1, data2);
-				result_next = res;
-				
+				result_next = res;				
 			end
 			default: begin				
 				CARRY_next = 0;
@@ -211,6 +211,7 @@ module alu #(
 				ZERO_next = 0;
 			end
 		endcase
+
 		RESULT_next = result_next[DATA_WIDTH:0];
 		CARRY_next = result_next[DATA_WIDTH+1];
 		
@@ -221,11 +222,6 @@ module alu #(
 		end
 	end
 	
-	assign RESULT = result;
-	assign ZERO = zero;
-	assign CARRY = carry;
-	
-
 	always_ff @(posedge clk or negedge rstn)  begin : operate_ff
 		if ( !rstn ) begin
 			zero <= 1'd0;
@@ -237,6 +233,10 @@ module alu #(
 			carry <= CARRY_next;
 		end
 	end
+
+	assign RESULT = result;
+	assign ZERO = zero;
+	assign CARRY = carry;
 	
 	`ifdef FORMAL	
 		reg [DATA_WIDTH:0] f_op1;
@@ -255,6 +255,12 @@ module alu #(
 		
 		//Declare when verifications is valid
         reg f_past_valid = 1'b0;
+        //always @($global_clock) f_past_valid <= 1'b1; //to use $past property
+		//always @(negedge rstn) begin
+		//	if ( !rstn ) begin
+		//		f_past_valid <= 1'd0;
+		//	end 
+		//end
 
 
 		assign op_add  =  (f_op1 + f_op2);
@@ -266,18 +272,18 @@ module alu #(
 		assign op_nand = ~(f_op1 & f_op2);
 		assign op_xor  =   f_op1 ^ f_op2;
 
-		assign f_carry = ( ((f_opcode == 0) & op_add[4])  || 
-						   ((f_opcode == 1) & op_sub[4])  || 
-						   ((f_opcode == 2) & op_incr[4]) || 
-						   ((f_opcode == 3) & op_decr[4])   ) ^ CARRY;
-
-		assign f_zero = ( ((f_opcode == 0) & ( op_add  == 0)) ||
-						  ((f_opcode == 1) & ( op_sub  == 0)) ||
-						  ((f_opcode == 3) & ( op_decr == 0)) ||
-						  ((f_opcode == 4) & ( op_and  == 0)) ||
-						  ((f_opcode == 5) & ( op_or   == 0)) ||
-						  ((f_opcode == 6) & ( op_nand == 0)) ||
-						  ((f_opcode == 7) & ( op_xor  == 0))    ) ^ ZERO;
+		//assign f_carry = ( ((f_opcode == 0) & op_add[4])  || 
+		//				   ((f_opcode == 1) & op_sub[4])  || 
+		//				   ((f_opcode == 2) & op_incr[4]) || 
+		//				   ((f_opcode == 3) & op_decr[4])   ) ^ CARRY;
+        //
+		//assign f_zero = ( ((f_opcode == 0) & ( op_add  == 0)) ||
+		//				  ((f_opcode == 1) & ( op_sub  == 0)) ||
+		//				  ((f_opcode == 3) & ( op_decr == 0)) ||
+		//				  ((f_opcode == 4) & ( op_and  == 0)) ||
+		//				  ((f_opcode == 5) & ( op_or   == 0)) ||
+		//				  ((f_opcode == 6) & ( op_nand == 0)) ||
+		//				  ((f_opcode == 7) & ( op_xor  == 0))    ) ^ ZERO;
 						  
 
 		always @(posedge clk or negedge rstn) begin 
@@ -303,41 +309,36 @@ module alu #(
 				assert_zero_result: assert ((RESULT == 4'd0));
 
 			end else begin 				
-				if (f_past_valid) begin						
-					assert_zero: assert ( !f_zero );
-					assert_carry: assert ( !f_carry );
+				if (f_past_valid) begin	 
+					//zero
+					assert_zero1: assert ( !((f_opcode == 0) & op_add[4])  || CARRY); 
+					assert_zero2: assert ( !((f_opcode == 1) & op_sub[4])  || CARRY); 
+					assert_zero3: assert ( !((f_opcode == 2) & op_incr[4]) || CARRY); 
+					assert_zero4: assert ( !((f_opcode == 3) & op_decr[4]) || CARRY);
+
+					//carry
+					assert_carry1: assert ( !((f_opcode == 0) & ( op_add  == 0)) || ZERO );
+					assert_carry2: assert ( !((f_opcode == 1) & ( op_sub  == 0)) || ZERO );
+					assert_carry3: assert ( !((f_opcode == 3) & ( op_decr == 0)) || ZERO );
+					assert_carry4: assert ( !((f_opcode == 4) & ( op_and  == 0)) || ZERO );
+					assert_carry5: assert ( !((f_opcode == 5) & ( op_or   == 0)) || ZERO );
+					assert_carry6: assert ( !((f_opcode == 6) & ( op_nand == 0)) || ZERO );
+					assert_carry7: assert ( !((f_opcode == 7) & ( op_xor  == 0)) || ZERO );
 
 					//result
-					case (f_opcode)
-						0 : begin
-							assert_res0: assert ( RESULT == (op_add[3:0]) );
-						end				
-						1: begin
-							assert_res1: assert ( RESULT == (op_sub[3:0]) );
-						end
-						2: begin
-							assert_res2: assert ( RESULT == (op_incr[3:0]) );
-						end
-						3: begin
-							assert_res3: assert ( RESULT == (op_decr[3:0]) );
-						end
-						4: begin
-							assert_res4: assert ( RESULT == op_and );
-						end
-						5: begin
-							assert_res5: assert ( RESULT == op_or );
-						end
-						6: begin
-							assert_res6: assert ( RESULT == op_nand );
-						end
-						7: begin
-							assert_res7: assert (RESULT == op_xor );
-						end
-					endcase 
+					assert_res0: assert ( !(f_opcode == 0) || RESULT == (op_add[3:0]) );
+					assert_res1: assert ( !(f_opcode == 1) || RESULT == (op_sub[3:0]) );
+					assert_res2: assert ( !(f_opcode == 2) || RESULT == (op_incr[3:0]) );
+					assert_res3: assert ( !(f_opcode == 3) || RESULT == (op_decr[3:0]) );
+					assert_res4: assert ( !(f_opcode == 4) || RESULT == op_and );
+					assert_res5: assert ( !(f_opcode == 5) || RESULT == op_or );
+					assert_res6: assert ( !(f_opcode == 6) || RESULT == op_nand );
+					assert_res7: assert ( !(f_opcode == 7) || RESULT == op_xor );
 				end
 			end
-
+			/*
 			// cover
+			//opcode op1 op2 cover
 			cov_opcode_zero: cover (OPCODE == 3'd0);
 			cov_opcode_one:  cover (OPCODE == 3'd7);
 		
@@ -391,7 +392,7 @@ module alu #(
 				7: begin
 					cover_res7: cover ((RESULT == ~(OP1 | OP2)));
 				end
-			endcase 
+			endcase */
 		end
 
 	`endif

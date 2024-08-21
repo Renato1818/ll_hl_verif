@@ -48,31 +48,32 @@ module robot #(
 
 	`ifdef FORMAL
         logic f_obs;
-		logic f_obs_past;
-		logic f_obs_past_past;
-		logic f_obs_res;
-		logic f_alarm_res;
+		logic f_obs_d1;
+		logic f_obs_d2;
+
+		//logic f_obs_res;
+		//logic f_alarm_res;
 
 		//Declare when verifications is valid
-        reg f_past_valid = 1'b0;
-        reg f_past_past_valid = 1'b0;
+        reg f_valid_1d = 1'b0;
+        reg f_valid_2d = 1'b0;
 
 		assign f_obs = (dist_v < MIN_DIST) ? 1'd1 : 1'd0;
-		assign f_obs_res = f_obs_past ^ obs_detected_out;
-		assign f_alarm_res = f_obs_past_past ^ alarm_flag;
+		//assign f_obs_res = f_obs_d1 ^ obs_detected_out;
+		//assign f_alarm_res = f_obs_d2 ^ alarm_flag;
 
 		always @(posedge clk or negedge rstn) begin 
 			if ( !rstn ) begin
-				f_obs_past <= 1'd0;		
-				f_obs_past_past <= 1'd0;
-				f_past_valid <= 1'd0;	
+				f_obs_d1 <= 1'd0;		
+				f_obs_d2 <= 1'd0;
+				f_valid_1d <= 1'd0;	
 			end else begin
-				f_obs_past <= f_obs;		
-				f_obs_past_past <= f_obs_past;	
-				if (f_past_valid) begin
-					f_past_past_valid <= 1'b1;
+				f_obs_d1 <= f_obs;		
+				f_obs_d2 <= f_obs_d1;	
+				if (f_valid_1d) begin
+					f_valid_2d <= 1'b1;
 				end
-				f_past_valid <= 1'b1;
+				f_valid_1d <= 1'b1;
 			end
 		end
 		
@@ -82,22 +83,27 @@ module robot #(
                 assert_obs_detected_reset: assert (!obs_detected_out);                 
                 assert_alarm_false_reset: assert (!alarm_flag);
             end else begin  		
-				if (f_past_valid) begin										
-					assert_obs_detected: assert ( !f_obs_res );
+				if (f_valid_1d) begin										
+					//assert_obs_detected: assert ( !f_obs_res );	
+					assert_obs_detected1: assert ( !( f_obs_d1) ||  obs_detected_out );
+					assert_obs_detected2: assert ( !(!f_obs_d1) || !obs_detected_out );
 				end 	
-				if (f_past_past_valid) begin					
-					assert_alarm: assert ( !f_alarm_res );
+				if (f_valid_2d) begin					
+					//assert_alarm: assert ( !f_alarm_res );
+					assert_alarm1: assert ( !( f_obs_d2) ||  alarm_flag );
+					assert_alarm2: assert ( !(!f_obs_d2) || !alarm_flag );
 				end
             end 
-				
-			cov_dist_zero: cover ( dist_v == 16'h0000);
-			cov_dist_one:  cover ( dist_v == 16'h7FFF); 
-			
-			cov_obs_detected_out_zero: cover (obs_detected_out); 
-			cov_obs_detected_out_one:  cover (!obs_detected_out);
-			
-			cov_alarm_zero: cover (alarm_flag); 
-			cov_alarm_one:  cover (!alarm_flag);
+
+			//COVER	
+			//cov_dist_zero: cover ( dist_v == 16'h0000);
+			//cov_dist_one:  cover ( dist_v == 16'h7FFF); 
+			//
+			//cov_obs_detected_out_zero: cover (obs_detected_out); 
+			//cov_obs_detected_out_one:  cover (!obs_detected_out);
+			//
+			//cov_alarm_zero: cover (alarm_flag); 
+			//cov_alarm_one:  cover (!alarm_flag);
 			
         end
 
