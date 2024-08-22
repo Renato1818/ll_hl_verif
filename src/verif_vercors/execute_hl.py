@@ -19,18 +19,18 @@ command = ["vercors-1", "--silicon"]
 files_to_test = [
     ("robot/robot.pvl", "Robot"),
     ("robot/robot_assert.pvl", "Robot Assert"),
-    ("half_adder/Main.pvl", "Half Adder"),
-    ("half_adder_assert/Main.pvl", "Half Adder Assert"),
-    ("full_adder/Main.pvl", "Full Adder"),
-    ("full_adder_assert/Main.pvl", "Full Adder Assert"),
-    ("bit2_adder/Main.pvl", "Bit 2 Adder"),
-    ("bit2_adder_assert/Main.pvl", "Bit 2 Adder Assert"),
-    ("bit4_adder/Main.pvl", "Bit 4 Adder"),
-    ("bit4_adder_assert/Main.pvl", "Bit 4 Adder Assert"),
-    #("bit8_adder/Main.pvl", "Bit 8 Adder"),
-    #("bit8_adder_assert/Main.pvl", "Bit 8 Adder Assert"),
-    ("alu/Main.pvl", "ALU"),
-    ("alu_assert/Main.pvl", "ALU Assert")
+    ("half_adder/half_adder.pvl", "Half Adder"),
+    ("half_adder/half_adder_assert.pvl", "Half Adder Assert"),
+    ("full_adder/full_adder.pvl", "Full Adder"),
+    ("full_adder/full_adder_assert.pvl", "Full Adder Assert"),
+    ("bit2_adder/bit2_adder.pvl", "Bit 2 Adder"),
+    ("bit2_adder/bit2_adder_assert.pvl", "Bit 2 Adder Assert"),
+    ("bit4_adder/bit4_adder.pvl", "Bit 4 Adder"),
+    ("bit4_adder/bit4_adder_assert.pvl", "Bit 4 Adder Assert"),
+    #("bit8_adder/bit8_adder.pvl", "Bit 8 Adder"),
+    #("bit8_adder/bit8_adder_aasert.pvl", "Bit 8 Adder Assert"),
+    ("alu/alu.pvl", "ALU"),
+    ("alu/alu_assert.pvl", "ALU Assert")
 ]
 
 output_file = "results.txt"
