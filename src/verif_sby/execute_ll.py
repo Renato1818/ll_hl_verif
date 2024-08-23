@@ -10,7 +10,7 @@ import numpy as np
 # python3 execute.py
 
 # Number of times to run the command
-N = 40
+N = 150
 
 # Command to execute
 command = ["sby", "-f"]
