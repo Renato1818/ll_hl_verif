@@ -102,28 +102,6 @@ class Full_adder {
             ha_1();
             fa_1();
 
-            //FPV
-            if (m.assertions) {
-                //sum              
-                assert (!(!A1 && !B1 && !Cin) || (!S1));
-                assert (!(!A1 && !B1 &&  Cin) || ( S1));
-                assert (!(!A1 &&  B1 && !Cin) || ( S1));
-                assert (!(!A1 &&  B1 &&  Cin) || (!S1));
-                assert (!( A1 && !B1 && !Cin) || ( S1));
-                assert (!( A1 && !B1 &&  Cin) || (!S1));
-                assert (!( A1 &&  B1 && !Cin) || (!S1));
-                assert (!( A1 &&  B1 &&  Cin) || ( S1));
-
-                //carry
-                assert (!(!A1 && !B1 && !Cin) || (!Cout));
-                assert (!(!A1 && !B1 &&  Cin) || (!Cout));
-                assert (!(!A1 &&  B1 && !Cin) || (!Cout));
-                assert (!(!A1 &&  B1 &&  Cin) || ( Cout));
-                assert (!( A1 && !B1 && !Cin) || (!Cout));
-                assert (!( A1 && !B1 &&  Cin) || ( Cout));
-                assert (!( A1 &&  B1 && !Cin) || ( Cout));
-                assert (!( A1 &&  B1 &&  Cin) || ( Cout));
-            }
         }
         unlock m;
     }
@@ -134,8 +112,6 @@ class Main {
     seq<int> process_state;
     seq<int> event_state;
     Full_adder adder;
-    
-    boolean assertions;
 
     inline resource scheduler_permission_invariant() = true 
             ** Perm(process_state, write) ** |process_state| == 1 
@@ -146,9 +122,6 @@ class Main {
     
     inline resource global_permission() = true 
             ** scheduler_permission_invariant() 
-
-            ** Perm(assertions, read)
-            ** !assertions  //disable all the assert
 
             //full adder 
             ** Perm(adder, read) 
@@ -175,7 +148,6 @@ class Main {
         process_state = [-1];
         event_state = [-3];
 
-        assertions = false; //disable all the assert
         adder = new Full_adder(this);
     }
     

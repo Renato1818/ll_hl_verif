@@ -41,12 +41,17 @@ output_image = "performance_metrics.png"
 add_trendline = False  # Set to True to add a trendline
 
 # Function to write results to the output file
-def write_results(file, file_path, elapsed_times):
+def write_results(file, file_path, elapsed_times, verdicts):
     file.write(f"Testing {file_path}:\n")
     file.flush()  # Ensure data is written to the file immediately
 
-    for elapsed_time in elapsed_times:
-        file.write(f"{elapsed_time:.3f}\n")
+    all_pass = True  # Track if all runs resulted in 'Pass'
+
+    for i, elapsed_time in enumerate(elapsed_times):
+        verdict_marker = "*" if verdicts[i] != "Pass" else ""
+        if verdict_marker:  # If there's an asterisk, one of the runs didn't pass
+            all_pass = False
+        file.write(f"{verdict_marker}{elapsed_time:.3f}\n")
         file.flush()  # Ensure each time is written immediately
 
     # Calculate statistics
@@ -62,7 +67,7 @@ def write_results(file, file_path, elapsed_times):
     file.write(f"Standard Deviation: {std_dev_time:.3f}\n\n")
     file.flush()  # Ensure statistics are written immediately
     
-    return min_time, max_time, avg_time, std_dev_time
+    return min_time, max_time, avg_time, std_dev_time, all_pass
 
 # Open the results file and statistics file in append mode
 with open(output_file, 'a') as results_file, open(statistics_file, 'a') as stats_file:
@@ -73,8 +78,14 @@ with open(output_file, 'a') as results_file, open(statistics_file, 'a') as stats
     statistics_data = []
 
     for file_path, test_name in files_to_test:
+        # Check if the file path exists before running the command
+        if not os.path.isfile(file_path):
+            print(f"File not found: {file_path}")
+            continue  # Skip this file if it doesn't exist
+
         # Run the command N times and measure the time
         elapsed_times = []
+        verdicts = []
         for i in range(N):
             start_time = time.time()  # Start time
             result = subprocess.run(command + [file_path], capture_output=True, text=True)
@@ -84,15 +95,25 @@ with open(output_file, 'a') as results_file, open(statistics_file, 'a') as stats
             elapsed_time = end_time - start_time
             elapsed_times.append(elapsed_time)
             
-            # Optionally print the output to the terminal
-            if result.returncode == 0:
-                print(f"Run {i+1} for {file_path}: Success")
-            else:
-                print(f"Run {i+1} for {file_path}: Error")
+            # Capture the final verdict from the output
+            final_verdict = "No verdict found"
+            for line in result.stdout.splitlines():
+                if "The final verdict is" in line:
+                    final_verdict = line.split("The final verdict is")[-1].strip()
+                    break
+
+            verdicts.append(final_verdict)
+            
+            # Print the final verdict and whether the run was successful
+            print(f"Run {i+1} for {file_path}: {final_verdict}")
 
         # Write results to the results file
-        min_time, max_time, avg_time, std_dev_time = write_results(results_file, file_path, elapsed_times)
+        min_time, max_time, avg_time, std_dev_time, all_pass = write_results(results_file, file_path, elapsed_times, verdicts)
 
+        # Adjust the test name if not all runs passed
+        if not all_pass:
+            test_name += "*"
+        
         # Write statistics to the statistics file
         stats_file.write(f"{test_name:<20} {min_time:<10.3f} {max_time:<10.3f} {avg_time:<15.3f} {std_dev_time:<20.3f}\n")
         stats_file.flush()  # Ensure each line of statistics is written immediately

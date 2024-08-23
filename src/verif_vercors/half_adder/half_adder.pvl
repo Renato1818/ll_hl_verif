@@ -55,21 +55,7 @@ class Half_adder {
 
             sum = !(a && b) && (a || b);
             carry = a && b;
-
-            //FPV
-            if (m.assertions) {
-                //sum   
-                assert (!(!a && !b) || !sum);
-                assert (!(!a &&  b) ||  sum);
-                assert (!( a && !b) ||  sum);
-                assert (!( a &&  b) || !sum);
-                
-                //carry
-                assert (!(!a && !b) || !carry);
-                assert (!(!a &&  b) || !carry);
-                assert (!( a && !b) || !carry);
-                assert (!( a &&  b) ||  carry);
-            }
+            
         }
         unlock m;
     }    
@@ -81,7 +67,6 @@ class Main {
     seq<int> event_state;
     Half_adder half;
     
-    boolean assertions;
 
     inline resource scheduler_permission_invariant() = true 
             ** Perm(process_state, write) ** |process_state| == 1
@@ -92,9 +77,6 @@ class Main {
     
     inline resource global_permission() = true 
             ** scheduler_permission_invariant() 
-
-            ** Perm(assertions, read)
-            ** !assertions  //disable all the assert
 
             //half_adder
             ** Perm(half, read) 
@@ -117,7 +99,6 @@ class Main {
         process_state = [-1];
         event_state = [-3];
         
-        assertions = false; //disable all the assert
         half = new Half_adder(this);
     }
     

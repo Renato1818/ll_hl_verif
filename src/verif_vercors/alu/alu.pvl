@@ -196,12 +196,6 @@ class ALU {
             CARRY = ((result / m.MAX_RESULT) % 2) == 1 ? true : false;
             ZERO = (result % m.MAX_RESULT) == 0 ? true : false;
 
-            //FPV
-            if (m.assertions) {
-                assert RESULT == (result % m.MAX_RESULT);
-                assert CARRY == (((result / m.MAX_RESULT) % 2) == 1) ? true : false;
-                assert ZERO == ((result % m.MAX_RESULT) == 0) ? true : false;
-            }
         }
         unlock m;
     }    
@@ -214,7 +208,6 @@ class Main {
     seq<int> event_state;
     ALU alu;
     
-    boolean assertions;
     int N_BITS;
     int MAX_RESULT;
     int MAX_OPCODE;
@@ -228,9 +221,6 @@ class Main {
 
     inline resource global_permission() = true 
             ** scheduler_permission_invariant()
-
-            ** Perm(assertions, read)
-            ** !assertions  //disable all the assert
 
             ** Perm(N_BITS, read)
             ** N_BITS == 4
@@ -264,7 +254,6 @@ class Main {
         process_state = [-1];
         event_state = [-3];
 
-        assertions = false; //disable all the assert
         N_BITS = 4;
         MAX_RESULT = 16; //from 2^N_bits
         MAX_OPCODE = 8;

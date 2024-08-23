@@ -195,33 +195,6 @@ class Bit2_adder {
             ha_2(); 
             fa_2();
 
-            //FPV
-            if (m.assertions) {
-                sum1 = (A1 ? 1 : 0) + (B1 ? 1: 0) + (Cin ? 1 : 0);
-                sum2 = (A2 ? 1 : 0) + (B2 ? 1: 0) + ((sum1 >= 2) ? 1 : 0);
-                
-                //S1
-                assert (!(!A1 && !B1 && !Cin) || (!S1));
-                assert (!(!A1 && !B1 &&  Cin) || ( S1));
-                assert (!(!A1 &&  B1 && !Cin) || ( S1));
-                assert (!(!A1 &&  B1 &&  Cin) || (!S1));
-                assert (!( A1 && !B1 && !Cin) || ( S1));
-                assert (!( A1 && !B1 &&  Cin) || (!S1));
-                assert (!( A1 &&  B1 && !Cin) || (!S1));
-                assert (!( A1 &&  B1 &&  Cin) || ( S1));
-
-                //S2
-                assert ( !( sum2 == 0 ) || (!S2) );
-                assert ( !( sum2 == 1 ) || ( S2) );
-                assert ( !( sum2 == 2 ) || (!S2) );
-                assert ( !( sum2 == 3 ) || ( S2) );
-
-                //Cout
-                assert ( !( sum2 == 0 ) || (!Cout) );
-                assert ( !( sum2 == 1 ) || (!Cout) );
-                assert ( !( sum2 == 2 ) || ( Cout) );
-                assert ( !( sum2 == 3 ) || ( Cout) );
-            }
         }
         unlock m;
     }
@@ -232,8 +205,6 @@ class Main {
     seq<int> process_state;
     seq<int> event_state;
     Bit2_adder adder;
-    
-    boolean assertions;
 
     inline resource scheduler_permission_invariant() = true 
             ** Perm(process_state, write) ** |process_state| == 1 
@@ -274,9 +245,6 @@ class Main {
 
     inline resource global_permission() = true 
             ** scheduler_permission_invariant() 
-
-            ** Perm(assertions, read)
-            ** !assertions  //disable all the assert
 
             //bit2_adder
             ** Perm(adder, read) 
@@ -321,7 +289,6 @@ class Main {
         process_state = [-1];
         event_state = [-3];
 
-        assertions = false; //disable all the assert
         adder = new Bit2_adder(this);
     }
     
