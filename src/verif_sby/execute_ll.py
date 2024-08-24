@@ -10,7 +10,7 @@ import numpy as np
 # python3 execute.py
 
 # Number of times to run the command
-N = 150
+N = 40
 
 # Command to execute
 command = ["sby", "-f"]
@@ -40,12 +40,17 @@ output_image = "performance_metrics.png"
 add_trendline = False  # Set to True to add a trendline
 
 # Function to write results to the output file
-def write_results(file, file_path, elapsed_times):
+def write_results(file, file_path, elapsed_times, verdicts):
     file.write(f"Testing {file_path}:\n")
     file.flush()  # Ensure data is written to the file immediately
 
-    for elapsed_time in elapsed_times:
-        file.write(f"{elapsed_time:.3f}\n")
+    all_pass = True  # Track if all runs resulted in 'Pass'
+
+    for i, elapsed_time in enumerate(elapsed_times):
+        verdict_marker = "*" if verdicts[i] != "Success" else ""
+        if verdict_marker:  # If there's an asterisk, one of the runs didn't pass
+            all_pass = False
+        file.write(f"{verdict_marker}{elapsed_time:.3f}\n")
         file.flush()  # Ensure each time is written immediately
 
     # Calculate statistics
@@ -61,7 +66,15 @@ def write_results(file, file_path, elapsed_times):
     file.write(f"Standard Deviation: {std_dev_time:.3f}\n\n")
     file.flush()  # Ensure statistics are written immediately
     
-    return min_time, max_time, avg_time, std_dev_time
+    return min_time, max_time, avg_time, std_dev_time, all_pass
+
+# Function to clean up generated folders that start with "FPV"
+def cleanup_fpvs(parent_dir):
+    for item in os.listdir(parent_dir):
+        item_path = os.path.join(parent_dir, item)
+        if os.path.isdir(item_path) and item.startswith("FPV"):
+            shutil.rmtree(item_path)
+            #print(f"Deleted folder: {item_path}")
 
 # Open the results file and statistics file in append mode
 with open(output_file, 'a') as results_file, open(statistics_file, 'a') as stats_file:
@@ -72,8 +85,14 @@ with open(output_file, 'a') as results_file, open(statistics_file, 'a') as stats
     statistics_data = []
 
     for file_path, test_name in files_to_test:
+        # Check if the file path exists before running the command
+        if not os.path.isfile(file_path):
+            print(f"File not found: {file_path}")
+            continue  # Skip this file if it doesn't exist
+
         # Run the command N times and measure the time
         elapsed_times = []
+        verdicts = []
         for i in range(N):
             start_time = time.time()  # Start time
             result = subprocess.run(command + [file_path], capture_output=True, text=True)
@@ -82,56 +101,71 @@ with open(output_file, 'a') as results_file, open(statistics_file, 'a') as stats
             # Calculate the elapsed time
             elapsed_time = end_time - start_time
             elapsed_times.append(elapsed_time)
-            
-            # Optionally print the output to the terminal
-            if result.returncode == 0:
-                print(f"Run {i+1} for {file_path}: Success")
+
+            # Check for the "The following tasks failed" in the output
+            if "The following tasks failed:" in result.stdout:
+                final_verdict = result.stdout.split("The following tasks failed:")[-1].strip()
+                verdicts.append(final_verdict)
+                print(f"Run {i+1} for {file_path}: Error - {final_verdict}")
             else:
-                print(f"Run {i+1} for {file_path}: Error")
+                verdicts.append("Success")
+                print(f"Run {i+1} for {file_path}: Success")
 
-        # Write results to the results file
-        min_time, max_time, avg_time, std_dev_time = write_results(results_file, file_path, elapsed_times)
+        if elapsed_times:  # Ensure there are elapsed times to process
+            # Write results to the results file
+            min_time, max_time, avg_time, std_dev_time, all_pass = write_results(results_file, file_path, elapsed_times, verdicts)
 
-        # Write statistics to the statistics file
-        stats_file.write(f"{test_name:<20} {min_time:<10.3f} {max_time:<10.3f} {avg_time:<15.3f} {std_dev_time:<20.3f}\n")
-        stats_file.flush()  # Ensure each line of statistics is written immediately
+            # Adjust the test name if not all runs passed
+            if not all_pass:
+                test_name += "*"
 
-        # Append data for chart
-        statistics_data.append((test_name, min_time, max_time, avg_time))
+            # Write statistics to the statistics file
+            stats_file.write(f"{test_name:<20} {min_time:<10.3f} {max_time:<10.3f} {avg_time:<15.3f} {std_dev_time:<20.3f}\n")
+            stats_file.flush()  # Ensure each line of statistics is written immediately
 
-# Create the stock chart
-test_names, min_times, max_times, avg_times = zip(*statistics_data)
-x = np.arange(len(test_names))  # the label locations
+            # Append data for chart
+            statistics_data.append((test_name, min_time, max_time, avg_time))
 
-fig, ax = plt.subplots(figsize=(10, 5))
+            # Clean up generated folders that start with "FPV"
+            parent_dir = os.path.dirname(file_path)
+            cleanup_fpvs(parent_dir)
 
-# Plot the average bars
-bar_width = 0.35
-bars_avg = ax.bar(x, avg_times, bar_width, label='Average', color='lightgrey')
+# Only create the chart if statistics_data has content
+if statistics_data:
+    test_names, min_times, max_times, avg_times = zip(*statistics_data)
+    x = np.arange(len(test_names))  # the label locations
 
-# Optional trendline
-if add_trendline:
-    z = np.polyfit(x, avg_times, 1)
-    p = np.poly1d(z)
-    plt.plot(x, p(x), "--", color='black', label='Trendline (Average)')
+    fig, ax = plt.subplots(figsize=(10, 5))
 
-# Add some text for labels, title and custom x-axis tick labels, etc.
-ax.set_xlabel('Test Case')
-ax.set_ylabel('Time (s)')
-ax.set_title(plot_title)
-ax.set_xticks(x)
-ax.set_xticklabels(test_names)
-ax.legend()
+    # Plot the average bars
+    bar_width = 0.35
+    bars_avg = ax.bar(x, avg_times, bar_width, label='Average', color='lightgrey')
 
-# Add the variation between min and max
-for i in range(len(x)):
-    ax.vlines(x[i], min_times[i], max_times[i], color='black', linestyle='dashed')
+    # Optional trendline
+    if add_trendline:
+        z = np.polyfit(x, avg_times, 1)
+        p = np.poly1d(z)
+        plt.plot(x, p(x), "--", color='black', label='Trendline (Average)')
 
-fig.tight_layout()
-plt.grid(True)
-plt.savefig(output_image)
-plt.close()
-print(f"Chart saved as {output_image}")
+    # Add some text for labels, title and custom x-axis tick labels, etc.
+    ax.set_xlabel('Test Case')
+    ax.set_ylabel('Time (s)')
+    ax.set_title(plot_title)
+    ax.set_xticks(x)
+    ax.set_xticklabels(test_names)
+    ax.legend()
+
+    # Add the variation between min and max
+    for i in range(len(x)):
+        ax.vlines(x[i], min_times[i], max_times[i], color='black', linestyle='dashed')
+
+    fig.tight_layout()
+    plt.grid(True)
+    plt.savefig(output_image)
+    plt.close()
+    print(f"Chart saved as {output_image}")
+else:
+    print("No data available to generate a chart.")
 
 # Inform the user that the results have been written to the files
 print(f"Results have been written to {output_file}")
