@@ -1,8 +1,8 @@
 Test Case            Min        Max        Average         Standard Deviation  
 Robot                26.838     37.001     30.203          2.588               
 Robot Assert         26.925     35.517     29.555          2.061               
-Half Adder*          3.608      5.021      4.150           0.334               
-Half Adder Assert    19.056     26.297     22.076          1.683               
+Half Adder           19.812     27.501     21.987          1.555               
+Half Adder Assert    20.089     29.946     22.772          2.210               
 Full Adder           25.127     40.046     30.211          2.969               
 Full Adder Assert    24.013     35.077     29.000          2.497               
 Bit 2 Adder          43.475     53.817     47.575          2.843               

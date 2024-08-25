@@ -1,0 +1,7 @@
+Test Case            Simple Avg      Simple Std Dev       With Assertions Avg  With Assertions Std Dev   Difference Avg       Combined Std Dev    
+robot                30.203          2.588                29.555               2.061                     0.648                3.308               
+half_adder           21.987          1.555                22.772               2.210                     0.785                2.702               
+full_adder           30.211          2.969                29.000               2.497                     1.211                3.879               
+bit2_adder           47.575          2.843                108.290              5.675                     60.715               6.347               
+bit4_adder           142.874         10.166               1927.622             31.678                    1784.748             33.269              
+alu                  111.570         5.051                124.688              5.950                     13.118               7.805               
