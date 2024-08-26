@@ -22,7 +22,7 @@ def read_statistics(file_path):
     std_devs = []
     with open(file_path, 'r') as file:
         lines = file.readlines()
-        for line in lines[2:]:  # Skip the header
+        for line in lines[1:]:  # Skip the header
             if line.strip():  # Skip empty lines
                 parts = line.split()
                 test_name = parts[0]
@@ -65,7 +65,7 @@ def plot_results(statistics_data, file_labels, plot_title, output_image, add_tre
     x2 = np.arange(len(test_names2))  # Positions for the bars
 
     # Plot the average bars for the second dataset
-    bars_avg2 = ax2.bar(x2 + offset, avg_times2, bar_width, label=file_labels[1], color='lightgray')
+    bars_avg2 = ax2.bar(x2 + offset, avg_times2, bar_width, label=file_labels[1], color='silver')
 
     # Add the standard deviation as error bars
     ax2.errorbar(x2 + offset, avg_times2, yerr=std_devs2, fmt='o', color='black', capsize=5)
