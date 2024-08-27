@@ -53,7 +53,10 @@ class Sensor {
                 obs_detected = false;
             }
             
-            assert (dist < 50) == obs_detected;
+            //FPV
+            if (m.assertions) {
+                assert (dist < 50) == obs_detected;
+            }
         }
         unlock m;
     }
@@ -106,7 +109,10 @@ class Controller {
                 alarm_flag = false;
             }
 
-            assert m.sensor.obs_detected == alarm_flag;
+            //FPV
+            if (m.assertions) {
+                assert m.sensor.obs_detected == alarm_flag;
+            }
         }
         unlock m;
     }
@@ -120,6 +126,8 @@ class Main {
     seq<int> event_state;
     Sensor sensor;
     Controller controller;
+
+    boolean assertions;
     
     inline resource scheduler_permission_invariant() = true 
             ** Perm(process_state, write) ** |process_state| == 2 
@@ -130,6 +138,9 @@ class Main {
     
     inline resource global_permission() = true  
             ** scheduler_permission_invariant() 
+
+            ** Perm(assertions, read)
+            ** assertions  //disable all the assert
 
             //sensor
             ** Perm(sensor, read) 
@@ -161,6 +172,7 @@ class Main {
         process_state = [-1,-1];
         event_state = [-3,-3,-3];
 
+        assertions = true; //disable all the assert
         sensor = new Sensor(this);
         controller = new Controller(this);
     }

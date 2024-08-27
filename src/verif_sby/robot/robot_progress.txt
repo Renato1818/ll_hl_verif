@@ -1,0 +1,258 @@
+SBY 14:55:47 [robot/FPV_assert_cvr] Removing directory '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/FPV_assert_cvr'.
+SBY 14:55:47 [robot/FPV_assert_cvr] Copy '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/robot.sv' to '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/FPV_assert_cvr/src/robot.sv'.
+SBY 14:55:47 [robot/FPV_assert_cvr] engine_0: smtbmc z3
+SBY 14:55:47 [robot/FPV_assert_prv] Removing directory '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/FPV_assert_prv'.
+SBY 14:55:47 [robot/FPV_assert_prv] Copy '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/robot.sv' to '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/FPV_assert_prv/src/robot.sv'.
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0: smtbmc z3
+SBY 14:55:48 [robot/FPV_assert_bmcc] Removing directory '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/FPV_assert_bmcc'.
+SBY 14:55:48 [robot/FPV_assert_bmcc] Copy '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/robot.sv' to '/mnt/c/Users/renatoj/git_clones/ll_hl_verif/src/verif_sby/robot/FPV_assert_bmcc/src/robot.sv'.
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: btor btormc
+SBY 14:55:48 [robot/FPV_assert_cvr] base: starting process "cd robot/FPV_assert_cvr/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 14:55:48 [robot/FPV_assert_prv] base: starting process "cd robot/FPV_assert_prv/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 14:55:48 [robot/FPV_assert_bmcc] base: starting process "cd robot/FPV_assert_bmcc/src; yosys -ql ../model/design.log ../model/design.ys"
+SBY 14:55:48 [robot/FPV_assert_cvr] base: Warning: reg '\buff_dist_v' is assigned in a continuous assignment at robot.sv:20.9-20.29.
+SBY 14:55:48 [robot/FPV_assert_cvr] base: Warning: reg '\obs_detected_next' is assigned in a continuous assignment at robot.sv:24.9-24.67.
+SBY 14:55:48 [robot/FPV_assert_cvr] base: Warning: reg '\alarm_flag_next' is assigned in a continuous assignment at robot.sv:35.9-35.53.
+SBY 14:55:48 [robot/FPV_assert_prv] base: Warning: reg '\buff_dist_v' is assigned in a continuous assignment at robot.sv:20.9-20.29.
+SBY 14:55:48 [robot/FPV_assert_prv] base: Warning: reg '\obs_detected_next' is assigned in a continuous assignment at robot.sv:24.9-24.67.
+SBY 14:55:48 [robot/FPV_assert_prv] base: Warning: reg '\alarm_flag_next' is assigned in a continuous assignment at robot.sv:35.9-35.53.
+SBY 14:55:48 [robot/FPV_assert_bmcc] base: Warning: reg '\buff_dist_v' is assigned in a continuous assignment at robot.sv:20.9-20.29.
+SBY 14:55:48 [robot/FPV_assert_bmcc] base: Warning: reg '\obs_detected_next' is assigned in a continuous assignment at robot.sv:24.9-24.67.
+SBY 14:55:48 [robot/FPV_assert_bmcc] base: Warning: reg '\alarm_flag_next' is assigned in a continuous assignment at robot.sv:35.9-35.53.
+SBY 14:55:48 [robot/FPV_assert_prv] base: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_cvr] base: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_prv] prep: starting process "cd robot/FPV_assert_prv/model; yosys -ql design_prep.log design_prep.ys"
+SBY 14:55:48 [robot/FPV_assert_bmcc] base: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_cvr] prep: starting process "cd robot/FPV_assert_cvr/model; yosys -ql design_prep.log design_prep.ys"
+SBY 14:55:48 [robot/FPV_assert_bmcc] prep: starting process "cd robot/FPV_assert_bmcc/model; yosys -ql design_prep.log design_prep.ys"
+SBY 14:55:48 [robot/FPV_assert_prv] prep: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_prv] smt2: starting process "cd robot/FPV_assert_prv/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 14:55:48 [robot/FPV_assert_cvr] prep: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_cvr] smt2: starting process "cd robot/FPV_assert_cvr/model; yosys -ql design_smt2.log design_smt2.ys"
+SBY 14:55:48 [robot/FPV_assert_bmcc] prep: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_bmcc] btor: starting process "cd robot/FPV_assert_bmcc/model; yosys -ql design_btor.log design_btor.ys"
+SBY 14:55:48 [robot/FPV_assert_prv] smt2: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: starting process "cd robot/FPV_assert_prv; yosys-smtbmc -s z3 --presat --noprogress -t 20  --append 0 --dump-vcd engine_0/trace.vcd --dump-yw engine_0/trace.yw --dump-vlogtb engine_0/trace_tb.v --dump-smtc engine_0/trace.smtc model/design_smt2.smt2"
+SBY 14:55:48 [robot/FPV_assert_cvr] smt2: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: starting process "cd robot/FPV_assert_prv; yosys-smtbmc -s z3 --presat -i --noprogress -t 20  --append 0 --dump-vcd engine_0/trace_induct.vcd --dump-yw engine_0/trace_induct.yw --dump-vlogtb engine_0/trace_induct_tb.v --dump-smtc engine_0/trace_induct.smtc model/design_smt2.smt2"
+SBY 14:55:48 [robot/FPV_assert_cvr] engine_0: starting process "cd robot/FPV_assert_cvr; yosys-smtbmc -s z3 --presat -c --noprogress -t 20  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2"
+SBY 14:55:48 [robot/FPV_assert_bmcc] btor: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: starting process "cd robot/FPV_assert_bmcc; btormc --stop-first 1 -v 1 -kmax 19 model/design_btor.btor"
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] calling BMC on 6 properties from bound 0 up-to maximum bound k = 19
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Solver: z3
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 0 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 0 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 0 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 0 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 0 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 0 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 0
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 1 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 1 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 1 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 1 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 1 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 1 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 1
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 2 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 2 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 2 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 2 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 2 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 2 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 2
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 3 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 3 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 3 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 3 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 3 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 3 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 3
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 4 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 4 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 4 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 4 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 4 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 4 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 4
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 5 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 5 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 5 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 5 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 5 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 5 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 5
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 6 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 6 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 6 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 6 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 6 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 6 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 6
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 7 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 7 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 7 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 7 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 7 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 7 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 7
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 8 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 8 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 8 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 8 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 8 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 8 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 8
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 9 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 9 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 9 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 9 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 9 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 9 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 9
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 10 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 10 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 10 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 10 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 10 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 10 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 10
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 11 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 11 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 11 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 11 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 11 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 11 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 11
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 12 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 12 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 12 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 12 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 12 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 12 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 12
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 13 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 13 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 13 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 13 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 13 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 13 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 13
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 14 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 14 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 14 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 14 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 14 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 14 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 14
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 15 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 15 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 15 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 15 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 15 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 15 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 15
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 16 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 16 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 16 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 16 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 16 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 16 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 16
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 17 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 17 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 17 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 17 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 17 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 17 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 17
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 18 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 18 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 18 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 18 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 18 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 18 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 18
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 0 at bound k = 19 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 1 at bound k = 19 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 2 at bound k = 19 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 3 at bound k = 19 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 4 at bound k = 19 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] bad state property 5 at bound k = 19 UNSATISFIABLE
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] found 0 reachable and 0 unreachable bad state properties at bound k = 19
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: [btor>mc] deleting model checker: 3 inputs, 25 states, 6 bad, 1 constraints
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_bmcc] engine_0: Status returned by engine: pass
+SBY 14:55:48 [robot/FPV_assert_bmcc] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 14:55:48 [robot/FPV_assert_bmcc] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 14:55:48 [robot/FPV_assert_bmcc] summary: engine_0 (btor btormc) returned pass
+SBY 14:55:48 [robot/FPV_assert_bmcc] summary: engine_0 did not produce any traces
+SBY 14:55:48 [robot/FPV_assert_bmcc] DONE (PASS, rc=0)
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 0..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 0..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 1..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 1..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 2..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 2..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 3..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 3..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 4..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 4..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 5..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 5..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 6..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 6..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 7..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 7..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 8..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 8..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 9..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 9..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 10..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 10..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 11..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 11..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 12..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 12..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 13..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 13..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 14..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 14..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 15..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 15..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 16..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 16..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 17..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 17..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 18..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 18..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assumptions in step 19..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Checking assertions in step 19..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: ##   0:00:00  Status: passed
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.basecase: Status returned by engine for basecase: pass
+SBY 14:55:48 [robot/FPV_assert_cvr] engine_0: ##   0:00:00  Solver: z3
+SBY 14:55:48 [robot/FPV_assert_cvr] engine_0: ##   0:00:00  Status: passed
+SBY 14:55:48 [robot/FPV_assert_cvr] engine_0: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_cvr] engine_0: Status returned by engine: pass
+SBY 14:55:48 [robot/FPV_assert_cvr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 14:55:48 [robot/FPV_assert_cvr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 14:55:48 [robot/FPV_assert_cvr] summary: engine_0 (smtbmc z3) returned pass
+SBY 14:55:48 [robot/FPV_assert_cvr] summary: engine_0 did not produce any traces
+SBY 14:55:48 [robot/FPV_assert_cvr] DONE (PASS, rc=0)
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: ##   0:00:00  Solver: z3
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: ##   0:00:00  Trying induction in step 20..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: ##   0:00:00  Trying induction in step 19..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: ##   0:00:00  Trying induction in step 18..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: ##   0:00:00  Trying induction in step 17..
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: ##   0:00:00  Temporal induction successful.
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: ##   0:00:00  Status: passed
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: finished (returncode=0)
+SBY 14:55:48 [robot/FPV_assert_prv] engine_0.induction: Status returned by engine for induction: pass
+SBY 14:55:48 [robot/FPV_assert_prv] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 14:55:48 [robot/FPV_assert_prv] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY 14:55:48 [robot/FPV_assert_prv] summary: engine_0 (smtbmc z3) returned pass for basecase
+SBY 14:55:48 [robot/FPV_assert_prv] summary: engine_0 (smtbmc z3) returned pass for induction
+SBY 14:55:48 [robot/FPV_assert_prv] summary: engine_0 did not produce any traces
+SBY 14:55:48 [robot/FPV_assert_prv] summary: successful proof by k-induction.
+SBY 14:55:48 [robot/FPV_assert_prv] DONE (PASS, rc=0)

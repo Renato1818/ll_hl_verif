@@ -1,110 +1,183 @@
+import os
+import statistics
+import math
 import matplotlib.pyplot as plt
 import numpy as np
-import statistics
+
+# How to execute the script on terminal:
+# python3 plot_results.py
 
 # Configuration
+
+# List of result files
 results_files = [
     "verif_vercors/results.txt",
     "verif_sby/results.txt"
-]  # List of result files
-file_labels = [
-    "HL Verif",  # Legend label for the first dataset
-    "LL Verif"   # Legend label for the second dataset
-]  # Simplified labels for each dataset
-plot_title = "Experimental Results Comparison"  # Title of the plot
-output_image = "performance_metrics_comparison.png"  # Output image file name
-add_trendline = False  # Set to True to add a trendline
+]  
+# Output statistics files
+output_statistics_files = [
+    "verif_vercors/output_statistics.txt", 
+    "verif_sby/output_statistics.txt" 
+] 
 
-# Read results from the file
+# Legend label for the two dataset
+file_labels = [
+    "HL Verif",  
+    "LL Verif"  
+]
+
+# Plot configuration
+plot_title = "Experimental Results Comparison"  
+output_image = "plot_comparation.png" 
+add_trendline = False  
+
+# Reads and parses results
 def read_results(file_path):
-    statistics_data = []
+    statistics_data = {}
+    current_test = None
+
     with open(file_path, 'r') as file:
         lines = file.readlines()
         i = 0
         while i < len(lines):
-            if lines[i].startswith("Testing"):
-                test_name = lines[i].split()[1].replace(":", "")
-                i += 1
-                elapsed_times = []
-                while i < len(lines) and lines[i].strip() and not lines[i].startswith("Testing"):
-                    elapsed_times.append(float(lines[i].strip()))
-                    i += 1
-                if elapsed_times:
-                    min_time = min(elapsed_times)
-                    max_time = max(elapsed_times)
-                    avg_time = statistics.mean(elapsed_times)
-                    std_dev_time = statistics.stdev(elapsed_times) if len(elapsed_times) > 1 else 0
-                    statistics_data.append((test_name, min_time, max_time, avg_time, std_dev_time))
-            else:
-                i += 1
+            line = lines[i].strip()
+            if line.startswith("Testing"):
+                current_test = line.split()[1].replace(":", "")
+                statistics_data[current_test] = {
+                    'times': []
+                }
+            elif line and line[0].isdigit():
+                statistics_data[current_test]['times'].append(float(line))
+            elif line.startswith("Min"):
+                statistics_data[current_test]['min'] = float(line.split(":")[1].strip())
+            elif line.startswith("Max"):
+                statistics_data[current_test]['max'] = float(line.split(":")[1].strip())
+            elif line.startswith("Average"):
+                statistics_data[current_test]['avg'] = float(line.split(":")[1].strip())
+            elif line.startswith("Standard Deviation"):
+                statistics_data[current_test]['std_dev'] = float(line.split(":")[1].strip())
+            i += 1
+
     return statistics_data
 
-# Plot data from multiple files
-def plot_results(results_data, file_labels, plot_title, output_image, add_trendline):
-    fig, ax1 = plt.subplots(figsize=(12, 6))
+# Calculates the difference between without and with assertions test times
+def calculate_difference(simple, with_assertions):
+    avg_diff = abs(simple['avg'] - with_assertions['avg'])
+    std_dev_combined = math.sqrt(simple['std_dev']**2 + with_assertions['std_dev']**2)
+    return avg_diff, std_dev_combined
 
-    bar_width = 0.35  # Width of the bars
-    offset = bar_width / 2  # Offset to place bars side by side
+# Generates statistics for multiple result files and saves to corresponding output files
+def generate_statistics(results_files, output_statistics_files):
+    for results_file, output_statistics_file in zip(results_files, output_statistics_files):
+        results = read_results(results_file)
+        test_cases = {}
 
-    # Plot the first dataset on the primary Y-axis
-    test_names1, min_times1, max_times1, avg_times1, _ = zip(*results_data[0])
-    x1 = np.arange(len(test_names1))  # Positions for the bars
+        for test_name, stats in results.items():
+            base_name = test_name.split('/')[0]
+            if base_name not in test_cases:
+                test_cases[base_name] = {}
 
-    # Plot the average bars for the first dataset
-    bars_avg1 = ax1.bar(x1 - offset, avg_times1, bar_width, label=file_labels[0], color='gray')
+            if "assert" in test_name:
+                test_cases[base_name]['with_assertions'] = stats
+            else:
+                test_cases[base_name]['simple'] = stats
 
-    # Add the variation between min and max for the first dataset
-    for i in range(len(x1)):
-        ax1.vlines(x1[i] - offset, min_times1[i], max_times1[i], color='black', linestyle='dashed')
+        all_statistics = []
 
-    # Optional trendline for the first dataset
+        for base_name, tests in test_cases.items():
+            if 'simple' in tests and 'with_assertions' in tests:
+                simple_results = tests['simple']
+                with_assertions_results = tests['with_assertions']
+
+                avg_diff, std_dev_combined = calculate_difference(simple_results, with_assertions_results)
+
+                all_statistics.append([
+                    base_name,
+                    simple_results['avg'],
+                    simple_results['std_dev'],
+                    with_assertions_results['avg'],
+                    with_assertions_results['std_dev'],
+                    avg_diff,
+                    std_dev_combined
+                ])
+
+        with open(output_statistics_file, 'w') as output_file:
+            output_file.write(f"{'Test Case':<20} {'Simple Avg':<15} {'Simple Std Dev':<20} {'Assertions Avg':<20} {'Assertions Std Dev':<25} {'Difference Avg':<20} {'Combined Std Dev':<20}\n")
+            for stat in all_statistics:
+                output_file.write(f"{stat[0]:<20} {stat[1]:<15.3f} {stat[2]:<20.3f} {stat[3]:<20.3f} {stat[4]:<25.3f} {stat[5]:<20.3f} {stat[6]:<20.3f}\n")
+
+        print(f"Statistics saved to {output_statistics_file}")
+
+# Function to read the statistics data from the file
+def read_statistics(file_path):
+    test_names = []
+    avg_times = []
+    std_devs = []
+    with open(file_path, 'r') as file:
+        lines = file.readlines()
+        for line in lines[1:]:  # Skip the header
+            if line.strip():  # Skip empty lines
+                parts = line.split()
+                test_name = parts[0]
+                avg_time = abs(float(parts[5]))  # 'Difference Avg' 
+                std_dev = float(parts[6])   # 'Combined Std Dev'
+                
+                test_names.append(test_name)
+                avg_times.append(avg_time)
+                std_devs.append(std_dev)
+    return test_names, avg_times, std_devs
+
+# Function to plot the results
+def plot_results(statistics_data, file_labels, plot_title, output_image, add_trendline):
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6)) 
+
+    bar_width = 0.35 
+
+    # Plot the first dataset
+    test_names1, avg_times1, std_devs1 = statistics_data[0]
+    x1 = np.arange(len(test_names1)) 
+
+    bars_avg1 = ax1.bar(x1, avg_times1, bar_width, label=file_labels[0], color='gray')
+    ax1.errorbar(x1, avg_times1, yerr=std_devs1, fmt='o', color='black', capsize=5)
+
     if add_trendline:
-        z = np.polyfit(x1, avg_times1, 1)
-        p = np.poly1d(z)
-        ax1.plot(x1, p(x1), "--", color='black', label=f'Trendline - {file_labels[0]}')
+        z1 = np.polyfit(x1, avg_times1, 1)
+        p1 = np.poly1d(z1)
+        ax1.plot(x1, p1(x1), "--", color='black', label=f'Trendline - {file_labels[0]}')
 
-    # Create a secondary Y-axis
-    ax2 = ax1.twinx()
-
-    # Plot the second dataset on the secondary Y-axis
-    test_names2, min_times2, max_times2, avg_times2, _ = zip(*results_data[1])
-    x2 = np.arange(len(test_names2))  # Positions for the bars
-
-    # Plot the average bars for the second dataset
-    bars_avg2 = ax2.bar(x2 + offset, avg_times2, bar_width, label=file_labels[1], color='lightgray')
-
-    # Add the variation between min and max for the second dataset
-    for i in range(len(x2)):
-        ax2.vlines(x2[i] + offset, min_times2[i], max_times2[i], color='black', linestyle='dashed')
-
-    # Optional trendline for the second dataset
-    if add_trendline:
-        z = np.polyfit(x2, avg_times2, 1)
-        p = np.poly1d(z)
-        ax2.plot(x2, p(x2), "--", color='black', label=f'Trendline - {file_labels[1]}')
-
-    # Set labels, title, and custom x-axis tick labels
     ax1.set_xlabel('Verif Case')
-    ax1.set_ylabel('Time (s) - HL Verif')
-    ax2.set_ylabel('Time (s) - LL Verif')
-    ax1.set_title(plot_title)
+    ax1.set_ylabel('Time (s)')
+    ax1.set_title(f'{file_labels[0]}')
+    
+    ax1.set_yscale('log')
 
-    # Combine x-ticks and labels for both datasets
-    combined_x = np.concatenate([x1 - offset, x2 + offset])
-    combined_labels = test_names1 + test_names2
+    # Plot the second dataset
+    test_names2, avg_times2, std_devs2 = statistics_data[1]
+    x2 = np.arange(len(test_names2))
 
-    # Set x-ticks and labels for primary and secondary axes
-    ax1.set_xticks(x1)  # Set ticks only where bars are placed
+    bars_avg2 = ax2.bar(x2, avg_times2, bar_width, label=file_labels[1], color='silver')
+    ax2.errorbar(x2, avg_times2, yerr=std_devs2, fmt='o', color='black', capsize=5)
+
+    if add_trendline:
+        z2 = np.polyfit(x2, avg_times2, 1)
+        p2 = np.poly1d(z2)
+        ax2.plot(x2, p2(x2), "--", color='black', label=f'Trendline - {file_labels[1]}')
+
+    ax2.set_xlabel('Verif Case')
+    ax2.set_ylabel('Time (s)')
+    ax2.set_title(f'{file_labels[1]}')
+    
+    ax2.set_yscale('log')    
+    #If not log scale
+    #ax2.set_ylim(bottom=0)
+
+
+    ax1.set_xticks(x1)
     ax1.set_xticklabels(test_names1, rotation=45, ha='right')
 
-    # Add secondary x-ticks for the second dataset
-    ax2.set_xticks(x2 + offset)
+    ax2.set_xticks(x2)
     ax2.set_xticklabels(test_names2, rotation=45, ha='right')
 
-    # Combine legends from both axes
-    lines, labels = ax1.get_legend_handles_labels()
-    lines2, labels2 = ax2.get_legend_handles_labels()
-    ax1.legend(lines + lines2, labels + labels2, loc='upper left')
 
     fig.tight_layout()
     plt.grid(True)
@@ -112,8 +185,11 @@ def plot_results(results_data, file_labels, plot_title, output_image, add_trendl
     plt.close()
     print(f"Chart saved as {output_image}")
 
-# Read the results data from each file
-results_data = [read_results(file) for file in results_files]
+# Generate statistics for all input-output pairs
+generate_statistics(results_files, output_statistics_files)
+
+# Read the statistics data from each file
+statistics_data = [read_statistics(file) for file in output_statistics_files]
 
 # Plot the results
-plot_results(results_data, file_labels, plot_title, output_image, add_trendline)
+plot_results(statistics_data, file_labels, plot_title, output_image, add_trendline)

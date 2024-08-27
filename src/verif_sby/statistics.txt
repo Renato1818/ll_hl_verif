@@ -1,5 +1,13 @@
 Test Case            Min        Max        Average         Standard Deviation  
-Robot                0.960      1.726      1.312           0.250               
-Half Adder           1.426      1.850      1.675           0.134               
-Full Adder           1.581      3.391      1.884           0.474               
-ALU                  7.691      9.725      8.467           0.685               
+Robot                0.768      1.046      0.836           0.059               
+Robot Assert         0.808      1.304      1.079           0.109               
+Half Adder           0.736      1.301      1.003           0.154               
+Half Adder Assert    1.087      2.336      1.389           0.227               
+Full Adder           0.782      1.241      1.042           0.104               
+Full Adder Assert    1.280      1.730      1.501           0.083               
+Bit 2 Adder          0.862      1.288      1.088           0.121               
+Bit 2 Adder Assert   1.522      2.898      1.677           0.223               
+Bit 4 Adder          1.013      1.386      1.173           0.109               
+Bit 4 Adder Assert   2.688      6.310      3.738           0.822               
+ALU                  5.325      9.101      6.387           0.919               
+ALU Assert           5.214      13.352     7.006           1.475               

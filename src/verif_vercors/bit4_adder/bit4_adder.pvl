@@ -408,47 +408,6 @@ class Bit4_adder {
             ha_4();            
             fa_4();
 
-            //FPV
-            if (m.assertions) {
-                sum1 = (A1 ? 1 : 0) + (B1 ? 1: 0) + (Cin ? 1 : 0);
-                sum2 = (A2 ? 1 : 0) + (B2 ? 1: 0) + ((sum1 >= 2) ? 1 : 0);
-                sum3 = (A3 ? 1 : 0) + (B3 ? 1: 0) + ((sum2 >= 2) ? 1 : 0);
-                sum4 = (A4 ? 1 : 0) + (B4 ? 1: 0) + ((sum3 >= 2) ? 1 : 0);
-                
-                //S1
-                assert (!(!A1 && !B1 && !Cin) || (!S1));
-                assert (!(!A1 && !B1 &&  Cin) || ( S1));
-                assert (!(!A1 &&  B1 && !Cin) || ( S1));
-                assert (!(!A1 &&  B1 &&  Cin) || (!S1));
-                assert (!( A1 && !B1 && !Cin) || ( S1));
-                assert (!( A1 && !B1 &&  Cin) || (!S1));
-                assert (!( A1 &&  B1 && !Cin) || (!S1));
-                assert (!( A1 &&  B1 &&  Cin) || ( S1));
-
-                //S2
-                assert ( !( sum2 == 0 ) || (!S2) );
-                assert ( !( sum2 == 1 ) || ( S2) );
-                assert ( !( sum2 == 2 ) || (!S2) );
-                assert ( !( sum2 == 3 ) || ( S2) );
-
-                //S3
-                assert ( !( sum3 == 0 ) || (!S3) );
-                assert ( !( sum3 == 1 ) || ( S3) );
-                assert ( !( sum3 == 2 ) || (!S3) );
-                assert ( !( sum3 == 3 ) || ( S3) );
-                
-                //S4
-                assert ( !( sum4 == 0 ) || (!S4) );
-                assert ( !( sum4 == 1 ) || ( S4) );
-                assert ( !( sum4 == 2 ) || (!S4) );
-                assert ( !( sum4 == 3 ) || ( S4) );
-                
-                //Cout
-                assert ( !( sum4 == 0 ) || (!Cout) );
-                assert ( !( sum4 == 1 ) || (!Cout) );
-                assert ( !( sum4 == 2 ) || ( Cout) );
-                assert ( !( sum4 == 3 ) || ( Cout) );
-            }
         }
         unlock m;
     }
@@ -460,7 +419,6 @@ class Main {
     seq<int> event_state;
     Bit4_adder adder;
     
-    boolean assertions;
     
     inline resource scheduler_permission_invariant() = true 
             ** Perm(process_state, write) ** |process_state| == 1 
@@ -556,9 +514,6 @@ class Main {
     inline resource global_permission() = true  
             ** scheduler_permission_invariant() 
 
-            ** Perm(assertions, read)
-            ** !assertions  //disable all the assert
-
             ** Perm(adder, read) 
             ** (adder != null)
             ** Perm(adder.Cin, write)   
@@ -646,7 +601,6 @@ class Main {
         process_state = [-1];
         event_state = [-3];
         
-        assertions = false; //disable all the assert
         adder = new Bit4_adder(this);
     }
     
