@@ -149,14 +149,15 @@ The installations steps are the follow:
 
 # GitHub Organization
 
-src \
-  |-> examples       - SystemC files used on the thesis \
-  |-> pvl_convert    - For reproduce PVL convertion \
-  |-> verif_vercors  - The final pvl codes formal verified \
-  |-> sv_convert     - SystemC files for the use of the ICSC converter \
-  |-> verif_sby      - Verification at LL 
 
-There is also avaliable a makefile how to use the tools
+The files are organized under the `src` directory, with each subdirectory serving a specific purpose related to the thesis work:
+
+- **src/examples/**: Contains the SystemC files that were used as examples throughout the thesis.
+- **src/pvl_convert/**: Includes scripts and resources for reproducing the conversion of SystemC code to PVL.
+- **src/verif_vercors/**: Stores the final PVL codes that were subjected to formal verification using VerCors, High Level verification.
+- **src/sv_convert/**: Contains the SystemC files prepared for conversion using the ICSC converter.
+- **src/verif_sby/**: Directory dedicated to the formal verification process at the low level (LL), using the SBY tool.
+
 
 
 <div id='replic'/>  
