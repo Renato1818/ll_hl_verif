@@ -11,8 +11,6 @@ It contains the following:
 
 *******
 
-You can found all the falies related with. 
-
 <div id='install'/>  
 
 # Installation
