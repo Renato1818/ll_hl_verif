@@ -8,25 +8,31 @@ import numpy as np
 # python3 plot_results.py
 
 # Configuration
+
+# List of result files
 results_files = [
     "verif_vercors/results.txt",
     "verif_sby/results.txt"
-]  # List of result files
+]  
+# Output statistics files
 output_statistics_files = [
     "verif_vercors/output_statistics.txt", 
     "verif_sby/output_statistics.txt" 
-] # Output statistics files
+] 
 
+# Legend label for the two dataset
 file_labels = [
-    "HL Verif",  # Legend label for the first dataset
-    "LL Verif"   # Legend label for the second dataset
+    "HL Verif",  
+    "LL Verif"  
 ]
-plot_title = "Experimental Results Comparison"  # Title of the plot
-output_image = "plot_comparation.png"  # Output image file name
-add_trendline = False  # Set to True to add a trendline
 
+# Plot configuration
+plot_title = "Experimental Results Comparison"  
+output_image = "plot_comparation.png" 
+add_trendline = False  
+
+# Reads and parses results
 def read_results(file_path):
-    """Reads and parses results from a results.txt file."""
     statistics_data = {}
     current_test = None
 
@@ -54,14 +60,14 @@ def read_results(file_path):
 
     return statistics_data
 
+# Calculates the difference between without and with assertions test times
 def calculate_difference(simple, with_assertions):
-    """Calculates the difference between simple and with assertions test times."""
     avg_diff = abs(simple['avg'] - with_assertions['avg'])
     std_dev_combined = math.sqrt(simple['std_dev']**2 + with_assertions['std_dev']**2)
     return avg_diff, std_dev_combined
 
+# Generates statistics for multiple result files and saves to corresponding output files
 def generate_statistics(results_files, output_statistics_files):
-    """Generates statistics for multiple result files and saves to corresponding output files."""
     for results_file, output_statistics_file in zip(results_files, output_statistics_files):
         results = read_results(results_file)
         test_cases = {}
@@ -95,7 +101,6 @@ def generate_statistics(results_files, output_statistics_files):
                     std_dev_combined
                 ])
 
-        # Save statistics to the corresponding output file with formatted output
         with open(output_statistics_file, 'w') as output_file:
             output_file.write(f"{'Test Case':<20} {'Simple Avg':<15} {'Simple Std Dev':<20} {'Assertions Avg':<20} {'Assertions Std Dev':<25} {'Difference Avg':<20} {'Combined Std Dev':<20}\n")
             for stat in all_statistics:
@@ -105,7 +110,6 @@ def generate_statistics(results_files, output_statistics_files):
 
 # Function to read the statistics data from the file
 def read_statistics(file_path):
-    """Reads the statistics from the given file and returns relevant data."""
     test_names = []
     avg_times = []
     std_devs = []
@@ -115,7 +119,7 @@ def read_statistics(file_path):
             if line.strip():  # Skip empty lines
                 parts = line.split()
                 test_name = parts[0]
-                avg_time = abs(float(parts[5]))  # 'Difference Avg' (ensure positive values)
+                avg_time = abs(float(parts[5]))  # 'Difference Avg' 
                 std_dev = float(parts[6])   # 'Combined Std Dev'
                 
                 test_names.append(test_name)
@@ -125,67 +129,56 @@ def read_statistics(file_path):
 
 # Function to plot the results
 def plot_results(statistics_data, file_labels, plot_title, output_image, add_trendline):
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6))  # Create two side-by-side subplots
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6)) 
 
-    bar_width = 0.35  # Width of the bars
+    bar_width = 0.35 
 
-    # Plot the first dataset (HL Verif)
+    # Plot the first dataset
     test_names1, avg_times1, std_devs1 = statistics_data[0]
-    x1 = np.arange(len(test_names1))  # Positions for the bars
+    x1 = np.arange(len(test_names1)) 
 
-    # Plot the average bars for the first dataset
     bars_avg1 = ax1.bar(x1, avg_times1, bar_width, label=file_labels[0], color='gray')
-
-    # Add the standard deviation as error bars
     ax1.errorbar(x1, avg_times1, yerr=std_devs1, fmt='o', color='black', capsize=5)
 
-    # Optional trendline for the first dataset
     if add_trendline:
         z1 = np.polyfit(x1, avg_times1, 1)
         p1 = np.poly1d(z1)
         ax1.plot(x1, p1(x1), "--", color='black', label=f'Trendline - {file_labels[0]}')
 
-    # Set labels and title for the first subplot
     ax1.set_xlabel('Verif Case')
     ax1.set_ylabel('Time (s)')
     ax1.set_title(f'{file_labels[0]}')
+    
+    ax1.set_yscale('log')
 
-    # Plot the second dataset (LL Verif)
+    # Plot the second dataset
     test_names2, avg_times2, std_devs2 = statistics_data[1]
-    x2 = np.arange(len(test_names2))  # Positions for the bars
+    x2 = np.arange(len(test_names2))
 
-    # Plot the average bars for the second dataset
     bars_avg2 = ax2.bar(x2, avg_times2, bar_width, label=file_labels[1], color='silver')
-
-    # Add the standard deviation as error bars
     ax2.errorbar(x2, avg_times2, yerr=std_devs2, fmt='o', color='black', capsize=5)
 
-    # Optional trendline for the second dataset
     if add_trendline:
         z2 = np.polyfit(x2, avg_times2, 1)
         p2 = np.poly1d(z2)
         ax2.plot(x2, p2(x2), "--", color='black', label=f'Trendline - {file_labels[1]}')
 
-    # Set labels and title for the second subplot
     ax2.set_xlabel('Verif Case')
     ax2.set_ylabel('Time (s)')
     ax2.set_title(f'{file_labels[1]}')
     
-    # Set y-axis to logarithmic scale for exponential scaling
-    ax1.set_yscale('log')
-    ax2.set_yscale('log')
-    
+    ax2.set_yscale('log')    
     #If not log scale
     #ax2.set_ylim(bottom=0)
 
-    # Adjust x-ticks and labels for both subplots
+
     ax1.set_xticks(x1)
     ax1.set_xticklabels(test_names1, rotation=45, ha='right')
 
     ax2.set_xticks(x2)
     ax2.set_xticklabels(test_names2, rotation=45, ha='right')
 
-    # Adjust layout and save the figure
+
     fig.tight_layout()
     plt.grid(True)
     plt.savefig(output_image)
