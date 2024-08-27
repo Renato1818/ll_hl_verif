@@ -5,13 +5,90 @@ It contains the following:
 
 *******
 ## Content 
- 1. [Installation](#install)
- 2. [Organization](#org)
- 3. [Replication Paper's Experiments](#replic)
+ 1. [Organization](#org)
+ 2. [Replication Paper's Experiments](#replic)
+ 3. [Installation](#install)
 
 *******
 
-You can found all the falies related with. 
+<div id='org'/>  
+
+# GitHub Organization
+
+
+The files are organized under the `src` directory, with each subdirectory serving a specific purpose related to the thesis work:
+
+- **src/examples/**: Contains the SystemC files that were used as examples throughout the thesis.
+- **src/pvl_convert/**: Includes scripts and resources for reproducing the conversion of SystemC code to PVL.
+- **src/verif_vercors/**: Stores the final PVL codes that were subjected to formal verification using VerCors, High Level verification.
+- **src/sv_convert/**: Contains the SystemC files prepared for conversion using the ICSC converter.
+- **src/verif_sby/**: Directory dedicated to the formal verification process at the low level (LL), using the SBY tool.
+
+
+
+<div id='replic'/>  
+
+# Replication Paper's Experiments
+
+In this section will be explained the steps to reproduce the verification of the robot design.
+
+## SystemC Verification: Converter to PVL
+
+- Open the *src/plv_convert* folder
+- Execute the makefiles commands.
+
+      make robot
+
+## SystemC Verification: HL tool
+
+- Open the *src/verif_vercors* folder
+- Execute the VerCors command, for the robot with assertions: 
+
+      vercors --silicon robot/robot_assert.pvl
+
+- For visualize the progress information can be use the follow command:
+
+      vercors --silicon --progress robot/robot_assert.pvl
+
+## SystemC to SV conversion
+
+- Open the ICSC installation path and define, where /home/username/project is the ICSC home folder
+        
+      export ICSC_HOME=/home/username/project
+
+- Open the *CMakeLists.txt* file, at the end of the file add a new line:
+
+      add_subdirectory(designs/robot)
+
+- Copy the *src/sv_convert/robot* folder to the folder *$ICSC_HOME/designs* 
+- On the terminal execute the follow commands:
+
+      cd $ICSC_HOME
+      source setenv.sh
+    
+      cd build   
+      cmake ../ 
+      ctest -R robot  
+
+- (Optional) For debug:
+
+      ctest -R robot --rerun-failed --output-on-failure 
+
+- On the folder *$ICSC_HOME/build/designs/robot* is the SV file obtained. Note that the SV files obtained are already on the *src/sv_convert* folder
+
+
+## SV Verification: LL Verification
+
+- Open the folder *src/verif_sby*
+
+- Execute the comman, for the robot with assertions:
+
+      sby -f robot/FPV_assert.sby
+
+- (Optional) When the SBY reproduce prover error, this error can be visualize and possible debug it with the follow command:
+
+	  gtkwave robot/FPV_prv/engine_0/trace.vcd
+
 
 <div id='install'/>  
 
@@ -143,83 +220,3 @@ The installations steps are the follow:
       sudo apt install gtkwave
 
 - (Optional) On the SBY website you can find the [FIFO example](https://yosyshq.readthedocs.io/projects/sby/en/latest/quickstart.html) and the example can be reproduce. 
-
-
-<div id='org'/>  
-
-# GitHub Organization
-
-
-The files are organized under the `src` directory, with each subdirectory serving a specific purpose related to the thesis work:
-
-- **src/examples/**: Contains the SystemC files that were used as examples throughout the thesis.
-- **src/pvl_convert/**: Includes scripts and resources for reproducing the conversion of SystemC code to PVL.
-- **src/verif_vercors/**: Stores the final PVL codes that were subjected to formal verification using VerCors, High Level verification.
-- **src/sv_convert/**: Contains the SystemC files prepared for conversion using the ICSC converter.
-- **src/verif_sby/**: Directory dedicated to the formal verification process at the low level (LL), using the SBY tool.
-
-
-
-<div id='replic'/>  
-
-# Replication Paper's Experiments
-
-In this section will be explained the steps to reproduce the verification of the robot design.
-
-## SystemC Verification: Converter to PVL
-
-- Open the *src/plv_convert* folder
-- Execute the makefiles commands.
-
-      make robot
-
-## SystemC Verification: HL tool
-
-- Open the *src/verif_vercors* folder
-- Execute the VerCors command, for the robot with assertions: 
-
-      vercors --silicon robot/robot_assert.pvl
-
-- For visualize the progress information can be use the follow command:
-
-      vercors --silicon --progress robot/robot_assert.pvl
-
-## SystemC to SV conversion
-
-- Open the ICSC installation path and define, where /home/username/project is the ICSC home folder
-        
-      export ICSC_HOME=/home/username/project
-
-- Open the *CMakeLists.txt* file, at the end of the file add a new line:
-
-      add_subdirectory(designs/robot)
-
-- Copy the *src/sv_convert/robot* folder to the folder *$ICSC_HOME/designs* 
-- On the terminal execute the follow commands:
-
-      cd $ICSC_HOME
-      source setenv.sh
-    
-      cd build   
-      cmake ../ 
-      ctest -R robot  
-
-- (Optional) For debug:
-
-      ctest -R robot --rerun-failed --output-on-failure 
-
-- On the folder *$ICSC_HOME/build/designs/robot* is the SV file obtained. Note that the SV files obtained are already on the *src/sv_convert* folder
-
-
-## SV Verification: LL Verification
-
-- Open the folder *src/verif_sby*
-
-- Execute the comman, for the robot with assertions:
-
-      sby -f robot/FPV_assert.sby
-
-- (Optional) When the SBY reproduce prover error, this error can be visualize and possible debug it with the follow command:
-
-	  gtkwave robot/FPV_prv/engine_0/trace.vcd
-
