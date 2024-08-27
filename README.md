@@ -56,7 +56,7 @@ Intel® Compiler for SystemC* (ICSC) translates synthesizable SystemC design int
 
 
 - Open the Debian Terminal and install the requires prr-installation, Git, C++ (=>17) and CMake (=>3.13)
-- Define ICSC folder, where /home/username is the home folder
+- Define ICSC folder, where /home/username/project is the ICSC home folder
 
       export ICSC_HOME=/home/username/project
 
@@ -163,3 +163,63 @@ The files are organized under the `src` directory, with each subdirectory servin
 <div id='replic'/>  
 
 # Replication Paper's Experiments
+
+In this section will be explained the steps to reproduce the verification of the robot design.
+
+## SystemC Verification: Converter to PVL
+
+- Open the *src/plv_convert* folder
+- Execute the makefiles commands.
+
+      make robot
+
+## SystemC Verification: HL tool
+
+- Open the *src/verif_vercors* folder
+- Execute the VerCors command, for the robot with assertions: 
+
+      vercors --silicon robot/robot_assert.pvl
+
+- For visualize the progress information can be use the follow command:
+
+      vercors --silicon --progress robot/robot_assert.pvl
+
+## SystemC to SV conversion
+
+- Open the ICSC installation path and define, where /home/username/project is the ICSC home folder
+        
+      export ICSC_HOME=/home/username/project
+
+- Open the *CMakeLists.txt* file, at the end of the file add a new line:
+
+      add_subdirectory(designs/robot)
+
+- Copy the *src/sv_convert/robot* folder to the folder *$ICSC_HOME/designs* 
+- On the terminal execute the follow commands:
+
+      cd $ICSC_HOME
+      source setenv.sh
+    
+      cd build   
+      cmake ../ 
+      ctest -R robot  
+
+- (Optional) For debug:
+
+      ctest -R robot --rerun-failed --output-on-failure 
+
+- On the folder *$ICSC_HOME/build/designs/robot* is the SV file obtained. Note that the SV files obtained are already on the *src/sv_convert* folder
+
+
+## SV Verification: LL Verification
+
+- Open the folder *src/verif_sby*
+
+- Execute the comman, for the robot with assertions:
+
+      sby -f robot/FPV_assert.sby
+
+- (Optional) When the SBY reproduce prover error, this error can be visualize and possible debug it with the follow command:
+
+	  gtkwave robot/FPV_prv/engine_0/trace.vcd
+
