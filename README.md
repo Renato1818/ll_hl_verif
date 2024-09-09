@@ -1,6 +1,6 @@
 # About
 
-This archive contains the artifact for the paper Evaluating High-Level SystemC Formal Verification Compared to RTL Verificatio. 
+This archive contains the artifact for the paper Evaluating High-Level SystemC Formal Verification Compared to RTL Verification. 
 It contains the following:
 
 *******
