@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # How to execute the script on terminal:
-# python3 execute.py
+# python3 execute_hl.py
 
 # Number of times to run the command
 N = 40
@@ -27,8 +27,6 @@ files_to_test = [
     ("bit2_adder/bit2_adder_assert.pvl", "Bit 2 Adder Assert"),
     ("bit4_adder/bit4_adder.pvl", "Bit 4 Adder"),
     ("bit4_adder/bit4_adder_assert.pvl", "Bit 4 Adder Assert"),
-    #("bit8_adder/bit8_adder.pvl", "Bit 8 Adder"),
-    #("bit8_adder/bit8_adder_aasert.pvl", "Bit 8 Adder Assert"),
     ("alu/alu.pvl", "ALU"),
     ("alu/alu_assert.pvl", "ALU Assert")
 ]
@@ -37,7 +35,7 @@ output_file = "results.txt"
 statistics_file = "statistics.txt"
 tmp_folder = "tmp"
 plot_title = "Performance Metrics"
-output_image = "performance_metrics.png"
+output_image = "perf_metr.png"
 add_trendline = False  # Set to True to add a trendline
 
 # Function to write results to the output file

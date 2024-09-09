@@ -28,7 +28,7 @@ file_labels = [
 
 # Plot configuration
 plot_title = "Experimental Results Comparison"  
-output_image = "plot_comparation.png" 
+output_image = "plot_comp.png" 
 add_trendline = False  
 
 # Reads and parses results
