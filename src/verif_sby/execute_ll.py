@@ -29,6 +29,8 @@ files_to_test = [
     ("bit4_adder/FPV_assert.sby", "Bit 4 Adder Assert"),
     ("alu/FPV.sby", "ALU"),
     ("alu/FPV_assert.sby", "ALU Assert")
+    #,("alu/FPV32.sby", "ALU"),
+    #("alu/FPV_assert32.sby", "ALU Assert")
 ]
 
 output_file = "results.txt"
