@@ -1,6 +1,6 @@
 module alu #(
 		parameter OPCODE_WIDTH       = 2,
-		parameter DATA_WIDTH         = 31
+		parameter DATA_WIDTH         = 15
 	)(
 		input wire clk,
 		input wire rstn,
