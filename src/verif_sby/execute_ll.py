@@ -10,33 +10,39 @@ import numpy as np
 # python3 execute_ll.py
 
 # Number of times to run the command
-N = 40
+N = 15
 
 # Command to execute
 command = ["sby", "-f"]
 
 # List of files to test and their corresponding names
 files_to_test = [
-    ("robot/FPV.sby", "Robot"),
-    ("robot/FPV_assert.sby", "Robot Assert"),
-    ("half_adder/FPV.sby", "Half Adder"),
-    ("half_adder/FPV_assert.sby", "Half Adder Assert"),
-    ("full_adder/FPV.sby", "Full Adder"),
-    ("full_adder/FPV_assert.sby", "Full Adder Assert"),
-    ("bit2_adder/FPV.sby", "Bit 2 Adder"),
-    ("bit2_adder/FPV_assert.sby", "Bit 2 Adder Assert"),
-    ("bit4_adder/FPV.sby", "Bit 4 Adder"),
-    ("bit4_adder/FPV_assert.sby", "Bit 4 Adder Assert"),
+    #("robot/FPV.sby", "Robot"),
+    #("robot/FPV_assert.sby", "Robot Assert"),
+    #("half_adder/FPV.sby", "Half Adder"),
+    #("half_adder/FPV_assert.sby", "Half Adder Assert"),
+    #("full_adder/FPV.sby", "Full Adder"),
+    #("full_adder/FPV_assert.sby", "Full Adder Assert"),
+    #("bit2_adder/FPV.sby", "Bit 2 Adder"),
+    #("bit2_adder/FPV_assert.sby", "Bit 2 Adder Assert"),
+    #("bit4_adder/FPV.sby", "Bit 4 Adder"),
+    #("bit4_adder/FPV_assert.sby", "Bit 4 Adder Assert"),
+    ("alu/FPV2.sby",        "ALU 2"),
+    ("alu/FPV2_assert.sby", "ALU 2 Assert"),
     ("alu/FPV.sby", "ALU"),
-    ("alu/FPV_assert.sby", "ALU Assert")
-    #,("alu/FPV32.sby", "ALU"),
-    #("alu/FPV_assert32.sby", "ALU Assert")
+    ("alu/FPV_assert.sby", "ALU Assert"),
+    ("alu/FPV8.sby",        "ALU 8"),
+    ("alu/FPV8_assert.sby", "ALU 8 Assert"),
+    ("alu/FPV16.sby",        "ALU 16"),
+    ("alu/FPV16_assert.sby", "ALU 16 Assert"),
+    ("alu/FPV32.sby",        "ALU 32"),
+    ("alu/FPV32_assert.sby", "ALU 32 Assert")
 ]
 
-output_file = "results.txt"
-statistics_file = "statistics.txt"
+output_file = "res_alu.txt"
+statistics_file = "stat_alu.txt"
 plot_title = "Performance Metrics"
-output_image = "perf_metr.png"
+output_image = "perf_metr_alu.png"
 add_trendline = False  # Set to True to add a trendline
 
 # Function to write results to the output file
