@@ -1,0 +1,23 @@
+[tasks]
+cvr
+prv
+bmcc
+
+[options]
+cvr: mode cover
+prv: mode prove
+bmcc: mode bmc
+
+[engines]
+cvr: smtbmc z3
+prv: smtbmc z3
+bmcc: btor btormc
+
+[script]
+design -reset
+read -formal alu256.sv
+hierarchy -check -top alu
+prep -top alu
+
+[files]
+alu/alu256.sv
