@@ -37,6 +37,11 @@ files_to_test = [
     ("alu/FPV16_assert.sby", "ALU 16 Assert"),
     ("alu/FPV32.sby",        "ALU 32"),
     ("alu/FPV32_assert.sby", "ALU 32 Assert")
+    ,
+    ("alu/FPV64.sby",        "ALU 64"),
+    ("alu/FPV64_assert.sby", "ALU 64 Assert"),
+    ("alu/FPV128.sby",       "ALU 128"),
+    ("alu/FPV128_assert.sby","ALU 128 Assert")
 ]
 
 output_file = "res_alu.txt"
