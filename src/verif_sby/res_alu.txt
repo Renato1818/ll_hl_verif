@@ -1,4 +1,4 @@
-Testing alu/FPV2.sby:
+Testing alu2/FPV2.sby:
 0.780
 0.813
 0.978
@@ -45,7 +45,7 @@ Max: 1.134
 Average: 0.953
 Standard Deviation: 0.107
 
-Testing alu/FPV2_assert.sby:
+Testing alu2/FPV_assert.sby:
 1.394
 1.532
 1.643
@@ -92,7 +92,7 @@ Max: 3.409
 Average: 1.920
 Standard Deviation: 0.398
 
-Testing alu/FPV.sby:
+Testing alu4/FPV.sby:
 0.921
 1.178
 1.164
@@ -139,7 +139,7 @@ Max: 1.544
 Average: 1.205
 Standard Deviation: 0.136
 
-Testing alu/FPV_assert.sby:
+Testing alu4/FPV_assert.sby:
 1.523
 1.831
 2.299
@@ -186,7 +186,7 @@ Max: 2.968
 Average: 2.039
 Standard Deviation: 0.264
 
-Testing alu/FPV8.sby:
+Testing alu8/FPV.sby:
 1.541
 2.748
 1.839
@@ -233,7 +233,7 @@ Max: 2.748
 Average: 1.603
 Standard Deviation: 0.291
 
-Testing alu/FPV8_assert.sby:
+Testing alu8/FPV_assert.sby:
 3.272
 3.315
 3.735
@@ -280,7 +280,7 @@ Max: 4.995
 Average: 3.689
 Standard Deviation: 0.462
 
-Testing alu/FPV16.sby:
+Testing alu16/FPV.sby:
 1.051
 1.529
 1.276
@@ -327,7 +327,7 @@ Max: 1.783
 Average: 1.376
 Standard Deviation: 0.171
 
-Testing alu/FPV16_assert.sby:
+Testing alu16/FPV_assert.sby:
 5.525
 5.395
 5.072
@@ -374,7 +374,7 @@ Max: 6.316
 Average: 4.970
 Standard Deviation: 0.622
 
-Testing alu/FPV32.sby:
+Testing alu31/FPV.sby:
 0.965
 1.172
 1.091
@@ -421,7 +421,7 @@ Max: 2.039
 Average: 1.307
 Standard Deviation: 0.170
 
-Testing alu/FPV32_assert.sby:
+Testing alu31/FPV_assert.sby:
 11.157
 10.594
 10.951
@@ -468,7 +468,7 @@ Max: 22.286
 Average: 11.451
 Standard Deviation: 2.544
 
-Testing alu/FPV64.sby:
+Testing alu62/FPV.sby:
 1.254
 1.844
 1.769
@@ -515,7 +515,7 @@ Max: 1.862
 Average: 1.573
 Standard Deviation: 0.143
 
-Testing alu/FPV64_assert.sby:
+Testing alu62/FPV_assert.sby:
 25.040
 24.549
 25.008
@@ -562,7 +562,7 @@ Max: 29.472
 Average: 25.089
 Standard Deviation: 1.788
 
-Testing alu/FPV128.sby:
+Testing alu124/FPV.sby:
 1.802
 2.073
 1.748
@@ -609,7 +609,7 @@ Max: 2.401
 Average: 1.900
 Standard Deviation: 0.174
 
-Testing alu/FPV128_assert.sby:
+Testing alu124/FPV_assert.sby:
 85.636
 83.548
 92.563
@@ -656,7 +656,7 @@ Max: 105.851
 Average: 86.835
 Standard Deviation: 5.243
 
-Testing alu/FPV32.sby:
+Testing alu32/FPV.sby:
 1.069
 0.968
 1.160
@@ -703,7 +703,7 @@ Max: 1.164
 Average: 0.991
 Standard Deviation: 0.079
 
-Testing alu/FPV32_assert.sby:
+Testing alu32/FPV_assert.sby:
 7.368
 7.453
 7.502
@@ -750,7 +750,7 @@ Max: 12.134
 Average: 9.803
 Standard Deviation: 1.166
 
-Testing alu/FPV64.sby:
+Testing alu64/FPV.sby:
 1.405
 1.471
 1.442
@@ -797,7 +797,7 @@ Max: 3.187
 Average: 1.623
 Standard Deviation: 0.322
 
-Testing alu/FPV64_assert.sby:
+Testing alu64/FPV_assert.sby:
 34.861
 28.927
 31.979
