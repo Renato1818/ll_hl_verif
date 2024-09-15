@@ -243,25 +243,18 @@ module alu #(
 		reg [DATA_WIDTH:0] f_op2;
 		reg [OPCODE_WIDTH:0] f_opcode;
 
-		reg [4:0] op_add  ;
-		reg [4:0] op_sub  ;
-		reg [4:0] op_incr ;  
-		reg [4:0] op_decr ; 
-		reg [3:0] op_and  ;
-		reg [3:0] op_or   ;
-		reg [3:0] op_nand ;
-		reg [3:0] op_xor  ;
+		reg [(DATA_WIDTH + 1):0] op_add  ;
+		reg [(DATA_WIDTH + 1):0] op_sub  ;
+		reg [(DATA_WIDTH + 1):0] op_incr ;  
+		reg [(DATA_WIDTH + 1):0] op_decr ; 
+		reg [DATA_WIDTH:0] op_and  ;
+		reg [DATA_WIDTH:0] op_or   ;
+		reg [DATA_WIDTH:0] op_nand ;
+		reg [DATA_WIDTH:0] op_xor  ;
 		
 		
 		//Declare when verifications is valid
         reg f_past_valid = 1'b0;
-        //always @($global_clock) f_past_valid <= 1'b1; //to use $past property
-		//always @(negedge rstn) begin
-		//	if ( !rstn ) begin
-		//		f_past_valid <= 1'd0;
-		//	end 
-		//end
-
 
 		assign op_add  =  (f_op1 + f_op2);
 		assign op_sub  =  (f_op1 - f_op2);
@@ -271,19 +264,6 @@ module alu #(
 		assign op_or   =   f_op1 | f_op2;
 		assign op_nand = ~(f_op1 & f_op2);
 		assign op_xor  =   f_op1 ^ f_op2;
-
-		//assign f_carry = ( ((f_opcode == 0) & op_add[4])  || 
-		//				   ((f_opcode == 1) & op_sub[4])  || 
-		//				   ((f_opcode == 2) & op_incr[4]) || 
-		//				   ((f_opcode == 3) & op_decr[4])   ) ^ CARRY;
-        //
-		//assign f_zero = ( ((f_opcode == 0) & ( op_add  == 0)) ||
-		//				  ((f_opcode == 1) & ( op_sub  == 0)) ||
-		//				  ((f_opcode == 3) & ( op_decr == 0)) ||
-		//				  ((f_opcode == 4) & ( op_and  == 0)) ||
-		//				  ((f_opcode == 5) & ( op_or   == 0)) ||
-		//				  ((f_opcode == 6) & ( op_nand == 0)) ||
-		//				  ((f_opcode == 7) & ( op_xor  == 0))    ) ^ ZERO;
 						  
 
 		always @(posedge clk or negedge rstn) begin 
@@ -305,16 +285,16 @@ module alu #(
 
 			if (!rstn) begin 
 				assert_carry_reset: assert (!CARRY);	
-				assert_zero_reset: assert (!ZERO);
+				assert_zero_reset:  assert (!ZERO);
 				assert_zero_result: assert ((RESULT == 4'd0));
 
 			end else begin 				
 				if (f_past_valid) begin	 
 					//zero
-					assert_zero1: assert ( !((f_opcode == 0) & op_add[4])  || CARRY); 
-					assert_zero2: assert ( !((f_opcode == 1) & op_sub[4])  || CARRY); 
-					assert_zero3: assert ( !((f_opcode == 2) & op_incr[4]) || CARRY); 
-					assert_zero4: assert ( !((f_opcode == 3) & op_decr[4]) || CARRY);
+					assert_zero1: assert ( !((f_opcode == 0) &  op_add[(DATA_WIDTH + 1)])  || CARRY); 
+					assert_zero2: assert ( !((f_opcode == 1) &  op_sub[(DATA_WIDTH + 1)])  || CARRY); 
+					assert_zero3: assert ( !((f_opcode == 2) & op_incr[(DATA_WIDTH + 1)]) || CARRY); 
+					assert_zero4: assert ( !((f_opcode == 3) & op_decr[(DATA_WIDTH + 1)]) || CARRY);
 
 					//carry
 					assert_carry1: assert ( !((f_opcode == 0) & ( op_add  == 0)) || ZERO );
@@ -326,10 +306,10 @@ module alu #(
 					assert_carry7: assert ( !((f_opcode == 7) & ( op_xor  == 0)) || ZERO );
 
 					//result
-					assert_res0: assert ( !(f_opcode == 0) || RESULT == (op_add[3:0]) );
-					assert_res1: assert ( !(f_opcode == 1) || RESULT == (op_sub[3:0]) );
-					assert_res2: assert ( !(f_opcode == 2) || RESULT == (op_incr[3:0]) );
-					assert_res3: assert ( !(f_opcode == 3) || RESULT == (op_decr[3:0]) );
+					assert_res0: assert ( !(f_opcode == 0) || RESULT == ( op_add[DATA_WIDTH:0]) );
+					assert_res1: assert ( !(f_opcode == 1) || RESULT == ( op_sub[DATA_WIDTH:0]) );
+					assert_res2: assert ( !(f_opcode == 2) || RESULT == (op_incr[DATA_WIDTH:0]) );
+					assert_res3: assert ( !(f_opcode == 3) || RESULT == (op_decr[DATA_WIDTH:0]) );
 					assert_res4: assert ( !(f_opcode == 4) || RESULT == op_and );
 					assert_res5: assert ( !(f_opcode == 5) || RESULT == op_or );
 					assert_res6: assert ( !(f_opcode == 6) || RESULT == op_nand );

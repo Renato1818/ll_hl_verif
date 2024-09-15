@@ -1,6 +1,6 @@
 module alu #(
 		parameter OPCODE_WIDTH       = 2,
-		parameter DATA_WIDTH         = 63
+		parameter DATA_WIDTH         = 7
 	)(
 		input wire clk,
 		input wire rstn,
@@ -11,9 +11,6 @@ module alu #(
 		output wire ZERO,
 		output wire [DATA_WIDTH:0] RESULT
 	);
-
-//------------------------------------------------------------------------------
-// Clocked THREAD: operate
 	
 	// Thread-local variables
 	reg [DATA_WIDTH+1:0] result_next;
@@ -91,13 +88,6 @@ module alu #(
 		
 		//Declare when verifications is valid
         reg f_past_valid = 1'b0;
-        //always @($global_clock) f_past_valid <= 1'b1; //to use $past property
-		//always @(negedge rstn) begin
-		//	if ( !rstn ) begin
-		//		f_past_valid <= 1'd0;
-		//	end 
-		//end
-
 
 		assign op_add  =  (f_op1 + f_op2);
 		assign op_sub  =  (f_op1 - f_op2);
@@ -148,63 +138,7 @@ module alu #(
 					assert_res3: assert ( !(f_opcode == 3) || RESULT == (op_decr[DATA_WIDTH:0]) );
 				end
 			end
-			/*
-			// cover
-			//opcode op1 op2 cover
-			cov_opcode_zero: cover (OPCODE == 3'd0);
-			cov_opcode_one:  cover (OPCODE == 3'd7);
-		
-			cov_op1_zero: cover (OP1 == 4'd00);
-			cov_op1_one:  cover (OP1 == 4'd15);
-			cov_op2_zero: cover (OP2 == 4'd00);
-			cov_op2_one:  cover (OP2 == 4'd15);
-
-			//test carry
-			cov_optest1: cover ((OPCODE == 0) && (OP1 == 4'd10) && (OP2 == 4'd10));
-			//test !carry
-			cov_optest2: cover ((OPCODE == 2) && (OP1 == 4'd08));
-			//test zero
-			cov_optest4: cover ((OPCODE == 0) && (OP1 == 4'd00) && (OP2 == 4'd00));
-	
 			
-			//carry cover
-			cov_carry_true:  cover (CARRY); 
-			cov_carry_false: cover (!CARRY);
-			
-			//zero cover
-			cov_zero_true:  cover (ZERO); 
-			cov_zero_false: cover (!ZERO);	
-			
-			//Result cover	
-			cov_result_zero: cover (RESULT == 4'd00);
-			cov_result_one:  cover (RESULT == 4'd15);	
-
-			case (OPCODE)
-				0 : begin
-					cover_res0: cover ( RESULT == (OP1 + OP2) );
-				end				
-				1: begin
-					cover_res1: cover ( (RESULT == (OP1 - OP2)));
-				end
-				2: begin
-					cover_res2: cover  ((RESULT == op_incr[3:0]));
-				end
-				3: begin
-					cover_res3: cover  ((RESULT == (OP1 - 1)));
-				end
-				4: begin
-					cover_res4: cover ((RESULT == (OP1 & OP2)));
-				end
-				5: begin
-					cover_res5: cover ((RESULT == (OP1 | OP2)));
-				end
-				6: begin
-					cover_res6: cover ((RESULT == ~(OP1 & OP2)));
-				end
-				7: begin
-					cover_res7: cover ((RESULT == ~(OP1 | OP2)));
-				end
-			endcase */
 		end
 
 	`endif
