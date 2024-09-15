@@ -178,7 +178,9 @@ def plot_results(statistics_data, file_labels, plot_title, output_image, add_tre
     ax2.set_xticks(x2)
     ax2.set_xticklabels(test_names2, rotation=45, ha='right')
 
-
+    ax1.grid(linestyle='dashed', color='gainsboro')
+    ax2.grid(linestyle='dashed', color='gainsboro')
+        
     fig.tight_layout()
     plt.grid(True)
     plt.savefig(output_image)
