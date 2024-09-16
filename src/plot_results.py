@@ -11,13 +11,13 @@ import numpy as np
 
 # List of result files
 results_files = [
-    "verif_vercors/results.txt",
-    "verif_sby/results.txt"
+    "verif_vercors/res_all.txt",
+    "verif_sby/res_all.txt"
 ]  
 # Output statistics files
 output_statistics_files = [
-    "verif_vercors/output_statistics.txt", 
-    "verif_sby/output_statistics.txt" 
+    "verif_vercors/output_stat_all.txt", 
+    "verif_sby/output_stat_all.txt" 
 ] 
 
 # Legend label for the two dataset
@@ -28,7 +28,7 @@ file_labels = [
 
 # Plot configuration
 plot_title = "Experimental Results Comparison"  
-output_image = "plot_comp.png" 
+output_image = "plot_comp_all.png" 
 add_trendline = False  
 
 # Reads and parses results
