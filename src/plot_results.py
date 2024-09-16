@@ -175,7 +175,14 @@ def plot_results(statistics_data, file_labels, plot_title, output_image, add_tre
     #If not log scale
     #ax2.set_ylim(bottom=0)
 
+    # Set the y-axis limits to be the same for both plots
+    min_y = min(min(avg_times1), min(avg_times2))  # Minimum of both datasets
+    max_y = max(max(avg_times1), max(avg_times2))  # Maximum of both datasets
 
+    # Ensure some padding on the limits
+    ax1.set_ylim([min_y * 0.9, max_y * 1.1])  # Adding padding for readability
+    ax2.set_ylim([min_y * 0.9, max_y * 1.1])
+    
     ax1.set_xticks(x1)
     ax1.set_xticklabels(test_names1, rotation=45, ha='right')
 
