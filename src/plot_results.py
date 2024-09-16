@@ -9,6 +9,9 @@ import numpy as np
 
 # Configuration
 
+# Number of times runned on the result files
+num_samples = 40  
+
 # List of result files
 results_files = [
     "verif_vercors/res_all.txt",
@@ -112,20 +115,21 @@ def generate_statistics(results_files, output_statistics_files):
 def read_statistics(file_path):
     test_names = []
     avg_times = []
-    std_devs = []
+    sems = []  # Will store standard error of the mean (SEM) instead of std dev
     with open(file_path, 'r') as file:
         lines = file.readlines()
         for line in lines[1:]:  # Skip the header
             if line.strip():  # Skip empty lines
                 parts = line.split()
                 test_name = parts[0]
-                avg_time = abs(float(parts[5]))  # 'Difference Avg' 
-                std_dev = float(parts[6])   # 'Combined Std Dev'
+                avg_time = abs(float(parts[5]))  # 'Difference Avg'
+                std_dev = float(parts[6])        # 'Combined Std Dev'
+                sem = std_dev / math.sqrt(num_samples)  # Calculate the SEM
                 
                 test_names.append(test_name)
                 avg_times.append(avg_time)
-                std_devs.append(std_dev)
-    return test_names, avg_times, std_devs
+                sems.append(sem)
+    return test_names, avg_times, sems
 
 # Function to plot the results
 def plot_results(statistics_data, file_labels, plot_title, output_image, add_trendline):
@@ -134,11 +138,11 @@ def plot_results(statistics_data, file_labels, plot_title, output_image, add_tre
     bar_width = 0.35 
 
     # Plot the first dataset
-    test_names1, avg_times1, std_devs1 = statistics_data[0]
+    test_names1, avg_times1, sems1 = statistics_data[0]
     x1 = np.arange(len(test_names1)) 
 
     bars_avg1 = ax1.bar(x1, avg_times1, bar_width, label=file_labels[0], color='gray')
-    ax1.errorbar(x1, avg_times1, yerr=std_devs1, fmt='o', color='black', capsize=5)
+    ax1.errorbar(x1, avg_times1, yerr=sems1, fmt='o', color='black', capsize=5, label='SEM')
 
     if add_trendline:
         z1 = np.polyfit(x1, avg_times1, 1)
@@ -152,11 +156,11 @@ def plot_results(statistics_data, file_labels, plot_title, output_image, add_tre
     ax1.set_yscale('log')
 
     # Plot the second dataset
-    test_names2, avg_times2, std_devs2 = statistics_data[1]
+    test_names2, avg_times2, sems2 = statistics_data[1]
     x2 = np.arange(len(test_names2))
 
     bars_avg2 = ax2.bar(x2, avg_times2, bar_width, label=file_labels[1], color='silver')
-    ax2.errorbar(x2, avg_times2, yerr=std_devs2, fmt='o', color='black', capsize=5)
+    ax2.errorbar(x2, avg_times2, yerr=sems2, fmt='o', color='black', capsize=5, label='SEM')
 
     if add_trendline:
         z2 = np.polyfit(x2, avg_times2, 1)
@@ -180,7 +184,11 @@ def plot_results(statistics_data, file_labels, plot_title, output_image, add_tre
 
     ax1.grid(linestyle='dashed', color='gainsboro')
     ax2.grid(linestyle='dashed', color='gainsboro')
-        
+
+    # Add a legend explaining the error bars
+    ax1.legend(loc='upper left')
+    ax2.legend(loc='upper left')
+
     fig.tight_layout()
     plt.grid(True)
     plt.savefig(output_image)
