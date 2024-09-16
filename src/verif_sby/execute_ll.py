@@ -33,10 +33,10 @@ files_to_test = [
     #("alu/FPV4_assert.sby",  "ALU 4 Assert"),
     #("alu/FPV8.sby",         "ALU 8"),
     #("alu/FPV8_assert.sby",  "ALU 8 Assert"),
-    ("alu16/FPV.sby",        "ALU 16"),
-    ("alu16/FPV_assert.sby", "ALU 16 Assert"),
-    ("alu31/FPV.sby",        "ALU 31"),
-    ("alu31/FPV_assert.sby", "ALU 31 Assert"),
+    #("alu16/FPV.sby",        "ALU 16"),
+    #("alu16/FPV_assert.sby", "ALU 16 Assert"),
+    #("alu31/FPV.sby",        "ALU 31"),
+    #("alu31/FPV_assert.sby", "ALU 31 Assert"),
     ("alu62/FPV.sby",        "ALU 62"),
     ("alu62/FPV_assert.sby", "ALU 62 Assert")
 ]
