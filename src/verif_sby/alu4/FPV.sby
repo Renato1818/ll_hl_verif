@@ -15,9 +15,9 @@ bmcc: btor btormc
 
 [script]
 design -reset
-read -sv alu.sv
+read -sv alu4.sv
 hierarchy -check -top alu
 prep -top alu
 
 [files]
-alu/alu.sv
+alu/alu4.sv
