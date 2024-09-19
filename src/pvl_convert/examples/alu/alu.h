@@ -8,38 +8,6 @@ SC_MODULE(ALU) {
 
     int data1, data2;
     int result;
-	int i;
-	int bit;
-
-	// Helper function to get the bit at position pos
-	int get_bit(int value, int pos) {
-		int divisor = 1;
-		for (int i = 0; i < pos; i++) {
-			divisor = divisor * 2;
-		}
-		if (divisor != 0) {
-			return (value / divisor) % 2;
-		}
-		else {
-			return 0;
-		}
-	}
-
-	// Manually bitwise shift
-	int set_bit(int value, int pos, int bit) {
-		int current_bit = get_bit(value, pos);
-		int divisor = 1;
-		for (i = 0; i < pos; i++) {
-			divisor = divisor * 2;
-		}
-		if (current_bit == bit) {
-			return value; 
-		} else if (bit == 1) {
-			return value + divisor;
-		} else {
-			return value - divisor;
-		}
-	}
 
     void operate()	{
 		while(true){
@@ -65,33 +33,6 @@ SC_MODULE(ALU) {
 					result = data1 - 1;
 					break;
 					
-				case 4: //and
-					for (i = 0; i < 4; i++) {
-						bit = get_bit(data1, i) * get_bit(data2, i);
-						result = set_bit(result, i, bit);
-					}
-					break;
-					
-				case 5: //or
-					for (i = 0; i < 4; i++) {
-						bit = get_bit(data1, i) + get_bit(data2, i);
-						result = set_bit(result, i, bit > 0 ? 1 : 0);
-					}
-					break;
-					
-				case 6: //nand
-					for (i = 0; i < 4; i++) {
-						bit = get_bit(data1, i) * get_bit(data2, i);
-						result = set_bit(result, i, bit ? 0 : 1);
-					}
-					break;
-					
-				case 7: //xor
-					for (i = 0; i < 4; i++) {
-						bit = get_bit(data1, i) + get_bit(data2, i);
-						result = set_bit(result, i, bit == 1 ? 1 : 0);
-					}
-					break;
 			}
 			
 			RESULT = (result % 16);  // Ensuring RESULT is 4-bit
@@ -104,7 +45,5 @@ SC_MODULE(ALU) {
     
 	SC_CTOR(ALU){
 		SC_THREAD(operate);
-		SC_METHOD(get_bit);
-		SC_METHOD(set_bit);
 	}
 };

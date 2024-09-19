@@ -50,8 +50,15 @@ alu:
 	fi
 	$(JAVA) -jar sc2pvl.jar -i ./examples/alu/main_ast.ast.xml -o ./results/alu/ 
 
+alu62: 	
+	$(JAVA) -jar sc2ast.jar -f  ./examples/alu62/main.cpp -o ./examples/alu62/main_ast
+	if ! test -d ./results/alu62/; \
+	then mkdir -p ./results/alu62/; \
+	fi
+	$(JAVA) -jar sc2pvl.jar -i ./examples/alu62/main_ast.ast.xml -o ./results/alu62/ 
 
-all: robot half_adder full_adder bit2_adder bit4_adder bit8_adder alu
+
+all: robot half_adder full_adder bit2_adder bit4_adder bit8_adder alu alu62
 
 
 clean_robot:
@@ -90,7 +97,12 @@ clean_alu:
 	rm -f ./examples/alu/main_ast
 	rm -rf ./results/alu
 
-all_clean: clean_robot clean_half_adder clean_full_adder clean_bit2_adder clean_bit4_adder clean_bit8_adder clean_alu
+clean_alu62:
+	rm -f ./examples/alu62/*.xml
+	rm -f ./examples/alu62/main_ast
+	rm -rf ./results/alu62
+
+all_clean: clean_robot clean_half_adder clean_full_adder clean_bit2_adder clean_bit4_adder clean_bit8_adder clean_alu clean_alu62
 	
 	
 	
