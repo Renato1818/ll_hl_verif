@@ -17,17 +17,16 @@ command = ["sby", "-f"]
 
 # List of files to test and their corresponding names
 files_to_test = [
-    #("robot/FPV.sby", "Robot"),
-    #("robot/FPV_assert.sby", "Robot Assert"),
-    #("half_adder/FPV.sby", "Half Adder"),
-    #("half_adder/FPV_assert.sby", "Half Adder Assert"),
-    #("full_adder/FPV.sby", "Full Adder"),
-    #("full_adder/FPV_assert.sby", "Full Adder Assert"),
-    #("bit2_adder/FPV.sby", "Bit 2 Adder"),
-    #("bit2_adder/FPV_assert.sby", "Bit 2 Adder Assert"),
-    #("bit4_adder/FPV.sby", "Bit 4 Adder"),
-    #("bit4_adder/FPV_assert.sby", "Bit 4 Adder Assert"),
-    ("alu2/FPV.sby",         "ALU TEST"),
+    ("robot/FPV.sby", "Robot"),
+    ("robot/FPV_assert.sby", "Robot Assert"),
+    ("half_adder/FPV.sby", "Half Adder"),
+    ("half_adder/FPV_assert.sby", "Half Adder Assert"),
+    ("full_adder/FPV.sby", "Full Adder"),
+    ("full_adder/FPV_assert.sby", "Full Adder Assert"),
+    ("bit2_adder/FPV.sby", "Bit 2 Adder"),
+    ("bit2_adder/FPV_assert.sby", "Bit 2 Adder Assert"),
+    ("bit4_adder/FPV.sby", "Bit 4 Adder"),
+    ("bit4_adder/FPV_assert.sby", "Bit 4 Adder Assert"),
     ("alu2/FPV.sby",         "ALU 2"),
     ("alu2/FPV_assert.sby",  "ALU 2 Assert"),
     ("alu4/FPV.sby",         "ALU 4"),
@@ -42,8 +41,8 @@ files_to_test = [
     ("alu62/FPV_assert.sby", "ALU 62 Assert")
 ]
 
-output_file = "res_alu.txt"
-statistics_file = "stat_alu.txt"
+output_file = "results.txt"
+statistics_file = "statistics.txt"
 plot_title = "Performance Metrics"
 output_image = "perf_metr_alu.png"
 add_trendline = False  # Set to True to add a trendline

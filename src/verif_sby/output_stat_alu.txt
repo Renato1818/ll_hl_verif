@@ -1,7 +1,0 @@
-Test Case            Simple Avg      Simple Std Dev       Assertions Avg       Assertions Std Dev        Difference Avg       Combined Std Dev    
-alu2                 0.953           0.107                1.920                0.398                     0.967                0.412               
-alu4                 1.205           0.136                2.039                0.264                     0.834                0.297               
-alu8                 1.603           0.291                3.689                0.462                     2.086                0.546               
-alu16                1.376           0.171                4.970                0.622                     3.594                0.645               
-alu31                1.307           0.170                11.451               2.544                     10.144               2.550               
-alu62                1.573           0.143                25.089               1.788                     23.516               1.794               
