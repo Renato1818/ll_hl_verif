@@ -27,8 +27,18 @@ files_to_test = [
     ("bit2_adder/bit2_adder_assert.pvl", "Bit 2 Adder Assert"),
     ("bit4_adder/bit4_adder.pvl", "Bit 4 Adder"),
     ("bit4_adder/bit4_adder_assert.pvl", "Bit 4 Adder Assert"),
-    ("alu/alu.pvl", "ALU"),
-    ("alu/alu_assert.pvl", "ALU Assert")
+    ("alu2/alu2.pvl", "ALU 2"),
+    ("alu2/alu2_assert.pvl", "ALU 2 Assert"),
+    ("alu4/alu4.pvl", "ALU 4"),
+    ("alu4/alu4_assert.pvl", "ALU 4 Assert"),
+    ("alu8/alu8.pvl", "ALU 8"),
+    ("alu8/alu8_assert.pvl", "ALU 8 Assert"),
+    ("alu16/alu16.pvl", "ALU 16"),
+    ("alu16/alu16_assert.pvl", "ALU 16 Assert"),
+    ("alu31/alu31.pvl", "ALU 31"),
+    ("alu31/alu31_assert.pvl", "ALU 31 Assert"),
+    ("alu62/alu62.pvl", "ALU 62"),
+    ("alu62/alu62_assert.pvl", "ALU 62 Assert")
 ]
 
 output_file = "results.txt"

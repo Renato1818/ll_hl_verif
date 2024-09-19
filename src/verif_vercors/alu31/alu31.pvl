@@ -1,0 +1,280 @@
+class ALU { 
+    Main m;
+    int OPCODE;
+    int OP1, OP2;
+    boolean CARRY, ZERO;
+    int RESULT;
+
+    //internal varibles
+    int data1, data2;
+    int opcode;
+    int result;
+    
+    ensures Perm(m, write) ** (m == m_param) 
+            ** Perm(OPCODE, write) **  OPCODE == 0 
+            ** Perm(OP1, write) **  OP1 == 0 
+            ** Perm(OP2, write) **  OP2 == 0 
+            ** Perm(CARRY, write) ** !CARRY 
+            ** Perm(ZERO, write) ** !ZERO 
+            ** Perm(RESULT, write) ** RESULT == 0 
+            ** Perm(data1, write) 
+            ** Perm(data2, write) 
+            ** Perm(opcode, write) 
+            ** Perm(result, write) 
+            ;
+    ALU(Main m_param){
+        m = m_param;
+        OPCODE = 0;
+	    OP1 = 0;
+	    OP2 = 0;
+	    CARRY = false;
+	    ZERO = false;
+	    RESULT = 0;
+    }
+
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.alu == this) 
+            ;
+    ensures m.def_input_permission()
+            ** (data1 == (OP1 % m.MAX_RESULT))
+            ** (data2 == (OP2 % m.MAX_RESULT))
+            ** (opcode == (OPCODE % m.MAX_OPCODE));
+    void def_input(){        
+        ZERO = false;
+        data1 = OP1 % m.MAX_RESULT;
+        data2 = OP2 % m.MAX_RESULT;
+        opcode = (OPCODE % m.MAX_OPCODE);
+    }
+
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.alu == this) 
+            ;
+    ensures m.def_input_permission()
+            ** m.switch_alu_permission()
+            ** ((opcode == 0) ==> (result == (data1 + data2)))
+            ** ((opcode == 1) ==> (result == (data1 - data2)))
+            ** ((opcode == 2) ==> (result == (data1 + 1)))
+            ** ((opcode == 3) ==> (result == (data1 - 1)))
+            ;
+    void switch_alu(){   
+        if (opcode == 0) {
+            result = data1 + data2;
+        } else if (opcode == 1) {
+            result = data1 - data2;
+        } else if (opcode == 2) {
+            result = data1 + 1;
+        } else if (opcode == 3) {
+            result = data1 - 1;
+        } 
+    }
+
+    context Perm(m, read) 
+            ** (m != null) 
+            ** held(m) 
+            ** m.global_permission() 
+            ** (m.alu == this) 
+            ;
+    ensures m.def_input_permission()
+            ** m.switch_alu_permission()
+            ** (result == \old(result))
+            ;
+    ensures (RESULT == (result % m.MAX_RESULT))
+            ** (CARRY == (((result / m.MAX_RESULT) % 2) == 1 ? true : false))
+            ** (ZERO == ((result % m.MAX_RESULT) == 0 ? true : false))
+            ;
+    void def_output(){        
+        RESULT = (result % m.MAX_RESULT);
+        CARRY = ((result / m.MAX_RESULT) % 2) == 1 ? true : false;
+        ZERO = (result % m.MAX_RESULT) == 0 ? true : false;
+    }
+
+    context Perm(m, read) 
+            ** (m != null) 
+            ** Perm(m.alu, read) 
+            ** (m.alu == this) 
+            ;
+    void run(){
+        lock m;
+
+        loop_invariant true 
+                ** Perm(m, read) 
+                ** (m != null) 
+                ** held(m)  
+                ** m.global_permission()  
+                ** (m.alu == this) 
+                ;
+        while (true) {
+            m.process_state = m.process_state[0 -> 0];
+            m.event_state = m.event_state[0 -> 5];
+            loop_invariant true 
+                    ** Perm(m, read) 
+                    ** (m != null) 
+                    ** held(m)  
+                    ** m.global_permission()  
+                    ** (m.alu == this) 
+                    ;
+            while (m.process_state[0] != -1 || m.event_state[0] != -2) {
+                unlock m;
+                lock m;
+            }
+
+            def_input();
+            switch_alu();
+            def_output();
+
+        }
+        unlock m;
+    }
+    
+}
+
+class Main { 
+    seq<int> process_state;
+    seq<int> event_state;
+    ALU alu;
+    
+    int N_BITS;
+    int MAX_RESULT;
+    int MAX_OPCODE;
+
+    inline resource scheduler_permission_invariant() = true 
+            ** Perm(process_state, write) ** |process_state| == 1 
+            ** Perm(event_state, write)   ** |event_state| == 1 
+            ** (\forall int i = 0 .. |process_state|; ((({: process_state[i] :} == -1)) 
+               || (((process_state[i] >= 0) && (process_state[i] < |event_state|))) ))
+            ;
+    
+    inline resource def_input_permission() = true
+            ** (alu.OP1    == \old(alu.OP1))
+            ** (alu.OP2    == \old(alu.OP2))
+            ** (alu.OPCODE == \old(alu.OPCODE))
+            ;
+    
+    inline resource switch_alu_permission() = true
+            ** (alu.data1  == \old(alu.data1))
+            ** (alu.data2  == \old(alu.data2))
+            ** (alu.opcode == \old(alu.opcode))
+            ;
+
+    inline resource global_permission() = true 
+            ** scheduler_permission_invariant()
+
+           ** Perm(N_BITS, read)
+           ** N_BITS == 31
+           ** Perm(MAX_RESULT, read)
+           ** MAX_RESULT == 2147483648
+           ** Perm(MAX_OPCODE, read)
+           ** MAX_OPCODE == 4 
+
+            //ALU
+            ** Perm(alu, read) 
+            ** (alu != null) 
+            ** Perm(alu.OPCODE, write) 
+            ** Perm(alu.OP1, write)
+            ** Perm(alu.OP2, write)  
+            ** Perm(alu.CARRY, write) 
+            ** Perm(alu.ZERO, write) 
+            ** Perm(alu.RESULT, write)    
+            ** 0 <= alu.RESULT
+            ** alu.RESULT <= MAX_RESULT  
+            
+            ** Perm(alu.data1, write)
+            ** Perm(alu.data2, write)
+            ** Perm(alu.opcode, write)
+            ** Perm(alu.result, write)
+            ;
+
+    resource lock_invariant() = global_permission();
+    
+    ensures Perm(alu, read)
+            ** alu != null
+            ** Perm(alu.m, read)
+            ** alu.m == this
+            ;
+    ensures idle(alu);
+    Main(){
+        process_state = [-1];
+        event_state = [-3];
+
+        N_BITS = 31;
+        MAX_RESULT = 2147483648; //from 2^N_bits
+        MAX_OPCODE = 4;
+        alu = new ALU(this);
+    }
+    
+    
+    context Perm(alu, read)
+            ** alu != null
+            ** Perm(alu.m, read)
+            ** alu.m == this
+            ;
+    context idle(alu);
+    void main(){
+        lock this;
+        fork alu;
+        unlock this;
+        loop_invariant true ;
+        while (true) {
+            lock this;
+            immediate_wakeup();
+            reset_events_no_delta();
+            if (process_state[0] != -1 ) {
+                int min_advance = find_minimum_advance(event_state);
+                if (min_advance == -1) {
+                    min_advance = 0;
+                }
+                event_state = [event_state[0] < -1 ? -3 : event_state[0] - min_advance];
+                wakeup_after_wait();
+                reset_all_events();
+            }
+            unlock this;
+        }
+        join alu;
+    }
+    
+    //Auto-generated specifications of the function immediate_wakeup:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && ((\old(event_state[\old(process_state[0])]) == 0)) ) ==> (((process_state[0] == \old(process_state[0]))) ))) );
+    void immediate_wakeup();
+    
+    //Auto-generated specifications of the function reset_events_no_delta:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures ((((((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == -2)) ))) );
+    ensures (((!(((\old(event_state[0]) == 0)) ) ==> (((event_state[0] == \old(event_state[0]))) ))) );
+    void reset_events_no_delta();
+    
+    //Auto-generated specifications of the function find_minimum_advance:
+    requires (|vals| == 1);
+    ensures ((((vals[0] < -1) || (\result <= vals[0]))) );
+    ensures (((((vals[0] < -1)) ) ==> (\result == 0)) && ((((vals[0] >= -1)) ) ==> ((((vals[0] >= -1) && (\result == vals[0]))) )));
+    pure int find_minimum_advance(seq<int> vals);
+    
+    //Auto-generated specifications of the function wakeup_after_wait:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((event_state == \old(event_state))) );
+    ensures ((((((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == -1)) ))) );
+    ensures (((!(((\old(process_state[0]) >= 0)) && (((\old(event_state[\old(process_state[0])]) == 0) || (\old(event_state[\old(process_state[0])]) == -1))) ) ==> (((process_state[0] == \old(process_state[0]))) ))) );
+    void wakeup_after_wait();
+    
+    //Auto-generated specifications of the function reset_all_events:
+    context held(this) **
+            scheduler_permission_invariant() ;
+    ensures (((process_state == \old(process_state))) );
+    ensures (((((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == -2)) ))) );
+    ensures (((!((\old(event_state[0]) == 0) || (\old(event_state[0]) == -1)) ==> (((event_state[0] == \old(event_state[0]))) ))) );
+    void reset_all_events();
+    
+}
+
