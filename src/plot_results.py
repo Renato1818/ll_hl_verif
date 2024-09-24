@@ -133,74 +133,69 @@ def read_statistics(file_path):
 
 # Function to plot the results
 def plot_results(statistics_data, file_labels, plot_title, output_image, add_trendline):
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(14, 6)) 
+    fig, ax = plt.subplots(figsize=(10, 6))  # Single plot
 
-    bar_width = 0.35 
+    bar_width = 0.35  # Width of each bar
+    opacity = 0.8
 
     # Plot the first dataset
     test_names1, avg_times1, sems1 = statistics_data[0]
-    x1 = np.arange(len(test_names1)) 
-
-    bars_avg1 = ax1.bar(x1, avg_times1, bar_width, label=file_labels[0], color='gray')
-    ax1.errorbar(x1, avg_times1, yerr=sems1, fmt='o', color='black', capsize=5, label='SEM')
-
-    if add_trendline:
-        z1 = np.polyfit(x1, avg_times1, 1)
-        p1 = np.poly1d(z1)
-        ax1.plot(x1, p1(x1), "--", color='black', label=f'Trendline - {file_labels[0]}')
-
-    ax1.set_xlabel('Verif Case')
-    ax1.set_ylabel('Time (s)')
-    ax1.set_title(f'{file_labels[0]}')
-    
-    ax1.set_yscale('log')
+    x = np.arange(len(test_names1))  # Shared x locations for the groups
 
     # Plot the second dataset
     test_names2, avg_times2, sems2 = statistics_data[1]
-    x2 = np.arange(len(test_names2))
 
-    bars_avg2 = ax2.bar(x2, avg_times2, bar_width, label=file_labels[1], color='silver')
-    ax2.errorbar(x2, avg_times2, yerr=sems2, fmt='o', color='black', capsize=5, label='SEM')
+    # Bars for the first dataset (HL Verif)
+    bars_avg1 = ax.bar(x - bar_width/2, avg_times1, bar_width, 
+                       label=f'{file_labels[0]}', 
+                       color='gray', alpha=opacity)
 
+    # Error bars for the first dataset
+    ax.errorbar(x - bar_width/2, avg_times1, yerr=sems1, fmt='o', 
+                color='black', capsize=5)
+
+    # Bars for the second dataset (LL Verif)
+    bars_avg2 = ax.bar(x + bar_width/2, avg_times2, bar_width, 
+                       label=f'{file_labels[1]}', 
+                       color='silver', alpha=opacity)
+
+    # Error bars for the second dataset
+    ax.errorbar(x + bar_width/2, avg_times2, yerr=sems2, fmt='o', 
+                color='black', capsize=5, label='SEM')
+
+    # Add trendlines if needed
     if add_trendline:
-        z2 = np.polyfit(x2, avg_times2, 1)
+        z1 = np.polyfit(x, avg_times1, 1)
+        p1 = np.poly1d(z1)
+        ax.plot(x, p1(x), "--", color='black', label=f'Trendline - {file_labels[0]}')
+
+        z2 = np.polyfit(x, avg_times2, 1)
         p2 = np.poly1d(z2)
-        ax2.plot(x2, p2(x2), "--", color='black', label=f'Trendline - {file_labels[1]}')
+        ax.plot(x, p2(x), "--", color='darkgray', label=f'Trendline - {file_labels[1]}')
 
-    ax2.set_xlabel('Verif Case')
-    ax2.set_ylabel('Time (s)')
-    ax2.set_title(f'{file_labels[1]}')
-    
-    ax2.set_yscale('log')    
-    #If not log scale
-    #ax2.set_ylim(bottom=0)
+    # Set labels and title
+    ax.set_xlabel('Verif Case')
+    ax.set_ylabel('Time (s)')
+    ax.set_title(plot_title)
 
-    # Set the y-axis limits to be the same for both plots
-    min_y = min(min(avg_times1), min(avg_times2))  # Minimum of both datasets
-    max_y = max(max(avg_times1), max(avg_times2))  # Maximum of both datasets
+    # Set the same y-axis scaling (log scale)
+    ax.set_yscale('log')
 
-    # Ensure some padding on the limits
-    ax1.set_ylim([min_y * 0.9, max_y * 1.1])  # Adding padding for readability
-    ax2.set_ylim([min_y * 0.9, max_y * 1.1])
-    
-    ax1.set_xticks(x1)
-    ax1.set_xticklabels(test_names1, rotation=45, ha='right')
+    # Set ticks and labels
+    ax.set_xticks(x)
+    ax.set_xticklabels(test_names1, rotation=45, ha='right')
 
-    ax2.set_xticks(x2)
-    ax2.set_xticklabels(test_names2, rotation=45, ha='right')
+    # Add grid lines
+    ax.grid(linestyle='dashed', color='gainsboro')
 
-    ax1.grid(linestyle='dashed', color='gainsboro')
-    ax2.grid(linestyle='dashed', color='gainsboro')
+    # Add legend
+    ax.legend()
 
-    # Add a legend explaining the error bars
-    ax1.legend(loc='upper left')
-    ax2.legend(loc='upper left')
-
+    # Adjust layout and save the plot
     fig.tight_layout()
-    plt.grid(True)
     plt.savefig(output_image)
     plt.close()
-    print(f"Chart saved as {output_image}")
+    print(f"Combined chart saved as {output_image}")
 
 # Generate statistics for all input-output pairs
 generate_statistics(results_files, output_statistics_files)
