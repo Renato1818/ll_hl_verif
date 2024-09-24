@@ -44,7 +44,7 @@ files_to_test = [
 output_file = "results.txt"
 statistics_file = "statistics.txt"
 plot_title = "Performance Metrics"
-output_image = "perf_metr_alu.png"
+output_image = "perf_metr.png"
 add_trendline = False  # Set to True to add a trendline
 
 # Function to write results to the output file

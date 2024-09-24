@@ -15,7 +15,7 @@ num_samples = 40
 # List of result files
 results_files = [
     "verif_vercors/results.txt",
-    "verif_sby/resultsl.txt"
+    "verif_sby/results.txt"
 ]  
 # Output statistics files
 output_statistics_files = [
@@ -31,7 +31,7 @@ file_labels = [
 
 # Plot configuration
 plot_title = "Experimental Results Comparison"  
-output_image = "comp_plot.png" 
+output_image = "comp_plot1.png" 
 add_trendline = False  
 
 # Reads and parses results
