@@ -41,8 +41,6 @@ module alu #(
 		if (divisor != 0) begin
 				res = (value / divisor) % 2;
 		end
-		
-		//return res[0];
 	endfunction
 	
 	function reg [DATA_WIDTH+1:0] func_set_bit(reg [DATA_WIDTH+1:0] value, reg [DATA_WIDTH:0] pos, reg bit_v);
@@ -59,14 +57,11 @@ module alu #(
 			divisor = divisor * 2;
 		end
 		if (current_bit == bit_v) begin
-			//return value;
 			res = value;
 		end else begin
 			if (bit_v == 1) begin
-				//return value + divisor;
 				res = value + divisor;
 			end else begin
-				//return value - divisor;
 				res = value + divisor;
 			end
 		end
@@ -90,8 +85,6 @@ module alu #(
 			aux_2 = func_set_bit(aux_2, i, bit_v);
 			aux_2 = res;
 		end
-		
-		//return aux_2;
 	endfunction
 
 	function reg [DATA_WIDTH+1:0] func_or(reg [DATA_WIDTH:0] data1, reg [DATA_WIDTH:0] data2);
@@ -115,8 +108,6 @@ module alu #(
 			aux_2 = func_set_bit(aux_2, i, bit_v_1);
 			aux_2 = res;
 		end
-		
-		//return aux_2;
 	endfunction
 	
 	function reg [DATA_WIDTH+1:0] func_nand(reg [DATA_WIDTH:0] data1, reg [DATA_WIDTH:0] data2);
@@ -140,9 +131,7 @@ module alu #(
 			bit_v_1 = (bit_v == 1) ? 0 : 1;			
 			aux_2 = func_set_bit(aux_2, i, bit_v_1);
 			aux_2 = res;
-		end
-		//return aux_2;
-		
+		end		
 	endfunction
 	
 	function reg [DATA_WIDTH+1:0] func_xor(reg [DATA_WIDTH:0] data1, reg [DATA_WIDTH:0] data2);
@@ -166,8 +155,6 @@ module alu #(
 			aux_2 = func_set_bit(aux_2, i, bit_v_1);
 			aux_2 = res;
 		end
-		
-		//return aux_2;
 	endfunction
 	
 	
@@ -316,65 +303,8 @@ module alu #(
 					assert_res7: assert ( !(f_opcode == 7) || RESULT == op_xor );
 				end
 			end
-			/*
-			// cover
-			//opcode op1 op2 cover
-			cov_opcode_zero: cover (OPCODE == 3'd0);
-			cov_opcode_one:  cover (OPCODE == 3'd7);
-		
-			cov_op1_zero: cover (OP1 == 4'd00);
-			cov_op1_one:  cover (OP1 == 4'd15);
-			cov_op2_zero: cover (OP2 == 4'd00);
-			cov_op2_one:  cover (OP2 == 4'd15);
-
-			//test carry
-			cov_optest1: cover ((OPCODE == 0) && (OP1 == 4'd10) && (OP2 == 4'd10));
-			//test !carry
-			cov_optest2: cover ((OPCODE == 2) && (OP1 == 4'd08));
-			//test zero
-			cov_optest4: cover ((OPCODE == 0) && (OP1 == 4'd00) && (OP2 == 4'd00));
-	
-			
-			//carry cover
-			cov_carry_true:  cover (CARRY); 
-			cov_carry_false: cover (!CARRY);
-			
-			//zero cover
-			cov_zero_true:  cover (ZERO); 
-			cov_zero_false: cover (!ZERO);	
-			
-			//Result cover	
-			cov_result_zero: cover (RESULT == 4'd00);
-			cov_result_one:  cover (RESULT == 4'd15);	
-
-			case (OPCODE)
-				0 : begin
-					cover_res0: cover ( RESULT == (OP1 + OP2) );
-				end				
-				1: begin
-					cover_res1: cover ( (RESULT == (OP1 - OP2)));
-				end
-				2: begin
-					cover_res2: cover  ((RESULT == op_incr[3:0]));
-				end
-				3: begin
-					cover_res3: cover  ((RESULT == (OP1 - 1)));
-				end
-				4: begin
-					cover_res4: cover ((RESULT == (OP1 & OP2)));
-				end
-				5: begin
-					cover_res5: cover ((RESULT == (OP1 | OP2)));
-				end
-				6: begin
-					cover_res6: cover ((RESULT == ~(OP1 & OP2)));
-				end
-				7: begin
-					cover_res7: cover ((RESULT == ~(OP1 | OP2)));
-				end
-			endcase */
 		end
-
+		
 	`endif
 
 endmodule

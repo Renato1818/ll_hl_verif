@@ -114,23 +114,7 @@ module full_adder (
 					assert_cout6: assert (!( f_a_2d &&  f_b_2d && !f_cin_2d) || ( Cout));
 					assert_cout7: assert (!( f_a_2d &&  f_b_2d &&  f_cin_2d) || ( Cout));
 				end
-            end //
-
-            //COVER
-              //cov_sum_true:  cover (S1); 
-              //cov_sum_false: cover (!S1);	
-              //
-              //cov_carry_true:  cover (Cout); 
-              //cov_carry_false: cover (!Cout); 
-              //
-              //cover_input0: cover ((!a && !b && !carry_in));
-              //cover_input1: cover ((!a && !b &&  carry_in));
-              //cover_input2: cover ((!a &&  b && !carry_in));
-              //cover_input3: cover ((!a &&  b &&  carry_in));
-              //cover_input4: cover (( a && !b && !carry_in));
-              //cover_input5: cover (( a && !b &&  carry_in)); 
-              //cover_input6: cover (( a &&  b && !carry_in));
-              //cover_input7: cover (( a &&  b &&  carry_in)); 
+            end 
         end
 
     `endif

@@ -43,15 +43,9 @@ module half_adder (
     `ifdef FORMAL
         reg f_a_1d;
         reg f_b_1d;  
-
-		//reg f_sum;
-		//reg f_carry;
         
         //Declare when verifications is valid
         reg f_valid_1d = 1'b0;
-
-		//assign f_sum = ((f_a) ^ (f_b)) ^ sum;
-		//assign f_carry = ((f_a) & (f_b)) ^ carry;
 
 		always @(posedge clk or negedge rstn) begin 
 			if ( !rstn ) begin
@@ -85,19 +79,7 @@ module half_adder (
 					assert_carry2: assert (!( f_a_1d && !f_b_1d) || !carry);
 					assert_carry3: assert (!( f_a_1d &&  f_b_1d) ||  carry);
 				end
-            end //
-
-            //COVER
-            //cov_sum_true:  cover (sum); 
-            //cov_sum_false: cover (!sum);	
-            //
-            //cov_carry_true:  cover (carry); 
-            //cov_carry_false: cover (!carry); 
-            //
-            //cover_ab1: cover ((!a && !b));
-            //cover_ab2: cover ((!a &&  b));
-            //cover_ab3: cover (( a && !b));
-            //cover_ab4: cover (( a &&  b)); 
+            end 
 			
         end
 

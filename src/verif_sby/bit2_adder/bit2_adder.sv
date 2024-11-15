@@ -217,97 +217,14 @@ module bit2_adder (
                     assert_sum2_3: assert ( !( f_add == 2 ) || (!S2) );
                     assert_sum2_4: assert ( !( f_add == 3 ) || ( S2) );
 
-					//assert_sum2_00: assert (!(!f_A2_4d && !f_B2_4d && !f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!S2));
-					//assert_sum2_01: assert (!(!f_A2_4d && !f_B2_4d && !f_A1_4d && !f_B1_4d &&  f_Cin_4d) || (!S2));
-					//assert_sum2_02: assert (!(!f_A2_4d && !f_B2_4d && !f_A1_4d &&  f_B1_4d && !f_Cin_4d) || (!S2));
-					//assert_sum2_03: assert (!(!f_A2_4d && !f_B2_4d && !f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( S2));
-					//assert_sum2_04: assert (!(!f_A2_4d && !f_B2_4d &&  f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!S2));
-					//assert_sum2_05: assert (!(!f_A2_4d && !f_B2_4d &&  f_A1_4d && !f_B1_4d &&  f_Cin_4d) || ( S2));
-					//assert_sum2_06: assert (!(!f_A2_4d && !f_B2_4d &&  f_A1_4d &&  f_B1_4d && !f_Cin_4d) || ( S2));
-					//assert_sum2_07: assert (!(!f_A2_4d && !f_B2_4d &&  f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( S2));                    
-					//assert_sum2_08: assert (!(!f_A2_4d &&  f_B2_4d && !f_A1_4d && !f_B1_4d && !f_Cin_4d) || ( S2));
-					//assert_sum2_09: assert (!(!f_A2_4d &&  f_B2_4d && !f_A1_4d && !f_B1_4d &&  f_Cin_4d) || ( S2));
-					//assert_sum2_10: assert (!(!f_A2_4d &&  f_B2_4d && !f_A1_4d &&  f_B1_4d && !f_Cin_4d) || ( S2));
-					//assert_sum2_11: assert (!(!f_A2_4d &&  f_B2_4d && !f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || (!S2));
-					//assert_sum2_12: assert (!(!f_A2_4d &&  f_B2_4d &&  f_A1_4d && !f_B1_4d && !f_Cin_4d) || ( S2));
-					//assert_sum2_13: assert (!(!f_A2_4d &&  f_B2_4d &&  f_A1_4d && !f_B1_4d &&  f_Cin_4d) || (!S2));
-					//assert_sum2_14: assert (!(!f_A2_4d &&  f_B2_4d &&  f_A1_4d &&  f_B1_4d && !f_Cin_4d) || (!S2));
-					//assert_sum2_15: assert (!(!f_A2_4d &&  f_B2_4d &&  f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || (!S2));  
-
-					//assert_sum2_16: assert (!( f_A2_4d && !f_B2_4d && !f_A1_4d && !f_B1_4d && !f_Cin_4d) || ( S2));
-					//assert_sum2_17: assert (!( f_A2_4d && !f_B2_4d && !f_A1_4d && !f_B1_4d &&  f_Cin_4d) || ( S2));
-					//assert_sum2_18: assert (!( f_A2_4d && !f_B2_4d && !f_A1_4d &&  f_B1_4d && !f_Cin_4d) || ( S2));
-					//assert_sum2_19: assert (!( f_A2_4d && !f_B2_4d && !f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || (!S2));
-					//assert_sum2_20: assert (!( f_A2_4d && !f_B2_4d &&  f_A1_4d && !f_B1_4d && !f_Cin_4d) || ( S2));
-					//assert_sum2_21: assert (!( f_A2_4d && !f_B2_4d &&  f_A1_4d && !f_B1_4d &&  f_Cin_4d) || (!S2));
-					//assert_sum2_22: assert (!( f_A2_4d && !f_B2_4d &&  f_A1_4d &&  f_B1_4d && !f_Cin_4d) || (!S2));
-					//assert_sum2_23: assert (!( f_A2_4d && !f_B2_4d &&  f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || (!S2));
-					//assert_sum2_24: assert (!( f_A2_4d &&  f_B2_4d && !f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!S2));
-					//assert_sum2_25: assert (!( f_A2_4d &&  f_B2_4d && !f_A1_4d && !f_B1_4d &&  f_Cin_4d) || (!S2));
-					//assert_sum2_26: assert (!( f_A2_4d &&  f_B2_4d && !f_A1_4d &&  f_B1_4d && !f_Cin_4d) || (!S2));
-					//assert_sum2_27: assert (!( f_A2_4d &&  f_B2_4d && !f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( S2));
-					//assert_sum2_28: assert (!( f_A2_4d &&  f_B2_4d &&  f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!S2));
-					//assert_sum2_29: assert (!( f_A2_4d &&  f_B2_4d &&  f_A1_4d && !f_B1_4d &&  f_Cin_4d) || ( S2));
-					//assert_sum2_30: assert (!( f_A2_4d &&  f_B2_4d &&  f_A1_4d &&  f_B1_4d && !f_Cin_4d) || ( S2));
-					//assert_sum2_31: assert (!( f_A2_4d &&  f_B2_4d &&  f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( S2));
-
                     //Cout 
                     assert_cout_1: assert ( !( f_add == 0 ) || (!Cout) );
                     assert_cout_2: assert ( !( f_add == 1 ) || (!Cout) );
                     assert_cout_3: assert ( !( f_add == 2 ) || ( Cout) );
                     assert_cout_4: assert ( !( f_add == 3 ) || ( Cout) );
 
-					//assert_cout_00: assert (!(!f_A2_4d && !f_B2_4d && !f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_01: assert (!(!f_A2_4d && !f_B2_4d && !f_A1_4d && !f_B1_4d &&  f_Cin_4d) || (!Cout));
-					//assert_cout_02: assert (!(!f_A2_4d && !f_B2_4d && !f_A1_4d &&  f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_03: assert (!(!f_A2_4d && !f_B2_4d && !f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || (!Cout));
-					//assert_cout_04: assert (!(!f_A2_4d && !f_B2_4d &&  f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_05: assert (!(!f_A2_4d && !f_B2_4d &&  f_A1_4d && !f_B1_4d &&  f_Cin_4d) || (!Cout));
-					//assert_cout_06: assert (!(!f_A2_4d && !f_B2_4d &&  f_A1_4d &&  f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_07: assert (!(!f_A2_4d && !f_B2_4d &&  f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || (!Cout));
-					//assert_cout_08: assert (!(!f_A2_4d &&  f_B2_4d && !f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_09: assert (!(!f_A2_4d &&  f_B2_4d && !f_A1_4d && !f_B1_4d &&  f_Cin_4d) || (!Cout));
-					//assert_cout_10: assert (!(!f_A2_4d &&  f_B2_4d && !f_A1_4d &&  f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_11: assert (!(!f_A2_4d &&  f_B2_4d && !f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( Cout));
-					//assert_cout_12: assert (!(!f_A2_4d &&  f_B2_4d &&  f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_13: assert (!(!f_A2_4d &&  f_B2_4d &&  f_A1_4d && !f_B1_4d &&  f_Cin_4d) || ( Cout));
-					//assert_cout_14: assert (!(!f_A2_4d &&  f_B2_4d &&  f_A1_4d &&  f_B1_4d && !f_Cin_4d) || ( Cout));
-					//assert_cout_15: assert (!(!f_A2_4d &&  f_B2_4d &&  f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( Cout));
-
-					//assert_cout_16: assert (!( f_A2_4d && !f_B2_4d && !f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_17: assert (!( f_A2_4d && !f_B2_4d && !f_A1_4d && !f_B1_4d &&  f_Cin_4d) || (!Cout));
-					//assert_cout_18: assert (!( f_A2_4d && !f_B2_4d && !f_A1_4d &&  f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_19: assert (!( f_A2_4d && !f_B2_4d && !f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( Cout));
-					//assert_cout_20: assert (!( f_A2_4d && !f_B2_4d &&  f_A1_4d && !f_B1_4d && !f_Cin_4d) || (!Cout));
-					//assert_cout_21: assert (!( f_A2_4d && !f_B2_4d &&  f_A1_4d && !f_B1_4d &&  f_Cin_4d) || ( Cout));
-					//assert_cout_22: assert (!( f_A2_4d && !f_B2_4d &&  f_A1_4d &&  f_B1_4d && !f_Cin_4d) || ( Cout));
-					//assert_cout_23: assert (!( f_A2_4d && !f_B2_4d &&  f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( Cout));
-					//assert_cout_24: assert (!( f_A2_4d &&  f_B2_4d && !f_A1_4d && !f_B1_4d && !f_Cin_4d) || ( Cout));
-					//assert_cout_25: assert (!( f_A2_4d &&  f_B2_4d && !f_A1_4d && !f_B1_4d &&  f_Cin_4d) || ( Cout));
-					//assert_cout_26: assert (!( f_A2_4d &&  f_B2_4d && !f_A1_4d &&  f_B1_4d && !f_Cin_4d) || ( Cout));
-					//assert_cout_27: assert (!( f_A2_4d &&  f_B2_4d && !f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( Cout));
-					//assert_cout_28: assert (!( f_A2_4d &&  f_B2_4d &&  f_A1_4d && !f_B1_4d && !f_Cin_4d) || ( Cout));
-					//assert_cout_29: assert (!( f_A2_4d &&  f_B2_4d &&  f_A1_4d && !f_B1_4d &&  f_Cin_4d) || ( Cout));
-					//assert_cout_30: assert (!( f_A2_4d &&  f_B2_4d &&  f_A1_4d &&  f_B1_4d && !f_Cin_4d) || ( Cout));
-					//assert_cout_31: assert (!( f_A2_4d &&  f_B2_4d &&  f_A1_4d &&  f_B1_4d &&  f_Cin_4d) || ( Cout));
-
 				end
             end 
-            //COVER
-              //cov_sum_true:  cover (S1); 
-              //cov_sum_false: cover (!S1);	
-              //
-              //cov_carry_true:  cover (Cout); 
-              //cov_carry_false: cover (!Cout); 
-              //
-              //cover_input0: cover ((!a && !b && !carry_in));
-              //cover_input1: cover ((!a && !b &&  carry_in));
-              //cover_input2: cover ((!a &&  b && !carry_in));
-              //cover_input3: cover ((!a &&  b &&  carry_in));
-              //cover_input4: cover (( a && !b && !carry_in));
-              //cover_input5: cover (( a && !b &&  carry_in)); 
-              //cover_input6: cover (( a &&  b && !carry_in));
-              //cover_input7: cover (( a &&  b &&  carry_in)); 
         end
     `endif
 
